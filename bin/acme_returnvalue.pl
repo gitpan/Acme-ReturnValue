@@ -11,13 +11,18 @@ GetOptions(\%opts,qw(
     dir=s
     file=s
     cpan=s
+    out=s
     report
-    dump
+    generate_html=s
 ));
 
 my $arv=Acme::ReturnValue->new;
 
-if ($opts{inc}) {
+if (my $dumpdir = $opts{generate_html}) {
+    $arv->generate_report_from_dump($dumpdir);
+    exit;
+} 
+elsif ($opts{inc}) {
     $arv->in_INC();    
 }
 elsif (my $dir = $opts{dir}) {
@@ -27,7 +32,7 @@ elsif (my $file = $opts{file}) {
     $arv->in_file($dir);
 }
 elsif (my $cpan = $opts{cpan}) {
-    $arv->in_CPAN($cpan)
+    $arv->in_CPAN($cpan, $opts{out} || '.')
 }
 else {
     $arv->in_dir('.');
