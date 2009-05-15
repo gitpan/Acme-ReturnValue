@@ -1,0 +1,100 @@
+NAME
+    Acme::ReturnValue - report interesting module return values
+
+SYNOPSIS
+        use Acme::ReturnValue;
+        my $rvs = Acme::ReturnValue->new;
+        $rvs->in_INC;
+        foreach (@{$rvs->interesting}) {
+            say $_->{package} . ' returns ' . $_->{value}; 
+        }
+
+DESCRIPTION
+    "Acme::ReturnValue" will list 'interesting' return values of modules.
+    'Interesting' means something other than '1'.
+
+  METHODS
+   run
+    run from the commandline (via acme_returnvalue.pl
+
+   waste_some_cycles
+        my $data = $arv->waste_some_cycles( '/some/module.pm' );
+
+    "waste_some_cycles" parses the passed in file using PPI. It tries to get
+    the last statement and extract it's value.
+
+    "waste_some_cycles" returns a hash with following keys
+
+    *   file
+
+        The file
+
+    *   package
+
+        The package defintion (the first one encountered in the file
+
+    *   value
+
+        The return value of that file
+
+    "waste_some_cycles" will also put this data structure into interesting
+    or boring.
+
+    You might want to pack calls to "waste_some_cycles" into an "eval"
+    because PPI dies on parse errors.
+
+   _is_code
+    Stolen directly from Perl::Critic::Policy::Modules::RequireEndWithOne as
+    suggested by Chris Dolan.
+
+    Thanks!
+
+   in_CPAN
+   in_INC
+        $arv->in_INC;
+
+    Collect return values from all *.pm files in @INC.
+
+   in_dir
+        $arv->in_dir( $some_dir );
+
+    Collect return values from all *.pm files in $dir.
+
+   in_file
+        $arv->in_file( $some_file );
+
+    Collect return value from the passed in file.
+
+    If waste_some_cycles failed, puts information on the failing file into
+    failed.
+
+   interesting
+    Returns an ARRAYREF containing 'interesting' modules.
+
+   boring
+    Returns an ARRAYREF containing 'boring' modules.
+
+   failed
+    Returns an ARRAYREF containing unparsable modules.
+
+BUGS
+    Probably many, because I'm not sure I master PPI yet.
+
+AUTHOR
+    Thomas Klausner, "<domm@cpan.org>"
+
+    Thanks to Armin Obersteiner and Josef Schmid for input during very early
+    development
+
+BUGS
+    Please report any bugs or feature requests to
+    "bug-acme-returnvalue@rt.cpan.org", or through the web interface at
+    <http://rt.cpan.org>. I will be notified, and then you'll automatically
+    be notified of progress on your bug as I make changes.
+
+COPYRIGHT & LICENSE
+    Copyright 2008 Thomas Klausner
+
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

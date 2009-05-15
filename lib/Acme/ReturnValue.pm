@@ -1,22 +1,36 @@
 #!/usr/bin/perl
 package Acme::ReturnValue;
+
+use 5.010;
 use strict;
 use warnings;
-use version; our $VERSION = version->new( '0.05' );
+use version; our $VERSION = qv '0.70.0';
 
 use PPI;
 use File::Find;
 use Parse::CPAN::Packages;
+use Path::Class qw();
 use File::Spec::Functions;
 use File::Temp qw(tempdir);
 use File::Path;
 use File::Copy;
 use Archive::Any;
-use base 'Class::Accessor';
-use URI::Escape;
-use Encode;
+use Data::Dumper;
+use YAML::Any qw(DumpFile); 
 
-__PACKAGE__->mk_accessors(qw(interesting boring failed));
+use Moose;
+with qw(MooseX::Getopt);
+
+has 'interesting' => (is=>'rw',isa=>'ArrayRef',default=>sub {[]});
+has 'bad' => (is=>'rw',isa=>'ArrayRef',default=>sub {[]});
+has 'failed' => (is=>'rw',isa=>'ArrayRef',default=>sub {[]});
+
+has 'quiet' => (is=>'ro',isa=>'Bool',default=>0);
+has 'inc' => (is=>'ro',isa=>'Bool',default=>0);
+has 'dir' => (is=>'ro',isa=>'Str');
+has 'file' => (is=>'ro',isa=>'Str');
+has 'cpan' => (is=>'ro',isa=>'Str');
+has 'dump_to' => (is=>'ro',isa=>'Str',default=>'returnvalues');
 
 $|=1;
 
@@ -41,6 +55,43 @@ C<Acme::ReturnValue> will list 'interesting' return values of modules.
 =head2 METHODS
 
 =cut
+
+=head3 run
+
+run from the commandline (via F<acme_returnvalue.pl>
+
+=cut
+
+sub run {
+    my $self = shift;
+   
+    if ($self->inc) {
+        $self->in_INC;
+    }
+    elsif ($self->dir) {
+        $self->in_dir($self->dir);
+    }
+    elsif ($self->file) {
+        $self->in_file($self->file);
+    }
+    elsif ($self->cpan) {
+        $self->in_CPAN($self->cpan,$self->dump_to);
+        exit;
+    }
+    else {
+        $self->in_dir('.');
+    }
+
+    my $interesting=$self->interesting;
+    if (@$interesting > 0) {
+        foreach my $cool (@$interesting) {
+            print $cool->{package} .': '.$cool->{value} ."\n";
+        }
+    }
+    else {
+        print "boring!\n";
+    }
+}
 
 =head3 waste_some_cycles
 
@@ -95,22 +146,33 @@ sub waste_some_cycles {
 
     my @significant = grep { _is_code($_) } $doc->schildren();
     my $match = $significant[-1];
+    my $rv=$match->content;
+    $rv=~s/\s*;$//;
+    $rv=~s/^return //gi;
 
-    my $return_value=$match->content;
-    $return_value=~s/;$//;
-
+    return if $rv eq 1;
+    
     my $data = {
         'file'    => $file,
         'package' => $this_package,
-        'value'   => $return_value,
+        'PPI'     => ref $match,
     };
-    if ($return_value eq '1') {
-        push(@{$self->boring},$data);
+
+    my @bad = map { 'PPI::Statement::'.$_} qw(Sub Variable Compound Package Scheduled Include Sub);
+
+    if (ref($match) ~~ @bad) {
+        $data->{'bad'}=$rv;
+        push(@{$self->bad},$data);
     }
-    else {
+    elsif ($rv =~ /^('|"|\d|qw|qq|q|!|~)/) {
+        $data->{'value'}=$rv;
         push(@{$self->interesting},$data);
     }
-    return $data;
+    else {
+        $data->{'bad'}=$rv;
+        $data->{'PPI'}.=" (but very likely crap)";
+        push(@{$self->bad},$data);
+    }
 }
 
 =head4 _is_code
@@ -126,24 +188,6 @@ sub _is_code {
     my $elem = shift;
     return ! (    $elem->isa('PPI::Statement::End')
                || $elem->isa('PPI::Statement::Data'));
-}
-
-=head3 new
-
-    my $arc = Acme::ReturnValue->new;
-
-Yet another boring constructor;
-
-=cut
-
-sub new {
-    my ($class,$opts) = @_;
-    $opts ||= {};
-    my $self=bless $opts,$class;
-    $self->interesting([]);
-    $self->boring([]);
-    $self->failed([]);
-    return $self;
 }
 
 =head3 in_CPAN
@@ -162,7 +206,6 @@ sub in_CPAN {
     foreach my $dist (sort {$a->dist cmp $b->dist} $p->latest_distributions) {
         my $data;
         my $distfile = catfile($cpan,'authors','id',$dist->prefix);
-        print "$distfile\n";
         $data->{file}=$distfile;
         my $dir;
         eval {
@@ -170,13 +213,12 @@ sub in_CPAN {
         
             my $archive=Archive::Any->new($distfile);
             $archive->extract($dir);
-            my $outname=catfile($out,$dist->distvname.".dump");
-            system("$^X $0 --dir $dir > $outname");
+            
+            $self->in_dir($dir,$dist->distvname);
+             
         };
         if ($@) {
             print $@;
-            $data->{error}=$@;
-            push (@{$self->failed},$data);
         }
         rmtree($dir);
     }
@@ -193,7 +235,7 @@ Collect return values from all F<*.pm> files in C<< @INC >>.
 sub in_INC {
     my $self=shift;
     foreach my $dir (@INC) {
-        $self->in_dir($dir);
+        $self->in_dir($dir,"INC_$dir");
     }
 }
 
@@ -206,17 +248,33 @@ Collect return values from all F<*.pm> files in C<< $dir >>.
 =cut
 
 sub in_dir {
-    my ($self,$dir)=@_;
-    
+    my ($self,$dir,$dumpname)=@_;
+    $dumpname ||= $dir;
+    $dumpname=~s/\//_/g;
+
+    say $dumpname unless $self->quiet; 
+
+    $self->interesting([]);
+    $self->bad([]);
     my @pms;
     find(sub {
         return unless /\.pm\z/;
-        return if /^x?t\//;
+        return if $File::Find::dir=~/\/x?t\//;
+        return if $File::Find::dir=~/\/inc\//;
         push(@pms,$File::Find::name);
     },$dir);
 
     foreach my $pm (@pms) {
         $self->in_file($pm);
+    }
+    
+    if ($self->interesting && @{$self->interesting}) {
+        my $dump=Path::Class::Dir->new($self->dump_to)->file($dumpname.".dump");
+        DumpFile($dump->stringify,$self->interesting);
+    }
+    if ($self->bad && @{$self->bad}) {
+        my $dump=Path::Class::Dir->new($self->dump_to)->file($dumpname.".bad");
+        DumpFile($dump->stringify,$self->bad);
     }
 }
 
@@ -237,66 +295,6 @@ sub in_file {
         push (@{$self->failed},{file=>$file,error=>$@});
     }
 }
-
-=head3 generate_report_from_dump
-
-    $arv->generate_report_from_dump($dir);
-
-Get all Dump-Files in C<$dir>, eval them, and generate a HTML page 
-with the results.
-
-Will print directly to STDOUT, because I'm lazy ATM..
-
-=cut
-
-sub generate_report_from_dump {
-    my ($self,$in)=@_;
-
-    my @interesting;
-    opendir(DIR,$in) || die "Cannot open dir $in: $!";
-    while (my $file=readdir(DIR)) {
-        next unless $file=~/^(.*)\.dump$/;
-        my $dist=$1;
-
-        my $rv;
-        $rv=do(catfile($in,$file));
-        my $interesting=$rv->interesting;
-        next unless @$interesting > 0;
-        push(@interesting,$interesting);
-    }
-
-    my $now=scalar localtime;
-    print <<"EOHTML";
-<html>
-<head><title>Acme::ReturnValue findings</title>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-</head>
-
-<body><h1>Acme::ReturnValue findings</h1>
-
-<p>Acme::ReturnValue: <a href="http://search.cpan.org/dist/Acme-ReturnValue">on CPAN</a> | <a href="http://domm.plix.at/talks/acme_returnvalue.html">talks about it</a><br>
-Contact: domm  AT cpan.org<br>
-Generated: $now
-</p>
-
-<table>
-<tr><td>Module</td><td>Return Value</td></tr>
-EOHTML
-    
-    foreach my $metayay (@interesting) {
-        foreach my $yay (@$metayay) {
-            my $val=$yay->{value};
-            $val=~s/>/&gt;/g;
-            $val=~s/</&lt;/g;
-            print "<tr><td>".$yay->{package}."</td><td>".encode('utf8',decode('latin1',$val))."</td></tr>\n";
-        }
-    }
-
-    print "</table></body></html>";
-
-
-}
-
 
 "let's return a strange value";
 
