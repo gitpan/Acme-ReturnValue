@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'end of module XML::XPathScript::Processor'",
+      "file" : "/var/tmp/arv_1ACNfu/XML-XPathScript-1.54/lib/XML/XPathScript/Processor.pm",
+      "package" : "XML::XPathScript::Processor"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'end of XML::XPathScript::Template::Tag'",
+      "file" : "/var/tmp/arv_1ACNfu/XML-XPathScript-1.54/lib/XML/XPathScript/Template/Tag.pm",
+      "package" : "XML::XPathScript::Template::Tag"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Apache::AxKit::Language::YPathScript'",
+      "file" : "/var/tmp/arv_1ACNfu/XML-XPathScript-1.54/lib_axkit/Apache/AxKit/Language/YPathScript.pm",
+      "package" : "Apache::AxKit::Language::YPathScript"
+   }
+]

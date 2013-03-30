@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _merge_hash {\n    my ($merge_to, $merge_from) = @_;\n    $merge_to->{$_} = $merge_from->{$_}\n        for keys %$merge_from;\n}",
+      "file" : "/var/tmp/arv_qvdn1T/Shell-Base-0.05/Base.pm",
+      "package" : "Shell::Base"
+   }
+]

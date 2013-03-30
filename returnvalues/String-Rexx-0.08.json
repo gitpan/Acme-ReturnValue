@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub d2b {\n        validate_pos  @_ ,  { regex => NONNEGATIVE };\n\n        local $_ = unpack 'B32'x8, pack 'N', shift ;\n        s/^0*//g ;\n        '0' x (8-(length)%8) . $_;\n}",
+      "file" : "/var/tmp/arv_dgUqhi/String-Rexx-0.08/lib/String/Rexx.pm",
+      "package" : "String::Rexx"
+   }
+]

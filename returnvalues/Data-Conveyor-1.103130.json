@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n    my $self = shift;\n    return unless $self->delegate->respect_mutex && $self->mutex;\n    $self->mutex->release_mutex;\n}\n1",
+      "file" : "/var/tmp/arv_RUzqNH/Data-Conveyor-1.103130/lib/Data/Conveyor/App/Mutex.pm",
+      "package" : "Data::Conveyor::App::Mutex"
+   }
+]

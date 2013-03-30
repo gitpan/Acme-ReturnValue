@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY { 1 }",
+      "file" : "/var/tmp/arv_r8VRu9/DBD-iPod-0.01/lib/DBD/iPod/st.pm",
+      "package" : "DBD::iPod::st"
+   }
+]

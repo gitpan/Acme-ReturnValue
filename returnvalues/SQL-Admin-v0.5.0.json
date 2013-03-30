@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "my $grammar = do { local $/; <DATA> }",
+      "file" : "/var/tmp/arv_4BbT63/SQL-Admin-v0.5.0/lib/SQL/Admin/Driver/Pg/Grammar.pm",
+      "package" : "SQL::Admin::Driver::Pg::Grammar"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our %SQL_KEYWORDS = map +( $_ => 1 ), (\n    qw( a             abs           absolute      action        ada             ),\n    qw( add           admin         after         aggregate     alias           ),\n    qw( all           allocate      alter         always        and             ),\n    qw( any           are           array         as            asc             ),\n    qw( asensitive    assertion     assignment    assymetric    at              ),\n    qw( atomic        attribute     attributes    authorization avg             ),\n    qw( before        begin         bernoulli     between       begin           ),\n    qw( binary        bit           bitvar        bit_length    blob            ),\n    qw( boolean       both          breadth       by            c               ),\n    qw( cache         call          called        cardinality   cascade         ),\n    qw( cascaded      case          cast          catalog       catalog_name    ),\n    qw( ceil          cailing       char          character     characteristics ),\n    qw( char_length   check         checked       class         ),\n)",
+      "file" : "/var/tmp/arv_4BbT63/SQL-Admin-v0.5.0/lib/SQL/Admin/Driver/Base/Keywords.pm",
+      "package" : "COIN::SQL::Admin::Driver::Base::Keywords"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "my $grammar = do { local $/; <DATA> }",
+      "file" : "/var/tmp/arv_4BbT63/SQL-Admin-v0.5.0/lib/SQL/Admin/Driver/DB2/Grammar.pm",
+      "package" : "SQL::Admin::Driver::DB2::Grammar"
+   }
+]

@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_4hgNjW/MooseX-CurriedDelegation-0.001/lib/MooseX/CurriedDelegation.pm",
+      "package" : "MooseX::CurriedDelegation"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_4hgNjW/MooseX-CurriedDelegation-0.001/lib/MooseX/CurriedDelegation/Trait/Attribute.pm",
+      "package" : "MooseX::CurriedDelegation::Trait::Attribute"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_4hgNjW/MooseX-CurriedDelegation-0.001/lib/MooseX/CurriedDelegation/Trait/Method/Delegation.pm",
+      "package" : "MooseX::CurriedDelegation::Trait::Method::Delegation"
+   }
+]

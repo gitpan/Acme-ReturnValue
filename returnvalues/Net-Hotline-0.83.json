@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub put_file     { al09_put_file(@_)     }",
+      "file" : "/var/tmp/arv_0uVtI3/Net-Hotline-0.83/lib/Net/Hotline/Client.pm",
+      "package" : "Net::Hotline::Client"
+   }
+]

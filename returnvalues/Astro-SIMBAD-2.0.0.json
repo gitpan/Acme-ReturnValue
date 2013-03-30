@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '2.0.0'\n\n\n\n1",
+      "file" : "/var/tmp/arv_pHbhBh/Astro-SIMBAD-2.0.0/SIMBAD.pm",
+      "package" : "Astro::SIMBAD"
+   }
+]

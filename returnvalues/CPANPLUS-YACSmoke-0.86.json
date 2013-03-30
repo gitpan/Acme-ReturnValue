@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'YACSmoking'",
+      "file" : "/var/tmp/arv_o755dk/CPANPLUS-YACSmoke-0.86/lib/CPANPLUS/Config/YACSmoke.pm",
+      "package" : "CPANPLUS::Config::YACSmoke"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'The Lusty Decadent Delights of Imperial Pompeii'",
+      "file" : "/var/tmp/arv_o755dk/CPANPLUS-YACSmoke-0.86/lib/CPANPLUS/YACSmoke/ReAssemble.pm",
+      "package" : "CPANPLUS::YACSmoke::ReAssemble"
+   }
+]

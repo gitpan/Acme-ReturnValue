@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->run_if_script",
+      "file" : "/var/tmp/arv_lG5P2_/Test-DBIx-Class-0.38/maint/Maker.pm",
+      "package" : "Maker"
+   }
+]

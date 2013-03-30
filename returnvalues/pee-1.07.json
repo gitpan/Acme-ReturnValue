@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub write_scratch {\n\tmy ($dir, $filename, $buf) = @_;\n\n\treturn if (!-w $dir);\n\n\t$filename =~ s/\\//_/g;\n\n\topen (SCRATCH, \">$dir/$filename\") or warn \"writing scratch: $!\\n\";\n\tprint SCRATCH $buf;\n\tclose (SCRATCH);\n}",
+      "file" : "/var/tmp/arv_uBanMG/pee-1.07/Pee/FileRunner.pm",
+      "package" : "Pee::FileRunner"
+   }
+]

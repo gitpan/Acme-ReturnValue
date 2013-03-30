@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Readme!'",
+      "file" : "/var/tmp/arv_xNvefN/Module-Install-ReadmeFromPod-0.20/lib/Module/Install/ReadmeFromPod.pm",
+      "package" : "Module::Install::ReadmeFromPod"
+   }
+]

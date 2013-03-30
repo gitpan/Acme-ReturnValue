@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prepare_action {\n    my $c    = shift;\n    my $path;    \n    my @path = @{$c->get_action_path};\n    $c->req->args( \\my @args );\n\n    while (@path) {\n        $path = join '/', @path;\n        if ( my $result = ${ $c->get_action($path) }[0] ) {\n\n            if ($#$result) {\n                my $match    = $result->[1];\n                my @snippets = @{ $result->[2] };\n                $c->log->debug(\n                    qq/Requested action is \"$path\" and matched \"$match\"/)\n                  if $c->debug;\n                $c->log->debug(\n                    'Snippets are \"' . join( ' ', @snippets ) . '\"' )\n                  if ( $c->debug && @snippets );\n                $c->req->action($match);\n                $c->req->snippets( \\@snippets );\n            }\n\n            else {\n                $c->req->action($path);\n                $c->log->debug(qq/Requested action is \"$path\"/) if $c->debug;\n            }\n\n            $c->req->match($path);\n            last;\n        }\n        unshift @args, pop @path;\n    }\n\n    unless ( $c->req->action ) {\n        $c->req->action('default');\n        $c->req->match('');\n    }\n\n    $c->log->debug( 'Arguments are \"' . join( '/', @args ) . '\"' )\n      if ( $c->debug && @args );\n}",
+      "file" : "/var/tmp/arv_uOaZaA/Catalyst-Plugin-SanitizeUrl-0.2.1/lib/Catalyst/Plugin/SanitizeUrl/PrepAction.pm",
+      "package" : "Catalyst::Plugin::SanitizeUrl::PrepAction"
+   }
+]

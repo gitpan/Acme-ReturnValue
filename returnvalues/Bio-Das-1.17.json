@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n    my $self = shift;\n\n    if ($self->_fh()){\n        close($self->_fh());\n    }   \n}\n\n1",
+      "file" : "/var/tmp/arv_PRy_Fj/Bio-Das-1.17/Das/AGPServer/Parser.pm",
+      "package" : "Bio::Das::AGPServer::Parser"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub log {\n    my ($self,@messages) = @_;\n    foreach my $m (@messages){\n        print STDERR \"$m\\n\";\n    }\n\n}",
+      "file" : "/var/tmp/arv_PRy_Fj/Bio-Das-1.17/Das/AGPServer/Daemon.pm",
+      "package" : "Bio::Das::AGPServer::Daemon"
+   }
+]

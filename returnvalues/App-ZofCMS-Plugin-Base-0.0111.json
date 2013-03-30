@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _do {\n    my ( $self, $conf, $template, $query, $config ) = @_;\n    $template->{t}{time} = localtime;\n}",
+      "file" : "/var/tmp/arv_ebnFbD/App-ZofCMS-Plugin-Base-0.0111/examples/plug.pm",
+      "package" : "App::ZofCMS::Plugin::Example"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!0",
+      "file" : "/var/tmp/arv_uRcnW6/Search-Glimpse-0.04/lib/Search/Glimpse/Index.pm",
+      "package" : "Search::Glimpse::Index"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!0",
+      "file" : "/var/tmp/arv_uRcnW6/Search-Glimpse-0.04/lib/Search/Glimpse/Server.pm",
+      "package" : "Search::Glimpse::Server"
+   }
+]

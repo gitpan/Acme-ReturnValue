@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub render\n{\n    my $self = shift;\n\n    my ($mail_lister, $mailing_list, $o, $r, $main_o, $main_r, $filename);\n\n    local(*INDEX);\n\n    open INDEX, \">index.html\";\n    $main_r = Mail::LMLM::Render::HTML->new(\\*INDEX);\n\n    $main_r->start_document(\n        $self->{'title'},\n        $self->{'headline'},\n        );\n        \n    $self->{'prolog'}->($self, $main_r);\n    \n    local(*O);\n\n    foreach $mailing_list (@{$self->{'lists'}})\n    {\n        $filename = $mailing_list->{'id'}.\".html\";\n        open O, \">\".$filename;\n        $r = Mail::LMLM::Render::HTML->new(\\*O);\n        \n        my $class_name = $mailing_list->{'class'};\n        my $class = $mailing_list_classes{$class_name} || $self->{'extra_classes'}->{$class_name} || die \"Mail::LMLM: Unknown Class \\\"$class_name\\\"\";\n        if (ref($class) eq \"CODE\")\n        {\n            $mail_lister = $class->(%$mailing_list);\n        }\n        else\n        {\n            $mail_lister = $class->new(%$mailing_list);\n        }\n        \n        my $title = exists($mailing_list->{'title'}) ? \n            $mailing_list->{'title'} :\n            $mailing_list->{'id'};\n\n        $r->start_document($title, $title);\n        \n        foreach my $what (@render_what)\n        {\n            my $func = $what->{'func'};\n            $r->start_section($what->{'title'}, +{'id' => $what->{'id'}});\n            $mail_lister->$func($r);\n            $r->end_section();\n        }\n\n        $main_r->start_section($title, {'title_url' => $filename});\n        $mail_lister->render_description($main_r);\n        $main_r->end_section();\n\n        $r->end_document();\n\n        close(O);\n    }\n\n    $self->{'epilog'}->($self, $main_r);\n\n    $main_r->end_document();\n    close(INDEX);\n\n    local(*STYLE);\n    open STYLE, \">style.css\";\n    print STYLE <<\"EOF\";\n\n    close(STYLE);\n}",
+      "file" : "/var/tmp/arv_3WFf4s/Mail-LMLM-0.6802/lib/Mail/LMLM.pm",
+      "package" : "Mail::LMLM"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_online_archive\n{\n    my $self = shift;\n\n    return (\"http://\" . \n        $self->get_hostname() .\n        \"/mailing-lists/\" .\n        $self->get_group_base() .\n        \"/archive\") ;\n}",
+      "file" : "/var/tmp/arv_3WFf4s/Mail-LMLM-0.6802/examples/Iglu/Iglu/LMLM/Types/Ivrix.pm",
+      "package" : "Iglu::LMLM::Types::Ivrix"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub render_owner\n{\n    my $self = shift;\n    \n    my $htmler = shift;\n\n    return $self->render_something_with_subject($htmler, \"comments\");\n}",
+      "file" : "/var/tmp/arv_3WFf4s/Mail-LMLM-0.6802/examples/Iglu/Iglu/LMLM/Types/Linuxology.pm",
+      "package" : "Iglu::LMLM::Types::Linuxology"
+   }
+]

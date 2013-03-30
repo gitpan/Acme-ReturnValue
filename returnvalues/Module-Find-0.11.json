@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModuleFindTest::loaded = 1",
+      "file" : "/var/tmp/arv_0ekubo/Module-Find-0.11/test/ModuleFindTest.pm",
+      "package" : "ModuleFindTest"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModuleFindTest::loaded = 1",
+      "file" : "/var/tmp/arv_0ekubo/Module-Find-0.11/test/duplicates/ModuleFindTest.pm",
+      "package" : "ModuleFindTest"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModuleFindTest::SubMod::loaded = 1",
+      "file" : "/var/tmp/arv_0ekubo/Module-Find-0.11/test/duplicates/ModuleFindTest/SubMod.pm",
+      "package" : "ModuleFindTest::SubMod"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModuleFindTest::SubMod::SubSubMod::loaded = 1",
+      "file" : "/var/tmp/arv_0ekubo/Module-Find-0.11/test/duplicates/ModuleFindTest/SubMod/SubSubMod.pm",
+      "package" : "ModuleFindTest::SubMod::SubSubMod"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModuleFindTest::SubMod::loaded = 1",
+      "file" : "/var/tmp/arv_0ekubo/Module-Find-0.11/test/ModuleFindTest/SubMod.pm",
+      "package" : "ModuleFindTest::SubMod"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModuleFindTest::SubMod::SubSubMod::loaded = 1",
+      "file" : "/var/tmp/arv_0ekubo/Module-Find-0.11/test/ModuleFindTest/SubMod/SubSubMod.pm",
+      "package" : "ModuleFindTest::SubMod::SubSubMod"
+   }
+]

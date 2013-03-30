@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub reachable_squares {\n    croak \"Call to abstract method Chess::Piece::reachable_squares()\";\n}",
+      "file" : "/var/tmp/arv_3Yh8DO/Chess-0.6.2/lib/Chess/Piece.pm",
+      "package" : "Chess::Piece"
+   }
+]

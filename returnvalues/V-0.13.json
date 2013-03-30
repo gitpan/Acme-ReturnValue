@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n    my( $self ) = @_;\n\n    use vars qw( $AUTOLOAD );\n    my( $method ) = $AUTOLOAD =~ m|.+::(.+)$|;\n\n    if ( exists $self->{ $method } ) {\n        splice @_, 1, 0, $method;\n        goto &accessor;\n    }\n}",
+      "file" : "/var/tmp/arv_sqVCmk/V-0.13/V.pm",
+      "package" : "V"
+   }
+]

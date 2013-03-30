@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    my $monitor = shift;\n    my $fh = $monitor->{\"fh\"};\n    print $fh \"quit\\n\";\n    close($fh);\n    warn(\"Unexpected returncode from gnuplot: $?\") if $?;\n}",
+      "file" : "/var/tmp/arv_7UOHZB/Graph-Layout-Aesthetic-0.12/lib/Graph/Layout/Aesthetic/Monitor/GnuPlot.pm",
+      "package" : "Graph::Layout::Aesthetic::Monitor::GnuPlot"
+   }
+]

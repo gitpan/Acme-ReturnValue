@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run {\n    my $self = shift;\n\n    my $dbh = DBI->connect( $self->connect_info );\n\n    local $dbh->{AutoCommit} = 0;\n    local $dbh->{RaiseError} = 1;\n\n    eval {\n        $dbh->do(<<\"        EOSQL\");\n\n        $dbh->do(<<\"        EOSQL\");\n\n        $dbh->do(<<\"        EOSQL\");\n\n        $dbh->do(<<\"        EOSQL\");\n\n        $dbh->commit();\n    };\n    if ($@) {\n        print STDERR \"Failed to create tables: $@\\n\";\n    }\n    $dbh->disconnect;\n}",
+      "file" : "/var/tmp/arv_ZpWVmO/Mvalve-0.00014/lib/Mvalve/CLI/Mvalve/Create.pm",
+      "package" : "Mvalve::CLI::Mvalve::Create"
+   }
+]

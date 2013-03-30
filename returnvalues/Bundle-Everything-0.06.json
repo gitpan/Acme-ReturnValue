@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '0.06'\n\n1",
+      "file" : "/var/tmp/arv_0u8bh5/Bundle-Everything-0.06/Everything.pm",
+      "package" : "Bundle::Everything"
+   }
+]

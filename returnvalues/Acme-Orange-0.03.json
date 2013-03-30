@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*_closest = \\*closest",
+      "file" : "/var/tmp/arv_oRbuUW/Acme-Orange-0.03/Orange.pm",
+      "package" : "Acme::Orange"
+   }
+]

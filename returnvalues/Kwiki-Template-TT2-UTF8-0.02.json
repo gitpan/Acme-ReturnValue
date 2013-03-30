@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub create_template_object {\n    require Template;\n    Template->new({\n        LOAD_TEMPLATES => [\n            Kwiki::Template::TT2::UTF8::Provider->new({\n\t\tINCLUDE_PATH => $self->path,\n            })],\n        TOLERANT => 0,\n        COMPILE_DIR => $self->compile_dir,\n        COMPILE_EXT => '.ttc',\n    });\n}",
+      "file" : "/var/tmp/arv_m50ZDc/Kwiki-Template-TT2-UTF8-0.02/lib/Kwiki/Template/TT2/UTF8.pm",
+      "package" : "Kwiki::Template::TT2::UTF8"
+   }
+]

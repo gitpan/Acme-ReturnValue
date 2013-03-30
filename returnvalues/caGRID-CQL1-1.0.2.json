@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub testHTTP {\n\tmy ( $host ) = @_;\n\n\tmy $s = Net::HTTP->new(Host => $host);\n\n\t$s->write_request(GET => \"/\", 'User-Agent' => \"Mozilla/5.0\");\n\tmy($code, $mess, %h) = $s->read_response_headers;\n\n\treturn 1 if ( $code == 200 || $code == 302 );\n\n\treturn 0 ;\n}",
+      "file" : "/var/tmp/arv_hgc7TG/caGRID-CQL1-1.0.2/lib/caGRID/Net/Util.pm",
+      "package" : "caGRID::Net::Util"
+   }
+]

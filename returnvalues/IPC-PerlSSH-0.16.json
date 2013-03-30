@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_g0EOBK/IPC-PerlSSH-0.16/lib/IPC/PerlSSH.pm",
+      "package" : "IPC::PerlSSH"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_g0EOBK/IPC-PerlSSH-0.16/lib/IPC/PerlSSH/Library.pm",
+      "package" : "IPC::PerlSSH::Library"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_g0EOBK/IPC-PerlSSH-0.16/lib/IPC/PerlSSH/Base.pm",
+      "package" : "IPC::PerlSSH::Base"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_g0EOBK/IPC-PerlSSH-0.16/lib/IPC/PerlSSH/Library/IO.pm",
+      "package" : "IPC::PerlSSH::Library::IO"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_g0EOBK/IPC-PerlSSH-0.16/lib/IPC/PerlSSH/Library/FS.pm",
+      "package" : "IPC::PerlSSH::Library::FS"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_g0EOBK/IPC-PerlSSH-0.16/lib/IPC/PerlSSH/Library/Run.pm",
+      "package" : "IPC::PerlSSH::Library::Run"
+   }
+]

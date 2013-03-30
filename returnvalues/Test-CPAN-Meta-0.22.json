@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q( Currently Listening To: Nine Inch Nails - \"Head Down\" from 'The Slip')",
+      "file" : "/var/tmp/arv_TypPoE/Test-CPAN-Meta-0.22/lib/Test/CPAN/Meta.pm",
+      "package" : "Test::CPAN::Meta"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q( Currently Listening To: Gary Numan - \"This Wreckage\" from 'Scarred')",
+      "file" : "/var/tmp/arv_TypPoE/Test-CPAN-Meta-0.22/lib/Test/CPAN/Meta/Version.pm",
+      "package" : "Test::CPAN::Meta::Version"
+   }
+]

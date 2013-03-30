@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.006'",
+      "file" : "/var/tmp/arv_Y7ZUaN/App-Git-Spark-0.006/lib/App/Git/Spark.pm",
+      "package" : "App::Git::Spark"
+   }
+]

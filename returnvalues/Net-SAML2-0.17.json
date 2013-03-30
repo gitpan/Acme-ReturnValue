@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_uR6_bN/Net-SAML2-0.17/testapp/lib/Saml2Test.pm",
+      "package" : "Saml2Test"
+   }
+]

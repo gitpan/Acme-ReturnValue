@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Coat::Persistent::Object'",
+      "file" : "/var/tmp/arv_oURrha/Coat-Persistent-0.223/lib/Coat/Persistent/Object.pm",
+      "package" : "Coat::Persistent::Object"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Coat::Persistent::Types'",
+      "file" : "/var/tmp/arv_oURrha/Coat-Persistent-0.223/lib/Coat/Persistent/Types.pm",
+      "package" : "Coat::Persistent::Types"
+   }
+]

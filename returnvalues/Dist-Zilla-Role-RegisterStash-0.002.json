@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_4i9Bkz/Dist-Zilla-Role-RegisterStash-0.002/lib/Dist/Zilla/Role/RegisterStash.pm",
+      "package" : "Dist::Zilla::Role::RegisterStash"
+   }
+]

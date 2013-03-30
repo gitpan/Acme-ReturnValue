@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::CoolURI",
+      "file" : "/var/tmp/arv_0YNTAC/Kwiki-CoolURI-0.04/lib/Kwiki/CoolURI.pm",
+      "package" : "Kwiki::CoolURI"
+   }
+]

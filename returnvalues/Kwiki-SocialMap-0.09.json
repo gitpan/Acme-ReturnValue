@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::SocialMap",
+      "file" : "/var/tmp/arv_PFk1BH/Kwiki-SocialMap-0.09/lib/Kwiki/SocialMap.pm",
+      "package" : "Kwiki::SocialMap"
+   }
+]

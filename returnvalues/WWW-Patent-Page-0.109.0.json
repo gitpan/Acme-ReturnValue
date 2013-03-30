@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub set_parameter {\n\tmy $self = shift;\n\tmy $parameter = shift;\n\tmy $value = shift;\n\tif (exists($self->{$parameter})) { $self->{$parameter} = $value; return (1);}\n\telse {return undef };\n}",
+      "file" : "/var/tmp/arv_1RVcn1/WWW-Patent-Page-0.109.0/lib/WWW/Patent/Page/Response.pm",
+      "package" : "WWW::Patent::Page::Response"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'png',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"png_\", $im);\n\n     unless (i_writepng_wiol($im->{IMG}, $io)) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n     return $im;\n   },\n  )",
+      "file" : "/var/tmp/arv_HbwTNH/Imager-File-PNG-0.86/PNG.pm",
+      "package" : "Imager::File::PNG"
+   }
+]

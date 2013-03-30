@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub fetch {\n\tmy $options = shift;\n    my @names = @_;\n\n    Cnutt::Feed::Actions::Fetch::fetch($options, @names);\n}",
+      "file" : "/var/tmp/arv_zboGe7/cnutt-feed-1.21/lib/Cnutt/Feed.pm",
+      "package" : "Cnutt::Feed"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[This is true]",
+      "file" : "/var/tmp/arv_OkIlQL/App-SmokeBox-PerlVersion-0.08/lib/App/SmokeBox/PerlVersion.pm",
+      "package" : "App::SmokeBox::PerlVersion"
+   }
+]

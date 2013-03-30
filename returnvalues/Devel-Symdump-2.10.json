@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD {\n    my($self,@packages) = @_;\n    unless (ref $self) {\n\t$self = $self->new(@packages);\n    }\n    no strict \"vars\";\n    (my $auto = $AUTOLOAD) =~ s/.*:://;\n\n    $auto =~ s/(file|dir)handles/ios/;\n    my $compat = $1;\n\n    unless ($self->{'AUTOLOAD'}{$auto}) {\n\tCarp::croak(\"invalid Devel::Symdump method: $auto()\");\n    }\n\n    my @syms = $self->_partdump(uc $auto);\n    if (defined $compat) {\n\tno strict 'refs';\n        local $^W; \n\tif ($compat eq \"file\") {\n\t    @syms = grep { defined(fileno($_)) } @syms;\n\t} else {\n\t    @syms = grep { defined(telldir($_)) } @syms;\n\t}\n    }\n    return @syms; \n}\n\n1",
+      "file" : "/var/tmp/arv_QJ_Jrv/Devel-Symdump-2.10/lib/Devel/Symdump.pm",
+      "package" : "Devel::Symdump"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD {\n    my @packages = @_;\n    (my $auto = $AUTOLOAD) =~ s/.*:://;\n    confess(\"Unknown function call $auto\") unless $OK{$auto};\n    my @ret = Devel::Symdump->new->$auto(@packages);\n    return @ret;\n}\n\n1",
+      "file" : "/var/tmp/arv_QJ_Jrv/Devel-Symdump-2.10/lib/Devel/Symdump/Export.pm",
+      "package" : "Devel::Symdump::Export"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '0.12'",
+      "file" : "/var/tmp/arv_GeEGc0/Bundle-Gnome2-0.12/Gnome2.pm",
+      "package" : "Bundle::Gnome2"
+   }
+]

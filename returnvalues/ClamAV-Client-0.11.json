@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_16l1oF/ClamAV-Client-0.11/lib/ClamAV/Client.pm",
+      "package" : "ClamAV::Client"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_16l1oF/ClamAV-Client-0.11/lib/ClamAV/Config.pm",
+      "package" : "ClamAV::Config"
+   }
+]

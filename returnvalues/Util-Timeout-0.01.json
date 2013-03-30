@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "default_export timeout sublike { \n   my ($seconds, $code) = @_;\n   $seconds = ceil($seconds);\n   return 0 unless $seconds > 0;\n   return 0 unless defined $code && ref($code) eq 'CODE';\n   !timeout_call( $seconds, $code ); \n}\n\n\ndefault_export retry sublike {\n   my ($times, $code) = @_;\n   $times = ceil($times);\n   return 0 unless $times >= 1;\n   for (1..$times) {\n      return 1 if &$code;\n   }\n   return 0;\n}\n\n1",
+      "file" : "/var/tmp/arv_3xdTFh/Util-Timeout-0.01/lib/Util/Timeout.pm",
+      "package" : "Util::Timeout"
+   }
+]

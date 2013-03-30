@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load \"Runops::Optimized\", $VERSION",
+      "file" : "/var/tmp/arv_jd9n5B/Runops-Optimized-0.02/lib/Runops/Optimized.pm",
+      "package" : "Runops::Optimized"
+   }
+]

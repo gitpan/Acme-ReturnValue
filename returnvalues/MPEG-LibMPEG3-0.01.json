@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub set_frame       { my $self = shift; return mpeg3_set_frame( $self->{file}, shift, shift ) }",
+      "file" : "/var/tmp/arv__13GDl/MPEG-LibMPEG3-0.01/LibMPEG3.pm",
+      "package" : "MPEG::LibMPEG3"
+   }
+]

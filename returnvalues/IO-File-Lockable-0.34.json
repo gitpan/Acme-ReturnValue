@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub set_timeout :method {\n\tmy $self\t\t= shift;\n\tmy $timeout \t= shift;\n\tmy $sub \t\t= shift;\n\tmy $result\t\t= $timeout\n\t\t? eval {\n\t\t\tlocal $SIG{ALRM} = sub {die('TIMEOUT')};\n\t\t\tmy $old\t= alarm($timeout);\n\t\t\tmy $r\t= $sub->();\n\t\t\talarm($old);\n\t\t\treturn $r;\n\t\t}\n\t\t: eval {return $sub->()};\n\tif($@){carp($@);return;}\n\treturn $result;\n}",
+      "file" : "/var/tmp/arv_vpsF1l/IO-File-Lockable-0.34/Lockable.pm",
+      "package" : "IO::File::Lockable"
+   }
+]

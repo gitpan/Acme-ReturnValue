@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "q{\n    Minnie and Winnie\n    Slept in a shell.\n    Sleep, little ladies!\n    And they slept well.\n\n    Pink was the shell within,\n    Silver without;\n    Sounds of the great sea\n    Wander'd about.\n\n    Sleep, little ladies!\n    Wake not soon!\n    Echo on echo\n    Dies to the moon.\n\n    Two bright stars\n    Peep'd into the shell.\n    \"What are you dreaming of?\n    Who can tell?\"\n\n    Started a green linnet\n    Out of the croft;\n    Wake, little ladies,\n    The sun is aloft!\n}",
+      "file" : "/var/tmp/arv_YzmLEf/Capture-SystemIO-0.01/lib/Capture/SystemIO.pm",
+      "package" : "Capture::SystemIO"
+   }
+]

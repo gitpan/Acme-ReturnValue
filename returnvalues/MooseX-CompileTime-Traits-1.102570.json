@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "role MooseX::CompileTime::Traits {\n    use Moose::Util;\n\n\n    method import (ClassName $class: ArrayRef :$traits?) {\n        if(defined($traits))\n        {\n            my $meta = $class->meta;\n            if($meta->isa('Moose::Meta::Class') && $meta->is_immutable)\n            {\n                $meta->make_mutable();\n                Moose::Util::apply_all_roles($meta, @$traits);\n                $meta->make_immutable();\n            }\n            else\n            {\n                Moose::Util::apply_all_roles($meta, @$traits);\n            }\n        }\n    }\n}\n\n1",
+      "file" : "/var/tmp/arv_Gcc8h2/MooseX-CompileTime-Traits-1.102570/lib/MooseX/CompileTime/Traits.pm",
+      "package" : "MooseX::CompileTime::Traits"
+   }
+]

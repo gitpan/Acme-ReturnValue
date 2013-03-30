@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub singleton { $not_exists }",
+      "file" : "/var/tmp/arv_Y92GnP/DBIx-Custom-0.28/lib/DBIx/Custom/NotExists.pm",
+      "package" : "DBIx::Custom::NotExists"
+   }
+]

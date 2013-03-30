@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"smells like victory\"",
+      "file" : "/var/tmp/arv_qbeFHm/Pod-Elemental-Transformer-ExampleRunner-0.002/somelib/lib/SomeLib.pm",
+      "package" : "SomeLib"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"i love the smell of patches in the moring\"",
+      "file" : "/var/tmp/arv_qbeFHm/Pod-Elemental-Transformer-ExampleRunner-0.002/somelib/lib/MyApp/Example.pm",
+      "package" : "MyApp::Example"
+   }
+]

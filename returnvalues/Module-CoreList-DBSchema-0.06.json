@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[Modules are our business]",
+      "file" : "/var/tmp/arv_matsV1/Module-CoreList-DBSchema-0.06/lib/Module/CoreList/DBSchema.pm",
+      "package" : "Module::CoreList::DBSchema"
+   }
+]

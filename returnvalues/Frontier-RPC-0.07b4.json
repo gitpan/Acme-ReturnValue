@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_cgi_request{\n    my $in;\n    if( $ENV{REQUEST_METHOD} eq 'POST' ){\n        my $len = $ENV{CONTENT_LENGTH};\n\tunless ( read( STDIN, $in, $len ) == $len ){\n\t    return;\n        }\n    }else{\n\t$in = $ENV{QUERY_STRING};\n    }\n    \n    return $in;\n}",
+      "file" : "/var/tmp/arv_ZEl6kX/Frontier-RPC-0.07b4/lib/Frontier/Responder.pm",
+      "package" : "Frontier::Responder"
+   }
+]

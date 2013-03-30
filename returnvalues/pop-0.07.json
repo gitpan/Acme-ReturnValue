@@ -1,0 +1,68 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Pid_factory.pm",
+      "package" : "POP::Pid_factory"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION=$VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Id_factory.pm",
+      "package" : "POP::Id_factory"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Environment.pm",
+      "package" : "POP::Environment"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/POX_parser.pm",
+      "package" : "POP::POX_parser"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Persistent.pm",
+      "package" : "POP::Persistent"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Lazy_object_list.pm",
+      "package" : "POP::Lazy_object_list"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Lazy_object.pm",
+      "package" : "POP::Lazy_object"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Hash.pm",
+      "package" : "POP::Hash"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION=$VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Lid_factory.pm",
+      "package" : "POP::Lid_factory"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/Lazy_object_hash.pm",
+      "package" : "POP::Lazy_object_hash"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = $VERSION",
+      "file" : "/var/tmp/arv_tP3R6M/pop-0.07/lib/POP/List.pm",
+      "package" : "POP::List"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub stream_string {\n  my $string = shift;\n  my $pos = 0;\n  sub {\n      return if ($pos >= length($string));\n      my @ret = (ord(substr($string, $pos, 1)), $pos);\n      $pos++;\n      return @ret;\n  };\n}",
+      "file" : "/var/tmp/arv_sozkpO/Algorithm-RabinKarp-0.41/lib/Algorithm/RabinKarp/Util.pm",
+      "package" : "Algorithm::RabinKarp::Util"
+   }
+]

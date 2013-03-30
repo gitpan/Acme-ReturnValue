@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n    my $packages = new MetaPackages;\n    $packages->SelfTest;\n}",
+      "file" : "/var/tmp/arv_tDURKc/Introspector-0.04/lib/Introspector/MetaPackages.pm",
+      "package" : "MetaPackages"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub NoSiteLib\n{\n    @INC = ( \n\t     './',\n\t     '/usr/local/lib/perl5/5.6.1/i686-linux-thread-multi',\n\t     '/usr/local/lib/perl5/5.6.1',\n\t     );\n}",
+      "file" : "/var/tmp/arv_tDURKc/Introspector-0.04/lib/Introspector/IncludePaths.pm",
+      "package" : "IncludePaths"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "contract\n{\n    ctor 'new'; impl {\n\tmy $baseclass =shift;\n\t${self->_baseclass} = $baseclass;\n    };\n\n    attr '_baseclass' => 'SCALAR';\n\n\n    method 'instanciate_code';\n    impl\n    {\n\tmy $package = shift;  \n\tmy $baseclass = ${self->_baseclass};\n        my $packagename = ${$package->_name};\n\n        debugprint \"MetaInheritance::Added Inheritance from $packagename to $baseclass\\n\";\n        Class::Contract::inherits($baseclass); \n    };\n\n}",
+      "file" : "/var/tmp/arv_tDURKc/Introspector-0.04/lib/Introspector/MetaInheritance.pm",
+      "package" : "Introspector::MetaInheritance"
+   }
+]

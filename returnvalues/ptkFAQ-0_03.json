@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub setvalue {\nmy $c = shift;\nmy $w = $c->parent;\n\nmy $value = $w->{-value};\n\nmy ($margin, $radius, $min, $max, $dummy, $format) = @$w{@flags};\nmy ($center_x, $center_y) = ($margin + $radius) x 2;\n\nif ($value > $max) {\n$value = $max;\n} elsif ($value < $min) {\n$value = $min;\n}\n\n$w->{-value} = sprintf($format, $value);\n\n\nmy $angle = ($value - $min) * 1.5 / ($max - $min);\n$angle -= 1.25;\n$angle *= $pi;\n\nmy($x, $y) = (cos($angle) * $radius, sin($angle) * $radius);\n$x += $center_x;\n$y += $center_y;\n$c->delete('oldpointer');\n$c->create('line', ($x, $y, $center_x, $center_y),\n-arrow => 'first', -tags => 'oldpointer',\n-width => 2);\n\n}",
+      "file" : "/var/tmp/arv_L70fML/ptkFAQ-0_03/etc/Dial.pm",
+      "package" : "Dial"
+   }
+]

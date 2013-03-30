@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Inject {\n        my ($sock, $str, $code) = @_;\n        print $sock \"$str\\r\\n\";\n        Expect($sock, $code) if $code;\n}",
+      "file" : "/var/tmp/arv_902rrm/HTML-Merge-3.54/lib/HTML/Merge/Mail.pm",
+      "package" : "HTML::Merge::Mail"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Inject {\n        my ($sock, $str, $code) = @_;\n        print $sock \"$str\\r\\n\";\n        Expect($sock, $code) if $code;\n}",
+      "file" : "/var/tmp/arv_902rrm/HTML-Merge-3.54/private/perl/HTML/Merge/Mail.pm",
+      "package" : "HTML::Merge::Mail"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub holidays_es {\n    my ($self, %params) = @_;\n    my $year = $params{'year'} or croak 'Missing year argument';\n\n    my $holidays = $self->holidays(year => $year);\n    my %hd = ();\n\n    require DateTime;\n\n    for my $month_day (keys %$holidays) {\n        my ($month, $day) = unpack \"A2A2\", $month_day;\n        $hd{ $holidays->{$month_day} } = DateTime->new(\n            year  => $year,\n            month => $month,\n            day   => $day,\n        );\n    }\n\n    return \\%hd;\n}",
+      "file" : "/var/tmp/arv_n99AqJ/Date-Holidays-ES-0.02/lib/Date/Holidays/ES.pm",
+      "package" : "Date::Holidays::ES"
+   }
+]

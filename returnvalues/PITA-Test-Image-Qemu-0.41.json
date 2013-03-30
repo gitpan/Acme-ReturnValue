@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub filename {\n\tFile::ShareDir::dist_file('PITA-Test-Image-Qemu', 'qemu.img');\n}",
+      "file" : "/var/tmp/arv_ySx0Rm/PITA-Test-Image-Qemu-0.41/lib/PITA/Test/Image/Qemu.pm",
+      "package" : "PITA::Test::Image::Qemu"
+   }
+]

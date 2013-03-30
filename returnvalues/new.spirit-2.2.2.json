@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_screen_width {\n\tmy $self = shift;\n\t\n\tmy $screen_width = $self->get_preference('screen_width');\n\t\n\tif ( not $screen_width ) {\n\t\teval {\n\t\t\trequire Term::ReadKey;\n\t\t\t($screen_width) = Term::ReadKey::GetTerminalSize();\n\t\t};\n\t\tif ( $@ ) {\n\t\t\t$self->info (\"Warning: could not determine screen width! Set to 79.\");\n\t\t\t$screen_width = 79;\n\t\t}\n\t}\n\n\treturn $screen_width;\n}",
+      "file" : "/var/tmp/arv_ThVBwT/new.spirit/lib/NewSpirit/SqlShell/Text.pm",
+      "package" : "NewSpirit::SqlShell::Text"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub print_help_footer {\n\tmy $self = shift;\n\t\n\tprint \"</pre><p>\\n\";\n}",
+      "file" : "/var/tmp/arv_ThVBwT/new.spirit/lib/NewSpirit/SqlShell/HTML.pm",
+      "package" : "NewSpirit::SqlShell::HTML"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = \"0.00\"",
+      "file" : "/var/tmp/arv_ThVBwT/new.spirit/cpan/CIPP.pm",
+      "package" : "CIPP"
+   }
+]

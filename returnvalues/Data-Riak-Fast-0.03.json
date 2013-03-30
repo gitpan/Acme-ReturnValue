@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub remove_test_bucket {\n    my $bucket = shift;\n\n    try {\n        $bucket->remove_all;\n        Test::More::diag \"Removing test bucket so sleeping for a moment to allow riak to eventually be consistent ...\";\n        my $keys = $bucket->list_keys;\n        while ( $keys && @$keys ) {\n            sleep(1);\n            $keys = $bucket->list_keys;\n        }\n    } catch {\n        is($_->value, \"not found\\n\", \"Bucket is now empty\");\n        is($_->code, \"404\", \"Calling list_keys on an empty bucket gives a 404\");\n    };\n}",
+      "file" : "/var/tmp/arv_EiH_N2/Data-Riak-Fast-0.03/lib/Test/Data/Riak/Fast.pm",
+      "package" : "Test::Data::Riak::Fast"
+   }
+]

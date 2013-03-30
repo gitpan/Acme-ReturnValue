@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub calculate_back_off {\n    my $self = shift;\n\n\n    my $exponent = $self->exponent();\n    my $base = $self->base();\n\n    $exponent = $self->failure_count() if $exponent eq 'count';\n    $base = $self->failure_count() if $base eq 'count';\n\n    return $base ^ $exponent;\n}",
+      "file" : "/var/tmp/arv_p4UpFE/Proc-BackOff-0.02/lib/Proc/BackOff/Exponential.pm",
+      "package" : "Proc::BackOff::Exponential"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub calculate_back_off {\n    my $self = shift;\n\n    my $min = $self->min();\n    my $max = $self->max();\n\n    $min = $self->failure_count() if $min eq 'count';\n    $max = $self->failure_count() if $max eq 'count';\n\n    return int (rand($max-$min) + $min);\n}",
+      "file" : "/var/tmp/arv_p4UpFE/Proc-BackOff-0.02/lib/Proc/BackOff/Random.pm",
+      "package" : "Proc::BackOff::Random"
+   }
+]

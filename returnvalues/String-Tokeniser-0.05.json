@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _except {\n  my $self = shift;\n  my $style = $self->{STYLE};\n  my %decide;\n  my $listref=$self->{LIST};\n  my @res;\n\n  while($_ = shift) {   \n    my($left, $right) = split /$style/;\n    push @{$decide{$left}}, $right;\n  }\n\n  @_ = @$listref;\n  while (@_) {\n    my($first,$second) = (shift, shift || \"\");\n    if (grep { $first eq $_ and scalar(grep { $second eq $_ } @{$decide{$_}}) } keys %decide ) {\n      push(@res, $first.$second);\n    } else {\n      push @res,$first;\n      if (grep { $second eq $_ } keys %decide) {\n\tunshift(@_, $second);\n      } else {\n\tpush @res, $second;\n      }\n    }\n  }\n  $self->{LIST}=\\@res;\n  return $self;\n}",
+      "file" : "/var/tmp/arv_Goheyu/String-Tokeniser-0.05/Tokeniser.pm",
+      "package" : "String::Tokeniser"
+   }
+]

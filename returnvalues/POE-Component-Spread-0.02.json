@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION",
+      "file" : "/var/tmp/arv_87sjAA/POE-Component-Spread-0.02/lib/POE/Filter/Spread.pm",
+      "package" : "POE::Filter::Spread"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION",
+      "file" : "/var/tmp/arv_87sjAA/POE-Component-Spread-0.02/lib/POE/Component/Spread.pm",
+      "package" : "POE::Component::Spread"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION",
+      "file" : "/var/tmp/arv_87sjAA/POE-Component-Spread-0.02/lib/POE/Driver/Spread.pm",
+      "package" : "POE::Driver::Spread"
+   }
+]

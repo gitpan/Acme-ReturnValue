@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub stringy\n{\n\tmy $this = shift;\n\t$this->{s};\n}",
+      "file" : "/var/tmp/arv_tsaB5h/String-Gsub-0.04/lib/String/Gsub.pm",
+      "package" : "String::Gsub"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub subsx($$$)\n{\n\tmy $re  = $_[1];\n\tmy $sub = $_[2];\n\t\n\tref($re)  or $re  = qr/\\Q$re\\E/;\n\tref($sub) or $sub = do{ my$tmpl=$sub; sub{ shift->expand($tmpl); }; };\n\t$_[0] =~ s{$re}\n\t{\n\t\tmy $match = String::Gsub::Matcher->new($_[0]);\n\t\t$sub->($match);\n\t}e;\n\t$_[0];\n}",
+      "file" : "/var/tmp/arv_tsaB5h/String-Gsub-0.04/lib/String/Gsub/Functions.pm",
+      "package" : "String::Gsub::Functions"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub stringy\n{\n\tmy $this = shift;\n\tsubstr(${$this->{origref}},$this->{st}[0], $this->{ed}[0]-$this->{st}[0]);\n}",
+      "file" : "/var/tmp/arv_tsaB5h/String-Gsub-0.04/lib/String/Gsub/Matcher.pm",
+      "package" : "String::Gsub::Matcher"
+   }
+]

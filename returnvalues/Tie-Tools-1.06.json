@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n    my $method = (split(/::/, $AUTOLOAD))[-1];\n    my $package = substr($AUTOLOAD, 0, -(length($method) + 2));\n    my $code = <<EOM;\n    $@ = undef;\n    eval $code;\n    die $@ if ($@);\n    goto &$AUTOLOAD;\n}",
+      "file" : "/var/tmp/arv_k5WZcy/Tie-Tools-1.06/lib/Tie/dbi/ER.pm",
+      "package" : "Tie::DBI::ER"
+   }
+]

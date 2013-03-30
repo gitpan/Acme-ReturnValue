@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub send_email\n{\n    my $self = shift;\n    my %p = @_;\n\n    my $email = Email::Simple->create( header =>\n                                       [ To      => $self->{to},\n                                         From    => $self->{from},\n                                         Subject => $self->{subject},\n                                       ],\n                                       body => $p{message},\n                                     );\n\n    my $sender = Email::Send->new( { mailer => $self->{mailer},\n                                     @{ $self->{mailer_args} },\n                                   },\n                                 );\n\n    local $?;\n    $sender->send($email);\n}",
+      "file" : "/var/tmp/arv_57UmUS/Log-Dispatch-Email-EmailSend-0.03/lib/Log/Dispatch/Email/EmailSend.pm",
+      "package" : "Log::Dispatch::Email::EmailSend"
+   }
+]

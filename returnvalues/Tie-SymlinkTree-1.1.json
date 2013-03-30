@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Dahut!\"",
+      "file" : "/var/tmp/arv_n1Kn5k/Tie-SymlinkTree-1.1/lib/Tie/Indexer.pm",
+      "package" : "Tie::Indexer"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Dahut!\"",
+      "file" : "/var/tmp/arv_n1Kn5k/Tie-SymlinkTree-1.1/lib/Tie/SymlinkTree.pm",
+      "package" : "Tie::SymlinkTree"
+   }
+]

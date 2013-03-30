@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete_all\n{\n    my $self = shift;\n    $self->count or return;\n\n    $self->first->delete;\n    while (my $obj = $self->next) {\n        $obj->delete;\n    }\n    1;\n}",
+      "file" : "/var/tmp/arv_RyRwMF/Class-DBI-Plugin-Senna-0.01/lib/Class/DBI/Plugin/Senna.pm",
+      "package" : "Class::DBI::Plugin::Senna"
+   }
+]

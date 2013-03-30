@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cheat_is_square_safe {\n\tmy ($this, $square) = @_;\n\tour($l,$t);\n\t\n\tMouseMoveAbsPix(\n\t\t$l+SQUARE1X+($square->[0]-1)*SQUARE_W+SQUARE_W/2,\n\t\t$t+$Square1Y+($square->[1]-1)*SQUARE_H+SQUARE_W/2,\n\t);\n\n\tmy $pixel =  CaptureRect(0,0,1,1);\n\n\tmy $signature = $pixel->Get(\"signature\");\n\n\tprint \"Square at @$square has sig of $signature\\n\" if DEBUG;\n\n\tif ($signature eq CHEAT_SAFE) {\n\t\tprint \"This square (@$square) looks safe\\n\" if DEBUG;\n\t\treturn 1;\n\t} elsif ($signature eq CHEAT_UNSAFE) {\n\t\tprint \"This square (@$square) looks dangerous!\\n\" if DEBUG;\n\t\treturn;\n\t} \n\tdie \"Square @$square has unknown cheat-signature\\n$signature\\n\";\n}",
+      "file" : "/var/tmp/arv_DDGfCD/App-SweeperBot-0.03/lib/App/SweeperBot.pm",
+      "package" : "App::SweeperBot"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"This return value is true.\"",
+      "file" : "/var/tmp/arv_q0hqub/Return-Value-1.666002/lib/Return/Value.pm",
+      "package" : "Return::Value"
+   }
+]

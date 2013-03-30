@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub make_executable {\n\tmy $filename = shift;\n\tmy $batchname = \"$filename.com\";\n\tcopy($filename, $batchname);\n\tExtUtils::Helpers::Unix::make_executable($batchname);\n\treturn;\n}",
+      "file" : "/var/tmp/arv_N2I8z7/ExtUtils-Helpers-0.014/lib/ExtUtils/Helpers/VMS.pm",
+      "package" : "ExtUtils::Helpers::VMS"
+   }
+]

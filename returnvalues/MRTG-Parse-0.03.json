@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub traffic_output {\n  my $bytes        = $_[0];\n  my $desired_unit = $_[1];\n  \n  my @array;\n  my $unit;\n  my $total_count;\n\n  my @unit_array = qw(B KB MB GB TB);\n  my $temp_unit  = $bytes;\n  my $counter    = 0;\n  my $check      = \"false\";\n\n  foreach my $unit_entry (@unit_array) {\n    unless ($counter == 0) {\n      $temp_unit = ($temp_unit / 1024);\n      unless ($desired_unit) {\n\tif ($temp_unit < 1) {\n          last;\n        }\n      }\n    }\n\n    $total_count  = $temp_unit;\n    $unit         = $unit_entry;\n\n    if ($desired_unit) {\n      if ($desired_unit eq $unit_entry) {\n        $check = \"true\";\n        last;\n      }\n    }\n\n    $counter++;\n  }\n  \n  push(@array, $total_count);\n  push(@array, $unit);\n  if ($desired_unit && $check eq \"true\") {\n    return @array;\n  } elsif (defined($desired_unit) && $check ne \"true\") {\n    die(\"Erorr: $desired_unit is a non valid unit!\\n\");\n  } else {\n    return @array;\n  }\n}",
+      "file" : "/var/tmp/arv_4_OzGG/MRTG-Parse-0.03/lib/MRTG/Parse.pm",
+      "package" : "MRTG::Parse"
+   }
+]

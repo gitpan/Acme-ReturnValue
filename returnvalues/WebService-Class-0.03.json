@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.03'",
+      "file" : "/var/tmp/arv_tYvSYQ/WebService-Class-0.03/lib/WebService/Class.pm",
+      "package" : "WebService::Class"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub weather{\n\tmy $self = shift;\n\tmy $city = shift;\n\tmy $day  = shift;\n\treturn $self->request_api()->request('GET',$self->define_city,{'city'=>$city,'day'=>$day})->parse_xml();\n}",
+      "file" : "/var/tmp/arv_tYvSYQ/WebService-Class-0.03/lib/WebService/Class/LivedoorWeather.pm",
+      "package" : "WebService::Class::LivedoorWeather"
+   }
+]

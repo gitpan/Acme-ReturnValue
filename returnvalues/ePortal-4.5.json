@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import\n{\n    my $caller = caller;\n    shift; \n    my %p = @_;\n\n    if ($p{read_only})\n    {\n\tforeach my $ro ( ref $p{read_only} ? @{ $p{read_only} } : $p{read_only} )\n\t{\n\t    no strict 'refs';\n\t    *{\"$caller\\::$ro\"} = sub { return shift->{$ro} };\n\t}\n    }\n\n    if ($p{read_write})\n    {\n\tforeach my $rw ( ref $p{read_write} ? @{ $p{read_write} } : $p{read_write} )\n\t{\n\t    no strict 'refs';\n\t    *{\"$caller\\::$rw\"} = sub { my $s = shift; $s->{$rw} = shift if @_; return $s->{$rw}; };\n\t}\n    }\n}",
+      "file" : "/var/tmp/arv_29qRFr/ePortal-4.5/lib/ePortal/MethodMaker.pm",
+      "package" : "ePortal::MethodMaker"
+   }
+]

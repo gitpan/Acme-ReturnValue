@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub CLEAR {\n    my ($self, $key) = @_;\n    my $dbs = $self->{'dbs'};\n    my $hash;\n    foreach $hash (keys %$dbs) {\n        untie %$hash;\n    }\n    delete $self->{'dbs'};\n}",
+      "file" : "/var/tmp/arv_MMKvK3/Language-Mumps-1.08/lib/Language/Mumps.pm",
+      "package" : "Language::Mumps"
+   }
+]

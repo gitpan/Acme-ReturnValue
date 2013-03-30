@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q('This module is dedicated to the Birmingham Perl Mongers')",
+      "file" : "/var/tmp/arv_h3zAnP/CPAN-Testers-WWW-Statistics-Excel-0.04/lib/CPAN/Testers/WWW/Statistics/Excel.pm",
+      "package" : "CPAN::Testers::WWW::Statistics::Excel"
+   }
+]

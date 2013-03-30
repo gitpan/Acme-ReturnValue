@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _clone {\n  my ($self, $top, $in) = @_;\n\n  my $new = $top->ToolBar(qw/-side top -cursorcontrol/, $self->{USECC}, ($in ? (-in => $in, -movable => 0) : ()));\n  my $e   = $self->_edge;\n\n  my @allSlaves = grep {$_ ne $e} $self->{CONTAINER}->packSlaves;\n  for my $w (@allSlaves) {\n    my $t = ref $w;\n    $t =~ s/Tk:://;\n\n    if ($t eq 'Frame' && exists $containers{$w}) { \n      my $obj = $containers{$w};\n      $obj->_clone($top, $new);\n    }\n\n    if ($t eq 'Frame' && exists $self->{SEPARATORS}{$w}) {  \n      $new->separator;\n    }\n\n    my %c = map { $_->[0], $_->[4] || $_->[3] } grep {defined $_->[4] || $_->[3] } grep @$_ > 2, $w->configure;\n    delete $c{$_} for qw/-offset -class -tile -visual -colormap -labelPack/;\n\n    if ($t =~ /.button/) {\n      $new->Button(-type => $t,\n\t\t   %c);\n    } else {\n      $new->$t(%c);\n    }\n  }\n\n  $new ->{MW}      = $self->{MW};\n  $new ->{CLONE}   = $self;\n  $new ->{ISCLONE} = $top;\n  $self->{ISCLONE} = 0;\n}",
+      "file" : "/var/tmp/arv_yBiD0K/Tk-ToolBar-0.10/ToolBar.pm",
+      "package" : "Tk::ToolBar"
+   }
+]

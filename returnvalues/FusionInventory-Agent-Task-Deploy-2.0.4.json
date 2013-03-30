@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run {\n    my ($self, %params) = @_;\n\n    $ENV{LC_ALL} = 'C'; \n    $ENV{LANG} = 'C'; \n\n    $self->{client} = FusionInventory::Agent::HTTP::Client::Fusion->new(\n        logger       => $self->{logger},\n        user         => $params{user},\n        password     => $params{password},\n        proxy        => $params{proxy},\n        ca_cert_file => $params{ca_cert_file},\n        ca_cert_dir  => $params{ca_cert_dir},\n        no_ssl_check => $params{no_ssl_check},\n        debug        => $self->{debug}\n    );\n\n    my $globalRemoteConfig = $self->{client}->send(\n        url  => $self->{target}->{url},\n        args => {\n            action    => \"getConfig\",\n            machineid => $self->{deviceid},\n            task      => { Deploy => $VERSION },\n        }\n    );\n\n    return unless $globalRemoteConfig->{schedule};\n    return unless ref( $globalRemoteConfig->{schedule} ) eq 'ARRAY';\n\n    foreach my $job ( @{ $globalRemoteConfig->{schedule} } ) {\n        next unless $job->{task} eq \"Deploy\";\n        $self->processRemote($job->{remote});\n    }\n\n    return 1;\n}",
+      "file" : "/var/tmp/arv_l79PqA/FusionInventory-Agent-Task-Deploy-2.0.4/lib/FusionInventory/Agent/Task/Deploy.pm",
+      "package" : "FusionInventory::Agent::Task::Deploy"
+   }
+]

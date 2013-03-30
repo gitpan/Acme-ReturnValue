@@ -1,0 +1,122 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub table\n{\n    my $self = shift;\n\n    return $self->{table};\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Index.pm",
+      "package" : "Alzabo::Index"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub comment { $_[0]->{comment} }",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Column.pm",
+      "package" : "Alzabo::Column"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_table_attributes\n{\n    my $s = shift;\n\n    foreach my $table ( $s->tables )\n    {\n        tie %{ $table->{attributes} }, 'Tie::IxHash';\n    }\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/BackCompat.pm",
+      "package" : "Alzabo::BackCompat"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub sqlmaker\n{\n    my $self = shift;\n    my %p = validate( @_, { quote_identifiers =>\n                            { type    => BOOLEAN,\n                              default => $self->{quote_identifiers},\n                            },\n                          },\n                    );\n\n    return $self->{sql}->new( driver => $self->driver,\n                              quote_identifiers => $p{quote_identifiers},\n                            );\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Schema.pm",
+      "package" : "Alzabo::Schema"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub comment { $_[0]->{comment} }",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Table.pm",
+      "package" : "Alzabo::Table"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n    --$STACK;\n\n    @CHANGES = () unless $STACK;\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/ChangeTracker.pm",
+      "package" : "Alzabo::ChangeTracker"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub owner\n{\n    my $self = shift;\n\n    return $self->{owner};\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/ColumnDefinition.pm",
+      "package" : "Alzabo::ColumnDefinition"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _process_by_clause\n{\n    my ($sql, $by, $type) = @_;\n\n    my @items;\n    if ( Alzabo::Utils::safe_isa( $by, 'Alzabo::Column' ) || Alzabo::Utils::safe_isa( $by, 'Alzabo::SQLMaker::Function' ) )\n    {\n        @items = $by;\n    }\n    elsif ( Alzabo::Utils::is_arrayref($by) )\n    {\n        @items = @$by;\n    }\n\n    my $method = \"${type}_by\";\n    $sql->$method(@items);\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Runtime.pm",
+      "package" : "Alzabo::Runtime"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _virtual\n{\n    my $self = shift;\n\n    my $sub = (caller(1))[3];\n    Alzabo::Exception::VirtualMethod->throw( error =>\n                                             \"$sub is a virtual method and must be subclassed in \" . ref $self );\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/RDBMSRules.pm",
+      "package" : "Alzabo::RDBMSRules"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub as_string\n{\n    my $self = shift;\n    my $driver = shift;\n    my $quote = shift;\n\n    my @args;\n    foreach ( 0..$#{ $self->{args} } )\n    {\n\tif ( Alzabo::Utils::safe_can( $self->{args}[$_], 'table' ) )\n\t{\n\t    push @args,\n\t\t( $quote ?\n                  $driver->quote_identifier( $self->{args}[$_]->table->alias_name,\n                                             $self->{args}[$_]->name ) :\n                  $self->{args}[$_]->table->alias_name . '.' .\n                  $self->{args}[$_]->name );\n\t    next;\n\t}\n\telsif ( Alzabo::Utils::safe_isa( $self->{args}[$_], 'Alzabo::SQLMaker::Function' ) )\n\t{\n\t    push @args, $self->{args}[$_]->as_string( $driver, $quote );\n\t    next;\n\t}\n\n\tmy $i = $_ > $#{ $self->{quote} } ? -1 : $_;\n\tpush @args,\n            $self->{quote}[$i] ? $driver->quote( $self->{args}[$_] ) : $self->{args}[$_];\n    }\n\n    my $sql = $self->{function};\n    $sql =~ s/_/ /g if $self->{has_spaces};\n\n    return $sql if $self->{is_modifier};\n\n    $sql .= '('\n        unless $self->{no_parens};\n\n    if ( $self->{format} )\n    {\n\t$sql .= sprintf( $self->{format}, @args );\n    }\n    else\n    {\n\t$sql .= join ', ', @args;\n    }\n\n    $sql .= ')'\n        unless $self->{no_parens};\n\n    return $sql;\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/SQLMaker.pm",
+      "package" : "Alzabo::SQLMaker"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub comment { $_[0]->{comment} }",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/ForeignKey.pm",
+      "package" : "Alzabo::ForeignKey"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prefetch_none\n{\n    my $self = shift;\n\n    $_->set_prefetch() for $self->tables;\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Runtime/Schema.pm",
+      "package" : "Alzabo::Runtime::Schema"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub next_as_hash\n{\n    my $self = shift;\n\n    my @next = $self->next or return;\n\n    return map { defined $_ ? ( $_->table->name => $_ ) : () } @next;\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Runtime/Cursor.pm",
+      "package" : "Alzabo::Runtime::Cursor"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register_delete\n{\n    my $self = shift;\n    my $row = shift;\n\n    my @update = grep { $_->nullable } $self->columns_to;\n\n    return unless $self->to_is_dependent || @update;\n\n    my @where = map { [ $_->[1], '=', $row->select( $_->[0]->name ) ] } $self->column_pairs;\n    my $cursor = $self->table_to->rows_where( where => \\@where );\n\n    while ( my $related_row = $cursor->next )\n    {\n        next if $DELETED{ $related_row->id_as_string };\n\n        if ($self->to_is_dependent)\n        {\n            local %DELETED = %DELETED;\n            $DELETED{ $related_row->id_as_string } = 1;\n            $related_row->delete;\n        }\n        elsif (@update)\n        {\n            $related_row->update( map { $_->name => undef } @update );\n        }\n    }\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Runtime/ForeignKey.pm",
+      "package" : "Alzabo::Runtime::ForeignKey"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub rules_id\n{\n    return 'PostgreSQL';\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/RDBMSRules/PostgreSQL.pm",
+      "package" : "Alzabo::RDBMSRules::PostgreSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register_column_name_change\n{\n    my $self = shift;\n\n    validate( @_, { column => { isa => 'Alzabo::Create::Column' },\n                    old_name => { type => SCALAR } } );\n    my %p = @_;\n\n    return unless $self->{columns}->EXISTS( $p{old_name} );\n\n    my $new_name = $p{column}->name;\n\n    my $index = $self->{columns}->Indices( $p{old_name} );\n    my $val = $self->{columns}->Values($index);\n    $val->{column} = $p{column};\n    $self->{columns}->Replace( $index, $val, $new_name );\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Create/Index.pm",
+      "package" : "Alzabo::Create::Index"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub former_name { $_[0]->{last_instantiated_name} }",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Create/Column.pm",
+      "package" : "Alzabo::Create::Column"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _schema_file_type\n{\n    return 'create';\n}",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Create/Schema.pm",
+      "package" : "Alzabo::Create::Schema"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub former_name { $_[0]->{last_instantiated_name} }",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Create/Table.pm",
+      "package" : "Alzabo::Create::Table"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub set_comment { $_[0]->{comment} = defined $_[1] ? $_[1] : '' }",
+      "file" : "/var/tmp/arv_CGvYkw/Alzabo-0.92/lib/Alzabo/Create/ForeignKey.pm",
+      "package" : "Alzabo::Create::ForeignKey"
+   }
+]

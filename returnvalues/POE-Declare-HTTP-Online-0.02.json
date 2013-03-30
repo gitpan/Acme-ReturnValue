@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "compile",
+      "file" : "/var/tmp/arv_sozlUM/POE-Declare-HTTP-Online-0.02/lib/POE/Declare/HTTP/Online.pm",
+      "package" : "POE::Declare::HTTP::Online"
+   }
+]

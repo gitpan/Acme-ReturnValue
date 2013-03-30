@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub STAT {\n\tmy $this = shift;\n\treturn $this->[2]->__stat($this->[1]);\n}",
+      "file" : "/var/tmp/arv_zrpG5B/VirtualFS-ISO9660-0.02/lib/VirtualFS/ISO9660.pm",
+      "package" : "VirtualFS::ISO9660"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _help {\n    my $full = shift;\n\n    if($full) {\n        print <<HERE;\n\n    }\n\n    print \"$0 v$VERSION\\n\";\n    exit(0);\n}",
+      "file" : "/var/tmp/arv_NYAVz8/CPAN-Testers-Data-Uploads-Mailer-0.04/lib/CPAN/Testers/Data/Uploads/Mailer.pm",
+      "package" : "CPAN::Testers::Data::Uploads::Mailer"
+   }
+]

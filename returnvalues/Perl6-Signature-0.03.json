@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "6",
+      "file" : "/var/tmp/arv_Q2AobS/Perl6-Signature-0.03/lib/Perl6/Signature.pm",
+      "package" : "Perl6::Signature"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "6",
+      "file" : "/var/tmp/arv_Q2AobS/Perl6-Signature-0.03/lib/Perl6/Signature/Val.pm",
+      "package" : "Perl6::Signature::Val"
+   }
+]

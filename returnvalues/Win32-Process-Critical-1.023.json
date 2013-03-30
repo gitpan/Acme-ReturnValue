@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Win32::Process::Critical::Import()",
+      "file" : "/var/tmp/arv_LBdjB9/Win32-Process-Critical-1.023/lib/Win32/Process/Critical.pm",
+      "package" : "Win32::Process::Critical"
+   }
+]

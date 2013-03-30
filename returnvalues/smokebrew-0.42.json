@@ -1,0 +1,56 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[Smokebrew, look what's inside of you]",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew.pm",
+      "package" : "App::SmokeBrew"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smokin']",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/PerlVersion.pm",
+      "package" : "App::SmokeBrew::PerlVersion"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Building a perl]",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/BuildPerl.pm",
+      "package" : "App::SmokeBrew::BuildPerl"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smokin']",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/Plugin.pm",
+      "package" : "App::SmokeBrew::Plugin"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smokin']",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/Types.pm",
+      "package" : "App::SmokeBrew::Types"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smoke tools look what's inside of you]",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/Tools.pm",
+      "package" : "App::SmokeBrew::Tools"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smokin']",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/IniFile.pm",
+      "package" : "App::SmokeBrew::IniFile"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smokin']",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/Plugin/Null.pm",
+      "package" : "App::SmokeBrew::Plugin::Null"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Smokin']",
+      "file" : "/var/tmp/arv_TQsvec/smokebrew-0.42/lib/App/SmokeBrew/Plugin/CPANPLUS/YACSmoke.pm",
+      "package" : "App::SmokeBrew::Plugin::CPANPLUS::YACSmoke"
+   }
+]

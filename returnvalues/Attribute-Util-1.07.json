@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Rosebud\"",
+      "file" : "/var/tmp/arv_r8tP5l/Attribute-Util-1.07/lib/Attribute/Util.pm",
+      "package" : "Attribute::Util"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Rosebud\"",
+      "file" : "/var/tmp/arv_r8tP5l/Attribute-Util-1.07/lib/Attribute/SigHandler.pm",
+      "package" : "Attribute::SigHandler"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Rosebud\"",
+      "file" : "/var/tmp/arv_r8tP5l/Attribute-Util-1.07/lib/Attribute/Memoize.pm",
+      "package" : "Attribute::Memoize"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Rosebud\"",
+      "file" : "/var/tmp/arv_r8tP5l/Attribute-Util-1.07/lib/Attribute/Abstract.pm",
+      "package" : "Attribute::Abstract"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Rosebud\"",
+      "file" : "/var/tmp/arv_r8tP5l/Attribute-Util-1.07/lib/Attribute/Alias.pm",
+      "package" : "Attribute::Alias"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Rosebud\"",
+      "file" : "/var/tmp/arv_r8tP5l/Attribute-Util-1.07/lib/Attribute/Method.pm",
+      "package" : "Attribute::Method"
+   }
+]

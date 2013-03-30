@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"true\"",
+      "file" : "/var/tmp/arv_s5Ta1P/Term-ANSIColorx-ColorNicknames-2.7185/AutoFilterFH.pm",
+      "package" : "Term::ANSIColorx::AutoFilterFH"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"true\"",
+      "file" : "/var/tmp/arv_s5Ta1P/Term-ANSIColorx-ColorNicknames-2.7185/ColorNicknames.pm",
+      "package" : "Term::ANSIColorx::ColorNicknames"
+   }
+]

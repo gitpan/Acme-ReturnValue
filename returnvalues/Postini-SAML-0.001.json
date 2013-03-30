@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_form {\n    my ($self, $mail) = @_;\n\n    my $saml_response = encode_base64( $self->get_response_xml( $mail ), q{} );\n\n    my $html = join( q{},\n        qq{<form action=\"$ACS_URL\" method=\"post\">},\n        qq{<input type=\"hidden\" name=\"SAMLResponse\" value=\"$saml_response\" />},\n        qq{<input type=\"hidden\" name=\"TARGET\" value=\"$ACS_URL\" />},\n        qq{<input type=\"submit\" name=\"Submit\" value=\"Submit\" />},\n        qq{</form>},\n    );\n\n    return $html;\n}",
+      "file" : "/var/tmp/arv_mWm6Bs/Postini-SAML-0.001/lib/Postini/SAML.pm",
+      "package" : "Postini::SAML"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub perform_search {\n    my $search = $self->cgi->search_term;\n    my $dir = io($self->plugin_directory)->absolute;\n    [ map {\n        s/$dir\\///;\n        s/\\.txt$//;\n        $self->hub->pages->new_page($_);\n    } split(/\\n/,`/usr/bin/mdfind -onlyin $dir \"$search\"`)];\n}",
+      "file" : "/var/tmp/arv_VBoy3I/Kwiki-Search-Spotlight-0.01/lib/Kwiki/Search/Spotlight.pm",
+      "package" : "Kwiki::Search::Spotlight"
+   }
+]

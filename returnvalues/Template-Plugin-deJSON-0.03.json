@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "qw/You drink your kawfee and I sip my tay/",
+      "file" : "/var/tmp/arv_Gm8c5U/Template-Plugin-deJSON-0.03/lib/Template/Plugin/deJSON.pm",
+      "package" : "Template::Plugin::deJSON"
+   }
+]

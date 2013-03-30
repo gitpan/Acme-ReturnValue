@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "sub _ {\n\tmy $text = shift;\n\treturn ($GETTEXT == 1 ? Locale::gettext::gettext($text) : $text);\n}\n\nsub which {\n\tmy $cmd = shift;\n\tforeach my $dir (split(/:/, $ENV{PATH})) {\n\t\tmy $path = File::Spec->catfile($dir, $cmd);\n\t\treturn $path if (-x $path);\n\t}\n\treturn undef;\n}\n\nsub get_backend {\n\tmy $self = shift;\n\tmy $module = sprintf('%s::%s', ref($self), ucfirst($^O));\n\tmy $file = $module.'.pm';\n\t$file =~ s!::!/!g;\n\teval {\n\t\trequire \"$file\";\n\t};\n\tif ($@) {\n\t\tcarp(sprintf(\"Cannot find the %s backend!\", $module));\n\t\treturn undef;\n\n\t} else {\n\t\treturn $module->new;\n\n\t}\n}\n\nsub get_default_dir {\n\tmy $self = shift;\n\treturn File::Spec->catfile(Glib::get_home_dir, ($^O eq 'MSWin32' ? 'Desktop' : ''));\n}\n\n1",
+      "file" : "/var/tmp/arv_RCGmEI/Gtk2-Ex-PrintDialog-0.03/lib/Gtk2/Ex/PrintDialog.pm",
+      "package" : "Gtk2::Ex::PrintDialog"
+   }
+]

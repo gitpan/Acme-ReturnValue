@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Scode",
+      "file" : "/var/tmp/arv_CrPT3X/Kwiki-Scode-0.03/lib/Kwiki/Scode.pm",
+      "package" : "Kwiki::Scode"
+   }
+]

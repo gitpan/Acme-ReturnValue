@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Bad {\n\tmy $self = shift;\n  \n  warn \"Bad str: \" . $self->{'Str'} . \"\\n\";\n}",
+      "file" : "/var/tmp/arv_LsW6Q7/Math-Expr-0.4/Expr.pm",
+      "package" : "Math::Expr"
+   }
+]

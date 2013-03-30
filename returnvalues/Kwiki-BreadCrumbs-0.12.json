@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub html {\n    my @trail = @{$self->trail};\n    my $show = $self->preferences->show_bread_crumbs->value;\n    splice @trail, $show\n      if @trail > $show;\n    my $script_name = $self->config->script_name;\n    my $pages = $self->hub->pages;\n    \"<hr />\" . join ' &lt; ',\n    map {\n        my $page = $pages->new_page($_);\n        sprintf \"<a href=\\\"%s?%s\\\">%s</a>\\n\",\n          $script_name,\n          $page->uri,\n          $page->title;\n    } @trail;\n}",
+      "file" : "/var/tmp/arv_iUnb7m/Kwiki-BreadCrumbs-0.12/lib/Kwiki/BreadCrumbs.pm",
+      "package" : "Kwiki::BreadCrumbs"
+   }
+]

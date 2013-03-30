@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub copy\n{\n    my ($self, $inpdf, $res, $unique, $outpdf, %opts) = @_;\n    my ($k, $path);\n\n    $res = $self->SUPER::copy($inpdf, $res, $unique, $outpdf, %opts);\n    $path = delete $opts{'path'};\n    foreach $k (keys %$self)\n    {\n        next if $self->dont_copy($k);\n        next if defined $res->{$k};\n        if (UNIVERSAL::can($self->{$k}, \"is_obj\"))\n        {\n            if (grep {\"$path/$k\" =~ m|$_|} @{$opts{'clip'}})\n            { $res->{$k} = $self->{$k}; }\n            else\n            { $res->{$k} = $self->{$k}->realise->copy($inpdf, undef, $unique ? $unique + 1 : 0,\n                        $outpdf, %opts, 'path' => \"$path/$k\"); }\n        }\n        else\n        { $res->{$k} = $self->{$k}; }\n    }\n    $res;\n}",
+      "file" : "/var/tmp/arv_PD47UN/Text-PDF-0.29/lib/Text/PDF/Dict.pm",
+      "package" : "Text::PDF::Dict"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ship_out\n{\n    my ($self, $pdf) = @_;\n\n    $pdf->ship_out($self);\n    if (defined $self->{'Contents'})\n    { $pdf->ship_out($self->{'Contents'}->elementsof); }\n    $self;\n}",
+      "file" : "/var/tmp/arv_PD47UN/Text-PDF-0.29/lib/Text/PDF/Page.pm",
+      "package" : "Text::PDF::Page"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub copy\n{\n    my ($self, $inpdf, $res, $unique, $outpdf, %opts) = @_;\n    my ($i);\n\n    $res = $self->SUPER::copy($inpdf, $res, $unique, $outpdf, %opts);\n    $res->{'val'} = $self->{'val'};\n    $res->{' realised'} = 1;\n    $res;\n}",
+      "file" : "/var/tmp/arv_PD47UN/Text-PDF-0.29/lib/Text/PDF/String.pm",
+      "package" : "Text::PDF::String"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub as_pdf\n{ $_[0]->{'val'}; }",
+      "file" : "/var/tmp/arv_PD47UN/Text-PDF-0.29/lib/Text/PDF/Number.pm",
+      "package" : "Text::PDF::Number"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub name_to_string ($;$)\n{\n    my ($str, $pdf) = @_;\n    $str =~ s|^/||o;\n\n    if (!defined($pdf) || (defined $pdf->{' version'} && $pdf->{' version'} >= 2))\n    { $str =~ s/#([0-9a-f]{2})/chr(hex($1))/oige; }\n    return $str;\n}",
+      "file" : "/var/tmp/arv_PD47UN/Text-PDF-0.29/lib/Text/PDF/Name.pm",
+      "package" : "Text::PDF::Name"
+   }
+]

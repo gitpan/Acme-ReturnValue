@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load('TinkerForge::API', $VERSION)",
+      "file" : "/var/tmp/arv_AiT0w6/TinkerForge-0.01/lib/TinkerForge/API.pm",
+      "package" : "TinkerForge::API"
+   }
+]

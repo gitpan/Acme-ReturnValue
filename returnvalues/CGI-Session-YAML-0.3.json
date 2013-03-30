@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub commit\n{\n    my $self = shift;\n    my $file = $self->{sessiondir} . '/' . $self->{sessionid};\n\n    YAML::DumpFile($file, $self->{paramshash});\n}",
+      "file" : "/var/tmp/arv_Oab5m8/CGI-Session-YAML-0.3/lib/CGI/Session/YAML.pm",
+      "package" : "CGI::Session::YAML"
+   }
+]

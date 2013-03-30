@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'<one>zero</one>'",
+      "file" : "/var/tmp/arv_4iE1Wt/XML-Tiny-DOM-1.1/lib/XML/Tiny/DOM.pm",
+      "package" : "XML::Tiny::DOM"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'<one>zero</one>'",
+      "file" : "/var/tmp/arv_4iE1Wt/XML-Tiny-DOM-1.1/lib/XML/Tiny/DOM/Element.pm",
+      "package" : "XML::Tiny::DOM::Element"
+   }
+]

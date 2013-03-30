@@ -1,0 +1,56 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Encode {\n    my $value = shift;\n\n    $value =~ s/([^a-zA-Z0-9_\\-.])/uc sprintf(\"%%%02x\",ord($1))/eg;\n    return $value;\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/URLEncoder.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::URLEncoder"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetErrorString\n{\n  my $self = shift;\n  return $self->{strError};\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/TransactionClient.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::TransactionClient"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetPayerAuthenticationResponse {\n    my $self = shift;\n    $self->{oPayerAuthenticationResponse};\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/CreditCardResponse.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::CreditCardResponse"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetErrorString\n{\n  my $self = shift;\n  return $self->{strError};\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/CreditCardRequest.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::CreditCardRequest"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetErrorString\n{\n  my $self = shift;\n  return $self->{strError};\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/SecureHttp.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::SecureHttp"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getCCodeFromCName {\n  my $country = shift; \n  $country = uc($country);\n  my $key;\n  my $countryName;\n  my $countryNumber;\n  foreach $key (keys(%CountryCodes::countryHash)){\n    ($countryName, $countryNumber) = split(/:/, $CountryCodes::countryHash{$key});\n    if ($country  eq  $countryName) { return $key}\n  }\n  return undef;\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/CountryCodes.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::CountryCodes"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetTransResponseObject {\n  my $self = shift;\n  my $InString = shift; \n  return new Business::OnlinePayment::PPIPayMover::TransactionResponse($InString);\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/TransactionRequest.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::TransactionRequest"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub WriteResponse {\n  my $self = shift;\n  my $outString = shift;\n  \n  $self->{strResponseCodeText} =~ tr/\\n/ /;\n  $self->{strTimeStamp} =~ tr/\\n/ /;\n  $$outString .= \"response_code=\";\n  $$outString .= $self->{strResponseCode};\n  $$outString .= \"\\n\";\n  $$outString .= \"response_code_text=\";\n  $$outString .= $self->{strResponseCodeText};\n  $$outString .= \"\\n\";\n  $$outString .= \"time_stamp=\";\n  $$outString .= $self->{strTimeStamp};\n  $$outString .= \"\\n\";\n  \n  if ($self->{bRetryRecommended}) {\n    $$outString .= \"retry_recommended=true\\n\";\n  }\n  else {\n    $$outString .= \"retry_recommended=false\\n\";\n  }\n  return CCR_NO_ERROR;\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/TransactionResponse.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::TransactionResponse"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetTransactionConditionCode {\n    my $self = shift;\n    $self->{strTransactionConditionCode};\n}",
+      "file" : "/var/tmp/arv_isnLjY/Business-OnlinePayment-PPIPayMover-0.01/lib/Business/OnlinePayment/PPIPayMover/PayerAuthenticationResponse.pm",
+      "package" : "Business::OnlinePayment::PPIPayMover::PayerAuthenticationResponse"
+   }
+]

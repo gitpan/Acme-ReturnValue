@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'SDG'",
+      "file" : "/var/tmp/arv_DR_tso/Dist-Zilla-Plugin-Rsync-0.1/lib/Dist/Zilla/Plugin/Rsync.pm",
+      "package" : "Dist::Zilla::Plugin::Rsync"
+   }
+]

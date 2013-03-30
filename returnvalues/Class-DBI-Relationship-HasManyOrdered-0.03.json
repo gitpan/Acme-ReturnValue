@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "ContentManager::Page->has_many_ordered(Images => ContentManager::Image =>  image_id, {order_by => 'position', map => 'pageimages'})",
+      "file" : "/var/tmp/arv_iUGZhZ/Class-DBI-Relationship-HasManyOrdered-0.03/examples/ContentManager/Page.pm",
+      "package" : "ContentManager::Page"
+   }
+]

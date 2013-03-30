@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "CGI::Emulate::PSGI->handler(sub {\n    Pod::POM::Web->handler\n})",
+      "file" : "/var/tmp/arv_l0L0ab/Pod-POM-Web-PSGI-0.002/lib/Pod/POM/Web/PSGI.pm",
+      "package" : "Pod::POM::Web::PSGI"
+   }
+]

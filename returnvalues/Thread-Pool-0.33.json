@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub CLONE { $cloned++ }",
+      "file" : "/var/tmp/arv_1GaIzC/Thread-Pool-0.33/lib/Thread/Pool.pm",
+      "package" : "Thread::Pool"
+   }
+]

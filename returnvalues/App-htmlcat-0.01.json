@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _empty_port {\n    my $port = $ENV{HTTPCAT_PORT} || 45192 + int(rand() * 1000);\n\n    while ($port++ < 60000) {\n        my $remote = IO::Socket::INET->new(\n            Proto    => 'tcp',\n            PeerAddr => '127.0.0.1',\n            PeerPort => $port,\n        );\n\n        if ($remote) {\n            close $remote;\n        } else {\n            return $port;\n        }\n    }\n\n    die 'Could not find empty port';\n}",
+      "file" : "/var/tmp/arv_mTyp6t/App-htmlcat-0.01/lib/App/htmlcat.pm",
+      "package" : "App::htmlcat"
+   }
+]

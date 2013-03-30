@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _get_stage_from_rule {\n  my  ($self, $conf, $rule) = @_;\n\n  my $type = $conf->{test_types}->{$rule};\n  if ($type && $type == $Mail::SpamAssassin::Conf::TYPE_EMPTY_TESTS) {\n    my $parent = $conf->{tests}->{$rule};\n    if ($parent) {\n      $type = $conf->{test_types}->{$parent};\n    }\n  }\n  if ($type && exists $type_to_stage{$type}) {\n    return $type_to_stage{$type};\n  }\n  else {\n    return \"meta\";\n  }\n}",
+      "file" : "/var/tmp/arv_rOAd7o/Mail-SpamAssassin-3.3.2/lib/Mail/SpamAssassin/Plugin/Reuse.pm",
+      "package" : "Mail::SpamAssassin::Plugin::Reuse"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub select {\n\tmy $obj = shift;\n\n\tmy $start = time();\n\t$! = undef;\n\tmy ($read, $write, $except) = IO::Select->select(\n\t\t$obj->[0],\n\t\t$obj->[1],\n\t\t$obj->[2],\n\t\t$obj->[3] );\n\n\tif ($! ne '') {\n\t\tprint STDERR \"select() failure: $!\\n\";\n\t\tprint STDERR join(\"\\n\",\n\t\t\t$obj->[0]->as_string(),\n\t\t\t$obj->[1]->as_string(),\n\t\t\t$obj->[2]->as_string()), \"\\n\";\n\t}\n\treturn time() - $start\n\t\tunless $read;\n\n\tmy %ready = ();\n\tmy %ready_flags = ();\n\n\t$ready_flags{$_} = HTTPD_SELECT_RD,\n\t$ready{$_} = $_\n\t\tforeach (@$read);\n\n\t$ready_flags{$_} |= HTTPD_SELECT_WR,\n\t$ready{$_} = $_\n\t\tforeach (@$write);\n\n\t$ready_flags{$_} |= HTTPD_SELECT_EX,\n\t$ready{$_} = $_\n\t\tforeach (@$except);\n\n\t$ready{$_}->handleSocketEvent($ready_flags{$_}) foreach (keys %ready);\n\treturn time() - $start;\n}",
+      "file" : "/var/tmp/arv_eJmgvu/HTTP-Daemon-Threaded-0.91/lib/HTTP/Daemon/Threaded/IOSelector.pm",
+      "package" : "HTTP::Daemon::Threaded::IOSelector"
+   }
+]

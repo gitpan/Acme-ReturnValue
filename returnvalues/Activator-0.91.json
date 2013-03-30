@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub finalize {\n    my ($c) = @_;\n    if ( $c->stash->{e} ) {\n\tWARN(\"Execution had error(s)\");\n\tforeach my $e ( @{ $c->stash->{e} } ) {\n\t    WARN($e);\n\t}\n    }\n    delete $c->stash->{e};\n    return $c->NEXT::finalize(@_);\n}",
+      "file" : "/var/tmp/arv_PXFfXV/Activator-0.91/lib/Catalyst/Plugin/Activator/Exception.pm",
+      "package" : "Catalyst::Plugin::Activator::Exception"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Activator::Tutorial",
+      "file" : "/var/tmp/arv_PXFfXV/Activator-0.91/lib/Activator/Tutorial.pm",
+      "package" : "Activator::Tutorial"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _get_static_arg {\n    my ( $pkg, $arg ) = @_;\n\n    if ( !$pkg && !$arg ) {\n\t$arg = '<empty>';\n    }\n    elsif ( !$arg ) {\n\tif ( UNIVERSAL::isa( $pkg, 'Activator::Log' ) ) {\n\t    $arg = '<empty>';\n\t}\n\telse {\n\t    $arg = $pkg;\n\t}\n    }\n    chomp $arg;\n    return $arg;\n}",
+      "file" : "/var/tmp/arv_PXFfXV/Activator-0.91/lib/Activator/Log.pm",
+      "package" : "Activator::Log"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub show {\n    my @pages = $self->pages->all_ids_newest_first;\n    my $page = $self->pages->new_page($pages[int(rand(@pages))]);\n    my @paragraphs = split(/\\n+/,$page->content);\n    my $choosen = @paragraphs[int(rand(@paragraphs))];\n    return $self->hub->formatter->text_to_html($choosen);\n}",
+      "file" : "/var/tmp/arv_hmDjNL/Kwiki-Widgets-RandomQuote-0.01/lib/Kwiki/Widgets/RandomQuote.pm",
+      "package" : "Kwiki::Widgets::RandomQuote"
+   }
+]

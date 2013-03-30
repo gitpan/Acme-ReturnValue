@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "sub v2trap_varbinds {\n   my $self = shift;\n\n   my %params = (\n      oid       => '1.3.6.1.4.1.50000',\n      timeticks => time(),\n   );\n   if (@_ == 1) {\n      return(undef)\n   } else {\n      my %cfg = @_;\n      for (keys(%cfg)) {\n         if (/^-?oid$/i) {\n            $params{'oid'} = $cfg{$_}\n         } elsif (/^-?time(?:ticks)?$/i) {\n            $params{'timeticks'} = $cfg{$_}\n         }\n      }\n   }\n\n   my %hash1 = (\n      oid   => '1.3.6.1.2.1.1.3.0',\n      value => {\n         timeticks => $params{'timeticks'}\n      }\n   );\n\n   my %hash2 = (\n      oid   => '1.3.6.1.6.3.1.1.4.1.0',\n      value => {\n         oid => $params{'oid'}\n      }\n   );\n\n   my @varbinds;\n   push @varbinds, \\%hash1;\n   push @varbinds, \\%hash2;\n\n   return @varbinds;\n}\n\nsub _inetNtoa {\n    my ($addr) = @_;\n\n    if ($Socket::VERSION >= 1.94) {\n        my $name;\n        if (length($addr) == 4) {\n            $name = Socket::pack_sockaddr_in(0, $addr)\n        } else {\n            $name = Socket::pack_sockaddr_in6(0, $addr)\n        }\n        my ($err, $address) = Socket::getnameinfo($name, $NI_NUMERICHOST);\n        if (defined($address)) {\n            return $address\n        } else {\n            return undef\n        }\n    } else {\n        if (length($addr) == 4) {\n            return inet_ntoa($addr)\n        } else {\n            return join ':', (CORE::unpack '(a4)*', CORE::unpack ('H*', $addr))\n        }\n    }\n}\n\n1",
+      "file" : "/var/tmp/arv_sw8Yhp/Net-Frame-Layer-SNMP-1.01/lib/Net/Frame/Layer/SNMP.pm",
+      "package" : "Net::Frame::Layer::SNMP"
+   }
+]

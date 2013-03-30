@@ -1,0 +1,68 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return ($this->{L}, $this->{M}, $this->{U}) if wantarray;\n    return $this->{M};\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/BollingerBands.pm",
+      "package" : "Math::Business::BollingerBands"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->[-1];\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/WMA.pm",
+      "package" : "Math::Business::WMA"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return ($this->{PDI}, $this->{MDI}, $this->{ADX}) if wantarray;\n    return $this->{ADX};\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/DMI.pm",
+      "package" : "Math::Business::DMI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->{SMA};\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/SMA.pm",
+      "package" : "Math::Business::SMA"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->{EMA};\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/EMA.pm",
+      "package" : "Math::Business::EMA"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub short {\n    my $this = shift;\n    $this->{ls} == SHORT;\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/ParabolicSAR.pm",
+      "package" : "Math::Business::ParabolicSAR"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->{RSI};\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/RSI.pm",
+      "package" : "Math::Business::RSI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->{ATR};\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/ATR.pm",
+      "package" : "Math::Business::ATR"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->[F];\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/LaguerreFilter.pm",
+      "package" : "Math::Business::LaguerreFilter"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub query {\n    my $this = shift;\n\n    return $this->[-1]->query;\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/HMA.pm",
+      "package" : "Math::Business::HMA"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub insert {\n    my $this  = shift;\n\n    croak \"You must set the number of days before you try to insert\" if not $this->{days};\n\n    while( defined( my $value = shift ) ) {\n        $this->{slow_EMA}->insert($value);\n        $this->{fast_EMA}->insert($value);\n\n        my $m = $this->query;\n        $this->{trig_EMA}->insert( $m ) if defined($m);\n    }\n}",
+      "file" : "/var/tmp/arv_xKZQAy/stockmonkey-2.9020/Business/MACD.pm",
+      "package" : "Math::Business::MACD"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub joyGetDevCaps{\n\tmy $self = shift;\n\tmy $_LPCAPS = pack $LPCAPSPACK,@_LPCAPS;\n\t$_joyGetDevCaps->Call($self->{DEV}, $_LPCAPS, length $_LPCAPS);\n\n\tmy ($mid, $pid, $driver, $junk, $xmin, $xmax, $ymin, $ymax,\n       $zmin, $zmax, $numbuttons, $periodmin, $periodmax, $rmin,\n       $rmax, $umin, $umax, $vmin, $vmax, $junk, $maxaxes, \n       $numaxes, $maxbuttons, $regkey, $junk, $oemvxd, @junk)\n       = unpack $LPCAPSPACK, $_LPCAPS; \n\n   \t$self->{MID} = $mid;\n   \t$self->{PID} = $pid;\n\t$self->{DRIVER} = $driver;\n\t$self->{XMIN} = $xmin;\n\t$self->{XMAX} = $xmax;\n\t$self->{XCENT} = $xmax/2;\n\t$self->{YMIN} = $ymin;\n\t$self->{YMAX} = $ymax;\n\t$self->{YCENT} = $ymax/2;\n\t$self->{ZMIN} = $zmin;\n\t$self->{ZMAX} = $zmax;\n\t$self->{ZCENT} = $zmax/2;\n\t$self->{NUMBUTTONS} = $numbuttons;\n\t$self->{PERIODMIN} = $periodmin;\n\t$self->{PERIODMAX} = $periodmax;\n\t$self->{RMIN} = $rmin;\n\t$self->{RCENT} = $rmax/2;\n\t$self->{RMAX} = $rmax;\n\t$self->{UMIN} = $umin;\n\t$self->{UCENT} = $umax/2;\n\t$self->{UMAX} = $umax;\n\t$self->{VMIN} = $vmin;\n\t$self->{VCENT} = $vmax/2;\n\t$self->{VMAX} = $vmax;\n\t$self->{MAXAXES} = $maxaxes;\n\t$self->{NUMAXES} = $numaxes;\n\t$self->{MAXBUTTONS} = $maxbuttons;\n\t$self->{REGKEY} = $regkey;\n\t$self->{OEMVXD} = $oemvxd;\n\n}",
+      "file" : "/var/tmp/arv_Z760kt/lib/Win32API/Joystick.pm",
+      "package" : "Joystick"
+   }
+]

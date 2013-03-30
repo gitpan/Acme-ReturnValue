@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub generate_rules {\n  my $file_prefix = shift;\n  my $support_threshold = shift;\n  my $confidence_threshold = shift;\n  my $max_n = shift;\n\n  $support_threshold = 1 if !defined($support_threshold);\n  $confidence_threshold = 0 if !defined($confidence_threshold);\n\n  my $num_rules = 0;\n\n  my %frequent_set;\n  read_frequent_sets(\\%frequent_set, $file_prefix, $support_threshold, $max_n);\n\n  die \"Found no frequent sets from file prefix $file_prefix support $support_threshold \" if (0 == int(keys(%frequent_set)));\n\n  my $rulefile = $file_prefix . '-support-' . $support_threshold . '-conf-' .\n    $confidence_threshold . '-rules.txt';\n  open(RULES, \">$rulefile\") or die \"Couldn't open $rulefile: $!\\n\";\n  while (my ($set, $count) = each %frequent_set) {\n    my $support = $frequent_set{$set};\n    die \"Couldn't find frequent set '$set'\" if !defined($support);\n    my @set = split('\\s+', $set);\n\n    for my $lhs_selector (1..(1<<int(@set))-2) {\n",
+      "file" : "/var/tmp/arv_9oK4Lf/Data-Mining-AssociationRules-0.10/lib/Data/Mining/AssociationRules.pm",
+      "package" : "Data::Mining::AssociationRules"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[CAPTCH!]",
+      "file" : "/var/tmp/arv_DWoU6W/POE-Component-Captcha-reCAPTCHA-0.02/lib/POE/Component/Captcha/reCAPTCHA.pm",
+      "package" : "POE::Component::Captcha::reCAPTCHA"
+   }
+]

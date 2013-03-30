@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Paste and cut'",
+      "file" : "/var/tmp/arv_oac5Pe/POE-Component-Client-Pastebot-1.16/lib/POE/Component/Client/Pastebot.pm",
+      "package" : "POE::Component::Client::Pastebot"
+   }
+]

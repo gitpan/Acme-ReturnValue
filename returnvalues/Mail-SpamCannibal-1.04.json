@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = do { q|char version[] = \"bdbaccess 0.24, 5-12-09\";| =~ /(\\d+)\\.(\\d+)/; sprintf(\"%d.%02d\",$1,$2)}",
+      "file" : "/var/tmp/arv_yunnuQ/Mail-SpamCannibal-1.04/BDBaccess/BDBaccess.pm",
+      "package" : "Mail::SpamCannibal::BDBaccess"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = do { q|char version[] = \"dnsbls 0.54, 5-12-09\";| =~ /(\\d+)\\.(\\d+)/; sprintf(\"%d.%02d\",$1,$2)}",
+      "file" : "/var/tmp/arv_yunnuQ/Mail-SpamCannibal-1.04/DNSBLserver/DNSBLserver.pm",
+      "package" : "Mail::SpamCannibal::DNSBLserver"
+   }
+]

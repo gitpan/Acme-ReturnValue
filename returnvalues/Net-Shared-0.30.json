@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"JAPH\"",
+      "file" : "/var/tmp/arv_dXZnVz/Net-Shared/Shared.pm",
+      "package" : "main"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"JAPH\"",
+      "file" : "/var/tmp/arv_dXZnVz/Net-Shared/Shared/Handler.pm",
+      "package" : "Net::Shared::Handler"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"JAPH\"",
+      "file" : "/var/tmp/arv_dXZnVz/Net-Shared/Shared/Local.pm",
+      "package" : "Net::Shared::Local"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"JAPH\"",
+      "file" : "/var/tmp/arv_dXZnVz/Net-Shared/Shared/Remote.pm",
+      "package" : "Net::Shared::Remote"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = 1",
+      "file" : "/var/tmp/arv_i88X5N/AMZ_TEST-0.0.2/lib/AMZ/Test.pm",
+      "package" : "AMZ::Test"
+   }
+]

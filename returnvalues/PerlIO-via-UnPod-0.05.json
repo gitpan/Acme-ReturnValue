@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub WRITE {\n\n    foreach ( split( m#(?<=$/)#, $_[1] ) ) {\n\n\tif ( m#^=[a-zA-Z]# ) {\n            $_[0]->{insrc}= m#^=cut#;\n        }\n\n        elsif ( $_[0]->{insrc} ) {\n            return -1 if !print {$_[2]} $_;\n        }\n    }\n\n    return length( $_[1] );\n}",
+      "file" : "/var/tmp/arv_n1bRqN/PerlIO-via-UnPod-0.05/lib/PerlIO/via/UnPod.pm",
+      "package" : "PerlIO::via::UnPod"
+   }
+]

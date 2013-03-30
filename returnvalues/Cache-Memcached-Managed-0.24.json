@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _spec2servers {\n    my ( $spec, $recursing ) = @_;\n\n    my $type = reftype $spec;\n    if ( !defined $type ) {\n        return [ split ',', $spec ];\n    }\n\n    elsif ( $type eq 'ARRAY' ) {\n        return $spec;\n    }\n\n    die \"Don't know how to handle '$spec' as server specification\";\n}",
+      "file" : "/var/tmp/arv_Z1NRw6/Cache-Memcached-Managed-0.24/lib/Cache/Memcached/Managed.pm",
+      "package" : "Cache::Memcached::Managed"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub inactive { 1 }",
+      "file" : "/var/tmp/arv_Z1NRw6/Cache-Memcached-Managed-0.24/lib/Cache/Memcached/Managed/Inactive.pm",
+      "package" : "Cache::Memcached::Managed::Inactive"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub objects { @{$_[0]} }",
+      "file" : "/var/tmp/arv_Z1NRw6/Cache-Memcached-Managed-0.24/lib/Cache/Memcached/Managed/Multi.pm",
+      "package" : "Cache::Memcached::Managed::Multi"
+   }
+]

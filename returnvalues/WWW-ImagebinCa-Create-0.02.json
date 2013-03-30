@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub upload_id {\n    my $self = shift;\n    if ( @_ ) {\n        $self->{ UPLOAD_ID } = shift;\n    }\n    return $self->{ UPLOAD_ID };\n}",
+      "file" : "/var/tmp/arv_5c_fmA/WWW-ImagebinCa-Create-0.02/lib/WWW/ImagebinCa/Create.pm",
+      "package" : "WWW::ImagebinCa::Create"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub pad_line {\n\treturn join '',map{\"$_ \"}split //, shift;\n}",
+      "file" : "/var/tmp/arv_s2vmzw/Acme-Goatse-0.02/lib/Acme/Goatse.pm",
+      "package" : "Acme::Goatse"
+   }
+]

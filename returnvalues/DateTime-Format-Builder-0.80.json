@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use DateTime::Format::Builder (\n    parsers => {\n\tparse_datetime => [\n\t{\n\t    params => [qw( year month mday hours mins secs fsecs ampm )],\n\t    regex => qr[^\n\t\t(\\d{4}) \\s*-?\\s* (\\d{2}) \\s*-?\\s* (\\d{2})\n\t\t\\s*\n\t\t(?:-?\\s* (\\d{1,2}) :? (\\d{2}) (?::? (\\d{2}) )? )?\n\t\t(?:\\. (\\d+) ) ? # fsecs\n\t\t(?:\\s* ([aApP]\\.?[mM]\\.?) )?\n\t\t$\n\t\t]x,\n\t},\n\t{\n\t    params => [qw( month mday year hours mins secs fsecs ampm )],\n\t    regex => qr#^\n\t\t(\\d{1,2})[-/](\\d{1,2})[-/](\\d{4})\n\t\t(?:\\s+(\\d{1,2}):(\\d{2})(?::(\\d{2}))?)?\n\t\t(?:\\.(\\d+))?\n\t\t(?:\\s*([aApP]\\.?[mM]\\.?))?\n\t\t$\n\t\t#x\n\t},\n\t]\n    }\n)",
+      "file" : "/var/tmp/arv_h19sUr/DateTime-Format-Builder-0.80/examples/Simple.pm",
+      "package" : "DateTime::Format::Simple"
+   },
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "for my $date (@dates)\n{\n    my $dt = $parser->parse_datetime( $date )->set_time_zone( 'Australia/Sydney' );\n    print \"$date => \", $dt->datetime, \" => \", $parser->format_datetime( $dt ), \"\\n\";\n}",
+      "file" : "/var/tmp/arv_h19sUr/DateTime-Format-Builder-0.80/examples/Apache.pm",
+      "package" : "main"
+   },
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "for my $date (@dates)\n{\n    my $dt = $parser->parse_datetime( $date )->set_time_zone( 'Australia/Sydney' );\n    print \"$date => \", $dt->datetime, \" => \", $parser->format_datetime( $dt ), \"\\n\";\n}",
+      "file" : "/var/tmp/arv_h19sUr/DateTime-Format-Builder-0.80/examples/Tivoli.pm",
+      "package" : "main"
+   },
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "for ( '@d19.07.03 @704', '20030719T155345', 'gibberish' )\n{\n    print DateTime::Format::Fall->parse_datetime($_)->datetime, \"\\n\";\n}",
+      "file" : "/var/tmp/arv_h19sUr/DateTime-Format-Builder-0.80/examples/Fall.pm",
+      "package" : "DateTime::Format::Fall"
+   }
+]

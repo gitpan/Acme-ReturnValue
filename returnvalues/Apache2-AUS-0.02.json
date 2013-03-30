@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Authen {\n    my($class, $r) = @_;\n    my $requires = $r->requires;\n    if($requires && scalar(@$requires)) {\n        my $session = $r->aus_session;\n        my $user = $session->user;\n        foreach (\n            map { [ split(\" \", $_->{requirement}) ] } (@$requires)\n        ) {\n            unless(check_requirement($r, $_)) {\n                $r->log_reason(sprintf(\n                    qq{[%s] %d(%s) does not satisfy requirement \"%s\"},\n                    $r->connection->remote_ip,\n                    ($user ? $user->{id} : 0), ($user ? $user->{name} : \"\"),\n                    join(\" \", @$_), $r->uri\n                ));\n                \n                return FORBIDDEN;\n            }\n        }\n        return OK;\n    } else {\n        return OK;\n    }\n}",
+      "file" : "/var/tmp/arv_bvTp3J/Apache2-AUS-0.02/lib/Apache2/AUS.pm",
+      "package" : "Apache2::AUS"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub go {\n    my($r, $uri) = @_;\n    $r->internal_redirect($uri);\n    return OK;\n}",
+      "file" : "/var/tmp/arv_bvTp3J/Apache2-AUS-0.02/lib/Apache2/AUS/Util.pm",
+      "package" : "Apache2::AUS::Util"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub remove_aus_session {\n    my $r = shift;\n    $r->pnotes->clear('aus_session');\n    return;\n}",
+      "file" : "/var/tmp/arv_bvTp3J/Apache2-AUS-0.02/lib/Apache2/AUS/RequestRec.pm",
+      "package" : "Apache2::AUS::RequestRec"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub symbollookup {\n    my $search = $_[0];\n    my($srch,$ua,$url,$sym,$name,$type,@qr);\n    $url = $URL.$search;\n    foreach (split('\\r?\\n',LWP::UserAgent->new->request(GET $url)->content)) {\n\tif (/^Symbol:(.*)/) {\n\t    ($sym,$name,$type) = split(',',$1);\n\t    push(@qr,[$sym,$name,$type]) if $type ne \"TYPE\";\n\t}\n    }\n    return wantarray() ? @qr : \\@qr;\n}",
+      "file" : "/var/tmp/arv_wPWsoZ/Finance-MoneyNetSymbolLookup-0.02/MoneyNetSymbolLookup.pm",
+      "package" : "Finance::MoneyNetSymbolLookup"
+   }
+]

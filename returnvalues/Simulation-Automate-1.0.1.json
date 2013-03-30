@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub localinstall {\nmy $full=shift||1;\nmy $synsimroot=shift||'';\n\nmy $HOME=$ENV{HOME};\nif(not $synsimroot) {\nprint \"Local SinSym directory? [$HOME/SynSim]:\";\n$synsimroot=<STDIN>;\nchomp $synsimroot;\nif(not $synsimroot) {$synsimroot=\"$HOME/SynSim\"}\n}\n  if(not -d \"$synsimroot\"){\nmkdir \"$synsimroot\", 0755;\n  }\nprint \"Creating local SynSim directory $synsimroot/Simulation/Automate ...\\n\";\n  if(not -d  \"$synsimroot/Simulation\") {\nmkdir \"$synsimroot/Simulation\", 0755;\n}\n  if(not -d  \"$synsimroot/Simulation\") {\nmkdir \"$synsimroot/Simulation\", 0755;\n}\n  if(not -d  \"$synsimroot/Simulation/Automate\") {\nmkdir \"$synsimroot/Simulation/Automate\", 0755;\n}\n  if(-d \"Automate\") {  \nforeach my $module (qw(PostProcessors Dictionary)) {\nif( -e \"Automate/$module.pm\"){\nsystem(\"cp Automate/$module.pm $synsimroot/Simulation/Automate/$module.pm\");\n}\n}\nif($full) {\n  foreach my $module (qw(Remote PostProcLib Analysis)){\nif( -e \"Automate/$module.pm\"){\nsystem(\"cp Automate/$module.pm $synsimroot/Simulation/Automate/$module.pm\");\n}\n}\nif( -e \"Automate.pm\"){\nsystem(\"cp Automate.pm $synsimroot/Simulation/Automate.pm\");\n}\n} \n} \n\n}",
+      "file" : "/var/tmp/arv_hDvmPB/Simulation-Automate-1.0.1/Automate.pm",
+      "package" : "Simulation::Automate"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "%Simulation::Automate::Dictionary::make_nice=(\n_BUFTYPE => {\ntitle=>'Buffer type',\n\t     0=>'Adjustable',\n\t     1=>'Fixed-length',\n\t     2=>'Multi-exit',\n\t    },\n_TRAFDIST => {\ntitle=>'Packet gap dist.',\n\t      0=>'Poisson', \n\t      1=>'Pareto',\n\t      2=>'Uniform',\n\t     },\n_PLDIST => {\ntitle=>'Packet length dist.',\n\t      2=>'IP', \n\t      1=>'Ethernet',\n\t      0=>'Uniform',\n\t     },\n_KEEP_ORDER => {\ntitle=>'Ordered',\n0=>'No',\n1=>'Yes',\n\t       },\n_DEFLECTION => {\ntitle=>'Deflection',\n0=>'No',\n1=>'Yes',\n\t       },\n_NMAXGAP => {\ntitle=>'Max. gap width',\n},\n\n_NPACK => {\ntitle=>'Number of packets',\n100000=>'10^5',\n200000=>'2.10^5',\n500000=>'5.10^5',\n1000000=>'10^6',\n2000000=>'2.10^6',\n5000000=>'5.10^6',\n10000000=>'10^7',\n},\n\n_AGGREGATE => {\ntitle=>'Aggregate',\n0=>'No',\n12000=>'Yes',\n},\n\n_RECIRC => {\ntitle=>'Recirculate',\n0=>'No',\n},\n\n_NPORTS => {\ntitle=>'Number of ports',\n},\n_K_PARETO => {\ntitle=>'Pareto constant',\n},\n\n_NBUFS => {\ntitle => 'Number of buffers',\n},\n\n_BLOCKING => {\ntitle => 'Buffer output mux blocking or not',\n},\n_UNITPL => {\ntitle => 'Unit packet length',\n},\n\n_MINGW => {\ntitle => 'Min. gap width',\n},\n\n_FRACT_MIN => {\ntitle => 'Fraction of 40 byte to 1500 byte packets',\n},\n\n_NMAX => {\ntitle => 'Max. number of units',\n},\n_SAMPL => {\ntitle => 'Sampling freq.',\n},\n\n)",
+      "file" : "/var/tmp/arv_hDvmPB/Simulation-Automate-1.0.1/Automate/Dictionary.pm",
+      "package" : "Simulation::Automate::Dictionary"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "print \"Loaded plugin show_source\\n\"",
+      "file" : "/var/tmp/arv_hDvmPB/Simulation-Automate-1.0.1/eg/PLUGINS/show_source.pm",
+      "package" : "Simulation::Automate::PostProcessors"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub newpage()\n{\n\tmy $self = shift;\n\n\tpush(@{$self->{'Pages'}}, $self->{'rootpage'}->new_page());\n\treturn(1);\n}",
+      "file" : "/var/tmp/arv_QwDp6b/PDF-Labels-1.8/Labels.pm",
+      "package" : "PDF::Labels"
+   }
+]

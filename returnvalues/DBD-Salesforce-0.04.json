@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY { 1 }",
+      "file" : "/var/tmp/arv_4c6QiT/DBD-Salesforce-0.04/lib/DBD/Salesforce/st.pm",
+      "package" : "DBD::Salesforce::st"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cpan_depends_ok_force_missing {\n    my($deps, $missing, $test_name) = @_;\n    my @actual;\n    my @deps = sort @$deps;\n\n    my($out, $in) = change_std();\n    run_with_cpan_config {\n        my $dist_dir = dist_dir('.');\n        my %missing = map { $_ => 0 } @$missing;\n        @actual = run_with_fake_modules { get_prereqs($dist_dir); } %missing;\n        @actual = sort(@actual);\n    };\n    restore_std($out, $in);\n\n    my $test = Test::More->builder;\n    if(eq_array(\\@actual, \\@deps)) {\n        $test->ok(1, $test_name);\n    } else {\n        diag(\"Expected dependancies: @deps, Actual: @actual\");\n        $test->ok(0, $test_name);\n    }\n}",
+      "file" : "/var/tmp/arv_iFXu2j/Test-CPANpm-0.010/lib/Test/CPANpm.pm",
+      "package" : "Test::CPANpm"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_prereqs {\n    my $dist_dir = shift or die 'dist_dir is required!';\n    my @followed;\n\n    my($out, $in) = change_std();\n\n    {\n        local *CPAN::Distribution::follow_prereqs;\n        local *CPAN::Distribution::unsat_prereq;\n\n\n        my $test_cpan = $ENV{DEBUG_TEST_CPAN};\n\n        local $ENV{DEBUG_TEST_CPAN};\n\n        if($test_cpan) {\n            $ENV{DEBUG_TEST_CPAN} = $test_cpan;\n        }\n\n        if($ENV{DEBUG_TEST_CPAN}) {\n            warn \"CPAN.pm version: $CPAN::VERSION\\n\";\n        }\n\n        _wrap('CPAN::Distribution::follow_prereqs', sub { @followed = splice(@_, 3); });\n        _wrap('CPAN::Distribution::unsat_prereq', \\&_unsat_prereq);\n        \n        my $here = getcwd();\n        chdir($dist_dir);\n        \n        my $d = CPAN::Distribution->new(\n            build_dir => $dist_dir,\n            ID => $dist_dir,\n            archived => 'Fake',\n            unwrapped => 'Yes'\n        );\n        \n        $d->make;\n        chdir($here);\n        rmtree($dist_dir) unless $ENV{DEBUG_TEST_CPAN} && $ENV{DEBUG_TEST_CPAN} != 2;\n    }\n\n    restore_std($out, $in);\n    return @followed;\n}",
+      "file" : "/var/tmp/arv_iFXu2j/Test-CPANpm-0.010/lib/Test/CPANpm/Fake.pm",
+      "package" : "Test::CPANpm::Fake"
+   }
+]

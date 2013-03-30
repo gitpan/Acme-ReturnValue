@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub wrap_prop {\n   my ($text, $width, $ref_width_table) = @_;\n\n   my @width_table = @$ref_width_table;\n\n   return '' if $text eq '';\n\n   $text =~ s/\\s+/ /gs;\n\n   my $cursor = 0; \n   my $c;          \n   my $out;        \n   my $nextline = '';\n\n   my $i=0;\n\n   my $ltext = length $text;\n\n         \n   while ($i < $ltext) {\n         $c    = substr($text,$i++,1);\n         \n         next if $nextline eq '' and $c eq ' ';\n\n         if ($cursor + $width_table[ord $c] <= $width) {\n            $nextline .= $c;\n            $cursor += $width_table[ord $c];\n         }\n         else {\n            my $j = length($nextline);\n            foreach (split '', reverse $nextline) { \n               $j--;\n               last if /( |:|;|,|\\.|-|\\(|\\)|\\/)/o; \n            }\n\n            if (!$j) { \n               $i--; \n               $out .= $nextline.\"\\n\";\n            }\n            else { \n               $i -= length($nextline) - $j; \n               $out .= substr($nextline, 0, $j+1).\"\\n\";\n            }\n\n            $nextline = '';\n            $cursor = 0;\n         }\n   }\n\n   $out.$nextline;\n}",
+      "file" : "/var/tmp/arv_DA9qzA/Text-WrapProp-0.01/WrapProp.pm",
+      "package" : "Text::WrapProp"
+   }
+]

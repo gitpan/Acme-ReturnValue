@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = \"3.00\"",
+      "file" : "/var/tmp/arv_YLKUE4/Penguin-3.00/Penguin.pm",
+      "package" : "Penguin"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub serve {\n    my ($self, %args) = @_;\n    my $mychannel = new Penguin::Channel::TCP::Server Bind => $self->{'Port'},\n                                                      Listen => 5;\n    while(1) {\n        $mychannel->open(); \n        $frame = getframe $mychannel; \n\n        if ($frame eq undef) { \n            $mychannel->close();\n            next;\n        }\n\n        ($title, $signer, $wrapmethod, $code) = \n                  $frame->disassemble(Password => $self->{'Password'});\n\n        $userrights = $self->{'_rightsdb'}->getrights(User => $signer);\n\n        $compartment = new Penguin::Compartment;\n        $compartment->initialize( Operations => $userrights );\n        if (ref($self->{'Share'}) eq \"ARRAY\") {\n            $compartment->{'compartment'}->share_from(\"main\",\n                                                      $self->{'Share'} );\n        }\n\n        $result = $compartment->execute( Code => $code );\n\n        if ($@) { \n            $result = $@;\n        }\n\n        $resultframe = new Penguin::Frame::Data;\n        assemble $resultframe Text => $result;\n        putframe $mychannel Frame => $resultframe;\n        $mychannel->close();\n    } \n}",
+      "file" : "/var/tmp/arv_YLKUE4/Penguin-3.00/Penguin/Trivial/Server.pm",
+      "package" : "Penguin::Trivial::Server"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub type {\n    \"Data\";\n}",
+      "file" : "/var/tmp/arv_YLKUE4/Penguin-3.00/Penguin/Frame/Data.pm",
+      "package" : "Penguin::Frame::Data"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub type {\n    \"Code\";\n}",
+      "file" : "/var/tmp/arv_YLKUE4/Penguin-3.00/Penguin/Frame/Code.pm",
+      "package" : "Penguin::Frame::Code"
+   }
+]

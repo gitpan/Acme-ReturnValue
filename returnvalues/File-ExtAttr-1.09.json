@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub CLEAR {\n  my($self) = @_;\n  for(listfattr($self->{file})) {\n    delfattr($self->{file}, $_, $self->{flags});\n  }\n}",
+      "file" : "/var/tmp/arv_S65v4Q/File-ExtAttr-1.09/lib/File/ExtAttr/Tie.pm",
+      "package" : "File::ExtAttr::Tie"
+   }
+]

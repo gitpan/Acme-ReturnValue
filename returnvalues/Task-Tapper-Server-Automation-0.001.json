@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  $Task::Tapper::Server::Automation::VERSION = '0.001';\n}",
+      "file" : "/var/tmp/arv_VI2eIK/Task-Tapper-Server-Automation-0.001/lib/Task/Tapper/Server/Automation.pm",
+      "package" : "Task::Tapper::Server::Automation"
+   }
+]

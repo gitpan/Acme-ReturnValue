@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub update_page {\n    my $page = shift;\n    $self->plucy->delete_document($page->id,$page->content)\n        if(-d $self->index_path);\n    $self->plucy->index_document($page->id,$page->content);\n}",
+      "file" : "/var/tmp/arv_6ZZaT2/Kwiki-Search-Plucene-0.03/lib/Kwiki/Search/Plucene.pm",
+      "package" : "Kwiki::Search::Plucene"
+   }
+]

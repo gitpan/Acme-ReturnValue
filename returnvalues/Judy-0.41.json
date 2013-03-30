@@ -1,0 +1,62 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/L.pm",
+      "package" : "Judy::L"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/1.pm",
+      "package" : "Judy::1"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/Mem.pm",
+      "package" : "Judy::Mem"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/HS.pm",
+      "package" : "Judy::HS"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/SL.pm",
+      "package" : "Judy::SL"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/L/_impl.pm",
+      "package" : "Judy::L"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/HS/_impl.pm",
+      "package" : "Judy::HS"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/1/_impl.pm",
+      "package" : "Judy::1"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/Mem/_impl.pm",
+      "package" : "Judy::Mem"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
+      "file" : "/var/tmp/arv_BmSDxV/Judy-0.41/lib/Judy/SL/_impl.pm",
+      "package" : "Judy::SL"
+   }
+]

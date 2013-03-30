@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.903'",
+      "file" : "/var/tmp/arv_RTl31Y/Vim-Debug-0.903/lib/Vim/Debug/Manual.pm",
+      "package" : "Vim::Debug::Manual"
+   }
+]

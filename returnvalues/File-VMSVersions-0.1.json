@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _getlock {\n   my($fn) = @_;\n\n   my $mode = -e $fn ? '<' : '>';\n   CORE::open(my $lck, $mode, $fn) or croak \"couldn't open lock file $fn, $!\";\n\n   unless (flock($lck, LOCK_EX | LOCK_NB)) {\n      flock($lck, LOCK_EX);\n   }\n\n   return($lck);\n}",
+      "file" : "/var/tmp/arv_1ZRoPe/File-VMSVersions-0.1/VMSVersions.pm",
+      "package" : "File::VMSVersions"
+   }
+]

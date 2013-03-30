@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub force_list_context(@) {\n    return @_;\n}",
+      "file" : "/var/tmp/arv_gEXJ6K/perl5i-v2.11.2/lib/perl5i/2.pm",
+      "package" : "perl5i::2"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method intersect(@rest) {\n    unless (@rest) {\n        return wantarray ? @$self : $self;\n    }\n\n    require List::MoreUtils;\n    my $has_refs = List::MoreUtils::any(sub { ref $_ }, @$self);\n\n    my $intersect_two = $has_refs ? $intersect_two_deeply : $intersect_two_simply;\n\n    die \"Arguments must be array references\" if grep { ref $_ ne 'ARRAY' } @rest;\n\n    foreach my $array (@rest) {\n        $self = $intersect_two->($self, $array);\n    }\n\n    return wantarray ? @$self : $self;\n}\n\nmethod ltrim($charset) {\n    my @result = CORE::map { $_->ltrim($charset) } @$self;\n\n    return wantarray ? @result : \\@result;\n}\n\nmethod rtrim($charset) {\n    my @result = CORE::map { $_->rtrim($charset) } @$self;\n\n    return wantarray ? @result : \\@result;\n}\n\nmethod trim($charset) {\n    my @result = CORE::map { $_->trim($charset) } @$self;\n\n    return wantarray ? @result : \\@result;\n}\n\n\n1",
+      "file" : "/var/tmp/arv_gEXJ6K/perl5i-v2.11.2/lib/perl5i/2/ARRAY.pm",
+      "package" : "perl5i::2::ARRAY"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method new($class: %args) {\n    bless \\%args, $class;\n}\n\nsub make_real () {}\n\nmethod __parse_signature {\n    my $string = $self->{signature}->trim;\n    \n    if( $string =~ s{^ (\\$\\w+) : \\s*}{}x ) {\n        $self->{invocant} = $1 // '';\n    }\n    elsif( $self->is_method ) {\n        $self->{invocant} = '$self';\n    }\n    else {\n        $self->{invocant} = '';\n    }\n\n    my @args = split /\\s*,\\s*/, $string;\n\n    $self->{params}     = \\@args;\n    $self->{positional_params} = \\@args;\n    $self->{num_positional_params} = @args;\n\n    return;\n}\n\nmethod num_positional_params() {\n    return $self->{num_positional_params};\n}\n\nmethod positional_params() {\n    return $self->{positional_params};\n}\n\nmethod params() {\n    return $self->{params};\n}\n\nmethod as_string() {\n    return $self->{signature};\n}\n\nmethod invocant() {\n    return $self->{invocant};\n}\n\nmethod is_method() {\n    return $self->{is_method};\n}\n\n1",
+      "file" : "/var/tmp/arv_gEXJ6K/perl5i-v2.11.2/lib/perl5i/2/Signature/Real.pm",
+      "package" : "perl5i::2::Signature::Real"
+   }
+]

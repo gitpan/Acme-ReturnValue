@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub parse_opts {\n    my ($class, %opts)=@_;\n    my ($name, $more_name, $create, $dn, $scope);\n    $dn=$opts{dir};\n    $create=$opts{create};\n\n    if (defined $opts{name}) {\n\t$opts{name}=~m{^([^/]*)(?:/(.*))?$}\n\t    or croak \"invalid name '$opts{name}' specification\";\n\t$name=$1;\n\t$more_name=$2;\n    }\n    else {\n\t$name=$class->guess_script_name;\n    }\n\n    if (defined $opts{scope}) {\n\tif ($opts{scope}=~/^u(ser)?$/i) {\n\t    $scope='user'\n\t}\n\telsif ($opts{scope}=~/^g(lobal)?$/i) {\n\t    $scope='global'\n\t}\n\telsif ($opts{scope}=~/^a(pp(lication)?)?$/i) {\n\t    $scope='app'\n\t}\n\telsif ($opts{scope}=~/^p(rocess)?$/i) {\n\t    $scope='process'\n\t}\n\telse {\n\t    croak \"invalid option scope => '$opts{scope}'\";\n\t}\n    }\n    else {\n\t$scope='global';\n    }\n\n    return ($name, $more_name, $create, $dn, $scope);\n}",
+      "file" : "/var/tmp/arv_xoggmr/Config-Find-0.26/lib/Config/Find/Where.pm",
+      "package" : "Config::Find::Where"
+   }
+]

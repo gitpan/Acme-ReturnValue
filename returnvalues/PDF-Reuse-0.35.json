@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub blackText\n{   PDF::Reuse::prAdd(\"0 0 0 rg\\n0 g\\nf\\n\");\n    1;\n}",
+      "file" : "/var/tmp/arv_Soqlkx/PDF-Reuse-0.35/Reuse/Util.pm",
+      "package" : "PDF::Reuse::Util"
+   }
+]

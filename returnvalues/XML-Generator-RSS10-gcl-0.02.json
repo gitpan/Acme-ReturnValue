@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _camelcase {\n\n   my ($self,$cat) = @_;\n   $cat =~ s/\\s*(\\w+)\\s*/\\u\\L$1/g;\n   $cat =~ s/[^A-Za-z]//g;\n   return $cat;\n\n}",
+      "file" : "/var/tmp/arv_9pe7AV/XML-Generator-RSS10-gcl-0.02/gcl.pm",
+      "package" : "XML::Generator::RSS10::gcl"
+   }
+]

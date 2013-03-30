@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "POE::Declare::compile",
+      "file" : "/var/tmp/arv_9O8tUi/POE-Declare-0.59/lib/POE/Declare/Object.pm",
+      "package" : "POE::Declare::Object"
+   }
+]

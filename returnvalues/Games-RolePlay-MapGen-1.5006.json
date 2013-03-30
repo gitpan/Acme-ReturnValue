@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"I like GD::Graph.\"",
+      "file" : "/var/tmp/arv_Fk6plW/Games-RolePlay-MapGen-1.5006/MapGen/MapQueue/Object.pm",
+      "package" : "Games::RolePlay::MapGen::MapQueue::Object"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"true\"",
+      "file" : "/var/tmp/arv_Fk6plW/Games-RolePlay-MapGen-1.5006/MapGen/Exporter/SVG/_GDSVG.pm",
+      "package" : "Games::RolePlay::MapGen::Exporter::SVG::_GDSVG"
+   }
+]

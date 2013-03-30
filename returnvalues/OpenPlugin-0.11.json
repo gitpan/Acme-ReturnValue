@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_fields {\n    return ( $_[0]->SUPER::get_fields, @FIELDS );\n}",
+      "file" : "/var/tmp/arv_GMyCUA/OpenPlugin-0.11/OpenPlugin/Exception/Template.pm",
+      "package" : "OpenPlugin::Exception::Template"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load('Cindy::Apache2', $Cindy::Apache2::VERSION)",
+      "file" : "/var/tmp/arv_nimLIQ/Cindy-Apache2-0.08/lib/Cindy/Apache2/RequestRec.pm",
+      "package" : "Cindy::Apache2::RequestRec"
+   }
+]

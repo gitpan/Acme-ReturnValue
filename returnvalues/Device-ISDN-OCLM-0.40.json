@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub\nconnectTime\n{\n  return shift->{'connectTime'}->[shift];\n}",
+      "file" : "/var/tmp/arv_vMK0uA/Device-ISDN-OCLM-0.40/lib/Device/ISDN/OCLM/SPStatistics.pm",
+      "package" : "Device::ISDN::OCLM::SPStatistics"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub\ntime\n{\n  return shift->{'time'};\n}",
+      "file" : "/var/tmp/arv_vMK0uA/Device-ISDN-OCLM-0.40/lib/Device/ISDN/OCLM/SystemStatistics.pm",
+      "package" : "Device::ISDN::OCLM::SystemStatistics"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub\nupReason\n{\n  return shift->{'upReason'}->[shift];\n}",
+      "file" : "/var/tmp/arv_vMK0uA/Device-ISDN-OCLM-0.40/lib/Device/ISDN/OCLM/CurrentStatistics.pm",
+      "package" : "Device::ISDN::OCLM::CurrentStatistics"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub\ndownReason\n{\n  return shift->{'downReason'}->[shift];\n}",
+      "file" : "/var/tmp/arv_vMK0uA/Device-ISDN-OCLM-0.40/lib/Device/ISDN/OCLM/LastStatistics.pm",
+      "package" : "Device::ISDN::OCLM::LastStatistics"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub\nredirect_ok\n{\n  my ($self, $request) = @_;\n\n  if ($request->method eq 'POST') {\n    $request->method ('GET');\n  }\n\n  1;\n}",
+      "file" : "/var/tmp/arv_vMK0uA/Device-ISDN-OCLM-0.40/lib/Device/ISDN/OCLM/UserAgent.pm",
+      "package" : "Device::ISDN::OCLM::UserAgent"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub\ntei\n{\n  return shift->{'tei'};\n}",
+      "file" : "/var/tmp/arv_vMK0uA/Device-ISDN-OCLM-0.40/lib/Device/ISDN/OCLM/ISDNStatistics.pm",
+      "package" : "Device::ISDN::OCLM::ISDNStatistics"
+   }
+]

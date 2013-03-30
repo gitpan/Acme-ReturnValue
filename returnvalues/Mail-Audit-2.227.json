@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub vacation {\n  my $item  = shift;\n  my $where = shift;\n  my $reply = $item->head->get(\"Reply-To\")\n    || $item->head->get(\"From\");\n  return if $item->head->get(\"Distribution\") =~ /bulk/i or !$reply;\n  $item->_log(1, \"Vacation thing from $reply\");\n  if (open TOLD, $Mail::Audit::Vacation::vacfile) {\n    while (<TOLD>) {\n      if ($_ eq $reply) {\n        $item->accept($where);\n        return 1;  \n      }\n    }\n  }\n  if (open TOLD, \">>\" . $Mail::Audit::Vacation::vacfile) {\n    print TOLD $item->head->get(\"Reply-To\")\n      if $item->head->get(\"Reply-To\");\n    print TOLD $item->head->get(\"From\")\n      if $item->head->get(\"From\");\n    close TOLD;\n    use Mail::Mailer qw(sendmail);\n    my $out = new Mail::Mailer;\n    $out->open(\n      {\n        From       => $Mail::Audit::Vacation::from,\n        Subject    => $Mail::Audit::Vacation::subject,\n        To         => $reply,\n        \"Reply-To\" => $Mail::Audit::Vacation::replyto\n      }\n    );\n    print $out $Mail::Audit::Vacation::message;\n    $out->close;\n  }\n  $item->accept($where);\n\n  return 0;\n}",
+      "file" : "/var/tmp/arv_3HSit9/Mail-Audit-2.227/lib/Mail/Audit/Vacation.pm",
+      "package" : "Mail::Audit::Vacation"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub path\n{\n    my $this = shift @_;\n\n\n    return $this->describe('%En');\n}",
+      "file" : "/var/tmp/arv_6fkjg7/CtCmd-1.11/CC/File.pm",
+      "package" : "CC::File"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub private_non_direct_backend_env_mapping\n{\n    my $self = shift;\n\n    return\n    [\n        {\n            type => \"yamldata\",\n            env => \"HARNESS_ALT_INTRP_FILE\",\n            arg => \"alternate_interpreters\",\n        },\n    ];\n}",
+      "file" : "/var/tmp/arv_czvKiA/Test-Run-Plugin-AlternateInterpreters-0.0122/lib/Test/Run/CmdLine/Plugin/AlternateInterpreters.pm",
+      "package" : "Test::Run::CmdLine::Plugin::AlternateInterpreters"
+   }
+]

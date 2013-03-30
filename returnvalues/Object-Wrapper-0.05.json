@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD\n{\n    my $franger = shift;\n\n    my $i       = rindex $AUTOLOAD, '::';\n    my $name    = substr $AUTOLOAD, 2 + $i;\n\n    my $sub     = $franger->[0]->can( $name )\n    or confess \"Bogus $AUTOLOAD: '$franger->[0]' cannot '$name'\";\n\n    $franger->[0]->$sub( @_ )\n}\n\nDESTROY\n{\n    my $franger = shift;\n\n    my $class   = blessed $franger || $franger;\n\n\n    my $cleanup = $cleanupz{ $class } || $franger->can( 'cleanup' )\n    or confess \"Bogus franger: no cleanup for '$franger' or '$class'\";\n\n    my $sub\n    = ref $cleanup\n    ? $cleanup\n    : $franger->can( $cleanup )\n    or confess \"Bogus $class: no cleanup for '$franger' ($class)\";\n\n    'CODE' eq reftype $sub\n    or confess \"Bogus $class: not a coderef '$sub'\";\n\n    $cleanup->( @$franger );\n\n    return\n}\n\n\nsub new\n{\n    my $proto   = shift;\n    my $class   = blessed $proto || $proto;\n\n    my $object  = shift\n    or croak \"Bogus franger: missing object\";\n\n    bless [ $object, @_ ], $class\n}\n\nsub cleanup_handler :lvalue\n{\n    my $proto   = shift;\n    my $class   = blessed $proto || $proto;\n\n    @_\n    and $cleanupz{ $class } = shift;\n\n    my $tmp = \\$cleanupz{ $class };\n\n    $$tmp\n}\n\n\nsub cleanup {}\n\n\n1",
+      "file" : "/var/tmp/arv_bDowCy/Object-Wrapper-0.05/lib/Object/Wrapper.pm",
+      "package" : "Object::Wrapper"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD\n{\n    my $franger = shift;\n    my ( $obj, $pid ) = @$franger;\n\n    $pid == $$ \n    or confess \"Bogus $AUTOLOAD: @{ $franger } crosses fork.\";\n\n    my $i       = rindex $AUTOLOAD, '::';\n    my $name    = substr $AUTOLOAD, 2 + $i;\n\n    my $sub     = $obj->can( $name )\n    or confess \"Bogus $AUTOLOAD: '$obj' cannot '$name'\";\n\n    $obj->$sub( @_ )\n}\n\n\nsub new\n{\n    splice @_, 2, 0, $$;\n\n    goto &Object::Wrapper::new\n}\n\n\n1",
+      "file" : "/var/tmp/arv_bDowCy/Object-Wrapper-0.05/lib/Object/Wrapper/Fork.pm",
+      "package" : "Object::Wrapper::Fork"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import\n{\n    my $caller  = caller;\n\n    for( qw( connect connect_cached ) )\n    {\n\n        my $name    = qualify $_, $caller;\n        my $ref     = qualify_to_ref $name;\n\n        undef &{ *$ref };\n\n        *$ref = sub { croak \"Bogus $name: DBI not avaialble\" };\n    }\n}",
+      "file" : "/var/tmp/arv_bDowCy/Object-Wrapper-0.05/lib/Object/Wrapper/Fork/DBI_stubs.pm",
+      "package" : "Object::Wrapper::Fork::DBI_stubs"
+   }
+]

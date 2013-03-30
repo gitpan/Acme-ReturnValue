@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub make_dist {\n    Kwiki::Kwiki::Command::Distfile->new->process;\n}",
+      "file" : "/var/tmp/arv_1Ox8k4/Kwiki-Kwiki-0.10/lib/Kwiki/Kwiki.pm",
+      "package" : "Kwiki::Kwiki"
+   }
+]

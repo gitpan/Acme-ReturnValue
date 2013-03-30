@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub make_iterator {\n    my ( $class, $source ) = @_;\n    my $config = $source->config_for('pgTAP');\n\n    my @command = ( $config->{psql} || 'psql' );\n    push @command, qw(\n      --no-psqlrc\n      --no-align\n      --quiet\n      --pset pager=\n      --pset tuples_only=true\n      --set ON_ERROR_ROLLBACK=1\n      --set ON_ERROR_STOP=1\n    );\n\n    for (qw(username host port dbname)) {\n        push @command, \"--$_\" => $config->{$_} if defined $config->{$_};\n    }\n\n    if (my $pset = $config->{pset}) {\n        while (my ($k, $v) = each %{ $pset }) {\n            push @command, '--pset', \"$k=$v\";\n        }\n    }\n\n    if (my $set = $config->{set}) {\n        while (my ($k, $v) = each %{ $set }) {\n            push @command, '--set', \"$k=$v\";\n        }\n    }\n\n    my $fn = ref $source->raw ? ${ $source->raw } : $source->raw;\n\n    if ($fn && $fn =~ s/^pgsql:\\s*//) {\n        push @command, '--command', $fn;\n    } else {\n        $class->_croak(\n            'No such file or directory: ' . ( defined $fn ? $fn : '' ) )\n            unless $fn && -e $fn;\n        push @command, '--file', $fn;\n    }\n\n\n    return TAP::Parser::Iterator::Process->new({\n        command => \\@command,\n        merge   => $source->merge\n    });\n}",
+      "file" : "/var/tmp/arv_7z8qVC/TAP-Parser-SourceHandler-pgTAP-3.29/lib/TAP/Parser/SourceHandler/pgTAP.pm",
+      "package" : "TAP::Parser::SourceHandler::pgTAP"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Thankyou for flying with KENTNL Lite!'",
+      "file" : "/var/tmp/arv_yYHxkO/Dist-Zilla-PluginBundle-Author-KENTNL-Lite-1.3.0/lib/Dist/Zilla/PluginBundle/Author/KENTNL/Lite.pm",
+      "package" : "Dist::Zilla::PluginBundle::Author::KENTNL::Lite"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub hexdump { join ':', map { sprintf \"%02X\", $_ } unpack \"C*\", $_[0]; }",
+      "file" : "/var/tmp/arv_VC0Ifa/POE-Component-SSLify-NonBlock-0.41/lib/POE/Component/SSLify/NonBlock.pm",
+      "package" : "POE::Component::SSLify::NonBlock"
+   }
+]

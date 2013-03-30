@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Mock_ua = Test::MockObject::Extends->new(LWP::UserAgent->new)",
+      "file" : "/var/tmp/arv_jLHwTR/Net-FriendFeed-0.93/lib/Test/MockHTTP.pm",
+      "package" : "Test::MockHTTP"
+   }
+]

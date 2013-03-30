@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$authcfg = {\n\t-authdir\t\t=> 'auth',\n\t-authfields\t\t=> [\n\t\t{id => 'user', display => 'User Name', hidden => 0, required => 1},\n\t\t{id => 'pw', display => 'Password', hidden => 1, required => 1},\n\t],\n}",
+      "file" : "/var/tmp/arv_juhYrC/CGI-Auth-3.00/extra/AuthCfg.pm",
+      "package" : "AuthCfg"
+   }
+]

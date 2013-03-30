@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'your message here, contact $AUTHOR for rates'",
+      "file" : "/var/tmp/arv_CnZnoI/Sub-Context-1.00/lib/Sub/Context.pm",
+      "package" : "Sub::Context"
+   }
+]

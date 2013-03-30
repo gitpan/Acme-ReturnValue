@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_q_DcTD/Dist-Zilla-Role-EnsureStash-0.002/lib/Dist/Zilla/Role/EnsureStash.pm",
+      "package" : "Dist::Zilla::Role::EnsureStash"
+   }
+]

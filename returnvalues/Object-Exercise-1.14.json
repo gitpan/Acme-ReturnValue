@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "sub\n{\n    my $base    = basename $0;\n\n    my $t0      = Benchmark->new;\n\n    my $obj     = shift;\n\n    my $count   = 0;\n    my $errors  = 0;\n\n    TEST:\n    for( @_ )\n    {\n        if( ref $_ )\n        {\n            ++$count;\n\n            my $argz    = ref $_->[0] ? $_->[0] : $_;\n\n            my $method  = shift @$argz;\n\n            eval { $obj->$method( @$argz ) };\n\n            next unless $@;\n\n            $log_message->( 'Error:', $@, 'Executing:', $method, $argz );\n\n            ++$errors;\n\n            last unless $continue;\n        }\n    }\n\n    my $diff = timestr timediff $t0, Benchmark->new;\n\n    $log_message->\n    (\n        \"Benchmark $base: $diff\",\n        \"Executing: $count items, $errors errors\",\n    );\n}",
+      "file" : "/var/tmp/arv_yFbZDf/Object-Exercise-1.14/lib/Object/Exercise/Benchmark.pm",
+      "package" : "Object::Exercise::Benchmark"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "sub\n{\n\n\n    my $obj     = shift;\n\n    my $count   = 0;\n\n    unless( $noplan )\n    {\n        $count\n        = grep\n        {\n            (ref $_)              \n            &&\n            (ref $_ eq q{ARRAY})  \n            &&\n            (ref $_->[0])         \n        }\n        @_;\n\n        if( $count )\n        {\n            plan tests => $count;\n\n            $log_message->( \"Executing: $count tests\" )\n            if $verbose;\n        }\n        else\n        {\n            plan tests => 1;\n        }\n    }\n\n    TEST:\n    for( @_ )\n    {\n\n        if( my $type = reftype $_ )\n        {\n            my $handler = $ref_handlerz{ $type }\n            or die \"Unable to handle item of type '$type'\";\n\n            $obj->$handler( $_ );\n        }\n        elsif( 0 < ( my $i = index $_, '=' ) )\n        {\n            my $key = substr $_, 0, $i;\n            my $val = substr $_, ++$i;\n\n            $obj->{ $key } = $val;\n        }\n        elsif( my $handler = $parmz{ $_ } )\n        {\n            &$handler\n        }\n        else\n        {\n\n            $log_message->( $_ );\n        }\n    }\n\n    if( $noplan )\n    {\n        $log_message->( \"Execution complete\" )\n        if $verbose;\n    }\n    else\n    {\n        $count or pass \"Execution complete\";\n    }\n}",
+      "file" : "/var/tmp/arv_yFbZDf/Object-Exercise-1.14/lib/Object/Exercise/Execute.pm",
+      "package" : "Object::Exercise::Execute"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY\n{\n \t$_[0] = undef;\n}\n\n\n\nsub AUTOLOAD\n{\n        my($self) = shift;\n        my($method) = ($AUTOLOAD =~ /::([^:]+)$/);\n        return unless ($method);\n\n\t\treturn $self->_soap_get_set_args ( $method, @_ )\n\t\t\tif ( $method =~ \"^_soap_\" );\n\n\n        $self->_soap_deliver_request ( $method, @_ );\n}\n\n\n\n1",
+      "file" : "/var/tmp/arv_eHYqbr/SOAP-AutoInvoke-0.25/SOAP/Transport/HTTP/AutoInvoke/Client.pm",
+      "package" : "SOAP::Transport::HTTP::AutoInvoke::Client"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY\n{\n \t$_[0] = undef;\n}\n\n\n\nsub AUTOLOAD\n{\n        my($self) = shift;\n        my($method) = ($AUTOLOAD =~ /::([^:]+)$/);\n        return unless ($method);\n\n\t\treturn $self->_soap_get_set_args ( $method, @_ )\n\t\t\tif ( $method =~ \"^_soap_\" );\n\n        $self->_soap_deliver_request ( $method, @_ );\n}\n\n\n\n1",
+      "file" : "/var/tmp/arv_eHYqbr/SOAP-AutoInvoke-0.25/SOAP/Transport/ActiveWorks/AutoInvoke/Client.pm",
+      "package" : "SOAP::Transport::ActiveWorks::AutoInvoke::Client"
+   }
+]

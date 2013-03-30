@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Il ne doit en rester qu'un\"",
+      "file" : "/var/tmp/arv_GQEkzS/Catalyst-Plugin-MortalForward-0.01/lib/Catalyst/Plugin/MortalForward.pm",
+      "package" : "Catalyst::Plugin::MortalForward"
+   }
+]

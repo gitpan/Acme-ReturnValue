@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_hHl99W/Lingua-EN-Semtags-Engine-0.01/lib/Lingua/EN/Semtags/LangUnit.pm",
+      "package" : "Lingua::EN::Semtags::LangUnit"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_hHl99W/Lingua-EN-Semtags-Engine-0.01/lib/Lingua/EN/Semtags/Sentence.pm",
+      "package" : "Lingua::EN::Semtags::Sentence"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_hHl99W/Lingua-EN-Semtags-Engine-0.01/lib/Lingua/EN/Semtags/Engine.pm",
+      "package" : "Lingua::EN::Semtags::Engine"
+   }
+]

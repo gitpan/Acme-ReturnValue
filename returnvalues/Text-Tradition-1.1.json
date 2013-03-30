@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub throw {\n\tText::Tradition::Error->throw( \n\t\t'ident' => 'Parser::TEI error',\n\t\t'message' => $_[0],\n\t\t);\n}",
+      "file" : "/var/tmp/arv_zt0ua3/Text-Tradition-1.1/lib/Text/Tradition/Parser/TEI.pm",
+      "package" : "Text::Tradition::Parser::TEI"
+   }
+]

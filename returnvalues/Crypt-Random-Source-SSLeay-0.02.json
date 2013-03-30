@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub seed {\n}",
+      "file" : "/var/tmp/arv_kWiWc2/Crypt-Random-Source-SSLeay-0.02/lib/Crypt/Random/Source/SSLeay.pm",
+      "package" : "Crypt::Random::Source::SSLeay"
+   }
+]

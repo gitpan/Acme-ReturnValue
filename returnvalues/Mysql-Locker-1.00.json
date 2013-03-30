@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n my $self = shift;\n my $dbh = $self->{'_dbh'};\n if (defined($dbh)) {\n  unless($dbh->do('UNLOCK TABLES')) {\n   croak('Error unlocking tables: ' . $dbh->errstr());\n  }\n }\n}",
+      "file" : "/var/tmp/arv_eBZXdW/Mysql-Locker-1.00/lib/Mysql/Locker.pm",
+      "package" : "Mysql::Locker"
+   }
+]

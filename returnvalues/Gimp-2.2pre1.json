@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub gimp_layer_set_position {\n   my($layer,$new_pos)=@_;\n   $pos=$layer->get_position;\n   $layer->add_alpha;\n   while($pos>$new_pos) {\n      $layer->lower_layer;\n      $pos--;\n   }\n   while($pos<$new_pos) {\n      $layer->raise_layer;\n      $pos++;\n   }\n}",
+      "file" : "/var/tmp/arv_u2glCc/gimp-perl/Gimp/Util.pm",
+      "package" : "Gimp::Util"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "sub BEGIN {\n\tmy (%type, $uname, $r, $ostype, $version, $mach_type);\n\n\t$par = {};\n\t&reset_par;\n\tchop($uname = `uname -srm`);\n\t($ostype, $version, $mach_type) = split(/\\s+/, $uname);\n\t($r = $version) =~ tr/0-9//cd;\n\t$r .= '0' if length($r) < 3;\n\t$r *= 1.0;\n\n\t($par->{'os_type'} = $ostype) =~ tr/A-Z/a-z/;\n\t$par->{'os_rev'} = $r;\n\t($par->{'mach_type'} = $mach_type) =~ tr/A-Z/a-z/;\n\n\t$type{'sunos4'} = $ostype eq 'SunOS' && $version < 5 ? $r : 0;\n\t$type{'sunos5'} = $ostype eq 'SunOS' && $version > 5 ? $r : 0;\n\t$type{'freebsd'} = $ostype eq 'FreeBSD' ? $r : 0;\n\t$type{'sunos'} = $ostype eq 'SunOS' ? $r : 0;\n\t$type{'linux'} = $ostype eq 'Linux' ? $r : 0;\n\n\t$type{$1} = $mach_type =~ /^(i[3-9]86)/ ? $r : 0;\n\n\t$verbose = -1;\n\n\tif (-f '/etc/debian_version') {\n\t\tmy $deb;\n\n\t\topen(IN, '/etc/debian_version');\n\t\tchop($deb = <IN>);\n\t\tclose(IN);\n\t\t$deb =~ s/\\.//;\n\t\t$deb .= '0' if length($deb) < 3;\n\t\t$type{'debian'} = $deb;\n\t}\n\tfor my $i (keys %type) {\n\t\t&verbose('init', \"sub is_$i\\{return $type{$i};}\");\n\t\teval \"sub is_$i\\{ &verbose('is_$i','$type{$i}');\".\n\t\t\t\"return \\\"$type{$i}\\\";}\";\n\t}\n\tfor my $i (qw(os_type os_rev mach_type)) {\n\t\t&verbose('init', \"sub par_$i { return \\\"$par->{$i}\\\"; }\");\n\t\teval \"sub par_$i { \".\n\t\t\t\"&verbose('par_$i','$par->{$i}');\".\n\t\t\t\"return \\\"$par->{$i}\\\"; }\";\n\t}\n\t&set_comment;\n\t$verbose = 0;\n}",
+      "file" : "/var/tmp/arv_R9jvUs/Config-Cfe-1.50/Cfe.pm",
+      "package" : "Config::Cfe"
+   }
+]

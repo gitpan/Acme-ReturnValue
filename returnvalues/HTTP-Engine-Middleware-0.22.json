@@ -1,0 +1,92 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/DoCoMoGUID.pm",
+      "package" : "HTTP::Engine::Middleware::DoCoMoGUID"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/Encode.pm",
+      "package" : "HTTP::Engine::Middleware::Encode"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/MethodOverride.pm",
+      "package" : "HTTP::Engine::Middleware::MethodOverride"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/ModuleReload.pm",
+      "package" : "HTTP::Engine::Middleware::ModuleReload"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/ReverseProxy.pm",
+      "package" : "HTTP::Engine::Middleware::ReverseProxy"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/Status.pm",
+      "package" : "HTTP::Engine::Middleware::Status"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/AccessLog.pm",
+      "package" : "HTTP::Engine::Middleware::AccessLog"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/MobileAttribute.pm",
+      "package" : "HTTP::Engine::Middleware::MobileAttribute"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/DebugScreen.pm",
+      "package" : "HTTP::Engine::Middleware::DebugScreen"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/Static.pm",
+      "package" : "HTTP::Engine::Middleware::Static"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/HTTPSession.pm",
+      "package" : "HTTP::Engine::Middleware::HTTPSession"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/DebugRequest.pm",
+      "package" : "HTTP::Engine::Middleware::DebugRequest"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/Profile.pm",
+      "package" : "HTTP::Engine::Middleware::Profile"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/UploadTemp.pm",
+      "package" : "HTTP::Engine::Middleware::UploadTemp"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__MIDDLEWARE__",
+      "file" : "/var/tmp/arv_ZH2qrf/HTTP-Engine-Middleware-0.22/lib/HTTP/Engine/Middleware/FillInForm.pm",
+      "package" : "HTTP::Engine::Middleware::FillInForm"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub setBrush ($$) {\n\tmy $self = shift;\n\tmy $brush = shift;\n\treturn \"Sorry..Ignoring this command. Unable to setBrush with this version\n\tof SVG::GD\";\n}",
+      "file" : "/var/tmp/arv_AJkgN6/SVG-GD-0.20/lib/SVG/GD.pm",
+      "package" : "SVG::GD"
+   }
+]

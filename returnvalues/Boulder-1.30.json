@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub rearrange {\n    my($self,$order,@param) = @_;\n    return () unless @param;\n    \n    return @param unless (defined($param[0]) && substr($param[0],0,1) eq '-')\n\t|| $self->use_named_parameters;\n\n    my $i;\n    for ($i=0;$i<@param;$i+=2) {\n\t$param[$i]=~s/^\\-//;     \n\t$param[$i]=~tr/a-z/A-Z/; \n    }\n    \n    my(%param) = @param;\t\t\n    my(@return_array);\n    \n    my($key)='';\n    foreach $key (@$order) {\n\tmy($value);\n\tif (ref($key) eq 'ARRAY') {\n\t    foreach (@$key) {\n\t\tlast if defined($value);\n\t\t$value = $param{$_};\n\t\tdelete $param{$_};\n\t    }\n\t} else {\n\t    $value = $param{$key};\n\t    delete $param{$key};\n\t}\n\tpush(@return_array,$value);\n    }\n    push (@return_array,$self->make_attributes(\\%param)) if %param;\n    return (@return_array);\n}",
+      "file" : "/var/tmp/arv_2P_hS9/Boulder-1.30/Boulder/Labbase.pm",
+      "package" : "Boulder::Labbase"
+   }
+]

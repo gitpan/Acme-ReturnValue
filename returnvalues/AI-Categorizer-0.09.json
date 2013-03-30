@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prog_bar {\n  my ($self, $count) = @_;\n\n  return sub {} unless $self->verbose;\n  return sub { print STDERR '.' } unless eval \"use Time::Progress; 1\";\n\n  my $pb = 'Time::Progress'->new;\n  $pb->attr(max => $count);\n  my $i = 0;\n  return sub {\n    $i++;\n    return if $i % 25;\n    print STDERR $pb->report(\"%50b %p ($i/$count)\\r\", $i);\n  };\n}",
+      "file" : "/var/tmp/arv_Qc6otS/AI-Categorizer-0.09/lib/AI/Categorizer/FeatureSelector/CategorySelector.pm",
+      "package" : "AI::Categorizer::FeatureSelector::CategorySelector"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub authenticate {\n    my $r       = shift;\n    my $user    = shift;\n    my $sent_pw = shift;\n    my $crypted = 0;\n\n    if (my $author = MT::Author->load({ name => $user })) {\n        if ($author->is_valid_password($sent_pw, $crypted)) {\n            return \"\";\n        } else {\n            return \"invalid pass\";\n        }\n    } else {\n        return \"invalid user\";\n    }\n}",
+      "file" : "/var/tmp/arv_HGPRmf/Apache-AuthenMT-1.00/AuthenMT.pm",
+      "package" : "Apache::AuthenMT"
+   }
+]

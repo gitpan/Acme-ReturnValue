@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub override\n{\n     my $self = shift;\n     return bless {},'Data::Startup' unless ref($self);\n\n     return $self unless (@_);\n\n     my %options = %$self;\n\n     if(ref($self) eq 'HASH') {\n         Data::Startup::config(\\%options,@_);\n         return \\%options;\n     }\n\n     $self = bless \\%options,ref($self);\n\n     $self->Data::Startup::config(@_);\n     $self\n\n}",
+      "file" : "/var/tmp/arv_aGyoUz/Data-Startup-0.04/lib/Data/Startup.pm",
+      "package" : "Data::Startup"
+   }
+]

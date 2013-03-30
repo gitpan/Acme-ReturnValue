@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub read_xml\n{\n    my ($font, $fname) = @_;\n\n    my ($xml) = XML::Parser::Expat->new;\n    my ($context) = {'xml' => $xml, 'font' => $font};\n\n    $xml->setHandlers('Start' => sub {\n            my ($x, $tag, %attrs) = @_;\n            my ($context) = $x->{' mycontext'};\n            my ($fn) = $context->{'receiver'}->can('XML_start');\n\n            push(@{$context->{'tree'}}, undef);\n            push(@{$context->{'stack'}}, [$context->{'receiver'}, {%attrs}]);\n            &{$fn}($context->{'receiver'}, $context, $tag, %attrs) if defined $fn;\n        },\n        'End' => sub {\n            my ($x, $tag) = @_;\n            my ($context) = $x->{' mycontext'};\n            my ($fn) = $context->{'receiver'}->can('XML_end');\n            my ($stackinfo) = pop(@{$context->{'stack'}});\n            my ($current, $res);\n\n            $context->{'receiver'} = $stackinfo->[0];\n            $context->{'text'} =~ s/^\\s*(.*?)\\s*$/$1/o;\n            $res = &{$fn}($context->{'receiver'}, $context, $tag, %{$stackinfo->[1]}) if defined $fn;\n            $current = pop(@{$context->{'tree'}});\n            $current = $context->{'text'} unless (defined $current);\n            $context->{'text'} = '';\n\n            if (defined $res)\n            {\n                return if ($res eq $context);\n                $current = $res;\n            }\n            return unless $#{$context->{'tree'}} >= 0;\n            if ($tag eq 'elem')\n            {\n                $context->{'tree'}[-1] = [] unless defined $context->{'tree'}[-1];\n                push (@{$context->{'tree'}[-1]}, $current);\n            } else\n            {\n                $context->{'tree'}[-1] = {} unless defined $context->{'tree'}[-1];\n                $context->{'tree'}[-1]{$tag} = $current;\n            }\n        },\n        'Char' => sub {\n            my ($x, $str) = @_;\n            $x->{' mycontext'}{'text'} .= $str;\n        });\n\n    $xml->{' mycontext'} = $context;\n\n    $context->{'receiver'} = $font;\n    if (ref $fname)\n    { return $xml->parse($fname); }\n    else\n    { return $xml->parsefile($fname); }\n}",
+      "file" : "/var/tmp/arv_vnALjM/Font-TTF-1.02/lib/Font/TTF/XMLparse.pm",
+      "package" : "Font::TTF::XMLparse"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n    my ($self) = @_;\n    close ($self->{' INFILE'});\n    undef;\n}",
+      "file" : "/var/tmp/arv_vnALjM/Font-TTF-1.02/lib/Font/TTF/Ttc.pm",
+      "package" : "Font::TTF::Ttc"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub out\n{\n    my ($self, $fh) = @_;\n    my ($i, $curlen);\n\n    return $self->SUPER::out($fh) unless $self->{' read'};      \n    $fh->print(pack(\"LNN\", $self->{'version'}, $self->{'numtables'}, $self->{'perms'}));\n    $curlen = 0;\n    for ($i = 0; $i < $self->{'numtables'}; $i++)\n    {\n        $fh->print(pack(\"L3\", 1, length($self->{'records'}[$i]) + 8, $curlen + $self->{'numtables'} * 12 + 8));\n        $curlen += length($self->{'records'}[$i]) + 8;\n    }\n    for ($i = 0; $i < $self->{'numtables'}; $i++)\n    {\n        $fh->print(pack(\"NNL\", 0, 0, length($self->{'records'}[$i])));\n        $fh->print($self->{'records'}[$i]);\n    }\n    $self;\n}",
+      "file" : "/var/tmp/arv_vnALjM/Font-TTF-1.02/lib/Font/TTF/DSIG.pm",
+      "package" : "Font::TTF::DSIG"
+   }
+]

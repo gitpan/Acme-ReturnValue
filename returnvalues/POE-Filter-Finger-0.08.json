@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Finger meh!'",
+      "file" : "/var/tmp/arv_PGtimX/POE-Filter-Finger-0.08/lib/POE/Filter/Finger.pm",
+      "package" : "POE::Filter::Finger"
+   }
+]

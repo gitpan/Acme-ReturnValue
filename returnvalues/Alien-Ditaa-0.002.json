@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method run_ditaa {\n    my $java = which 'java';\n    my $out;\n    run [$java, '-jar', $self->get_jar, @_], \\undef, \\$out;\n    my $exit = $? >> 8;\n    $self->_set_last_run_output($out);\n    return $exit;\n}\n\n__PACKAGE__->meta->make_immutable",
+      "file" : "/var/tmp/arv_IJYA4E/Alien-Ditaa-0.002/lib/Alien/Ditaa.pm",
+      "package" : "Alien::Ditaa"
+   }
+]

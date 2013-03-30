@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub rgb {\n    my $self = shift;\n    my @rgb  = hex2tuple($self->FETCH(my $name = shift));\n    my $sep  = shift || ','; \n    return wantarray ? @rgb : join($sep,@rgb);\n}",
+      "file" : "/var/tmp/arv_1B2eyx/Graphics-ColorNames-2.11/lib/Graphics/ColorNames.pm",
+      "package" : "Graphics::ColorNames"
+   }
+]

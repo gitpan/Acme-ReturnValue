@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load(__PACKAGE__, $Math::Random::ISAAC::XS::VERSION)",
+      "file" : "/var/tmp/arv_gUeB0A/Math-Random-ISAAC-XS-1.004/lib/Math/Random/ISAAC/XS.pm",
+      "package" : "Math::Random::ISAAC::XS"
+   }
+]

@@ -1,0 +1,620 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_register {\n\tmy $obj = shift;\n\tmy $name = shift;\n\treturn () unless exists $obj->{-registers};\n\treturn () unless exists $obj->{-registers}->{$name};\n\treturn keys %{$obj->{-registers}->{$name}};\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/MemPool.pm",
+      "package" : "DBIx::dbMan::MemPool"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action { \n\tmy ($obj,%action) = @_;\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension.pm",
+      "package" : "DBIx::dbMan::Extension"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub current_line {\n\tmy $obj = shift;\n\n\treturn '';\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Interface.pm",
+      "package" : "DBIx::dbMan::Interface"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub discard_profile_data {\n\tmy $obj = shift;\n\treturn unless $obj->{current};\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/DBI.pm",
+      "package" : "DBIx::dbMan::DBI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub reverse_search {\n\tmy ($obj,$pattern,$dec) = @_;\n\n\t$dec = 0 unless defined $dec;\n\tmy $curr = $obj->{position}-$dec;\n\twhile ($curr >= 0) {\n\t\tif ($obj->{buffer}->[$curr] =~ /$pattern/i) {\n\t\t\t$obj->{position} = $curr;\n\t\t\treturn $obj->{buffer}->[$obj->{position}];\n\t\t}\n\t\t--$curr;\n\t}\n\treturn undef;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/History.pm",
+      "package" : "DBIx::dbMan::History"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub str {\n\tmy $obj = shift;\n\tmy $str = join '',@_;\n\treturn gettext $str;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Lang.pm",
+      "package" : "DBIx::dbMan::Lang"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n\tmy $obj = shift;\n\n\t$AUTOLOAD =~ s/^DBIx::dbMan::Config:://;\n\tmy $res = $obj->{config}->{$AUTOLOAD};\n\tif (defined $res) {\n\t\tif (ref $res and scalar @$res > 1) {\n\t\t\treturn wantarray ? @$res : $res;\n\t\t} else {\n\t\t\treturn wantarray ? @$res : $res->[0];\n\t\t}\n\t} else {\n\t\treturn undef;\n\t}\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Config.pm",
+      "package" : "DBIx::dbMan::Config"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub can_pager {\n\treturn 0;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Interface/tkgui.pm",
+      "package" : "DBIx::dbMan::Interface::tkgui"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_key {\n\tmy $obj = shift;\n\n\tReadMode 3;\n\n\tmy $seq = '';\n\n\twhile (1) {\n\t\tmy $key = ReadKey(0);\n\n\t\t$key = '\\e' if ord $key == 0x1b;\n\t\t$seq .= $key;\n\t\tif ($seq =~ /^\\\\e/) {\n\t\t\tlast if $seq =~ /^\\\\e\\[(\\d+)~/ ||\n\t\t\t\t$seq =~ /^\\\\e\\[\\[?[A-Z]/ ||\n\t\t\t\t$seq =~ /^\\\\eO[A-Z]/ ||\n\t\t\t\t$seq =~ /^\\\\e[a-z]/;\n\t\t} else {\n\t\t\t$seq = '\\x'.unpack(\"H2\",$key);\n\t\t\tlast;\n\t\t}\n\t}\n\n\tReadMode 0;\n\n\treturn $seq;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Interface/cmdline.pm",
+      "package" : "DBIx::dbMan::Interface::cmdline"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub current_line {\n\tmy $obj = shift;\n\n\treturn $obj->{sqleditor}->get();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Interface/curses.pm",
+      "package" : "DBIx::dbMan::Interface::curses"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'DESCRIBE') {\n\t\t$action{action} = 'NONE';\n\t\tunless ($obj->{-dbi}->current) {\n\t\t\t$obj->{-interface}->error(\"No current connection selected.\");\n\t\t\treturn %action;\n\t\t}\t\n\t\tif ($action{oper} eq 'complete') {\n\t\t\tmy $sth = $obj->{-dbi}->table_info();\n\t\t\tmy $ret = $sth->fetchall_arrayref();\n\t\t\tmy @all = ();\n\t\t\tif (defined $ret) {\n\t\t\t\tfor (@$ret) {\n\t\t\t\t\tif ($_->[3] =~ /^(table|view)$/i) {\n\t\t\t\t\t\tpush @all,$_->[2];\n\t\t\t\t\t\tpush @all,$_->[1].'.'.$_->[2] if $_->[1];\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\t$sth->finish;\n\t\t\t$action{list} = \\@all;\n\t\t\t$action{processed} = 1;\n\t\t\treturn %action;\n\t\t}\n\n\t\tmy $table = new Text::FormatTable '| l | l | l | l | l |';\n\t\t$table->rule;\n\t\t$table->head('COLUMN','TYPE','SIZE','SCALE','NULLABLE');\n\t\t$table->rule;\n\n\t\tmy $sth = $obj->{-dbi}->prepare(q!SELECT * FROM !.$action{what}.q! WHERE 0 = 1!);\n\t\tunless (defined $sth) {\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $obj->{-dbi}->errstr().\"\\n\";\n\t\t\t$action{processed} = 1;\n\t\t\treturn %action;\n\t\t}\n\t\tmy $ret = $sth->execute();\n\t\tif (defined $ret) {\n\t\t\tmy @type = map { (defined $obj->{-dbi}->type_info($_)) \n\t\t\t\t? (scalar $obj->{-dbi}->type_info($_)->{TYPE_NAME})\n\t\t\t\t: $_ } @{$sth->{TYPE}};\n\t\t\tmy @prec = @{$sth->{PRECISION}};\n\t\t\tmy @scale = @{$sth->{SCALE}};\n\t\t\tmy @null = @{$sth->{NULLABLE}};\n\t\t\tmy %nullcvt = qw/0 no 1 yes 2 unknown/;\n\t\t\t$nullcvt{''} = 'no';\n\t\t\tfor (@{$sth->{NAME}}) {\n\t\t\t\t$table->row($_,shift @type,shift @prec,shift @scale,$nullcvt{shift @null});\n\t\t\t}\n\t\t} else {\n\t\t\t$obj->{-interface}->error(\"Table $action{what} not found.\");\n\t\t\treturn %action;\n\t\t}\n\t\t$sth->finish;\n\t\t$table->rule;\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Describe.pm",
+      "package" : "DBIx::dbMan::Extension::Describe"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn () unless $obj->{-dbi}->current;\n\treturn $obj->listoftables if $line =~ /^\\s*(DESCRIBE|\\\\d)\\s+\\S*$/i;\n\treturn qw/DESCRIBE/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ('d') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ('\\d') if $line =~ /^\\s*$/;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdDescribe.pm",
+      "package" : "DBIx::dbMan::Extension::CmdDescribe"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'EVAL') {\n\t\tif ($action{type} eq 'perl') {\n\t\t\tmy $code = $action{what};\n\t\t\teval $code;\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $@ || '';\n\t\t} elsif ($action{type} eq 'system') {\n\t\t\tmy $code = $action{what};\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = `$code`;\n\t\t} else {\n\t\t\treturn %action;\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Eval.pm",
+      "package" : "DBIx::dbMan::Extension::Eval"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'SCREEN') {\n\t\tif ($action{operation} eq 'clear') {\n\t\t\t$obj->{-interface}->clear_screen();\n\t\t\t$action{action} = 'NONE';\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Clear.pm",
+      "package" : "DBIx::dbMan::Extension::Clear"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'COMMAND' and $obj->{-dbi}->driver eq 'Oracle') {\n\t\t$action{processed} = 1;\n\t\t$obj->{-dbi}->set('LongTruncOk',1);\n\t\tif ($obj->{-mempool}->get('dbms_output')) {\n\t\t\t$obj->{-dbi}->func(1000000,'dbms_output_enable');\n\t\t\t$action{oracle_dbms} = 1;\n\t\t}\n\t\tif ($action{cmd} !~ /end;$/i) {\n\t\t\treturn %action if $action{cmd} =~ s/[;\\/]$//;\n\t\t}\n\t}\n\tif ($action{action} eq 'SQL' and $action{oper} eq 'complete' and $obj->{-dbi}->driver eq 'Oracle') {\n\t\t$action{action} = 'NONE';\n\n\t\tmy @all = ();\n\t\tif ($action{context} =~ /\\./) {\n\t\t\tmy $tab = $action{context};  $tab =~ s/\\.[^.]*$//;\n\t\t\tmy $sth = $obj->{-dbi}->prepare(q!SELECT * FROM !.$tab.q! WHERE 0 = 1!);\n\t\t\tif (defined $sth and not @all) {\n\t\t\t\tif ($sth->execute) {\n\t\t\t\t\t@all = map { ($action{type} eq 'FIELDS') ? $_ : $tab.'.'.$_ } @{$sth->{NAME}};\n\t\t\t\t\t$sth->finish;\n\t\t\t\t} elsif (lc $action{type} eq 'seq') {  \n\t\t\t\t\tif ($tab !~ /\\./) { @all = map { $tab.'.'.$_ } qw/next_val curr_val/; }\n\t\t\t\t} \n\t\t\t} else {\n\t\t\t\tmy $d = $obj->{-dbi}->selectall_arrayref(q!\n\t\t\t\t\tSELECT object_name\n\t\t\t\t\tFROM all_objects\n\t\t\t\t\tWHERE owner = ? AND object_type !.(lc $action{type} ne 'object'?((lc $action{type} eq 'context')?q! IN ('TABLE','VIEW','FUNCTION','PACKAGE')!:((lc $action{type} eq 'seq')?q! = 'SEQUENCE'!:q! = '!.uc($action{type}).q!'!)):q!IN ('PROCEDURE','FUNCTION','TRIGGER','VIEW','PACKAGE','PACKAGE BODY')!),{},uc $tab);\n\t\t\t\t@all = map { uc($tab).'.'.$_->[0] } @$d if defined $d;\n\t\t\t}\n\t\t} else {\n\t\t\tmy $d = $obj->{-dbi}->selectall_arrayref(q!\n\t\t\t\tSELECT object_name\n\t\t\t\tFROM user_objects\n\t\t\t\tWHERE object_type !.(lc $action{type} ne 'object'?((lc $action{type} eq 'context')?q! IN ('TABLE','VIEW','FUNCTION','PACKAGE')!:((lc $action{type} eq 'seq')?q! = 'SEQUENCE'!:q! = '!.uc($action{type}).q!'!)):q!IN ('PROCEDURE','FUNCTION','TRIGGER','VIEW','PACKAGE','PACKAGE BODY')!));\n\t\t\t@all = map { $_->[0] } @$d if defined $d;\n\t\t\tpush @all,'DUAL';\n\t\t\tpush @all,'SYSDATE';\n\t\t}\n\t\t$action{list} = \\@all;\n\t}\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/OracleSQL.pm",
+      "package" : "DBIx::dbMan::Extension::OracleSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\n\tmy @macros = @{$obj->{-mempool}->get('macros')};\n\treturn () unless @macros;\n\n\tmy @names = ();\n\tfor (@macros) {\n\t\ts#^s/##;\n\t\ts#/([ige])?$##;\n\t\ts#^(.+)(?!\\\\)/.*$#$1#;\n\t\tpush @names,$_ if $_;\n\t}\n\n\tmy @result = ();\n\tfor my $name (@names) {\n\t\t$name =~ s/\\\\s[+*]?/ /g;\n\t\t$name =~ s/^\\^//;\n\t\t$name =~ s/\\$$//;\n\t\tmy @words = ();\n\t\tfor (split /\\s+/,$name) {\n\t\t\tif (/^[-a-z0-9_\\\\]+$/i) {\n\t\t\t\tpush @words,$_;\n\t\t\t} else {\n\t\t\t\tlast;\n\t\t\t}\n\t\t}\n\t\tif (@words) {\n\t\t\tif ($line =~ /^\\s*[A-Z]*$/i) {\n\t\t\t\tpush @result,$words[0];\n\t\t\t} else {\n\t\t\t\tmy $saved = pop @words;\n\t\t\t\twhile (@words) {\n\t\t\t\t\t$name = '$line =~ /^\\s*'.join('\\\\s+',@words).'\\s+\\S*$/i';\n\t\t\t\t\tpush @result,$saved if eval $name;\n\t\t\t\t\t$saved = pop @words;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn @result;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/MacroWorks.pm",
+      "package" : "DBIx::dbMan::Extension::MacroWorks"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn () if $obj->{-mempool}->get('long_active_complete');\n\tif ($obj->{-mempool}->get('long_active')) {\n\t\tmy @base = ();  my @res = ();\n\t\t@base = ('g') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\t\tunless (@base) {\n\t\t\t@base = ('\\g') if $line =~ /^\\s*$/i;\n\t\t\tmy $current = $obj->{-mempool}->get('long_buffer');\n\t\t\t$current .= ' ' if $current;\n\t\t\t$start += length($current);\n\t\t\t$current .= $line;\n\t\t\t$obj->{-mempool}->set('long_active_complete',1);\n\t\t\t@res = $obj->restart_complete($text,$current,$start);\n\t\t\t$obj->{-mempool}->set('long_active_complete',0);\n\t\t}\n\t\treturn (@base,@res);\n\t}\n\treturn $obj->restart_complete($text,$1,$start-(length($line)-length($1))) if $line =~ /^\\s*\\\\l\\s+(.*)$/i;\n\treturn ('\\l') if $line =~ /^\\s*$/i;\n\treturn ('l') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdLongSQL.pm",
+      "package" : "DBIx::dbMan::Extension::CmdLongSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'EDIT_OBJECT' and not $action{type}) {\n\t\t$action{action} = 'NONE';\n\t\tunless ($obj->{-dbi}->current) {\n\t\t\t$obj->{-interface}->error(\"No current connection selected.\");\n\t\t\treturn %action;\n\t\t}\n\t\tmy $sth = $obj->{-dbi}->table_info({ TABLE_NAME => $action{what} });\n\t\tunless (defined $sth) {\n\t\t\t$obj->{-interface}->error(\"Object \".$action{what}.\" not found.\");\n\t\t\treturn %action;\n\t\t}\n\t\tmy $ret = $sth->fetchall_arrayref();\n\t\tunless (defined $ret) {\n\t\t\t$sth->finish;\n\t\t\t$obj->{-interface}->error(\"Object \".$action{what}.\" not found.\");\n\t\t\treturn %action;\n\t\t}\n\t\t$sth->finish;\n\t\tmy $found = 0;\n\t\tmy $type = '';\n\t\tfor (@$ret) {\n\t\t\tif ($_->[2] eq $action{what}) {\n\t\t\t\t$type = $_->[3];  ++$found;\n\t\t\t}\n\t\t}\n\t\tunless ($found) {\n\t\t\t$obj->{-interface}->error(\"Object \".$action{what}.\" not found.\");\n\t\t\treturn %action;\n\t\t}\n\t\t$action{type} = $type;\n\t\t$action{action} = 'EDIT_OBJECT';\n\t\tdelete $action{processed};\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/EditObjects.pm",
+      "package" : "DBIx::dbMan::Extension::EditObjects"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'CONNECTION') {\n\t\tif ($action{operation} eq 'open') {\n\t\t\tmy $error = $obj->{-dbi}->open($action{what});\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $obj->solve_open_error($error,$action{what});\n\t\t\t$obj->{-interface}->rebuild_menu;\n\t\t} elsif ($action{operation} eq 'reopen') {\n\t\t\tmy $reuse = 0;\n\t\t\t$reuse = 1 if $obj->{-dbi}->current eq $action{what};\n\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\tmy $error = $obj->{-dbi}->close($action{what});\n\t\t\t$action{output} = $obj->solve_close_error($error,$action{what});\n\n\t\t\t$error = $obj->{-dbi}->open($action{what});\n\t\t\t$action{output} .= $obj->solve_open_error($error,$action{what});\n\n\t\t\tif ($reuse) {\n\t\t\t\t$error = $obj->{-dbi}->set_current($action{what});\n\t\t\t\t$action{output} .= $obj->solve_use_error($error,$action{what});\n\t\t\t}\n\t\t\t$obj->{-interface}->rebuild_menu;\n\t\t} elsif ($action{operation} eq 'close') {\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\tmy $error = $obj->{-dbi}->close($action{what});\n\t\t\t$action{output} = $obj->solve_close_error($error,$action{what});\n\t\t\t$obj->{-interface}->rebuild_menu;\n\t\t} elsif ($action{operation} eq 'use') {\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\tmy $error = $obj->{-dbi}->set_current($action{what});\n\t\t\t$action{output} = $obj->solve_use_error($error,$action{what});\n\t\t\t$obj->{-interface}->rebuild_menu;\n\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'TRANSACTION', operation => 'change' });\n\t\t} elsif ($action{operation} eq 'show') {\n\t\t\tmy @list = @{$obj->{-dbi}->list($action{what})};\n\t\t\tmy $clist = '';\n\t\t\tif (@list) {\n\t\t\t\t$clist .= ($action{what} eq 'active'?'Active c':'C').\"onnections:\\n\";\n\t\t\t\tmy $table = new Text::FormatTable '| l l | l | l | l | l | l |';\n\t\t\t\t$table->rule;\n\t\t\t\t$table->head('C','NAME','ACTIVE','PERMANENT','DRIVER','LOGIN','DSN');\n\t\t\t\t$table->rule;\n\t\t\t\tfor (@list) {\n\t\t\t\t\t$table->row((($obj->{-dbi}->current eq $_->{name})?'*':' '),$_->{name},($_->{-logged}?'yes':'no'),($obj->{-dbi}->is_permanent_connection($_->{name})?'yes':'no'),$_->{driver},$_->{login},$_->{dsn});\n\t\t\t\t}\n\t\t\t\t$table->rule;\n\t\t\t\t$clist .= $table->render($obj->{-interface}->render_size);\n\t\t\t} else {\n\t\t\t\t$action{what} = '' if $action{what} ne 'active';\n\t\t\t\t$clist .= \"No\".($action{what}?' '.$action{what}:'').\" connection.\\n\";\n\t\t\t}\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $clist;\n\t\t} elsif ($action{operation} eq 'create') {\n\t\t\tmy %parm = ();\n\t\t\tfor (qw/driver dsn login password auto_login/) { $parm{$_} = $action{$_}; }\n\n\t\t\t$action{action} = 'NONE';\n\t\t\tmy $error = $obj->{-dbi}->create_connection($action{what},\\%parm);\n\t\t\tif ($error == -1) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"Connection with name $action{what} already exists.\\n\";\n\t\t\t} elsif ($error >= 0) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"Connection $action{what} created.\\n\";\n\t\t\t\tif ($error > 50) {\n\t\t\t\t\t$action{output} .= $obj->solve_open_error($error-100,$action{what}) if $error > 50;\n\t\t\t\t}\n\t\t\t\tif ($action{permanent}) {\n\t\t\t\t\t$error = $obj->{-dbi}->save_connection($action{what});\n\t\t\t\t\tif ($error == -1) {\n\t\t\t\t\t\t$action{output} .= \"Connection with name $action{what} not exists.\\n\";\n\t\t\t\t\t} elsif (not $error) {\n\t\t\t\t\t\t$action{output} .= \"Making connection $action{what} permanent.\\n\";\n\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t$obj->{-interface}->rebuild_menu;\n\t\t\t}\n\t\t} elsif ($action{operation} eq 'drop') {\n\t\t\t$action{action} = 'NONE';\n\t\t\tmy $error = $obj->{-dbi}->drop_connection($action{what});\n\t\t\tif ($error == -1) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"Connection with name $action{what} not exists.\\n\";\n\t\t\t} elsif (not $error) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"Connection $action{what} dropped.\\n\";\n\t\t\t\tif ($action{permanent}) {\n\t\t\t\t\t$error = $obj->{-dbi}->destroy_connection($action{what});\n\t\t\t\t\tif ($error == -2) {\n\t\t\t\t\t\t$action{output} .= \"Can't destroy connection $action{what}.\\n\";\n\t\t\t\t\t} elsif (not $error) {\n\t\t\t\t\t\t$action{output} .= \"Destroying permanent connection $action{what}.\\n\";\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t$obj->{-interface}->rebuild_menu;\n\t\t\t}\n\t\t}\n\n\t\tmy $db = '';\n\t\t$db = '<'.$obj->{-dbi}->current.'>' if $obj->{-dbi}->current;\n\t\t$obj->{-interface}->prompt($obj->{prompt_num},$db);\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Connections.pm",
+      "package" : "DBIx::dbMan::Extension::Connections"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'COMMAND' and not $action{gui_tested}\n\t\t\tand $obj->{-mempool}->get('gui')) {\n\t\t++$action{gui};\n\t\tdelete $action{processed};\n\t} else {\n\t\t$action{processed} = 1;\n\t}\n\n\t++$action{gui_tested};\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/GUI.pm",
+      "package" : "DBIx::dbMan::Extension::GUI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'AUTO_SQL') {\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = '';\n\t\tmy $current = $obj->{-dbi}->current;\n\t\t$obj->{-dbi}->set_current($action{connection});\t\t\n\t\tmy $asql = $obj->{-dbi}->autosql();\n\t\tmy $silent = $obj->{-dbi}->silent_autosql() || 0;\n\t\tif (defined $asql) {\n\t\t\tif (not ref $asql and $asql eq '-1') {\n\t\t\t\t$action{output} = \"No current connection.\";\n\t\t\t} else {\n\t\t\t\t$asql = [ $asql ] unless ref $asql;\n\t\t\t\tif (@$asql) {\n\t\t\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'COMMAND', cmd => 'use %save', output_quiet => 1 });\n\t\t\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'COMMAND', cmd => \"use $action{connection}\", output_quiet => $silent });\n\t\t\t\t\tfor (@$asql) {\n\t\t\t\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'COMMAND', cmd => $_, output_quiet => $silent });\n\t\t\t\t\t}\n\t\t\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'COMMAND', cmd => 'use %load', output_quiet => 1 });\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t$obj->{-dbi}->set_current($current);\t\t\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/AutoSQL.pm",
+      "package" : "DBIx::dbMan::Extension::AutoSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'OUTPUT' and $action{output_info}) {\n\t\t$action{output} .= $action{output_info};\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/ClipboardInfo.pm",
+      "package" : "DBIx::dbMan::Extension::ClipboardInfo"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'DESCRIBE' and $obj->{-dbi}->driver eq 'Pg' and not $action{oper}) {\n\t\t$action{action} = 'NONE';\n\t\tunless ($obj->{-dbi}->current) {\n\t\t\t$obj->{-interface}->error(\"No current connection selected.\");\n\t\t\treturn %action;\n\t\t}\t\n\n\t\tmy $table = new Text::FormatTable '| r | l | l | r | l | l | l | l |';\n\t\t$table->rule;\n\t\t$table->head('ORDER','COLUMN','TYPE','SIZE','ALIGN','BY VAL','NULLABLE','DEFAULT');\n\t\t$table->rule;\n\t\tmy $d = $obj->{-dbi}->selectall_arrayref(\n\t\t\tq!SELECT a.attnum, a.attname, t.typname, a.attlen, a.attalign, \n\t\t\t         a.attbyval, a.attnotnull, a.atthasdef \n\t\t          FROM pg_class c, pg_attribute a, pg_type t \n\t\t\t  WHERE c.relname = ? AND a.attnum > 0 AND\n\t\t\t\ta.attrelid = c.oid AND a.atttypid = t.oid\n    \t\t\t  ORDER BY attnum!,{},$action{what});\n\t\tif (defined $d and @$d) {\n\t\t\tfor (@$d) { $table->row($_->[0],$_->[1],$_->[2],\n\t\t\t\t($_->[3]>0)?$_->[3]:'',$_->[4],$_->[5]?'yes':'no',\n\t\t\t\t$_->[6]?'no':'yes',$_->[7]?'yes':'no'); }\n\t\t} else {\n\t\t\t$obj->{-interface}->error(\"Table $action{what} not found.\");\n\t\t\treturn %action;\n\t\t}\n\t\t$table->rule;\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/DescribePg.pm",
+      "package" : "DBIx::dbMan::Extension::DescribePg"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+ALLOW\\s+SYSTEM\\s+TABLES\\s+\\S*$/i;\n\treturn qw/TABLES/ if $line =~ /^\\s*SET\\s+ALLOW\\s+SYSTEM\\s+\\S*$/i;\n\treturn qw/SYSTEM/ if $line =~ /^\\s*SET\\s+ALLOW\\s+\\S*$/i;\n\treturn qw/ALLOW/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetAllowSystemTables.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetAllowSystemTables"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'GUI') {\n\t\tif ($action{operation} eq 'load_extension') {\n\t\t\tif ($obj->{-interface}->can('is_curses')\n\t\t\t\tand $obj->{-interface}->is_curses()) {\n\t\t\t\t$action{action} = 'NONE';\n\n\t\t\t\tif (my $val = $obj->{-interface}->ask_value(\n\t\t\t\t\t-title => 'Load extension', -button => 'Load',\n\t\t\t\t\t-question => 'Input name of extension')) {\n\t\t\t\t\t$action{action} = 'EXTENSION';\n\t\t\t\t\t$action{operation} = 'load';\n\t\t\t\t\t$action{what} = $val;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/GuiLoadExtension.pm",
+      "package" : "DBIx::dbMan::Extension::GuiLoadExtension"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/SCREEN/ if $line =~ /^\\s*CLEAR\\s+\\S*$/i;\n\treturn qw/CLEAR/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdClear.pm",
+      "package" : "DBIx::dbMan::Extension::CmdClear"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif (exists $action{old_output_format}) {\n\t\t$obj->{-mempool}->set('output_format',$action{old_output_format});\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Format.pm",
+      "package" : "DBIx::dbMan::Extension::Format"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'CSV_IN') {\n\t\t$action{action} = 'NONE';\n\t\tmy $csv = new Text::CSV_XS { quote_char => $action{opt_quote},\n\t\t\teol => $action{opt_eol}, binary => 1,\n\t\t\tsep_char => $action{opt_separator} };\n\n\t\tmy $file = new FileHandle \"<$action{file}\";\n\t\tunless (defined $file) {\n\t\t\t$obj->{-interface}->error(\"Can't load input CSV file $action{file}.\");\n\t\t\treturn %action;\n\t\t}\n\t\tlocal $/ = $action{opt_eol};\n\t\tmy $now_head = 1;\n\t\twhile (<$file>) {\n\t\t\tchomp;\n\t\t\tif ($csv->parse($_)) {\n\t\t\t\tmy @f = $csv->fields();\n\t\t\t\tif ($now_head and $action{opt_headings} == 1) {\n\t\t\t\t\t$now_head = 0;  next;\n\t\t\t\t}\n\t\t\t\t$now_head = 0;\n\t\t\t\tmy $newaction = { action => 'SQL', sql => $action{sql}, type => 'do', placeholders => \\@f };\n\t\t\t\t$obj->{-interface}->add_to_actionlist($newaction);\n\t\t\t}\n\t\t}\n\t\t$file->close();\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/InputCSV.pm",
+      "package" : "DBIx::dbMan::Extension::InputCSV"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'COMMAND') {\n\t\treturn %action if $action{cmd} =~ s/^\\s+//;\n\t\treturn %action if $action{cmd} =~ s/\\s+$//;\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/TrimCmd.pm",
+      "package" : "DBIx::dbMan::Extension::TrimCmd"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'KEYS') {\n\t\tif ($action{operation} eq 'clear') {\n\t\t\t$obj->clear_keys;\n\t\t\tmy $add = '';\n\t\t\t$add = 'permanently ' if ($action{permanent} and unlink $obj->keysfile);\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = \"Key bindings $add\".\"cleared.\\n\";\n\t\t} elsif ($action{operation} eq 'reload') {\n\t\t\t$obj->load_keys;\n\t\t\tmy $count = @{$obj->{-mempool}->get('keys')};\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = \"Key bindings reloaded ($count binding\".($count == 1?'':'s').\").\\n\";\n\t\t} elsif ($action{operation} eq 'show') {\n\t\t\tmy @list = @{$obj->{-mempool}->get('keys')};\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\tunless (@list) {\n\t\t\t\t$action{output} = \"No key bindings yet.\\n\";\n\t\t\t} else {\n\t\t\t\tmy $table = new Text::FormatTable '| l | l |';\n\t\t\t\t$table->rule;\n\t\t\t\t$table->head('KEY','TEXT');\n\t\t\t\t$table->rule;\n\t\t\t\tfor my $def (@list) {\n\t\t\t\t\t$table->row($def->{key},$def->{text});\n\t\t\t\t}\n\t\t\t\t$table->rule;\n\t\t\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t\t\t}\n\t\t} elsif ($action{operation} eq 'define') {\n\t\t\t$obj->{-interface}->print_prompt(\"Please press selected key.\");\n\t\t\t$action{key} = $obj->{-interface}->get_key();\n\t\t\t$obj->{-interface}->print(\"Pressed \".$action{key}.\"\\n\");\n\n\t\t\t$obj->{-interface}->bind_key($action{key},$action{text});\n\t\t\tmy @keys = @{$obj->{-mempool}->get('keys')};\n\t\t\tmy @newkeys = ();\n\t\t\tfor my $key (@keys) {\n\t\t\t\tpush @newkeys,$key if $key->{key} ne $action{key};\n\t\t\t}\n\t\t\tpush @newkeys,{ key => $action{key}, text => $action{text} };\n\t\t\t$obj->{-mempool}->set(keys => \\@newkeys);\n\t\t\t\t\n\t\t\tmy @all = ();\n\t\t\tif (open F,$obj->keysfile) {\n\t\t\t\t@all = <F>;\n\t\t\t\tclose F;\n\t\t\t}\n\t\t\tif (open F,\">\".$obj->keysfile) {\n\t\t\t\tfor my $line (@all) {\n\t\t\t\t\tchomp $line;\n\t\t\t\t\tif ($line =~ /^(.*?)\\s+(.*)$/) {\n\t\t\t\t\t\tprint F \"$line\\n\" if $1 ne $action{key};\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tprint F \"$action{key} $action{text}\\n\";\n\t\t\t\tclose F;\n\t\t\t}\n\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = \"Key binding defined.\\n\";\n\t\t} elsif ($action{operation} eq 'undefine') {\n\t\t\t$obj->{-interface}->print_prompt(\"Please press selected key.\");\n\t\t\t$action{key} = $obj->{-interface}->get_key();\n\t\t\t$obj->{-interface}->print(\"Pressed \".$action{key}.\"\\n\");\n\n\t\t\t$obj->{-interface}->bind_key($action{key},'');\n\t\t\tmy @keys = @{$obj->{-mempool}->get('keys')};\n\t\t\tmy @newkeys = ();\n\t\t\tfor my $key (@keys) {\n\t\t\t\tpush @newkeys,$key if $key->{key} ne $action{key};\n\t\t\t}\n\t\t\t$obj->{-mempool}->set(keys => \\@newkeys);\n\n\t\t\tif (open F,$obj->keysfile) {\n\t\t\t\tmy @all = <F>;\n\t\t\t\tclose F;\n\t\t\t\tif (open F,\">\".$obj->keysfile) {\n\t\t\t\t\tfor my $line (@all) {\n\t\t\t\t\t\tchomp $line;\n\t\t\t\t\t\tif ($line =~ /^(.*?)\\s+(.*)$/) {\n\t\t\t\t\t\t\tprint F \"$line\\n\" if $1 ne $action{key};\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t\tclose F;\n\t\t\t\t}\n\t\t\t}\n\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = \"Key binding undefined.\\n\";\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/KeyBindings.pm",
+      "package" : "DBIx::dbMan::Extension::KeyBindings"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'EDIT_LINE') {\n\t\t$action{what} = $obj->{-interface}->current_line() if $action{get_what};\n\t\tmy $text = $action{what} || '';\n\t\tmy $editor = $ENV{DBMAN_EDITOR} || $ENV{EDITOR} || 'vi';\n\t\tmy $filename = \"/tmp/dbman.edit_line.$$.sql\";\n\t\tif (open F,\">$filename\") {\n\t\t\tprint F $text;\n\t\t\tclose F;\n\t\t\t$text = '';\n\t\t\tmy $modi = -M $filename;\n\t\t\t$obj->{-interface}->go_away();\n\t\t\tsystem \"$editor $filename\";\n\t\t\t$obj->{-interface}->come_back();\n\t\t\tif (-M $filename ne $modi and open F,$filename) {\n\t\t\t\t$text = join '',<F>;\n\t\t\t\tclose F;\n\t\t\t}\n\t\t\tunlink $filename if -e $filename;\n\t\t} else { $text = ''; }\n\t\t$action{action} = 'OUTPUT';\n\t\tif ($text) {\n\t\t\t$text =~ s/\\n$//gs;\n\t\t\t$text =~ s/^\\n//gs;\n\t\t\t$action{output} = \"\\nI execute next long command:\\n\".$text.\"\\n\";\n\t\t\t$text =~ s/--.*?\\n/ /gs;\n\t\t\t$text =~ s/\\n/ /gs;\n\t\t\t$text =~ s/\\t+/ /gs;\n\t\t\t$text =~ s/\\s{2,}/ /gs;\n\t\t\t$obj->{-interface}->history_add($text);\n\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'COMMAND', cmd => $text });\n\t\t} else {\n\t\t\t$action{output} = \"\\nI needn't execute entered long command.\\n\";\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/EditLine.pm",
+      "package" : "DBIx::dbMan::Extension::EditLine"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT') {\t\n                if ($obj->{-mempool}->get('output_format') eq 'cube') {\n\t\t\tmy %cube = ();\n\t\t\tmy %fields = ();\n\t\t\tfor (@{$action{result}}) {\n\t\t\t\tmy $x = ($_->[0] eq 'NULL') ? chr(255).'total' : $_->[0]; \n\t\t\t\tmy $y = ($_->[1] eq 'NULL') ? chr(255).'total' : $_->[1]; \n\t\t\t\tmy $value = $_->[2] || 0;\n\t\t\t\t++$fields{$x};\n\t\t\t\t$cube{$y}->{$x} = $value;\n\t\t\t}\n\n\t\t\t$action{result} = [];\n\t\t\tfor my $y (sort keys %cube) {\n\t\t\t\tmy @temporary = ($y eq chr(255).'total' ? 'Total' : $y);\n\t\t\t\tfor my $x (sort keys %fields) {\n\t\t\t\t\tpush @temporary,($cube{$y}->{$x} || 0);\n\t\t\t\t}\n\t\t\t\tpush @{$action{result}},\\@temporary;\n\t\t\t}\n\t\t\t$action{fieldnames} = [ 'y\\x', map { $_ eq chr(255).'total' ? 'Total' : $_ } sort keys %fields ] ;\n\n\t\t\tmy $table = new Text::FormatTable ('|'.( 'l|' x scalar @{$action{fieldnames}} ));\n\t\t\t$table->rule;\n\t\t\t$table->head(@{$action{fieldnames}});\n\t\t\t$table->rule;\n\t\t\tfor (@{$action{result}}) {\n\t\t\t\t$table->row(@$_);\n\t\t\t}\n\t\t\t$table->rule;\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputCube.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputCube"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'OUTPUT' and $action{output_pager} and $obj->{-interface}->can_pager()) {\n\t\topen F,\"|less\";\n\t\tprint F $action{output};\n\t\tclose F;\n\t\t$action{action} = 'NONE';\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/OutputPager.pm",
+      "package" : "DBIx::dbMan::Extension::OutputPager"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/PERMANENT/ if $line =~ /^\\s*(CLEAR|ERASE)\\s+MACROS\\s+\\S*$/i;\n\treturn qw/MACROS/ if $line =~ /^\\s*(SHOW|CLEAR|ERASE|RELOAD)\\s+\\S*$/i;\n\treturn qw/MACRO/ if $line =~ /^\\s*(UN)?DEF(INE)?\\s+\\S*$/i;\n\treturn qw/SHOW CLEAR RELOAD DEFINE UNDEFINE/ if $line =~ /^\\s*[A-Z]*$/i;\n\n\tif ($line =~ /^\\s*(UN)?DEF(INE)?(\\s+MACRO)?\\s+.*$/i) {\n\t\tmy @macros = @{$obj->{-mempool}->get('macros')};\n\t\treturn () unless @macros;\n\n\t\tmy @names = ();\n\t\tfor (@macros) {\n\t\t\ts#^s/##;\n\t\t\ts#/([ige])?$##;\n\t\t\ts#^(.+)(?!\\\\)/.*$#$1#;\n\t\t\tpush @names,$_ if $_;\n\t\t}\n\n\t\tmy @result = ();\n\t\tfor my $name (@names) {\n\t\t\t$name =~ s/\\\\s[+*]?/ /g;\n\t\t\t$name =~ s/^\\^//;\n\t\t\t$name =~ s/\\$$//;\n\t\t\tmy @words = ();\n\t\t\tfor (split /\\s+/,$name) {\n\t\t\t\tif (/^[-a-z0-9_\\\\]+$/i) {\n\t\t\t\t\tpush @words,$_;\n\t\t\t\t} else {\n\t\t\t\t\tlast;\n\t\t\t\t}\n\t\t\t}\n\t\t\tif (@words) {\n\t\t\t\tif ($line =~ /^\\s*(UN)?DEF(INE)?(\\s+MACRO)?\\s+\\S*$/i) {\n\t\t\t\t\tpush @result,$words[0];\n\t\t\t\t} else {\n\t\t\t\t\tmy $saved = pop @words;\n\t\t\t\t\twhile (@words) {\n\t\t\t\t\t\t$name = '$line =~ /^\\s*(UN)?DEF(INE)?(\\s+MACRO)?\\s+'.join('\\\\s+',@words).'\\s+\\S*$/i';\n\t\t\t\t\t\tpush @result,$saved if eval $name;\n\t\t\t\t\t\t$saved = pop @words;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\treturn @result;\n\t}\n\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdMacros.pm",
+      "package" : "DBIx::dbMan::Extension::CmdMacros"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn () unless $obj->{-dbi}->current;\n\treturn ('tc','tr','ta') if $line =~ /^\\s*\\\\[A-Z]*$/i and $obj->{-dbi}->in_transaction;\n\treturn ('tb') if $line =~ /^\\s*\\\\[A-Z]*$/i and not $obj->{-dbi}->in_transaction;\n\treturn ('\\tc','\\tr','\\ta') if $line =~ /^\\s*$/ and $obj->{-dbi}->in_transaction;\n\treturn ('\\tb') if $line =~ /^\\s*$/ and not $obj->{-dbi}->in_transaction;\n\treturn qw/TRANSACTION WORK/ if $line =~ /^\\s*BEGIN\\s+\\S*$/i and not $obj->{-dbi}->in_transaction;\n\treturn qw/TRANSACTION/ if $line =~ /^\\s*AUTO\\s+COMMIT\\s+\\S*$/i and $obj->{-dbi}->in_transaction;\n\treturn qw/TRANSACTION COMMIT/ if $line =~ /^\\s*AUTO\\s+\\S*$/i and $obj->{-dbi}->in_transaction;\n\treturn qw/TRANSACTION WORK/ if $line =~ /^\\s*(END|COMMIT|ROLLBACK)\\s+\\S*$/i and $obj->{-dbi}->in_transaction;\n\treturn qw/BEGIN/ if $line =~ /^\\s*[A-Z]*$/i and not $obj->{-dbi}->in_transaction;\n\treturn qw/END AUTO COMMIT ROLLBACK/ if $line =~ /^\\s*[A-Z]*$/i and $obj->{-dbi}->in_transaction;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdTransaction.pm",
+      "package" : "DBIx::dbMan::Extension::CmdTransaction"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\t$action{action} = 'NONE' if $action{action} eq 'OUTPUT' && $action{output_quiet};\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/OutputQuiet.pm",
+      "package" : "DBIx::dbMan::Extension::OutputQuiet"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'OUTPUT' and $action{output_device}) {\n\t\t$action{output_device} = \">>$action{output_device}\" if $action{output_device} !~ /^[|>]./;\n\t\tif (open F,$action{output_device}) {\n\t\t\tprint F $action{output};\n\t\t\tclose F;\n\t\t\t$action{action} = 'NONE' unless $action{output_save_copy};\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/DeviceOutput.pm",
+      "package" : "DBIx::dbMan::Extension::DeviceOutput"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'COUNT' and $obj->{-dbi}->current) {\n\t\tif ($action{count_re}) {\n\t\t\tmy $sth = $obj->{-dbi}->table_info();\n\t\t\tmy $ret = $sth->fetchall_arrayref();\n\t\t\tstudy $action{count_re};\n\t\t\tmy @tab = ();\n\t\t\tif (defined $ret) {\n\t\t\t\tfor (@$ret) {\n\t\t\t\t\tpush @tab,$_->[2] if lc $_->[3] eq 'table' and \n\t\t\t\t\t\t$_->[2] =~ /$action{count_re}/i;\n                                }\n                        }\n\t\t\t$action{count_tables} = \\@tab;\n\t\t\tdelete $action{count_re};\n\t\t} \n\n\t\tunless (@{$action{count_tables}}) {\n\t\t\t$action{output_info} = $action{error_output};\n\t\t\t$action{action} = 'SQL_RESULT';\n\t\t\t$action{result} = [];\n\t\t\tfor my $table (sort keys %{$action{count_result}}) {\n\t\t\t\tpush @{$action{result}}, [ $table,\n\t\t\t\t\t$action{count_result}->{$table}{rows},\n\t\t\t\t\t$action{count_result}->{$table}{cols} ];\n\t\t\t}\n\t\t\t$action{fieldnames} = [ 'TABLE', 'LINES', 'FIELDS' ];\n\t\t\t$action{fieldtypes} = [ SQL_VARCHAR, SQL_INTEGER, SQL_INTEGER ];\n\t\t\t$action{output} = '';\n\t\t\tunless (@{$action{result}}) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{fieldnames} = [];\n\t\t\t\t$action{fieldtypes} = [];\n\t\t\t\t$action{sql} = '';\n\t\t\t\t$action{type} = '';\n\t\t\t}\n\t\t} else {\n\t\t\tmy $table = shift @{$action{count_tables}};\n\t\t\t$action{action} = 'SQL';\n\t\t\t$action{count_process} = 1;\n\t\t\t$action{sql} = 'SELECT COUNT(*) pocet FROM '.$table;\n\t\t\t$action{type} = 'select';\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CountPre.pm",
+      "package" : "DBIx::dbMan::Extension::CountPre"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT' and $obj->{-mempool}->get('output_format') ne 'plain' and $obj->{-mempool}->get('output_format') ne 'insert') {\n\t\tfor my $outer (@{$action{result}}) {\n\t\t\tfor (@$outer) {\n\t\t\t\t$_ = 'NULL' unless defined;\n\t\t\t}\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputNULL.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputNULL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'COMMAND') {\n\t\tmy @macros = @{$obj->{-mempool}->get('macros')};\n\t\tif (@macros) {\n\t\t\tmy $cmd = $action{cmd};\n\t\t\tunless ($cmd =~ /^undef(ine)?(\\s+macro)?\\s+/i) {\n\t\t\t\t++$action{macro_was}->{$cmd};\n\t\t\t\tmy $changes = 0;\n\t\t\t\tfor my $macro (@macros) {\n\t\t\t\t\tmy $code = \"++\\$changes if \\$cmd =~ $macro;\";\n\t\t\t\t\teval $code;\n\t\t\t\t}\n\t\t\t\t$action{cmd} = $cmd;\n\t\t\t\tif ($changes) {\n\t\t\t\t\tif (exists $action{macro_was}->{$cmd}) {\n\t\t\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t\t\t$action{output} = \"Deep recursion in macro language detected.\\n\";\n\t\t\t\t\t} else {\n\t\t\t\t\t\tdelete $action{processed};\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SimpleMacros.pm",
+      "package" : "DBIx::dbMan::Extension::SimpleMacros"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn () unless $obj->{-dbi}->current;\n\treturn $obj->restart_complete($text,$1,$start-(length($line)-length($1))) if $line =~ /^\\s*\\\\csvin(?:\\[.*?\\])?\\s*\\(.+?\\)\\s+(.*)$/i;\n\treturn $obj->{-interface}->filenames_complete($text,$line,$start) if $line =~ /^\\s*\\\\csvin(\\[.*?\\])?\\s*\\(\\S*$/i;\n\treturn ('\\csvin') if $line =~ /^\\s*$/i;\n\treturn ('csvin(') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdInputCSV.pm",
+      "package" : "DBIx::dbMan::Extension::CmdInputCSV"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+EDIT\\s+OBJECT\\s+ERRORS\\s+\\S*$/i;\n\treturn qw/ERRORS/ if $line =~ /^\\s*SET\\s+EDIT\\s+OBJECT\\s+\\S*$/i;\n\treturn qw/OBJECT/ if $line =~ /^\\s*SET\\s+EDIT\\s+\\S*$/i;\n\treturn qw/EDIT/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i and not $obj->{-dbi}->current;\n\treturn qw/SET EDIT/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdEditObjects.pm",
+      "package" : "DBIx::dbMan::Extension::CmdEditObjects"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'DESCRIBE' and $action{oper} eq 'complete' and $obj->{-dbi}->driver eq 'Oracle') {\n\t\t$action{action} = 'NONE';\n\t\tunless ($obj->{-dbi}->current) {\n\t\t\t$obj->{-interface}->error(\"No current connection selected.\");\n\t\t\treturn %action;\n\t\t}\t\n\t\tmy $sth = $obj->{-dbi}->prepare(q!SELECT object_name FROM user_objects WHERE object_type IN ('TABLE','VIEW')!);\n\t\t$sth->execute();\n\t\tmy $ret = $sth->fetchall_arrayref();\n\t\tmy @all = ();\n\t\t@all = map { $_->[0] } @$ret if defined $ret;\n\t\t$sth->finish;\n\t\t$action{list} = \\@all;\n\t\t$action{processed} = 1;\n\t\treturn %action;\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/DescribeCompleteOracle.pm",
+      "package" : "DBIx::dbMan::Extension::DescribeCompleteOracle"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT') {\n\t\tif ($obj->{-mempool}->get('output_format') eq 'html') {\n\t\t\tmy $output = \"<TABLE>\\n<TR>\";\n\t\t\t$output .= join '',map { \"<TH>$_</TH>\" } @{$action{fieldnames}};\n\t\t\t$output .= \"</TR>\\n\";\n\t\t\tfor (@{$action{result}}) {\n\t\t\t\t$output .= \"<TR>\".(join '',map { \"<TD>$_</TD>\" } @$_);\n\t\t\t\t$output .= \"</TR>\\n\";\n\t\t\t}\n\t\t\t$output .= \"</TABLE>\\n\";\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $output;\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputHTML.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputHTML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/q/ if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn qw/QUIT EXIT LOGOUT \\q/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Quit.pm",
+      "package" : "DBIx::dbMan::Extension::Quit"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT') {\n\t\tif ($obj->{-mempool}->get('output_format') =~ /^(oldtable|sqlplus|records)$/) {\n\t\t\tmy @widths = ();\n\t\t\tfor ($action{fieldnames},@{$action{result}}) {\n\t\t\t\tmy $i = 0;\n\t\t\t\tfor (@$_) {\n\t\t\t\t\t$widths[$i] = length($_) if $widths[$i] < length($_);\n\t\t\t\t\t++$i;\n\t\t\t\t}\n\t\t\t}\n\t\t\tmy $i = 0;\n\t\t\tmy $table = '';\n\t\t\topen F,\">/tmp/dbman.$$.showtable\";\n\t\t\t*OLD = *STDOUT;\n\t\t\t*STDOUT = *F;\n\t\t\tif ($obj->{-mempool}->get('output_format') eq 'sqlplus') {\n\t\t\t\tShowSimpleTable({\n\t\t\t\t\ttitles => $action{fieldnames},\n\t\t\t\t\ttypes => [ map { 'text' } @{$action{fieldnames}} ],\n\t\t\t\t\twidths => \\@widths,\n\t\t\t\t\trow_sub => sub { \n\t\t\t\t\t\tif (shift) { $i = 0;  return 1; }\n\t\t\t\t\t\treturn () unless defined $action{result}->[$i];\n\t\t\t\t\t\treturn @{$action{result}->[$i++]};\n\t\t\t\t\t}});\n\t\t\t} elsif ($obj->{-mempool}->get('output_format') eq 'records') {\n\t\t\t\tShowListTable({\n\t\t\t\t\ttitles => $action{fieldnames},\n\t\t\t\t\ttypes => [ map { 'text' } @{$action{fieldnames}} ],\n\t\t\t\t\twidths => \\@widths,\n\t\t\t\t\trow_sub => sub { \n\t\t\t\t\t\tif (shift) { $i = 0;  return 1; }\n\t\t\t\t\t\treturn () unless defined $action{result}->[$i];\n\t\t\t\t\t\treturn @{$action{result}->[$i++]};\n\t\t\t\t\t}});\n\t\t\t} else {\n\t\t\t\tShowBoxTable({\n\t\t\t\t\ttitles => $action{fieldnames},\n\t\t\t\t\ttypes => [ map { 'text' } @{$action{fieldnames}} ],\n\t\t\t\t\twidths => \\@widths,\n\t\t\t\t\trow_sub => sub { \n\t\t\t\t\t\tif (shift) { $i = 0;  return 1; }\n\t\t\t\t\t\treturn () unless defined $action{result}->[$i];\n\t\t\t\t\t\treturn @{$action{result}->[$i++]};\n\t\t\t\t\t}});\n\t\t\t};\n\t\t\t*STDOUT = *OLD;\n\t\t\tclose F;\n\t\t\tif (open F,\"/tmp/dbman.$$.showtable\") {\n\t\t\t\t$table = join '',<F>;\n\t\t\t\tclose F;\n\t\t\t}\n\t\t\tunlink \"/tmp/dbman.$$.showtable\" if -f \"/tmp/dbman.$$.showtable\";\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $table;\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputOldTable.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputOldTable"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+HORIZ(ONTAL)?(\\s+SCROLLBAR)?\\s+\\S*$/i;\n\treturn qw/SCROLLBAR/ if $line =~ /^\\s*SET\\s+HORIZ(ONTAL)?\\s+\\S*$/i;\n\treturn qw/HORIZONTAL/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetHorizScrollBar.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetHorizScrollBar"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+GUI\\s+\\S*$/i;\n\treturn qw/GUI/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetGUI.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetGUI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'EXTENSION') {\n\t\tif ($action{operation} eq 'show') {\n\t\t\tmy $table = new Text::FormatTable '| r | l | l |';\n\t\t\t$table->rule;\n\t\t\t$table->head('PRI','NAME','IDENTIFICATION');\n\t\t\t$table->rule;\n\t\t\tmy $sort_crit = $action{sort};\n\t\t\tfor my $ext (sort { \n\t\t\t\t\tif ($sort_crit eq 'id') {\n\t\t\t\t\t\t$a->IDENTIFICATION \n\t\t\t\t\t\t\tcmp $b->IDENTIFICATION;\n\t\t\t\t\t} elsif ($sort_crit eq 'name') {\n\t\t\t\t\t\tmy $na = $a;  my $nb = $b;\n\t\t\t\t\t\t$na =~ s/=.*$//;  \n\t\t\t\t\t\t$na =~ s/^.*:://;\n\t\t\t\t\t\t$nb =~ s/=.*$//;\n\t\t\t\t\t\t$nb =~ s/^.*:://;\n\t\t\t\t\t\t$na cmp $nb;\n\t\t\t\t\t} else { \n\t\t\t\t\t\t$b->preference \n\t\t\t\t\t\t\t<=> $a->preference;\n\t\t\t\t\t}\n\t\t\t\t} @{$obj->{-core}->{extensions}}) {\n\t\t\t\tmy $name = $ext;\n\t\t\t\t$name =~ s/=.*$//;  $name =~ s/^.*:://;\n\t\t\t\tmy $id = $ext->IDENTIFICATION;\n\t\t\t\t$table->row($ext->preference,$name,$id);\n\t\t\t}\n\t\t\t$table->rule;\n\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t\t} elsif ($action{operation} =~ /^(un|re)load$/) {\n\t\t\t$action{action} = 'NONE';\n\t\t\tmy $i = 0;  my $unload = undef;  my $name = '';\n\t\t\tfor my $ext (@{$obj->{-core}->{extensions}}) {\n\t\t\t\t$name = $ext;  $name =~ s/=.*$//;  $name =~ s/^.*:://;\n\t\t\t\tif (lc $name eq lc $action{what}) { $unload = $i;  last; }\n\t\t\t\t++$i;\n\t\t\t}\n\t\t\tif (defined $unload) {\n\t\t\t\t$obj->{-core}->{extensions}->[$unload]->done();\n\t\t\t\tundef $obj->{-core}->{extensions}->[$unload];\n\t\t\t\tsplice @{$obj->{-core}->{extensions}},$unload,1;\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"Extension $name unloaded.\\n\" if $action{operation} eq 'unload';\n\t\t\t\t$obj->{-interface}->rebuild_menu();\n\t\t\t} else {\n\t\t\t\t$obj->{-interface}->error(\"Extension $action{what} not exists.\");\n\t\t\t\treturn %action;\n\t\t\t}\n\t\t}\n\t\tif ($action{operation} =~ /^(re)?load$/) {\n\t\t\t$action{action} = 'NONE';\n\t\t\tmy %loaded = ();\n\t\t\tfor my $ext (@{$obj->{-core}->{extensions}}) {\n\t\t\t\tmy $id = $ext->IDENTIFICATION;\n\t\t\t\t$id =~ s/-[^-]+$//;  ++$loaded{$id};\n\t\t\t}\n\n\t\t\tmy $name = $action{what};\n\t\t\tmy %candidates = ();\n\t\t\tfor my $dir ($obj->{-core}->extensions_directories) {\n\t\t\t\topendir D,$dir;\n\t\t\t\tfor (grep /\\.pm$/,readdir D) { \n\t\t\t\t\tnext unless lc $_ eq lc $action{what}.\".pm\";\n\t\t\t\t\teval { require \"$dir/$_\"; };\n\t\t\t\t\tnext if $@;\n\t\t\t\t\tmy $oldslash = $/;\n\t\t\t\t\tundef $/;\n\t\t\t\t\tif (open F,\"$dir/$_\") {\n\t\t\t\t\t\teval <F>;\n\t\t\t\t\t\tclose F;\n\t\t\t\t\t}\n\t\t\t\t\tdelete $INC{\"$dir/$_.pm\"};\n\t\t\t\t\teval { require \"$dir/$_\"; };\n\t\t\t\t\t$/ = $oldslash;\n\t\t\t\t\tnext if $@;\n\t\t\t\t\ts/\\.pm$//;\n\t\t\t\t\tmy $candidate = \"DBIx::dbMan::Extension::\".$_;\n\t\t\t\t\t$name = $_;\n\t\t\t\t\tmy ($low,$high) = ('','');\n\t\t\t\t\teval { ($low,$high) = $candidate->for_version(); };\n\t\t\t\t\tnext if $low and $DBIx::dbMan::VERSION < $low;\n\t\t\t\t\tnext if $high and $DBIx::dbMan::VERSION > $high;\n\t\t\t\t\tmy $id = '';\n\t\t\t\t\teval { $id = $candidate->IDENTIFICATION(); };\n\t\t\t\t\tnext unless $id or $@;\n\t\t\t\t\tmy ($ident,$ver) = ($id =~ /^(.*)-(.*)$/);\n\t\t\t\t\tnext if $ident eq '000001-000001';\t\n\t\t\t\t\tif (exists $loaded{$ident}) {\n\t\t\t\t\t\t$obj->{-interface}->error(\"Extension $name already loaded.\");\n\t\t\t\t\t\treturn %action;\n\t\t\t\t\t}\n\t\t\t\t\tdelete $INC{\"$dir/$_.pm\"};\n\t\t\t\t\tif (exists $candidates{$ident}) {\n\t\t\t\t\t\tnext if $candidates{$ident}->{-ver} > $ver;\n\t\t\t\t\t}\n\t\t\t\t\t$candidates{$ident} = \n\t\t\t\t\t\t{ -file => \"$dir/$_.pm\", -candidate => $candidate, -ver => $ver }; \n\t\t\t\t};\n\t\t\t\tclosedir D;\n\t\t\t}\n\t\t\tif (keys %candidates) { \n\t\t\t\tmy %extensions = ();\n\t\t\t\tfor my $candidate (keys %candidates) {\n\t\t\t\t\tmy $ext = undef;\n\t\t\t\t\teval {\n\t\t\t\t\t\trequire $candidates{$candidate}->{-file};\n\t\t\t\t\t\t$ext = $candidates{$candidate}->{-candidate}->new(\n\t\t\t\t\t\t\t-config => $obj->{-core}->{config}, \n\t\t\t\t\t\t\t-interface => $obj->{-core}->{interface},\n\t\t\t\t\t\t\t-dbi => $obj->{-core}->{dbi},\n\t\t\t\t\t\t\t-core => $obj->{-core},\n\t\t\t\t\t\t\t-mempool => $obj->{-core}->{mempool});\n\t\t\t\t\t\tdie unless $ext->load_ok();\n\t\t\t\t\t};\n\t\t\t\t\tif (defined $ext and not $@) {\n\t\t\t\t\t\tmy $preference = 0;\n\t\t\t\t\t\teval { $preference = $ext->preference(); };\n\t\t\t\t\t\t$ext->{'___sort_criteria___'} = $preference.'_'.$obj->{extension_iterator};\n\t\t\t\t\t\t++$ext->{'___need_init___'};\n\t\t\t\t\t\t$extensions{$preference.'_'.$obj->{-core}->{extension_iterator}} = $ext;\n\t\t\t\t\t\t++$obj->{-core}->{extension_iterator};\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tfor my $ext (@{$obj->{-core}->{extensions}}) {\n\t\t\t\t\tmy $sc = $ext->{___sort_criteria___};\n\t\t\t\t\t$extensions{$sc} = $ext;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\t$obj->{-core}->{extensions} = [];\n\t\t\t\tfor (sort { \n\t\t\t\t\t\tmy ($fa,$sa,$fb,$sb) = split /_/,($a.'_'.$b); \n\t\t\t\t\t\tif ($fa == $fb) { $sa <=> $sb; } else { $fb <=> $fa };\n\t\t\t\t\t} keys %extensions) {\n\t\t\t\t\tpush @{$obj->{-core}->{extensions}},$extensions{$_};\n\t\t\t\t\t$extensions{$_}->init() if $extensions{$_}->{'___need_init___'};\n\t\t\t\t\tdelete $extensions{$_}->{'___need_init___'};\n\t\t\t\t}\n\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"Extension $name $action{operation}ed successfully.\\n\";\n\t\t\t\t$obj->{-interface}->rebuild_menu();\n\t\t\t} else {\n\t\t\t\t$obj->{-interface}->error(\"Extension $action{what} not found.\");\n\t\t\t}\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Extensions.pm",
+      "package" : "DBIx::dbMan::Extension::Extensions"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdhelp {\n\tmy $obj = shift;\n\n\treturn [ 'EVAL <commands>' => 'Evaluate Perl commands',\n\t\t 'SYSTEM <command>' => 'Evaluate shell expression' ];\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdEval.pm",
+      "package" : "DBIx::dbMan::Extension::CmdEval"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_RESULT') {\n\t\tif ($action{type} eq 'select') {\n\t\t\t$action{action} = 'SQL_OUTPUT';\n\t\t\tunless ($obj->{-mempool}->get('output_format')) {\n\t\t\t\tmy @all_formats = $obj->{-mempool}->get_register('output_format');\n\t\t\t\t$obj->{-mempool}->set('output_format',$all_formats[0]) if @all_formats;\n\t\t\t}\n\t\t\tdelete $action{processed};\n\t\t} elsif ($action{type} eq 'do') {\n\t\t\tif ($action{result} > -1) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\tif ($action{result} ne '0E0') {\n\t\t\t\t\t$action{output} = \"Processed \".$action{result}.\" line\".(($action{result} == 1)?'':'s').\".\\n\" ;\n\t\t\t\t} else {\n\t\t\t\t\t$action{output} = \"Command processed.\\n\" ;\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\t$action{action} = 'NONE';\n\t\t\t}\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLShowResult.pm",
+      "package" : "DBIx::dbMan::Extension::SQLShowResult"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/HISTORY/ if $line =~ /^\\s*(SHOW|CLEAR)\\s+\\S*$/i;\n\treturn qw/SHOW CLEAR/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdHistory.pm",
+      "package" : "DBIx::dbMan::Extension::CmdHistory"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'EDIT' and $obj->{-dbi}->driver eq 'Oracle') {\n\t\tif ($action{testerror}) {\n\t\t\t$action{action} = 'NONE';\n\t\t\tmy $d = $obj->{-dbi}->selectall_arrayref(q!SELECT line, position, text FROM user_errors WHERE name = ? AND type = ? ORDER BY sequence!,{},$action{what},$action{type});\n\t\t\tif (defined $d and @$d) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = \"I detect some errors on object $action{what} (type $action{type}):\\n\";\n\t\t\t\tmy $tab = new Text::FormatTable '| r | r | l |';\n\t\t\t\t$tab->rule;\n\t\t\t\t$tab->head('ROW','COLUMN','ERROR');\n\t\t\t\t$tab->rule;\n\t\t\t\tfor (@$d) { $tab->row(@$_); }\n\t\t\t\t$tab->rule;\n\t\t\t\t$action{output} .= $tab->render($obj->{-interface}->render_size);\n\t\t\t}\n\t\t\treturn %action;\n\t\t}\n\t\tif ($action{type} =~ /^(FUNCTION|PROCEDURE|PACKAGE|PACKAGE BODY|TRIGGER|VIEW)$/) {\n\t\t\t$action{action} = 'NONE';\n\t\t\tmy $d;\n\t\t\tmy $lr = $obj->{-dbi}->longreadlen();\n\t\t\t$obj->{-dbi}->longreadlen(100000);\n\t\t\tmy $schema = '';\n\t\t\t$schema = uc $1 if $action{what} =~ s/^([^.]+)\\.//;\n\t\t\tmy $schema_add = '';\n\t\t\tmy @schema = ();\n\t\t\tif ($schema) {\n\t\t\t\t$schema_add = ' AND owner = ?';\n\t\t\t\tpush @schema,$schema;\n\t\t\t}\n\t\t\tmy $basetable = $schema?'all':'user';\n\t\t\tif ($action{type} eq 'TRIGGER') {\n\t\t\t\t$d = $obj->{-dbi}->selectall_arrayref(q!SELECT description,trigger_body FROM !.$basetable.q!_triggers WHERE trigger_name = ?!.$schema_add,{},$action{what},@schema);\n\t\t\t} elsif ($action{type} eq 'VIEW') {\n\t\t\t\t$d = $obj->{-dbi}->selectall_arrayref(q!SELECT text FROM !.$basetable.q!_views WHERE view_name = ?!.$schema_add,{},$action{what},@schema);\n\t\t\t} else {\n\t\t\t\t$d = $obj->{-dbi}->selectall_arrayref(q!SELECT text FROM !.$basetable.q!_source WHERE name = ? AND type = ?!.$schema_add.q! ORDER BY line!,{},$action{what},$action{type},@schema);\n\t\t\t}\n\t\t\t$action{what} = \"$schema.\".$action{what} if $schema;\n\t\t\t$obj->{-dbi}->longreadlen($lr);\n\t\t\tif (defined $d and @$d) {\n\t\t\t\tmy $text = \"CREATE OR REPLACE \";\n\t\t\t\tif ($action{type} eq 'TRIGGER') {\n\t\t\t\t\tmy $desc = $d->[0][0];\n\t\t\t\t\t$desc =~ s/\\n/ /gs;\n\t\t\t\t\t$text .= 'TRIGGER '.$desc.\"\\n\".$d->[0][1];\n\t\t\t\t} elsif ($action{type} eq 'VIEW') {\n\t\t\t\t\t$text .= 'VIEW '.$action{what}.\" AS\\n\".join '',map { $_->[0] } @$d;\n\t\t\t\t} else {\n\t\t\t\t\t$text .= join '',map { $_->[0] } @$d;\n\t\t\t\t}\n\t\t\t\tmy $nt = '';\n\t\t\t\tmy $started = 0;\n\t\t\t\tfor my $t (split /\\n/,$text) {\n\t\t\t\t\tnext if $t =~ /-- \\|dbMan\\| /;\n\t\t\t\t\t$t =~ s/\\s+$//;\n\t\t\t\t\tnext if not $started and $t =~ /^\\s*$/;\n\t\t\t\t\t++$started;\n\t\t\t\t\t$nt .= \"$t\\n\";\n\t\t\t\t}\n\t\t\t\t$text = $nt;\n\t\t\t\t$text =~ s/\\n+$//s;\n\t\t\t\t$text =~ s/\\s+$//s;\n\t\t\t\t$text .= \";\" if $text =~ /end$/;\n\t\t\t\t$text .= \"\\n\\n\";\n\n\t\t\t\tif ($obj->{-mempool}->get('edit_object_errors')) {\n\t\t\t\t\t$d = $obj->{-dbi}->selectall_arrayref(q!SELECT line, position, text FROM user_errors WHERE name = ? AND type = ? ORDER BY sequence!,{},$action{what},$action{type});\n\t\t\t\t\tif (defined $d and @$d) {\n\t\t\t\t\t\tmy $tab = new Text::FormatTable '| r | r | l |';\n\t\t\t\t\t\t$tab->rule;\n\t\t\t\t\t\t$tab->head('ROW','COLUMN','ERROR');\n\t\t\t\t\t\t$tab->rule;\n\t\t\t\t\t\tfor (@$d) { $tab->row(@$_); }\n\t\t\t\t\t\t$tab->rule;\n\t\t\t\t\t\t$text = \"-- |dbMan|  Errors in object $action{what} (type $action{type}):\\n\" . join(\"\\n\", map { \"-- |dbMan|  \".$_ } split /\\n/,$tab->render($obj->{-interface}->render_size)) . \"\\n-- |dbMan|  Note: Rows are numbered from line with CREATE OR REPLACE.\\n\\n\" . $text;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\tmy $editor = $ENV{DBMAN_EDITOR} || $ENV{EDITOR} || 'vi';\n\t\t\t\tmy $t = $action{type};  $t =~ s/ /_/g;\n\t\t\t\tmy $filename = \"/tmp/dbman.edit_object.$t.$action{name}.$$.plsql\";\n\t\t\t\tif (open F,\">$filename\") {\n\t\t\t\t\tprint F $text;\n\t\t\t\t\tclose F;\n\t\t\t\t\t$text = '';\n\t\t\t\t\tmy $modi = -M $filename;\n\t\t\t\t\t$obj->{-interface}->go_away();\n\t\t\t\t\tsystem \"$editor $filename\";\n\t\t\t\t\t$obj->{-interface}->come_back();\n\t\t\t\t\tif (-M $filename ne $modi and open F,$filename) {\n\t\t\t\t\t\t$text = join '',<F>;\n\t\t\t\t\t\tclose F;\n\t\t\t\t\t}\n\t\t\t\t\tunlink $filename if -e $filename;\n\t\t\t\t} else { $text = ''; }\n\t\t\t\tif ($text) {\n\t\t\t\t\tmy $started = 0;\n\t\t\t\t\tmy $nt = '';\n\t\t\t\t\tfor my $t (split /\\n/,$text) {\n\t\t\t\t\t\tnext if $t =~ /-- \\|dbMan\\| /;\n\t\t\t\t\t\t$t =~ s/\\s+$//;\n\t\t\t\t\t\tnext if not $started and $t =~ /^\\s*$/;\n\t\t\t\t\t\t++$started;\n\t\t\t\t\t\t$nt .= \"$t\\n\";\n\t\t\t\t\t}\n\t\t\t\t\t$text = $nt;\n\t\t\t\t\t$text =~ s/\\n+$//s;\n\t\t\t\t\t$text .= \"\\n\\n\";\n\n\t\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t\t$action{output} = \"I must save edited object into database.\\n\";\n\t\t\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'SQL', type => 'do', sql => $text, longreadlen => 100000});\n\t\t\t\t\t$obj->{-interface}->add_to_actionlist({ action => 'EDIT', what => $action{what}, type => $action{type}, testerror => 1 });\n\t\t\t\t} else {\n\t\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t\t$action{output} = \"I needn't save edited object into database.\\n\";\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = \"Editing of $action{type} isn't implemented yet.\\n\";\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/EditOracle.pm",
+      "package" : "DBIx::dbMan::Extension::EditOracle"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+LINE\\s+NUMBERING\\s+\\S*$/i;\n\treturn qw/NUMBERING/ if $line =~ /^\\s*SET\\s+LINE\\s+\\S*$/i;\n\treturn qw/LINE/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetLineNumbers.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetLineNumbers"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+SERVER\\s+OUTPUT\\s+\\S*$/i;\n\treturn qw/OUTPUT/ if $line =~ /^\\s*SET\\s+SERVER\\s+\\S*$/i;\n\treturn qw/SERVER/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetDBMS.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetDBMS"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT') {\n\t\tif ($obj->{-mempool}->get('output_format') eq 'insert') {\n\t\t\tmy $begin = 'INSERT INTO new_table ('.join(',',@{$action{fieldnames}}).') VALUES (';\n\t\t\tmy @types = @{$action{fieldtypes}};\n\t\t\tmy @litp = ();  my @lits = ();\n\t\t\tmy $output = 'CREATE TABLE new_table ('.join(',',map { my $temp = $obj->{-dbi}->type_info(shift @types); my %th = (defined $temp)?%$temp:();  my $cp = $th{CREATE_PARAMS};  $cp =~ s/max length|precision/$th{COLUMN_SIZE}/g; $cp =~ s/scale/$th{MINIMUM_SCALE}/g; push @litp,$th{LITERAL_PREFIX}||''; push @lits,$th{LITERAL_SUFFIX}||''; $_.' '.$th{TYPE_NAME}.($cp?\"($cp)\":'').($th{NULLABLE} == 1?'':' NOT NULL'); } @{$action{fieldnames}}).\");\\n\";\n\t\t\tfor (@{$action{result}}) {\n\t\t\t\tmy @lp = @litp;  my @ls = @lits;  \n\t\t\t\t$output .= $begin . join ',',map { my $lm = shift @lp;  my $rm = shift @ls;  defined($_)?\"$lm$_$rm\":\"NULL\" } @$_;\n\t\t\t\t$output .= \");\\n\";\n\t\t\t}\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $output;\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputInsert.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputInsert"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn ('\\e') if $line =~ /^\\s*$/i;\n\treturn ('e') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdEditLine.pm",
+      "package" : "DBIx::dbMan::Extension::CmdEditLine"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub done {\n\tmy $obj = shift;\n\t\n\t$obj->{-interface}->deregister_prompt($obj->{-prompt_num});\n\n\tfor (@{$obj->{-dbi}->list('active')}) {\n\t\tmy $name = $_->{name};\n\t\t$obj->{-dbi}->set_current($name);\t\t\n\t\tif ($obj->{-dbi}->in_transaction()) {\n\t\t\t$obj->{-dbi}->rollback;\n\t\t\t$obj->{-dbi}->trans_end;\n\t\t\t$obj->{-interface}->print(\"Transaction end with implicit rollback in connection $name.\\n\");\n\t\t}\n\t}\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Transaction.pm",
+      "package" : "DBIx::dbMan::Extension::Transaction"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'OUTPUT' and $action{type} eq 'select' and $action{sql} and $obj->{-mempool}->get('total_count') and defined $action{result}) {\n\t\tmy $num = scalar @{$action{result}};\n\t\tmy $cols = scalar @{$action{fieldnames}};\n\t\t$action{output} .= ($num==0?\"No\":\"Total $num\").\" line\".($num==1?\"\":\"s\").\" of output in $cols column\".($cols==1?\"\":\"s\").\".\\n\";\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/TotalCount.pm",
+      "package" : "DBIx::dbMan::Extension::TotalCount"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'GUI') {\n\t\tif ($action{operation} eq 'input_sql_file') {\n\t\t\tif ($obj->{-interface}->can('is_curses')\n\t\t\t\tand $obj->{-interface}->is_curses()) {\n\t\t\t\t$action{action} = 'NONE';\n\n\t\t\t\tif (my $val = $obj->{-interface}->{ui}->loadfilebrowser(\n\t\t\t\t\t-title => 'Execute SQL script', -path => getcwd(),\n\t\t\t\t\t-mask => [ [ '.', 'All files (*)' ],\n\t\t\t\t\t\t[ '\\.sql$', 'SQL scripts (*.sql)' ] ],\n\t\t\t\t\t-mask_selected => 1 )) {\n\t\t\t\t\t$action{action} = 'INPUT_FILE';\n\t\t\t\t\t$action{file} = $val;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/GuiInputFile.pm",
+      "package" : "DBIx::dbMan::Extension::GuiInputFile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT') {\n\t\tif ($obj->{-mempool}->get('output_format') eq 'plain') {\n\t\t\tmy $output = join ',',@{$action{fieldnames}};\n\t\t\t$output .= \"\\n\";\n\t\t\tmy @litp = ();  my @lits = ();\n                        for (@{$action{fieldtypes}}) {\n\t\t\t\tmy %th = %{$obj->{-dbi}->type_info($_)};\n\t\t\t\tpush @litp,$th{LITERAL_PREFIX}||'';\n\t\t\t\tpush @lits,$th{LITERAL_SUFFIX}||'';\n\t\t\t}\n\t\t\tfor (@{$action{result}}) {\n\t\t\t\tmy @lp = @litp;  my @ls = @lits;\n\t\t\t\t$output .= join ',',map { my $lm = shift @lp;  my $rm = shift @ls;  defined($_)?\"$lm$_$rm\":\"NULL\" } @$_;\n\t\t\t\t$output .= \"\\n\";\n\t\t\t}\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $output;\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputPlain.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputPlain"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+TOTAL\\s+COUNT\\s+\\S*$/i;\n\treturn qw/COUNT/ if $line =~ /^\\s*SET\\s+TOTAL\\s+\\S*$/i;\n\treturn qw/TOTAL/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetTotalCount.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetTotalCount"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/PERMANENT/ if $line =~ /^\\s*(CLEAR|ERASE)\\s+KEYS\\s+\\S*$/i;\n\treturn qw/FOR/ if $line =~ /^\\s*DEFINE\\s+KEY\\s+\\S*$/i;\n\treturn qw/KEYS/ if $line =~ /^\\s*(SHOW|CLEAR|ERASE|RELOAD)\\s+\\S*$/i;\n\treturn qw/KEY/ if $line =~ /^\\s*(UN)?DEFINE\\s+\\S*$/i;\n\treturn qw/SHOW CLEAR RELOAD DEFINE UNDEFINE/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdKeyBindings.pm",
+      "package" : "DBIx::dbMan::Extension::CmdKeyBindings"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->restart_complete($text,$1,$start-(length($line)-length($1))) if $line =~ /^\\s*\\\\sc?\\s*\\(.+?\\)\\s+(.*)$/i;\n\treturn $obj->{-interface}->filenames_complete($text,$line,$start) if $line =~ /^\\s*\\\\sc?\\s*\\(\\S*$/i;\n\treturn ('\\s','\\sc') if $line =~ /^\\s*$/i;\n\treturn ('s(','sc(') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdOutputToFile.pm",
+      "package" : "DBIx::dbMan::Extension::CmdOutputToFile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->connectionlist(lc $1) if $line =~ /^\\s*(REOPEN|OPEN|CLOSE|USE|DROP\\s+(PERMANENT\\s+)?CONNECTION)\\s+\\S*$/i;\n\treturn qw/AUTOOPEN/ if $line =~ /^\\s*CREATE\\s+(PERMANENT\\s+)?CONNECTION\\s+\\S+\\s+AS\\s+\\S+:\\s*\\S*\\s+LOGIN\\s+\\S+\\s+(NO)?PASSWORD\\s+\\S+\\s+\\S*$/i;\n\treturn qw/PASSWORD NOPASSWORD/ if $line =~ /^\\s*CREATE\\s+(PERMANENT\\s+)?CONNECTION\\s+\\S+\\s+AS\\s+\\S+:\\s*\\S*\\s+LOGIN\\s+\\S+\\s+\\S*$/i;\n\treturn $obj->driverlist if $line =~ /^\\s*CREATE\\s+(PERMANENT\\s+)?CONNECTION\\s+\\S+\\s+AS\\s+\\S*$/i;\n\treturn qw/LOGIN/ if $line =~ /^\\s*CREATE\\s+(PERMANENT\\s+)?CONNECTION\\s+\\S+\\s+AS\\s+\\S+:\\s*\\S*\\s+\\S*$/i;\n\treturn qw/AS/ if $line =~ /^\\s*CREATE\\s+(PERMANENT\\s+)?CONNECTION\\s+\\S+\\s+\\S*$/i;\n\treturn qw/CONNECTION/ if $line =~ /^\\s*(CREATE|DROP)\\s+PERMANENT\\s+\\S*$/i;\n\treturn qw/PERMANENT CONNECTION/ if $line =~ /^\\s*(CREATE|DROP)\\s+\\S*$/i;\n\treturn qw/CONNECTIONS/ if $line =~ /^\\s*SHOW\\s+(ACTIVE|ALL)\\s+\\S*$/i;\n\treturn qw/ACTIVE ALL CONNECTIONS/ if $line =~ /^\\s*SHOW\\s+\\S*$/i;\n\treturn qw/REOPEN OPEN CLOSE USE SHOW CREATE DROP/ if $line =~ /^\\s*[A-Z]*$/i and $obj->connectionlist('close');\n\treturn qw/OPEN SHOW CREATE DROP/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdConnections.pm",
+      "package" : "DBIx::dbMan::Extension::CmdConnections"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'OUTPUT') {\n\t\t$obj->{-interface}->print($action{output});\n\t\t$action{action} = 'NONE';\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Output.pm",
+      "package" : "DBIx::dbMan::Extension::Output"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'LINE_COMPLETE') {\n\t\t$action{list} = [];\n\t\tmy %maybe = ();\n\t\tfor my $ext (@{$obj->{-core}->{extensions}}) {\n\t\t\tif ($ext->can('cmdcomplete')) {\n\t\t\t\tstudy \"\\Q$action{text}\";\n\t\t\t\tfor ($ext->cmdcomplete($action{text},$action{line},$action{start})) {\n\t\t\t\t\t++$maybe{$_} if /^\\Q$action{text}/i;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t$action{list} = [ sort keys %maybe ];\n\t\t$action{action} = 'NONE';\n\t}\n\t$action{processed} = 1;\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/LineComplete.pm",
+      "package" : "DBIx::dbMan::Extension::LineComplete"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'INPUT_FILE') {\n\t\t$action{action} = 'NONE';\n\t\tunless (open F,$action{file}) {\n\t\t\t$obj->{-interface}->error(\"Can't load input file $action{file}.\");\n\t\t\treturn %action;\n\t\t}\n\t\twhile (<F>) {\n\t\t\tchomp;\n\t\t\tmy $newaction = { action => 'COMMAND', cmd => $_ };\n\t\t\t$obj->{-interface}->add_to_actionlist($newaction);\n\t\t}\n\t\tclose F;\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/InputFile.pm",
+      "package" : "DBIx::dbMan::Extension::InputFile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->{-interface}->filenames_complete($text,$line,$start) if $line =~ /^\\s*(\\\\i\\s+|@)/;\n\treturn ('\\i','@') if $line =~ /^\\s*$/i;\n\treturn ('i') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdInputFile.pm",
+      "package" : "DBIx::dbMan::Extension::CmdInputFile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{benchmark_starttime}) {\n\t\tmy $time;\n\t\tif ($obj->{hires}) {\n\t\t\teval q{\n\t\t\t\t$time = tv_interval($action{benchmark_starttime},[ gettimeofday ]);\n\t\t\t};\n\t\t} else {\n\t\t\t$time = time-$action{benchmark_starttime};\n\t\t}\n\t\tdelete $action{benchmark_starttime};\n\t\tmy $info = \"Elapsed time: $time s\\n\";\n\t\tif ($action{action} eq 'OUTPUT') {\n\t\t\t$action{output} .= $info;\n\t\t} else {\n\t\t\t$obj->{-interface}->print($info);\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/BenchmarkStop.pm",
+      "package" : "DBIx::dbMan::Extension::BenchmarkStop"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/REMARK/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdComments.pm",
+      "package" : "DBIx::dbMan::Extension::CmdComments"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'HELP') {\n\t\tif ($action{type} eq 'commands') {\n\t\t\tmy @help = ();\n\t\t\tfor my $ext (@{$obj->{-core}->{extensions}}) {\n\t\t\t\tif ($ext->can('cmdhelp')) {\n\t\t\t\t\tmy %h = @{$ext->cmdhelp()};\n\t\t\t\t\tfor (keys %h) {\n\t\t\t\t\t\tstudy $action{what} if $action{what};\n\t\t\t\t\t\tpush @help,[ $_, $h{$_} ] if /^\\Q$action{what}/i;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tif (@help) {\n\t\t\t\tmy $table = new Text::FormatTable '| l l | l |';\n\t\t\t\t$table->rule;\n\t\t\t\tfor (sort { $a->[0] cmp $b->[0] } @help) {\n\t\t\t\t\t$table->row(' * ',@$_);\n\t\t\t\t}\n\t\t\t\t$table->rule;\n\t\t\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t\t\t} else {\n\t\t\t\t$action{output} = \"I havn't help for command \".$action{what}.\".\\n\";\n\t\t\t}\n\t\t\t$action{action} = 'OUTPUT';\n\t\t} elsif ($action{type} eq 'version') {\n\t\t\t$action{output} = \"dbMan version is \".$DBIx::dbMan::VERSION.\"\\n\";\n\t\t\tif ($action{gui}) {\n\t\t\t\t$action{action} = 'NONE';\n\t\t\t\t$obj->{-interface}->infobox($action{output});\n\t\t\t} else {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t}\n\t\t} elsif ($action{type} eq 'license') {\n\t\t\t$action{output} = <<'EOF';\n\t\t\tif ($action{gui}) {\n\t\t\t\t$action{action} = 'NONE';\n\t\t\t\t$obj->{-interface}->infobox($action{output});\n\t\t\t} else {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t}\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/HelpCommands.pm",
+      "package" : "DBIx::dbMan::Extension::HelpCommands"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->restart_complete($text,$1,$start-(length($line)-length($1))) if $line =~ /^\\s*\\\\f\\s*\\(.+?\\)\\s+(.*)$/i;\n\treturn $obj->formatlist if $line =~ /^\\s*\\\\f\\s*\\(\\s*\\S*$/i;\n        return $obj->formatlist if $line =~ /^\\s*SET\\s+SINGLEOUTPUT\\s+TO\\s+\\S*$/i;\n        return qw/TO/ if $line =~ /^\\s*SET\\s+SINGLEOUTPUT\\s+\\S*$/i;\n        return qw/SINGLEOUTPUT/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn ('\\f','SET') if $line =~ /^\\s*$/i;\n\treturn ('f(','SET') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdFormat.pm",
+      "package" : "DBIx::dbMan::Extension::CmdFormat"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+TRACING\\s+\\S*$/i;\n\treturn qw/TRACING/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetTracing.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetTracing"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'SHOW_TABLES') {\n\t\t$action{action} = 'NONE';\n\t\tunless ($obj->{-dbi}->current) {\n\t\t\t$obj->{-interface}->error(\"No current connection selected.\");\n\t\t\treturn %action;\n\t\t}\t\n\n\t\tmy $table = new Text::FormatTable '| l | l | l |';\n\t\t$table->rule;\n\t\t$table->head('SCHEMA','NAME','TYPE');\n\t\t$table->rule;\n\n\t\tmy $sth = $obj->{-dbi}->table_info();\n\t\tmy $ret = $sth->fetchall_arrayref();\n\t\tstudy $action{mask};\n\t\tif (defined $ret) {\n\t\t\tfor (sort { \n\t\t\t\t($a->[1] eq $b->[1]) \n\t\t\t\t? ($a->[2] cmp $b->[2]) \n\t\t\t\t: ($a->[1] cmp $b->[1]) } @$ret) {\n\t\t\t\tif (($action{type} eq 'object' or\n\t\t\t\t  $action{type} eq lc $_->[3]) and\n\t\t\t\t  $action{mask} and\n\t\t\t\t  $_->[1] =~ /$action{mask}/i) {\n\t\t\t\t\t$table->row($_->[1],$_->[2],$_->[3]);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\t$sth->finish;\n\t\t$table->rule;\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/ShowTables.pm",
+      "package" : "DBIx::dbMan::Extension::ShowTables"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'HISTORY') {\n\t\tif ($action{operation} eq 'show') {\n\t\t\tmy $table = new Text::FormatTable '| r l |';\n\t\t\t$table->rule;\n\t\t\tmy $i = 1;\n\t\t\tmy $history = new DBIx::dbMan::History -config => $obj->{-config};\n\t\t\tfor ($history->load()) {\t\n\t\t\t\t$table->row(\"$i.\",$_);\n\t\t\t\t++$i;\n\t\t\t}\n\t\t\t$table->rule;\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t\t} elsif ($action{operation} eq 'clear') {\n\t\t\t$obj->{-interface}->history_clear();\n\t\t\t$action{action} = 'OUTPUT';\n\t\t\t$action{output} = \"Commands history cleared.\\n\";\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/History.pm",
+      "package" : "DBIx::dbMan::Extension::History"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->restart_complete($text,$1,$start-(length($line)-length($1))) if $line =~ /^\\s*\\\\p\\s+(.*)$/i;\n\treturn ('\\p') if $line =~ /^\\s*$/i;\n\treturn ('p') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdPager.pm",
+      "package" : "DBIx::dbMan::Extension::CmdPager"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'AUTHORS') {\n\t\tmy %authors = ();\n\t\tfor my $ext (@{$obj->{-core}->{extensions}}) {\n\t\t\tmy $id = $ext->IDENTIFICATION;\n\t\t\t$id =~ s/-.*//;\n\t\t\t++$authors{$id};\n\t\t\tif ($ext->can('author')) {\n\t\t\t\t$authorname{$id} = $ext->author();\n\t\t\t}\n\t\t}\n\t\tmy $authors = '';\n\t\tfor (sort { $authors{$a} <=> $authors{$b} } keys %authors) {\n\t\t\t$authors .= \"   \".((exists $authorname{$_})?$authorname{$_}:$_).\" ($authors{$_} extension\".($authors{$_}==1?\"\":\"s\").\")\\n\";\n\t\t}\n\n\t\t$action{output} = \"Program:\\n   \".$authorname{'000001'}.\"\\n\\nExtensions:\\n\".$authors;\n\n\t\tif ($action{gui}) {\n\t\t\t$action{action} = 'NONE';\n\t\t\t$obj->{-interface}->infobox($action{output});\n\t\t} else {\n\t\t\t$action{action} = 'OUTPUT';\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Authors.pm",
+      "package" : "DBIx::dbMan::Extension::Authors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'GUI') {\n\t\tif ($action{operation} eq 'create_connection') {\n\t\t\tif ($obj->{-interface}->can('is_curses')\n\t\t\t\tand $obj->{-interface}->is_curses()) {\n\t\t\t\t$action{action} = 'NONE';\n\n\t\t\t\tmy $ui = $obj->{-interface}->{ui};\n\t\t\t\tmy $dialog = $ui->add('dialog','Window',\n\t\t\t\t\t-border => 1, -ipad => 1, -centered => 1,\n\t\t\t\t\t-title => 'Create new connection',\n\t\t\t\t\t-height => 18, -width => 50);\n\n\t\t\t\t$dialog->add('label1', 'Label', -text => 'Connection name',\n\t\t\t\t\t-x => 0, -y => 0);\n\t\t\t\tmy $e_name = $dialog->add('e_name', 'TextEntry',\n\t\t\t\t\t-x => 20, -y => 0, -sbborder => 1);\n\n\t\t\t\t$dialog->add('label2', 'Label', -text => 'Database driver',\n\t\t\t\t\t-x => 0, -y => 2);\n\t\t\t\tmy @drivers = sort { uc $a <=> uc $b } $obj->{-dbi}->driverlist;\n\t\t\t\tmy $sel = 0;\n\t\t\t\tfor my $driver (qw/Oracle Pg mysql XBase CSV/) {\n\t\t\t\t\tmy $i = 0;\n\t\t\t\t\tfor (@drivers) {\n\t\t\t\t\t\tlast if $driver eq $_;\n\t\t\t\t\t\t++$i;\n\t\t\t\t\t}\n\t\t\t\t\tif ($i < @drivers) { $sel = $i;  last; }\n\t\t\t\t}\n\t\t\t\tmy $e_driver = $dialog->add('e_driver', 'Popupmenu',\n\t\t\t\t\t-values => \\@drivers,\n\t\t\t\t\t-labels => { map { $_ => $_ } @drivers },\n\t\t\t\t\t-selected => $sel,\n\t\t\t\t\t-x => 20, -y => 2);\n\t\t\t\t\n\t\t\t\t$dialog->add('label3', 'Label', -text => 'DSN',\n\t\t\t\t\t-x => 0, -y => 4);\n\t\t\t\tmy $e_dsn = $dialog->add('e_dsn', 'TextEntry',\n\t\t\t\t\t-x => 20, -y => 4, -sbborder => 1);\n\t\t\t\t\n\t\t\t\t$dialog->add('label4', 'Label', -text => 'Login',\n\t\t\t\t\t-x => 0, -y => 6);\n\t\t\t\tmy $e_login = $dialog->add('e_login', 'TextEntry',\n\t\t\t\t\t-x => 20, -y => 6, -sbborder => 1);\n\t\t\t\t\n\t\t\t\t$dialog->add('label5', 'Label', -text => 'Password',\n\t\t\t\t\t-x => 0, -y => 8);\n\t\t\t\tmy $e_pass = $dialog->add('e_pass', 'PasswordEntry',\n\t\t\t\t\t-x => 20, -y => 8, -sbborder => 1);\n\n\t\t\t\tmy $e_save = $dialog->add('e_save', 'Checkbox',\n\t\t\t\t\t-x => 0, -y => 10, -label => 'Make connection permanent',\n\t\t\t\t\t-checked => 1);\n\t\t\t\t\n\t\t\t\tmy $e_open = $dialog->add('e_open', 'Checkbox',\n\t\t\t\t\t-x => 0, -y => 11, -label => 'Autoopen connection',\n\t\t\t\t\t-checked => 0);\n\n\t\t\t\tmy $btns = $dialog->add('buttons', 'Buttonbox', -y => -1,\n\t\t\t\t\t-buttonalignment => 'right', -buttons => [ \n\t\t\t\t\t\t{ -label => '< Create >', -value => 1 },\n\t\t\t\t\t\t{ -label => '< Cancel >', -value => 0 } ]);\n\t\t\t\t$btns->set_routine('press-button',\n\t\t\t\t\tsub { shift->parent->loose_focus(); });\n\n\t\t\t\t$e_name->focus();\n\n\t\t\t\twhile (1) {\n\t\t\t\t\t$dialog->modalfocus();\n\n\t\t\t\t\tif ($btns->get()) {\n\t\t\t\t\t\tmy $name = $e_name->get();\n\t\t\t\t\t\tmy $driver = $e_driver->get();\n\t\t\t\t\t\tmy $dsn = $e_dsn->get();\n\t\t\t\t\t\tmy $login = $e_login->get();\n\t\t\t\t\t\tmy $pass = $e_pass->get();\n\t\t\t\t\t\tmy $save = $e_save->get();\n\t\t\t\t\t\tmy $open = $e_open->get();\n\n\t\t\t\t\t\t$name =~ s/\\s+//g;\n\t\t\t\t\t\t$dsn =~ s/\\s+//g;\n\t\t\t\t\t\t$login =~ s/\\s+//g;\n\n\t\t\t\t\t\tif ($name) {\n\t\t\t\t\t\t\t$action{action} = 'CONNECTION';\n\t\t\t\t\t\t\t$action{operation} = 'create';\n\t\t\t\t\t\t\t$action{what} = $name;\n\t\t\t\t\t\t\t$action{driver} = $driver;\n\t\t\t\t\t\t\t$action{dsn} = $dsn;\n\t\t\t\t\t\t\t$action{login} = $login;\n\t\t\t\t\t\t\t$action{password} = $pass;\n\t\t\t\t\t\t\t$action{auto_login} = 'yes' if $open;\n\t\t\t\t\t\t\t++$action{permanent} if $save;\n\t\t\t\t\t\t\tlast;\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\t$e_dsn->text($dsn);\n\t\t\t\t\t\t$e_name->text($name);\n\t\t\t\t\t\t$e_login->text($login);\n\t\t\t\t\t} else {\n\t\t\t\t\t\tlast;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t$ui->delete('dialog');\n\t\t\t}\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/GuiCreateConnection.pm",
+      "package" : "DBIx::dbMan::Extension::GuiCreateConnection"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ID NAME PREFERENCE/ if $line =~ /^\\s*SHOW\\s+EXTENSIONS?\\s+BY\\s+\\S*$/i;\n\treturn qw/BY/ if $line =~ /^\\s*SHOW\\s+EXTENSIONS?\\s+\\S*$/i;\n\treturn qw/EXTENSIONS/ if $line =~ /^\\s*SHOW\\s+\\S*$/i;\n\treturn $obj->extensionlist if $line =~ /^\\s*(LOAD|UNLOAD|RELOAD)\\s+EXTENSION\\s+\\S*$/i;\n\treturn ('EXTENSION',$obj->extensionlist) if $line =~ /^\\s*(LOAD|UNLOAD|RELOAD)\\s+\\S*$/i;\n\treturn qw/SHOW UNLOAD LOAD RELOAD/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdExtensions.pm",
+      "package" : "DBIx::dbMan::Extension::CmdExtensions"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->formatlist if $line =~ /^\\s*SET\\s+OUTPUT\\s+FORMAT\\s+TO\\s+\\S*$/i;\n\treturn qw/TO/ if $line =~ /^\\s*SET\\s+OUTPUT\\s+FORMAT\\s+\\S*$/i;\n\treturn qw/FORMAT/ if $line =~ /^\\s*SET\\s+OUTPUT\\s+\\S*$/i;\n\treturn qw/OUTPUT/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetOutputFormat.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetOutputFormat"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/VERSION LICENSE/ if $line =~ /^\\s*SHOW\\s+[A-Z]*$/i;\n\treturn qw/HELP SHOW/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdHelp.pm",
+      "package" : "DBIx::dbMan::Extension::CmdHelp"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'COMMAND' and \n\t  $obj->{-mempool}->get('benchmark') and\n\t  not $action{benchmark_starttime}) {\n\t\tif ($obj->{hires}) {\n\t\t\teval q{\n\t\t\t\t$action{benchmark_starttime} = [ gettimeofday ];\n\t\t\t};\n\t\t} else {\n\t\t\t$action{benchmark_starttime} = time;\n\t\t}\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/BenchmarkStart.pm",
+      "package" : "DBIx::dbMan::Extension::BenchmarkStart"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdhelp {\n\tmy $obj = shift;\n\n\treturn [ 'COUNT <table>,...' => 'Select base statistics of tables',\n\t\t 'COUNTRE <re>' => 'COUNT on table name fit to RE' ] if $obj->{-dbi}->current;\n\treturn [];\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdCount.pm",
+      "package" : "DBIx::dbMan::Extension::CmdCount"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdhelp {\n\tmy $obj = shift;\n\n\tmy $helps = ['EXPLAIN PLAN FOR <select>' => 'Explain (Oracle) plan for executing query <select>'];\n\tpush @$helps,('EXECUTE <plsql>' => 'Execute PL/SQL code') if $obj->{-dbi}->driver eq 'Oracle';\n\treturn $helps;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdStandardSQL.pm",
+      "package" : "DBIx::dbMan::Extension::CmdStandardSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn () unless $obj->{-dbi}->current;\n\treturn $obj->objectlist('PACKAGE BODY') if $line =~ /^\\s*EDIT\\s+PACKAGE\\s+BODY\\s+\\S*$/i;\n\treturn ('BODY',$obj->objectlist('PACKAGE')) if $line =~ /^\\s*EDIT\\s+PACKAGE\\s+\\S*$/i;\n\treturn $obj->objectlist($1) if $line =~ /^\\s*EDIT\\s+(PROCEDURE|FUNCTION|TRIGGER|VIEW|PACKAGE)\\s+\\S*$/i;\n\treturn qw/PROCEDURE FUNCTION TRIGGER VIEW PACKAGE/ if $line =~ /^\\s*EDIT\\s+\\S*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/EditObjectsOracle.pm",
+      "package" : "DBIx::dbMan::Extension::EditObjectsOracle"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT' and $obj->{-mempool}->get('line_numbers') and $obj->{-mempool}->get('output_format') ne 'insert') {\n\t\tmy $i = 0;\n\t\tfor my $line (@{$action{result}}) {\n\t\t\t$line = [ ++$i, @$line ];\n\t\t}\n\t\t$action{fieldnames} = [ '#', @{$action{fieldnames}} ];\n\t\t$action{fieldtypes} = [ -9999, @{$action{fieldtypes}} ];\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/LineNumbers.pm",
+      "package" : "DBIx::dbMan::Extension::LineNumbers"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn unless $obj->{-dbi}->current;\n\treturn unless $obj->{-dbi}->driver eq 'Oracle';\n\treturn qw/ERRORS/ if $line =~ /^\\s*SHOW\\s+\\S*$/i;\n\treturn qw/SHOW/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdShowErrors.pm",
+      "package" : "DBIx::dbMan::Extension::CmdShowErrors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\n\tif ($action{action} eq 'EDIT_OBJECT') {\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = \"I can't edit $action{what}\".($action{type}?\" (type $action{type})\":\"\").\".\\n\";\n\t\tdelete $action{processed};\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/EditFallback.pm",
+      "package" : "DBIx::dbMan::Extension::EditFallback"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\n\t$action{action} = 'NONE' if $action{action} eq 'IDLE';\n\n\tif ($action{action} eq 'COMMAND') {\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = \"Unknown command.\\n\";\n\t\tdelete $action{processed};\n\t} elsif (not $action{action}) {\t\n\t\t$obj->{-interface}->print(\"INTERNAL: Action not correctly handled by some extension!\\n\");\n\t} elsif ($action{action} ne 'NONE' and $action{action} ne 'QUIT') {  \n\t\t$obj->{-interface}->print(\"INTERNAL: Not handled action $action{action}.\\n\");\n\t\t$action{action} = 'NONE';\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Fallback.pm",
+      "package" : "DBIx::dbMan::Extension::Fallback"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{count_process} eq '1') {\n\t\tdelete $action{processed};\n\t\tdelete $action{count_process};\n\t\tmy $oldaction = $action{action};\n\t\t$action{action} = 'COUNT';\n\t\t$action{sql} = uc $action{sql};\n\t\t$action{sql} =~ s/SELECT COUNT\\(\\*\\) POCET FROM //i;\n\t\t$action{error_output} .= \"Table $action{sql} does not exists.\\n\" if $oldaction eq 'OUTPUT';\n\t\treturn %action if $oldaction ne 'SQL_RESULT';\n\n\t\tmy $result = $action{result};\n\t\t$action{count_rows} = $result->[0][0];\n\t\t$action{action} = 'SQL';\n\t\t$action{sql} = 'SELECT * FROM '.$action{sql}.' WHERE 0 = 1';\n\t\t$action{count_process} = '2';\n\t} elsif ($action{count_process} eq '2') {\n\t\tdelete $action{processed};\n\t\tdelete $action{count_process};\n\t\tmy $oldaction = $action{action};\n\t\t$action{action} = 'COUNT';\n\t\t$action{sql} = uc $action{sql};\n\t\t$action{sql} =~ s/SELECT \\* FROM //i;\n\t\t$action{sql} =~ s/ WHERE 0 = 1//i;\n\t\treturn %action if $oldaction ne 'SQL_RESULT';\n\n\t\tmy $result = $action{result};\n\t\t$action{count_result}->{$action{sql}}{rows} = $action{count_rows};\n\t\t$action{count_result}->{$action{sql}}{cols} = scalar @{$action{fieldnames}};\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CountPost.pm",
+      "package" : "DBIx::dbMan::Extension::CountPost"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_RESULT' and not $action{sql_result_preprocess} and ref $action{result} eq 'ARRAY') {\n\t\t@$_ = map { (defined) ? join '',(map { ($_ >= 32 && $_ <= 254 && $_ != 127)?chr:sprintf \"<%02x>\",$_; } unpack \"C*\",$_) : undef } @$_ for @{$action{result}};\n\n\t\t$action{sql_result_preprocess} = 1;\n\t\tdelete $action{processed};\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLResultPreprocess.pm",
+      "package" : "DBIx::dbMan::Extension::SQLResultPreprocess"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_RESULT' and $action{copy_to_clipboard} and ref $action{result} eq 'ARRAY') {\n\t\tdelete $action{copy_to_clipboard};\n\t\tif ($action{union_clipboard}) {\n\t\t\tmy $clip = $obj->{-mempool}->get('clipboard');\n\t\t\tif (exists $clip->{-result}) {\n\t\t\t\tif (scalar @{$action{result}->[0]} != scalar @{$clip->{-result}->[0]}) {\n\t\t\t\t\t$action{output_info} = \"Cannot union copy results with different number of columns.\\n\";\n\t\t\t\t} else { \n\t\t\t\t\tmy @res = map { [ @$_ ] } @{$action{result}};\n\t\t\t\t\t$clip->{-result} = [ @{$clip->{-result}}, @res ];\n\t\t\t\t\t$obj->{-mempool}->set('clipboard',$clip);\n\t\t\t\t\t$action{output_info} = \"Union copy to clipboard done.\\n\";\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tdelete $action{union_clipboard};\n\t\t\t}\n\t\t} \n\t\tunless ($action{union_clipboard}) {\n\t\t\tmy $res;  $res = [ map { [ @$_ ] } @{$action{result}} ];\n\t\t\t$obj->{-mempool}->set('clipboard',{ -result => $res, -fieldnames => $action{fieldnames}, -fieldtypes => $action{fieldtypes}});\n\t\t\t$action{output_info} = \"Copy to clipboard done.\\n\";\n\t\t}\n\t\tdelete $action{processed};\n\t\t$obj->{-interface}->prompt($action{clipboard_prompt_num},'[clip]');\n\t\t$obj->{-interface}->rebuild_menu();\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/Clipboard.pm",
+      "package" : "DBIx::dbMan::Extension::Clipboard"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn ('\\h') if $line =~ /^\\s*$/i;\n\treturn ('h') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSQLHelp.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSQLHelp"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/ON OFF/ if $line =~ /^\\s*SET\\s+BENCHMARK\\s+\\S*$/i;\n\treturn qw/BENCHMARK/ if $line =~ /^\\s*SET\\s+\\S*$/i;\n\treturn qw/SET/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdSetBenchmark.pm",
+      "package" : "DBIx::dbMan::Extension::CmdSetBenchmark"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn sort keys %{$obj->{lines}} if $line =~ /^\\s*\\\\h\\s+[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLHelp.pm",
+      "package" : "DBIx::dbMan::Extension::SQLHelp"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn () unless $obj->{-dbi}->current;\n\treturn qw/OBJECTS TABLES VIEWS SEQUENCES/ if $line =~ /^\\s*SHOW\\s+\\S*$/i;\n\treturn ('SHOW','\\dt') if $line =~ /^\\s*$/;\n\treturn ('dt') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn qw/SHOW/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdShowTables.pm",
+      "package" : "DBIx::dbMan::Extension::CmdShowTables"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn $obj->restart_complete($text,$1,$start-(length($line)-length($1))) if $line =~ /^\\s*\\\\(?:copy|unioncopy|paste)\\s*\\(.+?\\)\\s+(.*)$/i;\n\treturn ('CLIPBOARD') if $line =~ /^\\s*SHOW\\s+/i;\n\treturn ('\\copy','\\unioncopy','\\paste','SHOW','\\clear') if $line =~ /^\\s*$/i;\n\treturn ('copy','unioncopy','paste','clear') if $line =~ /^\\s*\\\\[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdClipboard.pm",
+      "package" : "DBIx::dbMan::Extension::CmdClipboard"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cmdcomplete {\n\tmy ($obj,$text,$line,$start) = @_;\n\treturn qw/AUTHORS/ if $line =~ /^\\s*[A-Z]*$/i;\n\treturn ();\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/CmdAuthors.pm",
+      "package" : "DBIx::dbMan::Extension::CmdAuthors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL_OUTPUT') {\t\n\t\tmy $table = new Text::FormatTable ('|'.( 'l|' x scalar @{$action{fieldnames}} ));\n\t\t$table->rule;\n\t\t$table->head(@{$action{fieldnames}});\n\t\t$table->rule;\n\t\tfor (@{$action{result}}) {\n\t\t\t$table->row(@$_);\n\t\t}\n\t\t$table->rule;\n\t\t$action{action} = 'OUTPUT';\n\t\t$action{output} = $table->render($obj->{-interface}->render_size);\n\t\tdelete $action{processed};\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOutputTable.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOutputTable"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\tif ($action{action} eq 'SHOW_TABLES' and $obj->{-dbi}->driver eq 'Oracle') {\n\t\tmy $table = new Text::FormatTable '| l | l |';\n\t\t$table->rule;\n\t\t$table->head('NAME','TYPE');\n\t\t$table->rule;\n\n\t\tmy $sth = $obj->{-dbi}->table_info( { TABLE_SCHEM => uc($obj->{-dbi}->login) } );\n\t\tif (defined $sth) {\n\t\t\tmy $ret = $sth->fetchall_arrayref();\n\t\t\tstudy $action{mask};\n\t\t\teval {\n\t\t\t\tif (defined $ret) {\n\t\t\t\t\tfor (sort { $a->[2] cmp $b->[2] } @$ret) {\n\t\t\t\t\t\tif (($action{type} eq 'object'\n\t\t\t\t\t\t  or $action{type} eq lc $_->[3]) and\n\t\t\t\t\t\t  $action{mask} and $_->[2] =~ /$action{mask}/i) {\n\t\t\t\t\t\t\t$table->row($_->[2],$_->[3]);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t};\n\t\t\t$sth->finish;\n\t\t\t$table->rule;\n\t\t\t$action{output} = $@?\"Invalid regular expression.\\n\":$table->render($obj->{-interface}->render_size);\n\t\t} else {\n\t\t\t$action{output} = \"Interrupted.\\n\"; \n\t\t}\n\t\t$action{action} = 'OUTPUT';\n\t}\n\n\t$action{processed} = 1;\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/ShowTablesOracle.pm",
+      "package" : "DBIx::dbMan::Extension::ShowTablesOracle"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'SQL') {\n\t\tif ($action{oper} eq 'complete') {\n\t\t\t$action{action} = 'NONE';\n\t\t\t$action{type} = 'object' if lc $action{type} eq 'context';\n\n\t\t\tif ($action{what} eq 'list') {\n\t\t\t\tmy $sth = $obj->{-dbi}->table_info();\n\t\t\t\tmy $ret = $sth->fetchall_arrayref();\n\t\t\t\tmy @all = ();\n\t\t\t\tif (defined $ret) {\n\t\t\t\t\tfor (@$ret) {\n\t\t\t\t\t\tpush @all,$_->[2] if lc $action{type} eq 'object' || lc $action{type} eq lc $_->[3];\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t$sth->finish;\n\t\t\t\t$action{list} = \\@all;\n\t\t\t}\n\t\t} elsif ($action{type} eq 'select' or $action{type} eq 'do') {\n\t\t\t$action{action} = 'NONE';\n\t\t\tunless ($obj->{-dbi}->current) {\n\t\t\t\t$obj->{-interface}->error(\"No current connection selected.\");\n\t\t\t\treturn %action;\n\t\t\t}\n\t\t\t\n\t\t\tmy $explain_id = $$;\n\t\t\tif ($action{explain} and not $action{explain_2phase}) {\n\t\t\t\t$action{sql_save} = $action{sql};\n\t\t\t\t$action{sql} = qq!DELETE FROM plan_table WHERE statement_id = '$explain_id'!;\n\t\t\t\t$action{explain_2phase} = 1;\n\t\t\t} else {\n\t\t\t\t$action{sql} =~ s/explain\\s+plan\\s+for/explain plan set statement_id = '$explain_id' for/i;\n\t\t\t\tdelete $action{explain_2phase};\n\t\t\t}\n\n\t\t\t$obj->{-interface}->status(\"Executing SQL...\") unless $action{output_quiet};\n\t\t\tmy $lr = $obj->{-dbi}->longreadlen();\n\t\t\t$obj->{-dbi}->longreadlen($action{longreadlen}) if $action{longreadlen};\n\t\t\tmy $sth = $obj->{-dbi}->prepare($action{sql});\n\t\t\tif (exists $action{placeholders}) {\n\t\t\t\tmy $i = 0;\n\t\t\t\t$sth->bind_param(++$i,$_) for @{$action{placeholders}};\n\t\t\t}\n\t\t\tunless (defined $sth) {\n\t\t\t\t$action{action} = 'OUTPUT';\n\t\t\t\t$action{output} = $obj->{-dbi}->errstr().\"\\n\";\n\t\t\t\t$action{processed} = 1;\n\t\t\t\t$obj->{-dbi}->longreadlen($lr) if $action{longreadlen};\n\t\t\t\t$obj->{-interface}->nostatus unless $action{output_quiet};\n\t\t\t\treturn %action;\n\t\t\t}\n\t\t\tmy $res = $sth->execute();\n\t\t\t$obj->{-dbi}->longreadlen($lr) if $action{longreadlen};\n\t\t\tif (not defined $res) {\n\t\t\t\tmy $errstr = $obj->{-dbi}->errstr();\n\t\t\t\t$errstr =~ s/^ERROR:\\s*//;\n\t\t\t\t$obj->{-interface}->error($errstr);\n\t\t\t} else {\n\t\t\t\tif ($action{type} eq 'select' and not $action{explain}) {\n\t\t\t\t\t$action{fieldnames} = $sth->{NAME_uc};\n\t\t\t\t\teval {\n\t\t\t\t\t\t$action{fieldtypes} = $sth->{TYPE};\n\t\t\t\t\t};\n\t\t\t\t\tif ($@) {\n\t\t\t\t\t\t$action{fieldtypes} = [ map { -9998 } @{$action{fieldnames}} ];\n\t\t\t\t\t}\n\t\t\t\t\t$res = $sth->fetchall_arrayref();\n\t\t\t\t}\n\t\t\t\tif ($action{explain}) {\n\t\t\t\t\t$action{action} = 'SQL';\n\t\t\t\t\tif ($action{explain_2phase}) {\n\t\t\t\t\t\t$action{sql} = $action{sql_save};\n\t\t\t\t\t\t$sth->finish;\n\t\t\t\t\t\tdelete $action{processed};\n\t\t\t\t\t\t$obj->{-interface}->nostatus unless $action{output_quiet};\n\t\t\t\t\t\treturn %action;\n\t\t\t\t\t}\n\t\t\t\t\t$action{sql} = q!SELECT '.' || LPAD(' ',2*LEVEL-1) || operation || ' ' || options || ' ' || object_name \"Execution Plan\" FROM plan_table WHERE statement_id = '!.$explain_id.q!' CONNECT BY PRIOR id = parent_id AND statement_id = '!.$explain_id.q!' START WITH id = 0 AND statement_id = '!.$explain_id.q!'!;\n\t\t\t\t\tdelete $action{explain};\n\t\t\t\t} else {\n\t\t\t\t\t$action{action} = 'SQL_RESULT';\n\t\t\t\t\t$action{result} = $res;\n\t\t\t\t}\n\t\t\t}\n\t\t\t$sth->finish;\n\t\t\t$obj->{-interface}->nostatus unless $action{output_quiet};\n\t\t\t$obj->{-dbi}->discard_profile_data;\n\t\t\tdelete $action{processed};\n\t\t}\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/StandardSQL.pm",
+      "package" : "DBIx::dbMan::Extension::StandardSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_action {\n\tmy ($obj,%action) = @_;\n\n\t$action{processed} = 1;\n\tif ($action{action} eq 'OUTPUT' and $obj->{-dbi}->driver eq 'Oracle' and $action{oracle_dbms}) {\n\t\tmy $dbms = join \"\\n\",$obj->{-dbi}->func('dbms_output_get');\n\t\t$dbms = \"DBMS output:\\n$dbms\\n\" if $dbms;\n\t\t$action{output} .= $dbms;\n\t}\n\n\treturn %action;\n}",
+      "file" : "/var/tmp/arv_GETn1k/dbMan-0.37/lib/DBIx/dbMan/Extension/SQLOracleOutput.pm",
+      "package" : "DBIx::dbMan::Extension::SQLOracleOutput"
+   }
+]

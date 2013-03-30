@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub StripSpace ( $ ) { String::Strip::StripSpace($_[0]); }",
+      "file" : "/var/tmp/arv_QUkkkI/String-StringLib-1.02/StringLib.pm",
+      "package" : "String::StringLib"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _update {\n  my $self = shift;\n\n  $self->{csv}->combine(@{ $self->{fields} })\n    or croak \"CSV combine error: \" . $self->{csv}->error_diag();\n  $self->{file}[$self->{line_num}] = $self->{csv}->string;\n}",
+      "file" : "/var/tmp/arv_U6w5PR/Tie-Array-CSV-0.07/lib/Tie/Array/CSV.pm",
+      "package" : "Tie::Array::CSV"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n  my $self = shift;\n  $self->_deferred_update if $self->{need_update} == 1;\n}",
+      "file" : "/var/tmp/arv_U6w5PR/Tie-Array-CSV-0.07/lib/Tie/Array/CSV/HoldRow.pm",
+      "package" : "Tie::Array::CSV::HoldRow"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_D6Agv4/Dist-Zilla-Role-PluginBundle-Merged-0.92/lib/Dist/Zilla/Role/PluginBundle/Merged.pm",
+      "package" : "Dist::Zilla::Role::PluginBundle::Merged"
+   }
+]

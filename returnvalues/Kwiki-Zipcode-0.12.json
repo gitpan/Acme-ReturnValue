@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub check_zipcode {\n    my $preference = shift;\n    my $value = $preference->new_value;\n    return unless length $value;\n    $preference->error('Invalid. Must be 5 digits.')\n      unless $value =~ /^\\d{5}$/;\n}",
+      "file" : "/var/tmp/arv_A3evXA/Kwiki-Zipcode-0.12/lib/Kwiki/Zipcode.pm",
+      "package" : "Kwiki::Zipcode"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'POE it'",
+      "file" : "/var/tmp/arv_vX0RSn/POE-Component-Server-NRPE-0.18/lib/POE/Component/Server/NRPE.pm",
+      "package" : "POE::Component::Server::NRPE"
+   }
+]

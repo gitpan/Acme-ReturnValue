@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "_init()",
+      "file" : "/var/tmp/arv_Szi1Ny/File-Attributes-0.04/lib/File/Attributes.pm",
+      "package" : "File::Attributes"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _attribute_file {\n    my $self = shift;\n    my $file = shift;\n\n    my $max = 10;\n    while($max-- && -l $file){\n\t$file = readlink $file;\n    }\n    \n    my ($volume,$dirs,$filename) = File::Spec->splitpath($file);\n    return File::Spec->catpath($volume, $dirs, \".$filename.attributes\");\n}",
+      "file" : "/var/tmp/arv_Szi1Ny/File-Attributes-0.04/lib/File/Attributes/Simple.pm",
+      "package" : "File::Attributes::Simple"
+   }
+]

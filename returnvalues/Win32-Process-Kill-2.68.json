@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Win32::Process::Kill::Import()",
+      "file" : "/var/tmp/arv_nlHAQc/Win32-Process-Kill-2.68/lib/Win32/Process/Kill.pm",
+      "package" : "Win32::Process::Kill"
+   }
+]

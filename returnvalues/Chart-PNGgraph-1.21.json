@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Chart::PNGgraph::VERSION",
+      "file" : "/var/tmp/arv_uUd_mo/Chart-PNGgraph-1.21/lib/Chart/PNGgraph.pm",
+      "package" : "Chart::PNGgraph"
+   }
+]

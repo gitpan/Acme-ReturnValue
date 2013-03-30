@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub pg_version {\n    my $class = shift;\n    my %args  = @_;\n\n    my $dbh   = $class->db_Main;\n    my $sth   = $dbh->prepare(\"SELECT version()\");\n    $sth->execute;\n    my ($ver_str) = $sth->fetchrow_array;\n    $sth->finish;\n    my ($ver) = \n        $args{full_version} ?\n            $ver_str =~ m/^PostgreSQL ([\\d\\.]{5})/ :\n            $ver_str =~ m/^PostgreSQL ([\\d\\.]{3})/;\n    return $ver;\n}",
+      "file" : "/var/tmp/arv_f57L9Y/Class-DBI-Pg-0.08/Pg.pm",
+      "package" : "Class::DBI::Pg"
+   }
+]

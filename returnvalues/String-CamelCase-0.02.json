@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub decamelize\n{\n\tmy $s = shift;\n\t$s =~ s{([^a-zA-Z]?)([A-Z]*)([A-Z])([a-z]?)}{\n\t\tmy $fc = pos($s)==0;\n\t\tmy ($p0,$p1,$p2,$p3) = ($1,lc$2,lc$3,$4);\n\t\tmy $t = $p0 || $fc ? $p0 : '_';\n\t\t$t .= $p3 ? $p1 ? \"${p1}_$p2$p3\" : \"$p2$p3\" : \"$p1$p2\";\n\t\t$t;\n\t}ge;\n\t$s;\n}",
+      "file" : "/var/tmp/arv_Hk7k58/String-CamelCase-0.02/lib/String/CamelCase.pm",
+      "package" : "String::CamelCase"
+   }
+]

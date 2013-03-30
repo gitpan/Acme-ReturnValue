@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub FETCH {\n\tmy $self = shift;\n\treturn $$self->{value};\n}",
+      "file" : "/var/tmp/arv_2GpXLI/Tie-Scalar-MarginOfError-0.03/lib/Tie/Scalar/MarginOfError.pm",
+      "package" : "Tie::Scalar::MarginOfError"
+   }
+]

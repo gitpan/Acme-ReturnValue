@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub null_split\n{\n    my ($string) = @_;\n    my @strings;\n\n    @strings = ();\n    while (length($string) > 0)\n    {\n        my $x = unpack(\"Z*\", $string);\n        push(@strings, $x);\n        $string = substr($string, length($x)+1);\n    }\n\n    return @strings;\n}",
+      "file" : "/var/tmp/arv_uFXBoG/Palm-Zetetic-Strip-1.02/lib/Palm/Zetetic/Strip/Util.pm",
+      "package" : "Palm::Zetetic::Strip::Util"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_1_0\n{\n    my ($self) = @_;\n    return ($self->{version} eq \"1.0\");\n}",
+      "file" : "/var/tmp/arv_uFXBoG/Palm-Zetetic-Strip-1.02/lib/Palm/Zetetic/Strip/Version.pm",
+      "package" : "Palm::Zetetic::Strip::Version"
+   }
+]

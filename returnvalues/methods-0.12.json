@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method import {\n    my $want_invoker;\n    if (@_ and $_[0] eq '-invoker') {\n        $want_invoker = shift;\n    }\n\n    true->import;\n    namespace::sweep->import( -cleanee => scalar(caller) );\n    Method::Signatures::Simple->import( @_, into => scalar(caller) );\n\n    if ($want_invoker) {\n        require invoker;\n        unshift @_, 'invoker';\n        goto &invoker::import;\n    }\n}",
+      "file" : "/var/tmp/arv_whhQj3/methods-0.12/lib/methods.pm",
+      "package" : "methods"
+   }
+]

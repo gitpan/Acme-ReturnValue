@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub end : ActionClass('RenderView') {}",
+      "file" : "/var/tmp/arv_Bpvzgk/Tapper-Reports-Web-4.1.2/lib/Tapper/Reports/Web/Controller/Root.pm",
+      "package" : "Tapper::Reports::Web::Controller::Root"
+   }
+]

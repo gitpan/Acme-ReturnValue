@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _Lexer {\n    my($parser)=shift;\n\n     my $fh = $parser->YYData->{FH};\n\n    my $open = '(\\()';\n    my $det = $parser->YYData->{DETERMINERS};\n    my $prep = $parser->YYData->{PREPOSITIONS};\n    my $candidates = $parser->YYData->{CANDIDATES};\n    my $positions = '<=(([MH])||(C[12]))>';\n    my $close = '\\)<=(([MH])||(C[12]))>';\n    my $end = '(\\))\\t+';\n    my $priority = '([0-9]+)\\t+';\n    my $direction = '((LEFT)|(RIGHT))';\n\n\n        $parser->YYData->{INPUT}\n     or  $parser->YYData->{INPUT} = <$fh>\n    or  return('',undef);\n\n    $parser->YYData->{INPUT}=~s/^[ \\t]*#.*//;\n    $parser->YYData->{INPUT}=~s/^[ \\t]*//;\n\n\n\n    for ($parser->YYData->{INPUT}) {\n        s/^$open\\s*// and return ('OPEN_TAG', $1);\n\ts/^$candidates\\s*// and return('CANDIDATE_TAG', $1);\n\ts/^$prep// and return('PREP_TAG', $1);\n\ts/^$det// and return('DET_TAG', $1);\n\ts/^$positions\\s*// and return('POSITION_TAG', $1);\n\ts/^$close// and return('CLOSE_TAG', $1);\n\ts/^$end// and return('END_TAG', $1);\n\ts/^$priority// and return('PRIORITY_TAG', $1);\n\ts/^$direction// and return('DIRECTION_TAG', $1);\n        s/^(.)//s  and return($1,$1);\n\t\n    }\n}",
+      "file" : "/var/tmp/arv_bTbZuR/Lingua-YaTeA-0.622/lib/Lingua/YaTeA/ParsingPatternParser.pm",
+      "package" : "Lingua::YaTeA::ParsingPatternParser"
+   }
+]

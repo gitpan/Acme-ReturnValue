@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _filter {\n\tmy $code = shift;\n\tif (defined $code) {\n\t\tlocal $_ = shift;\n\t\t&$code;\n\t\treturn $_;\n\t} else {\n\t\treturn shift;\n\t}\n}",
+      "file" : "/var/tmp/arv_ZgrWgb/Tie-Filter-1.02/lib/Tie/Filter.pm",
+      "package" : "Tie::Filter"
+   }
+]

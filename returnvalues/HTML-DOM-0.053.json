@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'true'",
+      "file" : "/var/tmp/arv_YUVks6/HTML-DOM-0.053/lib/HTML/DOM/Exception.pm",
+      "package" : "HTML::DOM::Exception"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!+~()",
+      "file" : "/var/tmp/arv_YUVks6/HTML-DOM-0.053/lib/HTML/DOM/Element/Form.pm",
+      "package" : "HTML::DOM::Element::Form"
+   }
+]

@@ -1,0 +1,44 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'png',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"png_\", $im);\n\n     unless (i_writepng_wiol($im->{IMG}, $io)) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n     return $im;\n   },\n  )",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/PNG/PNG.pm",
+      "package" : "Imager::File::PNG"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _save_gimp_gradient {\n  my ($self, $fh, $filename, $name) = @_;\n\n  print $fh \"GIMP Gradient\\n\";\n  defined $name or $name = '';\n  $name =~ tr/ -~/ /cds;\n  if ($name) {\n    print $fh \"Name: $name\\n\";\n  }\n  print $fh scalar(@$self),\"\\n\";\n  for my $row (@$self) {\n    printf $fh \"%.6f %.6f %.6f \",@{$row}[0..2];\n    for my $i (0, 1) {\n      for ($row->[3+$i]->rgba) {\n        printf $fh \"%.6f \", $_/255.0;\n      }\n    }\n    print $fh \"@{$row}[5,6]\";\n    unless (print $fh \"\\n\") {\n      $Imager::ERRSTR = \"write error: $!\";\n      return;\n    }\n  }\n\n  return 1;\n}",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/lib/Imager/Fountain.pm",
+      "package" : "Imager::Fountain"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _draw {\n  my ($self, %opts) = @_;\n\n  my $x = $opts{'x'};\n  my $y = $opts{'y'};\n\n  my @glyphs = unpack(\"C*\", $opts{string});\n  my $img = $opts{image};\n\n  my $glyph;\n  for $glyph (@glyphs) {\n    my @gmetrics = $self->get_glyph_data($glyph) or next;\n    $self->copy_glyph($glyph, $img, $x, $y);\n    $x += $gmetrics[5];\n  }\n}",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/lib/Imager/Font/Image.pm",
+      "package" : "Imager::Font::Image"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'tiff',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"tiff_\", $im);\n     $im->_set_opts(\\%hsh, \"exif_\", $im);\n\n     if (defined $hsh{class} && $hsh{class} eq \"fax\") {\n       my $fax_fine = $hsh{fax_fine};\n       defined $fax_fine or $fax_fine = 1;\n       if (!i_writetiff_wiol_faxable($im->{IMG}, $io, $fax_fine)) {\n\t $im->{ERRSTR} = Imager->_error_as_msg();\n\t return undef;\n       }\n     }\n     else {\n       unless (i_writetiff_wiol($im->{IMG}, $io)) {\n\t $im->_set_error(Imager->_error_as_msg);\n\t return;\n       }\n     }\n     return $im;\n   },\n   multiple =>\n   sub {\n     my ($class, $io, $opts, @ims) = @_;\n\n     Imager->_set_opts($opts, \"tiff_\", @ims);\n     Imager->_set_opts($opts, \"exif_\", @ims);\n\n     my @work = map $_->{IMG}, @ims;\n     my $tiff_class = $opts->{class};\n     defined $tiff_class or $tiff_class = \"\";\n\n     my $result;\n     if ($tiff_class eq \"fax\") {\n       my $fax_fine = $opts->{fax_fine};\n       defined $fax_fine or $fax_fine = 1;\n       $result = i_writetiff_multi_wiol_faxable($io, $fax_fine, @work);\n     }\n     else {\n       $result = i_writetiff_multi_wiol($io, @work);\n     }\n     unless ($result) {\n       $class->_set_error($class->_error_as_msg);\n       return;\n     }\n\n     return 1;\n   },\n  )",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/TIFF/TIFF.pm",
+      "package" : "Imager::File::TIFF"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'jpeg',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"jpeg_\", $im);\n     $im->_set_opts(\\%hsh, \"exif_\", $im);\n\n     my $quality = $hsh{jpegquality};\n     defined $quality or $quality = 75;\n\n     if ( !i_writejpeg_wiol($im->{IMG}, $io, $quality)) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n\n     return $im;\n   },\n  )",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/JPEG/JPEG.pm",
+      "package" : "Imager::File::JPEG"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'sgi',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"sgi_\", $im);\n\n     unless (i_writesgi_wiol($io, $im->{IMG})) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n     return $im;\n   },\n  )",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/SGI/SGI.pm",
+      "package" : "Imager::File::SGI"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'gif',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"gif_\", $im);\n\n     unless (i_writegif_wiol($io, \\%hsh, $im->{IMG})) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n     return $im;\n   },\n   multiple =>\n   sub {\n     my ($class, $io, $opts, @ims) = @_;\n\n     Imager->_set_opts($opts, \"gif_\", @ims);\n\n     my @work = map $_->{IMG}, @ims;\n     unless (i_writegif_wiol($io, $opts, @work)) {\n       Imager->_set_error(Imager->_error_as_msg);\n       return;\n     }\n\n     return 1;\n   },\n  )",
+      "file" : "/var/tmp/arv_rR2Xup/Imager-0.94/GIF/GIF.pm",
+      "package" : "Imager::File::GIF"
+   }
+]

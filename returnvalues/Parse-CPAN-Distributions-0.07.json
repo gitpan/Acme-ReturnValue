@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(\"Everybody loves QA Automation!\")",
+      "file" : "/var/tmp/arv_ETOgVo/Parse-CPAN-Distributions-0.07/lib/Parse/CPAN/Distributions.pm",
+      "package" : "Parse::CPAN::Distributions"
+   }
+]

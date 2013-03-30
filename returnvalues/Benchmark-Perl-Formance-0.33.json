@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "class Fib {\n        method fib(Int $n) {\n                $n < 2\n                  ? 1\n                    : $self->fib($n-1) + $self->fib($n-2);\n        }\n}\n\nsub main\n{\n        my ($options) = @_;\n\n        $goal  = $options->{fastmode} ? 20 : 35;\n        $count = 5;\n\n        my $result;\n        my $fib = Fib->new;\n        my $t   = timeit $count, sub { $result = $fib->fib($goal) };\n        return {\n                Benchmark => $t,\n                result    => $result,\n                goal      => $goal,\n               };\n}\n\n1",
+      "file" : "/var/tmp/arv_A8PjiA/Benchmark-Perl-Formance-0.33/lib/Benchmark/Perl/Formance/Plugin/FibMXDeclare.pm",
+      "package" : "Benchmark::Perl::Formance::Plugin::FibMXDeclare"
+   }
+]

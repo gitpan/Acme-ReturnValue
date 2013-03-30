@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub http_post {\n    my $self = shift;\n    my @args = @_;\n\n    return $self->ua->request(HTTP::Request::Common::POST(@args));\n}",
+      "file" : "/var/tmp/arv_JZAddt/Net-Google-Blogger-0.09/lib/Net/Google/Blogger.pm",
+      "package" : "Net::Google::Blogger"
+   }
+]

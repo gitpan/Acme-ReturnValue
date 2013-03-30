@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our %NFL_FIELDS_TXT = (\n\t'first' => 10,\n\t'last' => 30,\n\t'received' => 50,\n\t'bytes' => 60,\n\t'pkts' => 70,\n\t'outbytes' => 80,\n\t'outpkts' => 90,\n\t'flows' => 100,\n\t'srcport' => 110,\n\t'dstport' => 120,\n\t'tcpflags' => 130,\n\t'srcip' => 140,\n\t'dstip' => 150,\n\t'nexthop' => 160,\n\t'srcmask' => 170,\n\t'dstmask' => 180,\n\t'tos' => 190,\n\t'dsttos' => 200,\n\t'srcas' => 210,\n\t'dstas' => 220,\n\t'nextas' => 230,\n\t'prevas' => 240,\n\t'bgpnexthop' => 250,\n\t'proto' => 260,\n\t'srcvlan' => 270,\n\t'dstvlan' => 280,\n\t'insrcmac' => 290,\n\t'outsrcmac' => 300,\n\t'indstmac' => 310,\n\t'outdstmac' => 320,\n\t'mpls' => 330,\n\t'inif' => 340,\n\t'outif' => 350,\n\t'dir' => 360,\n\t'fwd' => 370,\n\t'router' => 380,\n\t'systype' => 390,\n\t'sysid' => 400,\n\t'connid' => 410,\n\t'nsrcport' => 420,\n\t'ndstport' => 430,\n\t'icmptype' => 440,\n\t'icmpcode' => 450,\n\t'vrf' => 460,\n\t'iacl' => 480,\n\t'iace' => 481,\n\t'ixace' => 482,\n\t'eacl' => 490,\n\t'eace' => 491,\n\t'exace' => 492,\n\t'username' => 495,\n\t'event' => 500,\n\t'xevent' => 510,\n\t'flowstart' => 520,\n\t'xsrcport' => 530,\n\t'xdstport' => 540,\n\t'xsrcip' => 560,\n\t'xdstip' => 570,\n\t'nevent' => 580,\n\t'nsrcip' => 600,\n\t'ndstip' => 610,\n\t'cl' => 620,\n\t'sl' => 630,\n\t'al' => 640,\n)",
+      "file" : "/var/tmp/arv_B8U_ci/Net-NfDump-0.05/lib/Net/NfDump/Fields.pm",
+      "package" : "Net::NfDump::Fields"
+   }
+]

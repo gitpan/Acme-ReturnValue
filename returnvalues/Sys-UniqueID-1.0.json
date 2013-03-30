@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$netaddr= sprintf '%02X%02X%02X%02X', (split /\\./, hostip)",
+      "file" : "/var/tmp/arv_zLS0Wl/Sys-UniqueID-1.0/UniqueID.pm",
+      "package" : "Sys::UniqueID"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _format_line { my($self, $address, $line) = @_;\n\t$address ||= 0;\n\tmy $text = $line->text;\n\t$text = expand($text);\t\t\t\t\t\t\t\t\n\t$text =~ s/\\s+$//;\n\tsubstr($text, 34) = ' ...' if(length($text) > 37);\n\treturn sprintf(\"0x%04X: %-38s | \", $address, $text);\n}",
+      "file" : "/var/tmp/arv_R53BCb/CPU-Z80-Assembler-2.13/lib/CPU/Z80/Assembler/List.pm",
+      "package" : "CPU::Z80::Assembler::List"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _unregister_previous\n{\n    my $self = shift;\n    my @items = @_;\n\n    foreach my $item (@items) {\n        delete $self->{previous}{$item};\n    }\n}",
+      "file" : "/var/tmp/arv_Xg5gdn/LaTeX-Pod-0.21/lib/LaTeX/Pod.pm",
+      "package" : "LaTeX::Pod"
+   }
+]

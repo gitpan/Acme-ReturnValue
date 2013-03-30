@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub type { \n\tBusiness::CreditCard::cardtype(shift->number)\n}",
+      "file" : "/var/tmp/arv_tLnAU9/Business-CreditCard-Object-1.00/lib/Business/CreditCard/Object.pm",
+      "package" : "Business::CreditCard::Object"
+   }
+]

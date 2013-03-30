@@ -1,0 +1,56 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub output {print @_}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Demos/Screen.pm",
+      "package" : "PDL::Demos::Routines"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY \n{\n    my $self = shift;\n    $self->close;\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/IO/HDF/HDF.pm",
+      "package" : "PDL::IO::HDF"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new($$) {\n\tmy($type,$deg,$nleft,$nright) = @_;\n\tmy $npoints = $nright + $nleft + 1;\n\tmy $x = ((PDL->zeroes($npoints )->xvals) - $nleft)->float;\n\tmy $mat1 = ((PDL->zeroes($npoints,$deg+1)->xvals))->float;\n\tfor(0..$deg-1) {\n\t\t(my $tmp = $mat1->slice(\":,($_)\")) .= ($x ** $_);\n\t}\n\tmy $y;\n\treturn PDL::Filter::Linear::new($type,{Weights => $y,\n\t\t\tPoint => $nleft});\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Lib/Filter/Linear.pm",
+      "package" : "PDL::Filter::Linear"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub predict ($$) {\n\tmy($this,$data) = @_;\n\tmy $ldata = $data->lags(0,$this->{LagInterval},$this->{NTotLags});\n\tprint \"PREDICT, weights: $this->{Weights}\\n\";\n\tinner($ldata->xchg(0,1)->slice(\"$this->{LagsBehind}:-1\"),\n\t      $this->{Weights},\n\t  (my $pred=PDL->null));\n\treturn wantarray ?  ($pred,$ldata->slice(\":,(0)\")) :\n\t\t$pred ;\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Lib/Filter/LinPred.pm",
+      "package" : "PDL::Filter::LinSmooth"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_transformation {\n\tmy($this,$trans) = @_;\n\tpush @{$this->{Transforms}},$trans;\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Graphics/TriD/TriD.pm",
+      "package" : "PDL::Graphics::TriD::Basic"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub twiddle {\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Graphics/TriD/TriD/OOGL.pm",
+      "package" : "PDL::Graphics::TriD::OOGL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub translate {\n    my ($pars,$tbl) = @_;\n\n    foreach my $rule (@$tbl) {\n\t$rule->apply($pars);\n    }\n\n    print \"GOING OUT!\\n\" if $::PP_VERBOSE;\n    return $pars;\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Basic/Gen/PP.pm",
+      "package" : "PDL::PP::Rule"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub freecode {\n}",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Basic/Gen/PP/Var.pm",
+      "package" : "C::Var"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package C::StructObj",
+      "file" : "/var/tmp/arv_hf6GHo/PDL-2.006/Basic/Gen/PP/Struct.pm",
+      "package" : "C::StructType"
+   }
+]

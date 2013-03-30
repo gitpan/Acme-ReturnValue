@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n    my ($self) = @_;\n\n    Spread::disconnect($self->{mailbox}) if defined $self->{mailbox};\n\n}\n\n\nsub _decode_reg_memb_mess {\n    my ($self, $service_type, $message) = @_;\n\n\n    my @data;\n\n    if (($service_type & CAUSED_BY_JOIN) || \n        ($service_type & CAUSED_BY_LEAVE) ||\n        ($service_type & CAUSED_BY_DISCONNECT)) {\n\n        @data = unpack(\"I[3]A*\", $message);\n\n    } elsif ($service_type & CAUSED_BY_NETWORK) {\n\n        @data = unpack(\"I[3]A*\", $message);\n\n    }\n\n    return \\@data;\n\n}\n\nsub _decode_transition_mess {\n    my ($self, $service_type, $message) = @_;\n\n\n    my @data = unpack(\"I3\", $message);\n\n    return \\@data;\n\n}\n\n1",
+      "file" : "/var/tmp/arv_2ZOxiV/Spread-Messaging-0.03/lib/Spread/Messaging/Transport.pm",
+      "package" : "Spread::Messaging::Transport"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub oe_send_mail {\n\tmy ($to, $subject, @body) = @_;\n\tmy $cfg = config_read('MAIL');\n\t$subject ||=$0;\n\t$subject = $cfg->{'EDTK_TYPE_ENV'} . \" - $subject \";\n\n\tmy $transport = Email::Sender::Transport::SMTP->new({\n\t\thost => $cfg->{'EDTK_MAIL_SMTP'}\n\t});\n\t\n\tmy $email = Email::Simple->create(\n\t\theader => [\n\t\t\tTo\t=> $to \t\t|| $cfg->{'EDTK_MAIL_SENDER'}, \n\t\t\tFrom\t=> $cfg->{'EDTK_MAIL_SENDER'}, \n\t\t\tSubject\t=> $subject \t|| $0\n\t\t],\n\t\tbody => join('', @body)\n\t);\n\t\n\tif ($cfg->{'EDTK_MAIL_SMTP'} eq 'warn') {\n\t\tprint $email->as_string() . \"\\n\" ;\n\t} else {\n\t\teval { sendmail($email, { transport => $transport }); } ;\n\t\tif ($@) {\n\t\t\tdie \"ERROR: sendmail failed. Reason is $@\\n\";\n\t\t}\n\t}\n}",
+      "file" : "/var/tmp/arv_htBEGq/oEdtk-0.8035/lib/oEdtk/Messenger.pm",
+      "package" : "oEdtk::Messenger"
+   }
+]

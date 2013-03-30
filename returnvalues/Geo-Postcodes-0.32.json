@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _ask\n{\n  my $question = shift;\n  print \"$question (y/n): \";\n  my $answer = <STDIN>;\n  return $answer =~ /y/i; \n}",
+      "file" : "/var/tmp/arv_gu22VY/Geo-Postcodes-0.32/lib/Geo/Postcodes/Update.pm",
+      "package" : "Geo::Postcodes::Update"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub sort_coderefs {\n  my $inputs=shift;\n  my $output=shift;\n  my @sources;\n\n  @sources = map {[$_]} @$inputs;\n  return sort_inner(\\@sources, $output);\n}",
+      "file" : "/var/tmp/arv_MX32q1/Sort-Merge-0.01/lib/Sort/Merge.pm",
+      "package" : "Sort::Merge"
+   }
+]

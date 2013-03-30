@@ -1,0 +1,104 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init {\n    my $self = shift;\n    my %hash = @_;\n    $self->SUPER::init( \"seq\" );\n    \n    my %attrs = $self->createValidAttributes( { %hash },\n\t\t\t\t\t      [@timelineAttributes] );\n    $self->setAttributes( %attrs );\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Seq.pm",
+      "package" : "SMIL::Seq"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "@timelineAttributes = ( \"id\", \"begin\", \"endsync\", \"end\", \"repeat\" )",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/TimelineBase.pm",
+      "package" : "SMIL::TimelineBase"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getAttributeValue\n{\n    my $self = shift;\n    my $attr = shift;\n    return $self->{ _attributes }->{ $attr };\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Region.pm",
+      "package" : "SMIL::Region"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init {\n    my $self = shift;\n    $self->SUPER::init( \"switch\" );\n\n    my $switch_param = shift;\n    my $medias = shift;\n    \n    foreach $item ( @$medias ) {\n\tmy $type = ref( $item );\n\tif( ref( $item ) =~ /HASH/ ) {\n\t    $self->setTagContents( $self->{$item_index}++ => \n\t\t\t\t   getMediaObject( %$item, \n\t\t\t\t\t\t   $switch => \n\t\t\t\t\t\t   $switch_param ));\n\t}\n\telse {\n            $self->setTagContents( $self->{$item_index}++ => $item );\n\t}\n    }\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Switch.pm",
+      "package" : "SMIL::Switch"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub addRegion {\n    my $self = shift;\n    my %hash = @_;\n\n\t\t\t\t\n    $hash{ $id } = $hash{ $name } if $hash{ $name };\n\t\t\t\t\n    if( $hash{ $module_defined_src } ) {\n\tmy $ref = $hash{ $module_defined_src };\n\tmy $content;\n\tmy $type;\n\t\n\tif( $ref =~ /^http/ ) {\n\t    eval 'use LWP::Simple;';\n\t    my $lwp_installed = !$@;\n\t    \n\t    if( $lwp_installed ) {\n\t\t$content = LWP::Simple::get $ref;\n\t\t\n\t\t$type = head( $ref );\n\t    }\n\t    else {\n\t\tdie \"LWP not installed.\\nYou may not use http sources\" .\n\t\t    \" in your region definitions.\\nSmil.pm cannot \" .\n\t\t    \"connect and determine file size without LWP\\n\";\n\t    }\n\t}\n\telse {\n\t    if( open FILE, $ref ) {\n\t\tbinmode FILE;\n\t\tundef $/;\n\t\t$content = <FILE>;\n\t\tclose FILE;\n\t    }\n\t    else {\n\t\tdie \"Couldn't find the file $ref.\\n\" .\n\t\t    \"Make sure that $ref is relative to the script.\\n\" .\n\t\t    \"Using src to define a region does not set the\\n\".\n\t\t    \"src for the SMIL file but is used to \" .\n\t\t    \"determine\\nfile size.\\n\";\n\t    }\n\t    \n\t    $type = \"\\L$1\" if $ref =~ /\\.(\\w*)$/;\n\t}\n\t\n\tif( $content ) {\n\t    ( $height, $width ) = process_for_size( $type, $content );\n\t    \n\t    if( $height && $width ) {\n\t\t$hash{ height } = $height unless defined( $hash{ height } );\n\t\t$hash{ width } = $width unless defined( $hash{ width } );\n\t    }\n\t}\n    }\n    \n    if( $hash{ $module_defined_align } ) {\n\tmy $ht = $self->getRootHeight();\n\tmy $wh = $self->getRootWidth();\n\t\n\tdie \"Need height to calculate alignment.\" \n\t    unless defined( $hash{ height } );\n\tif( 'middle' eq $hash{ $module_defined_align } and\n\t    !defined( $hash{ top } ) ) {\n\t    $hash{ top } = int( ( $ht / 2 ) - ( $hash{ height } / 2 ) );\n\t}\n\t\n\tdie \"Need width to calculate alignment. \" \n\t    unless defined( $hash{ width } );\n\tif( !defined( $hash{ left } ) ) {\n\t    if( $hash{ $module_defined_align } =~ /center/i ) {\n\t\t$hash{ left } = int( ( $wh / 2 ) - ( $hash{ width } / 2 ) );\n\t    }\n\t    elsif( $hash{ $module_defined_align } =~ /right/i ) {\n\t\t$hash{ left } = $wh - $hash{ width };\n\t    }\n\t    elsif( $hash{ $module_defined_align } =~ /left/i ) {\n\t\t$hash{ left } = 0;\n\t    }\n\t}\n\n\tif( defined( $hash{ left } ) && defined( $hash{ $left_offset } ) ) {\n\t    $hash{ left } += $hash{ $left_offset };\n\t}\n\t\n\tif( defined( $hash{ top } ) && defined( $hash{ $top_offset } ) ) {\n\t    $hash{ top } += $hash{ $top_offset };\n\t}\n    }\n    \n    my %attrs = $self->createValidAttributes( { %hash },  \n\t\t\t\t\t      [@regionAttributes] );\n    $ZERO_STRING = \"ZERO_STRING\";\n    my $region = new SMIL::Region;\n    $region->setAttributes( %attrs );\n    $region->setAttribute( 'top' => $ZERO_STRING ) unless $hash{ 'top' };\n    $region->setAttribute( 'left' => $ZERO_STRING ) unless $hash{ 'left' };\n    \n    my $current_regions = $self->getContentObjectByName( $regions );\n    \n    if( !( $current_regions && @$current_regions ) ) {\n\t$current_regions = [];\n    }\n    \n    if( $check_errors ) {\n\tforeach $reg ( @$current_regions ) {\n\t    croak \"Region \\\"\" . $attrs{ $id } . \n\t\t\"\\\" has the same name as another existing region\"\n\t\t    if $attrs{ $id } && \n\t\t\t$reg->getAttribute( $id ) eq $attrs{ $id };\n\t}\n    }\n    \n    push @$current_regions, $region;\n    $self->setTagContents( $regions => $current_regions );\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Layout.pm",
+      "package" : "SMIL::Layout"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getAsString {\n    my $self = shift;\n    my $return_string;\n    my $tab = $self->getTabBuffer();\n  \n    $return_string .= \n\t\t\t\t\t\t\t\t\"$tab<\" . $self->getTag() . $self->_build_attributes() . \">\\n\";\n    $self->increaseTabBuffer();\n\t\t\t\t\n    my $contents_ref = $self->{$contents};\n    my $order_ref = $self->{$order};\n    foreach $item ( @$order_ref ) {\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tmy $obj = $$contents_ref{ $item };\n\t\t\t\t\t\t\t\tmy $type = ref $obj;\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tif( $type =~ /ARRAY/ ) {\n\t\t\t\t\t\t\t\t\t\t\t\tforeach $nibble ( @$obj ) {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$return_string .= $nibble->getAsString() . \"\\n\" if $nibble;\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\telse {\n\t\t\t\t\t\t\t\t\t\t\t\t$return_string .= $obj->getAsString() . \"\\n\" if $obj;\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t}\n    }\n\n    $self->decreaseTabBuffer();\n    $return_string .= \"$tab</\" . $self->getTag() . \">\";\n    \n    return $return_string;\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/XMLContainer.pm",
+      "package" : "SMIL::XMLContainer"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "@mediaAttributes = ( @timeAtts, @systemSwitchAttributes,\n\t\t     \"fill\", \"src\", \"region\", \"id\", \"transition\" )",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/MediaAttributes.pm",
+      "package" : "SMIL::MediaAttributes"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "@systemSwitchAttributes = ( \"system-bitrate\", \n\t\t\t    \"system-required\", \n\t\t\t    \"system-language\" )",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/SystemSwitches.pm",
+      "package" : "SMIL::SystemSwitches"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init {\n    my $self = shift;\n    $self->SUPER::init( \"meta\" );\n    \n    my $name = shift;\n    my $content = shift;\n\n    $self->setAttributes( 'name' => $name,\n\t\t\t 'content' => $content );\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Meta.pm",
+      "package" : "SMIL::Meta"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub setSwitchedLayout {\n    my $self = shift;\n    my %hash = @_;\n    \n    my $switch_attribute = $hash{ $switch };\n    my $thelayout = $hash{ $layouts };\n    \n    my $switch_obj = new SMIL::Switch( $switch_attribute, $thelayout );\n    $self->setTagContents( $layout => $switch_obj );\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Head.pm",
+      "package" : "SMIL::Head"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$CHAPTER_ALL = 'all'",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/QT.pm",
+      "package" : "QT"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init {\n    my $self = shift;\n    my %hash = @_;\n    $self->SUPER::init( \"par\" );\n\n    my %attrs = $self->createValidAttributes( { %hash },\n\t\t\t\t\t     [@timelineAttributes, \n\t\t\t\t\t      @systemSwitchAttributes] );\n\n    $self->setAttributes( %attrs );\n\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Par.pm",
+      "package" : "SMIL::Par"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub addSwitchedMedia {\n    my $self = shift;\n    my %hash = @_;\n    \n    my $switch_attribute = $hash{ $switch };\n    my $media = $hash{ $medias };\n \n    $self->initTimeline( new SMIL::Par ) \n\t\t\t\t\t\t\t\tunless( $self->{$timelineStack} && @{$self->{$timelineStack}} );\n    croak \"Need to call startParallel or startSequence before adding media\\n\" \n\t\t\t\t\t\t\t\tif !$check_errors && !@{$self->{$timelineStack}};\n\t\t\t\t\n    my $switch_obj = new SMIL::Switch( $switch_attribute, $media );\n    my $timeline_head = ${$self->{$timelineStack}}[ -1 ];\n    $timeline_head->setTagContents( $self->{$counter}++ => $switch_obj );\n\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Body.pm",
+      "package" : "SMIL::Body"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getRootWidth {\n    my $self = shift;\n    return $self->getAttribute( \"width\" );\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/RootLayout.pm",
+      "package" : "SMIL::RootLayout"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n    my $type = shift;\n    my $self = {};\n    bless $self, $type;\n\n    $self->{code} = shift;\n    return $self;\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Code.pm",
+      "package" : "SMIL::Code"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init {\n    my $self = shift;\n    my %hash = @_;\n    $self->SUPER::init( \"a\" );\n\n    my %attrs = $self->createValidAttributes( { %hash },\n\t\t\t\t\t     [@validHrefAttrs\n\t\t\t\t\t] );\n    $self->setAttributes( %attrs );\n\n    my $ref = new SMIL::UnanchoredMedia( %hash );\n    $self->setTagContents( $media => $ref );\n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Href.pm",
+      "package" : "SMIL::Href"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getAsString {\n    \n    my $self = shift;\n    my $returnString = \"\";\n    my $notInline = 0;\n    \n    print \"Getting as string\\n\";\n    \n    if( !$self->{_inline} ) {\n\t$notInline = 1;\n    }\n    if( $self->{_inline} ) {\n\teval 'use MIME::Base64';\n\tmy $canEncode = !$@; \n\t\n\tif( $canEncode ) {\n\t    my( $returnString, $type ) = $self->getContent;\n\t    \n\t    $returnString = &encode_base64( $returnString );\n\t    \n\t    $returnString = \"data:$type;base64,$content\";\n\t}\n\telse {\n\t    $notInline = 1;\n\t}\n    }\n    \n    if( $notInline ) {\n\t$returnString = $self->SUPER::getAsString;\n    }\n    \n    return $returnString;\n    \n}",
+      "file" : "/var/tmp/arv_KQIV21/perlysmil/lib/SMIL/Media.pm",
+      "package" : "SMIL::Media"
+   }
+]

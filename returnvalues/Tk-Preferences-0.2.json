@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ApplyWidget {\n    my ($widget, $p) = @_;\n    my ($class,$type) = split (/::/,ref($widget));\n    foreach (keys %{$p->{'-prefs'}}){ if ($widget->{$_}){ $type = $_; last; } }\n    if ((exists($p->{\"-$type\"})) && (ref($p->{\"-$type\"}) eq \"CODE\")){\n        warn (\"executing callback for $type\") if $p->{'-debug'};\n        &{$p->{\"-$type\"}}( @_ );\n    }else{\n        warn (\"configuring $type\") if $p->{'-debug'};\n        $widget->configure(%{$p->{'-prefs'}->{$type}}) if exists($p->{'-prefs'}->{$type});\n    }\n}",
+      "file" : "/var/tmp/arv_BL9J_w/Tk-Preferences-0.2/Preferences.pm",
+      "package" : "Tk::Preferences"
+   }
+]

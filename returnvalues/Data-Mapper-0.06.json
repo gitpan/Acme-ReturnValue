@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_lJUFLE/Data-Mapper-0.06/lib/Data/Mapper.pm",
+      "package" : "Data::Mapper"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_lJUFLE/Data-Mapper-0.06/lib/Data/Mapper/Data.pm",
+      "package" : "Data::Mapper::Data"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_lJUFLE/Data-Mapper-0.06/lib/Data/Mapper/Schema.pm",
+      "package" : "Data::Mapper::Schema"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_lJUFLE/Data-Mapper-0.06/lib/Data/Mapper/Adapter.pm",
+      "package" : "Data::Mapper::Adapter"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_lJUFLE/Data-Mapper-0.06/lib/Data/Mapper/Class.pm",
+      "package" : "Data::Mapper::Class"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_lJUFLE/Data-Mapper-0.06/lib/Data/Mapper/Adapter/DBI.pm",
+      "package" : "Data::Mapper::Adapter::DBI"
+   }
+]

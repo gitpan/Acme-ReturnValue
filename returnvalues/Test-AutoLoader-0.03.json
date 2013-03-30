@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"I pass the test.  I will diminish, and go into the West, and remain Galadriel\"",
+      "file" : "/var/tmp/arv_Y2gS3w/Test-AutoLoader-0.03/AutoLoader.pm",
+      "package" : "Test::AutoLoader"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_tNT4fs/IO-Async-Loop-AnyEvent-0.03/lib/IO/Async/Loop/AnyEvent.pm",
+      "package" : "IO::Async::Loop::AnyEvent"
+   }
+]

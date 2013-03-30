@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub download_recording {\n    my ( $self, $recording, $destination ) = @_;\n    my $command_connection = $self->connection;\n\n    my $uri      = URI->new( $recording->url );\n    my $filename = $uri->path;\n\n    my $fh = IO::File->new(\"> $destination\") || die $!;\n\n    my $data_connection = Net::MythTV::Connection->new(\n        hostname => $self->hostname,\n        port     => $self->port,\n    );\n\n    my ( $ann_status, $socket_id, $zero, $total )\n        = $data_connection->send_command(\n        'ANN FileTransfer ' . Sys::Hostname::hostname . '[]:[]' . $filename );\n    confess(\"Unable to announce\") unless $ann_status eq 'OK';\n\n    if ( $total < 0 ) {\n        $total = unpack( 'L', pack( 'l', $total ) );\n    }\n\n\n    my ( $seek_status1, $seek_status2 )\n        = $command_connection->send_command( 'QUERY_FILETRANSFER '\n            . $socket_id . '[]:[]' . 'SEEK' . '[]:[]' . '0' . '[]:[]'\n            . '0' );\n    confess(\"Unable to announce\")\n        unless $seek_status1 == 0 && $seek_status2 == 0;\n\n    while ($total) {\n        my ($request_length)\n            = $command_connection->send_command( 'QUERY_FILETRANSFER '\n                . $socket_id . '[]:[]'\n                . 'REQUEST_BLOCK' . '[]:[]'\n                . 65535 );\n\n        last unless $request_length;\n        my $read = 0;\n        while ( $read < $request_length ) {\n            my $bytes\n                = $data_connection->socket->read( my $buffer,\n                $request_length )\n                || die $!;\n            $fh->print($buffer) || die $!;\n            $read += $bytes;\n\n        }\n        $total -= $read;\n    }\n}",
+      "file" : "/var/tmp/arv_eEzBdT/Net-MythTV-0.33/lib/Net/MythTV.pm",
+      "package" : "Net::MythTV"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub read_data {\n    my $self   = shift;\n    my $socket = $self->socket;\n\n    my $length;\n\n    my $result = $socket->read( $length, 8 );\n    if ( !defined $result ) {\n        warn \"Error reading from MythTV backend: $!\\n\";\n        return '';\n    } elsif ( $result == 0 ) {\n\n        return '';\n    }\n    $length = int($length);\n\n    my $ret;\n    my $data;\n    while ( $length > 0 ) {\n        my $bytes\n            = $socket->read( $data, ( $length < 262144 ? $length : 262144 ) );\n\n        last unless ( defined $bytes );\n\n        last if ( $bytes < 1 );\n\n        $ret .= $data;\n        $length -= $bytes;\n    }\n    return $ret;\n}",
+      "file" : "/var/tmp/arv_eEzBdT/Net-MythTV-0.33/lib/Net/MythTV/Connection.pm",
+      "package" : "Net::MythTV::Connection"
+   }
+]

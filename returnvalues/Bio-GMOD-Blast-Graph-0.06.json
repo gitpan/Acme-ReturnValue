@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$bucketFourMax = 1.0",
+      "file" : "/var/tmp/arv_eLVLQu/Bio-GMOD-Blast-Graph-0.06/lib/Bio/GMOD/Blast/Graph/MapDefs.pm",
+      "package" : "Bio::GMOD::Blast::Graph::MapDefs"
+   }
+]

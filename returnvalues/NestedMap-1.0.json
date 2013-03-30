@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub nestedmap(&@) {\n    my $f = shift;\n    map {\n        local @NestedMap::stack = ($_, @NestedMap::stack);\n        $f->($_);\n    } @_\n}",
+      "file" : "/var/tmp/arv_0HvwrG/NestedMap/lib/NestedMap.pm",
+      "package" : "NestedMap"
+   }
+]

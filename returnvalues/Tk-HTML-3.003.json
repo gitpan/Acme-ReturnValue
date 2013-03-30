@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub traverse\n{\n my ($h,$elem,$start,$depth) = @_;\n my $e = ($start) ? '' : '/';\n if (ref $elem)\n  {\n   my $tag = $elem->tag;\n   my $posn = $h->{widget}->index('insert');\n   if ($start)\n    {\n     $elem->{'_Start_'} = $posn;\n    }\n   else\n    {\n     $elem->{'_End_'} = $posn;\n    }\n   return $h->$tag($start,$elem);\n  }\n else\n  {\n   my $text = $elem;\n   if (defined(substr($text,0,1)))\n    {\n     if (@{$h->{'Text'}})\n      {\n       $h->{'Text'}[-1]->Call($text);\n      }\n     else\n      {\n       return 0 unless ($h->{'BODY'});\n       unless ($h->{'PRE'})\n        {\n         $text =~ s/\\n/ /mg;\n         $text =~ s/^\\s+//g;\n         $text =~ s/\\s\\s+/ /g;\n         $text =~ s/\\s+$//g;\n        }\n       $text = HTML::Entities::decode($text);\n       if (length(substr($text,0,1)))\n        {\n         my $w = $h->{'widget'};\n         $w->insert('insert',' ',qw(text)) unless ($h->{NL});\n         $w->insert('insert',$text,qw(text));\n         $h->{NL} = 0;\n         $h->{NL} = 1 if ($text =~ /\\n$/);\n        }\n      }\n    }\n   return 1;\n  }\n}",
+      "file" : "/var/tmp/arv_htwPnM/Tk-HTML-3.003/HTML/Handler.pm",
+      "package" : "Tk::HTML::Handler"
+   }
+]

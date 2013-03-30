@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'I go to prepare a perl module for you, if it were not so, I would have told you'",
+      "file" : "/var/tmp/arv_cCH6Qc/Dist-Zilla-PluginBundle-Author-KENTNL-1.7.1/lib/Dist/Zilla/PluginBundle/Author/KENTNL.pm",
+      "package" : "Dist::Zilla::PluginBundle::Author::KENTNL"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[Its like fail, but betterer]",
+      "file" : "/var/tmp/arv_cIjAeC/Acme-CPANPLUS-Module-With-Failing-Configure-Requires-0.02/lib/Acme/CPANPLUS/Module/With/Failing/Configure/Requires.pm",
+      "package" : "Acme::CPANPLUS::Module::With::Failing::Configure::Requires"
+   }
+]

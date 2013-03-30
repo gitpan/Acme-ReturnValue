@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register {\n    my $registry = shift;\n    $registry->add( preload => 'user_name' );\n}",
+      "file" : "/var/tmp/arv_YbCQae/Kwiki-Users-Remote-0.04/lib/Kwiki/UserName/Remote.pm",
+      "package" : "Kwiki::UserName::Remote"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub id {\n    exists $ENV{REMOTE_USER}\n        ? $ENV{REMOTE_USER}\n        : $self->hub->config->user_default_name;\n}",
+      "file" : "/var/tmp/arv_YbCQae/Kwiki-Users-Remote-0.04/lib/Kwiki/Users/Remote.pm",
+      "package" : "Kwiki::Users::Remote"
+   }
+]

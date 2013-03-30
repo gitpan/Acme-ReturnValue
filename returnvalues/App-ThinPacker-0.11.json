@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub usage {\n    pod2usage(\n        -verbose => $_[0] || 0,\n        -output  => \\*STDERR,\n        -input   => Pod::Find::pod_where(\n            { -inc => 1 },\n            __PACKAGE__,\n        ),\n    );\n}",
+      "file" : "/var/tmp/arv_NFpQBu/App-ThinPacker-0.11/lib/App/ThinPacker.pm",
+      "package" : "App::ThinPacker"
+   }
+]

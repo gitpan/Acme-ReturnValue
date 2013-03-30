@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "FILTER {\n    my @DATA;\n\n    s{ ($DATA_PAT) }{\n        my ($data_block, $contents) = ($1,$+);\n\n        # Special newline handling required under Windows...\n        if ($^O =~ /MSWin/) {\n            $contents =~ s{ \\r\\n }{\\n}gxms;\n        }\n\n        # Save the data...\n        push @DATA, $contents;\n\n        # Delete it from the source code, but leave the newlines...\n        $data_block =~ tr[\\n\\0-\\377][\\n]d;\n\n        $data_block;\n    }gxmse;\n\n    my %packages = (main=>1);\n    s{ (\\s* package \\s+ ($QUAL_IDENT)) }{\n        my ($package_decl, $package_name) = ($1,$2);\n        $packages{$package_name} = 1;\n        $package_decl;\n    }gxmse;\n\n    s{ ($POD_PAT) }{ my $text = $1; $text =~ tr[\\n\\0-\\377][\\n]d; $text }gxmse;\n\n    local *DATA_glob;\n    my $DATA_as_str = join q{}, @DATA;\n    *DATA_glob = \\$DATA_as_str;\n    *DATA_glob = \\@DATA;\n    open *DATA_glob, '<', \\$DATA_as_str\n        or require Carp\n        and croak( \"Can't set up *DATA handle ($!)\" );\n\n    for my $package (keys %packages) {\n        no strict 'refs'; \n        *{$package.'::DATA'} = *DATA_glob;\n    }\n\n}\n\n\n1",
+      "file" : "/var/tmp/arv_NhUIk2/Perl6-Pod-0.59/lib/Perl6/Pod.pm",
+      "package" : "Perl6::Pod"
+   }
+]

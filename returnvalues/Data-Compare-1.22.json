@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "register()",
+      "file" : "/var/tmp/arv_gghZNJ/Data-Compare-1.22/lib/Data/Compare/Plugins/Scalar/Properties.pm",
+      "package" : "Data::Compare::Plugins::Scalar::Properties"
+   }
+]

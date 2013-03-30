@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub length\n{\n my ($this) = @_;\n my $res = 0;\n foreach my $p (@{$this->{_as_path}})\n  {\n   $res += $p->length;\n  };\n return $res;\n}",
+      "file" : "/var/tmp/arv_S2nr5e/Net-BGP-0.14/lib/Net/BGP/ASPath.pm",
+      "package" : "Net::BGP::ASPath::AS"
+   }
+]

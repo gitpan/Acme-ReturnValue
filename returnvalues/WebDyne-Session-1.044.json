@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub session_id {\n\n\n    my $self=shift();\n    return $self->{'_session_id'};\n\n\n}",
+      "file" : "/var/tmp/arv_7NF14F/WebDyne-Session-1.044/lib/WebDyne/Session.pm",
+      "package" : "WebDyne::Session"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$_=\\%Constant",
+      "file" : "/var/tmp/arv_7NF14F/WebDyne-Session-1.044/lib/WebDyne/Session/Constant.pm",
+      "package" : "WebDyne::Session::Constant"
+   }
+]

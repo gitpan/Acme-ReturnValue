@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode_entities_harder {\n  $_[0] =~ s/([^\\n\\t !\\#\\$%\\'-.0-=?-{}~])/$Char2ent{$1}/g;\n  return;\n}",
+      "file" : "/var/tmp/arv_hFEufO/Pod-HTML2Pod-4.05/lib/Pod/HTML2Pod.pm",
+      "package" : "Pod::HTML2Pod"
+   }
+]

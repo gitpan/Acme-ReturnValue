@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete {\n    my $self = shift;\n    my $key = shift;\n    delete(${$self->{File}}{$key});\n}",
+      "file" : "/var/tmp/arv_r6q6w0/VMS-FlatFile-0.01/FlatFile.pm",
+      "package" : "VMS::FlatFile"
+   }
+]

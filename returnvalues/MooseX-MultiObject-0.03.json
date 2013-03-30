@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub setup_multiobject {\n    my ($meta, %args) = @_;\n    my $attribute = $args{attribute} || {\n        init_arg => 'objects',\n        coerce   => 1,\n        is       => 'ro',\n    };\n    $attribute->{name}    ||= 'set';\n    $attribute->{isa}     ||= 'Set::Object';\n    $attribute->{default} ||= sub { set };\n    $attribute->{coerce}  //= 1;\n    $attribute->{handles} ||= {};\n\n    confess 'you already have a set attribute name.  bailing out.'\n        if $meta->has_set_attribute_name;\n\n    my $name = delete $attribute->{name};\n    $meta->add_attribute( $name => $attribute );\n    $meta->set_set_attribute_name( $name ); \n\n    confess 'you must not specify both a class and a role'\n        if exists $args{class} && exists $args{role};\n\n    my ($role, $tc) = @_;\n\n    if(my $class_name = $args{class}){\n        my $class = blessed $class_name ? $class_name : $class_name->meta;\n        $role = does_role( $class, 'MooseX::APIRole::Meta' ) ?\n            $class->api_role : create_role_for($class);\n        $tc = Moose::Meta::TypeConstraint::Class->new( class => $class_name );\n    }\n    elsif(my $role_name = $args{role}){\n        $role = blessed $role_name ? $role_name : $role_name->meta;\n        confess \"provided role '$role' is not a Moose::Meta::Role!\"\n            unless $role->isa('Moose::Meta::Role');\n        $tc = Moose::Meta::TypeConstraint::Role->new( role => $role );\n    }\n    else {\n        confess 'you must specify either a class or a role'; \n    }\n\n    $tc->message(sub {\n        my $arg = shift;\n        return \"'$arg' is not an object that can be added to this multiobject\"\n    });\n\n    $meta->add_method( add_managed_object => sub {\n        my ($self, $thing) = @_;\n        $tc->assert_valid($thing);\n        $self->$name->insert($thing);\n        return $thing;\n    });\n\n    $meta->add_method( get_managed_objects => sub {\n        my ($self) = @_;\n        return $self->$name->members;\n    });\n\n    my @methods = grep { $_ ne 'meta' } (\n        $role->get_method_list,\n        (map { $_->name } $role->get_required_method_list),\n    );\n\n    for my $method (@methods) {\n        my $metamethod = MooseX::MultiObject::Meta::Method::MultiDelegation->new(\n            name          => $method,\n            package_name  => $meta->name,\n            object_getter => 'get_managed_objects',\n            delegate_to   => $method,\n        );\n        $meta->add_method($method => $metamethod);\n    }\n\n    MooseX::MultiObject::Role->meta->apply($meta);\n    $role->apply($meta);\n\n    return $meta;\n}",
+      "file" : "/var/tmp/arv_EOTcgB/MooseX-MultiObject-0.03/lib/MooseX/MultiObject.pm",
+      "package" : "MooseX::MultiObject"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "requires 'get_managed_objects'",
+      "file" : "/var/tmp/arv_EOTcgB/MooseX-MultiObject-0.03/lib/MooseX/MultiObject/Role.pm",
+      "package" : "MooseX::MultiObject::Role"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "has 'set_attribute_name' => (\n    reader    => 'get_set_attribute_name',\n    writer    => 'set_set_attribute_name',\n    predicate => 'has_set_attribute_name',\n    isa       => 'Str',\n)",
+      "file" : "/var/tmp/arv_EOTcgB/MooseX-MultiObject-0.03/lib/MooseX/MultiObject/Meta/Class.pm",
+      "package" : "MooseX::MultiObject::Meta::Class"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _initialize_body {\n    my $meta = shift;\n\n    my $object_getter = $meta->object_getter;\n    my @extra_args    = @{$meta->curried_arguments};\n    my $delegate_to   = $meta->delegate_to;\n\n    $meta->{body} = sub {\n        my $self = shift;\n        unshift @_, @extra_args;\n        my @objects = $self->$object_getter;\n        return map { scalar $_->$delegate_to(@_) } @objects;\n    };\n}",
+      "file" : "/var/tmp/arv_EOTcgB/MooseX-MultiObject-0.03/lib/MooseX/MultiObject/Meta/Method/MultiDelegation.pm",
+      "package" : "MooseX::MultiObject::Meta::Method::MultiDelegation"
+   }
+]

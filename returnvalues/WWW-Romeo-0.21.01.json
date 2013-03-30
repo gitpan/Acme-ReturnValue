@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    my ($self) = @_;\n    $self = {};\n    return;\n}",
+      "file" : "/var/tmp/arv_jdiJ0n/WWW-Romeo-0.21.01/lib/WWW/Romeo/Config.pm",
+      "package" : "WWW::Romeo::Config"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub remove_expired {\n    my ($self) = @_;\n    $self->db->resultset('Session')->search(\n        {\n            expire_timestamp        =>      { '<', time },\n        }\n    )->delete_all;\n}",
+      "file" : "/var/tmp/arv_jdiJ0n/WWW-Romeo-0.21.01/lib/WWW/Romeo/DB/Session.pm",
+      "package" : "WWW::Romeo::DB::Session"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->belongs_to(user         =>          'WWW::Romeo::DB::User')",
+      "file" : "/var/tmp/arv_jdiJ0n/WWW-Romeo-0.21.01/lib/WWW/Romeo/DB/User/Attribute.pm",
+      "package" : "WWW::Romeo::DB::User::Attribute"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->belongs_to(session         =>          'WWW::Romeo::DB::Session')",
+      "file" : "/var/tmp/arv_jdiJ0n/WWW-Romeo-0.21.01/lib/WWW/Romeo/DB/Session/Attribute.pm",
+      "package" : "WWW::Romeo::DB::Session::Attribute"
+   }
+]

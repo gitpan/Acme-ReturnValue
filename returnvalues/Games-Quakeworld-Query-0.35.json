@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub players { \n    my $self = shift;\n    return $self->{players} - 1; \n}",
+      "file" : "/var/tmp/arv_4wg5aK/Games-Quakeworld-Query-0.35/Query.pm",
+      "package" : "Games::Quakeworld::Query"
+   }
+]

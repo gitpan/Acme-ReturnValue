@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$WebService::Telnic::Client::RR::TypeMap{LOC} = __PACKAGE__",
+      "file" : "/var/tmp/arv_ZOmQLZ/WebService-Telnic-0.2/lib/WebService/Telnic/Client/RR.pm",
+      "package" : "WebService::Telnic::Client::RR"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'&amp;amp;#49'",
+      "file" : "/var/tmp/arv_fI6iNJ/XML-DoubleEncodedEntities-1.0/lib/XML/DoubleEncodedEntities.pm",
+      "package" : "XML::DoubleEncodedEntities"
+   }
+]

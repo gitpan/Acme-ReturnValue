@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub unimport { import( undef ) }",
+      "file" : "/var/tmp/arv_aZ4tFi/Log-WarnDie-0.05/lib/Log/WarnDie.pm",
+      "package" : "Log::WarnDie"
+   }
+]

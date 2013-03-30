@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub modify\n  {\n  $_[0]->{_cache} = undef;\t\n  0;\t\t\t\t\n  }",
+      "file" : "/var/tmp/arv_fHQAsE/Math-String-1.28/lib/Math/String.pm",
+      "package" : "Math::String"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub study\n  {\n\n  my $arg;\n  if (ref $_[0] eq 'HASH')\n    {\n    $arg = shift;\n    }\n  else\n    {\n    $arg = { @_ };\n    }\n\n  my $depth = abs($arg->{order} || $arg->{depth} || 1);\n  my $words = $arg->{words} || [];\n  my $sep = $arg->{sep};\n  my $charlen = $arg->{charlen} || 1;\n  my $cut = $arg->{cut} || 0;\n  my $hist = $arg->{hist} || 0;\n\n  die \"depth of study must be between 1..2\" if ($depth < 1 || $depth > 2);\n  my $starts = {};              \n  my $ends = {};                \n  my $chars = {};               \n  my $bi = { }; my ($l,@chars,$x,$y,$word,$i);\n  foreach $word (@$words)\n    {\n    $starts->{substr($word,0,$charlen)} ++;\n    $ends->{substr($word,-$charlen,$charlen)} ++;\n    $l = CORE::length($word) / $charlen;\n    next if (int($l) != $l);\t\t\t\n    if ($depth == 1)\n      {\n      for (my $i = 0; $i < $l; $i += $charlen)\n        {\n        $chars->{substr($word,$i,$charlen)} ++;\n        }\n      next;\t\t\t\t\t\n      }\n    $l = $l - $depth + 1;\n    for ($i = 0; $i < $l; $i += $charlen)\n      {\n      $x = substr($word,$i,$charlen); $y = substr($word,$i+$charlen,$charlen);\n      $bi->{$x}->{$y} ++;\n      }\n    }\n  my $args = {};\n  my (@end,@start);\n  foreach (sort { $starts->{$b} <=> $starts->{$a} } keys %$starts)\n    {\n    push @start, $_;\n    }\n  $args->{start} = \\@start;\n  foreach (sort { $ends->{$b} <=> $ends->{$a} } keys %$ends)\n    {\n    push @end, $_;\n    }\n  $args->{end} = \\@end;\n  if ($depth > 1)\n    {\n    my @sorted;\n    foreach my $c (keys %$bi)\n      {\n      my $bc = $bi->{$c};\n      $args->{bi}->{$c} = [\n        sort { $bc->{$b} <=> $bc->{$a} or $a cmp $b } keys %$bc\n        ];\n      }\n    }\n  else\n    {\n    my @chars = ();\n    foreach (sort { $chars->{$b} <=> $chars->{$a} } keys %$chars)\n      {\n      push @chars, $_;\n      }\n    $args->{chars} = \\@chars;\n    }\n  if ($hist != 0)\n    {\n    if ($depth > 1)\n      {\n      $args->{hist} = $bi;\n      }\n    else\n      {\n      $args->{hist} = $chars;\n      }\n    }\n  $args;\n  }",
+      "file" : "/var/tmp/arv_fHQAsE/Math-String-1.28/lib/Math/String/Charset.pm",
+      "package" : "Math::String::Charset"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub as_array\n  {\n  my $x = shift;\n\n  my @a;\n  my $f = $x->{_first}; my $l = $x->{_last};\n  if ($x->{_rev})\n    {\n    while ($f >= $l) { push @a,$f->copy(); $f->bdec(); }\n    }\n  else\n    {\n    while ($f <= $l) { push @a,$f->copy(); $f->binc(); }\n    }\n  @a;\n  }",
+      "file" : "/var/tmp/arv_fHQAsE/Math-String-1.28/lib/Math/String/Sequence.pm",
+      "package" : "Math::String::Sequence"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prev\n  {\n  my $self = shift;\n  my $str = shift;\n\n  if ($str->{_cache} eq '')\t\t\t\t\n    {\n    $str->{_cache} = $self->first($self->minlen()||1);\n    return;\n    }\n\n  $str->{_cache} = undef;\n  \n  $self;\n  }",
+      "file" : "/var/tmp/arv_fHQAsE/Math-String-1.28/lib/Math/String/Charset/Nested.pm",
+      "package" : "Math::String::Charset::Nested"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prev\n  {\n  my $self = shift;\n  my $str = shift;\n\n  if ($str->{_cache} eq '')\t\t\t\t\n    {\n    my $min = $self->{_minlen}; $min = -1 if $min >= 0;\n    $str->{_cache} = $self->first($min);\n    return;\n    }\n\n  $str->{_cache} = undef;\n  }",
+      "file" : "/var/tmp/arv_fHQAsE/Math-String-1.28/lib/Math/String/Charset/Grouped.pm",
+      "package" : "Math::String::Charset::Grouped"
+   }
+]

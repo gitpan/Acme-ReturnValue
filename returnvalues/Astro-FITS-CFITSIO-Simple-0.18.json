@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  package Astro::FITS::CFITSIO::Simple::PrintStatusProgressBar;\n  our @ISA = qw/Astro::FITS::CFITSIO::Simple::PrintStatus/;\n\n  sub new { bless {nrows => $_[1]}, $_[0] }\n\n  sub start\n  {\n    my $self = shift;\n\n    require Term::ProgressBar;\n\n    $self->{progress} = \n      Term::ProgressBar->new( { count => $self->{nrows},\n\t\t\t\tETA => 'linear',\n\t\t\t      } )\n      or die( \"unable to create ProgressBar\\n\" );\n\n    $self->{progress}->minor(0);\n    $self->{next_update} = 0;\n  }\n\n  sub output\n  {\n    my ( $self, $row, $nrows ) = @_;\n\n    $self->{progress}->update( $row );\n  }\n\n  sub finish\n  {\n    my $self = shift;\n\n    $self->{progress}->update( $self->{nrows} );\n  }\n}",
+      "file" : "/var/tmp/arv_rhjo_7/Astro-FITS-CFITSIO-Simple-0.18/lib/Astro/FITS/CFITSIO/Simple/PrintStatus.pm",
+      "package" : "Astro::FITS::CFITSIO::Simple::PrintStatus"
+   }
+]

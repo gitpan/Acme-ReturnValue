@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Devel::Cover::Report::Html_subtle",
+      "file" : "/var/tmp/arv_3SxJUE/Devel-Cover-1.00/lib/Devel/Cover/Report/Html_subtle.pm",
+      "package" : "Devel::Cover::Report::Html_subtle"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prove_command\n{\n    my $prove = find_prove or return;\n    my $cpus  = nice_cpus;\n    \"$prove -brj$cpus t\"\n}",
+      "file" : "/var/tmp/arv_3SxJUE/Devel-Cover-1.00/utils/Devel/Cover/BuildUtils.pm",
+      "package" : "Devel::Cover::BuildUtils"
+   }
+]

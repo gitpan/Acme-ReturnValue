@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$_ ^=~ { module => 'Devel::TraceSubs', author => 'particle' }",
+      "file" : "/var/tmp/arv_tCydzr/Devel-TraceSubs-0.02/TraceSubs.pm",
+      "package" : "Devel::TraceSubs"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n\tmy $this = shift;\n\t$this->raise();\n}",
+      "file" : "/var/tmp/arv_LoOFcV/Sub-ScopeFinalizer-0.02/lib/Sub/ScopeFinalizer.pm",
+      "package" : "Sub::ScopeFinalizer"
+   }
+]

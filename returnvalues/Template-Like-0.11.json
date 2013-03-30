@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _option { $_[0]->{'OPTION'}; }",
+      "file" : "/var/tmp/arv_5mv7N2/Template-Like-0.11/lib/Template/Like.pm",
+      "package" : "Template::Like"
+   }
+]

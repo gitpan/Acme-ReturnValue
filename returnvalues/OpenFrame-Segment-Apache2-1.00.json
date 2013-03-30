@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub output_response {\n  my($self, $ofr, $cookies, $store) = @_;\n  my $r = $store->get('Apache::RequestRec');\n\n  my %cookies = $cookies->get_all();\n  foreach my $name (keys %cookies) {\n    $r->err_headers_out->add(\"Set-Cookie\" => $cookies{$name});\n  }\n\n  my $code = $ofr->code;\n  my $message = $ofr->message;\n  my $mimetype = $ofr->mimetype || 'text/html';\n  if ($code eq ofOK()) {\n    $r->no_cache(1);\n    $r->content_type($mimetype);\n    $r->status(200);\n    $r->print($ofr->message);\n  } elsif ($code eq ofREDIRECT()) {\n    $r->headers_out->{Location} = $message;\n    $r->status(302);\n    $r->print($message);\n  } else {\n    $r->print($message);\n  }\n\n  return 1;\n}",
+      "file" : "/var/tmp/arv_JnmVh6/OpenFrame-Segment-Apache2-1.00/lib/OpenFrame/Segment/Apache2/Response.pm",
+      "package" : "OpenFrame::Segment::Apache2::Response"
+   }
+]

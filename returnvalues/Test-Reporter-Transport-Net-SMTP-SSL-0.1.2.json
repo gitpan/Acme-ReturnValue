@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use Net::SMTP::SSL",
+      "file" : "/var/tmp/arv_Cp_bS1/Test-Reporter-Transport-Net-SMTP-SSL-0.1.2/lib/Test/Reporter/Transport/Net/SMTP/SSL.pm",
+      "package" : "Test::Reporter::Transport::Net::SMTP::SSL"
+   }
+]

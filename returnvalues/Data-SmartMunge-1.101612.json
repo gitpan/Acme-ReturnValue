@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete_matching {\n    my ($re, $flags) = @_;\n    $flags = '' unless defined $flags;\n    return $flags =~ s/g//\n        ?  sub { $_[0] =~ s/$re//g; $_[0] }\n        :  sub { $_[0] =~ s/$re//; $_[0] };\n}",
+      "file" : "/var/tmp/arv_jTyQfz/Data-SmartMunge-1.101612/lib/Data/SmartMunge.pm",
+      "package" : "Data::SmartMunge"
+   }
+]

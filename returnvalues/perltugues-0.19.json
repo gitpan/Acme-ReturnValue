@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_wmWEXP/perltugues-0.19/lib/perltugues.pm",
+      "package" : "perltugues"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_wmWEXP/perltugues-0.19/lib/perltugues/inteiro.pm",
+      "package" : "perltugues::inteiro"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_wmWEXP/perltugues-0.19/lib/perltugues/texto.pm",
+      "package" : "perltugues::texto"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_wmWEXP/perltugues-0.19/lib/perltugues/caracter.pm",
+      "package" : "perltugues::caracter"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_wmWEXP/perltugues-0.19/lib/perltugues/tipo.pm",
+      "package" : "perltugues::tipo"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_wmWEXP/perltugues-0.19/lib/perltugues/real.pm",
+      "package" : "perltugues::real"
+   }
+]

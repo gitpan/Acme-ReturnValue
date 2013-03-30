@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub display {\n\tmy $self = shift;\n\n\tOpenGL::glEnable( $self->{id} );\n\tOpenGL::glLightfv_p(\n\t\t$self->{id},\n\t\tOpenGL::GL_POSITION,\n\t\t@{$self->{position}},\n\t);\n\tOpenGL::glLightfv_p(\n\t\t$self->{id},\n\t\tOpenGL::GL_AMBIENT,\n\t\t@{$self->{ambient}},\n\t);\n\tOpenGL::glLightfv_p(\n\t\t$self->{id},\n\t\tOpenGL::GL_DIFFUSE,\n\t\t@{$self->{diffuse}},\n\t);\n\tOpenGL::glLightfv_p(\n\t\t$self->{id},\n\t\tOpenGL::GL_SPECULAR,\n\t\t@{$self->{specular}},\n\t);\n}",
+      "file" : "/var/tmp/arv_CO4vdX/SDL-Tutorial-3DWorld-0.33/lib/SDL/Tutorial/3DWorld/Light.pm",
+      "package" : "SDL::Tutorial::3DWorld::Light"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub move {\n\tmy $self = shift;\n\tmy $step = shift;\n\n\t$self->{position}->[0] += $self->{velocity}->[0] * $step;\n\t$self->{position}->[1] += $self->{velocity}->[1] * $step;\n\t$self->{position}->[2] += $self->{velocity}->[2] * $step;\n\n\tif ( $self->{orient} and $self->{rotate} ) {\n\t\t$self->{orient}->[0] += $self->{rotate} * $step;\n\t}\n\n\treturn;\n}",
+      "file" : "/var/tmp/arv_CO4vdX/SDL-Tutorial-3DWorld-0.33/lib/SDL/Tutorial/3DWorld/Actor.pm",
+      "package" : "SDL::Tutorial::3DWorld::Actor"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compile {\n\tmy $self   = shift;\n \n\tglDisable( GL_LIGHTING );\n\tglEnable( GL_TEXTURE_2D );\n\tglColor4f( 1, 1, 1, 1 );\n\n\n\t$self->{north}->display;\n\tglBegin( GL_QUADS );\n\tglTexCoord2f( 0, 0 ); glVertex3f( -1.002,  1.002, -1 ); \n\tglTexCoord2f( 0, 1 ); glVertex3f( -1.002, -1.002, -1 ); \n\tglTexCoord2f( 1, 1 ); glVertex3f(  1.002, -1.002, -1 ); \n\tglTexCoord2f( 1, 0 ); glVertex3f(  1.002,  1.002, -1 ); \n\tglEnd();\n\n\t$self->{south}->display;\n\tglBegin( GL_QUADS );\n\tglTexCoord2f( 0, 0 ); glVertex3f(  1.002,  1.002,  1 ); \n\tglTexCoord2f( 0, 1 ); glVertex3f(  1.002, -1.002,  1 ); \n\tglTexCoord2f( 1, 1 ); glVertex3f( -1.002, -1.002,  1 ); \n\tglTexCoord2f( 1, 0 ); glVertex3f( -1.002,  1.002,  1 ); \n\tglEnd();\n\n\t$self->{east}->display;\n\tglBegin( GL_QUADS );\n\tglTexCoord2f( 0, 0 ); glVertex3f(  1,  1.002, -1.002 ); \n\tglTexCoord2f( 0, 1 ); glVertex3f(  1, -1.002, -1.002 ); \n\tglTexCoord2f( 1, 1 ); glVertex3f(  1, -1.002,  1.002 ); \n\tglTexCoord2f( 1, 0 ); glVertex3f(  1,  1.002,  1.002 ); \n\tglEnd();\n\n\t$self->{west}->display;\n\tglBegin( GL_QUADS );\n\tglTexCoord2f( 0, 0 ); glVertex3f( -1,  1.002,  1.002 ); \n\tglTexCoord2f( 0, 1 ); glVertex3f( -1, -1.002,  1.002 ); \n\tglTexCoord2f( 1, 1 ); glVertex3f( -1, -1.002, -1.002 ); \n\tglTexCoord2f( 1, 0 ); glVertex3f( -1,  1.002, -1.002 ); \n\tglEnd();\n\n\t$self->{up}->display;\n\tglBegin( GL_QUADS );\n\tglTexCoord2f( 0, 0 ); glVertex3f( -1.002,  1,  1.002 ); \n\tglTexCoord2f( 0, 1 ); glVertex3f( -1.002,  1, -1.002 ); \n\tglTexCoord2f( 1, 1 ); glVertex3f(  1.002,  1, -1.002 ); \n\tglTexCoord2f( 1, 0 ); glVertex3f(  1.002,  1,  1.002 ); \n\tglEnd();\n\n\tif ( $self->{down} ) {\n\t\t$self->{down}->display;\n\t\tglBegin( GL_QUADS );\n\t\tglTexCoord2f( 0, 0 ); glVertex3f( -1.002, -1,  1.002 ); \n\t\tglTexCoord2f( 0, 1 ); glVertex3f( -1.002, -1, -1.002 ); \n\t\tglTexCoord2f( 1, 1 ); glVertex3f(  1.002, -1, -1.002 ); \n\t\tglTexCoord2f( 1, 0 ); glVertex3f(  1.002, -1,  1.002 ); \n\t\tglEnd();\n\t}\n\n\tglClear( GL_DEPTH_BUFFER_BIT );\n\n\tglEnable( GL_LIGHTING );\n\n\treturn 1;\n}",
+      "file" : "/var/tmp/arv_CO4vdX/SDL-Tutorial-3DWorld-0.33/lib/SDL/Tutorial/3DWorld/Skybox.pm",
+      "package" : "SDL::Tutorial::3DWorld::Skybox"
+   }
+]

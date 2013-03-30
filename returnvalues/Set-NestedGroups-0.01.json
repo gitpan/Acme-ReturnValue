@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub rows {\n\tmy $self=shift;\n\n\treturn $self->{'COUNT'};\n}",
+      "file" : "/var/tmp/arv_05URtf/Set-NestedGroups-0.01/NestedGroups/Member.pm",
+      "package" : "Set::NestedGroups::MemberList"
+   }
+]

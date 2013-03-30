@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub action_stop {\n    my $self = shift;\n    $self->NEXT::action_stop(@_);\n    closelog();\n}",
+      "file" : "/var/tmp/arv_a_7c2Y/Working-Daemon-0.31/lib/Working/Daemon/Syslog.pm",
+      "package" : "Working::Daemon::Syslog"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Ipchains {\n\n        my $logline = $_[0];\n        my $source=\"\";\n        my $destination=\"\";\n        my $protocol=\"\";\n        my $port=\"\";\n\n        $logline =~ s/[ ]+/ /g;\n\n        $logline =~ /Packet\\slog:\\s\\w+\\s([\\w\\d\\-_]+)/;\n        $protocol = $1;\n\n        $logline =~ /\\sPROTO=(\\d+)/;\n        $protocol = &Protocol($1);\n\n        if ($protocol eq \"icmp\") {\n                my $icmpType = \"unknown\";\n                my $icmpCode = \"unknown\";\n\n        \t$logline =~ /\\s$ipAddress:(\\d)+\\s$ipAddress:(\\d+)\\s/;\n                $icmpType = $1;\n                $icmpCode = $2;\n                $port = \"(type-$icmpType,code-$icmpCode)\";\n        } else {\n        \t$logline =~ /\\s$ipAddress:\\d+\\s$ipAddress:(\\d+)\\s/;\n                $port = $1;\n        }\n\n\tif ($logline =~ /REDIRECT/) {\n\t\t$logline =~ /\\sPacket\\slog:\\s\\w+\\s([\\w+\\d+\\-_]+\\s[\\d\\w\\-_])/;\n\t\t$action = $1;\n\n\t} else {\n\t\t$logline =~ /\\sPacket\\slog:\\s\\w+\\s([\\w+\\d+\\-_]+)\\s/;\n\t\t$action = $1;\n\t}\n\n        $logline =~ /\\sPROTO\\=\\d+\\s($ipAddress):\\d+\\s($ipAddress):\\d+\\s/;\n        $source = $1;\n        $destination = $2;\n\n\tif ($action == \"-\") {\n\t\t$action=\"drop\";\n\t}\n\n        return \"$action|$source|$destination|$protocol|$port\";\n}",
+      "file" : "/var/tmp/arv_lMjZeJ/fwlog/lib/fwlog.pm",
+      "package" : "fwlog"
+   }
+]

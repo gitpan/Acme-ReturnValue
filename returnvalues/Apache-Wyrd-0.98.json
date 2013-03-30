@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _generate_output {\n\tmy ($self) = @_;\n\tif ($self->{'_parent'}->can('register_defaults')) {\n\t\t$self->activate;\n\t\t$self->{'_parent'}->register_defaults($self);\n\t} else {\n\t\t$self->_warn(\"Defaults '\" . $self->{'query'} . \"' called, but not used.  Parent should register_defaults.\");\n\t}\n\treturn;\n}",
+      "file" : "/var/tmp/arv_UotK0x/Apache-Wyrd-0.98/Wyrd/Defaults.pm",
+      "package" : "Apache::Wyrd::Defaults"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _setup{\n\tmy ($self) = @_;\n\tmy @log = ();\n\tmy $dumpfile = ($self->dbl->globals->{logfile} || '/tmp/' . $self->dbl->req->hostname . '.debuglog');\n\topen (INLOG, $dumpfile);\n\tmy $tally = undef;\n\twhile (<INLOG>) {\n\t\tif (/^\\(/) {\n\t\t\tpush @log, $tally;\n\t\t\t$tally = undef;\n\t\t}\n\t\t$tally .= $_;\n\t}\n\tpush @log, $tally;\n\tclose (INLOG);\n\tmy $log = join('', reverse(@log));\n\tif ($self->_data =~ /\\$:dump/m) {\n\t\t$self->_set({dump => $log});\n\t} else {\n\t\t$self->_data($log);\n\t}\n}",
+      "file" : "/var/tmp/arv_UotK0x/Apache-Wyrd-0.98/Wyrd/LogDump.pm",
+      "package" : "Apache::Wyrd::LogDump"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _format_output {\n\tmy ($self) = @_;\n\tmy $file = $self->{'file'};\n\t$file = $self->dbl->req->document_root . \"$file\";\n\tif (-f $file) {\n\t\tmy @stat = stat(_);\n\t\tmy $size = $stat[7];\n\t\tmy $unit = 'K';\n\t\tif ($size < 1048576) {\n\t\t\t$size /= 1024;\n\t\t} else {\n\t\t\t$size /= 1048576;\n\t\t\t$unit = 'M';\n\t\t}\n\t\t$size = int($size * 100);\n\t\t$size =~ s/(\\d\\d)$/.$1/;\n\t\t$size =~ s/\\.00$//;\n\t\t$size =~ s/(\\.\\d)0$/$1/;\n\t\t$size = commify($size);\n\t\t$self->_data($size . $unit);\n\t} else {\n\t\t$self->_data(qq(?<!-- $file is not a file -->));\n\t}\n}",
+      "file" : "/var/tmp/arv_UotK0x/Apache-Wyrd-0.98/Wyrd/FileSize.pm",
+      "package" : "Apache::Wyrd::FileSize"
+   }
+]

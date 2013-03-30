@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all gods\"",
+      "file" : "/var/tmp/arv_bUjVeD/Graph-PetriNet-0.03/lib/Graph/PetriNet.pm",
+      "package" : "Graph::PetriNet"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all gods\"",
+      "file" : "/var/tmp/arv_bUjVeD/Graph-PetriNet-0.03/lib/Graph/PetriNet/TransitionAble.pm",
+      "package" : "Graph::PetriNet::TransitionAble"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all gods\"",
+      "file" : "/var/tmp/arv_bUjVeD/Graph-PetriNet-0.03/lib/Graph/PetriNet/PlaceAble.pm",
+      "package" : "Graph::PetriNet::PlaceAble"
+   }
+]

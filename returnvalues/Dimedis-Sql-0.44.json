@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\n\tmy $self = shift;\n\n\tmy $fh = $self->{fh};\n\n\tclose($fh) if $fh;\n}",
+      "file" : "/var/tmp/arv_QWgkj0/Dimedis-Sql-0.44/lib/Dimedis/Sql/CSV.pm",
+      "package" : "Dimedis::Sql::CSV"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\n  my $self = shift;\n\n  my $fh = $self->{fh_meta};\n\n  close($fh) if $fh;\n}",
+      "file" : "/var/tmp/arv_QWgkj0/Dimedis-Sql-0.44/lib/Dimedis/Sql/Import.pm",
+      "package" : "Dimedis::Sql::Import"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\n  my $self = shift;\n\n  my $fh = $self->{fh_meta};\n\n  close($fh) if $fh;\n}",
+      "file" : "/var/tmp/arv_QWgkj0/Dimedis-Sql-0.44/lib/Dimedis/Sql/Export.pm",
+      "package" : "Dimedis::Sql::Export"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "%middle_module = (\n\t\t  'Pg' => 'Pg',\n\t\t  'ApacheSybaseDBlib' => 'Apache::Sybase::DBlib',\n\t\t  'SybaseDBlib' => 'Sybase::DBlib',\n\t\t  'ODBC' => 'Win32::ODBC',\n\t\t  'dbi:' => 'DBI'\n\t\t  )",
+      "file" : "/var/tmp/arv_gDeRHn/RDBAL-1.2/RDBAL/Config.pm",
+      "package" : "RDBAL::Config"
+   }
+]

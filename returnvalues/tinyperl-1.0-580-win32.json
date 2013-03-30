@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD {\n    my($self,@packages) = @_;\n    unless (ref $self) {\n\t$self = $self->new(@packages);\n    }\n    no strict \"vars\";\n    (my $auto = $AUTOLOAD) =~ s/.*:://;\n\n    $auto =~ s/(file|dir)handles/ios/;\n    my $compat = $1;\n\n    unless ($self->{'AUTOLOAD'}{$auto}) {\n    }\n\n    my @syms = $self->_partdump(uc $auto);\n    if (defined $compat) {\n\tno strict 'refs';\n\tif ($compat eq \"file\") {\n\t    @syms = grep { defined(fileno($_)) } @syms;\n\t} else {\n\t    @syms = grep { defined(telldir($_)) } @syms;\n\t}\n    }\n    return @syms; \n}\n\n1",
+      "file" : "/var/tmp/arv_3PDzik/tinyperl-1.0-580-win32/lib/LibZip/ScanPack.pm",
+      "package" : "LibZip::ScanPack"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "\"The coffee made me do it!\"",
+      "file" : "/var/tmp/arv_buGKoP/Mojolicious-Command-generate-dbicdump-v0.1.1/lib/Mojolicious/Command/generate/dbicdump.pm",
+      "package" : "Mojolicious::Command::generate::dbicdump"
+   }
+]

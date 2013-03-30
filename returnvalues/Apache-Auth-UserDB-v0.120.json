@@ -1,0 +1,44 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/UserDB.pm",
+      "package" : "Apache::Auth::UserDB"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/User.pm",
+      "package" : "Apache::Auth::User"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/User/Basic.pm",
+      "package" : "Apache::Auth::User::Basic"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/User/Digest.pm",
+      "package" : "Apache::Auth::User::Digest"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/UserDB/File.pm",
+      "package" : "Apache::Auth::UserDB::File"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/UserDB/File/Basic.pm",
+      "package" : "Apache::Auth::UserDB::File::Basic"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_AMw4TA/Apache-Auth-UserDB-v0.120/lib/Apache/Auth/UserDB/File/Digest.pm",
+      "package" : "Apache::Auth::UserDB::File::Digest"
+   }
+]

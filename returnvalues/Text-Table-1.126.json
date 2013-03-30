@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n    my ( $warn, $fatal) = ( 0, 0);\n\n    sub warnings\n    {\n        my (undef, $toggle) = @_;\n\n        $toggle ||= 'on';\n        if ( $toggle eq 'off' )\n        {\n            ($warn, $fatal) = (0, 0);\n        }\n        elsif ( $toggle eq 'fatal' )\n        {\n            ($warn, $fatal) = (1, 1);\n        }\n        else\n        {\n            ($warn, $fatal) = (1, 0);\n        }\n        return $fatal ? 'fatal' : $warn ? 'on' : 'off';\n    }\n\n    sub _warn\n    {\n        my $msg = shift;\n\n        return unless $warn;\n\n        if ($fatal)\n        {\n            croak( $msg)\n        }\n\n        carp( $msg);\n\n        return;\n    }\n}",
+      "file" : "/var/tmp/arv_Tvw0AI/Text-Table-1.126/lib/Text/Table.pm",
+      "package" : "Text::Table"
+   }
+]

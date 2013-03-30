@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub files\n{\n    my $self = shift;\n\n    $self->{ files };\n}",
+      "file" : "/var/tmp/arv_RT_b1T/Test-Filesystem-0.04/lib/Test/Filesystem.pm",
+      "package" : "Test::Filesystem"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n  my (undef, %args) = @_;\n\n  my ($parent, $frameOptions, $packOptions)  = @args{qw(parent frameOptions packOptions)};\n\n  $frameOptions ||= {};\n  $packOptions  ||= {};\n\n  my %frameOptions = (%$frameDefaults, %$frameOptions);\n\n  my %packOptions  = (%$packDefaults,  %$packOptions);\n\n  my $frame = $parent->Frame(%frameOptions);\n\n  $frame->pack(%packOptions);\n\n  return $frame;\n}",
+      "file" : "/var/tmp/arv_g92jTU/tidyview-1.14/lib/TidyView/Frame.pm",
+      "package" : "TidyView::Frame"
+   }
+]

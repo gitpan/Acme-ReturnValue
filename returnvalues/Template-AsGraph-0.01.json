@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_pOA77n/Template-AsGraph-0.01/lib/Template/AsGraph.pm",
+      "package" : "Template::AsGraph"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_pOA77n/Template-AsGraph-0.01/lib/Template/AsGraph/Context.pm",
+      "package" : "Template::AsGraph::Context"
+   }
+]

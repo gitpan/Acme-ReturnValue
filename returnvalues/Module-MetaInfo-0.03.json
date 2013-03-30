@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_1xLAjY/Module-MetaInfo-0.03/lib/Module/MetaInfo.pm",
+      "package" : "Module::MetaInfo"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_1xLAjY/Module-MetaInfo-0.03/lib/Module/MetaInfo/_Extractor.pm",
+      "package" : "Module::MetaInfo::_Extractor"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_1xLAjY/Module-MetaInfo-0.03/lib/Module/MetaInfo/AutoGuess.pm",
+      "package" : "Module::MetaInfo::AutoGuess"
+   }
+]

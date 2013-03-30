@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "sub _ {\n    my $string = shift;\n    if (is_utf8($string)) {\n        $string = encode _term_encoding(), $string;\n    }\n    return $string;\n}\n\n1",
+      "file" : "/var/tmp/arv_x2SYoT/App-Twpin-0.007/lib/App/Twpin.pm",
+      "package" : "App::Twpin"
+   }
+]

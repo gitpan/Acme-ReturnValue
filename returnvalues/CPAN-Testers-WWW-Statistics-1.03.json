@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(\"I am NOT a number!\")",
+      "file" : "/var/tmp/arv_Vl065O/CPAN-Testers-WWW-Statistics-1.03/lib/CPAN/Testers/WWW/Statistics.pm",
+      "package" : "CPAN::Testers::WWW::Statistics"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(\"Will code for Guinness!\")",
+      "file" : "/var/tmp/arv_Vl065O/CPAN-Testers-WWW-Statistics-1.03/lib/CPAN/Testers/WWW/Statistics/Pages.pm",
+      "package" : "CPAN::Testers::WWW::Statistics::Pages"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q('Will code for a nice Balti Lamb Tikka Bhuna')",
+      "file" : "/var/tmp/arv_Vl065O/CPAN-Testers-WWW-Statistics-1.03/lib/CPAN/Testers/WWW/Statistics/Graphs.pm",
+      "package" : "CPAN::Testers::WWW::Statistics::Graphs"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(\"I'll never forget him (the leader of the pack)\")",
+      "file" : "/var/tmp/arv_Vl065O/CPAN-Testers-WWW-Statistics-1.03/lib/CPAN/Testers/WWW/Statistics/Leaderboard.pm",
+      "package" : "CPAN::Testers::WWW::Statistics::Leaderboard"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _wait {\n\tmy($this) = @_;\n\tmy $fn = $this->{FN};\n\t$fn = $fn->() if(ref $fn);\n\topen FIGOUT, \">$fn\";\n\tprint FIGOUT \"#FIG 3.2\\nPortrait\\nCenter\\nMetric\\nA4\\n100.0\\nSingle\\n-2\\n50 2\\n\";\n\tfor(@{$this->{Objs}}) {\n\t\tprint FIGOUT $this->{Obj}{$_};\n\t}\n\tprint FIGOUT \" showpage \\n\";\n\tclose FIGOUT;\n\tprint \"Output written to '$fn'\\n\";\n}",
+      "file" : "/var/tmp/arv_VDr5xS/Graphics-Simple-0.04/Fig.pm",
+      "package" : "Graphics::Simple::Fig"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _wait {\n\tmy($this) = @_;\n\tmy $fn = $this->{FN};\n\t$fn = $fn->() if(ref $fn);\n\topen PSOUT, \">$fn\";\n\tfor(@{$this->{Objs}}) {\n\t\tprint PSOUT $this->{Obj}{$_};\n\t}\n\tprint PSOUT \" showpage \\n\";\n\tclose PSOUT;\n\tprint \"Output written to '$fn'\\n\";\n}",
+      "file" : "/var/tmp/arv_VDr5xS/Graphics-Simple-0.04/PostScript.pm",
+      "package" : "Graphics::Simple::PostScript"
+   }
+]

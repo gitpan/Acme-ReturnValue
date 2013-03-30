@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub populate {\n    my $self    = shift;\n    my $backend = $self->{args}->{backend};\n    _load($backend);\n    $backend .= \"::populate\";\n    {\n        no strict 'refs';\n        $self = $self->$backend(@_);\n    }\n    if ( $self->{args}->{setId} ) {\n        $self->{generate} = \\&setId;\n        $self->{validate} = sub { 1 };\n    }\n    return $self;\n}",
+      "file" : "/var/tmp/arv_5x_mUz/Lemonldap-NG-Common-1.2.3/lib/Lemonldap/NG/Common/Apache/Session.pm",
+      "package" : "Lemonldap::NG::Common::Apache::Session"
+   }
+]

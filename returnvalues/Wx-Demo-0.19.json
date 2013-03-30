@@ -1,0 +1,140 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "defined(&Wx::RearrangeCtrl::new)",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxRearrangeCtrl.pm",
+      "package" : "Wx::DemoModules::wxRearrangeCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::FilePickerCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxFilePickerCtrl.pm",
+      "package" : "Wx::DemoModules::wxFilePickerCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "eval { return Wx::_wx_optmod_webview(); }",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxWebView.pm",
+      "package" : "Wx::DemoModules::wxWebView"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::AboutBox ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxAboutDialog.pm",
+      "package" : "Wx::DemoModules::wxAboutDialog"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::MediaCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxMediaCtrl.pm",
+      "package" : "Wx::DemoModules::wxMediaCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::SimpleHtmlListBox::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxSimpleHtmlListBox.pm",
+      "package" : "Wx::DemoModules::wxSimpleHtmlListBox"
+   },
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "defined(&Wx::PrintPaperDatabase::FindPaperTypeById)",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxPrintPaperDatabase.pm",
+      "package" : "Wx::DemoModules::wxPrintPaperDatabase"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::CollapsiblePane::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxCollapsiblePane.pm",
+      "package" : "Wx::DemoModules::wxCollapsiblePane"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::PasswordEntryDialog::new",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxPasswordEntryDialog.pm",
+      "package" : "Wx::DemoModules::wxPasswordEntryDialog"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::FontPickerCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxFontPickerCtrl.pm",
+      "package" : "Wx::DemoModules::wxFontPickerCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::ColourPickerCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxColourPickerCtrl.pm",
+      "package" : "Wx::DemoModules::wxColourPickerCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "eval { return Wx::_wx_optmod_propgrid(); }",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxPropertyGrid.pm",
+      "package" : "Wx::DemoModules::wxPropertyGrid"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "( $@ ) ? 0 : 1",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxOverlay.pm",
+      "package" : "Wx::DemoModules::wxOverlay"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::DirPickerCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxDirPickerCtrl.pm",
+      "package" : "Wx::DemoModules::wxDirPickerCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "defined(&Wx::InfoBar::new)",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxInfoBar.pm",
+      "package" : "Wx::DemoModules::wxInfoBar"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "eval { return Wx::_wx_optmod_ribbon(); }",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxRibbonControl.pm",
+      "package" : "Wx::DemoModules::wxRibbonControl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::GraphicsContext::Create",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxGraphicsContext.pm",
+      "package" : "Wx::DemoModules::wxGraphicsContext"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::SearchCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxSearchCtrl.pm",
+      "package" : "Wx::DemoModules::wxSearchCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "defined(&Wx::RichToolTip::new)",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxRichToolTip.pm",
+      "package" : "Wx::DemoModules::wxRichToolTip"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::PlTreeListItemComparator::new",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxNativeTreeListCtrl.pm",
+      "package" : "Wx::DemoModules::wxNativeTreeListCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "defined &Wx::RichTextCtrl::new ? 1 : 0",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxRichTextCtrl.pm",
+      "package" : "Wx::DemoModules::wxRichTextCtrl"
+   },
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "defined(&Wx::BannerWindow::new)",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxBannerWindow.pm",
+      "package" : "Wx::DemoModules::wxBannerWindow"
+   },
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "defined(&Wx::TimePickerCtrl::new)",
+      "file" : "/var/tmp/arv_L8VENu/Wx-Demo-0.19/lib/Wx/DemoModules/wxTimePickerCtrl.pm",
+      "package" : "Wx::DemoModules::wxTimePickerCtrl"
+   }
+]

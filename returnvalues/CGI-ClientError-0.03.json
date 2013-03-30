@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$CGI::ClientError::footer=\"</i><br>\n                    If something is unclear, feel free to contact the\n                    webmaster.\\n\"",
+      "file" : "/var/tmp/arv_6G2Wrq/CGI-ClientError-0.03/ClientError.pm",
+      "package" : "CGI::ClientError"
+   }
+]

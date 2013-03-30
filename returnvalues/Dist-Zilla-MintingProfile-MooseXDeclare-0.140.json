@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "class {{ $name }}::Command extends (MooseX::App::Cmd::Command, {{ $name }}) \n with MooseX::Getopt::Dashes with MooseX::Log::Log4perl {\n    use metaclass 'MooseX::MetaDescription::Meta::Class'; \n    use MooseX::Types::Moose -all;\n    has global => (\n        is            => 'rw',\n        isa           => Bool,\n        default       => 0,\n        documentation => q{[Bool] Some common option which is shared by all commands.},\n    );\n}\n\n\n\n\n\npackage Package::Installer::Types {\n    use Moose::Util::TypeConstraints;\n    use MooseX::Types::Moose -all;\n    use MooseX::Types -declare => [qw(\n\n    )];\n\n    \n\n}",
+      "file" : "/var/tmp/arv_nNIlCh/Dist-Zilla-MintingProfile-MooseXDeclare-0.140/profiles/App/Module.pm",
+      "package" : "package"
+   }
+]

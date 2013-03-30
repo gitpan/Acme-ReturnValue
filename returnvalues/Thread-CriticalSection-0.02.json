@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_O8slcv/Thread-CriticalSection-0.02/lib/Thread/CriticalSection.pm",
+      "package" : "Thread::CriticalSection"
+   }
+]

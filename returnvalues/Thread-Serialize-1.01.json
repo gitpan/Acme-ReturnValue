@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n    shift;\n\n    my $namespace= caller().'::';\n    @_= qw( freeze thaw ) if !@_;\n\n    no strict 'refs';\n    *{$namespace.$_}= \\&$_ foreach @_;\n\n    return;\n}",
+      "file" : "/var/tmp/arv_l_QKhf/Thread-Serialize-1.01/lib/Thread/Serialize.pm",
+      "package" : "Thread::Serialize"
+   }
+]

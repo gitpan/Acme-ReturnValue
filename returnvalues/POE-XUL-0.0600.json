@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub create_window\n{\n    my( $self ) = @_;\n    my $id = $self->id;\n    my $window = POE::XUL::Window->new( %{ $self->{attributes} }, \n                                       tag => 'window', id => $id, name => $id \n                                     );\n\n    while( my( $name, $what ) = each %{ $self->{events} } ) {\n        $window->attach( $name, $what );\n    }\n    return $window;\n}",
+      "file" : "/var/tmp/arv_McZlSk/POE-XUL-0.0600/lib/POE/XUL/TWindow.pm",
+      "package" : "POE::XUL::TWindow"
+   }
+]

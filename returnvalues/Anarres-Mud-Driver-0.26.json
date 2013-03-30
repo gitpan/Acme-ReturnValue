@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub visit_child {\n\tmy ($self, $node, $index) = @_;\n\tmy $child = $node->value($index);\n\t$child->accept($self);\n}",
+      "file" : "/var/tmp/arv_m7ptkk/Anarres-Mud-Driver-0.26/lib/Driver/Compiler/Visitor.pm",
+      "package" : "Anarres::Mud::Driver::Compiler::Visitor"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _perltime_to_filetime {\nmy @result;\n$SystemTimeToFileTime ||= _map (\n\t'KERNEL32', 'SystemTimeToFileTime', [qw{P P}], 'I');\n$LocalFileTimeToFileTime ||= _map (\n\t'KERNEL32', 'LocalFileTimeToFileTime', [qw{P P}], 'I');\nmy $zero = pack 'LL', 0, 0;\t\nmy ($ft, $lf) = ($zero, $zero);\t\nforeach my $pt (@_) {\n    if (defined $pt) {\n\tmy @tm = localtime ($pt);\n\tmy $st = pack 'ssssssss', $tm[5] + 1900, $tm[4] + 1, 0,\n\t    @tm[3, 2, 1, 0], 0;\n\tpush @result, $SystemTimeToFileTime->Call ($st, $lf)  &&\n\t    $LocalFileTimeToFileTime->Call ($lf, $ft) ? $ft : $zero;\n\t}\n      else {\n\tpush @result, $zero;\n\t}\n    }\nreturn wantarray ? @result : $result[0];\n}",
+      "file" : "/var/tmp/arv_sLYsXo/Win32API-File-Time-0.006/lib/Win32API/File/Time.pm",
+      "package" : "Win32API::File::Time"
+   }
+]

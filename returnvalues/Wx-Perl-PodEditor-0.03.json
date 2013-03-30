@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'translating Pod to RichText is relatively easy'",
+      "file" : "/var/tmp/arv_z_pKHG/Wx-Perl-PodEditor-0.03/lib/Wx/Perl/PodEditor/PodParser.pm",
+      "package" : "Wx::Perl::PodEditor::PodParser"
+   }
+]

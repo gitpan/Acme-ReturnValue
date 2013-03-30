@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::PrinterFriendly",
+      "file" : "/var/tmp/arv_KvoUSW/Kwiki-PrinterFriendly-0.13/lib/Kwiki/PrinterFriendly.pm",
+      "package" : "Kwiki::PrinterFriendly"
+   }
+]

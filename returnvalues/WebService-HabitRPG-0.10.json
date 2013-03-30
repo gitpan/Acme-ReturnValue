@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method _decode_json($string) {\n    $self->_last_json($string);         \n    return $json->decode( $string );\n}\n\nmethod _encode_json($string) {\n    return $json->encode( $string );\n}\n\n\n1",
+      "file" : "/var/tmp/arv_hK7f4p/WebService-HabitRPG-0.10/lib/WebService/HabitRPG.pm",
+      "package" : "WebService::HabitRPG"
+   }
+]

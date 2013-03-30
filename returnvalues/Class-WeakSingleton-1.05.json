@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _new_instance {\n    my $class = shift;\n\n    return bless {}, $class;\n}",
+      "file" : "/var/tmp/arv__2iu_R/Class-WeakSingleton-1.05/lib/Class/WeakSingleton.pm",
+      "package" : "Class::WeakSingleton"
+   }
+]

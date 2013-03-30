@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub time_hhmm {\n    my( $start, $finish ) = @_;\n\n    my $diff = defined $finish ?  abs( $finish - $start ) : $start;\n\n    my $days = int( $diff / (24*60*60) );\n    $diff -= 24*60*60 * $days;\n    my $hours = int( $diff / (60*60) );\n    $diff -= 60*60 * $hours;\n    my $mins = int( $diff / 60 );\n    $diff -=  60 * $mins;\n\n    my @parts;\n    push @parts, sprintf \"$days day%s\",    $days  > 1 ? 's' : '' if $days;\n    push @parts, sprintf \"$hours hour%s\",  $hours > 1 ? 's' : '' if $hours;\n    push @parts, sprintf \"$mins minute%s\", $mins  > 1 ? 's' : '' if $mins;\n    push @parts, sprintf \"%.3f seconds\", $diff;\n\n    return join \" \", @parts;\n}",
+      "file" : "/var/tmp/arv_vtKdMu/WWW-CheckSite-0.020/lib/WWW/CheckSite.pm",
+      "package" : "WWW::CheckSite"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub set_action {\n    my( $self, $check, $in_cache ) = @_;\n\n    defined $in_cache && defined $in_cache->[0] or do {\n        require Carp;\n        Carp::confess( \"[INTERNAL ERROR]: $check\" );\n    };\n    \n    my $reason = ($in_cache->[0] & WCS_OUTSCOPE)  ? $self->{_uri_ok} eq 'scope'\n        ? 'Out of scope' : 'Excluded by pattern' : '';\n    $reason  ||= ($in_cache->[0] & WCS_SPIDERED)  ? 'done' : '';\n    $reason  ||= ($in_cache->[0] & WCS_NOCONTENT) ? 'no text/html' : '';\n\n    return $reason ? \"[c] Skip: ($reason)\" : \"[c] Spider: $check\";\n}",
+      "file" : "/var/tmp/arv_vtKdMu/WWW-CheckSite-0.020/lib/WWW/CheckSite/Validator.pm",
+      "package" : "WWW::CheckSite::Validator"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub size {\n    my $self = shift;\n    return scalar @$self;\n}",
+      "file" : "/var/tmp/arv_vtKdMu/WWW-CheckSite-0.020/lib/WWW/CheckSite/Util.pm",
+      "package" : "WWW::CheckSite::Util"
+   }
+]

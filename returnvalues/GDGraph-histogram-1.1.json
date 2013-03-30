@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _has_default { \n    my $self = shift;\n    my $attr = shift || return;\n    exists $Defaults{$attr} || $self->SUPER::_has_default($attr);\n}",
+      "file" : "/var/tmp/arv_pB30Jh/GDGraph-histogram-1.1/lib/GD/Graph/histogram.pm",
+      "package" : "GD::Graph::histogram"
+   }
+]

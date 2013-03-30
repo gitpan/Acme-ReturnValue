@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Pages::Perldoc",
+      "file" : "/var/tmp/arv_sqR0ee/Kwiki-Pages-Perldoc-0.12/lib/Kwiki/Pages/Perldoc.pm",
+      "package" : "Kwiki::Pages::Perldoc"
+   }
+]

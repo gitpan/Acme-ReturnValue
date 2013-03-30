@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_finite {\n    croak \"Not implemented for shuffled regexes\";\n}",
+      "file" : "/var/tmp/arv_rqx5sz/FLAT-6913/lib/FLAT/Regex/WithExtraOps.pm",
+      "package" : "FLAT::Regex::WithExtraOps"
+   }
+]

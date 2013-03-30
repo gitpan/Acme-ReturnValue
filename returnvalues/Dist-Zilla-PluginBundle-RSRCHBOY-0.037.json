@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_NP08Vd/Dist-Zilla-PluginBundle-RSRCHBOY-0.037/lib/Pod/Weaver/PluginBundle/RSRCHBOY.pm",
+      "package" : "Pod::Weaver::PluginBundle::RSRCHBOY"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_NP08Vd/Dist-Zilla-PluginBundle-RSRCHBOY-0.037/lib/Pod/Weaver/SectionBase/CollectWithIntro.pm",
+      "package" : "Pod::Weaver::SectionBase::CollectWithIntro"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_NP08Vd/Dist-Zilla-PluginBundle-RSRCHBOY-0.037/lib/Pod/Weaver/Section/RSRCHBOY/GeneratedAttributes.pm",
+      "package" : "Pod::Weaver::Section::RSRCHBOY::GeneratedAttributes"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_NP08Vd/Dist-Zilla-PluginBundle-RSRCHBOY-0.037/lib/Pod/Weaver/Section/RSRCHBOY/RequiredAttributes.pm",
+      "package" : "Pod::Weaver::Section::RSRCHBOY::RequiredAttributes"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_NP08Vd/Dist-Zilla-PluginBundle-RSRCHBOY-0.037/lib/Pod/Weaver/Section/RSRCHBOY/RoleParameters.pm",
+      "package" : "Pod::Weaver::Section::RSRCHBOY::RoleParameters"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_NP08Vd/Dist-Zilla-PluginBundle-RSRCHBOY-0.037/lib/Pod/Weaver/Section/RSRCHBOY/LazyAttributes.pm",
+      "package" : "Pod::Weaver::Section::RSRCHBOY::LazyAttributes"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub unimport {\n    my ($class, $command, @args) = @_;\n    my $into = caller;\n    strict->import;\n    warnings->import;\n    true->import;\n\n\n\n    namespace::autoclean->import(\n        -cleanee => $into,\n    );\n\n    return $into;\n}",
+      "file" : "/var/tmp/arv_uS39cZ/nonsense-0.01/lib/nonsense.pm",
+      "package" : "nonsense"
+   }
+]

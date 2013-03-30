@@ -1,0 +1,68 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _xml_indent {\n    my $xml = shift;\n    my $indent = $WDDX::INDENT;\n    my $level = 0;\n    \n    $xml =~ s{ (>?)\\s*(< ([?!/]?) [^>/]* (/?) ) }{\n# print \"Matched: $&\\n      1: $1\\n      2: $2\\n      3: $3\\n      4: $4\\n\";\n                $level-- if $3 eq \"/\" && not $4;\n                my $result = $1 ? \"$1\\n\" . ( $indent x $level ) . $2 : $2;\n                $level++ unless $3 || $4;\n                $result;\n             }egx;\n    return $xml;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX.pm",
+      "package" : "WDDX"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub push {\n    my( $self, $element ) = @_;\n    my $curr_field = $self->{curr_field};\n    my $curr_row = ++$self->{curr_row};\n    my $name = $self->{'names'}[$curr_field];\n    \n    if ( $curr_field < 0 ) {\n       die \"Missing <field> tag in recordset\\n\";\n    }\n    if ( $self->{curr_row} >= $self->{row_count} ) {\n        die \"Number of elements in field '$name' exceeds declared row count\\n\";\n    }\n    \n    $self->{value}[$curr_row][$curr_field] = $element;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Recordset.pm",
+      "package" : "WDDX::Recordset"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_parser {\n    return 1;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Boolean.pm",
+      "package" : "WDDX::Boolean"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub taint {\n    return shift() . $WDDX::Parser::TAINTED;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Parser.pm",
+      "package" : "WDDX::Parser"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_parser {\n    return 1;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Null.pm",
+      "package" : "WDDX::Null"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add {\n    my( $self, $name ) = @_;\n    my $hash = $self->{value};\n    \n    $self->{curr_key} = $name;\n    \n    if ( exists $hash->{lc $name} ) {\n        delete $hash->{ $hash->{lc $name} };\n    }\n    \n    $hash->{lc $name} = $name unless $name eq lc $name;\n    $hash->{$name} = undef;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Struct.pm",
+      "package" : "WDDX::Struct"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub num_elements () {\n    my( $self ) = @_;\n    return scalar @{ $self->{value} };\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Array.pm",
+      "package" : "WDDX::Array"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_parser {\n    return 1;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/String.pm",
+      "package" : "WDDX::String"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _decode {\n    my( $self ) = @_;\n    \n    my $decoded = decode_base64( $self->{value} );\n    \n    if ( defined $self->{'length'} ) {\n        my $declared = $self->{'length'};\n        my $read = length $decoded;\n        if ( $declared != $read ) {\n            die \"Declared length of <binary> element ($declared) does not \" .\n                \"match length read ($read)\\n\";\n        }\n    }\n    \n    return $decoded;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Binary.pm",
+      "package" : "WDDX::Binary"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_parser {\n    return 1;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Number.pm",
+      "package" : "WDDX::Number"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_parser {\n    return 1;\n}",
+      "file" : "/var/tmp/arv_UdNear/WDDX-1.02/WDDX/Datetime.pm",
+      "package" : "WDDX::Datetime"
+   }
+]

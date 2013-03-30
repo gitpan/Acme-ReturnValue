@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  $Moose::Cookbook::Meta::Labeled_AttributeMetaclass::VERSION = '2.0801';\n}",
+      "file" : "/var/tmp/arv_IsT7o_/Moose-2.0801/lib/Moose/Cookbook/Legacy/Labeled_AttributeMetaclass.pm",
+      "package" : "Moose::Cookbook::Meta::Labeled_AttributeMetaclass"
+   },
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  $Moose::Cookbook::Legacy::Debugging_BaseClassReplacement::VERSION = '2.0801';\n}",
+      "file" : "/var/tmp/arv_IsT7o_/Moose-2.0801/lib/Moose/Cookbook/Legacy/Debugging_BaseClassReplacement.pm",
+      "package" : "Moose::Cookbook::Legacy::Debugging_BaseClassReplacement"
+   }
+]

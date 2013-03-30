@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub tree {\n        my ($self , $father, $level ,%h) = @_;\n\t$father = $self->{origin} unless $father;\n        foreach my $child ( @{$self->{tree}{$father} }) {\n\t\tlast if $h{$child};$h{$child}=1;\n\t\t$self->{sub}->($child,$level);\n                $self->tree($child, ($level + 1),%h ) if $self->{tree}{$child};\n        }\n}",
+      "file" : "/var/tmp/arv_EsrLoS/Paths-Tree-0.02/Tree.pm",
+      "package" : "Paths::Tree"
+   }
+]

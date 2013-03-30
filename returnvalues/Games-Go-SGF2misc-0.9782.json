@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _find_group {\n    my ($this, $checked, $SZ, $oc, $board, @p) = @_;\n\n    $this->_time(\"_find_group\");\n\n    print STDERR \"\\t_find_group(@p)\" if $ENV{DEBUG}>12;\n    my @g;\n\n    if( not $checked->{\"@p\"} ) {\n        $checked->{\"@p\"} = 1;\n        print STDERR \".\" if $ENV{DEBUG}>12;\n        unless( ($p[0] < 0 or $p[0] > ($SZ-1)) or ($p[1] < 0 or $p[1] > ($SZ-1)) ) {\n            print STDERR \"..\" if $ENV{DEBUG}>12;\n            if( $board->[$p[0]][$p[1]] eq $oc ) {\n                print STDERR \" !\" if $ENV{DEBUG}>12;\n                push @g, [ @p ];\n                for my $p ( [$p[0]-1, $p[1]+0], [$p[0]+1, $p[1]+0], [$p[0]+0, $p[1]-1], [$p[0]+0, $p[1]+1] ) {\n                    push @g, $this->_find_group( $checked, $SZ, $oc, $board, @$p );\n                }\n            }\n        }\n    }\n    print STDERR \"\\n\" if $ENV{DEBUG}>12;\n\n    $this->_time(\"_find_group\");\n\n    return @g;\n}",
+      "file" : "/var/tmp/arv_D9QLPo/Games-Go-SGF2misc-0.9782/SGF2misc.pm",
+      "package" : "Games::Go::SGF2misc"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dump {\n    my $self = shift;\n    my ($format) = @_;\n\n    $format = 'png' unless $format;\n    \n    if ( $format =~ /jp(e?)g/i ) {\n        return $self->{'image'}->jpeg;\n    } elsif ( $format =~ /gd2/i ) {\n        return $self->{'image'}->gd2;\n    } elsif ( $format =~ /gd/i ) {\n        return $self->{'image'}->gd;\n    } else {\n        return $self->{'image'}->png;\n    }\n}",
+      "file" : "/var/tmp/arv_D9QLPo/Games-Go-SGF2misc-0.9782/SGF2misc/GD.pm",
+      "package" : "Games::Go::SGF2misc::GD"
+   }
+]

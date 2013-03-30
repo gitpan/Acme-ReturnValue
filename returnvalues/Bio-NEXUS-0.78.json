@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub file_overwrite_warning {\n   my ($infile, $outfile, $command, $silentmode) = @_;\n   if ($silentmode == 1) {return 1}\n   if ($infile eq $outfile) {\n      warn(\"Do you really want to overwrite NEXUS file $infile with the $command output?\\n\");\n      if (<STDIN> =~ /y/) {\n\t return 1;\n      } else { die(\"Command aborted\\n\\n\")}\n   } else { return 1;}\n}",
+      "file" : "/var/tmp/arv_8qKW1B/Bio-NEXUS-0.78/lib/Bio/NEXUS/Tools/NexModifier.pm",
+      "package" : "Bio::NEXUS::Tools::NexModifier"
+   }
+]

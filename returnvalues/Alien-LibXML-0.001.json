@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.001'",
+      "file" : "/var/tmp/arv_4M6b8u/Alien-LibXML-0.001/lib/Alien/LibXML.pm",
+      "package" : "Alien::LibXML"
+   }
+]

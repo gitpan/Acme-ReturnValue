@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub patch_object {\n    my $obj = shift;\n    Monkey::Patch::Handle::Object->new(\n        object  => $obj,\n        package => ref $obj,\n        subname => shift,\n        code    => shift,\n    )->install;\n}",
+      "file" : "/var/tmp/arv_hP8CcH/Monkey-Patch-0.03/lib/Monkey/Patch.pm",
+      "package" : "Monkey::Patch"
+   }
+]

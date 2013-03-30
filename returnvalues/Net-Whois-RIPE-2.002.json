@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub object_types {\n    my $self = shift;\n    my $iterator = $self->__query(QUERY_LIST_OBJECTS);\n    while (!$iterator->is_exhausted) {\n        my $value = $iterator->value;\n        return split /\\s+/, $value if $value !~ /^%\\s/;\n    }\n    return;\n}",
+      "file" : "/var/tmp/arv_HNx3du/Net-Whois-RIPE-2.002/lib/Net/Whois/RIPE.pm",
+      "package" : "Net::Whois::RIPE"
+   }
+]

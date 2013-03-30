@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    print LOG \"build complete\\n\";\n    close LOG;\n}",
+      "file" : "/var/tmp/arv__ENnP3/Java-Build-0.05/demo/MyBuild.pm",
+      "package" : "MyBuild"
+   }
+]

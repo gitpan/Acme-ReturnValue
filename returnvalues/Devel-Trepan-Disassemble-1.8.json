@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"All of the real action is in Devel::Trepan::CmdProcessor::Command::Disassemble.pm\"",
+      "file" : "/var/tmp/arv_Tc9OTT/Devel-Trepan-Disassemble-1.8/lib/Devel/Trepan/Disassemble.pm",
+      "package" : "Devel::Trepan::Disassemble"
+   }
+]

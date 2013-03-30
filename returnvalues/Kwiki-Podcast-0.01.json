@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mkrss {\n    my ($title,$creator,$description,@pods) = @_;\n    my $rss = XML::RSS->new( version => '2.0', encoding=> 'utf-8' );\n\n    $rss->channel(title => $title,\n\t\t  publisher => $creator,\n\t\t  description => $description );\n\n    for (@pods) {\n\tmy $uri = URI->new($_->{uri});\n\tmy ($sec,$min,$hour,$mday,$mon,$year,,,) = localtime($_->{page}->io->ctime);\n\t$rss->add_item( title => $_->{page}->title,\n\t\t\tlink  => $uri,\n\t\t\tenclosure => { url => $uri, type => 'audio/mpeg' },\n\t\t\tdescription => '<![CDATA[' . $_->{page}->content . ']]>',\n\t\t\tcategory => \"Podcast\",\n\t\t\tpubDate => ($year+1900).\"-$mon-$mday\".\"T\".\"$hour:$min:$sec\",\n\t\t\tauthor => $_->{page}->metadata->edit_by\n\t\t      );\n    }\n    return $rss->as_string;\n}",
+      "file" : "/var/tmp/arv_aINrb1/Kwiki-Podcast-0.01/lib/Kwiki/Podcast.pm",
+      "package" : "Kwiki::Podcast"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub stat_to_xml {\n   my ($self, $path) = @_;\n   my $aug_root = $self->{aug_root};\n\n   my %stat;\n   ($stat{dev}, $stat{ino}, $stat{mode}, $stat{nlink},\n    $stat{uid}, $stat{gid}, $stat{rdev}, $stat{size},\n    $stat{atime}, $stat{mtime}, $stat{ctime},\n    $stat{blksize}, $stat{blocks}) = stat(\"${aug_root}${path}\");\n\n   my $stat_elem = XML::LibXML::Element->new('stat');\n\n   for my $k (keys(%stat)) {\n      $stat_elem->setAttribute($k, $stat{$k});\n   }\n\n   return $stat_elem;\n}",
+      "file" : "/var/tmp/arv_BRe0ol/Config-Augeas-Exporter-v1.0.0/lib/Config/Augeas/Exporter.pm",
+      "package" : "Config::Augeas::Exporter"
+   }
+]

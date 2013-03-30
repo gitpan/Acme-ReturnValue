@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub silabas {\n  my $word = shift;\n  return split '\\|', wordaccent($word);\n}",
+      "file" : "/var/tmp/arv_jmfdMW/Lingua-PT-Speaker-0.12/lib/Lingua/PT/Speaker.pm",
+      "package" : "Lingua::PT::Speaker"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "RULES a\n\n//==>/\n(e|a)/\\1==>/$1\n6/6(?!~)==>/a\n6/a==>/a\nS/([a\\@eA6iouOE])==>z/$1\n\\@/([eaoOEu])==>i/$1\n\\@/([\\@i6])==>/$1\n## u/($vg)==>w/$1\n\nENDRULES\n\n1",
+      "file" : "/var/tmp/arv_jmfdMW/Lingua-PT-Speaker-0.12/lib/Lingua/PT/Speaker/AdjWords.pm",
+      "package" : "Lingua::PT::Speaker::AdjWords"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "RULES a",
+      "file" : "/var/tmp/arv_jmfdMW/Lingua-PT-Speaker-0.12/lib/Lingua/PT/Speaker/Prosody.pm",
+      "package" : "Lingua::PT::Speaker::Prosody"
+   }
+]

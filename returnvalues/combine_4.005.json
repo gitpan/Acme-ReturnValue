@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub SaveTermListSQL {\n  my ($self, $databasehandle) = @_;\n  $databasehandle->do(qq{DELETE FROM topicdefinition;});\n  my $sth = $databasehandle->prepare(qq{INSERT INTO topicdefinition (term,class,weight) VALUES(?,?,?);});\n  foreach my $i (0 .. $#{$self->{Term}}) {\n      my $t=@{$self->{Term}}[$i];\n      my $w=@{$self->{TermWeight}}[$i];\n      my $c=@{$self->{TermClass}}[$i];\n      $sth->execute($t,$c,$w);\n  }\n  return;\n}",
+      "file" : "/var/tmp/arv_QnL5FO/combine-4.005/Combine/LoadTermList.pm",
+      "package" : "Combine::LoadTermList"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cleanquery\n{\n\n  my($query, %opt) = @_;\n\n  my $unique = $opt{'unique'} || 'kvpairs';\n\n  \n  my %sessid;\n  if($opt{'cleansessions'} == 1)\n  {\n      my $c = Combine::Config::Get('url');\n       %sessid = %{$c->{'sessionids'}};\n  }\n\n\n  my $cleaned= '';\n  my @kvpairs = split('\\&', $query);\n  my(@keys, @values, %seen);\n  foreach my $item (@kvpairs)\n  {\n    my($k, undef, $v) = $item =~ /(\\w+)(=(.*))?/;\n    next if defined($sessid{$k});\n    if($unique eq 'kvpairs')\n    {\n      $cleaned .= '&' . $item unless $seen{$item};\n      $seen{$item}++;\n    } else { \n      $cleaned .= '&' . $item unless $seen{$k};\n      $seen{$k}++;\n    }\n  }\n\n  return substr($cleaned,1);\n}",
+      "file" : "/var/tmp/arv_QnL5FO/combine-4.005/Combine/selurl.pm",
+      "package" : "Combine::selurl"
+   }
+]

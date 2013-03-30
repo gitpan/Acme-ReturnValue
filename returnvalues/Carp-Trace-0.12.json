@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub trace {\n    my $level   = shift || $DEPTH       || 0;\n    my $offset  = shift || $OFFSET      || 0;\n    my $args    = shift || $ARGUMENTS   || 0;\n\n    my $trace = '';\n    my $i = 1 + $OFFSET;\n\n    while (1) {\n        last if $level && $level < $i;\n\n        my  @caller = caller($i);\n        last unless scalar @caller;\n\n        my  ($package, $filename, $line, $subroutine, $hasargs, $wantarray,\n            $evaltext, $is_require, $hints, $bitmask) = @caller;\n\n        my $string = $subroutine eq '(eval)'\n                    ?   $package . '::' . $subroutine . qq| [$i]|\n                        . (defined $evaltext ? qq[\\n\\t$evaltext] : '')\n                    :   $subroutine . qq| [$i]|;\n        $string =~ s/\\n;$/;/gs;\n\n        $string .= qq[\\n\\t];\n\n        $string .= q[require|use - ] if $is_require;\n        $string .= defined $wantarray\n                        ? $wantarray ? 'list - ' : 'scalar - '\n                        : 'void - ';\n        $string .= $hasargs ? 'new stash' : 'no new stash';\n        $string .=  qq[\\n\\t] . $filename . ' line ' . $line . qq[\\n];\n\n        if ($args) {\n            local $Data::Dumper::Varname    = 'ARGS';\n            local $Data::Dumper::Indent     = 1;\n\n            for my $line ( split $/, Dumper( called_args($i) ) ) {\n                $string .=  \"\\t$line\\n\";\n            }\n        }\n\n        $trace = $string . $trace;\n\n        $i++;\n    }\n\n    return $trace;\n}",
+      "file" : "/var/tmp/arv_zA9pah/Carp-Trace-0.12/lib/Carp/Trace.pm",
+      "package" : "Carp::Trace"
+   }
+]

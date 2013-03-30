@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_backlinks_for_page {\n    my $page_id = shift;\n    my $chunk = $self->SEPARATOR . $page_id;\n    my $dir = $self->storage_directory . '/';\n    my $path = $dir . \"*$chunk\";\n    map { s/^$dir//; s/$chunk$//; $_} glob($path);\n}",
+      "file" : "/var/tmp/arv_98gldk/Kwiki-Backlinks-0.10/lib/Kwiki/Backlinks.pm",
+      "package" : "Kwiki::Backlinks"
+   }
+]

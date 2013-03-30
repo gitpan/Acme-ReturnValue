@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load __PACKAGE__",
+      "file" : "/var/tmp/arv_7Yu4FV/MonetDB-CLI-MapiXS-0.03/MapiXS.pm",
+      "package" : "MonetDB::CLI::MapiXS"
+   }
+]

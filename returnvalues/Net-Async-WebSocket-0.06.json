@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_wWKpUD/Net-Async-WebSocket-0.06/lib/Net/Async/WebSocket.pm",
+      "package" : "Net::Async::WebSocket"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_wWKpUD/Net-Async-WebSocket-0.06/lib/Net/Async/WebSocket/Server.pm",
+      "package" : "Net::Async::WebSocket::Server"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_wWKpUD/Net-Async-WebSocket-0.06/lib/Net/Async/WebSocket/Protocol.pm",
+      "package" : "Net::Async::WebSocket::Protocol"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_wWKpUD/Net-Async-WebSocket-0.06/lib/Net/Async/WebSocket/Client.pm",
+      "package" : "Net::Async::WebSocket::Client"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Posn\n{\n my ($t,$s) = @_;\n\n my $widgets =  $t->{widgets};\n \n my %reverseWidgets = reverse %$widgets;\n \n my $index = $reverseWidgets{$s};\n return () unless defined $index;\n \n return split(\",\", $index);\n}",
+      "file" : "/var/tmp/arv_Z8YoVj/Tcl-pTk-0.85/lib/Tcl/pTk/Table.pm",
+      "package" : "Tcl::pTk::Table"
+   }
+]

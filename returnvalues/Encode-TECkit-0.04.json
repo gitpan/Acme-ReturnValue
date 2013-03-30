@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode\n{\n    my ($self, $str, $check) = @_;\n    my ($res, $hr);\n    \n    $hr = 1;\n    $res = $self->{'encoder'}->convert($str, 1, $hr);\n    return $res;\n}",
+      "file" : "/var/tmp/arv_9OFc5g/Encode-TECkit-0.04/lib/Encode/TECkit.pm",
+      "package" : "Encode::TECkit"
+   }
+]

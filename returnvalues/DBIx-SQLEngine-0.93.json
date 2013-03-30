@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub sql_where {\n  my $self = shift;\n  my $expr = $self->expr;\n  ( length $expr ) or Carp::confess(\"Expression is missing or empty\");\n  my $compv = $self->compv;\n  my $cmp = $self->sql_comparator;\n  ( length $cmp ) or Carp::confess(\"sql_comparator is missing or empty\");\n  \n  if ( ! defined($compv) ) {\n    if ( $cmp eq '=' ) { $cmp = 'IS' }\n    join(' ', $expr, $cmp, 'NULL' );\n  } elsif ( ! ref($compv) ) {\n    join(' ', $expr, $cmp, '?' ), $compv;\n  } elsif ( ref($compv) eq 'SCALAR' ) {\n    join(' ', $expr, $cmp, $$compv );\n  } else {\n    Carp::confess(\"Can't use '$compv' as a comparison value\");\n  }\n}",
+      "file" : "/var/tmp/arv_4cwn7q/DBIx-SQLEngine-0.93/SQLEngine/Criteria/Comparison.pm",
+      "package" : "DBIx::SQLEngine::Criteria::Comparison"
+   }
+]

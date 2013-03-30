@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub process_list\n{\n\tmy $self = shift;\n\tmy $max_invalid = undef;\n\tif (exists $config{MaxInvalid}) {$max_invalid = $config{MaxInvalid}\n\tprint \"Now Using the CHANGEME module :\\n\" if $verbose;\n\n\tmy @uris = undef;\n\tmy %hits;\n\tif (defined ($config{tmpfile}))\n\t{\n\t\tuse DB_File; \n\t\tmy $tmp_file = $config{tmpfile};\n\t\ttie (%hits, 'DB_File', \"$tmp_file\", O_RDONLY) || \n\t\t    die (\"Cannot create or open $tmp_file\");\n\t\t@uris = sort { $hits{$b} <=> $hits{$a} } keys %hits;\n\t}\n\telsif ($self->uris())\n\t{\n\t\t@uris = $self->uris();\n\t\tforeach my $uri (@uris) { $hits{$uri} = 0 }\n\t}\n\n\n\tprint \"Done!\\n\" if $verbose;\n\n\n\tif (defined ($config{tmpfile}))\n        {\n\t\tuntie %hits;                                                                  \n\t}\n\n\tmy %returnhash;\n\t$returnhash{\"name\"}=\"CHANGEME\";                                                  \n\t$returnhash{\"intro\"}=\"An intro string for the module's results\";\n\t@{$returnhash{\"thead\"}}=[\"Header1\", \"Header2\", \"...\"] ;\n\t@{$returnhash{\"trows\"}}=\n\t[\n\t [\"data1\", \"data2\", \"...\"]\n\t [\"etc\", \"etc\", \"etc\"]\n\t [\"etc\", \"etc\", \"etc\"]\n\t [\"etc\", \"etc\", \"etc\"]\n\t];\n\t$returnhash{\"outro\"}=\"An outre string for the module's results. Usually the conclusion\";\n\treturn %returnhash;\n}\n\npackage W3C::LogValidator::CHANGEME;\n\n1;\n\n__END__\n\n",
+      "file" : "/var/tmp/arv_sI553O/W3C-LogValidator-1.4/samples/NewModule.pm",
+      "package" : "W3C::LogValidator::Changeme"
+   }
+]

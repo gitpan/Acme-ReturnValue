@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->load()",
+      "file" : "/var/tmp/arv_SE5wFn/Xacobeo-0.13/examples/Xacobeo/Ex/ClipboardLoad.pm",
+      "package" : "Xacobeo::Ex::ClipboardLoad"
+   }
+]

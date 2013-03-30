@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub deleteattrib\n{\n    my $self = shift;\n    my ($tag,$att,$tree) = @_;\n\n    return $tree unless exists($self->{ATTLIST}->{$tag});\n    return $tree unless exists($self->{ATTLIST}->{$tag}->{$att});\n\n    return if $self->attribrequired($tag,$att);\n\n    delete($$tree[1]->[0]->{$att});\n\n    return $tree;\n}",
+      "file" : "/var/tmp/arv_1ztCyP/XML-Stream-1.23/lib/XML/Stream/Parser/DTD.pm",
+      "package" : "XML::Stream::Parser::DTD"
+   }
+]

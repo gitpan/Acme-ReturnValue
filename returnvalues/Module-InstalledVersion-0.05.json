@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n    shift;\n    my ($module_name) = @_;\n    my $self = {};\n    $module_name = File::Spec->catfile(split(/::/, $module_name));\n\n    DIR: foreach my $dir (@INC) {\n        my $filename = File::Spec->catfile($dir, \"$module_name.pm\");\n        if (-e $filename ) {\n            $self->{dir} = $dir;\n            if (open IN, \"$filename\") {\n                while (<IN>) {\n                    if (/([\\$*])(([\\w\\:\\']*)\\bVERSION)\\b.*\\=/) {\n                        local $VERSION;\n                        my $res = eval $_;\n                        $self->{version} = $VERSION || $res;\n                        last DIR;\n                    }\n                }\n            } else {\n                Carp::carp \"Can't open $filename: $!\";\n            }\n        }\n    }\n    bless $self;\n    return $self;\n}",
+      "file" : "/var/tmp/arv_tXOSU8/Module-InstalledVersion-0.05/lib/Module/InstalledVersion.pm",
+      "package" : "Module::InstalledVersion"
+   }
+]

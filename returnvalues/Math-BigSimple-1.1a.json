@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub make_simple\n{\n\tmy $g = Math::BigSimple->new(shift);\n\treturn $g->make();\n}",
+      "file" : "/var/tmp/arv_MYaBnR/Math-BigSimple-1.1a/lib/Math/BigSimple.pm",
+      "package" : "Math::BigSimple"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "print \"runaway string\\n\n$something_undeclared\n\nprint \"ANOTHER line\\n\";\n\n1;\n__END__\n",
+      "file" : "/var/tmp/arv_GIdLqf/Gtk2-Ex-ErrorTextDialog-10/devel/MyRunawayWarnAndError.pm",
+      "package" : "MyRunawayWarnAndError"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = \"1.08\"",
+      "file" : "/var/tmp/arv_9yV3Lu/Bundle-Test-1.08/Test.pm",
+      "package" : "Bundle::Test"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub module_file {\n    die \"File::Share::module_file not yet supported\";\n}",
+      "file" : "/var/tmp/arv_l771qR/File-Share-0.02/lib/File/Share.pm",
+      "package" : "File::Share"
+   }
+]

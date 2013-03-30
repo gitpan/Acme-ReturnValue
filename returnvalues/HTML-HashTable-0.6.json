@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub make_table {\n\tmy $tsref = shift;\n\topen_table($tsref);\n\tforeach my $key (sort { \n\t\tif ($tsref->{SORTBY} eq \"value\") {\n\t\t\tif ($tsref->{ORDER} eq 'asc') {\n\t\t\t\t${$tsref->{DATA}}{$a} cmp ${$tsref->{DATA}}{$b};\n\t\t\t} else { \n\t\t\t\t${$tsref->{DATA}}{$b} cmp ${$tsref->{DATA}}{$a};\n\t\t\t}\n\t\t} else {\n\t\t\tif ($tsref->{ORDER} eq 'asc') {\n\t\t\t\t$a cmp $b;\n\t\t\t} else {\n\t\t\t\t$b cmp $a;\n\t\t\t}\n\t\t}\n\t} keys %{$tsref->{DATA}}) {\n\t\topen_row;\n\t\topen_cell;\n\t\t$HTML::HashTable::output .= $key;\n\t\tclose_cell(0);\n\t\trecurse_through($tsref, ${$tsref->{DATA}}{$key});\n\t\tclose_row;\n\t}\n\tclose_table;\n}",
+      "file" : "/var/tmp/arv_JE8gQg/HTML-HashTable-0.6/lib/HTML/HashTable.pm",
+      "package" : "HTML::HashTable"
+   }
+]

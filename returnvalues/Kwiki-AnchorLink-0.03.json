@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub to_html {\n    my $anchor_name = $self->arguments;\n    return qq{<a name=\"$anchor_name\"></a>};\n}",
+      "file" : "/var/tmp/arv_N1hunb/Kwiki-AnchorLink-0.03/lib/Kwiki/AnchorLink.pm",
+      "package" : "Kwiki::AnchorLink"
+   }
+]

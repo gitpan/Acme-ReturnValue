@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Licensed to auto'",
+      "file" : "/var/tmp/arv__VmyXf/Module-Install-AutoLicense-0.08/lib/Module/Install/AutoLicense.pm",
+      "package" : "Module::Install::AutoLicense"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_soul_mates {\n    my ($self, $email_sha256) = @_;\n    return undef if ! $email_sha256;\n\n    my $r = $self->send_request(\n        'get_soul_mates', \n        RPC::XML::string->new($email_sha256),\n    );\n    return undef if _is_error($r);\n\n    return [] if ref($r) ne 'RPC::XML::array';\n\n    return [\n        map { {\n            email_sha256    => $_->[0]->value,\n            afinimaki       => 1.0 * $_->[1]->value,\n            user_id         => 1   * ($_->[2]->value || 0),\n        } } @$r\n    ];\n}",
+      "file" : "/var/tmp/arv_GW2qgv/WWW-AfinimaKi-0.85/lib/WWW/AfinimaKi.pm",
+      "package" : "WWW::AfinimaKi"
+   }
+]

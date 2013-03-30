@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get {\n  my $self = shift;\n  my $resp = $self->SUPER::get(@_);\n\n  if(\n      $self->content =~ /<!--\\s*start error\\s*-->/\n        &&\n      $self->content =~ /<!--\\s*end error\\s*-->/\n        &&\n      $self->content =~ /<!--\\s*error code:\\s+((?:\\w+\\s?)+)\\s+-->/\n  ) {\n    $self->die(\"Yahoo error: $1\");\n  }\n\n  return $resp;\n}",
+      "file" : "/var/tmp/arv_vaTuYs/MailClientYahoo-1.0/lib/Mail/Client/Yahoo.pm",
+      "package" : "Mail::Client::Yahoo"
+   }
+]

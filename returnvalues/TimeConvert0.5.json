@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ConvertSecs {\n\tmy $Time = shift;\n\tmy $sec  = shift;\n\n\treturn \"$sec seconds\" if($sec < 60);\n\n\tmy $min = $sec / 60, $sec %= 60;\n\t$min = int($min);\n\treturn \"$min minutes and $sec seconds.\" if($min < 60);\n\n\tmy $hrs = $min / 60, $min %= 60;\n\t$hrs = int($hrs);\n\treturn \"$hrs hours, $min minutes and $sec seconds.\" if($hrs < 24);\n\n\tmy $days = $hrs / 24, $hrs %= 24;\n\t$days = int($days);\n\treturn \"$days days, $hrs hours, $min minutes and $sec seconds.\" if($days < 365);\n\n\tmy $years = $days / 365, $days %= 365;\n\t$years = int($years);\n\treturn \"$years years, $days days, $hrs hours, $min minutes and $sec seconds.\";\n}",
+      "file" : "/var/tmp/arv_CyA9Pg/TimeConvert0.5/lib/Time/Convert.pm",
+      "package" : "Time::Convert"
+   }
+]

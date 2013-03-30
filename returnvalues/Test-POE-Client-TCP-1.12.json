@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Putting the test into POE}",
+      "file" : "/var/tmp/arv_Qtf7eA/Test-POE-Client-TCP-1.12/lib/Test/POE/Client/TCP.pm",
+      "package" : "Test::POE::Client::TCP"
+   }
+]

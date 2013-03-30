@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mk_upload_root {\n        my $self = shift;\n        my $msg  = shift;\n        \n        my $msg_id   = $self->mk_id($msg->header(\"Message-Id\"));\n        my $msg_date = $self->mk_date($msg->header(\"Date\"));\n        \n        $msg_date =~ m!^(\\d{4})(\\d{2})(\\d{2})!;\n        my ($yyyy,$mm,$dd) = ($1,$2,$3);\n        \n        my $blog = MT::Blog->load($self->blog_id());\n        my $fmgr = $blog->file_mgr();\n        \n        my $root = $blog->site_path();\n        my $url  = $blog->site_url();\n        \n        $root = File::Spec->catdir($root,\"attachments\",$yyyy,$mm,$dd,$msg_id);\n        $url  = \"$url/attachments/$yyyy/$mm/$dd/$msg_id\";\n        \n        $self->log()->debug(\"attachment root : $root\\n\");\n        $self->log()->debug(\"attachment URL : $url\\n\");\n        \n        if ((! $fmgr->exists($root)) && (! $fmgr->mkpath($root))) {\n                $self->log()->error(\"Failed to create '$root', $!\");\n        }\n        \n        return ($root,$url);\n}",
+      "file" : "/var/tmp/arv_vPgB7n/MT-Import-Mbox-1.01/lib/MT/Import/Mbox.pm",
+      "package" : "MT::Import::Mbox"
+   }
+]

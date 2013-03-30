@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub format_http_query {\n    my ( $self, $formdata ) = @_;\n    if ( ref $formdata ) {\n        return join( '&', map { $CFG{'uri_encoder_func'}->($_) . '=' . $CFG{'uri_encoder_func'}->( $formdata->{$_} ) } keys %{$formdata} );\n    }\n    return $formdata;\n}",
+      "file" : "/var/tmp/arv_bbkDDh/cPanel-PublicAPI-1.002/lib/cPanel/PublicAPI.pm",
+      "package" : "cPanel::PublicAPI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub zoneexists_local {\n    my $self = shift;\n    my $exists = cPanel::PublicAPI::Utils::remove_trailing_newline( $self->simple_post_whmreq( '/scripts2/zoneexists_local', \\@_, [ 'zone', 'dnsuniqid' ] ) );\n    $exists =~ s/[\\r\\n]//g;\n    if ( $exists eq '1' ) {\n        return 1;\n    }\n    return 0;\n}",
+      "file" : "/var/tmp/arv_bbkDDh/cPanel-PublicAPI-1.002/lib/cPanel/PublicAPI/WHM/DNS.pm",
+      "package" : "cPanel::PublicAPI::DNS"
+   }
+]

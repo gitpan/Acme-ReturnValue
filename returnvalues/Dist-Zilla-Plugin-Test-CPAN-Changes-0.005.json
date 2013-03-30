@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_PWXsY8/Dist-Zilla-Plugin-Test-CPAN-Changes-0.005/lib/Dist/Zilla/Plugin/Test/CPAN/Changes.pm",
+      "package" : "Dist::Zilla::Plugin::Test::CPAN::Changes"
+   }
+]

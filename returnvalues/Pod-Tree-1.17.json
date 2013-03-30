@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub url\n{\n    my($link_map, $html, $target) = @_;\n\n    my $depth    = $html->{options}{depth};\n    my $base     = join '/', ('..') x $depth;\n\n    my $page     = $target->get_page;\n       $page     =~ s(::)(/)g;\n       $page    .= '.html' if $page;\n\n    my $section  = $target->get_section;\n    my $fragment = $html->escape_2396 ($section);\n\n    my $url      = $html->assemble_url($base, $page, $fragment);\n    $url\n}",
+      "file" : "/var/tmp/arv_ZlT4cn/Pod-Tree-1.17/lib/Pod/Tree/HTML.pm",
+      "package" : "Pod::Tree::BitBucket"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n    my $save = $@;\n    $@ = undef;\n    my $index = rindex($AUTOLOAD, \"::\");\n    Carp::croak(\"Can't parse $AUTOLOAD\") unless ($index > -1);\n    my $class = substr($AUTOLOAD, 0, $index);\n    my $method = substr($AUTOLOAD, $index + 2);\n    if ($method eq 'DESTROY') {\n        *$AUTOLOAD = {};\n        goto &$AUTOLOAD;\n    }\n    $class =~ s/::[^:]+$//;\n    my $shadow_class = '__shadow__';\n    my $shadow_method = '__shadow__';\n    return if ($method =~ /^$shadow_method/);\n    $HTML::HTPL::Munge::Stub::AUTOLOAD = \"${class}::$method\";\n    &HTML::HTPL::Munge::Stub::loader;\n    goto &$AUTOLOAD;\n}",
+      "file" : "/var/tmp/arv_Djtu2p/htpl-3.14/HTPL-modules/lib/HTML/HTPL/Munge.pm",
+      "package" : "HTML::HTPL::Munge"
+   }
+]

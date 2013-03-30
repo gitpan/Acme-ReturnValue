@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _constants { return \\%reuse }",
+      "file" : "/var/tmp/arv_5Oc5sY/Data-Reuse-0.10/lib/Data/Reuse.pm",
+      "package" : "Data::Reuse"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub close {\n\n\tmy ( $self ) = @_ ;\n\n\tmy $handle = delete( $self->{'handle'} ) ;\n\tdelete( $self->{'lines'} ) ;\n\n\tCORE::close( $handle ) ;\n}",
+      "file" : "/var/tmp/arv_l5HliC/File-ReadBackwards-1.05/ReadBackwards.pm",
+      "package" : "File::ReadBackwards"
+   }
+]

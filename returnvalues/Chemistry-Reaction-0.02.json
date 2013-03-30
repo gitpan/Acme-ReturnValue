@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub reverse {\n  my ($react, $mol, @map) = @_;\n\n\n  my %occ;\n  for (my $i = 0; $i < $react->atoms; $i++) {\n    $occ{$react->atoms($i+1)} = $map[$i];\n  }\n\n\n  foreach my $bond ($react->bonds) {\n    my @atoms = $bond->atoms;\n    my $a1 = $atoms[0];\n    my $a2 = $atoms[1];\n    my $b; \n    foreach my $bb ($occ{$a1}->bonds) {\n      foreach my $aa ($bb->atoms) {\t\n\tif ($aa eq $occ{$a2}) {\n\t  $b = $bb;\n\t  last;\n\t}\n      }\n      if ($b) { last; }\n    }\n    if ($b) {\n      $b->order($b->order\n\t\t-$bond->attr('reaction/after')\n\t\t+$bond->attr('reaction/before'));\n      if ($b->order == 0) {\n\t$mol->delete_bond($b);\n      }\n    } else {\n      $mol->new_bond(atoms =>\n\t\t     [$mol->by_id($occ{$a1}), $mol->by_id($occ{$a2})],\n\t\t    order => $bond->attr('reaction/before'));\n    }\n  }\n}",
+      "file" : "/var/tmp/arv_6ieTxK/Chemistry-Reaction-0.02/lib/Chemistry/Reaction.pm",
+      "package" : "Chemistry::Reaction"
+   }
+]

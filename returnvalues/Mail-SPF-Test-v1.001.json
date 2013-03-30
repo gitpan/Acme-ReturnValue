@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_FJ_WGa/Mail-SPF-Test-v1.001/lib/Mail/SPF/Test.pm",
+      "package" : "Mail::SPF::Test"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_FJ_WGa/Mail-SPF-Test-v1.001/lib/Mail/SPF/Test/Scenario.pm",
+      "package" : "Mail::SPF::Test::Scenario"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_FJ_WGa/Mail-SPF-Test-v1.001/lib/Mail/SPF/Test/Case.pm",
+      "package" : "Mail::SPF::Test::Case"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_FJ_WGa/Mail-SPF-Test-v1.001/lib/Mail/SPF/Test/Base.pm",
+      "package" : "Mail::SPF::Test::Base"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub execute {\n  my $self = shift;\n  my $bind_values = shift;\n  if (ref $bind_values) {\n    my $raw = {};\n    $raw = tr_hash($bind_values, $self->{META}) if $bind_values;\n    return $self->SUPER::execute($raw, @_);\n  } else { \n    return $self->SUPER::execute($bind_values, @_);\n  }\n}",
+      "file" : "/var/tmp/arv_CamtJR/Tao-DBI-0.0008/lib/Tao/DBI/st_deep.pm",
+      "package" : "Tao::DBI::st_deep"
+   }
+]

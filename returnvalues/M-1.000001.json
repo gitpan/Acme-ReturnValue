@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = 1.000001",
+      "file" : "/var/tmp/arv_Vb03bK/M-1.000001/lib/M.pm",
+      "package" : "M"
+   }
+]

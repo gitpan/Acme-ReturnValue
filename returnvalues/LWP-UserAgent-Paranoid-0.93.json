@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"The truth is out there.\"",
+      "file" : "/var/tmp/arv_aUuGtJ/LWP-UserAgent-Paranoid-0.93/lib/LWP/UserAgent/Paranoid.pm",
+      "package" : "LWP::UserAgent::Paranoid"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"I want to believe.\"",
+      "file" : "/var/tmp/arv_aUuGtJ/LWP-UserAgent-Paranoid-0.93/lib/LWP/UserAgent/Paranoid/Test.pm",
+      "package" : "LWP::UserAgent::Paranoid::Test"
+   }
+]

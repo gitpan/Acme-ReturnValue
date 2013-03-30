@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_vKiD9a/Socket-Packet-0.09/lib/Socket/Packet.pm",
+      "package" : "Socket::Packet"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_vKiD9a/Socket-Packet-0.09/lib/IO/Socket/Packet.pm",
+      "package" : "IO::Socket::Packet"
+   }
+]

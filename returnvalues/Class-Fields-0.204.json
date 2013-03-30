@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "'pants of infinity'",
+      "file" : "/var/tmp/arv_sw9O3v/Class-Fields-0.204/lib/private.pm",
+      "package" : "private"
+   },
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "q|I'll get you next time, Gadget!|",
+      "file" : "/var/tmp/arv_sw9O3v/Class-Fields-0.204/lib/Class/Fields.pm",
+      "package" : "Class::Fields"
+   },
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "'FIRE!'",
+      "file" : "/var/tmp/arv_sw9O3v/Class-Fields-0.204/lib/Class/Fields/Attribs.pm",
+      "package" : "Class::Fields::Attribs"
+   },
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "'IRS Estate Tax Return Form 706'",
+      "file" : "/var/tmp/arv_sw9O3v/Class-Fields-0.204/lib/Class/Fields/Inherit.pm",
+      "package" : "Class::Fields::Inherit"
+   },
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "'Maybe we should have stopped with Smalltalk.'",
+      "file" : "/var/tmp/arv_sw9O3v/Class-Fields-0.204/lib/Class/Fields/Fuxor.pm",
+      "package" : "Class::Fields::Fuxor"
+   }
+]

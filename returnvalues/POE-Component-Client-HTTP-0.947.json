@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_pending {\n  my $self = shift;\n  return $self->[FRAMING_BUFFER] if @{$self->[FRAMING_BUFFER]};\n  return undef;\n}",
+      "file" : "/var/tmp/arv_AjIasL/POE-Component-Client-HTTP-0.947/lib/POE/Filter/HTTPChunk.pm",
+      "package" : "POE::Filter::HTTPChunk"
+   }
+]

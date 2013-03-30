@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->run_if_script",
+      "file" : "/var/tmp/arv_afO5BG/Plack-Middleware-DBIC-QueryLog-0.05/maint/Maker.pm",
+      "package" : "Maker"
+   }
+]

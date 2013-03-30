@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.03'\n\n\n\nsub function1 {\n}\n\n\nsub function2 {\n}\n\n\n1",
+      "file" : "/var/tmp/arv_AEZBxo/ACME-ltharris-0.03/lib/ACME/ltharris.pm",
+      "package" : "ACME::ltharris"
+   }
+]

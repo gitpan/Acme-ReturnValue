@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n  my ($name,$dbh) = @_;\n  UNIVERSAL::isa($dbh,'DBI::db') || croak('Not a DBI handle.');\n\n\n\n  my @dbtypes = eval { DBI::_dbtype_names($dbh,0) };\n  my $pclass = _get_parser(@dbtypes);\n\n  croak(\"No supported database driver in '@dbtypes'\")\n    unless defined $pclass;\n\n  eval \"use $pclass;\";\n  croak(\"Cannot load $pclass: $@\") if $@;\n\n  my $new = UNIVERSAL::can($pclass, 'new');\n  \n  my $parser; if(ref $new) {\n    $parser = eval { $new->($pclass); };\n    croak \"Cannot create object for $pclass: $@\" if $@;\n  } else {\n    $parser = $pclass;\n  }\n\n  foreach(('format_datetime', 'parse_datetime')) {\n    croak \"$pclass->$_ is missing\" \n      unless UNIVERSAL::can($parser, $_)\n  }\n\n  return $parser;\n}",
+      "file" : "/var/tmp/arv_8u_cut/DateTime-Format-DBI-0.040/lib/DateTime/Format/DBI.pm",
+      "package" : "DateTime::Format::DBI"
+   }
+]

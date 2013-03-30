@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "%yx = (\n\t\"������������\"\t=> \"a\",\n\t\"��������\"\t  \t=> \"e\",\n\t\"��������\"\t\t=> \"i\",\n\t\"����������\"\t=> \"o\",\n\t\"��������\"\t\t=> \"u\",\n\t\"����������������\"\n\t\t=> \"aaooccnnddddyyyy\",\n\t)",
+      "file" : "/var/tmp/arv_22ft9y/String-Canonical-1.2/Canonical.pm",
+      "package" : "String::Canonical"
+   }
+]

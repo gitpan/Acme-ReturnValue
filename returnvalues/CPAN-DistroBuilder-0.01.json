@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub report {\n    print STDERR \"+++ $_[0]\\n\";\n}",
+      "file" : "/var/tmp/arv_kFVJ0k/CPAN-DistroBuilder-0.01/lib/CPAN/DistroBuilder.pm",
+      "package" : "CPAN::DistroBuilder"
+   }
+]

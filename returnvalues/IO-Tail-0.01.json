@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub loop\n{\n\tmy $this = shift;\n\tmy $timeout_secs = shift;\n\tmy $enter_at = time;\n\t\n\twhile( $this->check() )\n\t{\n\t\tif( defined($timeout_secs) && time - $enter_at > $timeout_secs )\n\t\t{\n\t\t\tlast;\n\t\t}\n\t\tselect(undef,undef,undef,0.1);\n\t}\n}",
+      "file" : "/var/tmp/arv_F0apkI/IO-Tail-0.01/lib/IO/Tail.pm",
+      "package" : "IO::Tail"
+   }
+]

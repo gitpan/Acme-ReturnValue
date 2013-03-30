@@ -1,0 +1,152 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF.pm",
+      "package" : "Mail::SPF"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Request.pm",
+      "package" : "Mail::SPF::Request"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Server.pm",
+      "package" : "Mail::SPF::Server"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Util.pm",
+      "package" : "Mail::SPF::Util"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/SenderIPAddrMech.pm",
+      "package" : "Mail::SPF::SenderIPAddrMech"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Exception.pm",
+      "package" : "Mail::SPF::Exception"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech.pm",
+      "package" : "Mail::SPF::Mech"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Base.pm",
+      "package" : "Mail::SPF::Base"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/MacroString.pm",
+      "package" : "Mail::SPF::MacroString"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Record.pm",
+      "package" : "Mail::SPF::Record"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Result.pm",
+      "package" : "Mail::SPF::Result"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Term.pm",
+      "package" : "Mail::SPF::Term"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mod.pm",
+      "package" : "Mail::SPF::Mod"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/v2/Record.pm",
+      "package" : "Mail::SPF::v2::Record"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/v1/Record.pm",
+      "package" : "Mail::SPF::v1::Record"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/MX.pm",
+      "package" : "Mail::SPF::Mech::MX"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/PTR.pm",
+      "package" : "Mail::SPF::Mech::PTR"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/IP4.pm",
+      "package" : "Mail::SPF::Mech::IP4"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/IP6.pm",
+      "package" : "Mail::SPF::Mech::IP6"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/A.pm",
+      "package" : "Mail::SPF::Mech::A"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/All.pm",
+      "package" : "Mail::SPF::Mech::All"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/Include.pm",
+      "package" : "Mail::SPF::Mech::Include"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mech/Exists.pm",
+      "package" : "Mail::SPF::Mech::Exists"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mod/Exp.pm",
+      "package" : "Mail::SPF::Mod::Exp"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "TRUE",
+      "file" : "/var/tmp/arv_cTmmqU/Mail-SPF-v2.8.0/lib/Mail/SPF/Mod/Redirect.pm",
+      "package" : "Mail::SPF::Mod::Redirect"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "END { }",
+      "file" : "/var/tmp/arv_3KaBZL/SOAP-Clean-0.02/lib/SOAP/Clean/Internal.pm",
+      "package" : "SOAP::Clean::Internal"
+   }
+]

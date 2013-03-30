@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _http_status_404\n{\n    return \"Status: 404 Not Found\\n\".\n\t    \"Content-Type: text/html\\n\".\n\t    \"Connection: close\\n\\n\".\n\t    \"404 Not Found\";\n}",
+      "file" : "/var/tmp/arv_SB80Gg/HTTP-DownloadLimit/lib/HTTP/DownloadLimit.pm",
+      "package" : "HTTP::DownloadLimit"
+   }
+]

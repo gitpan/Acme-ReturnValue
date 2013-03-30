@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub evrcmp ($$) {\n    my @rpm = @_;\n    foreach (@rpm) {\n\tnext if ref $_;\n\trequire RPM::Header;\n\tmy $hdr = RPM::Header->new;\n\tif (s/^(\\d+)://) {\n\t    $$hdr{EPOCH} = int $1;\n\t}\n\tif (m/^(.+)-(.+)$/) {\n\t    $$hdr{VERSION} = $1;\n\t    $$hdr{RELEASE} = $2;\n\t}\n\telse {\n\t    $$hdr{VERSION} = $_;\n\t    $$hdr{RELEASE} = \"\";\n\t}\n\t$_ = $hdr;\n    }\n    $rpm[0]->cmpver($rpm[1]);\n}",
+      "file" : "/var/tmp/arv_6Qys7t/Perl-RPM-1.51/RPM.pm",
+      "package" : "RPM"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub filenames\n{\n    my $self = shift;\n\n    my $base = $self->{BASENAMES}  || return undef;\n    my $dirs = $self->{DIRNAMES}   || return undef;\n    my $idxs = $self->{DIRINDEXES} || return undef;\n\n    unless (@$base == @$idxs)\n    {\n        rpm_error(RPMERR_INTERNAL,\n                  \"Mis-matched elements lists for BASENAMES and DIRINDEXES\");\n        return undef;\n    }\n\n    [ map { \"$dirs->[$idxs->[$_]]$base->[$_]\" } (0 .. $#$base) ];\n}",
+      "file" : "/var/tmp/arv_6Qys7t/Perl-RPM-1.51/RPM/Header.pm",
+      "package" : "RPM::Header"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import\n{\n    my ($class, @args) = @_;\n\n    my $callpkg = caller(0);\n\n    no strict 'refs';\n\n    for my $arg (@args)\n    {\n        if ($arg eq '%RPM' and ! (tied %RPM))\n        {\n            tie %RPM, \"RPM::Database\";\n            *{\"${callpkg}::RPM\"} = \\%{\"${class}::RPM\"};\n        }\n        elsif ($arg eq '$RPM' and ! $RPM)\n        {\n            tie %RPM, \"RPM::Database\" unless (tied %RPM);\n            $RPM = (tied %RPM);\n            *{\"${callpkg}::RPM\"} = \\${\"${class}::RPM\"};\n        }\n        else\n        {\n            warn \"$class: Unknown export requested: $arg, \";\n            return;\n        }\n    }\n}",
+      "file" : "/var/tmp/arv_6Qys7t/Perl-RPM-1.51/RPM/Database.pm",
+      "package" : "RPM::Database"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub log_message {\n    my ( $self, %param )= @_;\n\n    my $level= $param{level};\n    return if !exists $LEVEL2NUM{$level} and !exists $NUM2LEVEL{$level};\n\n    my $num= $LEVEL2NUM{$level};\n    $num= $level if !defined $num;  \n\n    my $message= $param{message};\n    $message .= \"\\n\" if substr( $message, -1, 1 ) ne \"\\n\";\n    @_= ($message);\n\n    goto &{$self->{action}->[$num]};\n}",
+      "file" : "/var/tmp/arv_xjTKoc/Log-Dispatch-Perl-0.04/lib/Log/Dispatch/Perl.pm",
+      "package" : "Log::Dispatch::Perl"
+   }
+]

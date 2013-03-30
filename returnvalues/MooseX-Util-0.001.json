@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_lkKYLj/MooseX-Util-0.001/lib/MooseX/Util.pm",
+      "package" : "MooseX::Util"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_lkKYLj/MooseX-Util-0.001/lib/MooseX/Traitor.pm",
+      "package" : "MooseX::Traitor"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_lkKYLj/MooseX-Util-0.001/lib/MooseX/TraitFor/Moose/Meta/Class/BetterAnonClassNames.pm",
+      "package" : "MooseX::TraitFor::Moose::Meta::Class::BetterAnonClassNames"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_lkKYLj/MooseX-Util-0.001/lib/MooseX/Util/Meta/Class.pm",
+      "package" : "MooseX::Util::Meta::Class"
+   }
+]

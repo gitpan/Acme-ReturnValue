@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub current_state {\n    shift->{CURRENT_STATE};\n}",
+      "file" : "/var/tmp/arv_wZSJkk/Data-Transactional-1.02/lib/Data/Transactional.pm",
+      "package" : "Data::Transactional"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "_register()",
+      "file" : "/var/tmp/arv_wZSJkk/Data-Transactional-1.02/lib/Data/Compare/Plugins/Data/Transactional.pm",
+      "package" : "Data::Compare::Plugins::Data::Transactional"
+   }
+]

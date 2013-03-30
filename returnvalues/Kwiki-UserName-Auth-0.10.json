@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::UserName::Auth",
+      "file" : "/var/tmp/arv_zGN7Mo/Kwiki-UserName-Auth-0.10/lib/Kwiki/UserName/Auth.pm",
+      "package" : "Kwiki::UserName::Auth"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Users::Auth",
+      "file" : "/var/tmp/arv_zGN7Mo/Kwiki-UserName-Auth-0.10/lib/Kwiki/Users/Auth.pm",
+      "package" : "Kwiki::Users::Auth"
+   }
+]

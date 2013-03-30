@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n    my $pkg=shift;\n    my $schemapkg=shift;\n    my $callpkg=caller;\n\n    use $schemapkg;\n    my $schema = $schemapkg->new;\n\n}",
+      "file" : "/var/tmp/arv_iDspn_/AutoSQL-0.2/lib/AutoSQL/CustomObject.pm",
+      "package" : "AutoSQL::CustomObject"
+   }
+]

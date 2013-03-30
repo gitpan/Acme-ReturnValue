@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _read_files {\n    my $self = shift;\n    my $files = $self->{Files};\n    my $read_header = 0;\n\n    foreach my $filename (@$files) {\n\n        my $fh;\n        if (!ref($filename) && ref(\\$filename) ne 'GLOB') {\n            $fh = gensym;\n            open($fh, $filename)\n              or croak(\"Unable to read profile file '$filename': $!\");\n        } else {\n            $fh = $filename;\n            $filename = ref($fh).' object';\n        }\n\n        $self->_read_header($fh, $filename, $read_header ? 0 : 1);\n        $read_header = 1;\n        $self->_read_body($fh, $filename);\n        close($fh);\n    }\n\n    delete $self->{_node_lookup};\n}",
+      "file" : "/var/tmp/arv_BN01PA/CGI-Application-Plugin-DBIProfile-0.07/lib/CGI/Application/Plugin/DBIProfile/Data.pm",
+      "package" : "CGI::Application::Plugin::DBIProfile::Data"
+   }
+]

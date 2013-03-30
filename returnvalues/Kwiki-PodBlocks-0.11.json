@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::PodBlocks",
+      "file" : "/var/tmp/arv_sgwz9B/Kwiki-PodBlocks-0.11/lib/Kwiki/PodBlocks.pm",
+      "package" : "Kwiki::PodBlocks"
+   }
+]

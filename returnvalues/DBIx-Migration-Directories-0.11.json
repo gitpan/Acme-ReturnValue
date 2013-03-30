@@ -1,0 +1,50 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_current_version {\n  my $self = shift;\n  my $version;\n\n  eval { $version = $self->db->db_get_current_version($self->{schema}); };\n\n  if($@) {\n    delete $self->{current_version};\n    die $@;\n  } elsif(!defined $version) {\n    delete $self->{current_version};\n    return;\n  } else {\n    $self->{current_version} = $version;\n    return $version;\n  }\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories.pm",
+      "package" : "DBIx::Migration::Directories"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n    my $class = shift;\n    my $self = $class->SUPER::new(@_);\n    my $schema_dir;\n    \n    eval {\n        require DBIx::Migration::Directories::ConfigData;\n        $schema_dir = DBIx::Migration::Directories::ConfigData->config(\n            'schema_dir'\n        );\n    };\n\n    \n    if($@ || !$schema_dir) {\n        $schema_dir = $self->default_install_dir(\n            'site', 'schemas', 'share/schemas'\n        );\n\n        $schema_dir = $self->prompt(\n            \"Where should database schemas be installed?\", $schema_dir\n        );\n    }\n\n    $self->config_data('schema_dir', $schema_dir);\n    \n    if(-d \"schema\") {\n        my $schema_name =\n            $self->{properties}->{schema_name} ||\n            $self->{properties}->{module_name};\n            \n        $schema_name =~ s{::}{-}g;\n        $self->add_install_dir(\"schema\", \"$schema_dir/$schema_name\");\n    }\n    \n    if(-d \"schemas\") {\n        $self->add_install_dir(\"schemas\", $schema_dir);\n    }\n\n    return $self;\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Build.pm",
+      "package" : "DBIx::Migration::Directories::Build"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub table_exists {\n    my($self, $table) = @_;\n    \n    my $dbh = $self->{dbh};\n    my $rv;\n    $dbh->begin_work;\n    my $query = $self->sql_table_exists($table);\n    my $sth = $dbh->prepare($query);\n    if($sth->execute()) {\n        if($sth->fetchrow_arrayref()) {\n            $rv = 1;\n        } else {\n            $rv = 0;\n        }\n        $sth->finish();\n        if($dbh->transaction_error) {\n            $dbh->rollback();\n        } else {\n            $dbh->commit();\n        }\n    } else {\n        my $err = $dbh->errstr;\n        $dbh->rollback();\n        warn \"table_exists query $query failed: $err\";\n        $rv = undef;\n    }\n    return $rv;\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Database.pm",
+      "package" : "DBIx::Migration::Directories::Database"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub schema_deletes_ok {\n    my($self, $test_name) = @_;\n    $test_name ||= 'Schema deletes OK';\n    return ok($self->full_delete_schema, $test_name);\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Test.pm",
+      "package" : "DBIx::Migration::Directories::Test"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub schema_version_log {\n  my $self = shift;\n  my $myschema = shift || $self->{schema} ||\n    croak \"schema_version_log() called without a schema name\";\n  return $self->db->db_schema_version_log($myschema);\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Base.pm",
+      "package" : "DBIx::Migration::Directories::Base"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub sql_insert_migration_schema_log {\n    my($self, $myschema, $from, $to) = @_;\n    my $now = strftime(\"%Y%m%dZ%H%M%S\", gmtime);\n    return sprintf(\n        q{\n            INSERT INTO migration_schema_log \n                (schema_name, event_time, old_version, new_version)\n            VALUES (%s, %s, %f, %f)\n        },\n        $self->{dbh}->quote($myschema), $self->{dbh}->quote($now), $from, $to\n    );\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Database/SQLite2.pm",
+      "package" : "DBIx::Migration::Directories::Database::SQLite2"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub sql_table_exists {\n    my($self, $table) = @_;\n    return sprintf(q{SHOW TABLES LIKE %s}, $self->{dbh}->quote($table));\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Database/mysql.pm",
+      "package" : "DBIx::Migration::Directories::Database::mysql"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ACTION_code {\n    my $self = shift;\n    $self->build_dirs();\n    return $self->SUPER::ACTION_code(@_);\n}",
+      "file" : "/var/tmp/arv_Eh71G4/DBIx-Migration-Directories-0.11/lib/DBIx/Migration/Directories/Build/Base.pm",
+      "package" : "DBIx::Migration::Directories::Build::Base"
+   }
+]

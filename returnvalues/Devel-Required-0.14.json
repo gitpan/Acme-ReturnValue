@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _slurp {\n    my ($filename)= @_;\n    my $contents;\n\n    if ( open( IN, $filename ) ) {\n        $contents= do { local $/; <IN> };\n        close IN;\n    }\n\n    else {\n        warn qq{Could not open \"$filename\" for reading: $!\\n};\n    }\n\n    return $contents;\n}",
+      "file" : "/var/tmp/arv_fDwHKj/Devel-Required-0.14/lib/Devel/Required.pm",
+      "package" : "Devel::Required"
+   }
+]

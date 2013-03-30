@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'zombies!!'",
+      "file" : "/var/tmp/arv_LosUmN/Games-Zumbis-0.05/lib/Games/Zumbis.pm",
+      "package" : "Games::Zumbis"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LosUmN/Games-Zumbis-0.05/lib/Games/Zumbis/Audio.pm",
+      "package" : "Games::Zumbis::Audio"
+   }
+]

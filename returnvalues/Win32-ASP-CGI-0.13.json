@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AddDeathHook(@) {\n   push @DeathHooks, @_;\n}",
+      "file" : "/var/tmp/arv_qTJCM1/Win32-ASP-CGI-0.13/lib/Win32/ASP/CGI.pm",
+      "package" : "Win32::ASP::CGI::IO"
+   }
+]

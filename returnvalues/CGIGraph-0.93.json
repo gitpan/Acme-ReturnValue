@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub valuesInRange {\n        my $self = shift;\n\n\tmy (@dataX,@drawX,@dataY,@selectDraw);\n\n\tif ($self->{histogram_type} eq \"fixed\") {\n\t        my ($Xref,$Yref,$Sref) = $self->count();\n\t        my @X = @$Xref;\n\t        my @Y = @$Yref;\n\t\tmy @S = @$Sref;\n\n\t        for ($i=0; $i<=$#X; $i++) {\n\t                if ( (($i+1)/($#X+2) >= $self->{x_min}) && \n\t\t\t(($i+1)/($#X+2) <= $self->{x_max}) ) {\n\t                        push (@dataX, $X[$i]);\n\t                        push (@dataY, $Y[$i]);\n\t\t\t\tpush (@selectDraw, $S[$i]);\n\t                }\n\t        }\n\t}\n\n\telse {\n\t        my ($Xref,$Yref,$Sref) = $self->count(1);\n\t        @dataX = @$Xref;\n\t        @dataY = @$Yref;\n\t\t@selectDraw = @$Sref;\n\t}\n\n        foreach (0..$#dataX) {\n\t\t$dataX[$_] =~ /(.*)->(.*)/;\n                $drawX[$_] = sprintf(\"%.$default{label_size}g->%\".\n\t\t\".$default{label_size}g\", $1,$2);\n\t}\n\treturn (\\@dataX,\\@drawX,\\@dataY,\\@selectDraw);\n}",
+      "file" : "/var/tmp/arv_HP4p7N/CGIGraph-0.93/lib/CGI/Graph/Plot/bars/numerical.pm",
+      "package" : "CGI::Graph::Plot::bars::numerical"
+   }
+]

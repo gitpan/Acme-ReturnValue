@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    my $self = shift;\n    warn \"DESTROYING $self\";\n}",
+      "file" : "/var/tmp/arv_pigRSh/Finance-Quant-Symbols-0.02/lib/Finance/Quant/Symbols.pm",
+      "package" : "Finance::Quant::Symbols"
+   }
+]

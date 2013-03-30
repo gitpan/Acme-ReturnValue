@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"This isn't right.  This isn't even wrong.\"",
+      "file" : "/var/tmp/arv__tcs2R/Lingua-PTD-1.05/lib/Lingua/PTD.pm",
+      "package" : "Lingua::PTD"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"This isn't right.  This isn't even wrong.\"",
+      "file" : "/var/tmp/arv__tcs2R/Lingua-PTD-1.05/lib/Lingua/PTD/XzDmp.pm",
+      "package" : "Lingua::PTD::XzDmp"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"This isn't right.  This isn't even wrong.\"",
+      "file" : "/var/tmp/arv__tcs2R/Lingua-PTD-1.05/lib/Lingua/PTD/BzDmp.pm",
+      "package" : "Lingua::PTD::BzDmp"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"This isn't right.  This isn't even wrong.\"",
+      "file" : "/var/tmp/arv__tcs2R/Lingua-PTD-1.05/lib/Lingua/PTD/SQLite.pm",
+      "package" : "Lingua::PTD::SQLite"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"This isn't right.  This isn't even wrong.\"",
+      "file" : "/var/tmp/arv__tcs2R/Lingua-PTD-1.05/lib/Lingua/PTD/Dumper.pm",
+      "package" : "Lingua::PTD::Dumper"
+   }
+]

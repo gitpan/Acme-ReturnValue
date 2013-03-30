@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Test {\n    print \"this is testrem\\n\";\n}",
+      "file" : "/var/tmp/arv_gEC0oO/GRID-Machine-0.127/examples/testrem.pm",
+      "package" : "Alpha::Beta::Gamma"
+   }
+]

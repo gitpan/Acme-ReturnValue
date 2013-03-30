@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub object2prolog {\n    my ($class, $obj)=@_;\n    UNIVERSAL::can($obj, \"convert2prolog_term\") and\n\treturn $obj->convert2prolog_term;\n\n    UNIVERSAL::isa($obj, 'ARRAY') and\n\treturn F('perl_object', ref($obj), L(@{$obj}));\n\n    UNIVERSAL::isa($obj, 'HASH') and\n\treturn F('perl_object', ref($obj), $class->hash2prolog($obj));\n\n    UNIVERSAL::isa($obj, 'SCALAR') and\n\treturn F('perl_object', ref($obj), $class->scalar2prolog($obj));\n\n    UNIVERSAL::isa($obj, 'GLOB') and\n\treturn F('perl_object', ref($obj), $class->glob2prolog($obj));\n\n    UNIVERSAL::isa($obj, 'CODE') and\n        return F('perl_object', ref($obj), $class->code2prolog($obj));\n\n    croak \"unable to convert reference '\".ref($obj).\"' to prolog term\";\n}",
+      "file" : "/var/tmp/arv_VIfJ7v/Language-Prolog-Types-0.10/lib/Language/Prolog/Types/Converter.pm",
+      "package" : "Language::Prolog::Types::Converter"
+   }
+]

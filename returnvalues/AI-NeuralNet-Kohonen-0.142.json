@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _process_table { my $self = shift;\n\t$_ = $self->_process_input_text( $self->{table} );\n\tundef $self->{table};\n\treturn $_;\n}",
+      "file" : "/var/tmp/arv_x1oEoo/AI-NeuralNet-Kohonen-0.142/lib/AI/NeuralNet/Kohonen.pm",
+      "package" : "AI::NeuralNet::Kohonen"
+   }
+]

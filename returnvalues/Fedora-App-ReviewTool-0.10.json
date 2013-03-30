@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run {\n    my ($self, $opts, $args) = @_;\n    \n    $self->enable_logging;\n\n    $self->log->info('Starting take process.');\n\n\n    PKG_LOOP:\n    for my $id (@$args) {\n\n        $self->log->info(\"Working on RHBZ#$id\");\n        \n        my $bug  = $self->_bz->bug($id);\n        my $name = $bug->package_name;\n\n\n        print \"\\nFound: bug $bug, package $name\\n\\n\";\n        print $self->bug_table($bug) . \"\\n\";\n\n        print \"Checking to ensure packager is sponsored...\\n\\n\";        \n        print \"*** WARNING *** Submitter is not in 'packager' group!\\n\\n\"\n            unless $self->has_packager($bug->reporter);\n\n        if ($bug->has_flag('fedora-review')) {\n\n            print \"Bug has fedora-review set; not taking.\\n\\n\";\n        }\n        elsif ($self->yes || prompt \"Take review request? \", -YyNn1) {\n\n            print \"\\nTaking...\\n\";\n\n            $bug->assigned_to($self->userid);\n            $bug->update;\n            $bug->set_flags('fedora-review' => '?');\n\n            print \"$bug assigned and marked under review.\\n\";\n        }\n\n        next PKG_LOOP unless $self->yes || prompt 'Start review? ', -YyNn1;\n        \n        $self->do_review($bug) \n            if $self->yes || prompt 'Begin review? ', -YyNn1;\n        \n        print \"\\n\";\n    }\n\n    return;\n}",
+      "file" : "/var/tmp/arv_HuDijh/Fedora-App-ReviewTool-0.10/lib/Fedora/App/ReviewTool/Command/take.pm",
+      "package" : "Fedora::App::ReviewTool::Command::take"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub moveTo {\n  my ($self, $time, %opts) = @_;\n\n  croak(\"Expected an array ref for parameter 'coords'\") if (ref($opts{coords}) ne \"ARRAY\");\n  if (scalar(@{$opts{coords}}) != $self->{rt}->{numDims}) {\n    croak(\"Expected $self->{numDims} coordinates, but \".scalar(@{$opts{coords}}).\" given\");\n  }\n\n  if (defined($self->{lastTime}) &&\n      $time < $self->{lastTime}) {\n    carp(\"Item can't be moved to time in the past.  Previous time moved: $self->{lastTime}.  Current movement time: $time\");\n    return;\n  }\n\n  if (defined($self->{lastCoords})) {\n    $self->{rt}->dec($time, weight => $self->{weight}, coords => $self->{lastCoords});\n  }\n\n  @{$self->{lastCoords}} = @{$opts{coords}};\n\n  $self->{rt}->inc($time, weight => $self->{weight}, coords => $self->{lastCoords});\n\n}",
+      "file" : "/var/tmp/arv_i763vd/Data-RunningTotal-0.03/lib/Data/RunningTotal/Item.pm",
+      "package" : "Data::RunningTotal::Item"
+   }
+]

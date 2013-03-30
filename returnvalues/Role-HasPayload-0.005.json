@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose::Role",
+      "file" : "/var/tmp/arv_2l9K5s/Role-HasPayload-0.005/lib/Role/HasPayload.pm",
+      "package" : "Role::HasPayload"
+   }
+]

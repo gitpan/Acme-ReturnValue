@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = sprintf(\"1.%06d\", q$Revision: 44 $ =~ /(\\d+)/o)",
+      "file" : "/var/tmp/arv_QW07Ip/DashProfiler-1.13/lib/DashProfiler/UserGuide.pm",
+      "package" : "DashProfiler::UserGuide"
+   }
+]

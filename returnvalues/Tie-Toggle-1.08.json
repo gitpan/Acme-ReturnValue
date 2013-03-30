@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub TIESCALAR\n\t{\n\tmy $class    = shift;\n\n\tmy $self = [ 0, 2, [ 0 == 1, 1 == 1] ];\n\n\tbless $self, $class;\n\t}",
+      "file" : "/var/tmp/arv_vOALqp/Tie-Toggle-1.08/Toggle.pm",
+      "package" : "Tie::Toggle"
+   }
+]

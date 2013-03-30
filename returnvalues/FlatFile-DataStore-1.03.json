@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete    {for($_[0]->{delete}    ){$_=$_[1]if@_>1;return$_}}",
+      "file" : "/var/tmp/arv_vGRgnM/FlatFile-DataStore-1.03/lib/FlatFile/DataStore/Toc.pm",
+      "package" : "FlatFile::DataStore::Toc"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub then {\n    my( $date, $format ) = @_;\n    my( $yr, $mo, $da, $hr, $mn, $sc );\n    my $tm = '';\n    my $ret;\n    for( $format ) {\n        if( /yyyy/ ) {  \n            $yr = substr $date, index( $format, 'yyyy'   ), 4;\n            $mo = substr $date, index( $format, 'mm'     ), 2;\n            $da = substr $date, index( $format, 'dd'     ), 2;\n            if( (my $pos = index( $format, 'tttttt' )) > -1 ) {\n                $tm = substr $date, $pos, 2;\n                ( $hr, $mn, $sc ) = $tm =~ /(..)(..)(..)/;\n                $tm = \" $hr:$mn:$sc\";\n            }\n        }\n        else {          \n            $yr = substr $date, index( $format, 'yy'  ), 2;\n            $mo = substr $date, index( $format, 'm'   ), 1;\n            $da = substr $date, index( $format, 'd'   ), 1;\n\n            $yr = sprintf \"%04d\", base2int( $yr, 62 );\n            $mo = sprintf \"%02d\", base2int( $mo, 62 );\n            $da = sprintf \"%02d\", base2int( $da, 62 );\n\n            if( (my $pos = index( $format, 'ttt' )) > -1 ) {\n                $tm = substr $date, $pos, 3;\n                ( $hr, $mn, $sc ) = $tm =~ /(.)(.)(.)/;\n                $hr = sprintf \"%02d\", base2int( $hr, 62 );\n                $mn = sprintf \"%02d\", base2int( $mn, 62 );\n                $sc = sprintf \"%02d\", base2int( $sc, 62 );\n                $tm = \" $hr:$mn:$sc\";\n            }\n        }\n    }\n    return \"$yr-$mo-$da$tm\";\n}",
+      "file" : "/var/tmp/arv_vGRgnM/FlatFile-DataStore-1.03/lib/FlatFile/DataStore/Preamble.pm",
+      "package" : "FlatFile::DataStore::Preamble"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_deleted {$_[0]->preamble()->is_deleted() }",
+      "file" : "/var/tmp/arv_vGRgnM/FlatFile-DataStore-1.03/lib/FlatFile/DataStore/Record.pm",
+      "package" : "FlatFile::DataStore::Record"
+   }
+]

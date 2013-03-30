@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AtCfg_darwin {\n\t$AT{'add'} = 'at %TIME% 2> /dev/null';\n\t$AT{'addFile'} = 'at -f %FILE% %TIME% 2> /dev/null';\n\t$AT{'timeFormat'} = '%HOUR%:%MINS% %MONTH%/%DAY%/%YEAR%';\n\t$AT{'remove'} = 'atrm %JOBID%';\n\t$AT{'getJobs'} = 'atq';\n\t$AT{'headings'} = ['Job','Date'];\n\t$AT{'getCommand'} = 'at -c %JOBID% | ';\n\t$AT{'parseJobList'} = sub {\n\t\tmy @fields = split(\"\\t\", $_[0]);\n\t\t($fields[0], substr($fields[1], 0, 16)) \n\t};\n}",
+      "file" : "/var/tmp/arv_0DV5sO/Schedule-At-1.15/At.pm",
+      "package" : "Schedule::At"
+   }
+]

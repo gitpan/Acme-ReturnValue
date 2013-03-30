@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_node {\n\tmy ($self, $node, $rank) = @_;\n\n\tfor(@{$node->{child_nodes}}){\n\t\tmy $label = $_->{node_name_safe};\n\t\t$label =~ s/\\\\/\\\\\\\\/g;\n\n\t\tmy $fillcolor = $_->{spring}?$self->{spring_col}:$self->{node_col};\n\n\t\t$self->{graph}->add_node(\n\t\t\t$_->{uid}, \n\t\t\tlabel\t\t=> $label,\n\t\t\trank\t\t=> $rank,\n\t\t\tfillcolor\t=> $fillcolor,\n\t\t\tstyle\t\t=> 'filled',\n\t\t\tfontname\t=> $self->{fontname},\n\t\t\tfontsize\t=> $self->{fontsize},\n\t\t);\n\n\t\t$self->{graph}->add_edge(\n\t\t\t$node->{uid} => $_->{uid},\n\t\t\tarrowtail => 'normal',\n\t\t) if ($node->{uid} != $self->{interp}->{root_node}->{uid});\n\n\t\t$self->add_node($_, $rank+1);\n\t}\n}",
+      "file" : "/var/tmp/arv_Cp0RqU/Language-Homespring-Visualise-GraphViz-0.04/GraphViz.pm",
+      "package" : "Language::Homespring::Visualise::GraphViz"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Test {\n  my ($self,$body,$header) = @_;\n  my %idata = ();\n\n  $idata{Flag} = $body->get_Flag() . \" has been returned\";\n\n  return MyElements::OutputFlag->new(\\%idata);\n}",
+      "file" : "/var/tmp/arv_WmpmGN/EmbedIT-WebIT/soapdemo/WebService.pm",
+      "package" : "WebService"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Imager->register_writer\n  (\n   type=>'jpeg',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"jpeg_\", $im);\n     $im->_set_opts(\\%hsh, \"exif_\", $im);\n\n     my $quality = $hsh{jpegquality};\n     defined $quality or $quality = 75;\n\n     if ( !i_writejpeg_wiol($im->{IMG}, $io, $quality)) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n\n     return $im;\n   },\n  )",
+      "file" : "/var/tmp/arv_tTXv3M/Imager-File-JPEG-0.85/JPEG.pm",
+      "package" : "Imager::File::JPEG"
+   }
+]

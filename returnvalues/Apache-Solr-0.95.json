@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our %deprecated = qw/\n facet.date\t\t3.1\n facet.zeros\t\t1.2\n/",
+      "file" : "/var/tmp/arv_6AZK8U/Apache-Solr-0.95/lib/Apache/Solr/Tables.pm",
+      "package" : "Apache::Solr::Tables"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub outdent($;$)\n{\n\tmy $text = shift;\n\tmy $opts = shift;\n\tmy $re;\n\tif( (ref($opts)||'') eq 'Regexp' )\n\t{\n\t\t$re = $opts;\n\t\t$opts = {};\n\t}\n\t$re ||= $opts->{indent};\n\tif( !$re )\n\t{\n\t\tmy ($len) = sort{ $a<=>$b } map{length($_)} $text =~ /^([ \\t]*(?=\\S))/gm;\n\t\t$re = $len ? qr/[ \\t]{1,$len}/ : qr//;\n\t}\n\txoutdent $text, {%$opts, indent=>$re, xchar=>'' };\n}",
+      "file" : "/var/tmp/arv_WDvohw/Text-OutdentEdge-0.01/lib/Text/OutdentEdge.pm",
+      "package" : "Text::OutdentEdge"
+   }
+]

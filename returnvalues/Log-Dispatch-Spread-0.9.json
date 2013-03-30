@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub log_message {\n  my $self = shift;\n  my %p = @_;\n  Spread::multicast( $self->{'mbox'},\n                     SAFE_MESS,\n                     @{$self->{'joined'}},\n                     LOG_MSG_TYPE,\n                     $p{message},\n                   );\n\n  if ( $sperrno ) {\n    carp \"Could not send a log message! Error was: \" . $sperrno;\n    return undef;\n  }\n\n  return $self;\n}",
+      "file" : "/var/tmp/arv_pD1lmi/Log-Dispatch-Spread-0.9/lib/Log/Dispatch/Spread.pm",
+      "package" : "Log::Dispatch::Spread"
+   }
+]

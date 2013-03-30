@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Tk::MainLoop",
+      "file" : "/var/tmp/arv_6lHCu0/Tk-WidgetDump-1.37/lib/Tk/WidgetDump.pm",
+      "package" : "Tk::WidgetDump"
+   }
+]

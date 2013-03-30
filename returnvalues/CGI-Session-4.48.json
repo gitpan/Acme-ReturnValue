@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$CGI::Session::Tutorial::VERSION = '4.43'",
+      "file" : "/var/tmp/arv_qOZShR/CGI-Session-4.48/lib/CGI/Session/Tutorial.pm",
+      "package" : "CGI::Session::Tutorial"
+   }
+]

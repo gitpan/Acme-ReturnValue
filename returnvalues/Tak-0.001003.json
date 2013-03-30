@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub decode_objects {\n  my ($self, $data) = @_;\n  $self->decoder_json->decode(encode_json($data));\n}",
+      "file" : "/var/tmp/arv_gUogtl/Tak-0.001003/lib/Tak/Role/ObjectMangling.pm",
+      "package" : "Tak::Role::ObjectMangling"
+   }
+]

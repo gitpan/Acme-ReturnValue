@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "role CatalystX::TraitFor::Dispatcher::ExactMatch\n{\n\taround prepare_action ($ctx, @etc)\n\t{\t\t\n\t\tmy $req = $ctx->req;\n\t\t(my $path = $req->path) =~ s{^/+}{};\n\t\t\n\t\tmy $matched = 0;\n\t\tforeach my $type ( @{ $self->dispatch_types } )\n\t\t{\n\t\t\tif (!$matched and $type->match($ctx, $path))\n\t\t\t{\n\t\t\t\t$matched++;\n\t\t\t}\n\t\t}\n\t\t\n\t\tif ($matched)\n\t\t{\n\t\t\t$ctx->log->debug(sprintf('Got exact match \"%s\"', $req->match));\n\t\t\ts/%([0-9A-Fa-f]{2})/chr(hex($1))/eg foreach grep { defined } @{$req->captures||[]};\n\t\t}\n\t\telse\n\t\t{\n\t\t\treturn $self->$orig($ctx, @etc);\n\t\t}\n\t}\n\t\n}\n\n'fixed'",
+      "file" : "/var/tmp/arv_d9Fv5s/CatalystX-TraitFor-Dispatcher-ExactMatch-0.002/lib/CatalystX/TraitFor/Dispatcher/ExactMatch.pm",
+      "package" : "CatalystX::TraitFor::Dispatcher::ExactMatch"
+   }
+]

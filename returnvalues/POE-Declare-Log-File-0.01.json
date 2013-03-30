@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "compile",
+      "file" : "/var/tmp/arv_SumRn5/POE-Declare-Log-File-0.01/lib/POE/Declare/Log/File.pm",
+      "package" : "POE::Declare::Log::File"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{\n <CaptObviousman> pretend for a moment that I'm stuck with mysql\n <rnowak> ok, fetching my laughing hat and monocle\n}",
+      "file" : "/var/tmp/arv_uEz1l_/POEx-IRC-Backend-0.024004/lib/POEx/IRC/Backend.pm",
+      "package" : "POEx::IRC::Backend"
+   }
+]

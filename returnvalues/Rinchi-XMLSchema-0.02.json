@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub value() {\n  my $self = shift;\n  if (@_) {\n    $self->{'_value'} = shift;\n  }\n  return $self->{'_value'};\n}",
+      "file" : "/var/tmp/arv_MBadex/Rinchi-XMLSchema-0.02/lib/Rinchi/XMLSchema/HFP.pm",
+      "package" : "Rinchi::XMLSchema::HFP"
+   }
+]

@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_rxuSCC/Socket-Netlink-0.04/lib/Socket/Netlink.pm",
+      "package" : "Socket::Netlink"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_rxuSCC/Socket-Netlink-0.04/lib/Socket/Netlink/Generic.pm",
+      "package" : "Socket::Netlink::Generic"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_rxuSCC/Socket-Netlink-0.04/lib/IO/Socket/Netlink.pm",
+      "package" : "IO::Socket::Netlink"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_rxuSCC/Socket-Netlink-0.04/lib/IO/Socket/Netlink/Generic.pm",
+      "package" : "IO::Socket::Netlink::Generic"
+   }
+]

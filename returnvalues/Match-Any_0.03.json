@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub match_any {\n  my $ref = shift;\n  my $opt = shift || '';\n  my $regex = join('|', @{$ref});\n  return qq{(?$opt:$regex)};\n}",
+      "file" : "/var/tmp/arv_TkEJ0K/Match-Any_0.03/Any.pm",
+      "package" : "Regexp::Match::Any"
+   }
+]

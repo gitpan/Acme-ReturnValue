@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mask { my $s = shift; if (@_) { $s->{mask} = shift; } return $s->{mask}; }",
+      "file" : "/var/tmp/arv_d1iDSp/Log-FileSimple-0.02/FileSimple.pm",
+      "package" : "Log::FileSimple"
+   }
+]

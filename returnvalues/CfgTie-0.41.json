@@ -1,0 +1,56 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handle_check\n{\n   my $Handle = shift;\n\n   my @S2 = $Handle->stat;\n\n   return 0 unless @S2;\n\n   if ($_[0] != $S2[0] || $_[1] != $S2[1] || $_[6] != $S2[6]) {return 0;}\n   1;\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/Secure/File.pm",
+      "package" : "Secure::File"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package CfgTie::TieRealm...\n\n\npackage CfgTie::TieRealm_groups\npackage CfgTie::TieRealm_users",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TieRealm.pm",
+      "package" : "CfgTie::TieRealm"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub STORE\n{\n   setrlimits($K->{$_[1]}, $_[2]->[0],$_[2]->[1]);\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TieRsrc.pm",
+      "package" : "CfgTie::TieRsrc"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cfg_end\n{\n   my $self=shift;\n   my $Path='./';\n   $_ = $self->{Path};\n   if (/^(.*\\/)[^\\/]$/) {$Path = $1;}\n   CfgTie::Cfgfile::system('cd '.$Path.'db;credb 10240 prod;maked prod <'.\n\t  $self->{Path}.\n          ';makei prod;build -s prod');\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TiePh.pm",
+      "package" : "CfgTie::TiePh"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub format($$)\n{\n   \"$_[1]: \".join(',',@{$_[1]}).\"\\n\";\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TieUser.pm",
+      "package" : "CfgTie::TieUser"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub FETCH  {$CfgTie::TieMTab::by_dev{$_[1]};}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TieMTab.pm",
+      "package" : "CfgTie::TieMTab"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub format($$)\n{\n   \"$_[1]: \".join(',',@{$_[1]}).\"\\n\";\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TieGroup.pm",
+      "package" : "CfgTie::TieGroup"
+   },
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "END\n{\n   foreach my $I (@Thingies)\n    {\n       if (!exists $I->{Queue} ||\n           !scalar keys %{$I->{Queue}}) {next;}\n\n       my $rewrite;\n       eval '$rewrite = $I->makerewrites();';\n       if ($@)\n         {\n            warn $@;\n            next;\n         }\n\n       if (!defined $I->{Path}) {next;}\n       if (!scalar keys %{$I->{Contents}}) {next;}\n       if (-e $I->{Path} && !defined $I->{Queue}) {next;}\n\n       eval '$I->cfg_begin();';\n\n       &RCS_Handshake($I);\n\n       my($Base,$NewFileName);\n       if ($I->{Path}=~/^([^\\s]+)/ && $1 && length $1)\n         {$Base=$1; $NewFileName = \"$1,new\";}\n\telse\n\t {next;}\n\n       if (-e $I->{Path})\n         {\n            my $FIn = new Secure::File \"<$Base\" or die \"Could not open file ($Base) for reading: $!\\n\";\n            my $FOut = new Secure::File \">$NewFileName\" or die \"Could not open the temporary output file ($NewFileName): $!\\n\";\n            my $S=[];\n            while (<$FIn>)\n             {\n                 my $L = &$rewrite($_,$S);\n                if (defined $L) {print $FOut $L;}\n             }\n            $FIn->close();\n\t    $FOut->close();\n         }\n        else\n         {\n            if (defined $I->{RCS})\n              {$Files2CheckIn{$Base} = $I->{RCS};}\n            my $FOut = new Secure::File \">$NewFileName\" or die \"Could not open the output file ($Base): $!\\n\";\n            foreach my $k (keys %{$I->{Contents}})\n             {\n                my $x=$I->{Contents}->{$k};\n                print $FOut eval '$J->format($k,$x)';\n                print $FOut \"\\n\";\n             }\n\t    $FOut->close;\n         }\n       if (-e $NewFileName)\n         {\n            &CfgTie::filever'Rotate($Base,$NewFileName);\n         }\n\n       eval '$I->cfg_end();';\n    }\n\n   foreach my $I (keys %Files2CheckIn)\n    {\n       my $Obj =$Files2CheckIn{$I};\n       my $Cmt;\n       if (exists $Obj->{Comments})\n         {\n            $Cmt = $Obj->{Comments};\n            $Cmt =~ s/\\n/ /g;\n         }\n        else\n         {$Cmt=\"Settings changed through the PERL-based envmgr\";}\n       my @Args = ('-u',\"-m$Cmt\");\n       if (!defined $Obj->comments) {@Args=(@Args, '-t-');}\n       $Obj->ci(@Args);\n    }\n   %Files2CheckIn=();\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/Cfgfile.pm",
+      "package" : "CfgTie::Cfgfile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DELETE\n{\n   my ($self, $key) = @_;\n   my $lkey=lc($key);\n\n      if ($key eq 'authmethod')\n        {\n           system \"$shadowmod -A DEFAULT \".$self->{name};\n        }\n   elsif (exists $shadowmod_opt->{$key})\n        {\n           system \"$shadowmod \".$shadowmod_opt->{$lkey}.\" \".$self->{name};\n        }\n   else\n        {\n           delete $self->{$lkey};\n        }\n}",
+      "file" : "/var/tmp/arv_XEJNQh/CfgTie-0.41/lib/CfgTie/TieShadow.pm",
+      "package" : "CfgTie::TieShadow"
+   }
+]

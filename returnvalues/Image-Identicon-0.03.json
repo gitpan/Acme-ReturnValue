@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _resize\n{\n\tmy $r = shift;\n\tmy $image = $r->{image};\n\tmy $size  = $r->{size};\n\t\n\tif( $size && $image->width!=$size )\n\t{\n\t\tmy $orig = $image;\n\t\tmy $image = GD::Image->new($size, $size, 1);\n\t\t$image->copyResampled($orig, 0, 0, 0, 0, $size, $size, $orig->width, $orig->height);\n\t\t$image->transparent($r->{back_color});\n\t\tif( $DEBUG )\n\t\t{\n\t\t\tmy $ox = $orig->width;\n\t\t\tmy $r = sprintf('%.1f', $ox/$size);\n\t\t\tprint \"resize: ($ox, $ox) => ($size, $size) [1/$r]\\n\";\n\t\t}\n\t\t$r->{image} = $image;\n\t}\n\t\n\t$r;\n}",
+      "file" : "/var/tmp/arv_0U88BE/Image-Identicon-0.03/lib/Image/Identicon.pm",
+      "package" : "Image::Identicon"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _monitor {\n    my $queue= $SELF= shift;\n    threads->self->detach\n      if !shift;\n    my $monitor= shift;\n    my $exit=    shift;\n\n    my $post= shift || sub {};\n    my $pre=  shift;\n    $pre->(@_)\n      if $pre;\n\n    state $THAW= $queue->THAW;\n\n    my @value;\n    while (1) {\n\n        {\n            lock( @{$queue} );\n            threads::shared::cond_wait @{$queue} until @{$queue};\n            @value=    @{$queue};\n            @{$queue}= ();\n        }\n\n        foreach my $value (@value) {\n            my @set= @{ $THAW->($value) };\n\n            return $post->(@_)\n              if $set[0] ~~ $exit;\n\n            $monitor->(@set);\n        }\n    }\n}",
+      "file" : "/var/tmp/arv_HHZsOh/Thread-Queue-Any-Monitored-1.03/lib/Thread/Queue/Any/Monitored.pm",
+      "package" : "Thread::Queue::Any::Monitored"
+   }
+]

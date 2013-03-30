@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub app_handle {\n\n  my $c = shift;\n\n  use Data::Dumper;\n  warn Dumper($c);\n\n  my $attr = { RaiseError => 1, PrintError => 1 } ;\n  my $class = __PACKAGE__;\n\n\n  DBIx::AnyDBD->connect\n\t(\n\t $c->{dsn},\n\t $c->{user},\n\t $c->{pass},\n\t $attr,\n\t $class \n\t);\n\n}",
+      "file" : "/var/tmp/arv_iDopy7/DBSchema-Sample-2.0.a/lib/DBSchema/Sample.pm",
+      "package" : "DBSchema::Sample"
+   }
+]

@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _ep_cef_decrypt {\n    my($self, $attr) = @_;\n\n    my $dest = $attr->{'dest'};\n    my $source = $attr->{'source'};\n    die \"Missing attribute 'source' (Source String Variable)\"\n\tunless defined $source;\n    $source = ref($source) ? $source :\n\t($source =~ /^(\\w+)((?:\\-\\>\\w+)+)$/) ?\n\t    $self->FindVar($1, $2) : $self->{$source};\n\n    my $debug = $self->{'debug'};\n    my $cfo = $self->_handle($attr);\n\n    my $output = $cfo->decrypt($source) || die $cfo->error();\n    if ($dest) {\n\t$self->{$dest} = $output;\n\t'';\n    } else {\n\t$output;\n    }\n}",
+      "file" : "/var/tmp/arv_iAlpYV/HTML-EP-0.2011/lib/HTML/EP/CGIEncryptForm.pm",
+      "package" : "HTML::EP::CGIEncryptForm"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub InstallCgiFiles {\n    my($fromDir, $toDir) = @_ ? @_ : @ARGV;\n    InstallFiles($fromDir, $toDir, $install_cgi_files, 0755);\n}",
+      "file" : "/var/tmp/arv_iAlpYV/HTML-EP-0.2011/lib/HTML/EP/Install.pm",
+      "package" : "HTML::EP::Install"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _format_RANGE_SELECTED {\n    my $self = shift;  my $val = shift;\n    $val ? \"\" : \"SELECTED\";\n}",
+      "file" : "/var/tmp/arv_iAlpYV/HTML-EP-0.2011/lib/HTML/EP/Examples/Admin.pm",
+      "package" : "HTML::EP::Examples::Admin"
+   }
+]

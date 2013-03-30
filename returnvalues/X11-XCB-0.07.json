@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "() = $0 =~ (__PACKAGE__ . '.pm') ? generate() : 1",
+      "file" : "/var/tmp/arv_QK1I2r/X11-XCB-0.07/_GenerateMyXS.pm",
+      "package" : "_GenerateMyXS"
+   }
+]

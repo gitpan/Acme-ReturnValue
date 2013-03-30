@@ -1,0 +1,182 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub null_class { shift->{null_class}; }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/TjoinNull.pm",
+      "package" : "ORM::TjoinNull"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _autoshift { ( ! ref $_[0] && shift @_ ); @_; }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Expr.pm",
+      "package" : "ORM::Expr"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub rollback_transaction\n{\n    die \"You forget to override 'rollback_transaction' method in '$_[0]'\";\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db.pm",
+      "package" : "ORM::Db"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/MetapropBuilder.pm",
+      "package" : "ORM::MetapropBuilder"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub fatal { $_[0]->{fatal}; }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Error.pm",
+      "package" : "ORM::Error"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub amount\n{\n    my $self = shift;\n\n    $self->{result}->rows;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/ResultSet.pm",
+      "package" : "ORM::ResultSet"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD\n{\n    my $self = shift;\n    my $meta;\n\n    if( ref $self )\n    {\n        my $prop           = substr( $AUTOLOAD, rindex( $AUTOLOAD, '::' )+2 );\n        my $prop_meta_expr = $self->{stat_class}->data->{$prop};\n\n        if( $prop_meta_expr )\n        {\n            my $prop_meta_class = ref $prop_meta_expr;\n\n            if( $prop_meta_class )\n            {\n                $meta = $prop_meta_class->new( expr=>ORM::Ident->new( $prop, $self->{stat_class}->stat_class ) );\n            }\n            else\n            {\n                croak \"Can't detect meta-class for property '$prop' of class '$self->{stat_class}'\";\n            }\n        }\n        else\n        {\n            croak \"Class '$self->{stat_class}' has no property '$prop'\";\n        }\n    }\n    else\n    {\n        croak \"Undefined static method called: $AUTOLOAD\";\n    }\n\n    return $meta;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/StatMetaprop.pm",
+      "package" : "ORM::StatMetaprop"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub amount\n{\n    my $self = shift;\n\n    $self->{result}->rows;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/StatResultSet.pm",
+      "package" : "ORM::StatResultSet"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub result_tables\n{\n    die \"You forget to override 'result_tables' in '$_[0]'\";\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/DbResultSet.pm",
+      "package" : "ORM::DbResultSet"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub conds_amount\n{\n    my $self = shift;\n    return scalar @{$self->{order}};\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Order.pm",
+      "package" : "ORM::Order"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub scalar2sql\n{\n    my $class  = shift;\n    my $scalar = shift;\n    my $tjoin  = shift;\n    my $ident  = shift;\n\n    return\n        ref $scalar\n            ? $scalar->_sql_str( tjoin=>$tjoin, ident=>$ident )\n            : ( defined $scalar ? $tjoin->class->ORM::qc( $scalar ) : 'NULL' );\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Filter.pm",
+      "package" : "ORM::Filter"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub merge\n{\n    my $self  = shift;\n    my $tjoin = shift;\n\n    if( ref $tjoin ne 'ORM::TjoinNull' )\n    {\n        if( UNIVERSAL::isa( $self->class, $tjoin->class ) )\n        {\n        }\n        elsif( UNIVERSAL::isa( $tjoin->class, $self->class ) )\n        {\n            $self->{class}          = $tjoin->class;\n            %{$self->{class_table}} = %{$tjoin->{class_table}};\n        }\n        else\n        {\n            croak \"Internal error! Can't merge, '$self->{class}' and '\".$tjoin->class.\"' are incompatible.\";\n        }    \n\n        $self->{alias_num} = undef;\n\n        for my $table ( @{ $tjoin->tables } )\n        {\n            unless( $self->{used_table}{$table} )\n            {\n                $self->{used_table}{$table} = $self->{class_table}{$table};\n                delete $self->{tables};\n            }\n        }\n\n        for my $prop ( keys %{$tjoin->{link}} )\n        {\n            for my $fingerprint ( keys %{$tjoin->{link}{$prop}} )\n            {\n                if( exists $self->{link}{$prop}{$fingerprint} )\n                {\n                    $self->{link}{$prop}{$fingerprint}->merge( $tjoin->{link}{$prop}{$fingerprint} );\n                }\n                else\n                {\n                    $self->link( $prop => $tjoin->{link}{$prop}{$fingerprint}->copy );\n                }\n            }\n        }\n    }\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Tjoin.pm",
+      "package" : "ORM::Tjoin"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub earlier24h { shift->new_epoch( time-24*60*60 ); }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Datetime.pm",
+      "package" : "ORM::Datetime"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_expr\n{\n    my $self = shift;\n    my @arg  = @_;\n\n    for( my $i=0; $i<@arg; $i++ )\n    {\n        if( ! defined $arg[$i] )\n        {\n            splice @arg, $i, 1;\n            $i--;\n        }\n        elsif( ! ref $arg[$i] || !$arg[$i]->can( '_tjoin' ) )\n        {\n            croak \"Bad arg #\".($i+1).\": '$arg[$i]'\";\n        }\n    }\n    push @{$self->{arg}}, @arg;\n\n    return undef;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Filter/Group.pm",
+      "package" : "ORM::Filter::Group"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_case\n{\n    my $self = shift;\n    my $case = shift;\n\n    push @{$self->{case}}, $case;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Filter/Case.pm",
+      "package" : "ORM::Filter::Case"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _tjoin\n{\n    my $self  = shift;\n    my $tjoin = ORM::Tjoin->new;\n\n    $tjoin->merge( $self->{arg1}->_tjoin ) if( ref $self->{arg1} );\n    $tjoin->merge( $self->{arg2}->_tjoin ) if( ref $self->{arg2} );\n\n    return $tjoin;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Filter/Cmp.pm",
+      "package" : "ORM::Filter::Cmp"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _tjoin\n{\n    my $self  = shift;\n    my $tjoin = ORM::Tjoin->new;\n\n    $tjoin->merge( $self->{arg}->_tjoin ) if( ref $self->{arg} );\n\n    return $tjoin;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Filter/Interval.pm",
+      "package" : "ORM::Filter::Interval"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _tjoin\n{\n    my $self  = shift;\n    my $tjoin = ORM::Tjoin->new;\n\n    for my $arg ( @{$self->{arg}} )\n    {\n        $tjoin->merge( $arg->_tjoin ) if( ref $arg );\n    }\n\n    return $tjoin;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Filter/Func.pm",
+      "package" : "ORM::Filter::Func"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_row\n{\n    my $self = shift;\n    my $row  = shift;\n\n    push @{$self->{rows}}, $row;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBIResultSetFull.pm",
+      "package" : "ORM::Db::DBIResultSetFull"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _func_concat { shift; ORM::Filter::Cmp->new( '||', @_ ); }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBI.pm",
+      "package" : "ORM::Db::DBI"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use base 'ORM::Db'",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/Replicated.pm",
+      "package" : "ORM::Db::Replicated"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub result_tables\n{\n    my $self = shift;\n\n    $self->{tables};\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBIResultSet.pm",
+      "package" : "ORM::Db::DBIResultSet"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _func_concat        { shift; ORM::Filter::Func->new( 'CONCAT', @_ ); }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBI/MySQL.pm",
+      "package" : "ORM::Db::DBI::MySQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _PgPP_last_insert_id\n{\n    my ($self, $dbh, $catalog, $schema, $table, $col, $attr) = @_;\n\n    my ($sth, $count, $SQL, $sequence);\n\n    my $cache = 1;\n\n    $schema = '' if ! defined $schema;\n    $table = '' if ! defined $table;\n    my $cachename = \"lii$table$schema\";\n\n    my $version = $self->_db_handler->{pg_server_version} || 0;\n    my $old_ver = $version < 70300;\n    my $use_cat = $old_ver ? '' : 'pg_catalog.';\n\n    if (defined $attr and length $attr) {\n        if (! ref $attr) {\n            $attr = {sequence => $attr};\n        }\n        elsif (ref $attr ne 'HASH') {\n            return $dbh->set_err(1, \"last_insert_id must be passed a hashref as the final argument\");\n        }\n        if (exists $attr->{sequence} and length $attr->{sequence}) {\n            $sequence = $attr->{sequence};\n        }\n        if (exists $attr->{pg_cache}) {\n            $cache = $attr->{pg_cache};\n        }\n    }\n\n    if (! defined $sequence and exists $dbh->{private_dbdpg}{$cachename} and $cache) {\n        $sequence = $dbh->{private_dbdpg}{$cachename};\n    }\n    elsif (! defined $sequence) {\n        if (! length $table) {\n            return $dbh->set_err(1, \"last_insert_id needs at least a sequence or table name\");\n        }\n        my @args = ($table);\n\n        $schema = '' if( $old_ver );\n\n        my ($schemajoin,$schemawhere) = ('','');\n        if (length $schema) {\n            $schemajoin = \"\\n JOIN pg_catalog.pg_namespace n ON (n.oid = c.relnamespace)\";\n            $schemawhere = \"\\n AND n.nspname = ?\";\n            push @args, $schema;\n        }\n        $SQL = \"SELECT c.oid FROM ${use_cat}pg_class c $schemajoin\\n WHERE relname = ?$schemawhere\";\n        $sth = $dbh->prepare($SQL);\n        $count = $sth->execute(@args);\n        if (!defined $count or $count eq '0E0') {\n            $sth->finish();\n            my $message = qq{Could not find the table \"$table\"};\n            length $schema and $message .= qq{ in the schema \"$schema\"};\n            return $dbh->set_err(1, $message);\n        }\n        my $oid = $sth->fetchall_arrayref()->[0][0];\n        $SQL = \"SELECT a.attname, i.indisprimary, substring(d.adsrc for 128) AS def\\n\".\n            \"FROM ${use_cat}pg_index i, ${use_cat}pg_attribute a, ${use_cat}pg_attrdef d\\n \".\n                \"WHERE i.indrelid = $oid AND d.adrelid=a.attrelid AND d.adnum=a.attnum\\n\".\n                    \"  AND a.attrelid=$oid AND i.indisunique IS TRUE\\n\".\n                        \"  AND a.atthasdef IS TRUE AND i.indkey[0]=a.attnum\\n\".\n                            \" AND d.adsrc ~ '^nextval'\";\n        $sth = $dbh->prepare($SQL);\n        $count = $sth->execute();\n        if (!defined $count or $count eq '0E0') {\n            $sth->finish();\n            $dbh->set_err(1, qq{No suitable column found for last_insert_id of table \"$table\"});\n        }\n        my $info = $sth->fetchall_arrayref();\n\n        my @def;\n        for (@$info) {\n            next unless $_->[2] =~ /^nextval\\('([^']+)'::/o;\n            push @$_, $1;\n            push @def, $_;\n        }\n        if (!@def) {\n            $dbh->set_err(1, qq{No suitable column found for last_insert_id of table \"$table\"\\n});\n        }\n        if (@def > 1) {\n            my @pri = grep { $_->[1] } @def;\n            if (1 != @pri) {\n                $dbh->set_Err(1, qq{No suitable column found for last_insert_id of table \"$table\"\\n});\n            }\n            @def = @pri;\n        }\n        $sequence = $def[0]->[3];\n        $dbh->{private_dbdpg}{$cachename} = $sequence;\n    }\n\n    $sth = $dbh->prepare(\"SELECT currval(?)\");\n    $sth->execute($sequence);\n    return $sth->fetchall_arrayref()->[0][0];\n\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBI/PgSQL.pm",
+      "package" : "ORM::Db::DBI::PgSQL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _lost_connection\n{\n    my $self = shift;\n    my $err  = shift;\n\n    defined $err && ( $err == 2006 || $err == 2013 );\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBI/SQLite.pm",
+      "package" : "ORM::Db::DBI::SQLite"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _func_concat        { shift; ORM::Filter::Func->new( 'CONCAT', @_ ); }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Db/DBI/MySQLemTa.pm",
+      "package" : "ORM::Db::DBI::MySQLemTa"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub __ORM_new_db_value\n{\n    my $class = shift;\n    my %arg   = @_;\n    my $self;\n    my $VAR1;\n\n    if( ref $arg{value} eq 'ARRAY' )\n    {\n        $self = Array->new( array=>$arg{value} );\n    }\n    else\n    {\n        eval $arg{value};\n        die $@ if( $@ );\n        $self = Array->new( array=>$VAR1 );\n    }\n\n    return $self;\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Meta/Array.pm",
+      "package" : "ORM::Meta::Array"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete_slave { shift->slaved_by->prop_name eq 'id'; }",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Meta/ORM/History.pm",
+      "package" : "ORM::Meta::ORM::History"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub __ORM_new_db_value\n{\n    my $class = shift;\n    my %arg   = @_;\n\n    if( $arg{value} =~ /^\\d+$/ )\n    {\n        $class->new_epoch( $arg{value} );\n    }\n    elsif( $arg{value} =~ /^0000\\-00\\-00( 00:00:00)?$/ )\n    {\n        undef;\n    }\n    else\n    {\n        $class->new_mysql( $arg{value} );\n    }\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Meta/ORM/Date.pm",
+      "package" : "ORM::Meta::ORM::Date"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub __ORM_new_db_value\n{\n    my $class = shift;\n    my %arg   = @_;\n\n    if( $arg{value} =~ /^\\d+$/ )\n    {\n        $class->new_epoch( $arg{value} );\n    }\n    elsif( $arg{value} =~ /^0000\\-00\\-00( 00:00:00)?$/ )\n    {\n        undef;\n    }\n    else\n    {\n        $class->new_mysql( $arg{value} );\n    }\n}",
+      "file" : "/var/tmp/arv_J4BSLK/ORM-0.85/lib/ORM/Meta/ORM/Datetime.pm",
+      "package" : "ORM::Meta::ORM::Datetime"
+   }
+]

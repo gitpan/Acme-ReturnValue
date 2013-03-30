@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mailboxes {\n    my $self = shift;\n\n    my $r = $self->{ua}->get($self->{url}.'mailboxes');\n    _handle_response($r);\n    return from_json($r->decoded_content);\n}",
+      "file" : "/var/tmp/arv_M_W1a9/WWW-Mailgun-0.4/lib/WWW/Mailgun.pm",
+      "package" : "WWW::Mailgun"
+   }
+]

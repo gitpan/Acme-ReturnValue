@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'domo arigato'",
+      "file" : "/var/tmp/arv_EUlFlN/Acme-Time-Asparagus-1.15/lib/Acme/Time/DimSum.pm",
+      "package" : "Acme::Time::DimSum"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'mmmm, donuts'",
+      "file" : "/var/tmp/arv_EUlFlN/Acme-Time-Asparagus-1.15/lib/Acme/Time/Donut.pm",
+      "package" : "Acme::Time::Donut"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Look. It's a cebu!\"",
+      "file" : "/var/tmp/arv_EUlFlN/Acme-Time-Asparagus-1.15/lib/Acme/Time/FooClock.pm",
+      "package" : "Acme::Time::FooClock"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Look. It's a cebu!\"",
+      "file" : "/var/tmp/arv_EUlFlN/Acme-Time-Asparagus-1.15/lib/Acme/Time/Asparagus.pm",
+      "package" : "Acme::Time::Asparagus"
+   }
+]

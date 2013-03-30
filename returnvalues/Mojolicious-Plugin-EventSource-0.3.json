@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_XqXatl/Mojolicious-Plugin-EventSource-0.3/lib/Mojolicious/Plugin/EventSource.pm",
+      "package" : "Mojolicious::Plugin::EventSource"
+   }
+]

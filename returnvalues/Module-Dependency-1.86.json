@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub TRACE { }",
+      "file" : "/var/tmp/arv_YtEOjq/Module-Dependency-1.86/lib/Module/Dependency/Info.pm",
+      "package" : "Module::Dependency::Info"
+   }
+]

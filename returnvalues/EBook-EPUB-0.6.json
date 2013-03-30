@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub write\n{\n    my ($self) = @_;\n    my $zip = Archive::Zip->new();\n\n    $zip->addString(\"application/epub+zip\", \"mimetype\");\n\n    foreach my $f (@{$self->{files}}) {\n        $zip->addFileOrDirectory($f->{frompath}, \n            $f->{containerpath});\n    }\n\n    my (undef, $tmp_container) = tempfile;\n    if (!defined($self->write_container($tmp_container))) {\n        carp \"Failed to write container to temporary file $tmp_container\";\n        unlink($tmp_container);\n        return;\n    }\n\n    $zip->addFile($tmp_container, \"META-INF/container.xml\");\n\n    my (undef, $tmp_encryption) = tempfile;\n    if ($self->has_encrypted_files) {\n        if (!defined($self->write_encryption($tmp_encryption))) {\n            carp \"Failed to write encryption to temporary file $tmp_encryption\";\n            unlink($tmp_encryption);\n            unlink($tmp_container);\n            return;\n        }\n\n        $zip->addFile($tmp_encryption, \"META-INF/encryption.xml\");\n    }\n\n    my $result = $zip->writeToFileNamed($self->{zipfile});\n    unlink($tmp_encryption);\n    unlink($tmp_container);\n    return 1 if ($result == AZ_OK);\n    return;\n}",
+      "file" : "/var/tmp/arv_IHjqX4/EBook-EPUB-0.6/lib/EBook/EPUB/Container/Zip.pm",
+      "package" : "EBook::EPUB::Container::Zip"
+   }
+]

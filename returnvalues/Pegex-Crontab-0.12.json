@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub got_env_line {\n    my ($self, $node) = @_;\n    env_hash($node);\n}",
+      "file" : "/var/tmp/arv_ox4EHd/Pegex-Crontab-0.12/lib/Pegex/Crontab/AST.pm",
+      "package" : "Pegex::Crontab::AST"
+   }
+]

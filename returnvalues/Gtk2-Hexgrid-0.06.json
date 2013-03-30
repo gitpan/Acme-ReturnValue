@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q ! positively!",
+      "file" : "/var/tmp/arv_mVCavi/Gtk2-Hexgrid-0.06/lib/Gtk2/Hexgrid.pm",
+      "package" : "Gtk2::Hexgrid"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q ! positively!",
+      "file" : "/var/tmp/arv_mVCavi/Gtk2-Hexgrid-0.06/lib/Gtk2/Hexgrid/Tile.pm",
+      "package" : "Gtk2::Hexgrid::Tile"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q ! positively!",
+      "file" : "/var/tmp/arv_mVCavi/Gtk2-Hexgrid-0.06/lib/Gtk2/Hexgrid/Sprite.pm",
+      "package" : "Gtk2::Hexgrid::Sprite"
+   }
+]

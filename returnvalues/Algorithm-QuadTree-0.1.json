@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub resetWindow {\n  my $self = shift;\n\n  $self->{ORIGIN}[$_] = 0 for 0 .. 1;\n  $self->{SCALE}      = 1;\n}",
+      "file" : "/var/tmp/arv_Ct0bSY/QuadTree/QuadTree.pm",
+      "package" : "Algorithm::QuadTree"
+   }
+]

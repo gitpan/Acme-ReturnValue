@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub attribute\n{\n  my($self,$rdn,$attribute) = @_;\n  return undef unless defined $self->{session};\n  dua_attribute($self->{session},$rdn,$attribute);\n}",
+      "file" : "/var/tmp/arv_I8IaNS/Dua-2.2/Dua.pm",
+      "package" : "Dua"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"experience Satoshi Kon's Paprika (great movie)\"",
+      "file" : "/var/tmp/arv_9F6i5p/warnings-compat-0.07/lib/warnings/compat.pm",
+      "package" : "warnings::compat"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"this is the end of the module\"",
+      "file" : "/var/tmp/arv_9F6i5p/warnings-compat-0.07/lib/warnings/register.pm",
+      "package" : "warnings::register"
+   }
+]

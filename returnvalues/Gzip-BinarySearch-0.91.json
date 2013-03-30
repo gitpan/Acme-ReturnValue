@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _build_gzip {\n    my ($class, %args) = @_;\n\n    my %gra_args;\n    for my $key (@GRA_ALLOWED_ARGS) {\n        $gra_args{$key} = $args{$key} if exists $args{$key};\n    }\n\n    return Gzip::RandomAccess->new(%gra_args);\n}",
+      "file" : "/var/tmp/arv_NjKbzo/Gzip-BinarySearch-0.91/lib/Gzip/BinarySearch.pm",
+      "package" : "Gzip::BinarySearch"
+   }
+]

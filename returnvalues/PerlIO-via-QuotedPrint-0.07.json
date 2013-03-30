@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub WRITE {\n\n    return ( print { $_[2] } MIME::QuotedPrint::encode_qp( $_[1] ) )\n      ? length( $_[1] )\n      : -1;\n}",
+      "file" : "/var/tmp/arv_y0ZfIW/PerlIO-via-QuotedPrint-0.07/lib/PerlIO/via/QuotedPrint.pm",
+      "package" : "PerlIO::via::QuotedPrint"
+   }
+]

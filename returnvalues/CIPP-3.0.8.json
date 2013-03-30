@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = \"3.0.8\"",
+      "file" : "/var/tmp/arv_iYYiAv/CIPP-3.0.8/lib/CIPP.pm",
+      "package" : "CIPP"
+   }
+]

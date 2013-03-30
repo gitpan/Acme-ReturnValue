@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*{$M.'xxx::e'}=sub{my($P,$e)=@_;$e->{WWW}=sub{require XXX;local$XXX::DumpModule=$dm;XXX::WWW(@_)};$e->{XXX}=sub{require XXX;local$XXX::DumpModule=$dm;XXX::XXX(@_)};$e->{YYY}=sub{require XXX;local$XXX::DumpModule=$dm;XXX::YYY(@_)};$e->{ZZZ}=sub{require XXX;local$XXX::DumpModule=$dm}}",
+      "file" : "/var/tmp/arv_osGDN1/Mo-xxx-0.12/lib/Mo/xxx.pm",
+      "package" : "Mo::xxx"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*{$MoPKG.'xxx::e'} = sub {\n    my ($caller_pkg, $exports) = @_;\n    $exports->{WWW} = sub {\n        require XXX;\n        local $XXX::DumpModule = $dm;\n        XXX::WWW(@_);\n    };\n    $exports->{XXX} = sub {\n        require XXX;\n        local $XXX::DumpModule = $dm;\n        XXX::XXX(@_);\n    };\n    $exports->{YYY} = sub {\n        require XXX;\n        local $XXX::DumpModule = $dm;\n        XXX::YYY(@_);\n    };\n    $exports->{ZZZ} = sub {\n        require XXX;\n        local $XXX::DumpModule = $dm;\n    };\n}",
+      "file" : "/var/tmp/arv_osGDN1/Mo-xxx-0.12/src/Mo/xxx.pm",
+      "package" : "Mo::xxx"
+   }
+]

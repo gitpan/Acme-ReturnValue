@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Keywords",
+      "file" : "/var/tmp/arv_3Zwy23/Kwiki-Keywords-0.14/lib/Kwiki/Keywords.pm",
+      "package" : "Kwiki::Keywords"
+   }
+]

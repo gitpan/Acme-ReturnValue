@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub capture\n{\n\treturn Test::Tester::Capture->new;\n}",
+      "file" : "/var/tmp/arv_Q8YdYd/Test-Tester-0.108/lib/Test/Tester/CaptureRunner.pm",
+      "package" : "Test::Tester::CaptureRunner"
+   }
+]

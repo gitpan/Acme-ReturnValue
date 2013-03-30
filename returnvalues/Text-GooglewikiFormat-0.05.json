@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'shamelessly adapted from the Jellybean project, directly from Text::WikiFormat'",
+      "file" : "/var/tmp/arv_zMEZZK/Text-GooglewikiFormat-0.05/lib/Text/GooglewikiFormat.pm",
+      "package" : "Text::GooglewikiFormat"
+   }
+]

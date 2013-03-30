@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub puke {\n my $self = shift;\n print 'Name part: ' . $self->get_part_name() . \"\\n\";\n print 'Defaults part: ' . $self->get_part_defaults() . \"\\n\";\n print 'Notes part: ' . $self->get_part_notes() . \"\\n\";\n my $defs = $self->{'-DEFAULTS'};\n print 'Effective defaults: d=' . $defs->{'d'} . ',o=' . $defs->{'o'} .  ',b=' . $defs->{'b'} . \"\\n\";\n print \"Effective notes (duration,note,octave,dots):\\n\";\n foreach my $note ($self->get_notes()) {\n  print \"\\t[ \" . sprintf('%2s',$note->[0]) . ' , ' . sprintf('%2s',$note->[1]) .  ' , ' . $note->[2] . ' , ' . $note->[3] . \" ]\\n\";\n }\n print \"WARNINGS:\\n\";\n foreach ($self->get_warnings()) {\n  print \"\\t$_\\n\";\n }\n print \"ERRORS:\\n\";\n foreach ($self->get_errors()) {\n  print \"\\t$_\\n\";\n }\n}",
+      "file" : "/var/tmp/arv_9vfFY4/SMS-Ringtone-RTTTL-Parser-0.07/lib/SMS/Ringtone/RTTTL/Parser.pm",
+      "package" : "SMS::Ringtone::RTTTL::Parser"
+   }
+]

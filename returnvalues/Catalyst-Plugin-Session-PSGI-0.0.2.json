@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete_session_id   { }",
+      "file" : "/var/tmp/arv_BvS7RO/Catalyst-Plugin-Session-PSGI-0.0.2/lib/Catalyst/Plugin/Session/State/PSGI.pm",
+      "package" : "Catalyst::Plugin::Session::State::PSGI"
+   }
+]

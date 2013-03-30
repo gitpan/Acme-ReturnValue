@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub PRINT {\n    my $self = shift;\n    my $sock = $$self;\n    $sock->datasend( @_ );\n}",
+      "file" : "/var/tmp/arv_XjuPuM/Mail-Mailer-smtp_auth-0.02/lib/Mail/Mailer/smtp_auth.pm",
+      "package" : "Mail::Mailer::smtp_auth"
+   }
+]

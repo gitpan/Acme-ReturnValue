@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub match {\n\tmy $self = shift;\n\tmy $other = shift;\n\t$other->can(\"message\") and\n\t\t$self->message eq $other->message;\n}",
+      "file" : "/var/tmp/arv_SaVzUM/Nagios-Interface-0.01/lib/Nagios/Interface/IgnorableLogMessage.pm",
+      "package" : "Nagios::Interface::IgnorableLogMessage"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub blocked_url {\n    return $self->render_screen(\n        content_pane => 'blocked_url.html',\n    );\n}",
+      "file" : "/var/tmp/arv_WIqC1h/Kwiki-URLBlock-0.05/lib/Kwiki/URLBlock.pm",
+      "package" : "Kwiki::URLBlock"
+   }
+]

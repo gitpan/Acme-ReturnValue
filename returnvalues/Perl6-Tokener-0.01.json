@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub lop {\n    my $t = shift;\n    $t->{state} = \"TERM\";\n    if ($t->{next}->{type}) {\n        $t->{type} = \"listop\";\n    } elsif ($t->{buffer}=~/^s*\\(/) {\n        $t->{type} = \"func\";\n    } else {\n        $t->{type} = \"listop\";\n    }\n}",
+      "file" : "/var/tmp/arv__YI5wt/Perl6-Tokener-0.01/Tokener.pm",
+      "package" : "Perl6::Tokener"
+   }
+]

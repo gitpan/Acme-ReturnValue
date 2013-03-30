@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub fibonacci {\n\treturn gmp_fib(int(shift));\n}",
+      "file" : "/var/tmp/arv_2p4hg_/Math-GMP-2.06/lib/Math/GMP.pm",
+      "package" : "Math::GMP"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete {\n    my $self = shift;\n    my $proxy = $self->{_proxy};\n\n    $proxy->removeProject($self->{id});\n}",
+      "file" : "/var/tmp/arv_toEqvO/XPlanner-0.01/lib/XPlanner/Project.pm",
+      "package" : "ProjectData"
+   }
+]

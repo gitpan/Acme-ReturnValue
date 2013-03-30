@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub tid { return threads->tid(); }",
+      "file" : "/var/tmp/arv_LR1xtc/Devel-RingBuffer-0.31/lib/Devel/RingBuffer/ThreadFacade.pm",
+      "package" : "Devel::RingBuffer::ThreadFacade"
+   }
+]

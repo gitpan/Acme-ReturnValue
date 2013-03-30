@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_8mZh8d/Dist-Zilla-Plugin-ContributorsFromGit-0.005/lib/Dist/Zilla/Plugin/ContributorsFromGit.pm",
+      "package" : "Dist::Zilla::Plugin::ContributorsFromGit"
+   }
+]

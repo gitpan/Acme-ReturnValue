@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION",
+      "file" : "/var/tmp/arv_VMxNIc/GIFgraphExtensions-1.0/GIFgraph/EvenlySpaced.pm",
+      "package" : "GIFgraph::EvenlySpaced"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION",
+      "file" : "/var/tmp/arv_VMxNIc/GIFgraphExtensions-1.0/GIFgraph/WithMap.pm",
+      "package" : "GIFgraph::WithMap"
+   }
+]

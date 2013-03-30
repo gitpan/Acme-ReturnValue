@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub __ret_void   { return; }",
+      "file" : "/var/tmp/arv_7A83O7/Devel-RunBlock-0.01/lib/Devel/RunBlock.pm",
+      "package" : "Devel::RunBlock"
+   }
+]

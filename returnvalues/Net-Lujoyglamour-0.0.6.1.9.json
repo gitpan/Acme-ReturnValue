@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"lujo and glamour all over\"",
+      "file" : "/var/tmp/arv_5YU4lu/Net-Lujoyglamour-0.0.6.1.9/lib/Net/Lujoyglamour.pm",
+      "package" : "Net::Lujoyglamour"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"lujo and glamour all over again\"",
+      "file" : "/var/tmp/arv_5YU4lu/Net-Lujoyglamour-0.0.6.1.9/lib/Net/Lujoyglamour/Result/Url.pm",
+      "package" : "Net::Lujoyglamour::Result::Url"
+   }
+]

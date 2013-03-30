@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '0.74'",
+      "file" : "/var/tmp/arv_Hf2pzD/FCGI-0.74/version.pm",
+      "package" : "FCGI"
+   }
+]

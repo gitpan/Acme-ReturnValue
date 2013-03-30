@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub gl_do\n{\n\tmy ( $self, $sub, @param ) = @_;\n\tunless ( Prima::OpenGL::context_push()) {\n\t\twarn Prima::OpenGL::last_error();\n\t\treturn;\n\t}\n\t$self-> gl_select;\n\tmy ($fail, @ret);\n\teval { \n\t\tif (wantarray) {\n\t\t\t@ret    = $sub->(@param);\n\t\t} else {\n\t\t\t$ret[0] = $sub->(@param);\n\t\t}\n\t};\n\tPrima::OpenGL::context_pop();\n\t$fail = $@;\n\tdie $fail if $fail;\n\treturn wantarray ? @ret : $ret[0];\n}",
+      "file" : "/var/tmp/arv_n9zieE/Prima-OpenGL-0.04/lib/Prima/OpenGL.pm",
+      "package" : "Prima::OpenGL"
+   }
+]

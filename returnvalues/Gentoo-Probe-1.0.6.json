@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub output() {\n\tmy $self = shift;\n\treturn unless grep { length } @_;\n\tlocal ($,,$\\)=(\",\",\"\\n\");\n\tprint @_;\n}",
+      "file" : "/var/tmp/arv_NpmX_o/Gentoo-Probe-1.0.6/lib/Gentoo/Probe/PkgOf.pm",
+      "package" : "Gentoo::Probe::PkgOf"
+   }
+]

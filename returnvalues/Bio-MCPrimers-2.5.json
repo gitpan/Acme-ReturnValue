@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cloning_vector_data {\n\n    my ( $vector_file_name,  \n         $re_ra,             \n         $re_name_rh,        \n         $ecut_loc_ra,       \n         $vcut_loc_ra        \n       ) = @_;  \n\n    if (defined $ENV{\"MCPRIMERS_DATA_DIR\"}) {\n\n        if ($^O =~ /^MSW/) { \n\n            $vector_file_name = $ENV{\"MCPRIMERS_DATA_DIR\"} . \"\\\\\" . $vector_file_name;\n        }\n        else {\n\n            $vector_file_name = $ENV{\"MCPRIMERS_DATA_DIR\"} . \"/\" . $vector_file_name;\n        }\n    } \n\n    open(IN_FILE, $vector_file_name) or return 0;\n    my @fileArray = <IN_FILE>;\n    close(IN_FILE);\n\n    foreach my $row (@fileArray){\n  \n        if (substr($row,0,1) eq \"#\" or length $row == 1) {\n        \n            next;\n        }\n        elsif ($row =~ /(.+)\\t([ATCGatcg]+)\\t(\\d+)\\t(\\d+)/) {\n  \n            $re_name_rh->{$2} = $1;     \n            push @{$re_ra}, $2;         \n            push @{$ecut_loc_ra}, $3;   \n            push @{$vcut_loc_ra}, $4;   \n        }\n        else {\n\n            return 0;\n        }\n\n    }\n\n    return 1;\n}",
+      "file" : "/var/tmp/arv_EMdH2t/Bio-MCPrimers-2.5/lib/Bio/Data/Plasmid/CloningVector.pm",
+      "package" : "Bio::Data::Plasmid::CloningVector"
+   }
+]

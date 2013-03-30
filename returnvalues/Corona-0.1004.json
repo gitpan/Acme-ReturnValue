@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.1004'",
+      "file" : "/var/tmp/arv_a65lh7/Corona-0.1004/lib/Corona.pm",
+      "package" : "Corona"
+   }
+]

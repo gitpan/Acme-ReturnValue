@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _z { $_[0] > 9 ? $_[0]-9 : $_[0] }",
+      "file" : "/var/tmp/arv_43J_uu/Business-ID-NPWP-0.03/lib/Business/ID/NPWP.pm",
+      "package" : "Business::ID::NPWP"
+   }
+]

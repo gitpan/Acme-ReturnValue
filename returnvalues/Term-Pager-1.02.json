@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dumb_mode {\n    my $me = shift;\n    my $end = 0;\n\n    while(1){\n\tfor my $i (1 .. $me->{rows} - 1){\n\t    last if $end >= $me->{nl};\n\t    print $me->{l}[$end++], \"\\n\";\n\t}\n\n\tprint \"--more [dumb]--\";\n\tmy $a = getc();\n\tprint \"\\b \\b\"x15;\n\n\treturn if $a eq 'q';\n\treturn if $end >= $me->{nl};\n    }\n}",
+      "file" : "/var/tmp/arv_jb1a8K/Term-Pager-1.02/Pager.pm",
+      "package" : "Term::Pager"
+   }
+]

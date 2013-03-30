@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n    my ($self) = @_;\n}",
+      "file" : "/var/tmp/arv_QTAn_U/IPTables-0.05/IPTables.pm",
+      "package" : "IPTables"
+   }
+]

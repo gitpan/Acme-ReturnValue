@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub convert_mask {\n  my $self = shift;\n  my $mask = shift;\n  return $self->convert_ip($mask) if ($self->valid_ip($mask));\n  my $overall;\n  my $string = reverse sprintf(\"%032s\", '1' x $mask);\n  for (my $c=0; $c<32; $c+=8) {\n    my $out = 0;\n    my @wank = split '', substr($string, $c, 8);\n    for (my $m=1; $m<255; $m*=2) {\n      $out += $m if (pop @wank);\n    }\n    $overall .= pack(\"C\", $out);\n  }\n  return $overall;\n}",
+      "file" : "/var/tmp/arv_S6c4O1/Audio-Daemon-MPG123-0.9Beta/MPG123/Server.pm",
+      "package" : "Audio::Daemon::MPG123::Server"
+   }
+]

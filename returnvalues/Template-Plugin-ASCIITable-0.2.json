@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _die {\n  die (Template::Exception->new('ASCIITable',$_[0]))\n}",
+      "file" : "/var/tmp/arv_E0zNMZ/Template-Plugin-ASCIITable-0.2/lib/Template/Plugin/ASCIITable.pm",
+      "package" : "Template::Plugin::ASCIITable"
+   }
+]

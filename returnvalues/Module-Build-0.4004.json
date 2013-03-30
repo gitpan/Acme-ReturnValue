@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '0.4004'",
+      "file" : "/var/tmp/arv_qkZcEM/Module-Build-0.4004/lib/Module/Build/Cookbook.pm",
+      "package" : "Module::Build::Cookbook"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_author {\n  my $self = shift;\n  return $self->{author} if defined $self->{author};\n\n  $self->parse_from_filehandle($self->{fh});\n\n  return $self->{author} || [];\n}",
+      "file" : "/var/tmp/arv_qkZcEM/Module-Build-0.4004/lib/Module/Build/PodParser.pm",
+      "package" : "Module::Build::PodParser"
+   }
+]

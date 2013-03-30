@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DUMP{}",
+      "file" : "/var/tmp/arv_cyv71m/SQL-Shell-1.14/lib/SQL/Shell.pm",
+      "package" : "SQL::Shell"
+   }
+]

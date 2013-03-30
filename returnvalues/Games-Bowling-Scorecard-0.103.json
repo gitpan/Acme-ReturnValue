@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "300",
+      "file" : "/var/tmp/arv_8IAXBd/Games-Bowling-Scorecard-0.103/lib/Games/Bowling/Scorecard.pm",
+      "package" : "Games::Bowling::Scorecard"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "300",
+      "file" : "/var/tmp/arv_8IAXBd/Games-Bowling-Scorecard-0.103/lib/Games/Bowling/Scorecard/Frame.pm",
+      "package" : "Games::Bowling::Scorecard::Frame"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "300",
+      "file" : "/var/tmp/arv_8IAXBd/Games-Bowling-Scorecard-0.103/lib/Games/Bowling/Scorecard/AsText.pm",
+      "package" : "Games::Bowling::Scorecard::AsText"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "300",
+      "file" : "/var/tmp/arv_8IAXBd/Games-Bowling-Scorecard-0.103/lib/Games/Bowling/Scorecard/Frame/TenPinTenth.pm",
+      "package" : "Games::Bowling::Scorecard::Frame::TenPinTenth"
+   }
+]

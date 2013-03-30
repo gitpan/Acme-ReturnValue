@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub EXISTS {\n    my ($t, $key) = @_;\n    return defined $t->FETCH($key);\n}",
+      "file" : "/var/tmp/arv_nKhVwd/libapreq2-2.13/glue/perl/xsbuilder/APR/Request/Request.pm",
+      "package" : "APR::Request::Custom"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "push our(@ISA), ()",
+      "file" : "/var/tmp/arv_nKhVwd/libapreq2-2.13/glue/perl/xsbuilder/APR/Request/Param/Param.pm",
+      "package" : "APR::Request::Param"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub thaw { return shift->value }",
+      "file" : "/var/tmp/arv_nKhVwd/libapreq2-2.13/glue/perl/xsbuilder/APR/Request/Cookie/Cookie.pm",
+      "package" : "APR::Request::Cookie"
+   }
+]

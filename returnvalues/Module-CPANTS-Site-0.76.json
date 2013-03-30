@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'listening to: Nightmares on Wax - in a space outta sound'",
+      "file" : "/var/tmp/arv_0sDfOz/Module-CPANTS-Site-0.76/lib/Module/CPANTS/Site.pm",
+      "package" : "Module::CPANTS::Site"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'listeing to: kids during judo training'",
+      "file" : "/var/tmp/arv_0sDfOz/Module-CPANTS-Site-0.76/lib/Module/CPANTS/Site/Model/Kwalitee.pm",
+      "package" : "Module::CPANTS::Site::Model::Kwalitee"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'listening to: kids during judo training'",
+      "file" : "/var/tmp/arv_0sDfOz/Module-CPANTS-Site-0.76/lib/Module/CPANTS/Site/Controller/Kwalitee.pm",
+      "package" : "Module::CPANTS::Site::Controller::Kwalitee"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'listening to: Nightmares on Wax - in a space outta sound'",
+      "file" : "/var/tmp/arv_0sDfOz/Module-CPANTS-Site-0.76/lib/Module/CPANTS/Site/Controller/Dist.pm",
+      "package" : "Module::CPANTS::Site::Controller::Dist"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'let README.pod render Pod as ... Pod!'",
+      "file" : "/var/tmp/arv_3VhHJw/Module-Install-ReadmePodFromPod-0.01/lib/Module/Install/ReadmePodFromPod.pm",
+      "package" : "Module::Install::ReadmePodFromPod"
+   }
+]

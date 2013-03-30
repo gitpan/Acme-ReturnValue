@@ -4,22 +4,24 @@ package Acme::ReturnValue;
 use 5.010;
 use strict;
 use warnings;
-use version; our $VERSION = qv '0.70.0';
+our $VERSION = '1.000';
+
+# ABSTRACT: report interesting return values
 
 use PPI;
 use File::Find;
 use Parse::CPAN::Packages;
 use Path::Class qw();
-use File::Spec::Functions;
 use File::Temp qw(tempdir);
 use File::Path;
 use File::Copy;
 use Archive::Any;
 use Data::Dumper;
-use YAML::Any qw(DumpFile); 
-
+use JSON;
+use Encode;
 use Moose;
 with qw(MooseX::Getopt);
+use MooseX::Types::Path::Class;
 
 has 'interesting' => (is=>'rw',isa=>'ArrayRef',default=>sub {[]});
 has 'bad' => (is=>'rw',isa=>'ArrayRef',default=>sub {[]});
@@ -27,44 +29,21 @@ has 'failed' => (is=>'rw',isa=>'ArrayRef',default=>sub {[]});
 
 has 'quiet' => (is=>'ro',isa=>'Bool',default=>0);
 has 'inc' => (is=>'ro',isa=>'Bool',default=>0);
-has 'dir' => (is=>'ro',isa=>'Str');
-has 'file' => (is=>'ro',isa=>'Str');
-has 'cpan' => (is=>'ro',isa=>'Str');
-has 'dump_to' => (is=>'ro',isa=>'Str',default=>'returnvalues');
+has 'dir' => (is=>'ro',isa=>'Path::Class::Dir',coerce=>1);
+has 'file' => (is=>'ro',isa=>'Path::Class::File',coerce=>1);
+has 'cpan' => (is=>'ro',isa=>'Path::Class::Dir',coerce=>1);
+has 'dump_to' => (is=>'ro',isa=>'Path::Class::Dir',coerce=>1,default=>'returnvalues');
 
-$|=1;
+has 'json_encoder' => (is=>'ro',lazy_build=>1);
+sub _build_json_encoder {
+    return JSON->new->pretty;
+}
 
-=head1 NAME
 
-Acme::ReturnValue - report interesting module return values
-
-=head1 SYNOPSIS
-
-    use Acme::ReturnValue;
-    my $rvs = Acme::ReturnValue->new;
-    $rvs->in_INC;
-    foreach (@{$rvs->interesting}) {
-        say $_->{package} . ' returns ' . $_->{value}; 
-    }
-
-=head1 DESCRIPTION
-
-C<Acme::ReturnValue> will list 'interesting' return values of modules. 
-'Interesting' means something other than '1'.
-
-=head2 METHODS
-
-=cut
-
-=head3 run
-
-run from the commandline (via F<acme_returnvalue.pl>
-
-=cut
 
 sub run {
     my $self = shift;
-   
+
     if ($self->inc) {
         $self->in_INC;
     }
@@ -85,55 +64,24 @@ sub run {
     my $interesting=$self->interesting;
     if (@$interesting > 0) {
         foreach my $cool (@$interesting) {
-            print $cool->{package} .': '.$cool->{value} ."\n";
+            say $cool->{package} .': '.$cool->{value};
         }
     }
     else {
-        print "boring!\n";
+        say "boring!";
     }
 }
 
-=head3 waste_some_cycles
-
-    my $data = $arv->waste_some_cycles( '/some/module.pm' );
-
-C<waste_some_cycles> parses the passed in file using PPI. It tries to 
-get the last statement and extract it's value.
-
-C<waste_some_cycles> returns a hash with following keys
-
-=over
-
-=item * file
-
-The file
-
-=item * package 
-
-The package defintion (the first one encountered in the file
-
-=item * value
-
-The return value of that file
-
-=back
-
-C<waste_some_cycles> will also put this data structure into 
-L<interesting> or L<boring>.
-
-You might want to pack calls to C<waste_some_cycles> into an C<eval> 
-because PPI dies on parse errors.
-
-=cut
 
 sub waste_some_cycles {
-    my ($self, $file) = @_;
-    my $doc = PPI::Document->new($file);
+    my ($self, $filename) = @_;
+
+    my $doc = PPI::Document->new($filename);
 
     eval {  # I don't care if that fails...
         $doc->prune('PPI::Token::Comment');
         $doc->prune('PPI::Token::Pod');
-    }; 
+    };
 
     my @packages=$doc->find('PPI::Statement::Package');
     my $this_package;
@@ -151,9 +99,13 @@ sub waste_some_cycles {
     $rv=~s/^return //gi;
 
     return if $rv eq 1;
-    
+    return if $rv eq '__PACKAGE__';
+    return if $rv =~ /^__PACKAGE__->meta->make_immutable/;
+
+    $rv = decode_utf8($rv);
+
     my $data = {
-        'file'    => $file,
+        'file'    => $filename,
         'package' => $this_package,
         'PPI'     => ref $match,
     };
@@ -175,14 +127,6 @@ sub waste_some_cycles {
     }
 }
 
-=head4 _is_code
-
-Stolen directly from Perl::Critic::Policy::Modules::RequireEndWithOne
-as suggested by Chris Dolan.
-
-Thanks!
-
-=cut
 
 sub _is_code {
     my $elem = shift;
@@ -190,47 +134,52 @@ sub _is_code {
                || $elem->isa('PPI::Statement::Data'));
 }
 
-=head3 in_CPAN
-
-=cut
 
 sub in_CPAN {
     my ($self,$cpan,$out)=@_;
 
-    my $p=Parse::CPAN::Packages->new(catfile($cpan,qw(modules 02packages.details.txt.gz)));
+    my $p=Parse::CPAN::Packages->new($cpan->file(qw(modules 02packages.details.txt.gz))->stringify);
 
     if (!-d $out) {
-        mkpath($out) || die "cannot make dir $out";
+        $out->mkpath || die "cannot make dir $out";
     }
 
+    # get all old data files so we can later delete non-current
+    my %old_files;
+    while (my $file = $out->next) {
+        next unless $file =~ /\.json/;
+        $old_files{$file->basename}=1;
+    }
+
+    # analyse cpan
     foreach my $dist (sort {$a->dist cmp $b->dist} $p->latest_distributions) {
+        delete $old_files{$dist->distvname.'.json'};
+        next if (-e $out->file($dist->distvname.'.json'));
+
         my $data;
-        my $distfile = catfile($cpan,'authors','id',$dist->prefix);
+        my $distfile = $cpan->file('authors','id',$dist->prefix);
         $data->{file}=$distfile;
         my $dir;
         eval {
             $dir = tempdir('/var/tmp/arv_XXXXXX');
-        
-            my $archive=Archive::Any->new($distfile);
+            my $archive=Archive::Any->new($distfile->stringify) || die $!;
             $archive->extract($dir);
-            
+
             $self->in_dir($dir,$dist->distvname);
-             
         };
         if ($@) {
-            print $@;
+            say $@;
         }
         rmtree($dir);
     }
+
+    # remove old data files
+    foreach my $del (keys %old_files) {
+        unlink($out->file($del)) || die $!;
+    }
+
 }
 
-=head3 in_INC
-
-    $arv->in_INC;
-
-Collect return values from all F<*.pm> files in C<< @INC >>.
-
-=cut
 
 sub in_INC {
     my $self=shift;
@@ -239,57 +188,44 @@ sub in_INC {
     }
 }
 
-=head3 in_dir
-
-    $arv->in_dir( $some_dir );
-
-Collect return values from all F<*.pm> files in C<< $dir >>.
-
-=cut
 
 sub in_dir {
     my ($self,$dir,$dumpname)=@_;
     $dumpname ||= $dir;
     $dumpname=~s/\//_/g;
 
-    say $dumpname unless $self->quiet; 
+    say $dumpname unless $self->quiet;
 
     $self->interesting([]);
     $self->bad([]);
     my @pms;
     find(sub {
         return unless /\.pm\z/;
-        return if $File::Find::dir=~/\/x?t\//;
-        return if $File::Find::dir=~/\/inc\//;
+        return if $File::Find::name=~/\/x?t\//;
+        return if $File::Find::name=~/\/inc\//;
         push(@pms,$File::Find::name);
     },$dir);
 
     foreach my $pm (@pms) {
         $self->in_file($pm);
     }
-    
+
+    my $dump=Path::Class::Dir->new($self->dump_to)->file($dumpname.".json");
     if ($self->interesting && @{$self->interesting}) {
-        my $dump=Path::Class::Dir->new($self->dump_to)->file($dumpname.".dump");
-        DumpFile($dump->stringify,$self->interesting);
+        $dump->spew(iomode => '>:encoding(UTF-8)', $self->json_encoder->encode($self->interesting));
     }
-    if ($self->bad && @{$self->bad}) {
-        my $dump=Path::Class::Dir->new($self->dump_to)->file($dumpname.".bad");
-        DumpFile($dump->stringify,$self->bad);
+    elsif ($self->bad && @{$self->bad}) {
+        $dump->spew(iomode => '>:encoding(UTF-8)', $self->json_encoder->encode($self->bad));
+    }
+    else {
+        $dump->spew('{"is_boring":"1"}');
     }
 }
 
-=head3 in_file
-
-    $arv->in_file( $some_file );
-
-Collect return value from the passed in file.
-
-If L<waste_some_cycles> failed, puts information on the failing file into L<failed>.
-
-=cut
 
 sub in_file {
     my ($self,$file)=@_;
+
     eval { $self->waste_some_cycles($file) };
     if ($@) {
         push (@{$self->failed},{file=>$file,error=>$@});
@@ -299,6 +235,100 @@ sub in_file {
 "let's return a strange value";
 
 __END__
+
+=pod
+
+=head1 NAME
+
+Acme::ReturnValue - report interesting return values
+
+=head1 VERSION
+
+version 1.000
+
+=head1 SYNOPSIS
+
+    use Acme::ReturnValue;
+    my $rvs = Acme::ReturnValue->new;
+    $rvs->in_INC;
+    foreach (@{$rvs->interesting}) {
+        say $_->{package} . ' returns ' . $_->{value};
+    }
+
+=head1 DESCRIPTION
+
+C<Acme::ReturnValue> will list 'interesting' return values of modules.
+'Interesting' means something other than '1'.
+
+See L<http://returnvalues.useperl.at|http://returnvalues.useperl.at> for the results of running Acme::ReturnValue on the whole CPAN.
+
+=head2 METHODS
+
+=head3 run
+
+run from the commandline (via F<acme_returnvalue.pl>
+
+=head3 waste_some_cycles
+
+    my $data = $arv->waste_some_cycles( '/some/module.pm' );
+
+C<waste_some_cycles> parses the passed in file using PPI. It tries to
+get the last statement and extract it's value.
+
+C<waste_some_cycles> returns a hash with following keys
+
+=over
+
+=item * file
+
+The file
+
+=item * package
+
+The package defintion (the first one encountered in the file
+
+=item * value
+
+The return value of that file
+
+=back
+
+C<waste_some_cycles> will also put this data structure into
+L<interesting> or L<boring>.
+
+You might want to pack calls to C<waste_some_cycles> into an C<eval>
+because PPI dies on parse errors.
+
+=head4 _is_code
+
+Stolen directly from Perl::Critic::Policy::Modules::RequireEndWithOne
+as suggested by Chris Dolan.
+
+Thanks!
+
+=head3 in_CPAN
+
+Analyse CPAN. Needs a local CPAN mirror
+
+=head3 in_INC
+
+    $arv->in_INC;
+
+Collect return values from all F<*.pm> files in C<< @INC >>.
+
+=head3 in_dir
+
+    $arv->in_dir( $some_dir );
+
+Collect return values from all F<*.pm> files in C<< $dir >>.
+
+=head3 in_file
+
+    $arv->in_file( $some_file );
+
+Collect return value from the passed in file.
+
+If L<waste_some_cycles> failed, puts information on the failing file into L<failed>.
 
 =head3 interesting
 
@@ -312,31 +342,19 @@ Returns an ARRAYREF containing 'boring' modules.
 
 Returns an ARRAYREF containing unparsable modules.
 
-=pod
-
 =head1 BUGS
 
 Probably many, because I'm not sure I master PPI yet.
 
 =head1 AUTHOR
 
-Thomas Klausner, C<< <domm@cpan.org> >>
+Thomas Klausner <domm@cpan.org>
 
-Thanks to Armin Obersteiner and Josef Schmid for input during very 
-early development
+=head1 COPYRIGHT AND LICENSE
 
-=head1 BUGS
+This software is copyright (c) 2013 by Thomas Klausner.
 
-Please report any bugs or feature requests to
-C<bug-acme-returnvalue@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org>.  I will be notified, and then you'll automatically
-be notified of progress on your bug as I make changes.
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008 Thomas Klausner
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

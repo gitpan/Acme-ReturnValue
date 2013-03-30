@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n\tpackage main;\n  use 5.8.0;\n\tuse utf8;\n\n\t(caller 0)[0] || do {\n    $_=do{ $/=undef, <main::DATA>};\n\t\tclose main::DATA;\n\t\tour @globals;\n\t\teval $_;\n    die \"self-test failed: $@\" if $@;\n\t\t1;\n\t};\n1;\n}",
+      "file" : "/var/tmp/arv_5Ysv_Y/P-1.0.20/lib/P.pm",
+      "package" : "P"
+   }
+]

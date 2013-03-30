@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub union\n{\n    my ($s1, $s2) = (shift,shift);\n    if ( $s1->_is_recurrence &&\n         ref($s2) && _is_recurrence( $s2 ) )\n    {\n        my ( $next1, $previous1 ) = @{ $s1->{param} };\n        my ( $next2, $previous2 ) = @{ $s2->{param} };\n        return $s1->{parent}->_function( '_recurrence',\n                  sub {  \n                               my $n1 = $next1->( $_[0] );\n                               my $n2 = $next2->( $_[0] );\n                               return $n1 < $n2 ? $n1 : $n2;\n                  },\n                  sub {  \n                               my $p1 = $previous1->( $_[0] );\n                               my $p2 = $previous2->( $_[0] );\n                               return $p1 > $p2 ? $p1 : $p2;\n                  },\n               );\n    }\n    return $s1->SUPER::union( $s2, @_ );\n}",
+      "file" : "/var/tmp/arv_YJ3Apj/DateTime-Set-0.31/lib/Set/Infinite/_recurrence.pm",
+      "package" : "Set::Infinite::_recurrence"
+   }
+]

@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub lsdir {\n  shift;\n  my $rex = qr/$_[1]/;\n  opendir DIR, $_[0];\n  my @out = grep /$rex/, readdir DIR;\n  closedir DIR;\n  return @out;\n}",
+      "file" : "/var/tmp/arv_cCmsm7/ExtUtils-MakeMaker-6.64/lib/ExtUtils/Liblist.pm",
+      "package" : "ExtUtils::Liblist"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _assert {\n    my $sanity = shift;\n    die sprintf \"Assert failed at %s line %d\\n\", (caller)[1,2] unless $sanity;\n    return;\n}",
+      "file" : "/var/tmp/arv_cCmsm7/ExtUtils-MakeMaker-6.64/lib/ExtUtils/MM.pm",
+      "package" : "ExtUtils::MM"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_cCmsm7/ExtUtils-MakeMaker-6.64/lib/ExtUtils/MY.pm",
+      "package" : "ExtUtils::MY"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init_linker {\n    my($self) = shift;\n\n    $self->{PERL_ARCHIVE} ||= \n      File::Spec->catdir('$(PERL_INC)',$Config{libperl});\n    $self->{PERL_ARCHIVE_AFTER} ||= '';\n    $self->{EXPORT_LIST}  ||= '';\n}",
+      "file" : "/var/tmp/arv_cCmsm7/ExtUtils-MakeMaker-6.64/lib/ExtUtils/MM_BeOS.pm",
+      "package" : "ExtUtils::MM_BeOS"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dos2unix {\n    require File::Find;\n    File::Find::find(sub {\n        return if -d;\n        return unless -w _;\n        return unless -r _;\n        return if -B _;\n\n        local $\\;\n\n\tmy $orig = $_;\n\tmy $temp = '.dos2unix_tmp';\n\topen ORIG, $_ or do { warn \"dos2unix can't open $_: $!\"; return };\n\topen TEMP, \">$temp\" or \n\t    do { warn \"dos2unix can't create .dos2unix_tmp: $!\"; return };\n        while (my $line = <ORIG>) { \n            $line =~ s/\\015\\012/\\012/g;\n            print TEMP $line;\n        }\n\tclose ORIG;\n\tclose TEMP;\n\trename $temp, $orig;\n\n    }, @ARGV);\n}",
+      "file" : "/var/tmp/arv_cCmsm7/ExtUtils-MakeMaker-6.64/bundled/ExtUtils-Command/ExtUtils/Command.pm",
+      "package" : "ExtUtils::Command"
+   }
+]

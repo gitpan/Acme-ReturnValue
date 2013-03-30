@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub selected {\n    my $self = shift;\n    return $self->{cgi}->param('album');\n}",
+      "file" : "/var/tmp/arv_h17ToB/HTML-PhotoAlbum-1.20/lib/HTML/PhotoAlbum.pm",
+      "package" : "HTML::PhotoAlbum"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'ERROR: no api key or email address'",
+      "file" : "/var/tmp/arv_K2kRBb/WebService-Geograph-API-0.05/lib/WebService/Geograph/Response.pm",
+      "package" : "WebService::Geograph::Response"
+   }
+]

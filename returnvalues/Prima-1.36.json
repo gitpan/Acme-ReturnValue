@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Prima::Themes::register( 'Prima::themes::round3d', 'round3d', [ \n\t\t'Prima::Button' => \\%wrap_paint,\n\t\t'Prima::ScrollBar' => \\%wrap_paint,\n\t\t'Prima::InputLine' => \\%wrap_paint,\n\t\t],\n)",
+      "file" : "/var/tmp/arv_YUFFYO/Prima-1.36/Prima/themes/round3d.pm",
+      "package" : "Round3D"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Prima::Themes::register( 'Prima::themes::sysimage', 'sysimage-standard', undef, undef, \\&install)",
+      "file" : "/var/tmp/arv_YUFFYO/Prima-1.36/Prima/themes/sysimage.pm",
+      "package" : "Prima::themes::sysimage"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Prima::Themes::register( 'Prima::themes::color', 'gray',    ['Prima::Widget' => 0xFFFFFF], \\&merger)",
+      "file" : "/var/tmp/arv_YUFFYO/Prima-1.36/Prima/themes/color.pm",
+      "package" : "Prima::Themes::color"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub save_dialog\n{\n\treturn Prima::Image::jpeg-> create;\n}",
+      "file" : "/var/tmp/arv_YUFFYO/Prima-1.36/Prima/Image/jpeg.pm",
+      "package" : "Prima::Image::jpeg"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub load\n{\n\tmy $cp = defined( $_[0]) ? $_[0] : 'default';\n\t$cp = $1 if $cp =~ /\\.([^\\.]*)$/;\n\t$cp =~ s/_//g;\n\n\tif ( $cp eq 'null') {\n\t\treturn $cache{null} if exists $cache{null};\n\t\treturn $cache{null} = [('.notdef') x 256];\n\t}\n\n\tmy $fx = exists($files{$cp}) ? $files{$cp} : $files{default};\n\n\treturn $cache{$fx} if exists $cache{$fx};\n\n\tmy $f = Prima::Utils::find_image( $fx); \n\tunless ( $f) {\n\t\twarn(\"Prima::PS::Encodings: cannot find encoding file for $cp\\n\");\n\t\treturn load('default') unless $cp eq 'default';\n\t\treturn;\n\t}\n\n\tunless ( open F, $f) {\n\t\twarn(\"Prima::PS::Encodings: cannot load $f\\n\");\n\t\treturn load('default') unless $cp eq 'default';\n\t\treturn;\n\t}\n\tmy @f = map { chomp; length($_) ? $_ : ()} <F>;\n\tclose F;\n\tsplice( @f, 256) if 256 < @f;\n\tpush( @f, '.notdef') while 256 > @f;\n\treturn $cache{$fx} = \\@f;\n}",
+      "file" : "/var/tmp/arv_YUFFYO/Prima-1.36/Prima/PS/Encodings.pm",
+      "package" : "Prima::PS::Encodings"
+   }
+]

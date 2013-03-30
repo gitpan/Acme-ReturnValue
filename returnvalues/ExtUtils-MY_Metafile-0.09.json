@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _yaml_out\n{\n\tmy $obj   = shift;\n\t\n\tmy $depth = shift || 0;\n\tmy $out   = '';\n\t\n\tif( !defined($obj) )\n\t{\n\t\t$out = \"  \"x$depth.\"~\\n\";\n\t}elsif( !ref($obj) )\n\t{\n\t\t$out = \"  \"x$depth.$obj.\"\\n\";\n\t}elsif( ref($obj)eq'ARRAY' )\n\t{\n\t\tmy @e = map{_yaml_out->($_, $depth+1)} @$obj;\n\t\t@e = map{ \"  \"x$depth.\"- \".substr($_, ($depth+1)*2)} @e;\n\t\t$out = join('', @e);\n\t\t$out ||= \"  \"x$depth.\"[]\";\n\t}elsif( ref($obj)eq'HASH' )\n\t{\n\t\tforeach my $k (sort keys %$obj)\n\t\t{\n\t\t\t$out .= \"  \"x$depth.\"$k:\";\n\t\t\t$out .= ref($obj->{$k}) ? \"\\n\"._yaml_out($obj->{$k}, $depth+1) : \" $obj->{$k}\\n\";\n\t\t}\n\t\t$out ||= \"  \"x$depth.\"{}\";\n\t}else\n\t{\n\t\tdie \"not supported: $obj\";\n\t}\n\t$out;\n}",
+      "file" : "/var/tmp/arv_BKcYEa/ExtUtils-MY_Metafile-0.09/lib/ExtUtils/MY_Metafile.pm",
+      "package" : "ExtUtils::MY_Metafile"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "Email::Store::Mail->has_many(votes => \"Email::Store::Vote\")",
+      "file" : "/var/tmp/arv_fyOLQT/Buscador-0.2/lib/Email/Store/Vote.pm",
+      "package" : "Email::Store::Vote"
+   }
+]

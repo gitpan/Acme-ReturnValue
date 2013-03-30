@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub SetCookie($$;%)\n  {\n    my ($name, $value, %hash) = @_;\n\n    if (ref($value) eq 'HASH')\n      {\n        $value = join( \"\\&\" ,\n          map { $::Server->URLEncode($_) . '=' . $::Server->URLEncode($$value{$_}) }\n          keys(%$value)\n          )\n      }\n\n    $::Response->AddHeader( 'Set-Cookie',\n      \"$name=$value\"\n      . ($hash{-path}    ? \"; path=\"    . $hash{-path}                         : \"\")\n      . ($hash{-domain}  ? \"; domain=\"  . $hash{-domain}                       : \"\")\n      . ($hash{-secure}  ? \"; secure\"                                          : \"\")\n      . ($hash{-expires} ? \"; expires=\" . &date(&expire_calc($hash{-expires})) : \"\")\n      );\n  }",
+      "file" : "/var/tmp/arv_1MKxbf/Win32-ASP-2.15/ASP.pm",
+      "package" : "Win32::ASP::IO"
+   }
+]

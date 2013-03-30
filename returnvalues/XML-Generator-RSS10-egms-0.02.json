@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _generic_category_data {\n\n   my ($self,$rss,$category_value) = @_;\n   \n   $rss->_start_element('egms','SubjectCategoryClass');\n   $rss->_newline_if_pretty;\n   $rss->_element_with_data('rdf','value',$category_value);\n   $rss->_newline_if_pretty;\n   $rss->_end_element('egms','SubjectCategoryClass');\n   $rss->_newline_if_pretty;\n\n}",
+      "file" : "/var/tmp/arv_tZO74m/XML-Generator-RSS10-egms-0.02/egms.pm",
+      "package" : "XML::Generator::RSS10::egms"
+   }
+]

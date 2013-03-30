@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "const class_id => 'theme'",
+      "file" : "/var/tmp/arv_tbV2vv/Spork-S5-0.05/lib/Spork/S5Theme.pm",
+      "package" : "Spork::S5Theme"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub make_s5_slides {\n    $self->hub->template->add_path(\n        $self->config->slides_directory.'/template/s5'\n    );\n    my @allcontent;\n    my @slides = $self->hub->slides->split_slides($self->config->slides_file);\n    for (my $i = 0; $i < @slides; $i++) {\n        my $slide = $slides[$i];\n        $self->config->add_config($slide->{config});\n        my $content = $slides[$i]{slide_content};\n        $self->hub->slides->image_url('');\n        my $parsed = $self->formatter->text_to_parsed($content);\n        my $html = $parsed->to_html;\n        $slide->{image_html} = $self->hub->slides->get_image_html;\n        my $output = $self->template->process('slide.html',\n            %$slide,\n            hub => $self->hub,\n            slide_content => $html,\n        );\n        push @allcontent,$output;\n    }\n    my $output = $self->template->process(\n        's5.html',\n        hub => $self->hub,\n        slides => \\@allcontent, \n    );\n    io->catfile($self->config->slides_directory,'start.html')\n      ->assert->print($output);\n}",
+      "file" : "/var/tmp/arv_tbV2vv/Spork-S5-0.05/lib/Spork/S5.pm",
+      "package" : "Spork::S5"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n    my $class= shift;\n\n    unshift( @_,'dump' ) unless @_;\n\n    no warnings 'redefine';\n\n  METHOD:\n    foreach my $spec (@_) {\n        if ( !ref($spec) ) {\n            die qq{Don't know how to install method \"UNIVERSAL::$spec\"\\n}\n              unless my $sub= $preset{$spec};\n            $class->import( { $spec => $sub } );\n            next METHOD;\n        }\n\n        foreach my $method ( keys %{$spec} ) {\n            my $sub= $spec->{$method};\n            $sub= $preset{$sub} if $preset{$sub};\n\n            if ( my $installed= $installed{$method} ) {\n                die qq{Cannot install \"UNIVERSAL::$method\" with \"$sub\":}\n                    . qq{ already installed with \"$installed\"\\n}\n                  if $sub ne $installed;\n            }\n\n            ( my $module= $sub ) =~ s#::[^:]+$##;\n            $module =~ s#::#/#;\n            $module .= \".pm\";\n            $installed{$method}= $sub;\n\n            no strict 'refs';\n            *{\"UNIVERSAL::$method\"}= sub {\n                my $self = shift;\n                eval { require $module };\n                return $sub->( @_ ? @_ : $self ) if defined wantarray;\n                print STDERR $sub->( @_ ? @_ : $self );\n            } \n        }\n    }\n}",
+      "file" : "/var/tmp/arv_dUnBzl/UNIVERSAL-dump-0.06/lib/UNIVERSAL/dump.pm",
+      "package" : "UNIVERSAL::dump"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub throw {\n\tText::Tradition::Error->throw( \n\t\t'ident' => 'Analysis error',\n\t\t'message' => $_[0],\n\t);\n}",
+      "file" : "/var/tmp/arv_OUe5Mm/Text-Tradition-Analysis-1.1/lib/Text/Tradition/Analysis.pm",
+      "package" : "Text::Tradition::Analysis"
+   }
+]

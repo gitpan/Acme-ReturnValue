@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*quote_field = \\&SQL::Abstract::_quote",
+      "file" : "/var/tmp/arv__qkn25/DBIx-OO-0.0.9/lib/DBIx/OO.pm",
+      "package" : "DBIx::OO"
+   }
+]

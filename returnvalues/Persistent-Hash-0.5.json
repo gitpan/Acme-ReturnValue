@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_xsR5D4/Persistent-Hash-0.5/Hash.pm",
+      "package" : "Persistent::Hash"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_xsR5D4/Persistent-Hash-0.5/Hash/TestHash.pm",
+      "package" : "Persistent::Hash::TestHash"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_xsR5D4/Persistent-Hash-0.5/Hash/Dumper.pm",
+      "package" : "Persistent::Hash::Dumper"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_xsR5D4/Persistent-Hash-0.5/Hash/Storage/MySQL.pm",
+      "package" : "Persistent::Hash::Storage::MySQL"
+   }
+]

@@ -1,0 +1,86 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph.pm",
+      "package" : "GD::Graph"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/pie.pm",
+      "package" : "GD::Graph::pie"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/bars.pm",
+      "package" : "GD::Graph::bars"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/axestype.pm",
+      "package" : "GD::Graph::axestype"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/colour.pm",
+      "package" : "GD::Graph::colour"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/Data.pm",
+      "package" : "GD::Graph::Data"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/Error.pm",
+      "package" : "GD::Graph::Error"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/area.pm",
+      "package" : "GD::Graph::area"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/lines.pm",
+      "package" : "GD::Graph::lines"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/points.pm",
+      "package" : "GD::Graph::points"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/linespoints.pm",
+      "package" : "GD::Graph::linespoints"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/hbars.pm",
+      "package" : "GD::Graph::hbars"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/utils.pm",
+      "package" : "GD::Graph::utils"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Just another true value\"",
+      "file" : "/var/tmp/arv_kF827W/GDGraph-1.44/Graph/mixed.pm",
+      "package" : "GD::Graph::mixed"
+   }
+]

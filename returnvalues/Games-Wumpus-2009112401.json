@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub stir_wumpus {\n    my $self = shift;\n\n    if (rand (1) < $WUMPUS_MOVES) {\n        my @exits = $self -> wumpus -> exits;\n        my $new   = $exits [rand @exits];\n\n        if ($::DEBUG) {\n            say STDERR \"Wumpus moves to \", $new -> name;\n        }\n\n        $self -> wumpus -> clear_hazard ($WUMPUS);\n        $new  -> set_hazard ($WUMPUS);\n        $self -> set_wumpus ($new);\n        return 1;\n    }\n\n    return 0;\n}",
+      "file" : "/var/tmp/arv_qMJiCU/Games-Wumpus-2009112401/lib/Games/Wumpus/Cave.pm",
+      "package" : "Games::Wumpus::Cave"
+   }
+]

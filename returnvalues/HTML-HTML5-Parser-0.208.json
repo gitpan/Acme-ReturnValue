@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_o6tw6U/HTML-HTML5-Parser-0.208/lib/HTML/HTML5/Parser.pm",
+      "package" : "HTML::HTML5::Parser"
+   }
+]

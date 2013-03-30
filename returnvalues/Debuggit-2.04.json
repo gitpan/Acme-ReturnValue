@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Debuggit::Manual",
+      "file" : "/var/tmp/arv_5JMn1O/Debuggit-2.04/lib/Debuggit/Manual.pm",
+      "package" : "Debuggit::Manual"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Debuggit::Cookbook",
+      "file" : "/var/tmp/arv_5JMn1O/Debuggit-2.04/lib/Debuggit/Cookbook.pm",
+      "package" : "Debuggit::Cookbook"
+   }
+]

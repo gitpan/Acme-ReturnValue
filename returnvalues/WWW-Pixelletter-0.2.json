@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _submitForm\n{\n    my( $self, $xml ) = @_;\n    my %form = ( 'xml' => $xml );\n    my $file_idx = 0;\n    foreach( @{ $self->files() } )\n    {\n        $form{'uploadfile'.$file_idx} = $_;\n        $file_idx++;\n    }\n\n    my $response = $self->{user_agent}->post( $self->{url}, Content_Type => 'multipart/form-data', Content => \\%form );\n    unless ($response->is_success)\n    {\n        die( \"Error connecting to server: \" . $response->status_line . \"\\n\" );\n    }\n\n    my $response_xml = $response->content;\n    if( $response_xml =~ m/result code\\=\\\"(\\d*)\\\".*\\<msg\\>(.*?)\\<\\/msg\\>/s )\n    {\n        if( $1 == 100 )\n        {\n            return( $1, $2 );\n        }\n        else\n        {\n            die( \"Send failed ($1): $2\\n\" );\n        }\n    }\n    die( \"Send failed:\\n$response_xml\\n\" );\n}",
+      "file" : "/var/tmp/arv_MAEysX/WWW-Pixelletter-0.2/lib/WWW/Pixelletter.pm",
+      "package" : "WWW::Pixelletter"
+   }
+]

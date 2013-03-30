@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "print {$out} \"use $package;\\n\", whiten $shirt",
+      "file" : "/var/tmp/arv_e5pFXO/Acme-Hidek-42.0/lib/Acme/Hidek/Congrats.pm",
+      "package" : "Acme::Hidek::Congrats"
+   }
+]

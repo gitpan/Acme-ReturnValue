@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.04'",
+      "file" : "/var/tmp/arv_ZyAw2a/Object-KVC-0.04/lib/Object/KVC.pm",
+      "package" : "Object::KVC"
+   }
+]

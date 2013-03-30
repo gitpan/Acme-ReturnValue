@@ -1,0 +1,74 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _ep_form_object {\n    my $self = shift; my $attr = shift; my $func = shift;\n    my $debug = $self->{'debug'};\n    my $template;\n    if (!defined($template = delete $attr->{template})) {\n\t$func->{'default'} ||= 'template';\n        return undef;\n    }\n    my $output = '';\n\n    my $wiz = $self->{'_ep_wizard'};\n    my $form = $self->{'_ep_wizard_form'};\n    die \"Error cannot use ep_form_object without having a wizard \" unless($wiz && $form);\n    my $item = delete $attr->{item} or die \"Missing item name\";\n    my $obj = $form->object($attr->{'name'}) || die \"No such object \" \n\t                                           . $attr->{'name'};\n    my($key, $val);\n    while (($key, $val)= each %$attr) {\n\t$obj->{$key} = $val;\n    }\n    $self->{$item} = $obj;\n    $output .= $self->ParseVars($template);\n    $output;\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/HTML/EP/Wizard.pm",
+      "package" : "HTML::EP::Wizard"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Store {\n    my $self = shift;\n\n    my $copy = { %$self };\n    bless($copy, ref($self));\n\n    return unless delete $copy->{'_wizard_saveable_modified'};\n\n    delete $copy->{'_wizard_saveable_createme'};\n    my $file = delete $copy->{'_wizard_saveable_file'};\n    my $dir = File::Basename::dirname($file);\n    die \"Failed to create directory $dir: $!\"\n\tunless -d $dir  ||  File::Path::mkpath([$dir], 0, 0644);\n\n    my $dump = Data::Dumper->new([$copy], ['obj']);\n    $dump->Indent(1);\n    my $fh = IO::AtomicFile->open($file, \"w\")\n\tor die \"Failed to create file $file: $!\";\n    if (!$fh->print(\"my \", $dump->Dump())  ||  !$fh->close()) {\n\tmy $msg = $!;\n\t$fh->delete();\n\tdie \"Failed to write file $file: $msg\";\n    }\n    $self->Modified(0);\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/SaveAble.pm",
+      "package" : "Wizard::SaveAble"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub object {\n    my $self = shift; my $o = $self->{'objects'};\n    my $name = shift; \n    return (keys %$o) if wantarray && !$name;\n    if(@_) {\n\tmy $obj = shift; \n\t$name ||= $obj->{'name'};\n\tunless($name) {\n\t    my $pre = ref($obj); my $num = 0;\n\t    $pre = $2 if($pre =~ /^([^\\:]+\\:\\:)*([^\\:]+)\\:\\:HTML$/);\n\t    while(exists($o->{$pre. '_' . (++$num)})) {};\n\t    $name = $pre . '_' . $num;\n\t    $obj->{'name'} = $name;\n\t}\n\t$o->{$name} = $obj;\n    }\n    $o->{$name};\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Form/HTML.pm",
+      "package" : "Wizard::Form::HTML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Action_Reset {\n    my($self, $wiz) = @_;\n    my ($prefs) = $self->init();\n\n    my $cfile = $prefs->{'isdn-prefs-cfile'};\n    $self->{'settings'} = Wizard::SaveAble::ShellVars->new('file' => $cfile, 'load' => 1, 'prefix' => 'isdn-settings-');\n    $self->Store($wiz);\n\n    return $self->ShowMe($wiz, $self->{'settings'});\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Examples/ISDN/Settings.pm",
+      "package" : "Wizard::Examples::ISDN::Settings"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Action_DeleteHost4 {\n    my($self, $wiz) = @_;\n    $self->DeleteItem($wiz, 1);\n    $self->Action_Reset($wiz);\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Examples/Apache/Host.pm",
+      "package" : "Wizard::Examples::Apache::Host"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Action_DeleteVServer4 {\n    my($self, $wiz) = @_;\n    $self->DeleteItem($wiz,1);\n    $self->Action_Reset($wiz);\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Examples/Apache/VirtualServer.pm",
+      "package" : "Wizard::Examples::Apache::VirtualServer"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Action_DeleteDirectory4 {\n    my($self, $wiz) = @_;\n    $self->DeleteItem($wiz,1);\n    $self->Action_Reset($wiz);\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Examples/Apache/Directory.pm",
+      "package" : "Wizard::Examples::Apache::Directory"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Action_DeleteServer4 {\n    my($self, $wiz) = @_;\n    $self->DeleteItem($wiz,1);\n    $self->Action_Reset($wiz);\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Examples/Apache/Server.pm",
+      "package" : "Wizard::Examples::Apache::Server"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Display {\n    my($self, $wiz, $form, $state) = @_;\n    $self->SUPER::Display($wiz, $form, $state);\n    $self->{'default'} ||= 'no';\n    $self->{'value'} ||= $self->{'default'};\n\n    $form->AddHTML('<tr><td>' . HTML::Entities::encode_entities($self->{'descr'})\n\t\t   . '</td><td><input TYPE=\"CHECKBOX\" NAME=\"' \n\t\t   . $self->{'name'} . '\" VALUE=\"yes\"' \n\t\t   . ($self->{'value'} eq 'yes' ? ' CHECKED ' : ' ') \n\t\t   . '></td></tr>');\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Elem/CheckBox/HTML.pm",
+      "package" : "Wizard::Elem::CheckBox::HTML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Display { \n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Elem/Link/Shell.pm",
+      "package" : "Wizard::Elem::Link::Shell"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Display {\n    my($self, $wiz, $form, $state) = @_;\n    $self->SUPER::Display($wiz, $form, $state);\n    $form->AddHTML('<BR>');\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/Elem/BR/HTML.pm",
+      "package" : "Wizard::Elem::BR::HTML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Store {\n    my $self = shift;\n    my $prefix = $self->{'prefix'};\n\n    return unless $self->{'_wizard_saveable_modified'};\n\n    my $file = $self->{'_wizard_saveable_file'};\n    my $dir = File::Basename::dirname($file);\n    die \"Failed to create directory $dir: $!\"\n\tunless -d $dir  ||  File::Path::mkpath([$dir], 0, 0644);\n\n    my $tow = '';\n    foreach my $key (keys %$self) {\n\tif($key =~ /^$prefix(.*)$/) {\n\t    $tow .= \"$1=\" . '\"' . $self->{$key} . '\"' . \"\\n\";\n\t}\n    }\n\n    my $fh = IO::AtomicFile->open($file, \"w\")\n\tor die \"Failed to create file $file: $!\";\n    if (!$fh->print($tow)  ||  !$fh->close()) {\n\tmy $msg = $!;\n\t$fh->delete();\n\tdie \"Failed to write file $file: $msg\";\n    }\n    $self->Modified(0);\n}",
+      "file" : "/var/tmp/arv_BCxCbV/Wizard-0.1006/lib/Wizard/SaveAble/ShellVars.pm",
+      "package" : "Wizard::SaveAble::ShellVars"
+   }
+]

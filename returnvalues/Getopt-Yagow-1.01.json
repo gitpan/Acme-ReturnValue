@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DEBUG\n{\n    my $this = shift;\n\n    print STDERR \"configuration:\\n\";\n    foreach my $key ( @{$this->{configuration}} )\n    {\n        print STDERR \"$key\\n\";\n    }\n    print STDERR \"\\n\";\n\n    print STDERR \"options:\\n\";\n    while( my($key,$val) = each %{$this->{options}} )\n    {\n        print STDERR \"$key => $val\\n\";\n    }\n    print STDERR \"\\n\";\n\n    print STDERR \"default:\\n\";\n    while( my($key,$val) = each %{$this->{default}} )\n    {\n        print STDERR \"$key => $val\\n\";\n    }\n    print STDERR \"\\n\";\n\n    print STDERR \"mandatory:\\n\";\n    foreach my $key ( @{$this->{mandatory}} )\n    {\n        print STDERR \"$key\\n\";\n    }\n    print STDERR \"\\n\";\n\n    print STDERR \"used:\\n\";\n    while( my($key,$val) = each %{$this->{used}} )\n    {\n        print STDERR \"$key => $val\\n\";\n    }\n    print STDERR \"\\n\";\n\n    print STDERR \"unhandled:\\n\";\n    foreach my $key ( @{$this->{unhandled_options}} )\n    {\n        print STDERR \"$key\\n\";\n    }\n    print STDERR \"\\n\";\n\n}",
+      "file" : "/var/tmp/arv__KbDgC/Getopt-Yagow-1.01/Yagow.pm",
+      "package" : "Getopt::Yagow"
+   }
+]

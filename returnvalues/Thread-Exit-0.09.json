@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub CLONE {\n\n\n    $CLONE++;\n    $begin = $end = undef unless $inherit;\n}",
+      "file" : "/var/tmp/arv_zrlEfJ/Thread-Exit-0.09/lib/Thread/Exit.pm",
+      "package" : "Thread::Exit"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "RMI::Node::_mk_ro_accessors(__PACKAGE__,'peer_pid')",
+      "file" : "/var/tmp/arv_E3weHH/RMI-0.10/lib/RMI/Server/ForkedPipes.pm",
+      "package" : "RMI::Server::ForkedPipes"
+   }
+]

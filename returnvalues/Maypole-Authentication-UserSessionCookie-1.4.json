@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _logout_cookie {\n    my $r = shift;\n    my $cookie = Apache::Cookie->new($r->{ar},\n        -name => ($r->config->{auth}{cookie_name} || \"session_id\"),\n        -value => undef,\n        -path => URI->new($r->config->{base_uri})->path,\n        -expires => \"-10m\"\n    );\n    $cookie->bake();\n}",
+      "file" : "/var/tmp/arv_OYj1DB/Maypole-Authentication-UserSessionCookie-1.4/UserSessionCookie.pm",
+      "package" : "Maypole::Authentication::UserSessionCookie"
+   }
+]

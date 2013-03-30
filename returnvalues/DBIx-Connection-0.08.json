@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub bind_parameters {\n    my ($self, %bind_parameters) = @_;\n    my $bind_variables = $self->bind_variables;\n    my @bind_in_variables = $self->bind_in_variables;\n    my %bind_params = (map {$_ => $bind_parameters{$_}} @bind_in_variables);\n    my @binded_out_variables = $self->binded_out_variables;\n    my %bind_params_inout = (map {$_ => $bind_parameters{$_}} @binded_out_variables);\n    $self->bind_params(\\%bind_params);\n    $self->bind_params_inout(\\%bind_params_inout);\n    \\%bind_params_inout;\n}",
+      "file" : "/var/tmp/arv_wO6xS7/DBIx-Connection-0.08/lib/DBIx/Connection/Oracle/PLSQL.pm",
+      "package" : "DBIx::Connection::Oracle::PLSQL"
+   }
+]

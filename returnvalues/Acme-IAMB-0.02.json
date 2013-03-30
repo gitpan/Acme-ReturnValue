@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "foobar\n\n\n1",
+      "file" : "/var/tmp/arv_DEiNBA/Acme-IAMB-0.02/lib/Acme/IAMB.pm",
+      "package" : "Acme::IAMB"
+   }
+]

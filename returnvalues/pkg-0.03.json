@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _die {\n\n    require Carp;\n\n    my $err = @_ > 1 ? sprintf( shift, @_ ) : $_[0];\n\n    Carp::croak( q[error in use pkg: ], $err );\n\n}",
+      "file" : "/var/tmp/arv_3md2Zk/pkg-0.03/lib/pkg.pm",
+      "package" : "pkg"
+   }
+]

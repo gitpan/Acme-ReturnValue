@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub unlock_table {\n    my $class = shift;\n    $class->sql_UnlockTable->execute;\n}",
+      "file" : "/var/tmp/arv_DJLIrO/Class-DBI-Extension-0.01/lib/Class/DBI/Extension.pm",
+      "package" : "Class::DBI::Extension"
+   }
+]

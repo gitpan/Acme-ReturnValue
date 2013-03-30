@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register {\n    my $registry = shift;\n    $registry->add(preload => $self->class_id);\n    $registry->add(widget => 'powered_by', \n                   template => 'powered_by.html',\n                  );\n}",
+      "file" : "/var/tmp/arv_IcWHjB/Kwiki-PoweredBy-0.11/lib/Kwiki/PoweredBy.pm",
+      "package" : "Kwiki::PoweredBy"
+   }
+]

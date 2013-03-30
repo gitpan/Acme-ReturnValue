@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _digtype {\n    my $self=shift;\n    my $argument=shift;\n    my $classmethod=0;\n    $classmethod=1 unless  ref ($self);\n\n    my %digestbyname= (\n\t\t\t\"SHA1\"\t\t   => 1,\t\t\n\t\t\t\"SHA256\"\t   => 2,\t\t\n\t\t\t);      \n\n    \n    if (! $classmethod && defined ($self->{'digestbyname'}) ){\n\t%digestbyname= %{$self->{\"digestbyname\"}};\n    }\n\n\n    my %digestbyval = reverse %digestbyname;\n    \n    \n    if (!defined $argument){\n\treturn if $classmethod;\n\treturn $self->{\"digest\"};\n    }\n\n    $argument =~ s/\\s//g; \n\n    if ($argument =~ /^\\d+$/ ){    \n\tcarp \"$argument does not map to a valid digest\" unless \n\t    exists $digestbyval{$argument};\n\tif ($classmethod){\n\t    return $argument ;\n\t}else{\n\t    return $self->{\"digest\"}=$argument ;\n\t}\n    }else{  \n\tif ($classmethod){\n\t    carp \"$argument does not map to a valid digest\" unless\n\t\texists $digestbyname{uc($argument)};\n\t    return $digestbyname{uc($argument)};\n\t    \n\t}else{ \n\t    if (lc($argument) eq \"mnemonic\"){\n\t\treturn $digestbyval{$self->{\"digest\"}};\n\t    }else{\n\t\tcarp \"$argument does not map to a valid digest\" unless\n\t\t    exists $digestbyname{uc($argument)};\n\t\treturn $self->{\"digest\"}=$digestbyname{uc($argument)};\n\t    }\t    \n\t}\n\n\t\n    }\t\n    die \"digest method should never end here\";\n\n\t\n}",
+      "file" : "/var/tmp/arv_lVAPCV/Net-DNS-SEC-0.16/SEC.pm",
+      "package" : "Net::DNS::SEC"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = (qw$LastChangedRevision: 580 $)[1]",
+      "file" : "/var/tmp/arv_lVAPCV/Net-DNS-SEC-0.16/RR/DLV.pm",
+      "package" : "Net::DNS::RR::DLV"
+   }
+]

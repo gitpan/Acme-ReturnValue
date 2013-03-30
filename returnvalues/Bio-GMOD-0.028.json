@@ -1,0 +1,104 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ncrna   { }",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Query.pm",
+      "package" : "Bio::GMOD::Query"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub parse_params {\n  my ($self,@p) = @_;\n  return unless @p;\n  my %params = @p;\n  foreach my $key (keys %params) {\n    my $value = $params{$key};\n    $key =~ s/^\\-\\-{0,1}//;\n    $self->{defaults}->{lc($key)} = $value;\n  }\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Adaptor.pm",
+      "package" : "Bio::GMOD::Adaptor"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _check_version {\n  my ($self,$site,$url) = @_;\n  $url ||= $site;\n  my $version = $self->biogmod_version;\n  my $ua  = LWP::UserAgent->new();\n  $ua->agent(\"Bio::GMOD::Util::CheckVersions/$version\");\n  my $request = HTTP::Request->new('GET',$url);\n  my $response = $ua->request($request);\n  my %response;\n  if ($response->is_success) {\n    my $content = $response->content;\n    my $parsed = XMLin($content);\n    foreach (keys %{$parsed}) {\n      $response{$_} = $parsed->{$_};\n    }\n    $response{status} = \"SUCCESS\";\n  } else {\n    $response{error} = \"FAILURE: Couldn't check version: \" . $response->status_line;\n  }\n  $response{url} = $site;\n  return \\%response;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Util/CheckVersions.pm",
+      "package" : "Bio::GMOD::Util::CheckVersions"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub rearrange {\n    my($order,@param) = @_;\n    return unless @param;\n    my %param;\n\n    if (ref $param[0] eq 'HASH') {\n      %param = %{$param[0]};\n    } else {\n      return @param unless (defined($param[0]) && substr($param[0],0,1) eq '-');\n\n      my $i;\n      for ($i=0;$i<@param;$i+=2) {\n        $param[$i]=~s/^\\-//;     \n        $param[$i]=~tr/a-z/A-Z/; \n      }\n\n      %param = @param;                \n    }\n\n    my(@return_array);\n\n    local($^W) = 0;\n    my($key)='';\n    foreach $key (@$order) {\n        my($value);\n        if (ref($key) eq 'ARRAY') {\n            foreach (@$key) {\n                last if defined($value);\n                $value = $param{$_};\n                delete $param{$_};\n            }\n        } else {\n            $value = $param{$key};\n            delete $param{$key};\n        }\n        push(@return_array,$value);\n    }\n    push (@return_array,{%param}) if %param;\n    return @return_array;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Util/Rearrange.pm",
+      "package" : "Bio::GMOD::Util::Rearrange"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub filemode {\n  my $self = shift;\n  my $symbolic = shift;\n  \n  my (@modes) = $symbolic =~ /(...)(...)(...)$/g;\n  my $result;\n  my $multiplier = 1;\n  \n  while (my $mode = pop @modes) {\n    my $m = 0;\n    $m += 1 if $mode =~ /[xsS]/;\n    $m += 2 if $mode =~ /w/;\n    $m += 4 if $mode =~ /r/;\n    $result += $m * $multiplier if $m > 0;\n    $multiplier *= 8;\n  }\n  $result;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Util/Mirror.pm",
+      "package" : "Bio::GMOD::Util::Mirror"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub local_version {\n  my ($self,@p) = @_;\n  my ($path,$parent) = rearrange([qw/ACEDB_PATH PARENT/],@p);\n  my $adaptor = ($parent) ? $parent->adaptor : $self->adaptor;\n  $path ||= $adaptor->acedb_path . '/elegans';\n  my ($realdir,$modtime) = $self->read_symlink($path);\n  my ($installed) = $realdir =~ /(WS\\d+)$/;\n  $installed = ($installed) ? $installed : 'None installed';\n\n  my %response = ( title   => 'WormBase, the C. elegans database',\n\t\t   site     => \"local installation at $path\",\n\t\t   version  => $installed,\n\t\t   released => $modtime,\n\t\t   status   => ($installed ne 'None installed') ? 'SUCCESS' : $installed);\n  return (wantarray ? %response : $response{version});\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Util/CheckVersions/WormBase.pm",
+      "package" : "Bio::GMOD::Util::CheckVersions::WormBase"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n  my $self = shift;\n  my $attr = $AUTOLOAD;\n  $attr =~ s/.*:://;\n  return unless $attr =~ /[^A-Z]/;  \n  return if $attr eq 'new'; \n  $self->{uc($attr)} = shift if @_;\n  my $val = $self->{defaults}->{lc($attr)};  \n  $val ||= $DEFAULTS{uc($attr)};  \n  return $val;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Adaptor/FlyBase.pm",
+      "package" : "Bio::GMOD::Adaptor::FlyBase"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n  my $self = shift;\n  my $attr = $AUTOLOAD;\n  $attr =~ s/.*:://;\n  return unless $attr =~ /[^A-Z]/;  \n  return if $attr eq 'new'; \n  $self->{uc($attr)} = shift if @_;\n  my $val = $self->{defaults}->{lc($attr)};  \n  $val ||= $DEFAULTS{uc($attr)};  \n  return $val;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Adaptor/generic.pm",
+      "package" : "Bio::GMOD::Adaptor::generic"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n  my $self = shift;\n  my $attr = $AUTOLOAD;\n  $attr =~ s/.*:://;\n  return unless $attr =~ /[^A-Z]/;  \n  return if $attr eq 'new'; \n  $self->{uc($attr)} = shift if @_;\n  my $val = $self->{defaults}->{lc($attr)};  \n  $val ||= $DEFAULTS{uc($attr)};  \n  return $val;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Adaptor/SGD.pm",
+      "package" : "Bio::GMOD::Adaptor::SGD"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n  my $self = shift;\n  my $attr = $AUTOLOAD;\n  $attr =~ s/.*:://;\n  return unless $attr =~ /[^A-Z]/;  \n  return if $attr eq 'new'; \n  $self->{uc($attr)} = shift if @_;\n  my $val = $self->{defaults}->{lc($attr)};  \n  $val ||= $DEFAULTS{uc($attr)};  \n  return $val;\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Adaptor/WormBase.pm",
+      "package" : "Bio::GMOD::Adaptor::WormBase"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub set_status {\n  my ($self,@p) = @_;\n  my ($timing,$msg,$status) = rearrange([qw/TIMING MSG STATUS/],@p);\n\n  $self->{$timing}->{status} = $status;\n  $self->{$timing}->{msg}    = $msg;\n\n  if ($status eq 'up' || $status eq 'succeeded') {\n    $self->{is_up}++;\n    $self->{is_down} = undef;\n  }\n\n  my $string = $self->build_status_string(-timing=>$timing,-msg=>$msg);\n\n  return ($string,$self->is_up ? 1 : 0);\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Monitor.pm",
+      "package" : "Bio::GMOD::Admin::Monitor"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cleanup {\n  my ($self,@p) = @_;\n  my $tmp = $self->tmp_path;\n  $self->logit(-msg => \"Cleaning up $tmp\");\n  system(\"rm -rf $tmp/*\");\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Update.pm",
+      "package" : "Bio::GMOD::Admin::Update"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub create_archive {\n\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Archive.pm",
+      "package" : "Bio::GMOD::Admin::Archive"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub clear_cache {\n  my ($self,@p) = @_;\n  my ($cache) = rearrange([qw/CACHE/],@p);\n  $self->logit(-msg      => 'Clearing disk cache',\n\t       -emphasis => 1);\n\n  $cache ||= '/usr/local/wormbase/cache';\n  chdir $cache;\n  my @remove;\n  opendir(D,$cache) or $self->logit(-msg => \"Couldn't open $cache: $!\",die=>1);\n  while (my $f = readdir(D)) {\n    next unless -d $f;\n    next if $f eq 'README';\n    next if $f eq 'CVS';\n    next if $f =~ /^\\./;\n    push @remove,$f;\n  }\n  closedir D;\n  rmtree(\\@remove,0,0);\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Update/WormBase.pm",
+      "package" : "Bio::GMOD::Admin::Update::WormBase"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub restart_servers {\n   my ($self,@p) = @_;\n\n   my $blat   = Bio::GMOD::Admin::Monitor::blat->new();\n   my ($blat_result,$blat_status) = $blat->restart();\n\n   my $acedb  = Bio::GMOD::Admin::Monitor::acedb->new();\n   my ($ace_result,$ace_status) = $acedb->restart();\n\n   my $httpd  = Bio::GMOD::Admin::Monitor::httpd->new();\n   my ($httpd_result,$httpd_status) = $httpd->restart();\n\n   my $mysqld = Bio::GMOD::Admin::Monitor::mysqld->new();\n   my ($mysqld_result,$mysqld_status) = $mysqld->restart();\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Monitor/WormBase.pm",
+      "package" : "Bio::GMOD::Admin::Monitor::WormBase"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "/usr/local/blat/bin/gfServer start localhost 2003 /usr/local/wormbase/blat/*.nib & > /dev/null 2>&1\n/usr/local/blat/bin/gfServer start localhost 2004 /usr/local/wormbase/blat/briggsae/files/*.nib & > /dev/null 2>&1\n\n\n\n\nsub new {\n  my $class = shift;\n  my $this   = bless {},$class;\n  return $this;\n}\n\nsub check_status {\n  my ($self,@p) = @_;\n  my ($testdb) = rearrange([qw/TESTDB/],@p);\n  $testdb ||= 'test';\n\n  $self->{testing}   = 'mysqld';\n  $self->{tested_at} = $self->fetch_date;\n\n  my $db = DBI->connect(\"dbi:mysql:$testdb\",'nobody');\n\n  if ($db) {\n    $self->set_status_flags('initial','up');\n    $self->status_string(-timing => 'initial',\n\t\t\t -msg    => 'Testing mysqld',\n\t\t\t -status => 'UP');\n  } else {\n    $self->set_status_flags('initial','down');\n    $self->status_string(-timing => 'initial',\n\t\t\t -msg    => 'Testing mysqld',\n\t\t\t -status => 'DOWN');\n  }\n}\n\n\n\nsub restart {\n  my ($self,@p) = @_;\n  my ($mysqld,$initd,$testdb) = rearrange([qw/MYSQLD INITD TESTDB/],@p);\n  if (-e $mysqld) {\n    system(\"$mysqld --user=mysql &\")\n  } elsif (-e $initd) {\n    system(\"$initd condrestart\");\n  } else {}\n\n  $testdb ||= 'test';\n  my $db = DBI->connect(\"dbi:mysql:$testdb\",'nobody');\n\n  if ($db) {\n    $self->set_status_flags('final','up');\n    $self->status_string(-timing => 'final',\n\t\t\t -msg    => \"Restarting mysqld via $initd\",\n\t\t\t -status => 'SUCCEEDED');\n  } else {\n    $self->set_status_flags('final','down');\n    $self->status_string(-timing => 'final',\n\t\t\t -msg    => \"Restarting mysqld via $mysqld\",\n\t\t\t -status => 'FAILED');\n  }\n}\n\n\n\n\n\n1",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Monitor/blat.pm",
+      "package" : "Bio::GMOD::Admin::Monitor::blat"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _adjust_symlink {\n  my $self     = shift;\n  my $repository = $self->database_repository;\n  my $new_archive   = $self->{to_package};\n  chdir($repository);\n\n  $new_archive     =~ /WS(.*)/;\n  my $dev_version  = $1;\n  my $live_version = 'WS' . ($dev_version - 1);\n\n  unlink(\"$repository/development_release\");\n  symlink(\"$new_ws\",\"$tarballs/development_release\");\n  unlink(\"$repository/live_release\");\n  symlink(\"$live_version\",\"$tarballs/live_release\");\n}",
+      "file" : "/var/tmp/arv_lP3Wjg/Bio-GMOD-0.028/GMOD/Admin/Archive/WormBase.pm",
+      "package" : "Bio::GMOD::Admin::Archive"
+   }
+]

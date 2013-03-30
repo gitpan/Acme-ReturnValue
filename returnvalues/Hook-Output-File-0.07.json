@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY\n{\n    my $self = shift;\n\n    return if reftype $self eq 'GLOB' && *$self =~ /^\\*Tie::StdHandle/;\n\n    no strict 'refs';\n    my $caller = caller;\n\n    no warnings 'untie';\n    foreach my $stream (@{$self->{streams}}) {\n        untie *{\"${caller}::$stream\"};\n    }\n}\n\n1",
+      "file" : "/var/tmp/arv_XhWSvJ/Hook-Output-File-0.07/lib/Hook/Output/File.pm",
+      "package" : "Hook::Output::File"
+   }
+]

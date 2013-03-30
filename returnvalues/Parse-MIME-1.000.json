@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub best_match {\n\tmy ( $supported, $header ) = @_;\n\tmy @parsed_header = parse_media_range_list $header;\n\n\tmy ( $best_fitness, $best_fit_q, $match ) = ( -.5, 0 );\n\n\tfor my $type ( @$supported ) {\n\t\tmy ( $fitness, $fit_q ) = fitness_and_quality_parsed $type, @parsed_header;\n\t\tnext if $fitness < $best_fitness;\n\t\tnext if $fitness == $best_fitness and $fit_q < $best_fit_q;\n\t\t( $best_fitness, $best_fit_q, $match ) = ( $fitness, $fit_q, $type );\n\t}\n\n\treturn if not defined $match;\n\treturn $match;\n}",
+      "file" : "/var/tmp/arv_NKdjY7/Parse-MIME-1.000/lib/Parse/MIME.pm",
+      "package" : "Parse::MIME"
+   }
+]

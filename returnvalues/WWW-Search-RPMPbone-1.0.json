@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _new_hit {\n  my ($self,$site,$site_url,$rpm,$distribution) = @_;\n  my $hit = new WWW::SearchResult;\n  $hit->add_url($site_url);\n  $hit->source($rpm);\n  $hit->description($distribution);\n  push(@{$self->{cache}},$hit);\n  return $hit;\n}",
+      "file" : "/var/tmp/arv_Rbtcv_/WWW-Search-RPMPbone-1.0/RPMPbone.pm",
+      "package" : "WWW::Search::RPMPbone"
+   }
+]

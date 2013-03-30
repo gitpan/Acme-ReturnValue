@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_SuW6cq/Decision-ACL-0.02/ACL.pm",
+      "package" : "Decision::ACL"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_SuW6cq/Decision-ACL-0.02/ACL/Constants.pm",
+      "package" : "Decision::ACL::Constants"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "666",
+      "file" : "/var/tmp/arv_SuW6cq/Decision-ACL-0.02/ACL/Rule.pm",
+      "package" : "Decision::ACL::Rule"
+   }
+]

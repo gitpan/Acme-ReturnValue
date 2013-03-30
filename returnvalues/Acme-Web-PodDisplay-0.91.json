@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_ARseCG/Acme-Web-PodDisplay-0.91/lib/Acme/Web/PodDisplay.pm",
+      "package" : "Acme::Web::PodDisplay"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_ARseCG/Acme-Web-PodDisplay-0.91/lib/Acme/Web/PodDisplay/Hidden.pm",
+      "package" : "Acme::Web::PodDisplay::Hidden"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_ARseCG/Acme-Web-PodDisplay-0.91/lib/Acme/Web/PodDisplay/Deeper.pm",
+      "package" : "Acme::Web::PodDisplay::Deeper"
+   }
+]

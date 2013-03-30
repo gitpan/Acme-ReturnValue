@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_h4a9Tu/YUM-RepoQuery-0.002/lib/YUM/RepoQuery/Role/DB.pm",
+      "package" : "YUM::RepoQuery::Role::DB"
+   }
+]

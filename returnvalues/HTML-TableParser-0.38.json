@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY\n{\n  my $self = shift;\n\n  if ( $self->{process} )\n  {\n    $self->end_row();\n\n    $self->finish_header();\n\n    $self->callback( 'end', $self->{line} );\n  }\n}\n\nsub fix_texts\n{\n  my ( $req, $texts  ) = @_;\n\n  for ( @$texts )\n  {\n    local $HTML::Entities::entity2char{nbsp} =\n      $HTML::Entities::entity2char{nbsp};\n\n    $HTML::Entities::entity2char{nbsp} = ' '\n      if $req->{DecodeNBSP};\n\n    chomp $_ \n      if $req->{Chomp};\n\n    decode_entities( $_ )\n      if $req->{Decode};\n\n\n    if ( $req->{Trim} )\n    {\n      s/^\\s+//;\n      s/\\s+$//;\n    }\n  }\n\n  $texts;\n}\n\nsub text\n{\n  my $self = shift;\n\n  $self->{text} = shift;\n}\n\nsub id  { $_[0]->{id} }\nsub ids { $_[0]->{ids} }\nsub process { $_[0]->{process} }\n\n1",
+      "file" : "/var/tmp/arv_5BP5NI/HTML-TableParser-0.38/lib/HTML/TableParser/Table.pm",
+      "package" : "HTML::TableParser::Table"
+   }
+]

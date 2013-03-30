@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "qw/I asked for juice\n          You bring me poison/",
+      "file" : "/var/tmp/arv_dX_VY1/Bid.pm",
+      "package" : "Auction::Bid"
+   }
+]

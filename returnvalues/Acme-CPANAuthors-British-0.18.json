@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q<\n    United, united, united we stand\n    United we never shall fall\n    United, united, united we stand\n    United we stand one and all\n>",
+      "file" : "/var/tmp/arv_6IWw15/Acme-CPANAuthors-British-0.18/lib/Acme/CPANAuthors/British.pm",
+      "package" : "Acme::CPANAuthors::British"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q<\n    recommended listening when using this module: Paramore - Misery Business\n>",
+      "file" : "/var/tmp/arv_6IWw15/Acme-CPANAuthors-British-0.18/lib/Acme/CPANAuthors/British/Companies.pm",
+      "package" : "Acme::CPANAuthors::British::Companies"
+   }
+]

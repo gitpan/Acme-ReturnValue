@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub send_status {\n  my $self = shift;\n  my $socket = $self->socket;\n  my $player = $self->{player};\n  my $out = $self->get_info;\n  my $out = join $self->{sep}, @$out;\n  $socket->send($out);\n}",
+      "file" : "/var/tmp/arv_zXzPjo/Audio-Daemon-0.99Beta/Daemon/MPG123.pm",
+      "package" : "Audio::Daemon::MPG123"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub send_status {\n  my $self = shift;\n  my $socket = $self->socket;\n  my $out = $self->get_info;\n  my $out = join $self->{sep}, @$out;\n  $socket->send($out);\n}",
+      "file" : "/var/tmp/arv_zXzPjo/Audio-Daemon-0.99Beta/Daemon/Shout.pm",
+      "package" : "Audio::Daemon::Shout"
+   }
+]

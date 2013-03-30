@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{ Favourite record of the moment: The Dynamics - Version Excursions }",
+      "file" : "/var/tmp/arv_pvh_7q/DBIx-SchemaChecksum-1.002/lib/DBIx/SchemaChecksum.pm",
+      "package" : "DBIx::SchemaChecksum"
+   }
+]

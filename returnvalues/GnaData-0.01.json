@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub write {\n}",
+      "file" : "/var/tmp/arv_Od9DNc/GnaData-0.01/lib/GnaData/Read.pm",
+      "package" : "GnaData::Read"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub deconform {\n}",
+      "file" : "/var/tmp/arv_Od9DNc/GnaData-0.01/lib/GnaData/Conform.pm",
+      "package" : "GnaData::Conform"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub write {\n}",
+      "file" : "/var/tmp/arv_Od9DNc/GnaData-0.01/lib/GnaData/Read/RDB.pm",
+      "package" : "GnaData::Load::RDB"
+   }
+]

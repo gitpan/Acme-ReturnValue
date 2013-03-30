@@ -1,0 +1,62 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad.pm",
+      "package" : "App::Rad"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Command.pm",
+      "package" : "App::Rad::Command"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Option.pm",
+      "package" : "App::Rad::Option"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Exclude.pm",
+      "package" : "App::Rad::Exclude"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Shell.pm",
+      "package" : "App::Rad::Shell"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Include.pm",
+      "package" : "App::Rad::Include"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Help.pm",
+      "package" : "App::Rad::Help"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Config.pm",
+      "package" : "App::Rad::Config"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Tester.pm",
+      "package" : "App::Rad::Tester"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VlZQyp/SweetPea-Cli-0.08/lib/App/Rad/Plugin/Abbrev.pm",
+      "package" : "App::Rad::Plugin::Abbrev"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*refine = sub {\n  my ($self, %args) = @_;\n  $args{-post_bless} = delete $args{-postFetch} if $args{-postFetch};\n  $self->$orig_refine(%args);\n}\n\n\n1",
+      "file" : "/var/tmp/arv_zT1tHo/DBIx-DataModel-2.33/lib/DBIx/DataModel/Compatibility/V0.pm",
+      "package" : "DBIx::DataModel::Compatibility::V0"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_comment { \n    my ($self, $config, %params) = @_; \n    Bryar::Document::Comment->new(\\%params);\n}",
+      "file" : "/var/tmp/arv_w671LH/Bryar-4.0/lib/Bryar/DataSource/DBI.pm",
+      "package" : "Bryar::Comment::DBI"
+   }
+]

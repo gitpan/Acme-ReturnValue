@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub load_session {\n    my $jar     = $self->hub->cookie->read(\"Session\");\n    my $session = CGI::Session->new(undef, $jar->{id} || undef,\n\t\t\t\t    {Directory=>$self->plugin_directory});\n    $self->hub->cookie->write(\"Session\", { id => $session->id() } );\n    return $session;\n}",
+      "file" : "/var/tmp/arv_hHYfNy/Kwiki-Session-0.01/lib/Kwiki/Session.pm",
+      "package" : "Kwiki::Session"
+   }
+]

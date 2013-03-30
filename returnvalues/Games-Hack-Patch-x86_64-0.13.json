@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub GetNOP\n{\n  my($adr_start, $adr_end, $disass)=@_;\n  my($binary, $diff);\n\n  $binary=\"\";\n\n  if ($disass =~ m#^f[bi]?st(p)?s? #)\n  {\n    if ($1)\n    {\n      $binary .= \"\\xdf\\xc0\";\n\n      $adr_start += 2;\n    }\n  }\n  elsif ($disass =~ m#^pop#)\n  {\n    $binary .= \"\\x83\\xc4\\x04\";\n    $adr_start += 3;\n  }\n  elsif ($disass =~ m#^(mov|or|and|add|sub|xor)#)\n  {\n  }\n  else\n  {\n    warn \"Unknown instruction '\" . $disass . \"', patching unsafe!\";\n    return undef;\n  }\n\n\n  if (($diff=$adr_end-$adr_start) >= 2)\n  {\n    $binary .= \"\\xeb\" . pack(\"C\", $diff-2);\n    $adr_end=$adr_start;\n  }\n\n  $binary .= \"\\x90\" x $diff\n    if ($diff=$adr_end-$adr_start) >= 1;\n\n  return $binary;\n}",
+      "file" : "/var/tmp/arv_Gb6Sup/Games-Hack-Patch-x86_64-0.13/lib/Games/Hack/Patch/x86_64.pm",
+      "package" : "Games::Hack::Patch::x86_64"
+   }
+]

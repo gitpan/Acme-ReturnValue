@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _fisher_yates_shuffle {\n    my $array = shift;\n    my $i;\n    for ( $i = @$array; --$i; ) {\n        my $j = int rand( $i + 1 );\n        @$array[ $i, $j ] = @$array[ $j, $i ];\n    }\n}",
+      "file" : "/var/tmp/arv_3byHGZ/Image-WorldMap-0.15/WorldMap.pm",
+      "package" : "Image::WorldMap"
+   }
+]

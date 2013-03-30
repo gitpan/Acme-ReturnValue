@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub event {\n    my $self = shift;\n    my %args = @_;\n\n    my $t = Time::HiRes::time();\n\n    my $last = $self->{list}[$self->{current}] || 0;\n    my $block = exists( $args{block} ) ? $args{block} : $self->{block};\n\n    if ( ($t - $last) < $self->{seconds} ) {\n        return 0 unless $block;\n        Time::HiRes::sleep($self->{seconds} - ($t - $last));\n    }\n\n    $self->{list}[$self->{current}] = $t;\n\n    $self->{current} = ($self->{current}+1) % $self->{iterations};\n\n    return 1;\n}",
+      "file" : "/var/tmp/arv_36v3Ql/Schedule-RateLimiter-0.01/RateLimiter.pm",
+      "package" : "Schedule::RateLimiter"
+   }
+]

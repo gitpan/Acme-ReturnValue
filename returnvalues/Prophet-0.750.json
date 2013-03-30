@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Any::Moose",
+      "file" : "/var/tmp/arv_CJQqAg/Prophet-0.750/lib/Prophet/ReplicaFeedExporter.pm",
+      "package" : "Prophet::ReplicaFeedExporter"
+   }
+]

@@ -1,0 +1,86 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _unix_as_logtime {\n\tmy $this = shift;\n\tmy @t = $this->[$LOG_UTILS]\n\t\t? $this->[$LOG_UTILS]->localtime( defined $_[0] ? $_[0] : time )\n\t\t: localtime( defined $_[0] ? $_[0] : time )\n\t;\n\treturn\n\t\t(\n\t\t\t$t[4] == 0 ? 'Jan' :\n\t\t\t$t[4] == 1 ? 'Feb' :\n\t\t\t$t[4] == 2 ? 'Mar' :\n\t\t\t$t[4] == 3 ? 'Apr' :\n\t\t\t$t[4] == 4 ? 'May' :\n\t\t\t$t[4] == 5 ? 'Jun' :\n\t\t\t$t[4] == 6 ? 'Jul' :\n\t\t\t$t[4] == 7 ? 'Aug' :\n\t\t\t$t[4] == 8 ? 'Sep' :\n\t\t\t$t[4] == 9 ? 'Oct' :\n\t\t\t$t[4] == 10 ? 'Nov' :\n\t\t\t$t[4] == 11 ? 'Dec' :\n\t\t\t''\n\t\t)\n\t\t. ' ' .\n\t\t( $t[3] < 10 ? '0' . $t[3] : $t[3] )\n\t\t. ' ' .\n\t\t( $t[2] < 10 ? '0' . $t[2] : $t[2] )\n\t\t. ':' .\n\t\t( $t[1] < 10 ? '0' . $t[1] : $t[1] )\n\t\t. ':' .\n\t\t( $t[0] < 10 ? '0' . $t[0] : $t[0] )\n\t;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/Logger.pm",
+      "package" : "PAB3::Logger"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _warn_handler {\n\tmy $str = shift;\n\tif( $str =~ /(.+) at (.+) line (.+)$/s ) {\n\t\tprint \"<br />\\n<code>Warning: <b>$1</b>\\n\"\n\t\t\t. 'at <b>' . $2 . '</b> line <b>' . $3 . '</b>'\n\t\t\t. \"</code>\\n<br />\\n\"\n\t\t;\n\t}\n\telse {\n\t\tprint \"<br />\\n<code>Warning: <b>$str</p></code>\\n<br />\\n\";\n\t}\n\tmy $s = $str;\n\t$s =~ s!\\n+$!!;\n\tif( $Logger ) {\n\t\t$Logger->warn( $s );\n\t}\n\tif( $GLOBAL::MPREQ ) {\n\t\t$GLOBAL::MPREQ->log()->warn( $s );\n\t}\n\telse {\n\t\tprint STDERR '[warn] Perl: ' . $str;\n\t}\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/CGI.pm",
+      "package" : "PAB3::CGI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub save {\n\tmy $this = shift;\n\tmy( $file, $data, $fh );\n\t$file = $this->[$HMC_PATH_CACHE] . $this->[$HMC_CACHE_FILE];\n\treturn 1 if ! $this->[$HMC_DATA_CHANGED] && -e $file;\n\tif( $this->[$HMC_LOGGER] ) {\n\t\t$this->[$HMC_LOGGER]->debug( \"Store hashmap cache at \\\"$file\\\"\" );\n\t}\n\topen( $fh, '>' . $file ) or do {\n\t\t&Carp::carp( \"can't open $file: $!\" );\n\t\treturn 0;\n\t};\n\tflock( $fh, 2 );\n\teval {\n\t\tlocal( $SIG{'__DIE__'}, $SIG{'__WARN__'} );\n\t\t&Storable::store_fd( $this->[$HMC_DATA], $fh );\n\t};\n\tflock( $fh, 8 );\n\tclose( $fh );\n\tif( $@ ) {\n\t\t&Carp::carp( \"Could not save hashmap file: $@\" );\n\t}\n\tchmod 0664, $file;\n\t$this->[$HMC_CACHE_FILE_MT] = ( stat( $file ) )[9];\n\t$this->[$HMC_DATA_CHANGED] = 0;\n\treturn 1;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/HashmapCache.pm",
+      "package" : "PAB3::HashmapCache"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _set_db_error {\n\tmy $this = shift;\n\tmy $pkg = $this->[$DB_PKG];\n\tif( $_[0] ) {\n\t\t$this->[$DB_ERROR] = $_[0];\n\t\t$this->[$DB_ERRNO] = -1;\n\t}\n\telse {\n\t\t$this->[$DB_ERROR] = &{\"$${pkg}::error\"}( $this->[$DB_LINKID] );\n\t\t$this->[$DB_ERRNO] = &{\"$${pkg}::errno\"}( $this->[$DB_LINKID] );\n\t}\n\tif( $this->[$DB_ERROR] ) {\n\t\t&Carp::croak(\n\t\t\t'(Code ' . $this->[$DB_ERRNO] . ') ' . $this->[$DB_ERROR] )\n\t\t\t\tif $this->[$DB_DIE];\n\t\t&Carp::carp(\n\t\t\t'(Code ' . $this->[$DB_ERRNO] . ') ' . $this->[$DB_ERROR] )\n\t\t\t\tif $this->[$DB_WARN];\n\t}\n\treturn $_[1];\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/DB.pm",
+      "package" : "PAB3::DB"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub destroy {\n\tmy( $file );\n\t%_SESSION = ();\n\treturn 1 if ! $SID;\n\t$file = $Config{'save_path'} . '/pses_' . $SID;\n\tunlink $file;\n\tif( -e $file ) {\n\t\treturn 0;\n\t}\n\t$SID = undef;\n\treturn 1;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/Session.pm",
+      "package" : "PAB3::Session"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _parse_request {\n\tmy( $len, $type, $meth, $got, $input, $post, $jmp );\n\t\n\t%_GET = ();\n\t%_POST = ();\n\t%_REQUEST = ();\n\t%_FILES = ();\n\t\n\tbinmode( STDIN ); \n\tbinmode( STDOUT );\n\tbinmode( STDERR );\n\n\t$type = $ENV{'CONTENT_TYPE'};\n\t$len  = $ENV{'CONTENT_LENGTH'};\n\t$meth = $ENV{'REQUEST_METHOD'};\n\t\n\tif( $len && $RequestMaxData && $len > $RequestMaxData ) {\n\t\t&Carp::croak(\n\t\t\t\"CGI Error: Request to receive too much data: $len bytes\"\n\t\t);\n\t}\n\n\tmy( @tb, $i, $iv, $key, $val );\n\t@tb = ();\n\tif( ! $meth ) {\n\t\tpush @tb, @ARGV;\n\t}\n\telse {\n\t\tpush @tb, split( /[&;]/, $ENV{'QUERY_STRING'} || '' );\n\t\tif( $meth eq 'POST' && index( $type, 'multipart/form-data' ) < 0 ) {\n\t\t\t$jmp = 'parse_post';\n\t\t\tgoto parse_std;\nparse_post:\n\t\t\t$jmp = undef;\n\t\t\t$post = 1;\n\t\t\tread( STDIN, $input, $len );\n\t\t\tpush @tb, split( /[&;]/, $input );\n\t\t}\n\t}\nparse_std:\n\tfor $i( 0 .. $#tb ) {\n\t\t$iv = index( $tb[$i], '=' );\n\t\tif( $iv > 0 ) {\n\t\t\t$key = substr( $tb[$i], 0, $iv );\n\t\t\t$val = substr( $tb[$i], $iv + 1 );\n\t\t\t$key =~ tr/+/ /;\n\t\t\t$key =~ s/%([0-9a-fA-F]{2})/chr(hex($1))/ge;\n\t\t\tif( $val ) {\n\t\t\t\t$val =~ tr/+/ /;\n\t\t\t\t$val =~ s/%([0-9a-fA-F]{2})/chr(hex($1))/ge;\n\t\t\t}\n\t\t\tif( $post ) {\n\t\t\t\t&_create_param( $key, $val, 1 );\n\t\t\t}\n\t\t\telse {\n\t\t\t\t&_create_param( $key, $val, 0 );\n\t\t\t}\n\t\t}\n\t\telse {\n\t\t\t$tb[$i] =~ tr/+/ /;\n\t\t\t$tb[$i] =~ s/%([0-9a-fA-F]{2})/chr(hex($1))/ge;\n\t\t\tif( $post ) {\n\t\t\t\t&_create_param( $tb[$i], '', 1 );\n\t\t\t}\n\t\t\telse {\n\t\t\t\t&_create_param( $tb[$i], '', 0 );\n\t\t\t}\n\t\t}\n\t}\n\tgoto $jmp if $jmp;\n\tif( index( $type, 'multipart/form-data' ) >= 0 ) {\n\t\tmy( $boundary, $blen, $bi, $bin, $head, $cd, $ct, $eoh, $name,\n\t\t\t$hl, $ctype, $buf, $bufsize, $fname, $writef, $fn, $ser,\n\t\t\t$hf, $fd, $cl\n\t\t);\n\t\t$bufsize = $MPartBufferSize || 8192;\n\t\t$writef = $SaveToFile ? $UploadFileDir || '/tmp/' : 0;\n\t\t($boundary) = $type =~ /boundary=\\\"([^\\\"]+)\\\"/;\n\t\tunless( $boundary ) {\n\t\t\t($boundary) = $type =~ /boundary=(\\S+)/;\n\t\t}\n\t\tunless( $boundary ) {\n\t\t\t&Carp::croak( \"Boundary not provided: probably a bug in your server\" );\n\t\t}\n\t\t$boundary =  '--' . $boundary;\n\t\t$blen = length( $boundary );\n\t\tif( $meth ne 'POST' ) {\n\t\t\t&Carp::croak( \"CGI Error: Invalid request method for multipart/form-data: $meth\" );\n\t\t}\n\t\tif( $writef ) {\n\t\t\tstat( $writef );\n\t\t\t$writef = '/tmp/' unless  -d _ && -w _;\n\t\t\t$writef .= 'CGI-TMP';\n\t\t}\n\t\t$content = $input = '';\n\t\t$copen = 0;\n\t\t$bufsize = $len if $bufsize > $len;\n\t\twhile( ( $got = read( STDIN, $buf, $bufsize ) ) > 0 ) {\n\t\t\t$len -= $got;\n\t\t\t$bufsize = $len if $bufsize > $len;\n\t\t\t$input .= $buf;\n\t\t\twhile( ( $bi = index( $input, $boundary ) ) >= 0 ) {\n\t\t\t\tif( $bi > 0 ) {\n\t\t\t\t\tif( $hf ) {\n\t\t\t\t\t\tprint $hf substr( $input, 0, $bi - 2 );\n\t\t\t\t\t\tclose $hf;\n\t\t\t\t\t\t$fd->{'size'} .= ( $cl + $bi - 2 );\n\t\t\t\t\t}\n\t\t\t\t\telse {\n\t\t\t\t\t\t$Form{ $name } .= substr( $input, 0, $bi - 2 );\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\t$bi += $blen;\n\t\t\t\t$eoh = index( $input, \"\\015\\012\\015\\012\", $bi );\n\t\t\t\tlast if $eoh < 0;\n\t\t\t\t$bi = $eoh + 4;\n\t\t\t\t$hl = length( $input );\n\t\t\t\t$head = substr( $input, $blen, $eoh - $blen + 2 );\n\t\t\t\t($cd) = $head =~ m!(Content-Disposition:[^\\015]+)\\015!;\n\t\t\t\t($ct) = $head =~ m!(Content-Type:[^\\015]+)\\015!;\n\t\t\t\t($name) = $cd =~ /\\bname=\\\"([^\\\"]+)\\\"/i;\n\t\t\t\tunless( defined $name ) {\n\t\t\t\t\t($name) = $cd =~ /\\bname=([^\\s:;]+)/i;\n\t\t\t\t}\n\t\t\t\t($fname) = $cd =~ /\\bfilename=\\\"([^\\\"]*)\\\"/i;\n\t\t\t\tunless( defined $fname ) {\n\t\t\t\t\t($fname) = $cd =~ /\\bfilename=([^\\s:;]+)/i;\n\t\t\t\t}\n\t\t\t\tif( $ct ) {\n\t\t\t\t\t($ctype) = $ct =~ /^\\s*Content-type:\\s*\\\"([^\\\"]+)\\\"/i;\n\t\t\t\t\tunless( defined $ctype ) {\n\t\t\t\t\t\t($ctype) = $ct =~ /^\\s*Content-Type:\\s*([^\\s:;]+)/i;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\t$ctype = '';\n\t\t\t\t}\n\t\t\t\t&_create_param( $name, '', 1 ) if defined $_POST{$name};\n\t\t\t\tif( defined $fname && $fname ne '' && $writef ) {\n\t\t\t\t\t$ser ++;\n\t\t\t\t\t$fn = $writef . '.' . $$ . '.' . $ser;\n\t\t\t\t\topen $hf, '>' . $fn or\n\t\t\t\t\t\t&Carp::croak( \"Error while open $fn\\: $!\" );\n\t\t\t\t\tbinmode $hf;\n\t\t\t\t\t$cl = 0;\n\t\t\t\t\t$_FILES{$name} ||= {};\n\t\t\t\t\t$fd = $_FILES{$name};\n\t\t\t\t\t$fd->{'name'} .= \n\t\t\t\t\t\tdefined $fd->{'name'} ? \"\\0\" : \"\"\n\t\t\t\t\t\t. ( $fname || \"\" );\n\t\t\t\t\t$fd->{'type'} .=\n\t\t\t\t\t\tdefined $fd->{'type'} ? \"\\0\" : \"\"\n\t\t\t\t\t\t. ( $ctype || \"\" );\n\t\t\t\t\t$fd->{'size'} .=\n\t\t\t\t\t\tdefined $fd->{'size'} ? \"\\0\" : \"\";\n\t\t\t\t\t$fd->{'tmp_name'} .= defined $fd->{'tmp_name'} ? \"\\0\" : $fn;\n\t\t\t\t\t&_add_param( $name, $fn, 1 ) if defined $fn;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\t$hf = undef;\n\t\t\t\t}\n\t\t\t\tif( $bi < $hl ) {\n\t\t\t\t\tif( ( $bin = index( $input, $boundary, $bi ) ) >= 0 ) {\n\t\t\t\t\t\tif( $hf ) {\n\t\t\t\t\t\t\tprint $hf substr( $input, $bi, $bin - $bi - 2 );\n\t\t\t\t\t\t\tclose $hf;\n\t\t\t\t\t\t\t$fd->{'size'} .= ( $cl + $bin - $bi - 2 );\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse {\n\t\t\t\t\t\t\t&_add_param( $name, substr( $input, $bi, $bin - $bi - 2 ), 1 );\n\t\t\t\t\t\t}\n\t\t\t\t\t\t$bi = $bin;\n\t\t\t\t\t}\n\t\t\t\t\telse {\n\t\t\t\t\t\tif( $hf ) {\n\t\t\t\t\t\t\tprint $hf substr( $input, $bi );\n\t\t\t\t\t\t\t$cl += ( $hl - $bi );\n\t\t\t\t\t\t}\n\t\t\t\t\t\telse {\n\t\t\t\t\t\t\t&_add_param( $name, substr( $input, $bi ), 1 );\n\t\t\t\t\t\t}\n\t\t\t\t\t\t$input = '';\n\t\t\t\t\t\tlast;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\t$content = '';\n\t\t\t\t}\n\t\t\t\t$input = substr( $input, $bi );\n\t\t\t}\n\t\t\tif( $len <= 0 ) {\n\t\t\t\tclose $hf if $hf;\n\t\t\t\tif( $bi < 0 && substr( $input, 0, 2 ) ne '--' ) {\n\t\t\t\t\t&Carp::croak(\n\t\t\t\t\t\t'Reached end of input while seeking boundary of multipart.'\n\t\t\t\t\t\t. ' Format of CGI input is wrong.'\n\t\t\t\t\t);\n\t\t\t\t}\n\t\t\t\tlast;\n\t\t\t}\n\t\t\telse {\n\t\t\t\tif( $hf ) {\n\t\t\t\t\tprint $hf $input;\n\t\t\t\t\t$cl += length( $input );\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\t&_add_param( $name, $input, 1 );\n\t\t\t\t}\n\t\t\t\t$input = '';\n\t\t\t}\n\t\t}\n\t}\n\treturn 1;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/CGI/Request.pm",
+      "package" : "PAB3::CGI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _parse_request {\n\tmy( $len, $meth, $got, $input, $post, $jmp );\n\t\n\t%_GET = ();\n\t%_POST = ();\n\t%_REQUEST = ();\n\t%_FILES = ();\n\t\n\tbinmode( STDIN ); \n\tbinmode( STDOUT );\n\tbinmode( STDERR );\n\n\t$len  = $ENV{'CONTENT_LENGTH'};\n\t$meth = $ENV{'REQUEST_METHOD'};\n\t\n\tif( $len && $RequestMaxData && $len > $RequestMaxData ) {\n\t\t&Carp::croak(\n\t\t\t\"CGI Error: Request to receive too much data: $len bytes\"\n\t\t);\n\t}\n\n\tmy( @tb, $i, $iv, $key, $val );\n\t@tb = ();\n\tif( ! $meth ) {\n\t\tpush @tb, @ARGV;\n\t}\n\telse {\n\t\tpush @tb, split( /[&;]/, $ENV{'QUERY_STRING'} || '' );\n\t\tif( $meth eq 'POST' ) {\n\t\t\t$jmp = 'parse_post';\n\t\t\tgoto parse_std;\nparse_post:\n\t\t\t$jmp = undef;\n\t\t\t$post = 1;\n\t\t\tread( STDIN, $input, $len );\n\t\t\tpush @tb, split( /[&;]/, $input );\n\t\t}\n\t}\nparse_std:\n\tfor $i( 0 .. $#tb ) {\n\t\t$iv = index( $tb[$i], '=' );\n\t\tif( $iv > 0 ) {\n\t\t\t$key = substr( $tb[$i], 0, $iv );\n\t\t\t$val = substr( $tb[$i], $iv + 1 );\n\t\t\t$key =~ tr/+/ /;\n\t\t\t$key =~ s/%([0-9a-fA-F]{2})/chr(hex($1))/ge;\n\t\t\tif( $val ) {\n\t\t\t\t$val =~ tr/+/ /;\n\t\t\t\t$val =~ s/%([0-9a-fA-F]{2})/chr(hex($1))/ge;\n\t\t\t}\n\t\t\tif( $post ) {\n\t\t\t\t&_create_param( $key, $val, 1 );\n\t\t\t}\n\t\t\telse {\n\t\t\t\t&_create_param( $key, $val, 0 );\n\t\t\t}\n\t\t}\n\t\telse {\n\t\t\t$tb[$i] =~ tr/+/ /;\n\t\t\t$tb[$i] =~ s/%([0-9a-fA-F]{2})/chr(hex($1))/ge;\n\t\t\tif( $post ) {\n\t\t\t\t&_create_param( $tb[$i], '', 1 );\n\t\t\t}\n\t\t\telse {\n\t\t\t\t&_create_param( $tb[$i], '', 0 );\n\t\t\t}\n\t\t}\n\t}\n\tgoto $jmp if $jmp;\n\treturn 1;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/CGI/RequestStd.pm",
+      "package" : "PAB3::CGI"
+   },
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "BEGIN {\n\t*fetchall_arrayref = \\&PAB3::DB::fetchall_arrayref;\n\t*fetchall_hashref = \\&PAB3::DB::fetchall_hashref;\n\t*fetchrow_arrayref = \\&PAB3::DB::fetchrow_arrayref;\n\t*fetchrow_hashref = \\&PAB3::DB::fetchrow_hashref;\n\t*fetchrow_array = \\&PAB3::DB::fetch_row;\n\t*fetchrow_hash = \\&PAB3::DB::fetch_hash;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/DB/Max.pm",
+      "package" : "PAB3::DB::Max"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _format_sql {\n\tmy $this = shift;\n\tmy( $ida, $db, $res, @fs, $step, $lp, $i );\n\t$ida = $this->{'__I#D#A__'};\n\t$db = $ida->[$IDA_DB];\n\t@fs = split( //, $_[0] );\n\t$res = '';\n\t$step = 0;\n\tfor $i( 0 .. $#fs ) {\n\t\tif( $step == 0 ) {\n\t\t\tif( $fs[$i] eq '\\'' ) {\n\t\t\t\t$step = 1;\n\t\t\t}\n\t\t\telsif( $fs[$i] eq '[' ) {\n\t\t\t\t$lp = $i + 1;\n\t\t\t\t$step = 2;\n\t\t\t\tnext;\n\t\t\t}\n\t\t\t$res .= $fs[$i];\n\t\t}\n\t\telsif( $step == 1 ) {\n\t\t\tif( $fs[$i] eq '\\'' ) {\n\t\t\t\tif( $fs[$i + 1] eq '\\'' ) {\n\t\t\t\t\t$res .= '\\'\\'';\n\t\t\t\t\t$i ++;\n\t\t\t\t\tnext;\n\t\t\t\t}\n\t\t\t\telsif( $fs[$i - 1] eq '\\\\' ) {\n\t\t\t\t\t$res .= '\\'';\n\t\t\t\t\tnext;\n\t\t\t\t}\n\t\t\t\telse {\n\t\t\t\t\t$step = 0;\n\t\t\t\t}\n\t\t\t}\n\t\t\t$res .= $fs[$i];\n\t\t}\n\t\telsif( $step == 2 ) {\n\t\t\tif( $fs[$i] eq ']' ) {\n\t\t\t\t$res .= $db->quote_id( substr( $_[0], $lp, $i - $lp ) );\n\t\t\t\t$step = 0;\n\t\t\t\tnext;\n\t\t\t}\n\t\t}\n\t}\n\treturn $res;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/DB/DataSet.pm",
+      "package" : "PAB3::DB::DataSet"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub handler : method {\n    my $class = ( @_ >= 2 ) ? shift : __PACKAGE__;\n    my $r = shift;\n\n\tif( ! $PAB3::Statistic::VERSION &&\n\t\t$r->dir_config->get( 'UseStatistic' )\n\t) {\n\t\trequire PAB3::Statistic;\n\t}\n\n\t&PAB3::CGI::setenv();\n\t\n\t&PAB3::CGI::init();\n\t\n\t$ENV{'GATEWAY_INTERFACE'} = 'CGI-ModPerl-PAB3';\n\t\n\tmy $filename = $r->filename();\n\n\tmy $package = $r->dir_config->get( 'Package' );\n\tif( ! $package ) {\n\t\t$package = __PACKAGE__ . '_' . $filename;\n\t\t$package =~ s/\\W/_/go;\n\t}\n\t\n\tmy $code = <<EOT1;\n\n\tif( -r $filename ) {\n\t\t&PAB3::require_and_run( $filename, $package, $code, [ $r ] );\n\t\t$r->print( '' );\n\t}\n\telse {\n\t\treturn 410;\n\t}\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/ModPerl/Registry.pm",
+      "package" : "PAB3::ModPerl::Registry"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub WRITE {\n\tmy $self = shift;\n\t&SENDHEADER();\n\twrite @_;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/lib/PAB3/Output/CGI.pm",
+      "package" : "PAB3::Output::CGI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _warn_handler {\n\tmy $str = shift;\n\tprint \"\\nWarning: $str\\n\";\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/xs/PAB3/PAB3.pm",
+      "package" : "PAB3"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_thread_id {\n\tif( ref( $_[0]->[0] ) eq __PACKAGE__ ) {\n\t\treturn ${shift @{$_[0]}};\n\t}\n\tdefined $TID or $TID = &_get_current_thread_id();\n\treturn $TID;\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/xs/PAB3/Utils/Utils.pm",
+      "package" : "PAB3::Utils"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n\tmy $pkg = shift;\n\tmy $callpkg = caller();\n\tif( $_[0] and $pkg eq __PACKAGE__ and $_[0] eq 'import' ) {\n\t\t*{$callpkg . '::import'} = \\&import;\n\t\treturn;\n\t}\n\tforeach( @_ ) {\n\t\tif( $_ eq ':default' ) {\n\t\t\t*{$callpkg . '::xor_' . $_} = \\&{$pkg . '::' . $_} foreach @EXPORT_FNC;\n\t\t\tlast;\n\t\t}\n\t}\n}",
+      "file" : "/var/tmp/arv_WJAQwp/PAB3-3.201/xs/PAB3/Crypt/XOR/XOR.pm",
+      "package" : "PAB3::Crypt::XOR"
+   }
+]

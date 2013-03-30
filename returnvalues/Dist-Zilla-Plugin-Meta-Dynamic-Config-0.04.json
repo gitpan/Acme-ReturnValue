@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[I am an object in motion]",
+      "file" : "/var/tmp/arv_lQgJIF/Dist-Zilla-Plugin-Meta-Dynamic-Config-0.04/lib/Dist/Zilla/Plugin/Meta/Dynamic/Config.pm",
+      "package" : "Dist::Zilla::Plugin::Meta::Dynamic::Config"
+   }
+]

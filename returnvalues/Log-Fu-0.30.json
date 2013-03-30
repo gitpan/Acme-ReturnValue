@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "push @EXPORT, 'fu_term_is_ansi'",
+      "file" : "/var/tmp/arv_pD13SF/Log-Fu-0.30/lib/Log/Fu/Common.pm",
+      "package" : "Log::Fu::Common"
+   }
+]

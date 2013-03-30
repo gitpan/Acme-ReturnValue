@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "END\n{\n    Win32::Daemon::StopService() if $$ > 0;\n}",
+      "file" : "/var/tmp/arv_pjSdNv/Win32-Daemon-20110117/Daemon.pm",
+      "package" : "Win32::Daemon"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub LogStart\n{\n\tmy( $self ) = @_;\n\treturn if( scalar @{$self->{log_filehandle_list}} );\n\t\n\tif( 0 == scalar @{$self->{log_path_list}} )\n\t{\n\t\tpush( @{$self->{log_path_list}}, @{$self->{default}->{log_path_list}} );\n\t}\n\t\n\tforeach my $Path ( @{$self->{log_path_list}} )\n\t{\n\t\t$self->_LogConnect( $Path );\n\t}\n}",
+      "file" : "/var/tmp/arv_pjSdNv/Win32-Daemon-20110117/test/TestFramework.pm",
+      "package" : "TestFramework"
+   }
+]

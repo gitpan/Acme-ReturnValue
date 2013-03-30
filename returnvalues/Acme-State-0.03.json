@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "END {\n    STDERR->print(\"Acme::State:  Saving program state!\\n\\n\");\n    save_state();\n}",
+      "file" : "/var/tmp/arv_4DdA9F/Acme-State-0.03/lib/Acme/State.pm",
+      "package" : "Acme::State"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n    %$reserved_section_names = map {\n        ($_, 1);\n    } keys(%Test::Base::Block::), qw( new DESTROY );\n}",
+      "file" : "/var/tmp/arv_EqqRe3/Test-Base-0.60/lib/Test/Base.pm",
+      "package" : "Test::Base"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _write_to {\n    my $filename = shift;\n    open my $script, \">$filename\"\n      or die \"Couldn't open $filename: $!\\n\";\n    print $script @_;\n    close $script\n      or die \"Couldn't close $filename: $!\\n\";\n}",
+      "file" : "/var/tmp/arv_EqqRe3/Test-Base-0.60/lib/Test/Base/Filter.pm",
+      "package" : "Test::Base::Filter"
+   }
+]

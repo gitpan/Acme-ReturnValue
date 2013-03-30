@@ -1,0 +1,50 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/iTunes.pm",
+      "package" : "Mac::iTunes"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/AppleScript.pm",
+      "package" : "Mac::iTunes::AppleScript"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/Plist.pm",
+      "package" : "Mac::iTunes::Library::Plist"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/Item.pm",
+      "package" : "Mac::iTunes::Item"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/Preferences.pm",
+      "package" : "Mac::iTunes::Preferences"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/Parse.pm",
+      "package" : "Mac::iTunes::Library::Parse"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/Write.pm",
+      "package" : "Mac::iTunes::Library::Write"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"See why 1984 won't be like 1984\"",
+      "file" : "/var/tmp/arv_pFCtVF/Mac-iTunes-1.22/lib/Playlist.pm",
+      "package" : "Mac::iTunes::Playlist"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n    shift;\n\n    if (@_) {\n        goto &Test::More::pass if $_[0] eq 'ok';\n        goto &Test::More::use_ok;\n    }\n\n    my (undef, $file, $line) = caller();\n    ($file =~ /^\\(eval/) or die \"Not enough arguments for 'use ok' at $file line $line\\n\";\n}",
+      "file" : "/var/tmp/arv_HQvdag/Test-use-ok-0.11/lib/ok.pm",
+      "package" : "ok"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Test::use::ok::VERSION = '0.11'",
+      "file" : "/var/tmp/arv_HQvdag/Test-use-ok-0.11/lib/Test/use/ok.pm",
+      "package" : "Test::use::ok"
+   }
+]

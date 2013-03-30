@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub end_log {\n    my $s = shift;\n    my ($ar) = @_;\n\n    my %b   = %{${$ar}{fld}}; \n    my $f   = \"%a %b %e %H:%M:%S %Y\"; \n    my $fh1 = ${$ar}{fh_brf}; \n    my $fh2 = ${$ar}{fh_dtl}; \n    my $cns = ${$ar}{cns}; \n\n    $b{end_time}     = time;\n    $b{elapsed_time} = $b{end_time} - $b{start_time};\n    $b{start_time}   = strftime $f, localtime($b{start_time});\n    $b{end_time}     = strftime $f, localtime($b{end_time});\n    $b{result}       = 'OK'; \n  \n    my ($txt) = (\"\");\n    foreach my $k (split /,/, $cns) { $txt .= \"$b{$k}|\"; }\n    $txt =~ s/\\|$//; \n\n    $self->disp_param(\\%b); \n    print $fh1 $txt;  \n    print $fh2 \"# End at $b{end_time} $b{result}\\n\"; \n    undef $fh1;   \n    undef $fh2;   \n}",
+      "file" : "/var/tmp/arv_we7j7S/Debug-EchoMessage-1.03/EchoMessage.pm",
+      "package" : "Debug::EchoMessage"
+   }
+]

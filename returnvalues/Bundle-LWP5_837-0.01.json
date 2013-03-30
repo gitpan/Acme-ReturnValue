@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION='0.01'",
+      "file" : "/var/tmp/arv_30x3ym/Bundle-LWP5_837-0.01/lib/Bundle/LWP5_837.pm",
+      "package" : "Bundle::LWP5_837"
+   }
+]

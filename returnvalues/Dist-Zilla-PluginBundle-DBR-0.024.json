@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "class Dist::Zilla::PluginBundle::DBR with Dist::Zilla::Role::PluginBundle::Easy {\n    use Dist::Zilla::PluginBundle::Filter;\n\n    method configure {\n\n        $self->add_bundle(\n            Filter => {\n                -bundle => '@Classic',\n                -remove => [qw/MakeMaker PkgVersion PodVersion Readme/],\n            }\n        );\n\n        $self->add_plugins(\n            'ConfirmRelease',\n            'EOLTests',\n            'MetaJSON',\n            'ModuleBuild',\n            'NoTabsTests',\n            'ReadmeFromPod',\n            'TestRelease',\n            'AutoPrereqs',\n            'Test::ReportPrereqs',\n            'Test::Portability',\n            'Test::Kwalitee',\n            'Test::CheckDeps',\n        );\n    }\n}",
+      "file" : "/var/tmp/arv_SXycZD/Dist-Zilla-PluginBundle-DBR-0.024/lib/Dist/Zilla/PluginBundle/DBR.pm",
+      "package" : "Dist::Zilla::PluginBundle::DBR"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "FILTER {\n\n    my ($class, $qualifier ) = map { lc($_) } @_;\n\n    $QUALIFIER = $qualifier || \"my\";\n\n    $perl = '';\n    %declared_var = ();\n    $parser->php_vars( $_ );\n    print STDERR \"\\n\\nGENERATED PERL:\\n\\n\", $perl, \"\\n\\n\"\n\tif $PHP::Include::DEBUG;\n    $_ = $perl;\n}",
+      "file" : "/var/tmp/arv_Ux9oJe/PHP-Include-0.36/lib/PHP/Include/Vars.pm",
+      "package" : "PHP::Include::Vars"
+   }
+]

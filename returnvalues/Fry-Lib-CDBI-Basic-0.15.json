@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub print_tags {\n\t\tmy ($class,@sortedtags) = @_;\n\t\tmy $result;\n\t\tfor (@sortedtags) { $result .= \"$_->{count}: $_->{name}\\n\";}\n\t\t$class->view($result);\n\t}",
+      "file" : "/var/tmp/arv_CxFzZ5/Fry-Lib-CDBI-Basic-0.15/lib/Fry/Lib/CDBI/Tags.pm",
+      "package" : "Fry::Lib::CDBI::Tags"
+   }
+]

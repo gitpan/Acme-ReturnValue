@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.28'",
+      "file" : "/var/tmp/arv_NapzSG/Task-Kensho-Toolchain-0.28/lib/Task/Kensho/Toolchain.pm",
+      "package" : "Task::Kensho::Toolchain"
+   }
+]

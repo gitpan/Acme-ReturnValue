@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run {\n    my $self = shift;\n    my @arguments = @_;\n\n    my ( $help, $type );\n    $type = 'slash-star';\n    {\n        local @ARGV = @arguments;\n        GetOptions(\n            'type=s' => \\$type,\n            'help|h|?' => \\$help,\n        );\n\n    }\n\n    usage 0 if $help;\n\n    my $canonical_type = $type{$type} or usage \"Invalid type \\\"$type\\\" (@types)\";\n\n    my $source = join '', <STDIN>;\n\n    eval {\n        require Doc::Simply;\n        require Doc::Simply::Extractor;\n        require Doc::Simply::Assembler;\n        require Doc::Simply::Parser;\n        require Doc::Simply::Render::HTML;\n\n        my $extractor = Doc::Simply::Extractor::SlashStar->new;\n        my $comments = $extractor->extract( $source );\n\n        my $assembler = Doc::Simply::Assembler->new;\n        my $blocks = $assembler->assemble( $comments );\n\n        my $parser = Doc::Simply::Parser->new;\n        my $document = $parser->parse( $blocks );\n\n        my $formatter = Doc::Simply::Render::HTML->new;\n        my $render = $formatter->render( document => $document );\n\n        print $render;\n    } or\n    die $@;\n}",
+      "file" : "/var/tmp/arv_mInpqJ/Doc-Simply-0.032/lib/Doc/Simply/App.pm",
+      "package" : "Doc::Simply::App"
+   }
+]

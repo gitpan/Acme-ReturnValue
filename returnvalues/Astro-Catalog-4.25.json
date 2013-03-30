@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _read_catalog {\n  my $class = shift;\n  my $lines = shift;\n\n  my @lines = @$lines;\n\n  shift(@lines);\n\n  my @stars;\n\n  my $currid = 0;\n\n  while (scalar(@lines) >= 2) {\n    my $tstamp   = shift(@lines);\n    my $pickline = shift(@lines);\n\n    next unless defined $tstamp;\n    next unless defined $pickline;\n    next unless $pickline =~ /\\d/;\n    next unless $tstamp =~ /\\d/;\n\n\n    my @chunks = split(/\\s+/,$pickline);\n\n\n    $currid ++;\n\n    my $c = new Astro::Coords( name => $currid,\n\t\t\t       ra => $chunks[RA],\n\t\t\t       dec => $chunks[DEC],\n\t\t\t       type => $chunks[EQUINOX],\n\t\t\t       units => 'sex',\n\t\t\t     );\n\n    my $star = new Astro::Catalog::Star( ID => $currid,\n\t\t\t\t\t Field => $chunks[0],\n\t\t\t\t\t Coords => $c,\n\t\t\t\t\t X => $chunks[XPIX],\n\t\t\t\t\t Y => $chunks[YPIX],\n\t\t\t\t       );\n\n    push(@stars, $star);\n  }\n\n  my $cat = new Astro::Catalog( Stars => \\@stars,\n\t\t\t\tOrigin => 'GaiaPick',\n\t\t\t      );\n\n}",
+      "file" : "/var/tmp/arv_1mLqsI/Astro-Catalog-4.25/lib/Astro/Catalog/IO/GaiaPick.pm",
+      "package" : "Astro::Catalog::IO::GaiaPick"
+   }
+]

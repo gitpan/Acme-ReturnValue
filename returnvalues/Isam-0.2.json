@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$kd_prenom_nom->k_part( 1, [  0, 21, &CHARTYPE ] )",
+      "file" : "/var/tmp/arv_JzYBZh/Isam-0.2/eg/Person.pm",
+      "package" : "Person"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub FIELDS { $FIELDS }",
+      "file" : "/var/tmp/arv_JzYBZh/Isam-0.2/eg/Salaire.pm",
+      "package" : "Salaire"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub umlautify {\n  our %map;\n  my @out = map { join '', map { $_=chr($map{$_}) if $map{$_}; $_ } split '', $_; } @_;\n  return wantarray ? @out : $out[0];\n}",
+      "file" : "/var/tmp/arv_Wcc9QC/Acme-Umlautify-1.01/lib/Acme/Umlautify.pm",
+      "package" : "Acme::Umlautify"
+   }
+]

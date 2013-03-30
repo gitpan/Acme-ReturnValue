@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[patchin']",
+      "file" : "/var/tmp/arv_C6VRqr/Devel-PatchPerl-0.84/lib/Devel/PatchPerl.pm",
+      "package" : "Devel::PatchPerl"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Plug it in]",
+      "file" : "/var/tmp/arv_C6VRqr/Devel-PatchPerl-0.84/lib/Devel/PatchPerl/Plugin.pm",
+      "package" : "Devel::PatchPerl::Plugin"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq'nudge nudge wink wink'",
+      "file" : "/var/tmp/arv_C6VRqr/Devel-PatchPerl-0.84/lib/Devel/PatchPerl/Hints.pm",
+      "package" : "Devel::PatchPerl::Hints"
+   }
+]

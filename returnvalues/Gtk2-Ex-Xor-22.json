@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _do_expose {\n  my ($widget, $event, $ref_weak_self) = @_;\n  if (my $self = $$ref_weak_self) {\n    if ($self->{'drawn'}) {\n      $self->signal_emit ('draw', $self, $event->region);\n    }\n  }\n  return 0; \n}",
+      "file" : "/var/tmp/arv_XiMjCg/Gtk2-Ex-Xor-22/devel/Xor-class.pm",
+      "package" : "Gtk2::Ex::Xor"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub openFile {\n    my($file) = shift;\n    my($METHOD) = \"Apache::ParseLog::openFile\";\n    local(*FH);\n    open(FH, \"<$file\") or croak \"$METHOD: Cannot open $file. Exiting \";\n    return *FH;\n}",
+      "file" : "/var/tmp/arv_rHvx2q/Apache-ParseLog-1.02/ParseLog.pm",
+      "package" : "Apache::ParseLog"
+   }
+]

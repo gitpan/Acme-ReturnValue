@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1 && q{a set in time saves nine}",
+      "file" : "/var/tmp/arv_UE9r1l/Set-CartesianProduct-Lazy-0.002/lib/Set/CartesianProduct/Lazy.pm",
+      "package" : "Set::CartesianProduct::Lazy"
+   }
+]

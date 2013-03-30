@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use Inline C => <<'END_OF_C_CODE', NAME => 'Bio::SDRS::FastSSE'",
+      "file" : "/var/tmp/arv_X9iaLb/Bio-SDRS-0.08/lib/Bio/SDRS.pm",
+      "package" : "Bio::SDRS"
+   }
+]

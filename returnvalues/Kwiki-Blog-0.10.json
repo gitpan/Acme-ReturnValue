@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Blog",
+      "file" : "/var/tmp/arv_aFqsM5/Kwiki-Blog-0.10/lib/Kwiki/Blog.pm",
+      "package" : "Kwiki::Blog"
+   }
+]

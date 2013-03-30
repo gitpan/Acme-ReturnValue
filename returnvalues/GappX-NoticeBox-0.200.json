@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "build 'GappX::NoticeBox', sub {\n    my ( $l, $w ) = @_;\n\n    my $gtkw = $w->gobject;\n    $gtkw->set_keep_above( 1 );\n}",
+      "file" : "/var/tmp/arv_30HJUS/GappX-NoticeBox-0.200/lib/GappX/NoticeBox.pm",
+      "package" : "GappX::NoticeBox"
+   }
+]

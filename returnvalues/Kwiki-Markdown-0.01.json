@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub text_to_html {\n    my $self = shift;\n    return markdown(shift);\n}",
+      "file" : "/var/tmp/arv_c6yPbP/Kwiki-Markdown-0.01/lib/Kwiki/Markdown.pm",
+      "package" : "Kwiki::Markdown"
+   }
+]

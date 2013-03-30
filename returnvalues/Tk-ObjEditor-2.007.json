@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Show\n  {\n    my $cw=shift;\n\n    my $hit = $cw->SUPER::Show(@_);\n    \n    if ($hit eq 'OK')\n      {\n        return $cw->Subwidget(\"objeditor\")->get_data();\n      }\n    else\n      {\n        return $cw->Subwidget(\"objeditor\")->get_orig_data();\n      }\n  }",
+      "file" : "/var/tmp/arv_XIAdzw/Tk-ObjEditor-2.007/ObjEditorDialog.pm",
+      "package" : "Tk::ObjEditorDialog"
+   }
+]

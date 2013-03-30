@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $xml_space = bless \\@ISA",
+      "file" : "/var/tmp/arv_21UOFa/makepp-2.0.98.2/Mpp/Signature/xml_space.pm",
+      "package" : "Mpp::Signature::xml_space"
+   }
+]

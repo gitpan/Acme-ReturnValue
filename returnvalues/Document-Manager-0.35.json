@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub comment {\n    my $self = shift;\n    my $cid = shift;\n    my $comment = shift;\n\n    if (! defined $self->{'_repository'}) {\n\t$self->set_error(\"Repository not defined in log()\\n\");\n\treturn undef;\n    }\n\n    if (! $self->{_doc_id}) {\n\t$self->set_error(\"document id not defined in content()\\n\");\n\treturn undef;\n    }\n\n    if (defined $cid) {\n\tif (defined $comment) {\n\t    return $self->{'_repository'}->update(\"COMMENTS/$cid\",\n\t\t\t\t\t\t  $self->{'_doc_id'},\n\t\t\t\t\t\t  $comment\n\t\t\t\t\t\t  );\n\t} else {\n\t    return $self->{'_repository'}->content(\"CHANGELOG/$cid\",\n\t\t\t\t\t\t   $self->{'_doc_id'});\n\t}\n    } else {\n\tif (defined $comment) {\n\t    return $self->{'_repository'}->update(\"COMMENTS/001\",\n\t\t\t\t\t\t  $self->{'_doc_id'},\n\t\t\t\t\t\t  $comment\n\t\t\t\t\t\t  );\n\t} else {\n\t    my %comments;\n\t    foreach my $file ($self->{'_repository'}->content(\"CHANGELOG/\",\n\t\t\t\t\t\t\t      $self->{'_doc_id'})) {\n\t\t$comments{$file} = $self->{'_repository'}->content(\"CHANGELOG/$file\",\n\t\t\t\t\t\t\t      $self->{'_doc_id'});\n\t    }\n\t    return \\%comments;\n\t}\n    }\n    \n    return undef;\n}",
+      "file" : "/var/tmp/arv_ju5i0C/Document-Manager-0.35/lib/Document/Object.pm",
+      "package" : "Document::Object"
+   }
+]

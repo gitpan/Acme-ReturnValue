@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub usd { currency_format('USD', $_[0], FMT_SYMBOL) }",
+      "file" : "/var/tmp/arv_jSJYh8/Finance-Bank-US-ShareBuilder-0.01/lib/Finance/Bank/US/ShareBuilder.pm",
+      "package" : "Finance::Bank::US::ShareBuilder"
+   }
+]

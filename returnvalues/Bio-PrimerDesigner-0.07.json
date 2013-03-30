@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Bio::PrimerDesigner::Config = {\n%s\n}",
+      "file" : "/var/tmp/arv_M5tTvk/Bio-PrimerDesigner-0.07/templates/Config.pm",
+      "package" : "Bio::PrimerDesigner::Config"
+   }
+]

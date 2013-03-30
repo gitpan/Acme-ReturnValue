@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _include {\n\n    open( my $handle,\"<:via(Include)\",$_[0] )\n     or return \"*** Could not open '$_[0]': $! ***\";\n\n    my $contents= '';\n    local($_);\n    $contents .= $_ while readline( $handle );\n\n    return $contents;\n}",
+      "file" : "/var/tmp/arv_qR5uqt/PerlIO-via-Include-0.04/lib/PerlIO/via/Include.pm",
+      "package" : "PerlIO::via::Include"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register {\n    my $register = shift;\n    $register->add(preload => 'theme', priority => 1);\n}",
+      "file" : "/var/tmp/arv_ZiAtjd/Kwiki-Theme-JustContent-0.10/lib/Kwiki/Theme/JustContent.pm",
+      "package" : "Kwiki::Theme::JustContent"
+   }
+]

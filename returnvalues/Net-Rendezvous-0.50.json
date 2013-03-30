@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub shift_entry {\n\tmy $self = shift;\n\treturn shift(@{$self->{'_results'}});\n}",
+      "file" : "/var/tmp/arv_NykWg1/Net-Rendezvous-0.5/lib/Net/Rendezvous.pm",
+      "package" : "Net::Rendezvous"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n\tmy $self = shift;\n\tmy $key = $AUTOLOAD;\n\t$key =~ s/^.*:://;\n\t$key = '_' . $key;\n\tif ( @_ ) {\n\t\t$self->{$key} = shift;\n\t}\n\treturn $self->{$key};\n}",
+      "file" : "/var/tmp/arv_NykWg1/Net-Rendezvous-0.5/lib/Net/Rendezvous/Entry.pm",
+      "package" : "Net::Rendezvous::Entry"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n\tmy $self = shift;\n\tmy $key = $AUTOLOAD;\n\t$key =~ s/^.*:://;\n\t$key = '_' . $key;\n\tif ( @_ ) {\n\t\t$self->{$key} = shift;\n\t}\n\treturn $self->{$key};\n}",
+      "file" : "/var/tmp/arv_NykWg1/Net-Rendezvous-0.5/lib/Net/Rendezvous/RR.pm",
+      "package" : "Net::Rendezvous::RR"
+   }
+]

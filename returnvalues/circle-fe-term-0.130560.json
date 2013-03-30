@@ -1,0 +1,44 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term.pm",
+      "package" : "Circle::FE::Term"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term/Tab.pm",
+      "package" : "Circle::FE::Term::Tab"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term/Ribbon.pm",
+      "package" : "Circle::FE::Term::Ribbon"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term/Widget/Scroller.pm",
+      "package" : "Circle::FE::Term::Widget::Scroller"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term/Widget/Label.pm",
+      "package" : "Circle::FE::Term::Widget::Label"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term/Widget/Entry.pm",
+      "package" : "Circle::FE::Term::Widget::Entry"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_zHhc2f/circle-fe-term-0.130560/lib/Circle/FE/Term/Widget/Box.pm",
+      "package" : "Circle::FE::Term::Widget::Box"
+   }
+]

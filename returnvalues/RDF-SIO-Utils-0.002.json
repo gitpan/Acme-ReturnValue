@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use constant RDF_TYPE => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'",
+      "file" : "/var/tmp/arv_rnp9GJ/RDF-SIO-Utils-0.002/lib/RDF/SIO/Utils/Constants.pm",
+      "package" : "RDF::SIO::Utils::Constants"
+   }
+]

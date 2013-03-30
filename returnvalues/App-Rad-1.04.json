@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VZbRjR/App-Rad-1.04/lib/App/Rad.pm",
+      "package" : "App::Rad"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VZbRjR/App-Rad-1.04/lib/App/Rad/Exclude.pm",
+      "package" : "App::Rad::Exclude"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VZbRjR/App-Rad-1.04/lib/App/Rad/Include.pm",
+      "package" : "App::Rad::Include"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VZbRjR/App-Rad-1.04/lib/App/Rad/Help.pm",
+      "package" : "App::Rad::Help"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_VZbRjR/App-Rad-1.04/lib/App/Rad/Config.pm",
+      "package" : "App::Rad::Config"
+   }
+]

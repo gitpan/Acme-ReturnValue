@@ -1,0 +1,50 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Clause.pm",
+      "package" : "LittleORM::Model"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Model.pm",
+      "package" : "LittleORM::Model"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Db.pm",
+      "package" : "LittleORM::Db"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/GenericID.pm",
+      "package" : "LittleORM::GenericID"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Filter.pm",
+      "package" : "LittleORM::Model"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Db/Field.pm",
+      "package" : "LittleORM::Db::Field"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Db/Field/Default.pm",
+      "package" : "LittleORM::Db::Field::Default"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_LAcTa0/LittleORM-0.06/lib/LittleORM/Db/Field/XML.pm",
+      "package" : "LittleORM::Db::Field::XML"
+   }
+]

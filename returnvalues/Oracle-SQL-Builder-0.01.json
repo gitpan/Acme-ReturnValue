@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run_sql {\n    my $s = shift;\n    my ($dbh,$sfn,$hmd) = @_;\n    return 1 if ! $dbh; \n    return 2 if ! $sfn; \n    return 3 if ! -f $sfn; \n    my ($q,$e,@a,$m,$cmd,$cns,$dbt); \n    my $ds = '/'; \n    if ($dbh =~ /([-\\w_]+)\\/(\\w+)\\@(\\w+)/) {\n        $dbt = 'Oracle'; \n        $cns = $dbh; \n    } elsif ($dbh =~ /^(DBI::db)/i) {    \n        $cns = $1; \n        $dbt = $dbh->{Driver}->{Name}; \n    } elsif ($dbh =~ /^(Win32::ODBC)/i) { \n        $cns = $1; \n        $dbt = 'ODBC'; \n    } else {\n        $dbt = 'CSV';\n        $cns = ''; \n    }\n    if ($dbt =~ /^oracle/i) {\n        $hmd = $ENV{ORACLE_HOME} if ! $hmd && exists $ENV{ORACLE_HOME}; \n        $cmd = join $ds, $hmd, \"bin\", \"sqlplus\";\n        $cmd .= \" $cns \\@$sfn \";\n        $m=$cmd;\n        $m =~ s{(\\w+)/(\\w+)\\@}{$1/\\*\\*\\*\\@};\n        $m =~ s{( \\@)}{\\n        $1}g;\n        $s->echoMSG(\"    CMD: $m\\n\",2);\n        open CMD, \"$cmd |\" or croak \"Could not run sqlplus: $!\\n\";\n        @a = <CMD>;\n        close CMD;\n        $s->echoMSG(\"@a\", 5); \n    } else {\n    }\n    return 0;\n}",
+      "file" : "/var/tmp/arv_ZtgfN0/Oracle-SQL-Builder-0.01/Builder.pm",
+      "package" : "Oracle::SQL::Builder"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub method2($$) {\n\tmy($self, $message) = @_;\n\tprint \"$message!\\n\";\n\treturn 2;\n}",
+      "file" : "/var/tmp/arv_jA3VNF/Devel-ModInfo-0.05/ex/MyModule.pm",
+      "package" : "MyModule"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub String2DataType {$data_types->{$_[0]} or undef;}",
+      "file" : "/var/tmp/arv_jA3VNF/Devel-ModInfo-0.05/ModInfo/DataType.pm",
+      "package" : "Devel::ModInfo::DataType"
+   }
+]

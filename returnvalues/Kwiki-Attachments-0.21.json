@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Attachments",
+      "file" : "/var/tmp/arv_OgNnd_/Kwiki-Attachments-0.21/lib/Kwiki/Attachments.pm",
+      "package" : "Kwiki::Attachments"
+   }
+]

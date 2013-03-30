@@ -1,0 +1,104 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web.pm",
+      "package" : "App::Netdisco::Web"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/TypeAhead.pm",
+      "package" : "App::Netdisco::Web::TypeAhead"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin.pm",
+      "package" : "App::Netdisco::Web::Plugin"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/AuthN.pm",
+      "package" : "App::Netdisco::Web::AuthN"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Search.pm",
+      "package" : "App::Netdisco::Web::Search"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/PortControl.pm",
+      "package" : "App::Netdisco::Web::PortControl"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Device.pm",
+      "package" : "App::Netdisco::Web::Device"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Inventory.pm",
+      "package" : "App::Netdisco::Web::Plugin::Inventory"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Device/Modules.pm",
+      "package" : "App::Netdisco::Web::Plugin::Device::Modules"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Device/Neighbors.pm",
+      "package" : "App::Netdisco::Web::Plugin::Device::Neighbors"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Device/Details.pm",
+      "package" : "App::Netdisco::Web::Plugin::Device::Details"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Device/Ports.pm",
+      "package" : "App::Netdisco::Web::Plugin::Device::Ports"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Device/Addresses.pm",
+      "package" : "App::Netdisco::Web::Plugin::Device::Addresses"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Search/VLAN.pm",
+      "package" : "App::Netdisco::Web::Plugin::Search::VLAN"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Search/Port.pm",
+      "package" : "App::Netdisco::Web::Plugin::Search::Port"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Search/Node.pm",
+      "package" : "App::Netdisco::Web::Plugin::Search::Node"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_05Tn3H/App-Netdisco-2.006000/lib/App/Netdisco/Web/Plugin/Search/Device.pm",
+      "package" : "App::Netdisco::Web::Plugin::Search::Device"
+   }
+]

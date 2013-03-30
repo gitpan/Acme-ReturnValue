@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _search\n{\n  my($file,@path) = @_ ;\n  my @matches ;\n  \n    for my $d (@path) {\n    $d = File::Spec->curdir unless $d;\n\n    my $testfile = File::Spec->catfile( $d, $file);\n\n    next unless -e $testfile ;\n\n    push(@matches, $testfile);\n\n    last unless wantarray();\n\n  }\n\n  if (wantarray) {\n    return @matches;\n  } else {\n    return $matches[0];\n  }\n}",
+      "file" : "/var/tmp/arv_Rw6Atr/Dir-Which-0.3/lib/Dir/Which.pm",
+      "package" : "Dir::Which"
+   }
+]

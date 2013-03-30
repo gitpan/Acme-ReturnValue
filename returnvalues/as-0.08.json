@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _import {\n\n    return if @_ < 3 or $_[-2] ne 'as';\n\n    _alias( $_[0], $_[-1] );\n\n    return;\n}",
+      "file" : "/var/tmp/arv_130T90/as-0.08/lib/as.pm",
+      "package" : "as"
+   }
+]

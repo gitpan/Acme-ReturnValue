@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub process_string {\n    my ($self, $content, $strip_whitespace, $base_dir) = @_;\n    \n    my $content_copy        = $content;\n    \n    pos $content = 0;\n    \n    while ($content =~ m!\n        ^(\n          \n            (\n            \n                ([\\t\\f ]*) /\\*tj  (.*?)  tj(?:file)?\\*/  \n            )\n            \n            (?:\\s+$GENERATED_QUOTED\\s+sources\\s:\\s'.*?'\\s*)?\n        )$\n    !msgx) {\n        \n        my $overall             = $1;\n        my $overall_quoted      = quotemeta $overall;\n        \n        my $whitespace          = $3;\n        my $directive           = $2;\n        my $template            = $4;\n        \n        my $is_from_file        = $template =~ m/^file\\(  (.+?)  \\)$/mx;\n        \n        if ($is_from_file) {\n            \n            my $from_file = file($1)->absolute( dir($base_dir) );\n            \n            $template = -e $from_file ? $from_file->slurp : \"File [$from_file] not found\";\n        } \n        \n        $template       =~ s/^\\s*(.*?)\\s*$/$1/mg if $strip_whitespace;\n        \n        $template       =~ s!\\\\!\\\\\\\\!g;\n        $template       =~ s!\\r?\\n!\\\\n!g;\n        $template       =~ s!'!\\\\'!g;\n        \n        $content_copy   =~ s!$overall_quoted!${directive}\\n\\n$whitespace$GENERATED\\n${whitespace}sources : '$template'!ms;\n    }\n   \n    return $content_copy;\n}",
+      "file" : "/var/tmp/arv_OYWwZS/Dist-Zilla-Plugin-JSAN-0.06/lib/Shotenjin/Embedder.pm",
+      "package" : "Shotenjin::Embedder"
+   }
+]

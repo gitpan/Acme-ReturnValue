@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mGen_codon2aa{\nmy ($seq,$start,%translate)=@_; my $res; $seq =~ s/\\r?\\n//g;\nif ($seq=~/^($start)/) {$res='M';} else {$res=$translate{substr($seq,0,3)};}\nfor (my $i=3;$i<length($seq);$i+=3) {$res.=$translate{substr($seq,$i,3)};}\nreturn $res;\n}",
+      "file" : "/var/tmp/arv_GL8Uji/mGen-1.03/mGen.pm",
+      "package" : "Bio::mGen"
+   }
+]

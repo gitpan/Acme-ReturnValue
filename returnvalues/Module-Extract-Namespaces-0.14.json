@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Foo::First",
+      "file" : "/var/tmp/arv_H3cJK1/Module-Extract-Namespaces-0.14/corpus/Duplicates.pm",
+      "package" : "Foo::First"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package\n\tFoo::Newline",
+      "file" : "/var/tmp/arv_H3cJK1/Module-Extract-Namespaces-0.14/corpus/DifferentLines.pm",
+      "package" : "Foo::Comment"
+   },
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Foo::Third",
+      "file" : "/var/tmp/arv_H3cJK1/Module-Extract-Namespaces-0.14/corpus/Multiple.pm",
+      "package" : "Foo::First"
+   }
+]

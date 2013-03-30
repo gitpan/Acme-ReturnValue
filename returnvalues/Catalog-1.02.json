@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = \"1.02\"\n\n1",
+      "file" : "/var/tmp/arv_6hk9yZ/Catalog-1.02/lib/Bundle/Catalog.pm",
+      "package" : "Bundle::Catalog"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub myunescapeHTML {\n    my($string) = @_;\n    return undef if(!defined($string));\n    $string =~ s[&(.*?);]{\n\tlocal $_ = $1;\n\t/^amp$/i\t? \"&\" :\n\t/^quot$/i\t? '\"' :\n        /^gt$/i\t\t? \">\" :\n\t/^lt$/i\t\t? \"<\" :\n\t/^#(\\d+)$/\t? chr($1) :\n\t/^#x([0-9a-f]+)$/i ? chr(hex($1)) :\n\t$_\n\t}gex;\n    return $string;\n}",
+      "file" : "/var/tmp/arv_6hk9yZ/Catalog-1.02/lib/Catalog/tools/cgi.pm",
+      "package" : "Catalog::tools::cgi"
+   }
+]

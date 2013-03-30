@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n\n    package Data::Dump::Streamer::_::ListPrinter;\n    $VERSION= \"0.1\";\n    my %items;\n    sub DESTROY { delete $items{$_[0]} }\n\n    sub new {\n        my $class = shift;\n        my $self = bless \\do { my $str = '' }, $class;\n        $items{$self} = [];\n        $self->print(@_);\n        return $self;\n    }\n\n    sub print {\n        my $self = $items{shift (@_)};\n        my $str = join ( '', @_ );\n        if (   !@$self\n            or $self->[-1] =~ /\\n/\n            or length( $self->[-1] ) > 4000 )\n        {\n            push @{$self}, $str;\n        } else {\n            $self->[-1] .= $str;\n        }\n    }\n    sub value { @{$items{$_[0]}} }\n    sub string { join ( '', @{$items{$_[0]}} ) }\n    1;\n}",
+      "file" : "/var/tmp/arv_EppJbq/Data-Dump-Streamer-2.34/lib/Data/Dump/Streamer/_/Printers.pm",
+      "package" : "Data::Dump::Streamer::_::StringPrinter"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dpdcheck {\n\tmy $paketnummer = shift;\n\tmy $language = shift || 'de';\n\n\tmy @newdata;\n\tmy $data = get(\"http://extranet.dpd.de/cgi-bin/delistrack?pknr=$paketnummer&typ=2&lang=$language\");\n\t$data =~ s/[\\n\\r]//g;\n\n\tmy($detail) = ($data =~ /<\\/form><\\/td><\\/tr><\\/table><\\/td><\\/tr><tr(.*?)<\\/div><br><div id=\"codeDescription\" >/);\n\twhile($detail =~ /<tr(.*?)<\\/tr>/ig){\n\t\tmy $detailone = $1;\n\n\t\tmy($datum) = ($detailone =~ /<td style=\"padding-left: 10px;\">(.*?)\\s*<\\/td>/);\n\t\t$datum =~ s/<br>//;\n\t\tmy($depot,$ort) = ($detailone =~ /style=\"text-decoration:none\"><b>([^<]*)<\\/b><\\/a><br>&nbsp;([^<]*)<\\/td>/);\n\t\tmy($daten,$land,$plz,$route) = ($detailone =~ /<br>([^<\\&]*)&nbsp;<\\/td><td style=\"padding-left: 10px;\">&nbsp;<br>(\\w*) &bull; (\\w*) &bull; (\\w*)<\\/td>/);\n\t\tmy($tour,$code) = ($detailone =~ /style=\"text-align:right; padding-left: 10px;padding-right: 10px;\">&nbsp;<br>(\\d*) <\\/td><td style=\"[^\"]*\"><br>(\\d*) <\\/td>/);\n\t\tmy %details;\n\t\t$details{'datum'} = $datum;\n\t\t$details{'depot'} = $depot;\n\t\t$details{'ort'} = $ort;\n\t\t$details{'daten'} = $daten;\n\t\t$details{'tour'} = $tour;\n\t\t$details{'code'} = $code;\n\t\t$details{'route'} = $route;\n\t\t$details{'plz'} = $plz;\n\t\t$details{'land'} = $land;\n\t\tpush(@newdata,\\%details)\n\t}\n\n\treturn(\\@newdata,({\n\t\t'shipnumber' => $paketnummer\n\t\t})\n\t);\n}",
+      "file" : "/var/tmp/arv_Q8hJnd/WWW-DPD-Detail/Detail.pm",
+      "package" : "WWW::DPD::Detail"
+   }
+]

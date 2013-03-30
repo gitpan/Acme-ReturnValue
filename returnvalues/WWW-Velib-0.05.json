@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'The Lusty Decadent Delights of Imperial Pompeii'",
+      "file" : "/var/tmp/arv_sFPl2N/WWW-Velib-0.05/Velib.pm",
+      "package" : "WWW::Velib"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'The Lusty Decadent Delights of Imperial Pompeii'",
+      "file" : "/var/tmp/arv_sFPl2N/WWW-Velib-0.05/lib/WWW/Velib/Map.pm",
+      "package" : "WWW::Velib::Map"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'The Lusty Decadent Delights of Imperial Pompeii'",
+      "file" : "/var/tmp/arv_sFPl2N/WWW-Velib-0.05/lib/WWW/Velib/Trip.pm",
+      "package" : "WWW::Velib::Trip"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'The Lusty Decadent Delights of Imperial Pompeii'",
+      "file" : "/var/tmp/arv_sFPl2N/WWW-Velib-0.05/lib/WWW/Velib/Station.pm",
+      "package" : "WWW::Velib::Station"
+   }
+]

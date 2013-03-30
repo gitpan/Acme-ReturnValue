@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub order_by_clause {\n    my ($self) = @_;\n    my $index = $self->index or return \"\";\n    \" ORDER BY \" . $index->order_by_operand($self);\n}",
+      "file" : "/var/tmp/arv_Lk1Ila/SQL-Entity-0.05/lib/SQL/Entity/Table.pm",
+      "package" : "SQL::Entity::Table"
+   }
+]

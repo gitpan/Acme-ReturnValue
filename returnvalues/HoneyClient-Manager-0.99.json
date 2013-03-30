@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub testConnect {\n\tmy $class = shift;\n\tmy $table = IPTables::IPv4::init('filter');\n\tmy $dnsport = getVar(name => \"dnsport\");\n\tmy $status;\n\n\t_set_ip_forwarding(0);\n\t_setAcceptPolicy();\n\t_flushChains();\n\t_createNat();\n\t_set_ip_forwarding(1);\n\n\treturn 1;\n\n}",
+      "file" : "/var/tmp/arv_Y7Pz3v/HoneyClient-Manager-0.99/lib/HoneyClient/Manager/FW.pm",
+      "package" : "HoneyClient::Manager::FW"
+   }
+]

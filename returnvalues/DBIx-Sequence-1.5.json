@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_CWgXuR/DBIx-Sequence-1.5/Sequence.pm",
+      "package" : "DBIx::Sequence"
+   }
+]

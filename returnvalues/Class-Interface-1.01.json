@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub runCar {\n  my ( $self ) = @_;\n  my $speed = $self->speed || 120;\n\n  return \"Look... I am flying over the german speeeeeedways @ $speed kmh\"\n}",
+      "file" : "/var/tmp/arv_wWlkcl/Class-Interface-1.01/test-lib/Car/BMW.pm",
+      "package" : "Car::BMW"
+   }
+]

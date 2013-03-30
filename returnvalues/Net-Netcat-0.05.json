@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*exec = \\&execute",
+      "file" : "/var/tmp/arv_OnfaGb/Net-Netcat-0.05/lib/Net/Netcat.pm",
+      "package" : "Net::Netcat"
+   }
+]

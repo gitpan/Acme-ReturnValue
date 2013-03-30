@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = eval $VERSION",
+      "file" : "/var/tmp/arv_yRGq09/WebService-Google-Language-0.14/lib/WebService/Google/Language.pm",
+      "package" : "WebService::Google::Language"
+   }
+]

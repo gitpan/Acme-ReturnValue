@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub bi_elsif {\n\treturn ($Psh::Builtins::If::last_success,undef) if $Psh::Builtins::If::last_success;\n\treturn Psh::Builtins::If::bi_if(@_);\n}",
+      "file" : "/var/tmp/arv_aB3Vuo/psh-1.8/lib/Psh/Builtins/Elsif.pm",
+      "package" : "Psh::Builtins::Elsif"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub bi_else {\n\tmy @words=@{$_[1]};\n\treturn ($Psh::Builtins::If::last_success,undef) if $Psh::Builtins::If::last_success;\n\treturn Psh::evl(Psh::Parser::ungroup(shift @words));\n}",
+      "file" : "/var/tmp/arv_aB3Vuo/psh-1.8/lib/Psh/Builtins/Else.pm",
+      "package" : "Psh::Builtins::Else"
+   }
+]

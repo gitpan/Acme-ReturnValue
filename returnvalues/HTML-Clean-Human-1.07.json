@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub headings2text {\n   my $html = shift;\n   my $change = $html;\n\n   HEADING: while( $html=~/<h(\\d)[^<>]*>([^<>]+)<\\/h\\1>/i ){\n      my($h,$text) = ($1,$2);\n      \n      my $text_altered;\n      if($h == 1 ){\n         $text_altered = uc($text);\n         $change=~s/<h$h[^<>]*>$text<\\/h$h>/\\n$text_altered\\n/sig;\n         next HEADING;\n      }\n      \n      else {\n         $text_altered = lc($text);\n         $text_altered=~tr/\\b[a-z]/[A-Z]/;\n         \n         $change=~s/<h$h[^<>]*>$text<\\/h$h>/\\n$text_altered\\n/sig;\n         next HEADING;\n\n      }\n      \n      \n      \n   }\n\n   return $change;\n   \n}",
+      "file" : "/var/tmp/arv_shKL09/HTML-Clean-Human-1.07/lib/HTML/Clean/Human.pm",
+      "package" : "HTML::Clean::Human"
+   }
+]

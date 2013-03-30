@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n\tmy $package = shift @_;\n\tmy $my = _new();\n\tmy ($arg,$value);\n\t\n\twhile (($arg, $value) = splice(@_, 0, 2)) {\n\t\t$my->$arg($value);\n\t}\n\t$my;\n}",
+      "file" : "/var/tmp/arv_Gn4KO0/Mac-Carbon-0.82/Processes/Processes.pm",
+      "package" : "Mac::Processes::_ProcessInfoMap"
+   }
+]

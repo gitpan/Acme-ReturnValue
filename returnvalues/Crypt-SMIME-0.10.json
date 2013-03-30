@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prepareSmimeMessage {\n\tmy $this = shift;\n\tmy $mime = shift;\n\n\t$mime =~ s/\\r?\\n|\\r/\\r\\n/g;\n\n\tmy $move = '';\n\tmy $rest = '';\n\tmy $is_move = 0;\n\tmy $is_rest = 1;\n\twhile($mime=~/(.*\\n?)/g) {\n\t\tmy $line = $1;\n\t\tif($line eq \"\\r\\n\") { \n\t\t\t$rest .= $line . substr($mime,pos($mime));\n\t\t\tlast;\n\t\t}\n\t\tif($line=~/^(Content-|MIME-)/i) {\n\t\t\t($is_move, $is_rest) = (0,1);\n\t\t} elsif( $line =~ /^(Subject:)/i ) {\n\t\t\t($is_move, $is_rest) = (1,1);\n\t\t} elsif( $line =~ /^\\S/ ) {\n\t\t\t($is_move, $is_rest) = (1,0);\n\t\t}\n\t\t$is_move and $move .= $line;\n\t\t$is_rest and $rest .= $line;\n\t}\n\t($rest,$move);\n}",
+      "file" : "/var/tmp/arv_JHUUNY/Crypt-SMIME-0.10/lib/SMIME.pm",
+      "package" : "Crypt::SMIME"
+   }
+]

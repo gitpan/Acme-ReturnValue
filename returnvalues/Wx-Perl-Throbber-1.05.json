@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _set_bitmap_size {\n    my $self = shift;\n    my ($bitmap, $framesWidth) = @_;\n\n    my ($width, $height) = $self -> GetSizeWH();\n    if ($width == -1) {\n        if (ref $bitmap && ref $bitmap eq 'ARRAY') {\n            $width = $bitmap -> [0] -> GetWidth;\n        } else {\n            $width = $framesWidth ? $framesWidth : $width\n        }\n    }\n    if ($height == -1) {\n        if (ref $bitmap && ref $bitmap eq 'ARRAY') {\n            $width = $bitmap -> [0] -> GetHeight;\n        } else {\n            $width = $bitmap -> GetHeight;\n        }\n    }\n    if ($width == -1 || $height == -1) {\n        croak \"Unable to determine size\";\n    }\n\n    $self -> {width}  = $width;\n    $self -> {height} = $height;\n}",
+      "file" : "/var/tmp/arv_uvDpmq/Wx-Perl-Throbber-1.05/lib/Wx/Perl/Throbber.pm",
+      "package" : "Wx::Perl::Throbber"
+   }
+]

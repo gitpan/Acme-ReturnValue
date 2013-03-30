@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encrypt {\n   my ($plaintext, $key, $options) = @_;\n\n   return ('', '', PGP_ERR_MISSING_KEY) if not defined $key or $key eq '';\n   return ('', '', PGP_ERR_MISSING_TEXT) if not defined $plaintext or $plaintext eq '';\n\n   my $pgp = '/usr/local/bin/pgp';\n\n   $ENV{'PGPPATH'} = '/.pgp';\n\n   my $ciphertext = '';\n   my $msg        = '';\n   my $error      = '';\n\n\n\n   $options = 'at' if not defined $options or $options eq '';\n\n   return ('', '', PGP_ERR_BAD_OPTIONS) if $options !~ /^[at]+$/;\n\n   $options = '-fe' . $options;\n\n   my $pid = open3 \\*WRITE, \\*READ, \\*ERROR, $pgp, $options, $key;\n\n   return ('', '', PGP_ERR_FAIL) if ! $pid;\n   \n   print WRITE $plaintext;\n\n   close WRITE;\n      \n   $ciphertext = join '', <READ>;\n\n   close READ;\n   \n   $msg = \"$pgp $options $key\\n\";\n\n   $msg .= join '', <ERROR>;\n\n   close ERROR;\n      \n   return ($ciphertext, $msg, PGP_ERR_SUCCESS);\n}",
+      "file" : "/var/tmp/arv_gZIo72/Crypt-PGP2-0.03/PGP2.pm",
+      "package" : "Crypt::PGP2"
+   }
+]

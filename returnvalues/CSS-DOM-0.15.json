@@ -1,0 +1,104 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM.pm",
+      "package" : "CSS::DOM"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/StyleSheetList.pm",
+      "package" : "CSS::DOM::StyleSheetList"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Constants.pm",
+      "package" : "CSS::DOM::Constants"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'true'",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Exception.pm",
+      "package" : "CSS::DOM::Exception"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/RuleList.pm",
+      "package" : "CSS::DOM::RuleList"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/MediaList.pm",
+      "package" : "CSS::DOM::MediaList"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Style.pm",
+      "package" : "CSS::DOM::Style"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule.pm",
+      "package" : "CSS::DOM::Rule"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Array.pm",
+      "package" : "CSS::DOM::Array"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Value.pm",
+      "package" : "CSS::DOM::Value"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Value/Primitive.pm",
+      "package" : "CSS::DOM::Value::Primitive"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule/Charset.pm",
+      "package" : "CSS::DOM::Rule::Charset"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule/Style.pm",
+      "package" : "CSS::DOM::Rule::Style"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule/Page.pm",
+      "package" : "CSS::DOM::Rule::Page"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule/Import.pm",
+      "package" : "CSS::DOM::Rule::Import"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule/Media.pm",
+      "package" : "CSS::DOM::Rule::Media"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!()",
+      "file" : "/var/tmp/arv_O9lzYx/CSS-DOM-0.15/lib/CSS/DOM/Rule/FontFace.pm",
+      "package" : "CSS::DOM::Rule::FontFace"
+   }
+]

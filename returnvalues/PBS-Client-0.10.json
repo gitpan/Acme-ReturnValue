@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub copy\n{\n    my ($self, $num) = @_;\n    use Data::Dumper;\n    if (!defined $num || $num == 1)\n    {\n        my $clone;\n        eval(Data::Dumper->Dump([$self], ['clone']));\n        return($clone);\n    }\n\n    my @clones = ();\n    for (my $i = 0; $i < $num; $i++)\n    {\n        my $clone;\n        eval(Data::Dumper->Dump([$self], ['clone']));\n        push(@clones, $clone)\n    }\n    return(@clones);\n}",
+      "file" : "/var/tmp/arv_vzw7J4/PBS-Client-0.10/lib/PBS/Client.pm",
+      "package" : "PBS::Client"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub hidebox {\n    my ($zinc, $self) = @_;\n    my $ev = $zinc->XEvent();\n    my $lx = $ev->x;\n    my $ly = $ev->y;\n    my @next;\n    \n    @next = $zinc->find('closest', $lx, $ly);\n    if ((scalar(@next) == 0) ||\n\t! $zinc->hastag($next[0], 'currentbbox') ||\n\t$zinc->hastag('current', 'currentbbox')) {\n\t$zinc->itemconfigure('currentbbox', -visible => 0);\n    }\n}",
+      "file" : "/var/tmp/arv_kce_IE/tk-zinc-3.303/demos/Tk/demos/zinc_pm/SimpleRadarControls.pm",
+      "package" : "SimpleRadarControls"
+   }
+]

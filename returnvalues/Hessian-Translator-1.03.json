@@ -1,0 +1,110 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Deserializer.pm",
+      "package" : "Hessian::Deserializer"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Simple.pm",
+      "package" : "Hessian::Simple"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Exception.pm",
+      "package" : "Hessian::Exception"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Client.pm",
+      "package" : "Hessian::Client"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Serializer.pm",
+      "package" : "Hessian::Serializer"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Translator.pm",
+      "package" : "Hessian::Translator"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Translator/Envelope.pm",
+      "package" : "Hessian::Translator::Envelope"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Translator/V2.pm",
+      "package" : "Hessian::Translator::V2"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Translator/V1.pm",
+      "package" : "Hessian::Translator::V1"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Translator/Composite.pm",
+      "package" : "Hessian::Translator::Composite"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Deserializer/Numeric.pm",
+      "package" : "Hessian::Deserializer::Numeric"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Deserializer/Date.pm",
+      "package" : "Hessian::Deserializer::Date"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Deserializer/String.pm",
+      "package" : "Hessian::Deserializer::String"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Deserializer/Binary.pm",
+      "package" : "Hessian::Deserializer::Binary"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Serializer/Numeric.pm",
+      "package" : "Hessian::Serializer::Numeric"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Serializer/Date.pm",
+      "package" : "Hessian::Serializer::Date"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Serializer/String.pm",
+      "package" : "Hessian::Serializer::String"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_rCUB5_/Hessian-Translator-1.03/lib/Hessian/Serializer/Binary.pm",
+      "package" : "Hessian::Serializer::Binary"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub read_leftside_backlinks_database {\n    my $dir = $self->hub->backlinks->storage_directory;\n    my $separator = $self->hub->backlinks->SEPARATOR;\n    my %pages = map {\n        s/^$dir//;\n        s/^\\/.*?$separator//;\n        $_ => 1;\n    } glob($dir . '/*');\n    return keys(%pages);\n}",
+      "file" : "/var/tmp/arv_lNh1H4/Kwiki-Orphans-0.11/lib/Kwiki/Orphans.pm",
+      "package" : "Kwiki::Orphans"
+   }
+]

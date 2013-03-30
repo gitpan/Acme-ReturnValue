@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode {\n  my $self = shift;\n  $$self ? '/T' : '/F';\n}",
+      "file" : "/var/tmp/arv_9OGCdH/Net-XRC-0.02/lib/Net/XRC/Data/boolean.pm",
+      "package" : "Net::XRC::Data::boolean"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode {\n  my $self = shift;\n  my $string = $$self;\n  $string =~ s/([\"\\\\])/\\\\$1/g;\n  qq(\"$string\");\n}",
+      "file" : "/var/tmp/arv_9OGCdH/Net-XRC-0.02/lib/Net/XRC/Data/string.pm",
+      "package" : "Net::XRC::Data::string"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode {\n  my $self = shift;\n  my %hash = %$self;\n  my $typename = delete $hash{_type};\n  \":$typename(\". join(\"\\n\", map {\n                                  \"$_ \".\n                                  isa( $hash{$_}, 'Net::XRC::Data' )\n                                    ? $hash{$_}->encode\n                                    : Net::XRC::Data->new($hash{$_})->encode\n                                }\n                                keys %hash\n                     ).\n            \")\";\n}",
+      "file" : "/var/tmp/arv_9OGCdH/Net-XRC-0.02/lib/Net/XRC/Data/complex.pm",
+      "package" : "Net::XRC::Data::complex"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode {\n  my $self = shift;\n  $$self;\n}",
+      "file" : "/var/tmp/arv_9OGCdH/Net-XRC-0.02/lib/Net/XRC/Data/int.pm",
+      "package" : "Net::XRC::Data::int"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode {\n  my $self = shift;\n  '('. join(' ', map {\n                       ref($_) =~ /^Net::XRC::Data/\n                         ? $_->encode\n                         : Net::XRC::Data->new($_)->encode\n                     }\n                     @$self\n           ).\n  ')';\n}",
+      "file" : "/var/tmp/arv_9OGCdH/Net-XRC-0.02/lib/Net/XRC/Data/list.pm",
+      "package" : "Net::XRC::Data::list"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encode {\n  my $self = shift;\n  '{'. length($$self). '}'. $$self;\n}",
+      "file" : "/var/tmp/arv_9OGCdH/Net-XRC-0.02/lib/Net/XRC/Data/bytes.pm",
+      "package" : "Net::XRC::Data::bytes"
+   }
+]

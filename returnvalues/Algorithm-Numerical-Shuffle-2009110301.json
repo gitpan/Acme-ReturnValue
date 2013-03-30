@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub shuffle {\n    return @_ if !@_ || ref $_ [0] eq 'ARRAY' && !@{$_ [0]};\n    my $array = @_ == 1 && ref $_ [0] eq 'ARRAY' ? shift : [@_];\n    for (my $i = @$array; -- $i;) {\n        my $r = int rand ($i + 1);\n       ($array -> [$i], $array -> [$r]) = ($array -> [$r], $array -> [$i]);\n    }\n    wantarray ? @$array : $array;\n}",
+      "file" : "/var/tmp/arv_5tSC4_/Algorithm-Numerical-Shuffle-2009110301/lib/Algorithm/Numerical/Shuffle.pm",
+      "package" : "Algorithm::Numerical::Shuffle"
+   }
+]

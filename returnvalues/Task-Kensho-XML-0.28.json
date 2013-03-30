@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.28'",
+      "file" : "/var/tmp/arv_Ik62KS/Task-Kensho-XML-0.28/lib/Task/Kensho/XML.pm",
+      "package" : "Task::Kensho::XML"
+   }
+]

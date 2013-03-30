@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q( Currently Listening To: Paul Menel - \"Little Gorgeous Fool\" from 'Three Sides To Every Story')",
+      "file" : "/var/tmp/arv__fjuQC/Test-CPAN-Meta-JSON-0.14/lib/Test/CPAN/Meta/JSON.pm",
+      "package" : "Test::CPAN::Meta::JSON"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q( Currently Listening To: Rainbow - \"I Surrender\" from 'Outrage - Live in London 1981')",
+      "file" : "/var/tmp/arv__fjuQC/Test-CPAN-Meta-JSON-0.14/lib/Test/CPAN/Meta/JSON/Version.pm",
+      "package" : "Test::CPAN::Meta::JSON::Version"
+   }
+]

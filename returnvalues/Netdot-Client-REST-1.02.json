@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete { \n    my ($self, $resource) = @_;\n    croak \"Missing required arguments\" unless ( $resource );\n    \n    my $url = $self->{base_url}.'/'.$resource;\n    my $req = HTTP::Request->new(DELETE => $url);\n    my $resp = $self->{ua}->request($req);\n    if ( $resp->is_success ){\n\treturn 1;\n    }else{\n\tcroak \"Error: could not delete $url: \".$resp->status_line;\n    }\n}",
+      "file" : "/var/tmp/arv_hFrAgm/Netdot-Client-REST-1.02/lib/Netdot/Client/REST.pm",
+      "package" : "Netdot::Client::REST"
+   }
+]

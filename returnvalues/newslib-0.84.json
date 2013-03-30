@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub create_date {\n  my ($self, $time) = @_; \t$time ||= time;\n  my ($sec,$min,$hr,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($time);\n  my ($gsec,$gmin,$ghr,$gmday) = gmtime($time);\n\n\n  use integer;\n  $gmday = $mday + ($mday <=> $gmday) if (abs($mday-$gmday) > 1);\n  my $tzdiff = 24*60*($mday-$gmday) + 60*($hr-$ghr) + ($min-$gmin);\n  my $tz = sprintf(\"%+04.4d\", $tzdiff + ($tzdiff/60*40));\n\n  $mon = (qw(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec))[$mon];\n  $wday = (qw(Sun Mon Tue Wed Thu Fri Sat Sun))[$wday];\n  $year += 1900;\n  sprintf(\"%s, %02d %s %d %02d:%02d:%02d %s\",\n          $wday,$mday,$mon,$year,$hr,$min,$sec,$tz);\n}",
+      "file" : "/var/tmp/arv_LiZ1id/newslib-0.84/News/Article/Ref.pm",
+      "package" : "News::Article::Ref"
+   }
+]

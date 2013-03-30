@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "BEGIN {\n\tuse Exporter ();\n\tuse vars qw ($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);\n\t$VERSION     = 0.97;\n\t@ISA         = qw (Exporter);\n\t@EXPORT      = qw ();\n\t@EXPORT_OK   = qw ();\n\t%EXPORT_TAGS = ();\n}",
+      "file" : "/var/tmp/arv_5QByTZ/CGI-Panel-0.97/lib/CGI/Panel/Tutorial.pm",
+      "package" : "CGI::Panel::Tutorial"
+   }
+]

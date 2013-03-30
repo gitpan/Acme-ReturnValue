@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Together. Great things happen.'",
+      "file" : "/var/tmp/arv_bjxSii/Polycom-Contact-Directory-0.05/lib/Polycom/Contact.pm",
+      "package" : "Polycom::Contact"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Together. Great things happen.'",
+      "file" : "/var/tmp/arv_bjxSii/Polycom-Contact-Directory-0.05/lib/Polycom/Contact/Directory.pm",
+      "package" : "Polycom::Contact::Directory"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _get_self {\n\tUNIVERSAL::isa($_[0], __PACKAGE__)\n\t?\tshift\n\t:\t($_obj ||= new);\n}",
+      "file" : "/var/tmp/arv_HUQE5b/Font-GlyphNames-1.00000/lib/Font/GlyphNames.pm",
+      "package" : "Font::GlyphNames"
+   }
+]

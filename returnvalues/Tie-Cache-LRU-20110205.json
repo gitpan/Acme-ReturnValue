@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "q|Look at me, look at me!  I'm super fast!  I'm bionic!  I'm bionic!|",
+      "file" : "/var/tmp/arv_LGV_Cj/Tie-Cache-LRU-20110205/lib/Tie/Cache/LRU.pm",
+      "package" : "Tie::Cache::LRU"
+   }
+]

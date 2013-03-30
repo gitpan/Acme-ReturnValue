@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.10'",
+      "file" : "/var/tmp/arv_x4vwbj/Kwiki-Ajax-Toolman-0.10/lib/Kwiki/Ajax/Toolman.pm",
+      "package" : "Kwiki::Ajax::Toolman"
+   }
+]

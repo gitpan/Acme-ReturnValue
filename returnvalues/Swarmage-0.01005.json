@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new\n{\n}",
+      "file" : "/var/tmp/arv_9cxOqk/Swarmage-0.01005/lib/Swarmage/Worker/Process.pm",
+      "package" : "Swarmage::Worker::Process"
+   }
+]

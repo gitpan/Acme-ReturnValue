@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$MooseX::DeclareX::Privacy::VERSION   = '0.004'",
+      "file" : "/var/tmp/arv_egAAGo/MooseX-DeclareX-Privacy-0.004/lib/MooseX/DeclareX/Privacy.pm",
+      "package" : "MooseX::DeclareX::Privacy"
+   }
+]

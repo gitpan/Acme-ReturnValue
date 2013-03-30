@@ -1,0 +1,110 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/monitorId day month year/;\n    my @optional  = qw/timezone/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('processResult' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Process.pm",
+      "package" : "Monitis::Process"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw//;\n    my @optional  = qw/monitorIds/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_post('deleteFullPageLoadMonitor' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/FullPageLoadMonitors.pm",
+      "package" : "Monitis::FullPageLoadMonitors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub download {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/platform/;\n    my @optional  = qw//;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    my $request = $self->build_post_request('downloadAgent' => $params);\n\n    my $response = $self->ua->request($request);\n\n    my $type = $response->header('Content-Type');\n\n    if ($type =~ /^text/) {\n        return $self->parse_response($response);\n    }\n    elsif (!$response->is_success) {\n        return {status => \"Network error: '\" . $response->status_line . \"'\"};\n    }\n    elsif ($type ne 'application/file') {\n        return {status => \"Wrong content-type: '$type'\"};\n    }\n\n    my $content = $response->decoded_content;\n    my $windows;\n\n    for (my $i = 0; $i <= $#$params; $i += 2) {\n        next unless $params->[$i] eq 'platform';\n\n        $windows = $params->[$i + 1] =~ /^win/i;\n        last;\n    }\n\n    if (!$windows) {\n\n        return unless substr($content, 0, 2) eq chr(31) . chr(139);\n    }\n    elsif ($windows) {\n\n        return unless unpack 'L4', substr($content, 0, 4) == 0x04034b50;\n    }\n\n    $content;\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Agents.pm",
+      "package" : "Monitis::Agents"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_step_net {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/resultId year month day/;\n    my @optional  = qw//;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('transactionStepNet' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/TransactionMonitors.pm",
+      "package" : "Monitis::TransactionMonitors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_all {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw//;\n    my @optional  = qw/types tag tagRegExp/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('internalMonitors' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/InternalMonitors.pm",
+      "package" : "Monitis::InternalMonitors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_info {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/type instanceId/;\n    my @optional  = qw/timezoneoffset/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('cloudInstanceInfo' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/CloudInstances.pm",
+      "package" : "Monitis::CloudInstances"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_top_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw//;\n    my @optional  = qw/timezoneoffset limit tag/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('topdrive' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Drive.pm",
+      "package" : "Monitis::Drive"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_page_modules {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/pageName/;\n    my @optional  = qw//;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('pageModules' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Layout.pm",
+      "package" : "Monitis::Layout"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_top_results {\n    my ($self, $topload, @params) = @_;\n\n    my @mandatory = qw//;\n    my @optional  = qw/timezoneoffset limit tag/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get($topload => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/LoadAverage.pm",
+      "package" : "Monitis::LoadAverage"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub custom_report {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/type/;\n    my @optional =\n      qw/period startDate endDate monitorIds tag chart chartWidth chartHeight/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('report' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/PredefinedMonitors.pm",
+      "package" : "Monitis::PredefinedMonitors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_recent_alerts {\n    my ($self, @params) = @_;\n\n    my @mandatory;\n    my @optional = qw/timezone startDate endDate limit/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('recentAlerts' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Contacts.pm",
+      "package" : "Monitis::Contacts"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delete {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/monitorId/;\n    my @optional  = qw//;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_post('deleteMonitor' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/CustomMonitors.pm",
+      "package" : "Monitis::CustomMonitors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/monitorId day month year/;\n    my @optional  = qw/timezone/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('internalPingResult' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Ping.pm",
+      "package" : "Monitis::Ping"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/monitorId day month year/;\n    my @optional  = qw/timezone/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('internalHttpResult' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/HTTP.pm",
+      "package" : "Monitis::HTTP"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_top_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw//;\n    my @optional  = qw/timezoneoffset limit tag/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('topcpu' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/CPU.pm",
+      "package" : "Monitis::CPU"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/siteId year month day/;\n    my @optional  = qw/timezoneoffset/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('visitorTrackingResults' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/VisitorTrackers.pm",
+      "package" : "Monitis::VisitorTrackers"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_top_results {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw//;\n    my @optional  = qw/timezoneoffset limit tag/;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('topmemory' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/Memory.pm",
+      "package" : "Monitis::Memory"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_by_tag {\n    my ($self, @params) = @_;\n\n    my @mandatory = qw/tag/;\n    my @optional  = qw//;\n\n    my $params = $self->prepare_params(\\@params, \\@mandatory, \\@optional);\n\n    return $self->api_get('tagtests' => $params);\n}",
+      "file" : "/var/tmp/arv_lkaESf/Monitis-0.9/lib/Monitis/ExternalMonitors.pm",
+      "package" : "Monitis::ExternalMonitors"
+   }
+]

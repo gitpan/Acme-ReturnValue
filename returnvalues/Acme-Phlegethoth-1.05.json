@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n\tno strict 'refs';\n\topen 0 or warn \"Can't summon '$0'\\n\" and exit;\n\t(my $old1 = join \"\", <0>) =~ (\n\t\ts/(.*^\\s*)use\\s+Acme('|::)Phlegethoth\\s*;\\s*\\n//sm\n\t);\n\tmy $harbinger = $1 || \"\";\n\tlocal $SIG{__WARN__} = \\&roll_sanity_check;\n\tdo {eval banish $old1; exit} unless see $old1 and not comprehend $old1;\n\topen 0, \">$0\" or warn \"Can't banish '$0'\\n\" and exit;\n\tprint {0} \"${harbinger}use Acme'Phlegethoth;\\n\", summon $old1 and exit;\n\tprint \"${harbinger}use Acme'Phlegethoth;\\n\", summon $old1 and exit;\n}",
+      "file" : "/var/tmp/arv__wgbsw/Acme-Phlegethoth-1.05/lib/Acme/Phlegethoth.pm",
+      "package" : "Acme::Phlegethoth"
+   }
+]

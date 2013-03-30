@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->add_unique_constraint(\"mimosa_job_c1\", ['sha1'] )",
+      "file" : "/var/tmp/arv_YDGHe7/App-Mimosa-0.02/lib/App/Mimosa/Schema/BCS/Result/Mimosa/Job.pm",
+      "package" : "App::Mimosa::Schema::BCS::Result::Mimosa::Job"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$GD::Graph::boxplot::VERSION",
+      "file" : "/var/tmp/arv_9x4tjO/GDGraph-boxplot-1.00/boxplot.pm",
+      "package" : "GD::Graph::boxplot"
+   }
+]

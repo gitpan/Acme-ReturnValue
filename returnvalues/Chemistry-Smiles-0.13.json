@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub end_branch {\n    my $self = shift;\n    pop @{$self->{stack}};\n}",
+      "file" : "/var/tmp/arv__HUsex/Chemistry-Smiles-0.13/Smiles.pm",
+      "package" : "Chemistry::Smiles"
+   }
+]

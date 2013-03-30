@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "%Marpa::HTML::VERSION_FOR_CONFIG = (\n    'Scalar::Util'        => 1.21,\n    'List::Util'          => 1.21,\n    'Carp'                => 1.08,\n    'Data::Dumper'        => '2.125',\n    'HTML::Parser'        => '3.64',\n    'HTML::PullParser'    => '3.57',\n    'Marpa::PP'           => '0.012000',\n    'Marpa::XS'           => '0.026000',\n    'Module::Build'       => 0.3601,\n    'Test::More'          => 0.94,\n)",
+      "file" : "/var/tmp/arv_JCM_AR/Marpa-HTML-0.112000/config/Marpa/HTML/Config.pm",
+      "package" : "Marpa::HTML"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub erfcxinv {\n    my $y = @_ ? $_[0] : $_;\n\n    return 0 if $y == 1;\n\n    my $x = 0;\n    my $dx;\n    my $c = .56418958354775628694807945156079;  \n    my $d = 2.2567583341910251477923178062432;  \n    my $eps = 5e-15;\n    do {\n        my $f = erfcx($x) - $y;\n        my $df = 2*($x*erfcx($x)-$c);\n        my $ddf = (2+4*$x*$x)*erfcx($x) - $x*$d;\n        my $u = $f/$df;\n        my $v = $ddf/$df;\n        $dx = -$u/(1-$u*$v/2);\n        $x += $dx;\n    } until abs($dx/$x) <= $eps;\n    return $x;\n}",
+      "file" : "/var/tmp/arv_O_qcov/Games-Go-GoPair-1.001/Erf.pm",
+      "package" : "Games::Go::Erf"
+   }
+]

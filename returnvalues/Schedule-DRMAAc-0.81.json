@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "%EXPORT_TAGS = ( all => [ @EXPORT_OK ] )",
+      "file" : "/var/tmp/arv_RZIolH/Schedule-DRMAAc-0.81/Schedule_DRMAAc_ext.pm",
+      "package" : "Schedule::DRMAAc"
+   }
+]

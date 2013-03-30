@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub remove {\n    my ($self, $ctx, $vars) = @_;\n    my $file = $vars->{file};\n\n    $ctx->response->page_title($vars->{title});\n\n    return $self->render_page(\n        template => 'attachment/remove.html',\n        context  => $ctx,\n        vars     => {\n            '.yukkiname'          => $vars->{page},\n            '#cancel_remove@href' => $vars->{return_link},\n        },\n    );\n}",
+      "file" : "/var/tmp/arv_OA5TcS/Yukki-0.121790/lib/Yukki/Web/View/Attachment.pm",
+      "package" : "Yukki::Web::View::Attachment"
+   }
+]

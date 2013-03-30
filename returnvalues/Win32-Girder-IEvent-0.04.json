@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub hash_password ($$) {\n\tmy ($cookie,$pass) = @_;\n\treturn md5_hex(\"$cookie:$pass\");\n}",
+      "file" : "/var/tmp/arv_rxmRIO/Win32-Girder-IEvent-0.04/lib/Win32/Girder/IEvent/Common.pm",
+      "package" : "Win32::Girder::IEvent::Common"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\tmy ($obj) = @_;\n\t$$obj->{_girder_pass} = undef;\n\t$$obj->{_girder_rin} = undef;\n\t$$obj->{_girder_clients} = undef;\n\t$obj->SUPER::DESTROY();\n}",
+      "file" : "/var/tmp/arv_rxmRIO/Win32-Girder-IEvent-0.04/lib/Win32/Girder/IEvent/Server.pm",
+      "package" : "Win32::Girder::IEvent::Server"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\tmy ($obj) = @_;\n\t$$obj->{_girder_pass} = undef;\n\t$obj->SUPER::DESTROY();\n}",
+      "file" : "/var/tmp/arv_rxmRIO/Win32-Girder-IEvent-0.04/lib/Win32/Girder/IEvent/Client.pm",
+      "package" : "Win32::Girder::IEvent::Client"
+   }
+]

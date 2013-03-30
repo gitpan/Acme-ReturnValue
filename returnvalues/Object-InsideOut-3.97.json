@@ -1,0 +1,62 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Cumulative.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/attributes.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Foreign.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Universal.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Overload.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Autoload.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Chained.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Dynamic.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/Dump.pm",
+      "package" : "Object::InsideOut"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "($Object::InsideOut::VERSION == 3.97)\n    or die(\"Version mismatch\\n\")",
+      "file" : "/var/tmp/arv_2lUb9R/Object-InsideOut-3.97/lib/Object/InsideOut/lvalue.pm",
+      "package" : "Object::InsideOut"
+   }
+]

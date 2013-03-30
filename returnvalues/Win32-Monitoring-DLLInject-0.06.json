@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n   my $self = shift;\n   ( $self->{hmodule},\n     $self->{unhooked} ) = destroy($self->{pid}, $self->{dll}, $self->{hmailslot}, $self->{hmodule});\n\n   if ($self->{unhooked} == 1) {\n      $self->{hooked} = 0;\n      delete $self->{unhooked};\n   }\n}\n\n\n\n1",
+      "file" : "/var/tmp/arv_kREiPS/Win32-Monitoring-DLLInject-0.06/DLLInject.pm",
+      "package" : "Win32::Monitoring::DLLInject"
+   }
+]

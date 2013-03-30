@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "FILTER {\n  s/, eh\\?/;/g; s/aboot/about/;\n}\n\n\n1",
+      "file" : "/var/tmp/arv_bjkYEn/Acme-Canadian-0.03/lib/Acme/Canadian.pm",
+      "package" : "Acme::Canadian"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub current_cost_type_string {\n  $names{$_[0]}\n}",
+      "file" : "/var/tmp/arv_vd_JQo/Device-CurrentCost-1.130190/lib/Device/CurrentCost/Constants.pm",
+      "package" : "Device::CurrentCost::Constants"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_watch_var {\n    assert ( $#_==0, 'Parms' ) if DEBUG;\n    my $var_ref = shift;\n    my $var_name =  var_name(1, $var_ref);\n    assert ( $var_name, \"var_name has a value: $var_name]\" ) if DEBUG;\n\n    if ($var_name =~ /^\\$/) {\n        tie $$var_ref, 'Debug::Xray::WatchScalar', $var_name, $$var_ref; \n    }\n    elsif ($var_name =~ /^\\@/) { die 'Not implemented yet' }\n    elsif ($var_name =~ /^\\%/) { die 'Not implemented yet' }\n    else  { die \"Invalid variable name '$var_name'\" if DEBUG }\n\n    return $var_name if DEBUG;\n  }",
+      "file" : "/var/tmp/arv_iQ_r56/Debug-Xray-0.05/lib/Debug/Xray.pm",
+      "package" : "Debug::Xray"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[run run Reynard]",
+      "file" : "/var/tmp/arv_ZkmNHt/Dist-Zilla-Plugin-AssertOS-0.04/lib/Dist/Zilla/Plugin/AssertOS.pm",
+      "package" : "Dist::Zilla::Plugin::AssertOS"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub setMP3Tag {\n\tmy $self = shift;\n\tmy ($filename, $artist, $song) = @_;\n\treturn unless $filename;\n\tuse MP3::Tag;\n\tmy $mp3 = MP3::Tag->new( $filename );\n\tunless ( exists $mp3->{ ID3v1 } ) {\n\t\t$mp3->new_tag( 'ID3v1' );\n\t}\n\tmy $id3v1 = $mp3->{ ID3v1 };\n\t$id3v1->all( $song, $artist, '',2003,'',0,'' );\n\t$id3v1->write_tag();\n\t\n}",
+      "file" : "/var/tmp/arv_Rp5LuN/Netx-WebRadio-0.03/Examples/FileWriter/Netx/WebRadio/Station/Shoutcast/FileWriter.pm",
+      "package" : "Netx::WebRadio::Station::Shoutcast::FileWriter"
+   }
+]

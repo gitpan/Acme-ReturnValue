@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub __write_self {\n\tmy $cfg     = shift;\n\tmy $fh      = shift;\n\tmy $depth   = shift;\n\tmy $sep\t    = shift;\n\tmy $cmnt    = shift;\n\tmy $section = shift;\n\t\n\tmy $key;\n\tmy $value;\n\t\n    \n    if ($section) {\n\t    print $fh \"[$section]\\n\";\n    }\n    \n    while (($key,$value) = each %{$cfg}) {\n\t    if (ref($value) ne \"HASH\") {\n\t\t    if (ref($value) eq \"ARRAY\") {\n\t\t\t    my $idx=0;\n\t\t\t    for my $element (@{$value}) {\n\t\t\t\t    print $fh \"$key\",\"[$idx]\",\"$sep\",\"$element\\n\";\n\t\t\t\t    $idx+=1;\n\t\t\t    }\n\t\t    }\n\t\t    else {\n\t\t\t    print $fh \"$key\",\"$sep\",\"$value\\n\";\n\t\t    }\n\t    }\n    }\n    \n    \n    while (($key,$value) = each %{$cfg}) {\n\t\tif (ref($value) eq \"HASH\") {\n\t\t    \n\t\t    if ($depth==0) {\n\t\t        __write_self($value,$fh,$depth+1,$sep,$cmnt,$key);\n\t        }\n\t        else {\n\t\t        __write_self($value,$fh,$depth+1,$sep,$cmnt,$section.\".\".$key);\n\t        }\n\t\t    \n\t    }\n    }\n    \n}",
+      "file" : "/var/tmp/arv_nus1sk/Tie-Cfg-0.32/Cfg.pm",
+      "package" : "Tie::Cfg"
+   }
+]

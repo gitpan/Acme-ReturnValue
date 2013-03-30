@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "bootstrap WAIT $VERSION",
+      "file" : "/var/tmp/arv_rNjYYk/WAIT-1.800/lib/WAIT.pm",
+      "package" : "WAIT"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub tag {\n  my ($self, $html_source) = @_;\n\n  $html_source =~ tr/\\r/\\n/;\n\n  my ($pre,$title,$body) \n      = $html_source =~ /^(.*?<title\\s*>)(.*?)(<\\/title\\s*>.+)/si;\n\n  (\n   {'text'  => 1},  decode_entities($pre),\n   {'title' => 1},  decode_entities($title),\n   {'text'  => 1},  decode_entities($body),\n  );\n}",
+      "file" : "/var/tmp/arv_rNjYYk/WAIT-1.800/lib/WAIT/Parse/HTML.pm",
+      "package" : "WAIT::Parse::HTML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub tag {\n  my $self         = shift;\n\n  $self->begin_input;\n  $self->parse_from_string(@_);\n  my $result = $self->{OUT};\n  delete $self->{OUT};\n  delete $self->{TAGS};\n  @{$result};\n}",
+      "file" : "/var/tmp/arv_rNjYYk/WAIT-1.800/lib/WAIT/Parse/Pod.pm",
+      "package" : "WAIT::Parse::Pod"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub insert {\n  my $self   = shift;\n  my $weight = shift;\n\n  $self->SUPER::insert(_weight => $weight, @_);\n}",
+      "file" : "/var/tmp/arv_rNjYYk/WAIT-1.800/lib/WAIT/Table/Independent.pm",
+      "package" : "WAIT::Table::Independent"
+   }
+]

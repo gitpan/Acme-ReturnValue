@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _water_downwards {\n\tmy ($self, $node) = @_;\n\n\treturn if (!$node->{parent_node});\n\n\t$node->{parent_node}->{water} = 1;\n\n\treturn if (($node->{parent_node}->{node_name} eq 'force field') && ($node->{parent_node}->{power}));\n\treturn if (($node->{parent_node}->{node_name} eq 'bridge') && ($node->{parent_node}->{destroyed}));\n\treturn if (($node->{parent_node}->{node_name} eq 'evaporates') && ($node->{parent_node}->{power}));\n\n\t$self->_water_downwards($node->{parent_node});\n}",
+      "file" : "/var/tmp/arv_hy1pYN/Language-Homespring-0.04/Homespring.pm",
+      "package" : "Language::Homespring"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub do {\n\tmy ($self) = @_;\n\tmy @lines;\n\n\tmy $lines = $self->{interp}->{root_node}->get_depth();\n\tfor(my $i=0; $i<$lines; $i++){\n\t\t$lines[$i] = '-> ';\n\t}\n\n\tmy %nodes = ( 0 => $self->{interp}->{root_node} );\n\t\n\twhile (scalar(keys(%nodes))){\n\n\t\tmy $longest = 0;\n\t\tfor (values %nodes){\n\t\t\tmy $l = length($_->{node_name_safe});\n\t\t\t$longest = $l if ($l > $longest);\n\t\t}\n\n\t\tfor (my $i=0; $i<$lines; $i++){\n\t\t\tmy $line = $nodes{$i}->{node_name_safe};\n\t\t\tmy $extra = $longest+1-(($line)?length($line):0);\n\t\t\tmy $extra_char = ' ';\n\t\t\t$extra_char = '-' if ($line && scalar(@{$nodes{$i}->{child_nodes}}));\n\t\t\t$line .= $extra_char x $extra;\n\t\t\t$lines[$i] .= $line;\n\t\t}\n\n\t\tmy %new_nodes;\n\n\t\tfor (keys(%nodes)){\n\t\t\tmy $node = $nodes{$_};\n\t\t\tmy $index = $_;\n\t\t\tfor my $child(@{$node->{child_nodes}}){\n\t\t\t\t$new_nodes{$index} = $child;\n\t\t\t\t$index += $child->get_depth();\n\t\t\t}\n\t\t}\n\n\t\tmy %junctions;\n\t\tfor (keys %nodes){\n\t\t\tmy $index = $_;\n\t\t\tmy $node = $nodes{$_};\n\t\t\tmy $child_count = scalar(@{$node->{child_nodes}});\n\t\t\tif ($child_count){\n\t\t\t\t$junctions{$index} = ($child_count==1)?'--':'+-';\n\t\t\t\tmy @nodes = @{$node->{child_nodes}};\n\t\t\t\tpop @nodes;\n\t\t\t\tfor (@nodes){\n\t\t\t\t\tfor (my $j=0; $j<$_->get_depth()-1; $j++){\n\t\t\t\t\t\t$junctions{$index+$j+1} = '| ';\n\t\t\t\t\t}\n\t\t\t\t\t$junctions{$index+$_->get_depth()} = '+-';\n\t\t\t\t\t$index += $_->get_depth();\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tfor (my $i=0; $i<$lines; $i++){\n\t\t\t$lines[$i] .= ($junctions{$i})?$junctions{$i}:'  ';\n\t\t}\n\n\t\t%nodes = %new_nodes;\n\t}\n\n\n\treturn join(\"\\n\",@lines).\"\\n\";\n}",
+      "file" : "/var/tmp/arv_hy1pYN/Language-Homespring-0.04/Homespring/Visualise.pm",
+      "package" : "Language::Homespring::Visualise"
+   }
+]

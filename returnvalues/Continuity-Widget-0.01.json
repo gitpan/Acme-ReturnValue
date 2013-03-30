@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub wiki2html {\n  my ($self, $content) = @_;\n  $content =~ s/\\n\\n/\\n<p>\\n/g;\n  $content =~ s/\\[([^\\]]+)\\]/<a href=\"?page=$1\">$1<\\/a>/g;\n  return $content;\n}",
+      "file" : "/var/tmp/arv_68BH9Z/Continuity-Widget-0.01/eg/wiki/lib/Page.pm",
+      "package" : "Page"
+   }
+]

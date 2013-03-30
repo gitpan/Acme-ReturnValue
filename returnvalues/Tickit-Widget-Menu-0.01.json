@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_MnmFYK/Tickit-Widget-Menu-0.01/lib/Tickit/Widget/MenuBar.pm",
+      "package" : "Tickit::Widget::MenuBar"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_MnmFYK/Tickit-Widget-Menu-0.01/lib/Tickit/Widget/Menu.pm",
+      "package" : "Tickit::Widget::Menu"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_MnmFYK/Tickit-Widget-Menu-0.01/lib/Tickit/Widget/Menu/base.pm",
+      "package" : "Tickit::Widget::Menu::base"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_MnmFYK/Tickit-Widget-Menu-0.01/lib/Tickit/Widget/Menu/Item.pm",
+      "package" : "Tickit::Widget::Menu::Item"
+   }
+]

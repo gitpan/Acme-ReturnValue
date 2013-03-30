@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(Soviet Jesus's gift at Christmas of a blow-up doll to Debbie would always turn to be the most enigmatic)",
+      "file" : "/var/tmp/arv_BwJ2vg/App-Perldoc-Search-0.11/lib/App/Perldoc/Search.pm",
+      "package" : "App::Perldoc::Search"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(Soviet Jesus's gift at Christmas of a blow-up doll to Debbie would always turn to be the most enigmatic)",
+      "file" : "/var/tmp/arv_BwJ2vg/App-Perldoc-Search-0.11/lib/App/Perldoc/Search/_Parser.pm",
+      "package" : "App::Perldoc::Search::_Parser"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_V78PnK/IO-Async-Loop-POE-0.05/lib/IO/Async/Loop/POE.pm",
+      "package" : "IO::Async::Loop::POE"
+   }
+]

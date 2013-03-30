@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_valid_degree_seq\n{\n\tmy (@seq) = @_;\n\n        return 1 if @seq == 0; \n\tmy $s = 0;\n\t$s += $_ foreach (@seq);\n\treturn 0 if $s & 1; \n\n\twhile(@seq)\n\t{\n\t\t@seq = reverse sort {$a<=>$b} @seq;\n\n\t\treturn 0 if $seq[0] < 0;\n\n\t\tmy $d = pop(@seq);\n\t\treturn 1 if $d == 0;\n\n\t\treturn 0 if $d > @seq;\n\n\t\t$seq[@seq-$_]-- for (1..$d);\n\t}\n\n\treturn 0;\n}",
+      "file" : "/var/tmp/arv_euxrGC/Graph-Maker/lib/Graph/Maker/Utils.pm",
+      "package" : "Graph::Maker::Utils"
+   }
+]

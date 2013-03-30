@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n    my $class = shift;\n    my $self = HTML::Stream->new(@_);\n    $self->auto_escape('LATIN_1');\n    bless $self, $class;\n}",
+      "file" : "/var/tmp/arv_ygES_x/HTML-Stream-1.60/lib/HTML/Stream.pm",
+      "package" : "HTML::Stream"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "BEGIN {\nuse Mac::Glue ':all';\n\nmy $iterm = eval { Mac::Glue->new( 'iTerm' ) };\nif( $@ ) { die \"Could not load iTerm definitions for Mac::Glue!: $@\" }\n\n$iterm->activate;\nmy $term = $iterm->make( new => 'terminal' );\nmy $session = 1;\n\nsub _launch_iterm\n\t{\n\tmy $cwd = shift;\n\t\n\t$term->Launch( session => 'default' );\n\t$term->obj( session => $session++ )->write(text => \"cd '$cwd'\");\n\t}\n}",
+      "file" : "/var/tmp/arv_5fktQP/Mac-iTerm-LaunchPad-1.008/lib/LaunchPad.pm",
+      "package" : "Mac::iTerm::LaunchPad"
+   }
+]

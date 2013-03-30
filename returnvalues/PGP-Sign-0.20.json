@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '0.20'",
+      "file" : "/var/tmp/arv_RONc1n/PGP-Sign-0.20/VERSION.pm",
+      "package" : "PGP::Sign"
+   }
+]

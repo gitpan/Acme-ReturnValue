@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "coerce Bool,\n    from BeeBool,\n    via { $_ eq \"true\" }",
+      "file" : "/var/tmp/arv_Xdmyeh/WebService-Beeminder-0.002/lib/WebService/Beeminder/Types.pm",
+      "package" : "WebService::Beeminder::Types"
+   }
+]

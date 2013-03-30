@@ -1,0 +1,68 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/AnotherNS.pm",
+      "package" : "Acme::Prereq::AnotherNS"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/BigDistro.pm",
+      "package" : "Acme::Prereq::BigDistro"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/AnotherNS/B.pm",
+      "package" : "Acme::Prereq::AnotherNS::B"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/AnotherNS/C.pm",
+      "package" : "Acme::Prereq::AnotherNS::C"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/AnotherNS/Deeper/B.pm",
+      "package" : "Acme::Prereq::AnotherNS::Deeper::B"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/AnotherNS/Deeper/A.pm",
+      "package" : "Acme::Prereq::AnotherNS::Deeper::A"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/AnotherNS/Deeper/C.pm",
+      "package" : "Acme::Prereq::AnotherNS::Deeper::C"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/BigDistro/B.pm",
+      "package" : "Acme::Prereq::BigDistro::B"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/BigDistro/A.pm",
+      "package" : "Acme::Prereq::BigDistro::A"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/BigDistro/Deeper/B.pm",
+      "package" : "Acme::Prereq::BigDistro::Deeper::B"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_jr7lY8/Acme-Prereq-BigDistro-0.02/lib/Acme/Prereq/BigDistro/Deeper/A.pm",
+      "package" : "Acme::Prereq::BigDistro::Deeper::A"
+   }
+]

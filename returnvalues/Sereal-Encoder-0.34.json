@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our %EXPORT_TAGS=(all => \\@EXPORT_OK)",
+      "file" : "/var/tmp/arv_FGL83Z/Sereal-Encoder-0.34/lib/Sereal/Encoder/Constants.pm",
+      "package" : "Sereal::Encoder::Constants"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub blocked_ip {\n    return $self->render_screen(\n        content_pane => 'blocked_ip.html',\n    );\n}",
+      "file" : "/var/tmp/arv_qsMQ4D/Kwiki-DNSBL-0.01/lib/Kwiki/DNSBL.pm",
+      "package" : "Kwiki::DNSBL"
+   }
+]

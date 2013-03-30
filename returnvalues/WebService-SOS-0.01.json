@@ -1,0 +1,62 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/SensorDescription.pm",
+      "package" : "WebService::SOS::SensorDescription"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/Exception.pm",
+      "package" : "WebService::SOS::Exception"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/SWEField.pm",
+      "package" : "WebService::SOS::SWEField"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/Observations.pm",
+      "package" : "WebService::SOS::Observations"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/Capabilities.pm",
+      "package" : "WebService::SOS::Capabilities"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/SensorDescription/Identifiers.pm",
+      "package" : "WebService::SOS::SensorDescription::Identifiers"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/SensorDescription/Classifiers.pm",
+      "package" : "WebService::SOS::SensorDescription::Classifiers"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/Capabilities/Parameter.pm",
+      "package" : "WebService::SOS::Capabilities::Parameter"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/Capabilities/Operation.pm",
+      "package" : "WebService::SOS::Capabilities::Operation"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "finalize_class()",
+      "file" : "/var/tmp/arv_xub_9V/WebService-SOS-0.01/lib/WebService/SOS/Capabilities/Offering.pm",
+      "package" : "WebService::SOS::Capabilities::Offering"
+   }
+]

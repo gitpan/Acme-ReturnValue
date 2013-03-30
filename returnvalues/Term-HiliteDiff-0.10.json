@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[What's the point of dreaming I'm a girl if I don't get a cool lesbian scene?!]",
+      "file" : "/var/tmp/arv_KxOI_t/Term-HiliteDiff-0.10/lib/Term/HiliteDiff.pm",
+      "package" : "Term::HiliteDiff"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[Wow, you're pretty uptight for a guy who worships a multi-armed, hermaphrodite embodiment of destruction who has a fetish for vaguely phallic shaped headgear.]",
+      "file" : "/var/tmp/arv_KxOI_t/Term-HiliteDiff-0.10/lib/Term/HiliteDiff/_impl.pm",
+      "package" : "Term::HiliteDiff::_impl"
+   }
+]

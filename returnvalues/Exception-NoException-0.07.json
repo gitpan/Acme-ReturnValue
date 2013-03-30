@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'The Adventures Of Kung-Fu Jesus and His Amazing Giant Robot'",
+      "file" : "/var/tmp/arv_PzphJx/Exception-NoException-0.07/lib/Exception/NoException.pm",
+      "package" : "Exception::NoException"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[ Hey, what does this switch labeled 'Pulsating Ejector' do?\n\n   I don't know... I've always been too afraid to find out ]",
+      "file" : "/var/tmp/arv_PzphJx/Exception-NoException-0.07/lib/Exception/NoException/_obj.pm",
+      "package" : "Exception::NoException::_obj"
+   }
+]

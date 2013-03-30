@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "END { }",
+      "file" : "/var/tmp/arv_P_idum/Guitar-Tuner-0.1/lib/Guitar/Tuner.pm",
+      "package" : "Tuner"
+   }
+]

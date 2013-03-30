@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\tmy $self = shift;\n\t$self->inner->_drop_conn()\n\t\tunless --$self->inner->{net_ldap_refcnt};\n\t\t\n\tDEBUG( \"Net::LDAP Refcount: \" . $self->inner->{net_ldap_refcnt} ) if DEBUGGING;\n}",
+      "file" : "/var/tmp/arv_P1nGAC/POE-Component-Client-LDAP-0.04/lib/POE/Component/Client/LDAP.pm",
+      "package" : "POE::Component::Client::LDAP"
+   }
+]

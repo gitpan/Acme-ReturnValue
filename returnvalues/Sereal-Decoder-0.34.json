@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our %EXPORT_TAGS=(all => \\@EXPORT_OK)",
+      "file" : "/var/tmp/arv_RCDSX6/Sereal-Decoder-0.34/lib/Sereal/Decoder/Constants.pm",
+      "package" : "Sereal::Decoder::Constants"
+   }
+]

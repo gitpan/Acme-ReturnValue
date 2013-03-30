@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub success {\n  my $self = shift;\n  return $self->{status};\n}",
+      "file" : "/var/tmp/arv_Gz5ARS/WWW-Monitor-0.24/lib/WWW/Monitor/Task.pm",
+      "package" : "WWW::Monitor::Task"
+   }
+]

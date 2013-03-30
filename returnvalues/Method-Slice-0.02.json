@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mslice : lvalue {\n  my ($obj, @meths) = @_;\n  if (want('LVALUE')) {\n    if (my @rvals = want('ASSIGN')) {\n      for my $i (0 .. $#meths) {\n        my $meth = $meths[$i];\n        $obj->$meth($rvals[$i]);\n      }\n      lnoreturn;\n    }\n    else {\n      croak \"mslice used in LVALUE context but without ASSIGN .. \"\n          . \"don't know what to do :-(\";\n    }\n  }\n  else {\n    my @values = map {scalar $obj->$_()} @meths;\n    rreturn @values;\n  }\n  return;\n}",
+      "file" : "/var/tmp/arv_jseN73/Method-Slice-0.02/lib/Method/Slice.pm",
+      "package" : "Method::Slice"
+   }
+]

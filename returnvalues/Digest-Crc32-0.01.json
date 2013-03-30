@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub filecrc32 {\n\tmy $self = shift;\n\tmy $file = shift;\n\tmy $crc = 0xFFFFFFFF;\n\topen(FILE, $file) or croak \"Failed to open the file\";\n\twhile (<FILE>) {\n\t    foreach (split(//,$_)) { $crc = (($crc>>8) & 0x00FFFFFF) ^ $self->_crc32(($crc ^ ord($_)) & 0xFF); }\n\t}\n\tclose(FILE);\n\treturn $crc^0xFFFFFFFF;\n}",
+      "file" : "/var/tmp/arv_GmjOyv/Digest-Crc32-001/Crc32.pm",
+      "package" : "Digest::Crc32"
+   }
+]

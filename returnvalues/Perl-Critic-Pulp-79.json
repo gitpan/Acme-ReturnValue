@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n  my ($self) = @_;\n  my $filename = $self->{'tempdbm'}->filename;\n  my $num_keys = scalar(keys %{$self->{'hash'}});\n  print \"tempfile $filename $num_keys entries, sizes \",\n    -s \"$filename.pag\",\" \",\n      -s \"$filename.dir\",\"\\n\";\n  system \"ls -l $filename.*\";\n}\n\nsub uniq {\n  my ($self, $filename_or_handle) = @_;\n  \n  my ($dev, $ino)\n    = (ref $filename_or_handle && $filename_or_handle->can('stat')\n       ? $filename_or_handle->stat\n       : stat ($filename_or_handle));\n  \n  if (! defined $dev) {\n    return 1;\n  }\n\n  my $key = \"$dev,$ino\";\n\n  my $hash = $self->{'hash'};\n  return (! exists $hash->{$key}\n          && ($hash->{$key} = 1));\n}\n\n\n1",
+      "file" : "/var/tmp/arv_4AsETe/Perl-Critic-Pulp-79/devel/MyUniqByInode.pm",
+      "package" : "MyUniqByInode"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '1.100_100'",
+      "file" : "/var/tmp/arv_4AsETe/Perl-Critic-Pulp-79/devel/version_check.pm",
+      "package" : "version_check"
+   }
+]

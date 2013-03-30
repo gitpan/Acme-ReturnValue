@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD {\n  our $AUTOLOAD;\n  my ($cmd) = $AUTOLOAD =~ m/:?(\\w+)$/;\n  return unless $cmd =~ m/[a-z]/;\n  my $self = shift;\n  $self->dispatch ($cmd, @_);\n}\n\nsub dispatch {\n    die \"This must be implemented by child.\";\n}\n\n\n1",
+      "file" : "/var/tmp/arv_4vdnfX/RunApp-0.13/lib/RunApp/Control.pm",
+      "package" : "RunApp::Control"
+   }
+]

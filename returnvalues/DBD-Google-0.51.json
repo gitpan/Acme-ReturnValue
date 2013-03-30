@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY { 1 }",
+      "file" : "/var/tmp/arv_k16zGh/DBD-Google-0.51/lib/DBD/Google/st.pm",
+      "package" : "DBD::Google::st"
+   }
+]

@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_3jkms6/Dist-Zilla-PluginBundle-Author-LOGIE-0.04/lib/Dist/Zilla/PluginBundle/Author/LOGIE.pm",
+      "package" : "Dist::Zilla::PluginBundle::Author::LOGIE"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_3jkms6/Dist-Zilla-PluginBundle-Author-LOGIE-0.04/Dist-Zilla-PluginBundle-LOGIE-0.04/lib/Dist/Zilla/PluginBundle/LOGIE.pm",
+      "package" : "Dist::Zilla::PluginBundle::LOGIE"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_3jkms6/Dist-Zilla-PluginBundle-Author-LOGIE-0.04/Dist-Zilla-PluginBundle-LOGIE-0.02/lib/Dist/Zilla/PluginBundle/LOGIE.pm",
+      "package" : "Dist::Zilla::PluginBundle::LOGIE"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_3jkms6/Dist-Zilla-PluginBundle-Author-LOGIE-0.04/Dist-Zilla-PluginBundle-LOGIE-0.03/lib/Dist/Zilla/PluginBundle/LOGIE.pm",
+      "package" : "Dist::Zilla::PluginBundle::LOGIE"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_3jkms6/Dist-Zilla-PluginBundle-Author-LOGIE-0.04/Dist-Zilla-PluginBundle-LOGIE-0.01/lib/Dist/Zilla/PluginBundle/LOGIE.pm",
+      "package" : "Dist::Zilla::PluginBundle::LOGIE"
+   }
+]

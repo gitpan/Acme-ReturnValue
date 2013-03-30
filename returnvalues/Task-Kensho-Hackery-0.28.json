@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.28'",
+      "file" : "/var/tmp/arv_n8Q_ji/Task-Kensho-Hackery-0.28/lib/Task/Kensho/Hackery.pm",
+      "package" : "Task::Kensho::Hackery"
+   }
+]

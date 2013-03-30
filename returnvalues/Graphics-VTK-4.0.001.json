@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "@violet_red_pale = qw/0.8588 0.4392 0.5765/",
+      "file" : "/var/tmp/arv_p22nj0/Graphics-VTK-4.0.001/VTK/Colors.pm",
+      "package" : "Graphics::VTK::Colors"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub UpdateInteraction\n{\n my $widget = shift;\n my $x = shift;\n my $y = shift;\n my $accumulate;\n my $binMax;\n my $binMin;\n my $data;\n my $mapper;\n my $max;\n my $origin;\n my $return;\n my $spacing;\n my $str1;\n my $str2;\n $x = $x / 2;\n $accumulate = $widget->{'Accumulate'};\n $origin = ($accumulate->GetComponentOrigin)[0];\n $spacing = ($accumulate->GetComponentSpacing)[0];\n $binMin = $origin + $spacing * $x;\n $binMax = $binMin + $spacing;\n $data = $accumulate->GetOutput;\n $data->Update;\n $max = ($data->GetExtent)[1];\n return if ($x < 0 || $x > $max);\n $y = $data->GetScalarComponentAsFloat($x,0,0,0);\n $str1 = sprintf(\"Bin: \\[%.1f, %.1f)\",$binMin,$binMax);\n $str2 = sprintf(\"Count: %d\",$y);\n $mapper = $widget->{'Mapper1'};\n $mapper->SetInput($str1);\n $mapper = $widget->{'Mapper2'};\n $mapper->SetInput($str2);\n $widget->Render;\n}",
+      "file" : "/var/tmp/arv_p22nj0/Graphics-VTK-4.0.001/examples/ImageProcessing/HistogramWidget.pm",
+      "package" : "Graphics::VTK::Tk::HistogramWidget"
+   }
+]

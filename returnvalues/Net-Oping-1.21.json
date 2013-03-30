@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_error\n{\n  my $obj = shift;\n  return ($obj->{'err_msg'} || 'Success');\n}",
+      "file" : "/var/tmp/arv_d4Y6q5/Net-Oping-1.21/lib/Net/Oping.pm",
+      "package" : "Net::Oping"
+   }
+]

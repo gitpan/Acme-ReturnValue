@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub FindDTDRoot {\n\tmy $elements = shift;\n\tmy @roots;\n\tforeach my $element (keys %$elements) {\n\t\tif (!exists $elements->{$element}->{parent}) {\n\t\t\tpush @roots, $element;\n\t\t\t$elements->{$element}->{option} = '!';\n\t\t}\n\t}\n\treturn @roots;\n}",
+      "file" : "/var/tmp/arv_4pNEDd/XML-DTDParser-2.01/DTDParser.pm",
+      "package" : "XML::DTDParser"
+   }
+]

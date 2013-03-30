@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Written to the tune of Release by Pearl Jam :)}",
+      "file" : "/var/tmp/arv_4oIpwP/CPAN-Testers-Data-Release-0.05/lib/CPAN/Testers/Data/Release.pm",
+      "package" : "CPAN::Testers::Data::Release"
+   }
+]

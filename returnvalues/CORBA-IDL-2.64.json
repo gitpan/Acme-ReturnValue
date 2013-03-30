@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _Init {\n    my $self = shift;\n    my ($parser) = @_;\n    $self->line_stamp($parser);\n}",
+      "file" : "/var/tmp/arv_O29af5/CORBA-IDL-2.64/lib/CORBA/IDL/Node.pm",
+      "package" : "CORBA::IDL::Node"
+   }
+]

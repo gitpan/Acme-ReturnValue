@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.07'",
+      "file" : "/var/tmp/arv_VqKy70/Cog-0.07/lib/Cog.pm",
+      "package" : "Cog"
+   }
+]

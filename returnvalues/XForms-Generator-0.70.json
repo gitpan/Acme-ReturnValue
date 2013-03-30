@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub parse {\n\tmy($self,$params)=@_;\n\t\n\tmy $inst=$params->{$inst_param};\n\tdie \"No instance data in params\" unless $inst;\n\tprint STDERR \"$inst\\n\" if $self->{debug} > 1;\n\tdelete $params->{$inst_param};\n\n\n\t$self->{parser}||=XML::LibXML->new;\n\tmy $doc=$self->{parser}->parse_string(HTML::Entities::decode($inst));\n\tmy $root=$doc->documentElement;\n\n\tprint STDERR 'IN ','-' x 40,\"\\n\",$doc->toString(1), \"\\n\" if $self->{debug};\n\n\twhile (my($k,$v) = each(%$params)) {\n\t\t$v=~s/\\0/ /g;\n\t\tprint STDERR \"$k=$v\\n\" if $self->{debug} > 1;\n\t\tmy($node)=$root->findnodes($k);\n\t\tnext unless $node;\t\t\n\t\t\n\t\tmy $type=$node->nodeType;\n\t\tif ($type == XML_ELEMENT_NODE) {\n\t\t\tmy $new=$doc->createTextNode($v);\n\t\t\tmy $old=$node->firstChild;\n\t\t\t$node->replaceChild($new,$old);\n\t\t} elsif ($type == XML_ATTRIBUTE_NODE) {\n\t\t\t$node->setValue($v);\n\t\t} else {\t\t\t\t\n\t\t\tdie \"$type not found\\n\";\n\t\t}\n\t}\n\tprint STDERR 'OUT ','-' x 40,\"\\n\",$doc->toString(1), \"\\n\" if $self->{debug};\n\treturn $doc;\n}",
+      "file" : "/var/tmp/arv_wI1GWf/XForms-Generator-0.70/xsl/xhtml/PostFilter.pm",
+      "package" : "PostFilter"
+   }
+]

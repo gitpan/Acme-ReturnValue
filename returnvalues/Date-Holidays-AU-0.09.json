@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _compute {\n\tmy ($day, $month, $year, $params) = @_;\n\tmy ($date) = Time::Local::timelocal(0,0,0,$day,($month - 1),$year);\n\tmy ($sec, $min, $hour, $wday, $yday, $isdst);\n\tmy (@holidays);\n\tpush @holidays, sprintf(\"%02d%02d\", $month, $day);\n\tif ($params->{day_in_lieu}) {\n\t\t($sec, $min, $hour, $day, $month, $year, $wday, $yday, $isdst) = localtime($date);\n\t\tif ($wday == 0) {\n\t\t\tif ($daysInMonth[$month] == $day) {\n\t\t\t\tif ($month == 11) {\n\t\t\t\t\t$day = 1;\n\t\t\t\t\t$month = 0;\n\t\t\t\t\t$year += 1;\n\t\t\t\t} else {\n\t\t\t\t\t$day = 1;\n\t\t\t\t\t$month += 1;\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\t$day += 1;\n\t\t\t}\n\t\t\tpush @holidays, sprintf(\"%02d%02d\",($month + 1),$day);\n\t\t} elsif ($wday == 6) {\n\t\t\tif ($daysInMonth[$month] == $day) {\n\t\t\t\tif ($month == 11) {\n\t\t\t\t\t$day = 1;\n\t\t\t\t\t$month = 0;\n\t\t\t\t\t$year += 1;\n\t\t\t\t} else {\n\t\t\t\t\t$day = 1;\n\t\t\t\t\t$month += 1;\n\t\t\t\t}\n\t\t\t} elsif ($daysInMonth[$month] == ($day + 1)) {\n\t\t\t\tif ($month == 11) {\n\t\t\t\t\t$day = 1;\n\t\t\t\t\t$month = 0;\n\t\t\t\t\t$year += 1;\n\t\t\t\t} else {\n\t\t\t\t\t$day = 1;\n\t\t\t\t\t$month += 1;\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\t$day += 2;\n\t\t\t}\n\t\t\tpush @holidays, sprintf(\"%02d%02d\",($month + 1),$day);\n\t\t}\n\t}\t\n\treturn (@holidays);\n}",
+      "file" : "/var/tmp/arv_adcZZm/Date-Holidays-AU-0.09/lib/Date/Holidays/AU.pm",
+      "package" : "Date::Holidays::AU"
+   }
+]

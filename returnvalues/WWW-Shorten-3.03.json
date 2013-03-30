@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0",
+      "file" : "/var/tmp/arv_1gyuBD/WWW-Shorten-3.03/lib/WWW/Shorten/TinyClick.pm",
+      "package" : "WWW::Shorten::TinyClick"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0",
+      "file" : "/var/tmp/arv_1gyuBD/WWW-Shorten-3.03/lib/WWW/Shorten/MakeAShorterLink.pm",
+      "package" : "WWW::Shorten::MakeAShorterLink"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0",
+      "file" : "/var/tmp/arv_1gyuBD/WWW-Shorten-3.03/lib/WWW/Shorten/LinkToolbot.pm",
+      "package" : "WWW::Shorten::LinkToolbot"
+   }
+]

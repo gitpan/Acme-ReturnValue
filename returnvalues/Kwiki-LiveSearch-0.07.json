@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::LiveSearch",
+      "file" : "/var/tmp/arv_nZhs9G/Kwiki-LiveSearch-0.07/lib/Kwiki/LiveSearch.pm",
+      "package" : "Kwiki::LiveSearch"
+   }
+]

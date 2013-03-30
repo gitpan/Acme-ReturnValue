@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub removeNamedItemNS {\n    my ($self, $nsUri, $locName) = @_;\n    $self->[3] && die(XML::Sablotron::DOM::NO_MODIFICATION_ALLOWED_ERR);\n    my $old = $self->getNamedItemNS($nsUri, $locName);\n    $old || die(XML::Sablotron::DOM::NOT_FOUND_ERR);\n    my $parent = $self->[0]->[0];\n    $parent->_removeChild($parent, $old, $self->[0]->[1]);\n    return $old;\n}",
+      "file" : "/var/tmp/arv_UAKTKJ/XML-Sablotron-1.01/DOM/DOM.pm",
+      "package" : "XML::Sablotron::DOM"
+   }
+]

@@ -1,0 +1,50 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub inject {\n  my ($self, $count, @genomes) = @_;\n\n  unless ($self->{INIT}) {\n    carp \"can't inject() before init()\";\n    return undef;\n  }\n\n  my $ind = $self->{INDIVIDUAL};\n\n  my @newInds;\n  for my $i (1 .. $count) {\n    my $genes = shift @genomes;\n\n    if ($genes) {\n      push @newInds => $ind->newSpecific($genes, $self->{INITARGS});\n    } else {\n      push @newInds => $ind->newRandom  ($self->{INITARGS});      \n    }\n  }\n\n  $_->fitness($self->{FITFUNC}) for @newInds;\n\n  push @{$self->{PEOPLE}} => @newInds;\n\n  return 1;\n}",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic.pm",
+      "package" : "AI::Genetic"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub vectorUniform {\n  my ($prob, $mom, $dad) = @_;\n\n  return 0 if rand > $prob;\n\n  my (@c1, @c2);\n  for my $i (0 .. $#{$dad}) {\n    if (rand > 0.5) {\n      push @c1 => $mom->[$i];\n      push @c2 => $dad->[$i];\n    } else {\n      push @c2 => $mom->[$i];\n      push @c1 => $dad->[$i];\n    }\n  }\n\n  return (\\@c1, \\@c2);\n}",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/OpCrossover.pm",
+      "package" : "AI::Genetic::OpCrossover"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub resetScore { $_[0]{CALCED} = 0 }",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/Individual.pm",
+      "package" : "AI::Genetic::Individual"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub genes {\n  my $self = shift;\n\n  return wantarray ? @{$self->{GENES}} : [@{$self->{GENES}}];\n}",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/IndBitVector.pm",
+      "package" : "AI::Genetic::IndBitVector"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub genericStrategy {\n  my ($ga, $Xop, $selOp, $selArgs) = @_;\n\n\n  my $pop = $ga->people;\n\n  my $size = $ga->size;\n  my $ind  = $ga->indType;\n\n  my @newPop;\n\n  my $crossProb = $ga->crossProb;\n\n  my @mutArgs = ($ga->mutProb);\n  my $mutOp = 'bitVector';\n  if      ($ind =~ /IndRangeVector/) {\n    $mutOp = 'rangeVector';\n    push @mutArgs => $pop->[0]->ranges;\n  } elsif ($ind =~ /IndListVector/) {\n    $mutOp = 'listVector';\n    push @mutArgs => $pop->[0]->lists;\n  }\n\n  my ($ssub, $xsub, $msub);\n  {\n    no strict 'refs';\n    $ssub = \\&{\"AI::Genetic::OpSelection::$selOp\"};\n    $xsub = \\&{\"AI::Genetic::OpCrossover::$Xop\"};\n    $msub = \\&{\"AI::Genetic::OpMutation::$mutOp\"};\n  }\n\n  for my $i (1 .. $size/2) {\n    my @parents = $ssub->(@$selArgs);\n    @parents < 2 and push @parents => $ssub->(@$selArgs);\n\n    my @cgenes  = $xsub->($crossProb, map scalar $_->genes, @parents);\n\n    unless (ref $cgenes[0]) {\n      @cgenes = map scalar $_->genes, @parents;\n    }\n\n    $_ = $msub->(@mutArgs, $_) for @cgenes;\n\n    push @newPop => map $pop->[0]->new($_), @cgenes;\n  }\n\n  my $fit = $pop->[0]->fitness;\n  $_->fitness($fit) for @newPop;\n\n  $ga->people(AI::Genetic::OpSelection::topN([@$pop, @newPop], $size));\n}",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/Defaults.pm",
+      "package" : "AI::Genetic::Defaults"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub listVector {\n  my ($prob, $lists, $genes) = @_;\n\n  my $i = -1;\n  for my $g (@$genes) {\n    $i++;\n    next if rand > $prob;\n\n    my $new;\n\n    if (@{$lists->[$i]} == 1) {\n      $new = $lists->[$i][0];\n    } else {\n      do {\n\t$new = $lists->[$i][rand @{$lists->[$i]}];\n      } while $new eq $g;\n    }\n\n    $g = $new;\n  }\n\n  return $genes;\n}",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/OpMutation.pm",
+      "package" : "AI::Genetic::OpMutation"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub lists { $_[0]{LISTS} }",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/IndListVector.pm",
+      "package" : "AI::Genetic::IndListVector"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ranges { $_[0]{RANGES} }",
+      "file" : "/var/tmp/arv_J7M0xR/AI-Genetic-0.05/Genetic/IndRangeVector.pm",
+      "package" : "AI::Genetic::IndRangeVector"
+   }
+]

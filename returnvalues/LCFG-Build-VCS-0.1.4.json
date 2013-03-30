@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub tagversion {\n    my ( $self, $version ) = @_;\n\n    my $module = $self->module;\n\n    warn \"Tagging $module at version $version\\n\";\n\n    $self->update_changelog($version);\n\n    my $dir = $self->workdir;\n\n    $self->run_cmd( 'commit', '--message', \"$module release: $version\", $dir )\n        or die \"Could not mark release for $dir at $version\\n\";\n\n    my $tag_base = $self->tag_base();\n\n    eval { $self->run_infocmd( 'list', $tag_base ) };\n    if ( $@ ) {\n        warn \"Creating tag base directory for $module\\n\";\n        $self->run_cmd( 'mkdir', '--message', \"Creating tag base directory for $module\", $tag_base );\n    }\n\n    my $tag = $self->gen_tag($version);\n\n    my $tagurl = $self->tag_url($tag);\n\n\n    $self->run_cmd( 'update', $dir );\n\n    $self->run_cmd( 'copy', '--message', \"Tagging $module at $tag\", $dir, $tagurl );\n\n    $self->run_cmd( 'update', $dir );\n\n    return;\n}",
+      "file" : "/var/tmp/arv_7Cj83k/LCFG-Build-VCS-0.1.4/lib/LCFG/Build/VCS/SVN.pm",
+      "package" : "LCFG::Build::VCS::SVN"
+   }
+]

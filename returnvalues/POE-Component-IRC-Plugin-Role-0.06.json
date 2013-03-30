@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Moosified Plugins ahoy!'",
+      "file" : "/var/tmp/arv_PdTpgJ/POE-Component-IRC-Plugin-Role-0.06/lib/POE/Component/IRC/Plugin/Role.pm",
+      "package" : "POE::Component::IRC::Plugin::Role"
+   }
+]

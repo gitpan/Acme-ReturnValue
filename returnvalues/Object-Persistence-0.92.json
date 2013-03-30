@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'True Value'",
+      "file" : "/var/tmp/arv_S6nhyW/Object-Persistence-0.92/lib/Persistence/Database.pm",
+      "package" : "Persistence::Database"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'True Value'",
+      "file" : "/var/tmp/arv_S6nhyW/Object-Persistence-0.92/lib/Persistence/Object/Simple.pm",
+      "package" : "Persistence::Object::Simple"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'True Value.'",
+      "file" : "/var/tmp/arv_S6nhyW/Object-Persistence-0.92/examples/Plist.pm",
+      "package" : "Plist"
+   }
+]

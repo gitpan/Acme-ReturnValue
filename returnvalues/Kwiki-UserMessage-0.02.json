@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::UserMessage",
+      "file" : "/var/tmp/arv_No02BC/Kwiki-UserMessage-0.02/lib/Kwiki/UserMessage.pm",
+      "package" : "Kwiki::UserMessage"
+   }
+]

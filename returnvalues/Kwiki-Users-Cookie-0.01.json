@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Users::Cookie",
+      "file" : "/var/tmp/arv_rwHz6q/Kwiki-Users-Cookie-0.01/lib/Kwiki/Users/Cookie.pm",
+      "package" : "Kwiki::Users::Cookie"
+   }
+]

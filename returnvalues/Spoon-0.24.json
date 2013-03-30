@@ -1,0 +1,128 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub load_hub {\n    $self->destroy_hub;\n    my $hub = $self->hub(@_);\n    $hub->main($self);\n    $self->init;\n    return $hub;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon.pm",
+      "package" : "Spoon"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub store_metadata {\n    my $metadata = $self->{metadata}\n      or die \"No metadata for content object\";\n    $metadata->store;\n    return $self;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/ContentObject.pm",
+      "package" : "Spoon::ContentObject"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    print $self->report\n      if $self->auto_print;\n    warn $self->report\n      if $self->auto_warn;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Trace.pm",
+      "package" : "Spoon::Trace"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub msg {\n    warn @_ unless $self->quiet;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Command.pm",
+      "package" : "Spoon::Command"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register {\n    $self->hub->registry->add(action => $self->class_id, 'process')\n      if $self->can('process');\n    return $self;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Plugin.pm",
+      "package" : "Spoon::Plugin"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _newlines_filter {\n    if (length $_[0]) {\n        $_[0] =~ s/\\015\\012/\\n/g;\n        $_[0] =~ s/\\015/\\n/g;\n        $_[0] .= \"\\n\"\n          unless $_[0] =~ /\\n\\z/;\n    }\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/CGI.pm",
+      "package" : "Spoon::CGI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub wafl_error {\n    join '',\n      '<span class=\"wafl_error\">{',\n      $self->method,\n      ': ',\n      $self->arguments,\n      '}</span>';\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Formatter.pm",
+      "package" : "Spoon::Formatter"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub update {\n    return $self;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/MetadataObject.pm",
+      "package" : "Spoon::MetadataObject"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub fetch {\n    require Storable;\n    my $prefix = $self->prefix;\n    my $jar = { \n        map {\n            (my $key = $_) =~ s/^\\Q$prefix\\E//;\n            my $object = eval { Storable::thaw(CGI::cookie($_)) };\n            $@ ? () : ($key => $object) \n        }\n        grep { /^\\Q$prefix\\E/ } CGI::cookie() \n    };\n    $self->jar($jar);\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Cookie.pm",
+      "package" : "Spoon::Cookie"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub index_list {\n    my $list = io(shift);\n    my $index = io($list . '.db')->dbm('DB_File')->rdonly;\n    unless ($index->exists) {\n        $index->assert->open;\n        $index->close;\n    }\n    unless ($list->exists) {\n        my $mtime = $index->mtime;\n        $list->print('');\n        for (sort keys %$index) {\n            $list->print(\"$_\\n\");\n        }\n        $index->close;\n        $list->close;\n        $list->utime($mtime - 1);\n    }\n    if ($list->mtime > $index->mtime) {\n        my %copy = %$index;\n        $index->close;\n        $index->rdonly(0)->rdwr(1)->open;\n        for my $key ($list->chomp->slurp) {\n            $key =~ s/^\\s*(.*?)\\s*$/$1/;\n            next unless $key;\n            $index->{$key} = 1;\n            delete $copy{$key};\n        }\n        for my $key (keys %copy) {\n            delete $index->{$key};\n        }\n        $index->rdonly(1)->rdwr(0)->close;\n    }\n    return $index;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/IndexList.pm",
+      "package" : "Spoon::IndexList"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub name {\n    $self->{name} = shift if @_;\n    return $self->{name} if defined $self->name;\n    $self->{name} = $self->uri_unescape($self->id);\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/DataObject.pm",
+      "package" : "Spoon::DataObject"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    $self->remove_hooks;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Hub.pm",
+      "package" : "Spoon::Hub"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compress_lib {\n    die \"Must be run from the module source code directory\\n\"\n      unless -d 'lib' and -f 'Makefile.PL';\n    unshift @INC,'lib';\n    my $source_dir = shift\n      or die \"No source directory specified\\n\";\n    die \"Invalid source directory '$source_dir'\\n\"\n      unless -d $source_dir;\n    map {\n        my $class_name = $_;\n        my $class_id = $class_name->class_id;\n        $self->hub->config->add_config(\n            +{ \"${class_id}_class\" => $class_name }\n        );\n        warn \"Compressing $class_name\\n\" unless $self->quiet;\n        $self->hub->$class_id->compress_files($source_dir);\n    }\n    grep {\n        my $name = $_;\n        eval \"require $name\";\n        die $@ if $@;\n        UNIVERSAL::can($name, 'compress_files')\n          and $name !~ /::(Installer)$/;\n    } map {\n        my $name = $_->name;\n        ($name =~ s/^lib\\/(.*)\\.pm$/$1/) ? do {\n            $name =~ s/\\//::/g;\n            $name;\n        } : ();\n    } io('lib')->All_Files;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Installer.pm",
+      "package" : "Spoon::Installer"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub last_modified {\n    scalar gmtime;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Headers.pm",
+      "package" : "Spoon::Headers"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub prompt {\n    print shift;\n    io('-')->chomp->getline;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Base.pm",
+      "package" : "Spoon::Base"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub process {\n    my $template = shift;\n    my @templates = (ref $template eq 'ARRAY')\n      ? @$template \n      : $template;\n    return join '', map {\n        $self->render($_, $self->all, @_)\n    } @templates;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Template.pm",
+      "package" : "Spoon::Template"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub cancel {\n    $self->code(undef);\n    return ();\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Hooks.pm",
+      "package" : "Spoon::Hooks"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub remove_tree {\n    my $directory = shift;\n    require File::Path;\n    umask 0000;\n    File::Path::rmtree($directory);\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Utils.pm",
+      "package" : "Spoon::Utils"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub default_plugin_classes { () }",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Config.pm",
+      "package" : "Spoon::Config"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "field wafl => {}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Registry.pm",
+      "package" : "Spoon::Registry"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub render {\n    my $template = shift;\n\n    my $output;\n    my $t = $self->template_object;\n    eval {\n        $t->process($template, {@_}, \\$output) or die $t->error;\n    };\n    die \"Template Toolkit error:\\n$@\" if $@;\n    return $output;\n}",
+      "file" : "/var/tmp/arv_VTknwe/Spoon-0.24/lib/Spoon/Template/TT2.pm",
+      "package" : "Spoon::Template::TT2"
+   }
+]

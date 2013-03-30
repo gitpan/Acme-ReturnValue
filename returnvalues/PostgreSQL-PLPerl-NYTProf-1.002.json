@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "require Devel::NYTProf",
+      "file" : "/var/tmp/arv_ouiypy/PostgreSQL-PLPerl-NYTProf-1.002/lib/PostgreSQL/PLPerl/NYTProf.pm",
+      "package" : "PostgreSQL::PLPerl::NYTProf"
+   }
+]

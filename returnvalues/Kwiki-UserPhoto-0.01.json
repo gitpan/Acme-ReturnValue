@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::UserPhoto",
+      "file" : "/var/tmp/arv_guRWQ2/Kwiki-UserPhoto-0.01/lib/Kwiki/UserPhoto.pm",
+      "package" : "Kwiki::UserPhoto"
+   }
+]

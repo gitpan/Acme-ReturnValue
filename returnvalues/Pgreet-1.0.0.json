@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ExecObjMason {\n  my $Interp_obj_args = shift;\n  my $comp_path = shift;\n  my $Transfer = shift;\n\n  my $Mason_obj = HTML::Mason::Interp->new(%{$Interp_obj_args});\n\n  $Mason_obj->exec($comp_path, $Transfer);\n}",
+      "file" : "/var/tmp/arv_5SOVoV/Pgreet-1.0.0/Pgreet/ExecMason.pm",
+      "package" : "Pgreet::ExecMason"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ExecObjEmbperl {\n  my $Embperl_args = shift;\n\n  Embperl::Object::Execute($Embperl_args);\n}",
+      "file" : "/var/tmp/arv_5SOVoV/Pgreet-1.0.0/Pgreet/ExecEmbperl.pm",
+      "package" : "Pgreet::ExecEmbperl"
+   }
+]

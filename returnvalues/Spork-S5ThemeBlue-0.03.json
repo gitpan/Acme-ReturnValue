@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.03'",
+      "file" : "/var/tmp/arv_hzZDvE/Spork-S5ThemeBlue-0.03/lib/Spork/S5ThemeBlue.pm",
+      "package" : "Spork::S5ThemeBlue"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*pr = \\&showprogress",
+      "file" : "/var/tmp/arv_3NsI75/Progress-PV-0.02/lib/Progress/PV.pm",
+      "package" : "Progress::PV"
+   }
+]

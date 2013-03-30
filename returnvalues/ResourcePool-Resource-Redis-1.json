@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub create_resource {\n\tmy ($self) = @_;\n\treturn ResourcePool::Resource::Redis->new(%{$self->{'args'}});\n}",
+      "file" : "/var/tmp/arv_l7VyxD/ResourcePool-Resource-Redis-1/lib/ResourcePool/Factory/Redis.pm",
+      "package" : "ResourcePool::Factory::Redis"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n\tmy ($self) = @_;\n\t$self->close();\n}",
+      "file" : "/var/tmp/arv_l7VyxD/ResourcePool-Resource-Redis-1/lib/ResourcePool/Resource/Redis.pm",
+      "package" : "ResourcePool::Resource::Redis"
+   }
+]

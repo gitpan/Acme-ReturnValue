@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub qi {\n    my $self = shift;\n    $self->{qi} = shift if @_;\n    $self->{qi};\n}",
+      "file" : "/var/tmp/arv_3pxymd/Module-TestConfig-0.05/lib/Module/TestConfig.pm",
+      "package" : "Module::TestConfig"
+   }
+]

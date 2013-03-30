@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"All of the real action is in Devel::Trepan::CmdProcessor::Command::Shell.pm\"",
+      "file" : "/var/tmp/arv_LMoB6j/Devel-Trepan-Shell-1.4/lib/Devel/Trepan/Shell.pm",
+      "package" : "Devel::Trepan::Shell"
+   }
+]

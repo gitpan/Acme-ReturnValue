@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q(\"With thanks to the 2012 QA Hackathon\")",
+      "file" : "/var/tmp/arv_D802eX/CPAN-Testers-WWW-Reports-Query-Reports-0.06/lib/CPAN/Testers/WWW/Reports/Query/Reports.pm",
+      "package" : "CPAN::Testers::WWW::Reports::Query::Reports"
+   }
+]

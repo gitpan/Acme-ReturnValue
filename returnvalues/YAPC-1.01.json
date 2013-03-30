@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$YAPC::Venue::VERSION = '1.01'",
+      "file" : "/var/tmp/arv_3Z2sz_/YAPC-1.01/YAPC/Venue.pm",
+      "package" : "YAPC"
+   }
+]

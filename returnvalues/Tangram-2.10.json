@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub includes_or\n{\n\tmy ($self, @items) = @_;\n\tmy ($coll, $memdef) = @$self;\n\tmy $coll_tid = $coll->root_table;\n\tmy $item_class = $memdef->{class};\n\tmy $item_tid;\n\tmy $storage = $coll->{storage};\n\tmy $schema = $storage->{schema};\n\n\tmy (@targets_fwd, @targets_rev);\n\tmy $objects = Set::Object->new\n\t    ($coll,\n\t    );\n\n\tforeach my $item (@items) {\n\t    if (ref($item))\n\t\t{\n\t\t    if ($item->isa('Tangram::Expr::QueryObject'))\n\t\t\t{\n\t\t\t    $item_tid = $item->object->table($item_class);\n\t\t\t    push @targets_fwd, (\"t\".$item_tid.\".$memdef->{coll}\");\n\t\t\t    $objects->insert($item->object);\n\t\t\t}\n\t\t    else\n\t\t\t{\n\t\t\t    push @targets_rev, ($storage->export_object($item));\n\t\t\t}\n\t\t}\n\t    else\n\t\t{\n\t\t    push @targets_rev, $storage->{export_id}->($item);\n\t\t}\n\t}\n\n\tmy $expr;\n\tif (@targets_fwd) {\n\t    my  $joined_targets = join(',', @targets_fwd);\n\t    $expr =\n\t    Tangram::Expr::Filter->new\n\t\t    (\n\t\t     expr => \"(t$coll_tid.$schema->{sql}{id_col} IN ($joined_targets))\",\n\t\t     tight => 120,\n\t\t     objects => $objects,\n\t\t    );\n\t}\n\tif (@targets_rev) {\n\n\t    my $remote = $storage->remote($item_class);\n\t    my $item_tid = $remote->object->table($item_class);\n\n\t    my $joined_targets = join(',', @targets_rev);\n\t    my $new_expr = \n\t\tTangram::Expr::Filter->new\n\t\t\t(\n\t\t\t expr => \"(t$item_tid.$schema->{sql}{id_col} in ($joined_targets))\",\n\t\t\t tight => 100,\n\t\t\t objects => $objects,\n\t\t\t);\n\n\t    if ($expr) {\n\t\treturn ( ( $self->includes($remote) & $new_expr ) | $expr );\n\t    }\n\n\t    return ( $self->includes($remote) & $new_expr );\n\t}\n\treturn $expr;\n\n}",
+      "file" : "/var/tmp/arv_tbnQDM/Tangram-2.10/lib/Tangram/Expr/Coll/FromOne.pm",
+      "package" : "Tangram::Expr::Coll::FromOne"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use overload\n    '<' => \\&includes,\n    fallback => 1",
+      "file" : "/var/tmp/arv_tbnQDM/Tangram-2.10/lib/Tangram/Expr/Coll/FromMany.pm",
+      "package" : "Tangram::Expr::Coll::FromMany"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_export_cols {\n  my ($self, $context) = @_;\n  my $table = $self->{table};\n  map { map { [ $table, $_ ] } $_->get_export_cols($context) } $self->get_direct_fields()\n}",
+      "file" : "/var/tmp/arv_tbnQDM/Tangram-2.10/lib/Tangram/Schema/Class.pm",
+      "package" : "Tangram::Schema::Class"
+   }
+]

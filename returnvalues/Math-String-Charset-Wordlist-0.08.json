@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DELETE\n  {\n  my $self = shift;\n\n  _free($self->{_obj}) if $self->{_obj};\n  }",
+      "file" : "/var/tmp/arv_MbxMNm/Math-String-Charset-Wordlist-0.08/lib/Math/String/Charset/Wordlist.pm",
+      "package" : "Math::String::Charset::Wordlist"
+   }
+]

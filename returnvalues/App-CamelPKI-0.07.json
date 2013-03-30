@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "require My::Tests::Below unless caller",
+      "file" : "/var/tmp/arv_adrUEL/App-CamelPKI-0.07/lib/App/CamelPKI/Sys.pm",
+      "package" : "App::CamelPKI::Sys"
+   }
+]

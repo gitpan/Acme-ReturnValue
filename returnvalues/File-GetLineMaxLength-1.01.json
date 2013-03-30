@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getline {\n  my ($Self, $MaxLength) = (shift, shift);\n\n  my $EOL = $Self->{EOL};\n  my $Buffer = \\$Self->{Buffer};\n\n  $_[0] = 0 if @_;\n\n  while (1) {\n    my $FoundLineLen = index($$Buffer, $EOL);\n\n    if ($FoundLineLen != -1) {\n\n      if (!$MaxLength || $FoundLineLen <= $MaxLength) {\n        return substr($$Buffer, 0, $FoundLineLen + length($EOL), '');\n\n      } else {\n        $_[0] = 1 if @_;\n        return substr($$Buffer, 0, $MaxLength, '');\n      }\n\n    } else {\n\n      if ($MaxLength && length($$Buffer) > $MaxLength + length($EOL)) {\n        $_[0] = 1 if @_;\n        return substr($$Buffer, 0, $MaxLength, '');\n      }\n    }\n\n    my $BytesRead = read($Self->{Fd}, $$Buffer, $Self->{ReadSize}, length($$Buffer));\n    defined($BytesRead) || die \"getline failed: $!\";\n\n    if ($BytesRead == 0) {\n      return substr($$Buffer, 0, length($$Buffer), '');\n    }\n\n  }\n\n  die \"Unexpected exit from loop\";\n}",
+      "file" : "/var/tmp/arv_gVMT2O/File-GetLineMaxLength-1.01/lib/File/GetLineMaxLength.pm",
+      "package" : "File::GetLineMaxLength"
+   }
+]

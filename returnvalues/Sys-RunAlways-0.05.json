@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "INIT {\n    no warnings;\n\n    print( STDERR \"Add __END__ to end of script '$0' to be able use the features of Sys::RunAlways\\n\" ),exit 2\n     if tell( *main::DATA ) == -1;\n\n    exit 0 if !flock main::DATA,LOCK_EX | LOCK_NB;\n\n    printf STDERR \"'%s' has been started at %s\\n\", $0, scalar time\n      if !$silent;\n}",
+      "file" : "/var/tmp/arv_z4wNfJ/Sys-RunAlways-0.05/lib/Sys/RunAlways.pm",
+      "package" : "Sys::RunAlways"
+   }
+]

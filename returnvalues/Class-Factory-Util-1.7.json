@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _scandir\n{\n    my $dir = shift;\n\n    return unless -d $dir;\n\n    opendir DIR, $dir\n\tor confess (\"Cannot open directory $dir: $!\");\n\n    my @packages =\n        ( map { substr($_, 0, length($_) - 3) }\n          grep { substr($_, -3) eq '.pm' && -f \"$dir/$_\" }\n          readdir DIR\n        );\n\n    closedir DIR\n\tor confess(\"Cannot close directory $dir: $!\" );\n\n    return @packages;\n}",
+      "file" : "/var/tmp/arv_vHcLMu/Class-Factory-Util-1.7/lib/Class/Factory/Util.pm",
+      "package" : "Class::Factory::Util"
+   }
+]

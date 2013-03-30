@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "require 5.001",
+      "file" : "/var/tmp/arv_2fKarL/Mail-Addressbook-Convert-1.1/Convert.pm",
+      "package" : "MAIL::CONVERT"
+   }
+]

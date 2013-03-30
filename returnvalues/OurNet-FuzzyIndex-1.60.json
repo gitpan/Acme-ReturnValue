@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n    my $self = shift;\n\n    $self->sync if UNIVERSAL::can($self, 'sync');\n\n    undef $self->{obj};\n    undef $self->{db};\n\n    foreach my $num (0 .. $self->{subcount} - 1) {\n        undef $self->{subobj}[$num];\n        undef $self->{subdb}[$num];\n    }\n}\n\n1",
+      "file" : "/var/tmp/arv_j4VuH8/OurNet-FuzzyIndex-1.60/FuzzyIndex.pm",
+      "package" : "OurNet::FuzzyIndex"
+   }
+]

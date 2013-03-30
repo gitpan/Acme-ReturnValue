@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Relations::Family::VERSION",
+      "file" : "/var/tmp/arv_a9dGOl/Relations-Family-0.94/Family.pm",
+      "package" : "Relations::Family"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Relations::Family::Member::VERSION",
+      "file" : "/var/tmp/arv_a9dGOl/Relations-Family-0.94/Family/Member.pm",
+      "package" : "Relations::Family::Member"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Relations::Family::Lineage::VERSION",
+      "file" : "/var/tmp/arv_a9dGOl/Relations-Family-0.94/Family/Lineage.pm",
+      "package" : "Relations::Family::Lineage"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Relations::Family::Rivalry::VERSION",
+      "file" : "/var/tmp/arv_a9dGOl/Relations-Family-0.94/Family/Rivalry.pm",
+      "package" : "Relations::Family::Rivalry"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$Relations::Family::Value::VERSION",
+      "file" : "/var/tmp/arv_a9dGOl/Relations-Family-0.94/Family/Value.pm",
+      "package" : "Relations::Family::Value"
+   }
+]

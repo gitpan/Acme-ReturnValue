@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_OK {\n\tmy ($self, $cs, $ds) = @_;\n\n\treturn (1, 'Registration Required')\n\t\tif ($ds->{'content'} =~ m{<title>Please register</title>}si);\n\n\tunless($ds->{content} =~ m{<div class=\"content\">}si) {\n\t\treturn (99, 'Unknown Error');\n\t}\n\n\treturn (0);\n}",
+      "file" : "/var/tmp/arv_W9yVpP/Bundle-WWW-Scraper-News-0.01/lib/WWW/Scraper/CNN.pm",
+      "package" : "WWW::Scraper::CNN"
+   }
+]

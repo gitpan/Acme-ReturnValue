@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__ if 'first require'",
+      "file" : "/var/tmp/arv_6BuUj6/Primeval-0.02/lib/Primeval.pm",
+      "package" : "Primeval"
+   }
+]

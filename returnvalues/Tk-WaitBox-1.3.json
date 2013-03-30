@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub unShow {\n    my($wd) = @_;\n\n    return unless $wd->{Shown};\n    $wd->{CanFrame}->destroy if defined($wd->{CanFrame});\n    $wd->{CanFrame} = undef;\n    $wd->parent->configure(-cursor => 'top_left_arrow');\n\n    $wd->grab('release');\n    $wd->withdraw;\n    $wd->parent->update;\n    $wd->{Shown} = 0;\n}",
+      "file" : "/var/tmp/arv_Hq1GvW/Tk-WaitBox-1.3/WaitBox.pm",
+      "package" : "Tk::WaitBox"
+   }
+]

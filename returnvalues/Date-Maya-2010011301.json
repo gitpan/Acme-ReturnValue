@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub maya_to_julian ($) {\n    die \"Failed to supply argument to maya_to_julian\\n\" unless @_;\n\n    my $maya = shift;\n\n    die \"Undefined argument to maya_to_julian\\n\" unless defined $maya;\n\n    my @parts = split /\\./ => $maya;\n    die \"Illegal argument `$maya' to maya_to_julian\\n\"\n         unless 5 == @parts && !grep {/\\D/} @parts;\n    $parts [0] = 0 if $parts [0] == $max_baktun;\n\n    my $julian = $epoch;\n\n    my $mod = 1;\n    my $i   = 0;\n    foreach my $part (reverse @parts) {\n        if ($part >= $date_parts -> [$i] -> [1]) {\n            die \"Out of bounds argument to maya_to_julian\\n\";\n        }\n        $julian += $part * $mod;\n        $mod    *= $date_parts -> [$i] -> [1];\n        $i ++;\n    }\n\n    $julian;\n}",
+      "file" : "/var/tmp/arv_7GNYcO/Date-Maya-2010011301/lib/Date/Maya.pm",
+      "package" : "Date::Maya"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "%Docserver::Config::Config =\n\t(\n\t'port'\t\t=>\t5455,\n\t'clients'\t=>\t[\n\t\t\t\t\t{\n\t\t\t\t\t'mask' => '^127\\.0\\.0\\.1$',\n\t\t\t\t\t'accept' => 1,\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t'mask' => '\\.fi\\.muni\\.cz$',\n\t\t\t\t\t'accept' => 1,\n\t\t\t\t\t},\n\t\t\t\t],\n\n\t'tmp_dir'\t=>\t'C:\\\\tmp\\\\docserver.tmp',\n\t'ChunkSize'\t=>\t128 * 512,\n\t'ps'\t\t=>\t'Generic PostScript Printer on FILE:',\n\t'ps1'\t\t=>\t'Adobe Generic PS1 on FILE:',\n\t'excel.ps'\t=>\t'Adobe Generic PS na FILE:',\n\t'excel.ps1'\t=>\t'Adobe Generic PS1 na FILE:',\n\t'pidfile'\t=>\t'docserver.pid',\n\t'logfile'\t=>\t1,\n\t)",
+      "file" : "/var/tmp/arv_cLuG0p/Docserver-1.12/lib/Docserver/Config.pm",
+      "package" : "Docserver::Config"
+   }
+]

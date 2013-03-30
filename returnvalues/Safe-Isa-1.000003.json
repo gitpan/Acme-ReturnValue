@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our ($_isa, $_can, $_does, $_DOES) = map {\n  my $method = $_;\n  sub { my $obj = shift; $obj->$_call_if_object($method => @_) }\n} qw(isa can does DOES)",
+      "file" : "/var/tmp/arv_v3mH03/Safe-Isa-1.000003/lib/Safe/Isa.pm",
+      "package" : "Safe::Isa"
+   }
+]

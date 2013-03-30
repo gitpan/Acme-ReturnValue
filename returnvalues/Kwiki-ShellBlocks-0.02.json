@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::ShellBlocks",
+      "file" : "/var/tmp/arv_5x5YsY/Kwiki-ShellBlocks-0.02/lib/Kwiki/ShellBlocks.pm",
+      "package" : "Kwiki::ShellBlocks"
+   }
+]

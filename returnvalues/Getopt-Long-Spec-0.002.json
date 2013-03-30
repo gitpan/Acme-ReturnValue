@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1 && q{ I do these things because, well, who's stopping me? }",
+      "file" : "/var/tmp/arv_YDeV1b/Getopt-Long-Spec-0.002/lib/Getopt/Long/Spec.pm",
+      "package" : "Getopt::Long::Spec"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1 && q{there's nothing like re-inventing the wheel!}",
+      "file" : "/var/tmp/arv_YDeV1b/Getopt-Long-Spec-0.002/lib/Getopt/Long/Spec/Parser.pm",
+      "package" : "Getopt::Long::Spec::Parser"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1 && q{this is probably crazier than the last thing I wrote}",
+      "file" : "/var/tmp/arv_YDeV1b/Getopt-Long-Spec-0.002/lib/Getopt/Long/Spec/Builder.pm",
+      "package" : "Getopt::Long::Spec::Builder"
+   }
+]

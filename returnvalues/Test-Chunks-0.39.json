@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_url {\n    $self->assert_scalar(@_);\n    my $url = shift;\n    CORE::chomp($url);\n    require LWP::Simple;\n    LWP::Simple::get($url);\n}",
+      "file" : "/var/tmp/arv_G_Htfa/Test-Chunks-0.39/lib/Test/Chunks.pm",
+      "package" : "Test::Chunks"
+   }
+]

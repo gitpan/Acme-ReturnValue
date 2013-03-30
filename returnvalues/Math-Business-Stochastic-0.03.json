@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub picklast {\n    my $n = int(shift);\n    return splice @_,-$n;\n}",
+      "file" : "/var/tmp/arv_mnJ2U8/Math-Business-Stochastic-0.03/lib/Math/Business/Stochastic.pm",
+      "package" : "Math::Business::Stochastic"
+   }
+]

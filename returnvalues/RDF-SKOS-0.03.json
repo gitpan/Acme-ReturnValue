@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all odds\"",
+      "file" : "/var/tmp/arv_dLUJRg/RDF-SKOS-0.03/lib/RDF/SKOS.pm",
+      "package" : "RDF::SKOS"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all odds\"",
+      "file" : "/var/tmp/arv_dLUJRg/RDF-SKOS-0.03/lib/RDF/SKOS/Concept.pm",
+      "package" : "RDF::SKOS::Concept"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all odds\"",
+      "file" : "/var/tmp/arv_dLUJRg/RDF-SKOS-0.03/lib/RDF/SKOS/Redland.pm",
+      "package" : "RDF::SKOS::Redland"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all odds\"",
+      "file" : "/var/tmp/arv_dLUJRg/RDF-SKOS-0.03/lib/RDF/SKOS/Scheme.pm",
+      "package" : "RDF::SKOS::Scheme"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"against all odds\"",
+      "file" : "/var/tmp/arv_dLUJRg/RDF-SKOS-0.03/lib/RDF/SKOS/OeNACE.pm",
+      "package" : "RDF::SKOS::OeNACE"
+   }
+]

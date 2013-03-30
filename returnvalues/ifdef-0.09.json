@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub import {\n\n    warn \"The '\".\n          __PACKAGE__.\n          \"' pragma is not supposed to be called from source\\n\"\n           if ( (caller)[2] ) and ( $_[0] ne '_testing_' and !shift );\n\n    shift;\n\n    my @ignored;\n    foreach (@_) {\n        if ( m#^:?all$# ) {\n            $ALL= 1;\n        }\n\n        elsif ( m#^:?selected$# ) {\n            $ALL= 0;\n        }\n\n        elsif ( m#^[A-Z_0-9]+$# ) {\n            $ENV{$_}= 1;\n        }\n\n        else {\n            push @ignored, $_;\n        }\n    }\n\n    warn \"Ignored parameters: @ignored\\n\" if @ignored;\n\n    &reset;\n\n    return Filter::Util::Call::filter_add( sub {\n        if ( ( $STATUS= Filter::Util::Call::filter_read() ) > 0 ) {\n            &oneline;\n        }\n        $STATUS;\n    } );\n}",
+      "file" : "/var/tmp/arv_zJahbk/ifdef-0.09/lib/ifdef.pm",
+      "package" : "ifdef"
+   }
+]

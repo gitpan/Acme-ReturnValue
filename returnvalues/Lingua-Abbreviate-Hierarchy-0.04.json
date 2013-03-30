@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Ceci n'est pas 'Modern Perl'\"",
+      "file" : "/var/tmp/arv_RDWSLv/Lingua-Abbreviate-Hierarchy-0.04/lib/Lingua/Ab/H.pm",
+      "package" : "Lingua::Ab::H"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"Ceci n'est pas 'Modern Perl'\"",
+      "file" : "/var/tmp/arv_RDWSLv/Lingua-Abbreviate-Hierarchy-0.04/lib/Lingua/Abbreviate/Hierarchy.pm",
+      "package" : "Lingua::Abbreviate::Hierarchy"
+   }
+]

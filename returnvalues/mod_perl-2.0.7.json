@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$ModPerl::MethodLookup::VERSION   = 2.000007",
+      "file" : "/var/tmp/arv_Vq5Wp2/mod_perl-2.0.7/lib/ModPerl/DummyVersions.pm",
+      "package" : "APR::Util"
+   }
+]

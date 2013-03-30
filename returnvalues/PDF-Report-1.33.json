@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub gen_page_footer {\n  my $self = shift;\n  my $total = shift;\n  my $type = shift;\n\n  for (my $i = 1; $i <= $total; $i++) {\n    next if ( $self->{no_page_num}->[$i - 1] );\n    my $page = $self->{pdf}->openpage($i);\n    my $txtobj = $page->text;\n    my $txt;\n    my $font;\n    if ($type eq 'roman') {\n      require Text::Roman;\n      $font = $self->{pdf}->corefont(\"Times-roman\");\n      $txt = Text::Roman::int2roman($i). \" of \" .\n             Text::Roman::int2roman($total);\n    } else {\n      $font = $self->{pdf}->corefont(\"Helvetica\");\n      $txt = \"Page $i of $total\";\n    }\n    my $size = 10;\n    $txtobj->font($font, $size);\n    $txtobj->translate($self->{Xmargin}, 8);\n    $txtobj->text($txt);\n    $size = $self->getStringWidth($DATE);\n    $txtobj->translate($self->{PageWidth} - $self->{Xmargin} - $size, 8);\n    $txtobj->text($DATE);\n  }\n}",
+      "file" : "/var/tmp/arv_22SeOu/PDF-Report-1.33/lib/PDF/Report.pm",
+      "package" : "PDF::Report"
+   }
+]

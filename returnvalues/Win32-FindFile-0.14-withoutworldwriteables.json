@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use strict",
+      "file" : "/var/tmp/arv_uLyPlM/Win32-FindFile-0.14/lib/Win32/FindFile/FileData.pm",
+      "package" : "Win32::FileFind::FileData"
+   }
+]

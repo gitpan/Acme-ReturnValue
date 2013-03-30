@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub LookUp {\n    my %args=   @_;\n    my $from=   rel2abs( $args{-from} );\n    my $upto=   $args{-upto};\n    my $add=    $args{-add};\n\n    warn \"$Pkg finds no $from; perhaps chdir()ed before 'use $Pkg'?\\n\"\n        if  ! -e $from  &&  $^W;\n    if(  -l $from  ) {\n        $from= rel2abs( readlink($from), dirname($from) );\n    }\n    my $dir= $from;\n    $dir= dirname( $dir )\n        if  ! -d _;\n    while(  1  ) {\n        my $find= catdir( $dir, $upto );\n        if(  -e $find  ) {\n            my $path= catdir( $dir, $add );\n            if(  -d $path  ) {\n                require lib;\n                lib->import( $path );\n                return $path;\n            }\n            return require $path;\n        }\n        my $up= dirname( $dir );\n        die \"$Pkg can't find $find in ancestor directory of $from.\\n\"\n            if  $up eq $dir;\n        $dir= $up;\n    }\n}",
+      "file" : "/var/tmp/arv_MtXqry/File-FindLib-0.001001/FindLib.pm",
+      "package" : "File::FindLib"
+   }
+]

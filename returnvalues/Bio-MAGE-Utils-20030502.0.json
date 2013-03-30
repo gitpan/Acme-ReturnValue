@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub characters {\n  Bio::MAGE::XML::Handler::characters(@_);\n}",
+      "file" : "/var/tmp/arv_wxLgqk/Bio-MAGE-Utils-20030502.0/MAGE/XML/Handler/DocumentHandler.pm",
+      "package" : "Bio::MAGE::XML::Handler::DocumentHandler"
+   }
+]

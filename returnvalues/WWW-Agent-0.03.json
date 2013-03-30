@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $REVISION = '$Id: Director.pm,v 1.2 2005/03/19 10:02:12 rho Exp $'",
+      "file" : "/var/tmp/arv_6kWoUr/WWW-Agent-0.03/lib/WWW/Agent/Plugins/Director.pm",
+      "package" : "WWW::Agent::Plugins::Director"
+   }
+]

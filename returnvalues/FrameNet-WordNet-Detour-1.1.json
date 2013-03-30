@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_frames_with_weight {\n  my $self = shift;\n  my $weight = shift;\n  my @l = keys %{$self->{'sorted'}->{$weight}};\n  return \\@l;\n}",
+      "file" : "/var/tmp/arv_Qg8Mj8/FrameNet-WordNet-Detour-1.1/lib/FrameNet/WordNet/Detour/Data.pm",
+      "package" : "FrameNet::WordNet::Detour::Data"
+   }
+]

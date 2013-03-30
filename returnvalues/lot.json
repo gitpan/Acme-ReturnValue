@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "qw/Everybody in the funhouse says they want out\n          But we're taking our time, cause we're in love with time/",
+      "file" : "/var/tmp/arv_7mtnLb/Lot.pm",
+      "package" : "Auction::Lot"
+   }
+]

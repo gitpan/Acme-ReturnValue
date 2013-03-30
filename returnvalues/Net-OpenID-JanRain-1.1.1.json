@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub encodeResponse {\n    my ($self, $response) = @_;\n    \n    my $encode_as = $response->whichEncoding();\n\n    if ($encode_as eq 'kvform') {\n        my $wr = $webResponseClass->new(200, {}, $response->encodeToKVForm);\n    }\n    elsif($encode_as eq 'url') {\n\n        if ($response->signed) {\n            unless ($response->fields->{sig}) {\n                my $signatory = $self->{signatory};\n                $signatory->sign($response);\n            }\n        }\n        my $wr = $webResponseClass->new(302, \n            {Location => $response->encodeToURL}, undef);\n    }\n}",
+      "file" : "/var/tmp/arv_auAfUO/Net-OpenID-JanRain-1.1.1/lib/Net/OpenID/JanRain/Server.pm",
+      "package" : "Net::OpenID::JanRain::Server::Request"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub parseOpenIDLinkRel {\n    my $html = shift;\n    \n    my @linkhashes = parseLinkAttrs($html);\n\n    my ($server, $delegate);\n    for my $link (@linkhashes) {\n        if (lc($link->{rel}) eq 'openid.server') {\n            my %foo = %$link;\n            $server = $link->{href};\n        }\n        if (lc($link->{rel}) eq 'openid.delegate') {\n            $delegate = $link->{href};\n        }\n    }\n    return ($delegate, $server);\n}",
+      "file" : "/var/tmp/arv_auAfUO/Net-OpenID-JanRain-1.1.1/lib/Net/OpenID/JanRain/Consumer/LinkParser.pm",
+      "package" : "Net::OpenID::JanRain::Consumer::LinkParser"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n    my $caller = shift;\n    my ($dbh, $tablenames) = @_;\n\n    $dbh->{AutoCommit} = 1;\n    $dbh->{RaiseError} = 1;\n\n    my $class = ref($caller) || $caller;\n\n    defined($tablenames) or $tablenames = {};\n\n    my $settings_table = ($tablenames->{settings_table} || 'settings');\n    my $assoc_table = ($tablenames->{assoc_table} || 'associations');\n    my $nonce_table = ($tablenames->{nonce_table} || 'nonces');\n\n    my $self = {\n        settings_table_name => $settings_table,\n        assoc_table_name => $assoc_table,\n        nonce_table_name => $nonce_table,\n        max_nonce_age => 6 * 60 * 60, \n        sql_cache => {},\n        dbh => $dbh,\n        AUTH_KEY_LEN => 20,\n        sqlstrings => $sqlstrings\n    };\n\n    bless($self, $class);\n}",
+      "file" : "/var/tmp/arv_auAfUO/Net-OpenID-JanRain-1.1.1/lib/Net/OpenID/JanRain/Stores/MySQLStore.pm",
+      "package" : "Net::OpenID::JanRain::Stores::MySQLStore"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub to_html {\n    $self->block_text;\n}",
+      "file" : "/var/tmp/arv_vf_O8B/Kwiki-HtmlBlocks-0.11/lib/Kwiki/HtmlBlocks.pm",
+      "package" : "Kwiki::HtmlBlocks"
+   }
+]

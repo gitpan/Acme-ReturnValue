@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load('SDL::OpenGL::Cg', $VERSION)",
+      "file" : "/var/tmp/arv_AMLgTd/SDL-OpenGL-Cg-0.01/lib/SDL/OpenGL/Cg.pm",
+      "package" : "SDL::OpenGL::Cg"
+   }
+]

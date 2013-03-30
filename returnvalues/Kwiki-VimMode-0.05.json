@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::VimMode",
+      "file" : "/var/tmp/arv_g27muu/Kwiki-VimMode-0.05/lib/Kwiki/VimMode.pm",
+      "package" : "Kwiki::VimMode"
+   }
+]

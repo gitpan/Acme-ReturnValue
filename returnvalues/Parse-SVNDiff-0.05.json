@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub apply_fh {\n    my $self = shift;\n    my $source_fh = shift;\n    seek($source_fh, 0, 0) or die $!;\n    my $target_fh = shift;\n    seek($target_fh, 0, 0) or die $!;\n\n    while ( my $window = $self->next_window ) {\n\t$window->apply_fh($source_fh, $target_fh);\n    }\n}",
+      "file" : "/var/tmp/arv_lqbCNo/Parse-SVNDiff-0.05/lib/Parse/SVNDiff.pm",
+      "package" : "Parse::SVNDiff"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our @EXPORT = qw(SELECTOR_SOURCE SELECTOR_TARGET SELECTOR_NEW)",
+      "file" : "/var/tmp/arv_lqbCNo/Parse-SVNDiff-0.05/lib/Parse/SVNDiff/Instruction.pm",
+      "package" : "Parse::SVNDiff::Instruction"
+   }
+]

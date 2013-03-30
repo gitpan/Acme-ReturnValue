@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _unique {\n  my ($self, $nodes) = @_;\n  return (0, 0) unless $nodes;\n  my $count = scalar @$nodes;\n  my %count;\n  $count{ $_->content }++ foreach @$nodes;\n  my $count_unique = (keys %count);\n  return ($count, $count_unique);\n}",
+      "file" : "/var/tmp/arv_pkXMBZ/Perl-Metric-Basic-0.31/lib/Perl/Metric/Basic.pm",
+      "package" : "Perl::Metric::Basic"
+   }
+]

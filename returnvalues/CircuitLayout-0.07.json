@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\nuse base ('CircuitLayout::Coord','CircuitLayout::Edge','CircuitLayout::Rectangle','CircuitLayout::Text'); \n$CircuitLayout::DefaultClass = 'CircuitLayout' unless defined $CircuitLayout::DefaultClass;\n\n\nsub version()\n{\n    return $VERSION;\n}\n\n\nsub revision()\n{\n    return $revision;\n}\n\nsub distance\n{\n    my ($x1,$y1,$x2,$y2) = @_;\n    sqrt( (($x2 - $x1)**2) + (($y2 - $y1)**2) );\n}\n\n1;\n}",
+      "file" : "/var/tmp/arv_nRkNUA/CircuitLayout-0.07/lib/CircuitLayout.pm",
+      "package" : "CircuitLayout"
+   }
+]

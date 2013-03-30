@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _compare_checksum {\n  my ($Self, $Prefix, $Path, $Type, $Stat) = @_;\n\n  my ($DbContents, $CompareCB) = @$Self{qw(DbContents CompareCB)};\n\n  my $Existing = delete $DbContents->{$Path};\n  if (!$Existing) {\n    $CompareCB->($Self->{Context}, 'n', $Type, $Self->{Prefix}, $Path);\n  } else {\n    my @NewDetails = _generate_checksum(@_);\n    my @ExistingDetails = @$Existing;\n\n    if (\"@NewDetails\" ne \"@ExistingDetails\") {\n      $CompareCB->($Self->{Context}, 'c', $Type, $Self->{Prefix}, $Path);\n    }\n  }\n}",
+      "file" : "/var/tmp/arv_hDbZy3/File-Set-1.02/Set.pm",
+      "package" : "File::Set"
+   }
+]

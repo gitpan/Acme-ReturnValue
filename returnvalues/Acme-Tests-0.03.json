@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_correct {\n    my ($q,$a) = @_;\n    $a =~ s/^\\s+//gs;\n    $a =~ s/\\s+$//gs;\n    return ($self->tests->{$q} eq lc($a))\n}",
+      "file" : "/var/tmp/arv_nRz1My/Acme-Tests-0.03/lib/Acme/Tests.pm",
+      "package" : "Acme::Tests"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.01'",
+      "file" : "/var/tmp/arv_nRz1My/Acme-Tests-0.03/lib/Acme/Tests/Perl.pm",
+      "package" : "Acme::Tests::Perl"
+   }
+]

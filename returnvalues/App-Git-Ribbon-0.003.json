@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.003'",
+      "file" : "/var/tmp/arv_0EFPde/App-Git-Ribbon-0.003/lib/App/Git/Ribbon.pm",
+      "package" : "App::Git::Ribbon"
+   }
+]

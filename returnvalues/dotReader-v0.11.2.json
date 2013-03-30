@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n  my $self = shift;\n  my (%args) = @_;\n  $self->SUPER::new(\n    port => $self->USE_PORT,\n    %args\n  );\n}",
+      "file" : "/var/tmp/arv_zwU1QD/dotReader-v0.11.2/test_lib/server.pm",
+      "package" : "test_lib::server"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init {\n  my $package = shift;\n  my ($frame) = @_;\n\n  my $data_dir = $package->DATA_DIR;\n  my %infos = $package->load_yml_files($data_dir);\n  foreach my $item (keys(%infos)) {\n    my $info = $infos{$item};\n    my $url = $info->{url};\n    my $icon =  $data_dir . $info->{icon};\n    unless(defined($url)) {\n      $frame->error(\"url is undefined in '$item'\");\n      next;\n    }\n    unless(-e $icon) {\n      next;\n      $frame->error(\"missing icon file '$icon' in '$item'\");\n    }\n    my $tool = $frame->menumap->append_toolbar(\n      name    => 'dr_info',\n      icon    => $icon,\n      tooltip => $info->{tooltip},\n      action  => sub { $frame->bv_manager->load_url($url); },\n    );\n  }\n}",
+      "file" : "/var/tmp/arv_zwU1QD/dotReader-v0.11.2/example_plugins/InfoButton/dotplug-Wx/InfoButton.pm",
+      "package" : "dtRdr::GUI::Wx::Plugins::InfoButton"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub EXPORT_BASE {\n    return map { __PACKAGE__ . '::' .$_ }\n        qw(has WWW XXX YYY ZZZ);\n}",
+      "file" : "/var/tmp/arv_I2FZ2w/Gloom-0.17/lib/Gloom.pm",
+      "package" : "Gloom"
+   }
+]

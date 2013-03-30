@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "croak <<__DEPRECATED__",
+      "file" : "/var/tmp/arv_txta2V/File-Find-Match-1.0/lib/File/Find/Match/Sugar.pm",
+      "package" : "File::Find::Match::Sugar"
+   }
+]

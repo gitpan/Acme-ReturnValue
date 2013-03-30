@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_feed_urls { values %{ $hfds }, values %{ $vfds }, $mw_url }",
+      "file" : "/var/tmp/arv_fqFfrM/XML-RSS-FOXSports-0.02/lib/XML/RSS/FOXSports/Utils.pm",
+      "package" : "XML::RSS::FOXSports::Utils"
+   }
+]

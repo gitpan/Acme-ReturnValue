@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "compile",
+      "file" : "/var/tmp/arv_t1AfXg/PITA-0.60/lib/PITA/Guest/Server.pm",
+      "package" : "PITA::Guest::Server"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "compile",
+      "file" : "/var/tmp/arv_t1AfXg/PITA-0.60/lib/PITA/Guest/Server/HTTP.pm",
+      "package" : "PITA::Guest::Server::HTTP"
+   }
+]

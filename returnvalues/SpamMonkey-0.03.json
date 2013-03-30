@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub do_code_rule {\n    my ($self, $rule,$text_r) = @_;\n    my ($pack, $args) = $rule->{code} =~ /(\\S+)\\((.*)\\)$/ or die(\"Urgh? $rule->{code}\");\n    my @args = ($args =~ m/['\"](.*?)['\"]\\s*(?:,\\s*|$)/g);\n    $pack = \"SpamMonkey::Test::\".$pack;\n    $pack->require or return;\n    if (!$self->{init}{$pack} and $pack->can(\"init\")) {\n        $pack->init($self->{conf});\n        $self->{init}{$pack}++;\n    }\n    $pack->test($self, $text_r, @args);\n}",
+      "file" : "/var/tmp/arv_rsonkb/SpamMonkey-0.03/lib/SpamMonkey.pm",
+      "package" : "SpamMonkey"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub def_whitelist_from_rcvd {\n    my ($class, $conf, $value) = @_;\n    my ($addr, $ip) = $class->_split_params($conf, $value, 2);\n    push @{$conf->{def_whitelist_from_rcvd}}, [ $addr, $ip ];\n}",
+      "file" : "/var/tmp/arv_rsonkb/SpamMonkey-0.03/lib/SpamMonkey/Config.pm",
+      "package" : "SpamMonkey::Config"
+   }
+]

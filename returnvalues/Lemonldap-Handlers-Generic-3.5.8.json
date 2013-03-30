@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION_INTERNAL  = \"3.0.0\"",
+      "file" : "/var/tmp/arv_EGoVBF/Lemonldap-Handlers-Generic-3.5.8/lib/Lemonldap/Handlers/Generic.pm",
+      "package" : "Lemonldap::Handlers::Generic"
+   }
+]

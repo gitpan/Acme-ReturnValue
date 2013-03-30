@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $fields = {\n\t\t\t\tref => { Description => \"Message::Description\", Schema=>\"Message::Schema\",},\n\t\t\t\tstring => [ qw(id xlink_href xlink_role) ],\n\t\t\t       }",
+      "file" : "/var/tmp/arv_eHYNqc/ebXML-Message-0.03/lib/ebXML/Message/Reference.pm",
+      "package" : "ebXML::Message::Reference"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $fields = { string => [ qw( VALUE Type) ] }",
+      "file" : "/var/tmp/arv_eHYNqc/ebXML-Message-0.03/lib/ebXML/Message/Service.pm",
+      "package" : "ebXML::Message::Service"
+   }
+]

@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_aTrIas/Dist-Zilla-TravisCI-0.96/lib/Dist/Zilla/Role/TravisYML.pm",
+      "package" : "Dist::Zilla::Role::TravisYML"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_aTrIas/Dist-Zilla-TravisCI-0.96/lib/Dist/Zilla/Plugin/TravisYML.pm",
+      "package" : "Dist::Zilla::Plugin::TravisYML"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_aTrIas/Dist-Zilla-TravisCI-0.96/lib/Dist/Zilla/App/CommandHelper/ChainSmoking.pm",
+      "package" : "Dist::Zilla::App::CommandHelper::ChainSmoking"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_aTrIas/Dist-Zilla-TravisCI-0.96/lib/Dist/Zilla/App/Command/chainsmoke.pm",
+      "package" : "Dist::Zilla::App::Command::chainsmoke"
+   }
+]

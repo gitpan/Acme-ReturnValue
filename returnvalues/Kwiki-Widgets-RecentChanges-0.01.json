@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_pages {\n    my $number = $self->preferences->widget_recent_changes_numbers->value;\n    my @pages = sort { \n        $b->modified_time <=> $a->modified_time \n    } $self->pages->recent_by_count($number);\n    return \\@pages;\n}",
+      "file" : "/var/tmp/arv_JRkFBh/Kwiki-Widgets-RecentChanges-0.01/lib/Kwiki/Widgets/RecentChanges.pm",
+      "package" : "Kwiki::Widgets::RecentChanges"
+   }
+]

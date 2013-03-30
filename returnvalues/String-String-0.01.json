@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub UNIVERSAL::to_s\n{\n  wantarray ? map{ defined($_) ? \"$_\" : '' } @_ : join('', &UNIVERSAL::to_s);\n}",
+      "file" : "/var/tmp/arv_KE_rLB/String-String-0.01/lib/UNIVERSAL/to_s.pm",
+      "package" : "UNIVERSAL::to_s"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub string\n{\n  wantarray ? map{ defined($_) ? \"$_\" : '' } @_ : join('', &string);\n}",
+      "file" : "/var/tmp/arv_KE_rLB/String-String-0.01/lib/String/String.pm",
+      "package" : "String::String"
+   }
+]

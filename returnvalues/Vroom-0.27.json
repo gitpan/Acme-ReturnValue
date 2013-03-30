@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub makePublisher {\n    my $self = shift;\n    my $input = $self->input;\n    die \"Error: This doesn't look like a Vroom directory.\\n\"\n      unless -f $input;\n    die \"Error: This doesn't look like a git repository.\\n\"\n      unless -d '.git';\n    die \"Error: No writeable /tmp directory on this system.\\n\"\n      unless -d '/tmp' and -w '/tmp';\n    die \"Error: There is no git branch called 'gh-pages'.\\n\" .\n        \"Perhaps you should run `git branch gh-pages` first.\\n\"\n        unless `git branch` =~ /\\bgh-pages\\b/;\n    io('ghpublish')->print(<<'...');\n\n    chmod 0755, 'ghpublish';\n\n    print <<'...';\n}",
+      "file" : "/var/tmp/arv_JHkGeg/Vroom-0.27/lib/Vroom.pm",
+      "package" : "Vroom"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use warnings",
+      "file" : "/var/tmp/arv_JHkGeg/Vroom-0.27/lib/Vroom/Mo.pm",
+      "package" : "Vroom::Mo"
+   }
+]

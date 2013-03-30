@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n    my $package = join('::', splice(@_, 0, 2));\n\n    eval \"use $package\";\n    die $@ if $@;\n\n    return $package->new(@_);\n}",
+      "file" : "/var/tmp/arv_6SGE4r/OurNet-1.60/OurNet.pm",
+      "package" : "OurNet"
+   }
+]

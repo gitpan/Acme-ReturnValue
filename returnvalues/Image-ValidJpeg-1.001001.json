@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load('Image::ValidJpeg', $VERSION)",
+      "file" : "/var/tmp/arv_WYruBJ/Image-ValidJpeg-1.001001/lib/Image/ValidJpeg.pm",
+      "package" : "Image::ValidJpeg"
+   }
+]

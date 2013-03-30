@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{ another hope, another dream, another truth ... installed by the machine }",
+      "file" : "/var/tmp/arv_0963Wp/CPAN-Testers-WWW-Reports-Parser-0.04/lib/CPAN/Testers/WWW/Reports/Parser.pm",
+      "package" : "CPAN::Testers::WWW::Reports::Parser"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{ Kein Zur�ck f�r dich }",
+      "file" : "/var/tmp/arv_0963Wp/CPAN-Testers-WWW-Reports-Parser-0.04/lib/CPAN/Testers/WWW/Reports/Parser/YAML.pm",
+      "package" : "CPAN::Testers::WWW::Reports::Parser::YAML"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{ Is all that we or seem, but a dream within a dream ? }",
+      "file" : "/var/tmp/arv_0963Wp/CPAN-Testers-WWW-Reports-Parser-0.04/lib/CPAN/Testers/WWW/Reports/Parser/JSON.pm",
+      "package" : "CPAN::Testers::WWW::Reports::Parser::JSON"
+   }
+]

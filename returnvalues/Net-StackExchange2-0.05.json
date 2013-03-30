@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub new {\n\tmy ($class, $params) = @_;\n    my $self = $params;\n    bless $self, $class;\n\n\t*errors_all = subname(\n\t   \"Net::StackExchange2::V2::Errors::errors_all\",\n\t   no_params(\"errors\"),\n\t);\n\t*errors = subname(\n\t   \"Net::StackExchange2::V2::Errors::errors\",\n\t   one_param(\"errors\"),\n\t);\n    return $self;\n}",
+      "file" : "/var/tmp/arv_9MO4ZU/Net-StackExchange2-0.05/lib/Net/StackExchange2/V2/Errors.pm",
+      "package" : "Net::StackExchange2::V2::Errors"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub read {\n    my $me  = shift;\n    my $evt = shift;\n\n    debug(\"recvd reply\");\n\n    my($proto, $data, $content) = read_protocol_no_content( $me, $evt );\n    return unless $proto;\n\n    $me->{status_ok} = 1;\n\n    eval {\n        my $resp = AC::MrGamoo::Protocol->decode_reply( $proto, $data );\n        for my $update ( @{$resp->{status}} ){\n            AC::MrGamoo::Kibitz::Peers->update( $update );\n        }\n    };\n    if(my $e = $@){\n        verbose(\"error: $e\");\n    }\n    $me->shut();\n}",
+      "file" : "/var/tmp/arv_M3hTiz/AC-MrGamoo-1/lib/AC/MrGamoo/Kibitz/Client.pm",
+      "package" : "AC::MrGamoo::Kibitz::Client"
+   }
+]

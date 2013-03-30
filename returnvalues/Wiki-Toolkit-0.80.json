@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub perm_check {\n    my $dbh = shift;\n    eval {\n        my $sth = $dbh->prepare(\"CREATE TABLE dbtest (test int)\");\n        $sth->execute;\n\n        $sth = $dbh->prepare(\"CREATE INDEX dbtest_index ON dbtest (test)\");\n        $sth->execute;\n\n        $sth = $dbh->prepare(\"DROP TABLE dbtest\");\n        $sth->execute;\n    };\n    return $@;\n}",
+      "file" : "/var/tmp/arv_71MTSe/Wiki-Toolkit-0.80/lib/Wiki/Toolkit/Setup/Database.pm",
+      "package" : "Wiki::Toolkit::Setup::Database"
+   }
+]

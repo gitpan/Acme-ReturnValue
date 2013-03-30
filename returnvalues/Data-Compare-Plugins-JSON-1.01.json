@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "[\n\t['JSON::PP::Boolean',     \\&_compare_object_and_object],\n\t['JSON::PP::Boolean', '', \\&_compare_object_and_scalar],\n\t['JSON::XS::Boolean',     \\&_compare_object_and_object],\n\t['JSON::XS::Boolean', '', \\&_compare_object_and_scalar],\n]",
+      "file" : "/var/tmp/arv_dr8072/Data-Compare-Plugins-JSON-1.01/lib/Data/Compare/Plugins/JSON.pm",
+      "package" : "Data::Compare::Plugins::JSON"
+   }
+]

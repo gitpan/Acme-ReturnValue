@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'poppet'",
+      "file" : "/var/tmp/arv_8F1Ma6/POE-Component-Server-POP3-0.10/lib/POE/Component/Server/POP3.pm",
+      "package" : "POE::Component::Server::POP3"
+   }
+]

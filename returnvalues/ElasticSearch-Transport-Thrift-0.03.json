@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub client {\n    my $self = shift;\n    my $server = shift || '';\n    if ( my $client = $self->{_client}{$$}{$server} ) {\n        return $client if $client->{input}{trans}->isOpen;\n    }\n\n    $self->{_client} = { $$ => {} }\n        unless $self->{_client}{$$};\n\n    my ( $host, $port ) = ( $server =~ /^(.+):(\\d+)$/ );\n    $self->throw( 'Param', \"Couldn't understand server '$server'\" )\n        unless $host && $port;\n\n    my $socket\n        = ElasticSearch::Transport::ThriftBackend::Thrift::Socket->new( $host,\n        $port );\n\n    my $timeout = ( $self->timeout || 10000 ) * 1000;\n    $socket->setSendTimeout($timeout);\n    $socket->setRecvTimeout($timeout);\n\n    my $transport\n        = ElasticSearch::Transport::ThriftBackend::Thrift::BufferedTransport\n        ->new($socket);\n    my $protocol\n        = ElasticSearch::Transport::ThriftBackend::Thrift::BinaryProtocol\n        ->new($transport);\n    my $client = $self->{_client}{$$}{$server}\n        = ElasticSearch::Transport::ThriftBackend::RestClient->new($protocol);\n\n    $transport->open;\n\n    return $client;\n}",
+      "file" : "/var/tmp/arv_EsEJzy/ElasticSearch-Transport-Thrift-0.03/lib/ElasticSearch/Transport/Thrift.pm",
+      "package" : "ElasticSearch::Transport::Thrift"
+   }
+]

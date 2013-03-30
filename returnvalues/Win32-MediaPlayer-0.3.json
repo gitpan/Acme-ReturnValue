@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub doMM {\nmy($cmd) = @_;\nmy $ret = \"\\0\" x 1025;\nmy $rc = $mciSendString->Call($cmd, $ret, 1024, 0);\nif($rc == 0) {\n$ret =~ s/\\0*$//;\nreturn $ret;\n}else{\nreturn \"error '$cmd': $rc\";\n}\n}",
+      "file" : "/var/tmp/arv_M91cwn/Win32-MediaPlayer-0.3/lib/Win32/MediaPlayer.pm",
+      "package" : "Win32::MediaPlayer"
+   }
+]

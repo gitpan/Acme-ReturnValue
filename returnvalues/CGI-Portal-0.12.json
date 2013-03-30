@@ -1,0 +1,104 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub activate {\n  my $conf = shift;\n  my $e;\n  my $cl;\n\n  my $cgi = new CGI();\n\n  my @v = $cgi->param;\n  my %in;\n  foreach my $f (@v){\n    my $v = $cgi->param($f);\n    $v =~ s/<.*\\r*\\n*.*>//g;\n    $in{$f} = $v;\n  }\n\n  my $rdb = CGI::Portal::RDB->new(\"DBI:$conf->{'database_type'}:database=$conf->{'database_name'};host=$conf->{'database_host'};\", $conf->{'database_user'}, $conf->{'database_passw'});\n\n  my $i = {'in',      \\%in,\n           'rdb',     $rdb,\n           'conf',    $conf};\n\n  my $c = $conf->{'actions'}[0];\n  foreach my $a (@{$conf->{'actions'}}) {\n    if ($in{'action'} eq $a) {\n      $c = $a;\n    }\n  }\n\n  if ($in{'submit'} || $in{'Submit'}) {\n    $cl = \"CGI::Portal::Controls::$c\";\n    eval \"use $cl;\";\n  } \n  if ($@ || ! ($in{'submit'} || $in{'Submit'})) {\n    $cl = \"CGI::Portal::Scripts::$c\";\n    eval \"use $cl;\";\n  }\n\n  if ($@) {\n    $cl = \"CGI::Portal::Scripts::$conf->{'actions'}[0]\";\n    eval \"use $cl;\";\n  } \n  if (! $@) {\n    $e = $cl->new($i);\n    $e->launch;\n  }\n\n  my $header = CGI::Portal::Scripts::Header->new({\n           'in',      \\%in,\n           'rdb',     $rdb,\n           'conf',    $conf});\n  $header->launch($e);\n\n  my $footer = CGI::Portal::Scripts::Footer->new({\n           'in',      \\%in,\n           'rdb',     $rdb,\n           'conf',    $conf});\n  $footer->launch($e);\n\n  print $e->{'cookies'};\n  print $cgi->header;\n  print $header->{'out'};\n  print $e->{'out'};\n  print $footer->{'out'};\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal.pm",
+      "package" : "CGI::Portal"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub exec {\n  my ($self, $sql) = @_;\n\n  unless ($self->{'dbh'}){return;}\n\n  my $sth = $self->{'dbh'}->prepare($sql);\n  $sth->execute();\n\n  return $sth;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/RDB.pm",
+      "package" : "CGI::Portal::RDB"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getcookie {\n  my $cookiename = shift;\n  my $cookie;\n  my $value;\n  if ($ENV{'HTTP_COOKIE'}) {\n    foreach (split(/; /,$ENV{'HTTP_COOKIE'})) {\n      ($cookie,$value) = split(/=/);\n      if ($cookiename eq $cookie) {\n        return $value;\n      }\n    }\n  }\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Sessions.pm",
+      "package" : "CGI::Portal::Sessions"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my ($self, $e) = @_;\n\n  $self->{'tmpl_vars'}{'result'} = $e->{'tmpl_vars'}{'result'};\n\n  $self->assign_tmpl($e->{'conf'}{'header_html'});\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/Header.pm",
+      "package" : "CGI::Portal::Scripts::Header"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my $self = shift;\n\n  $self->authenticate_user();\n  if ($self->{'user'}){\n\n    $self->assign_tmpl($self->{'conf'}{'logon_success_html'});\n  }\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/logon.pm",
+      "package" : "CGI::Portal::Scripts::logon"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my $self = shift;\n\n  $self->assign_tmpl(\"emailpw.html\");\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/emailpw.pm",
+      "package" : "CGI::Portal::Scripts::emailpw"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub input_html {\n  my $self = shift;\n  my @states = qw(Other AL AK AZ AR CA CO CT DC DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VA VT WA WV WI WY);\n\n  my $c = 0;\n  foreach my $f (@{$self->{'conf'}{'user_additional'}}) {\n    my $value = $self->{'in'}{$f} || $r->[$c];\n    $self->{'tmpl_vars'}{$f} = $value;\n    $c++;\n  }\n\n  my $state_input = $self->{'in'}{'state'} || $r->[5];\n\n  my $state = \"<select name=state>\";\n  foreach my $s (@states){\n    if ($s ne $state_input){\n      $state .=  \"<option>$s\";\n    }else{\n      $state .=  \"<option selected>$s\";\n    }\n  }\n  $state .= \"</select>\";\n\n  $self->{'tmpl_vars'}{'state'} = $state;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/profile.pm",
+      "package" : "CGI::Portal::Scripts::profile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my $self = shift;\n\n  $self->authenticate_user();\n  if ($self->{'user'}){\n\n    $self->logoff;\n    $self->{'tmpl_vars'}{'result'} = \"You are logged off.\";\n  }\n\n  $self->assign_tmpl(\"Sessions.html\");\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/logoff.pm",
+      "package" : "CGI::Portal::Scripts::logoff"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub html_form {\n  my $self = shift;\n  return <<EOF;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/register.pm",
+      "package" : "CGI::Portal::Scripts::register"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my ($self, $e) = @_;\n\n  $self->assign_tmpl($e->{'conf'}{'footer_html'});\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/Footer.pm",
+      "package" : "CGI::Portal::Scripts::Footer"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my $self = shift;\n\n  $self->authenticate_user();\n  if ($self->{'user'}){\n\n    $self->assign_tmpl(\"changepw.html\");\n  }\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Scripts/changepw.pm",
+      "package" : "CGI::Portal::Scripts::changepw"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my $self = shift;\n\n  $self->authenticate_user();\n  if ($self->{'user'}){\n  }\n\n  $self->CGI::Portal::Scripts::logon::launch();\n  return;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Controls/logon.pm",
+      "package" : "CGI::Portal::Controls::logon"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub mailit {\n  my $recipient = shift;\n  my $sender = shift;\n  my $subject = shift;\n  my $message = shift;\n  open(MAIL, \"|/usr/lib/sendmail -t\");\n  print MAIL \"To: $recipient\\n\";\n  print MAIL \"From: $sender\\n\";\n  print MAIL \"Subject: $subject\\n\\n\";\n  print MAIL \"$message\";\n  close (MAIL);\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Controls/emailpw.pm",
+      "package" : "CGI::Portal::Controls::emailpw"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub input_error {\n  my ($self, @requireds)  = @_;\n  my $input_error = 0;\n\n  foreach my $required (@requireds) {\n    if (!$self->{'in'}{$required}){\n      $self->{'tmpl_vars'}{\"${required}_msg\"} = \"Field is required\";\n      $input_error = 1;\n    }\n  }\n\n  if ($input_error) {\n    $self->{'tmpl_vars'}{'result'} = \"Missing fields, no changes made.\";\n  }\n\n  return $input_error;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Controls/profile.pm",
+      "package" : "CGI::Portal::Controls::profile"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub launch {\n  my $self = shift;\n\n  $self->authenticate_user();\n  if ($self->{'user'}){\n\n    $self->logoff;\n    $self->{'tmpl_vars'}{'result'} = \"You are logged off.\";\n  }\n\n  $self->CGI::Portal::Scripts::logon::launch();\n  return;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Controls/logoff.pm",
+      "package" : "CGI::Portal::Controls::logoff"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub register_error {\n  my ($self)  = @_;\n  my $input_error = 0;\n\n  my $r = $self->{'rdb'}->exec(\"select $self->{'conf'}{'user_index_field'} from $self->{'conf'}{'user_table'} where $self->{'conf'}{'user_user_field'} like \" . $self->{'rdb'}->escape($self->{'in'}{'user'}) . \" limit 1\")->fetch;\n  if ($r->[0]) {\n    $self->{'tmpl_vars'}{'user_msg'} = \"User name $self->{'in'}{'user'} is not available\";\n    $input_error = 1;\n  }\n\n  if ($self->{'in'}{'user'} && $self->{'in'}{'user'} =~ /[^\\w ]/i) {\n    $self->{'tmpl_vars'}{'user_msg'} = \"User names must consist of letters or numbers\";\n    $input_error = 1;\n  }\n  if ($self->{'in'}{'user'} && $self->{'in'}{'user'} =~ / /i) {\n    $self->{'tmpl_vars'}{'user_msg'} = \"User names cannot contain spaces\";\n    $input_error = 1;\n  }\n  if ($self->{'in'}{'user'} && $self->{'in'}{'user'} =~ /................/i) {\n    $self->{'tmpl_vars'}{'user_msg'} = \"User names must consist of less than 16 characters\";\n    $input_error = 1;\n  }\n\n  if ($self->{'in'}{'password'} && $self->{'in'}{'password'} !~ /..../i) {\n    $self->{'tmpl_vars'}{'password_msg'} = \"Passwords must consist of at least 4 characters\";\n    $input_error = 1;\n  }\n  if ($self->{'in'}{'cpassw'} && $self->{'in'}{'password'} ne $self->{'in'}{'cpassw'}) {\n    $self->{'tmpl_vars'}{'cpassw_msg'} = \"Please reenter and confirm password\";\n    $input_error = 1;\n  }\n\n  return $input_error;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Controls/register.pm",
+      "package" : "CGI::Portal::Controls::register"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub chpss_error {\n  my ($self)  = @_;\n  my $input_error = 0;\n\n  if ($self->{'in'}{'passw'} &&  md5_hex($self->{'in'}{'passw'}) ne $passw) {\n    $self->{'tmpl_vars'}{'passw_msg'} = \"Incorrect Password\";\n    $input_error = 1;\n  }\n\n  if ($self->{'in'}{'pass_new'} && $self->{'in'}{'pass_new'} !~ /..../i) {\n    $self->{'tmpl_vars'}{'pass_new_msg'} = \"Passwords must consist of at least 4 characters\";\n    $input_error = 1;\n  }\n\n  if ($self->{'in'}{'cpass_new'} && $self->{'in'}{'pass_new'} ne $self->{'in'}{'cpass_new'}) {\n    $self->{'tmpl_vars'}{'cpass_new_msg'} = \"Please reenter and confirm password\";\n    $input_error = 1;\n  }\n  return $input_error;\n}",
+      "file" : "/var/tmp/arv_DmGi0z/CGI-Portal-0.12/Portal/Controls/changepw.pm",
+      "package" : "CGI::Portal::Controls::changepw"
+   }
+]

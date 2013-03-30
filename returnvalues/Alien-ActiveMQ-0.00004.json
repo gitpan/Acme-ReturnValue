@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method get_version_dir ($version) {\n    if (!$version) {\n        $version = '5.2.0';\n    }\n    return dir( dist_dir('Alien-ActiveMQ'), $version );\n}\n\nmethod is_version_installed ($version) {\n    -d $self->get_version_dir($version);\n}\n\nmethod get_licence_filename ($version) {\n    my $dir = $self->get_version_dir($version);\n    return file($dir, 'LICENSE');\n}\n\nmethod run_server ($version) {\n    my $dir = $self->get_version_dir($version);\n    my @cmd = (file( $dir, 'bin', 'activemq' ));\n\n    warn(\"Running @cmd\");\n    my $h = start \\@cmd, \\undef;\n    \n    my ($stomp, $loop_count);\n    while (! $stomp) {\n        if ($loop_count++ > 300) {\n            die(\"Can't connect to ActiveMQ after trying 300 seconds.\")\n        };\n        eval {\n            $stomp = Net::Stomp->new( { hostname => 'localhost', port => 61613 } );\n        };\n        if ($@) {\n            sleep 1;\n        }\n    }\n    \n    return Scope::Guard->new(sub { \n        warn(\"Killing ApacheMQ...\");\n        $h->signal ( \"KILL\" );\n    });\n}\n\n1",
+      "file" : "/var/tmp/arv_aWHAYn/Alien-ActiveMQ-0.00004/lib/Alien/ActiveMQ.pm",
+      "package" : "Alien::ActiveMQ"
+   }
+]

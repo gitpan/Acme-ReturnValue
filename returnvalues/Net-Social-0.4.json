@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub service {\n    my $class    = shift;\n    my $service  = shift;\n    my %services = $class->_services();\n    return $services{lc($service)};\n\n}",
+      "file" : "/var/tmp/arv_R3pjQk/Net-Social-0.4/lib/Net/Social.pm",
+      "package" : "Net::Social"
+   }
+]

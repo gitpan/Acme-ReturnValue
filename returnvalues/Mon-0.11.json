@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub list_aliases {\n    my $self = shift;\n    my ($r, @d, $d, $group, $service, @allAlias, $aliasBlock, %alias);\n\n    undef $self->{ERROR};\n\n    if (!$self->{CONNECTED}) {\n    \t$self->{ERROR} = \"not connected\";\n\treturn undef;\n    }\n\n    ($r, @d) = _do_cmd ($self->{HANDLE}, \"list aliases\");\n\n    if (!defined $r) {\n\t$self->{ERROR} = \"error (@d)\";\n    \treturn undef;\n    } elsif ($r !~ /^220/) {\n\t$self->{ERROR} = $r;\n    \treturn undef;\n    }\n\n    return $r if (!defined $r);\n\n\t@allAlias = split (/\\n\\n/ ,join (\"\\n\", @d));\n\tforeach $aliasBlock (@allAlias) {\n\t\tmy(@allServices, $headerAlias, @headerAlias, $nameLine, $name, $description);\n\t\t\n\t\t@allServices = split ( /\\nservice\\s*/, $aliasBlock);\n\t\t$headerAlias = shift (@allServices);\n\t\t@headerAlias = split (/\\n/, $headerAlias);\n\t\t$nameLine = shift(@headerAlias);\n\t\t$nameLine =~ /\\Aalias\\s+(\\S+)/;\n\t\t$name = $1;\n\t\t\n\t\t$headerAlias = join(\"\\n\", @headerAlias);\n\t\t$alias{$name}{'declaration'} = ($headerAlias) ? $headerAlias : '?';\n\t\t\n\t\tforeach $service (@allServices) {\n\t\t\tmy($serviceName, @allWatch, $watch);\n\t\t\t@allWatch = split (\"\\n\", $service);\n\t\t\t$serviceName = shift(@allWatch);\n\t\t\tforeach $watch (@allWatch) {\n\t\t\t\tmy($groupWatched, $serviceWatched, @items, $url);\n\t\t\t\tif($watch =~ /\\Awatch\\s+(\\S+)\\s+service\\s+(\\S+)\\s+items\\s*(.*)\\Z/){\n\t\t\t\t\t$groupWatched   = $1;\n\t\t\t\t\t$serviceWatched = $2;\n\t\t\t\t\t@items\t\t= split(/\\s+/, $3);\n\t\t\t\t\t$alias{$name}{'service'}{$serviceName}{'watch'}{$groupWatched}{'service'}{$serviceWatched}{'items'} = [ @items ];\n\t\t\t\t\t\n\t\t\t\t}elsif($watch =~ /\\Aurl\\s+(.*)\\Z/){\n\t\t\t\t\t$url = $1;\n\t\t\t\t\t$alias{$name}{'service'}{$serviceName}{'url'} = $url;\n\t\t\t\t}\n\t\t\t}\t\t\t\n\t\t}\n\t\t\n\t}\n    return %alias;\n}",
+      "file" : "/var/tmp/arv_cMw4_U/Mon-0.11/Mon/Client.pm",
+      "package" : "Mon::Client"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dump {\n    my $self = shift;\n\n    $self->{\"BER\"}->dump;\n}",
+      "file" : "/var/tmp/arv_cMw4_U/Mon-0.11/Mon/SNMP.pm",
+      "package" : "Mon::SNMP"
+   }
+]

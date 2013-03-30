@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.01'",
+      "file" : "/var/tmp/arv_gWDg7Z/Printer-EVOLIS-0.01/lib/Printer/EVOLIS.pm",
+      "package" : "Printer::EVOLIS"
+   }
+]

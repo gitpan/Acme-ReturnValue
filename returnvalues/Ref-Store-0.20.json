@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "push @EXPORT, qw(hr_thrutil_store_kinfo hr_thrutil_get_kinfo)",
+      "file" : "/var/tmp/arv_2iRA44/Ref-Store-0.20/lib/Ref/Store/ThreadUtil.pm",
+      "package" : "Ref::Store::ThreadUtil::OldLookups"
+   }
+]

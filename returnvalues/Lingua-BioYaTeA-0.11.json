@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub objectSelf {\n    my ($twigself, $objectSelf) = @_;\n    \n    if (defined $objectSelf) {\n\t$twigself->{'objectSelf'} = $objectSelf;\n    }\n    return($twigself->{'objectSelf'});\n}",
+      "file" : "/var/tmp/arv_3NydVD/Lingua-BioYaTeA-0.11/lib/Lingua/BioYaTeA/TwigXML.pm",
+      "package" : "Lingua::BioYaTeA::TwigXML"
+   }
+]

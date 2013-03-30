@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.28'",
+      "file" : "/var/tmp/arv_MSKNPe/Task-Kensho-Dates-0.28/lib/Task/Kensho/Dates.pm",
+      "package" : "Task::Kensho::Dates"
+   }
+]

@@ -1,0 +1,86 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub toHTML{\n    my $self=shift;\n    my $html=$self->{source}->toHTML();\n    $html.=$self->{target}->toHTML();\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/Data/Align.pm",
+      "package" : "Uplug::Data::Align"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub close{\n    my $self=shift;\n    $self->{source}->close();\n    $self->{target}->close();\n    $self->SUPER::close(@_);\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/LWA.pm",
+      "package" : "Uplug::IO::LWA"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ReadSegmentsOld{\n\n    my ($stream,$data,$IDs,$lang)=@_;\n\n    if (not ref($stream)){return;}\n    if (not @{$IDs}){return;}\n    my $i=0;\n\n    if (not ref($data->{$lang})){\n\t$data->{$lang}=Uplug::Data::Lang->new();  \n    }\n    if (not ref($data->{$lang.'Sent'})){\n\t$data->{$lang.'Sent'}=Uplug::Data->new(); \n    }\n\n    my $parent=$data->addNode($lang);     \n    $data->{$lang}->setRoot($parent);     \n    my $sent=$data->{$lang.'Sent'};       \n\n    my @start=split(/\\./,$IDs->[0]);  \n    map(s/[^0-9]//,@start);           \n\n    my $fail=0;\n    while ($stream->read($sent)){          \n\tmy $id=$sent->attribute('id');     \n\tif (not grep ($_ eq $id,@{$IDs})){ \n\n\t    my @nr=split(/\\./,$id);        \n\t    map(s/[^0-9]//,@nr);           \n\n\t    foreach my $l (0..$#start){    \n\t\tif ($nr[$l]<$start[$l]){   \n\t\t    last;                  \n\t\t}                          \n\t\tif ($nr[$l]>$start[$l]){   \n\t\t    $fail++;last;          \n\t\t}\n\t    }\n\t    if ($fail>1){last;}            \n\t    next;\n\t}\n\tmy $node=$sent->root();\n\t$data->addNode($parent,$node);\n\tif ($id eq $IDs->[-1]){last;}\n\t$i++;\n    }\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/XCESalign.pm",
+      "package" : "Uplug::IO::XCESalign"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub FindDataFile{\n    my $self=shift;\n    my ($file)=@_;\n\n    if (-e $file){\n\treturn $file;\n    }\n\n\n    if ($self->{AccessMode} eq 'read'){\n\tmy $AlignFile=$self->{StreamOptions}->{file};\n\tmy $AlignDir='';\n\tif ($AlignFile=~/^(.*[\\\\\\/])([^\\\\\\/]+)$/){\n\t    $AlignDir=$1;\n\t    $AlignFile=$2;\n\t}\n\tmy $dir='';\n\tif ($file=~/^(.*[\\\\\\/])([^\\\\\\/]+)$/){\n\t    $dir=$1;\n\t    $file=$2;\n\t}\n\tif (-e \"$AlignDir$file\"){\n\t    return \"$AlignDir$file\";\n\t}\n\tif (-e \"$AlignDir$dir$file\"){\n\t    return \"$AlignDir$dir$file\";\n\t}\n\tif (not -e $file.'gz'){\n\t    return $file.'.gz';\n\t}\n    }\n    return $file;\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/LiuAlign.pm",
+      "package" : "Uplug::IO::LiuAlign"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub addheader{\n    my $self=shift;\n    $self->SUPER::addheader(@_);\n    my $header=$self->header;\n    if (ref($header) eq 'HASH'){\n\tif (defined $header->{columns}){\n\t    $self->setOption('columns',$header->{columns});\n\t}\n    }\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/Tab.pm",
+      "package" : "Uplug::IO::Tab"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub write{\n    my $self=shift;\n    my $data=shift;\n    if (not ref($data)){return 0;}\n    my $fh=$self->{'FileHandle'};\n    binmode($fh);\n    my $ref=Storable::store_fd($data,$fh);\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/Storable.pm",
+      "package" : "Uplug::IO::Storable"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub CloseAllTags{\n    my ($self)=@_;\n    if (defined $self->{OpenTagStack}){\n\twhile (@{$self->{OpenTagStack}}){\n\t    $self->CloseTag;\n\t}\n    }\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/XML.pm",
+      "package" : "Uplug::IO::XML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub readFromHandle{\n    my $self=shift;\n    my $txt=$self->SUPER::readFromHandle(@_);\n    if ($txt=~/\\<align\\s+id\\=[^\\\"\\']/){\n\t$txt=~s/(\\<align\\s+id\\=)([^\\\"\\'])/$1\\'$2/;\n    }\n    if ($txt=~/\\<\\?xml/){\n\tif ($txt!~/encoding/){\n\t    $txt=~s/\\?\\>/ encoding=\\\"iso-8859-1\\\"\\?\\>/;\n\t}\n    }\n    my @ent=();\n    while ($txt=~/\\&([^\\s\\;]+)\\;/g){\n\tif ($1 eq 'lt'){next;}\n\tif ($1 eq 'gt'){next;}\n\tif ($1 eq 'amp'){next;}\n\tpush (@ent,$1);\n    }\n    foreach (@ent){\n\tprint STDERR \"replace \\&$_\\; with \\[$_\\]!\\n\";\n\t$txt=~s/\\&$_\\;/ [$_] /gs;\n    }\n    return $txt;\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/PlugXML.pm",
+      "package" : "Uplug::IO::PlugXML"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub FindDataFile{\n    my ($file)=@_;\n    if (-f $file){return $file;}\n    if ($file!~/\\.gz$/){\n      my $new=&FindDataFile(\"$file.gz\");\n      if (-f $new){return $new;}\n    }\n    if (-f \"data/$file\"){return \"data/$file\";}\n    if (-f \"$ENV{UPLUGHOME}/$file\"){return \"$ENV{UPLUGHOME}/$file\";}\n    $file=basename($file);\n    if (-f \"data/$file\"){return \"data/$file\";}\n    if (-f \"$ENV{UPLUGHOME}/$file\"){return \"$ENV{UPLUGHOME}/$file\";}\n    return $file;\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/IO/Text.pm",
+      "package" : "Uplug::IO::Text"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub XmlDoctype{\n    my ($p,$name,$sysid,$publid,$internal)=@_;\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/XML/SubTree.pm",
+      "package" : "Uplug::XML::SubTree"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub SendFile{\n\n    my ($to,$subject,$file)=@_;\n\n    if (not -e $file){return 0;}\n\n    my $mailer=Mail::Mailer->new(\"sendmail\");\n    $mailer->open({From    => $UplugAdmin,\n\t\t   To      => $to,\n\t\t   Subject => $subject});\n\n    if ($file=~/\\.gz$/){open F,\"gzip -cd $file |\";}\n    else{open F,\"<$file\";}\n    binmode (F);\n    while (<F>){print $mailer $_;}\n    $mailer->close();\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/Web/User.pm",
+      "package" : "Uplug::Web::User"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ChangeWordLinks{\n    my $file=shift;\n    my $links=shift;\n    my $params=shift;\n\n    my $sentLink=$params->{seg};\n    print \"change links is not implemented yet!<br>\";\n    print join '+',@{$links};\n    print '<hr>';\n\n\n\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/Web/Corpus.pm",
+      "package" : "Uplug::Web::Corpus"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub write{\n    my $self=shift;\n    my $content=shift;\n\n    if (ref($content) ne 'HASH'){return 0;}\n    if ($self->{STATUS} eq 'open'){\n\tmy $fh=$self->{FH};\n\tseek ($fh,0,0);\n\tprint $fh Dumper($content);\n\ttruncate($fh,tell($fh));\n\treturn 1;\n    }\n    return 0;\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/Web/Config.pm",
+      "package" : "Uplug::Web::Config"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub find{\n    my $self=shift;\n    my @data=@_;\n    map($_=quotemeta($_),@data);\n\n    my $pattern='^'.join(':',@data).'(\\:|\\Z)';\n    my @content=$self->read();\n    my @match=grep($_=~/$pattern/,@content);\n    chomp($match[0]);\n    return wantarray ? split(/\\:/,$match[0]) : $match[0];\n}",
+      "file" : "/var/tmp/arv_2rJ7Vc/Uplug-0.3.8/lib/Uplug/Web/Process/Stack.pm",
+      "package" : "Uplug::Web::Process::Stack"
+   }
+]

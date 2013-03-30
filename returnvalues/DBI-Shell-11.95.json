@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n\tmy $sh = shift;\n \tif ($term && $term->ReadLine eq \"Term::ReadLine::Gnu\") {\n\t\tif($term && $term->history_total_bytes()) {\n\t\t\tmy $history = $sh->{completion}->{history};\n\t\t\tif ($history) {\n\t\t\t\tunless($term->WriteHistory($history)) {\n\t\t\t\t\tcarp (\"Could not write history file $history to history_file}. \");\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\t$term = undef; $sh->{term} = undef;\n}\n\nEND { }\n\n1",
+      "file" : "/var/tmp/arv_dNFpEN/DBI-Shell-11.95/lib/DBI/Shell/Completion.pm",
+      "package" : "DBI::Shell::Completion"
+   }
+]

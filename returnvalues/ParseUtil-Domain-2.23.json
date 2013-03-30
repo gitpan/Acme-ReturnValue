@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"one, but we're not the same\"",
+      "file" : "/var/tmp/arv_U5S9cd/ParseUtil-Domain-2.23/lib/ParseUtil/Domain.pm",
+      "package" : "ParseUtil::Domain"
+   }
+]

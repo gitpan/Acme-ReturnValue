@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_2NgnZo/CPS-0.18/lib/CPS.pm",
+      "package" : "CPS"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_2NgnZo/CPS-0.18/lib/CPS/Functional.pm",
+      "package" : "CPS::Functional"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_2NgnZo/CPS-0.18/lib/CPS/Governor.pm",
+      "package" : "CPS::Governor"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_2NgnZo/CPS-0.18/lib/CPS/Future.pm",
+      "package" : "CPS::Future"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_2NgnZo/CPS-0.18/lib/CPS/Governor/Simple.pm",
+      "package" : "CPS::Governor::Simple"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0x55AA",
+      "file" : "/var/tmp/arv_2NgnZo/CPS-0.18/lib/CPS/Governor/Deferred.pm",
+      "package" : "CPS::Governor::Deferred"
+   }
+]

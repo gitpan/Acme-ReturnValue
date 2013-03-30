@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{  listening to:\n    CPAN discussions at the Oslo QA Hackathon    \n}",
+      "file" : "/var/tmp/arv_9cSip5/CPAN-Mini-FromList-0.05/lib/CPAN/Mini/FromList.pm",
+      "package" : "CPAN::Mini::FromList"
+   }
+]

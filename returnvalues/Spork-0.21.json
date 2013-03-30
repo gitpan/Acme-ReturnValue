@@ -1,0 +1,62 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "const config_class => 'Spork::Config'",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork.pm",
+      "package" : "Spork"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub assert_registry {\n    use Kwiki::Plugin;\n    {\n        no warnings;\n        *Kwiki::Plugin::init = sub {};\n    }\n    $self->hub->registry->load;\n}",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Command.pm",
+      "package" : "Spork::Command"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "field formatter => {},-init => '$self->hub->formatter'",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Plugin.pm",
+      "package" : "Spork::Plugin"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub to_html {\n    $self->hub->slides->image_url($self->arguments);\n    return '';\n}",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Formatter.pm",
+      "package" : "Spork::Formatter"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use Spoon::Hub -Base",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Hub.pm",
+      "package" : "Spork::Hub"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub lwp_download {\n    my ($image_url, $image_file) = @_;\n    system \"lwp-download $image_url > /dev/null\";\n}",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Slides.pm",
+      "package" : "Spork::Slides"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub default_classes {\n    (\n        config_class => 'Spork::Config',\n        registry_class => 'Spork::Registry',\n        hub_class => 'Spork::Hub',\n        formatter_class => 'Spork::Formatter',\n        template_class => 'Spork::Template::TT2',\n        command_class => 'Spork::Command',\n        slides_class => 'Spork::Slides',\n        hooks_class => 'Spoon::Hooks',\n        cgi_class => 'Kwiki::CGI',\n        pages_class => 'Kwiki::Pages',\n        preferences_class => 'Kwiki::Preferences',\n        css_class => 'Kwiki::CSS',\n        javascript_class => 'Kwiki::Javascript',\n        cache_class => 'Kwiki::Cache',\n        kwiki_command_class => 'Kwiki::Command',\n    )\n}",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Config.pm",
+      "package" : "Spork::Config"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use Spoon::Registry -Base",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Registry.pm",
+      "package" : "Spork::Registry"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub match {\n    my $bullet = $self->bullet;\n    $self->which($1)\n      if $self->text =~ /^($bullet)(.*)\\n/m;\n    return unless\n      $self->text =~ /^$bullet(.*)\\n/m;\n    $self->set_match;\n    return 1;\n}",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Formatter/Autringy.pm",
+      "package" : "Spork::Formatter::Autringy"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub path {\n    $self->hub->config->template_path || \n      [ $self->hub->config->template_directory ];\n}",
+      "file" : "/var/tmp/arv_QvVUye/Spork-0.21/lib/Spork/Template/TT2.pm",
+      "package" : "Spork::Template::TT2"
+   }
+]

@@ -1,0 +1,98 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method _build_group_list { GroupList->new(src => $self->src) }\nmethod _build_dag        { Graph->new(directed => 1) }\n\nmethod graph {\n\n\n    $self->add_group($_) for $self->groups->flatten;\n\n    use Data::Dumper;print Dumper $self->dag;exit;\n\n    my $name = 'all_groups.dot';\n    my $w = Graph::Writer::Dot->new;\n    $w->write_graph($self->dag, $name);\n    system(\"'/c/Program Files/Graphviz2.26.3/bin/dot.exe' -Tpng -O $name\")\n        && die \"Can't graphviz\";\n}\n\nmethod add_group(Group $group) {\n    GroupMerger->new(dag      => $self->dag,\n                     group    => $group,\n                     registry => $self->registry)\n               ->merge;\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxDag.pm",
+      "package" : "Vimper::SyntaxDag"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method _build_data {\n    my $file = $self->file;\n    my $lines = [io($file)->slurp]->map(sub{chomp; $_});\n    my ($head, $tail) = ($lines->shift, $lines);\n    my @head = map { s/\\?//; $_ } split /\\t/, $head;\n    return $tail->map(sub{\n        my @v = map { s/^\\s+//; s/\\s+$//; $_ } split /\\t/;\n        return {zip @head, @v};\n    });\n}\n\nmethod _build_commands { $self->data->map(sub{ $self->_build_command($_) }) }\n\nmethod _build_command(HashRef $data) { $self->command_class->new(%$data) }\n\nmethod syntax_paths { $self->commands->map(sub{ $_->get_syntax_paths }) }    \n\nmethod command_class {\n    (my $f = $self->file) =~ s/\\.tsv//;\n    'Vimper::Command::'.\n    $f->split('_')\n      ->map(sub{ ucfirst })\n      ->join('::');\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/CommandSheet.pm",
+      "package" : "Vimper::CommandSheet"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string\n    { $self->parts->map(sub { $_->to_string })->join(\"\\t\") }\n\nmethod command   { $self->parts->[-1]->command }\nmethod key_list  { $self->parts->grep(sub{ ref($_) =~ /KeyNode/ }) }\nmethod key_count { scalar $self->key_list->flatten }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath.pm",
+      "package" : "Vimper::SyntaxPath"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method type {\n    my ($class) = ref($self) =~ /::(\\w+)$/;\n    return lc($class);\n}\n\nmethod graph_name     { $self->type }\nmethod graph_label    { $self->type }\nmethod bag_key        { undef }\nmethod label_sep      { undef }\nmethod must_merge     { 0 }            \nmethod must_not_merge { 0 }            \n\nmethod to_string { die \"Abstract method called\" }\n\nmethod escaped_to_string {\n    my $s = $self->to_string;\n    $s =~ s/\"/\\\\\"/g;\n    return $s;\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node.pm",
+      "package" : "Vimper::SyntaxPath::Node"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method graph_label    { $self->to_string }\nmethod bag_key        { 'vimperCommands' }\nmethod label_sep      { \"\\\\n\" }\nmethod must_not_merge { 1 }\n\nmethod to_string { $self->command->keys. \": \". $self->command->help }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Command.pm",
+      "package" : "Vimper::SyntaxPath::Node::Command"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string { 'number' }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Count.pm",
+      "package" : "Vimper::SyntaxPath::Node::Count"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string { 'key'. $self->idx. ':'. $self->key }\n\nmethod graph_label    { $self->key }\nmethod graph_name     { 'key'. $self->idx }\nmethod bag_key        { 'vimperKeys' }\nmethod label_sep      { \" \" }\n\nmethod escaped_key {\n    my $key = $self->key;\n    (my $clean_key = $key) =~ s/\"/\\\\\"/g;\n    return $clean_key;\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Key.pm",
+      "package" : "Vimper::SyntaxPath::Node::Key"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string  { 'op' }\nmethod must_merge { 1 }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Op.pm",
+      "package" : "Vimper::SyntaxPath::Node::Op"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string      { 'char' }\nmethod must_not_merge { 1 }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Char.pm",
+      "package" : "Vimper::SyntaxPath::Node::Char"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string   { 'init' }\nmethod must_merge  { 1 }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Init.pm",
+      "package" : "Vimper::SyntaxPath::Node::Init"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method to_string      { 'letter' }\nmethod must_not_merge { 1 }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxPath/Node/Letter.pm",
+      "package" : "Vimper::SyntaxPath::Node::Letter"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method merge {\n    $self->registry->{by_type}  ||= {};\n    $self->registry->{by_group} ||= {};\n    for ($self->grp_vertices) { $type = $_; $self->merge_or_add_node };\n    for ($self->grp_vertices) { $type = $_; $self->merge_node_edges };\n}\n\nmethod merge_or_add_node {\n    my $merge_into;\n    if ($self->has_node_of_type && ($merge_into = $self->can_merge_node))\n        { $self->register_node($merge_into) }\n    else\n        { $self->add_node }\n}\n\nmethod merge_node_edges {\n    for my $pred_type ($self->grp_predecessors($type)) {\n        $self->add_edge(\n            $self->get_name_of_type($pred_type),\n            $self->get_name_of_type($type),\n        );\n    }\n}\n\nmethod add_node {\n    my $name  = $self->register_node(0);\n    my $label = $self->compute_node_label($name);\n    $self->add_vertex($name);\n    $self->set_label($name, $label);\n}\n\nmethod can_merge_node {\n    my $path_node = $self->grp_get_path_node($type);\n    return 1 if $path_node->must_merge;\n    return 0 if $path_node->must_not_merge;\n\n\n    my $name = $path_node->graph_name;\n    return\n        $name eq 'count'? $self->find_count_node_for_group:\n        $name eq 'key1' ?\n            $path_node->key eq 'g'? $self->find_key1_node_for_group:\n            $path_node->key eq 'm'? $self->find_key1_node_for_group:\n            0: 0;\n}\n\nmethod register_node(Str $merge_into) {\n    my $nodes_by_type = $self->get_nodes_of_type;\n    my $name = \"$type-\". (scalar $nodes_by_type->flatten + 1);\n    $nodes_by_type->push({\n        group => $self->group,\n        name  => $name,\n    });\n    my $nodes_of_group = $self->get_nodes_of_group->{ $self->grp_syntax_group } ||= {};\n    my $graph_name = $self->grp_get_path_node($type)->graph_name;\n    $nodes_of_group->{$type} = \n        !$merge_into          ? $name:\n        $graph_name eq 'count'? $merge_into:\n        $graph_name eq 'key1' ? $merge_into:\n                                \"$type-1\";\n    return $name;\n}\n\nmethod find_count_node_for_group { $self->find_some_node_for_group('count_node_kind') }\nmethod find_key1_node_for_group  { $self->find_some_node_for_group('key1_node_kind') }\n\nmethod find_some_node_for_group(Str $accessor) {\n    my $grp_accessor = \"grp_$accessor\";\n    my $kind = $self->$grp_accessor;\n    my @recs = $self->get_nodes_of_type\n                    ->grep(sub{ $kind eq $_->{group}->$accessor })\n                    ->flatten;\n    return @recs? $recs[0]->{name}: 0;\n}\n\nmethod   has_node_of_type { exists $self->registry->{by_type}->{$type} }\nmethod  get_nodes_of_type { $self->registry->{by_type}->{$type} ||= [] }\nmethod get_nodes_of_group { $self->registry->{by_group} }\nmethod compute_node_label { $self->grp_get_label($type) } \nmethod   get_name_of_type { $self->get_nodes_of_group->{$self->grp_syntax_group}->{ pop() } }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxDag/GroupMerger.pm",
+      "package" : "Vimper::SyntaxDag::GroupMerger"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method BUILD { $self->add_command($_) for $self->src->flatten }\n\nmethod some_command    { $self->src->[0] }\nmethod syntax_group    { $self->some_command->syntax_group }\nmethod count_node_kind { $self->some_command->count_node_kind }\nmethod key1_node_kind  { $self->some_command->key1_node_kind }\n\nmethod graph {\n    my $name = 'dot_out/'. ($IDX++). '.dot';\n    my $w = Graph::Writer::Dot->new;\n    $w->write_graph($self->dag, $name);\n    system(\"'/c/Program Files/Graphviz2.26.3/bin/dot.exe' -Tpng -O $name\")\n        && die \"Can't graphviz\";\n}\n\nmethod add_command(NormalCommand $command)\n    { $self->add_path($_) for $command->syntax_paths->flatten }\n\nmethod add_path(SyntaxPath $path) {\n    my $prev_path_node;\n    for my $path_node ($path->parts->flatten) {\n\n\n        my $node      = escape($path_node->graph_name);\n        my $label     = escape($path_node->graph_label);\n        my $bag_key   = $path_node->bag_key;\n        my $label_sep = $path_node->label_sep;\n\n        if (!$self->has_vertex($node)) {\n\n            $self->add_vertex($node);\n            $self->set_label($node, $label);\n            $self->set_path_node($node, $path_node);\n            $self->init_bag($node, $bag_key => $label) if $bag_key;\n\n        } else {\n\n            $self->append_to_label($node, \"$label_sep$label\")\n                if $bag_key\n                && $self->add_to_bag($node, $bag_key, $label);\n        }\n\n        $self->add_edge($prev_path_node, $node) if\n            $prev_path_node\n            && !$self->has_edge($prev_path_node, $node);\n\n        $prev_path_node = $node;\n    }\n}\n\nmethod set_path_node(Str $node, Node $path_node)\n    { $self->set_vertex_attribute($node, path_node => $path_node) }\n\nmethod get_path_node(Str $node)\n    { $self->get_vertex_attribute($node, 'path_node') }\n\nmethod init_keys (Str $node, Str $key)\n    { $self->init_bag($node, vimperKeys => $key) }\n\nmethod init_commands (Str $node, Str $command_str)\n    { $self->init_bag($node, vimperCommands => $command_str) }\n\nmethod init_bag (Str $node, Str $name, Str $key)\n    { $self->set_vertex_attribute($node, $name, {$key => 1}) }\n\nmethod add_to_bag(Str $node, Str $name, Str $key) {\n    my $existing= $self->get_vertex_attribute($node, $name);\n    if (!exists $existing->{$key}) {\n        $existing->{$key} = 1;\n        return 1;\n    }\n    return 0;\n}\n\nsub escape {\n    my $s = shift;\n    $s =~ s/\"/\\\\\"/g;\n    return $s;\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxDag/Group.pm",
+      "package" : "Vimper::SyntaxDag::Group"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method _build_groups {\n    my (%groups, @groups);\n    for my $command ($self->commands->flatten)\n        { push @{ $groups{$command->syntax_group} ||= [] }, $command }\n    for my $group_name (keys %groups) {\n        push @groups, Group->new\n            (name => $group_name, src => $groups{$group_name});\n    }\n    return \\@groups;\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/SyntaxDag/GroupList.pm",
+      "package" : "Vimper::SyntaxDag::GroupList"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method _build_key_list {\n    my $keys = $self->keys;\n    my @keys;\n    while (length $keys) {\n        push(@keys, $1) if $keys =~ s/^(CTRL-.)//;\n        push(@keys, $1) if $keys =~ s/^(<[^>]+>)//;\n        push(@keys, $1) if $keys =~ s/^(.)//;\n    }\n    my $i = 1;\n    return [@keys]->map(sub{ KeyNode->new(key => $_, idx => $i++) });\n}\n\nmethod first_key { $self->key_list->[0]->key }\n\nmethod _build_syntax_paths() { die \"Abstract method called\" }\n\nmethod to_string { $self->keys. \": \". $self->help }\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/Command/Normal.pm",
+      "package" : "Vimper::Command::Normal"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method syntax_group {\n    my ($count, $op, $char, $letter, $first_key) = map { $self->$_ }\n        qw(count op char letter first_key);\n    my $key_count = scalar $self->key_list->flatten;\n    my $keys = $key_count == 1? $key_count: \"$key_count.$first_key\";\n    return \"op=$op:count=$count:keys=$keys:char=$char:letter=$letter\";\n}\n\nmethod _build_syntax_paths() {\n    my ($keys, $count, $op, $char, $letter) = map { $self->$_ }\n        qw(keys count op char letter);\n    my @paths;\n\n\n    for my $comb (@Syntax_Space) {\n        next if (($count == 0) && $comb->[$COUNT])\n             || (($count == 2) && !$comb->[$COUNT])\n             || (($op    == 0) && $comb->[$OP])\n             || (($op    == 2) && !$comb->[$OP])\n             || ($char   != $comb->[$CHAR])\n             || ($letter != $comb->[$LETTER]);\n\n        push @paths, SyntaxPath->new(parts => [\n            InitNode->new,\n            ($comb->[$OP]    ? OpNode->new    : ()),\n            ($comb->[$COUNT ]? CountNode->new : ()),\n            $self->key_list->flatten,\n            ($comb->[$CHAR]  ? CharNode->new  : ()),\n            ($comb->[$LETTER]? LetterNode->new: ()),\n            CommandNode->new(command => $self),\n        ]);\n    }\n    return \\@paths;\n}\n\nmethod count_node_kind {\n    !$self->count   ? 'none'       : \n     $self->op == 2 ? 'op_pred'    : \n     $self->op == 0 ? 'init_pred'  : \n                      'op_and_init'; \n}\n\nmethod key1_node_kind { $self->count. '_'. $self->op. '_'. $self->first_key }\n\nsub _combs {\n    my @in = @_;\n    return map { [$_] } @{ $in[0] } if @in == 1;\n    my @last = @{ pop @in };\n    return map\n        { my @out = @{ $_ }; map { [@out, $_] } @last; }\n        _combs(@in);\n}\n\n1",
+      "file" : "/var/tmp/arv_9rY3ws/Padre-Plugin-Vi-0.23/research/lib/Vimper/Command/Normal/Motion.pm",
+      "package" : "Vimper::Command::Normal::Motion"
+   }
+]

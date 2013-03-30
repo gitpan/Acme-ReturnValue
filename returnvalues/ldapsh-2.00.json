@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub maxCommon {\n\treturn '' unless scalar(@_);\n\tmy $firstElement = shift;\n\tmy $common = '';\n\tfor (my $i = 1; $i <= length($firstElement); $i++) {\n\t\tmy $str = substr($firstElement, 0, $i);\n\t\tlast if (grep {substr($_, 0, $i) ne $str} @_);\n\t\t$common = $str;\n\t}\n}",
+      "file" : "/var/tmp/arv_UTycv8/ldapsh-2.00/lib/Net/LDAP/Shell/Complete.pm",
+      "package" : "Net::LDAP::Shell::Completion"
+   }
+]

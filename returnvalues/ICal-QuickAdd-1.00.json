@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_dt {\n    my $self = shift;\n    return $self->{dt};\n}",
+      "file" : "/var/tmp/arv_wUYFOM/ICal-QuickAdd-1.00/lib/ICal/QuickAdd.pm",
+      "package" : "ICal::QuickAdd"
+   }
+]

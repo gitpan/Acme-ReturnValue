@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _infer {\n    my $self = shift;\n\n    my @fired; \n\n    for my $i (0 .. $#{$self->{RULES}}) {\n\tmy $r = $self->{RULES}[$i][0];   \n\n\tmy $val = 0;\n\twhile ($r =~ /([&|]?)([^&|]+)/g) {\n\t    my ($op, $ant) = ($1, $2);\n\t    my ($var, $ts) = split /=/ => $ant;\n\n\t    $ts = \"$var:$ts\";\n\n\t    if ($op) {\n\t\t$val = $_operations{$op}{$self->{OPERATIONS}{$op}}->($val, $self->{FUZZIFY}{$var}{$ts});\n\t    } else {\n\t\t$val = $self->{FUZZIFY}{$var}{$ts};\n\t    }\n\t}\n\n\tpush @fired => [$i, $val];\n    }\n\n    $self->{FIRED} = \\@fired;\n}",
+      "file" : "/var/tmp/arv_WTHFCW/AI-FuzzyInference-0.05/FuzzyInference.pm",
+      "package" : "AI::FuzzyInference"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub area {\n    my ($self, $name) = @_;\n\n    return $self->{AREA}{$name} if exists $self->{AREA}{$name};\n\n    my @coords = $self->coords($name);\n\n    my $x0   = shift @coords;\n    my $y0   = shift @coords;\n    my $area = 0;\n\n    while (@coords) {\n\tmy $x1 = shift @coords;\n\tmy $y1 = shift @coords;\n\n\t$area += 0.5 * ($x1 - $x0) * ($y1 + $y0);\n\n\t$x0 = $x1;\n\t$y0 = $y1;\n    }\n\n    return $self->{AREA}{$name} = $area;\n}",
+      "file" : "/var/tmp/arv_WTHFCW/AI-FuzzyInference-0.05/FuzzyInference/Set.pm",
+      "package" : "AI::FuzzyInference::Set"
+   }
+]

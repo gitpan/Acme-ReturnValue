@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_9QLRuR/Reindeer-0.016/lib/Reindeer.pm",
+      "package" : "Reindeer"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_9QLRuR/Reindeer-0.016/lib/Reindeer/Util.pm",
+      "package" : "Reindeer::Util"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_9QLRuR/Reindeer-0.016/lib/Reindeer/Role.pm",
+      "package" : "Reindeer::Role"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_9QLRuR/Reindeer-0.016/lib/Reindeer/Types.pm",
+      "package" : "Reindeer::Types"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!42",
+      "file" : "/var/tmp/arv_9QLRuR/Reindeer-0.016/lib/Reindeer/Builder.pm",
+      "package" : "Reindeer::Builder"
+   }
+]

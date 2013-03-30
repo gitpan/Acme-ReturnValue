@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "hook on_irc_notice => sub {\n\tmy ($self, $global_context, $poe, $who, $channel_name, $msg) = @_;\n\n\tif ($who eq \"metadata\") {\n\t\t$channel_name = $channel_name->[0];\n\t\t$channel_name = normalize_channel_name($channel_name);\n\n\t\tmy $channel = $global_context->server->get_channel($channel_name);\n\t\tmy $latest_message = $channel->message_log->[-1];\n\n\t\t$latest_message->{metadata} = eval { decode_json($msg) };\n\n\t\treturn 1;\n\t}\n\n}\n\n1",
+      "file" : "/var/tmp/arv_Mht0mw/mobirc-4.04/lib/App/Mobirc/Plugin/IRCCommand/Metadata.pm",
+      "package" : "App::Mobirc::Plugin::IRCCommand::Metadata"
+   }
+]

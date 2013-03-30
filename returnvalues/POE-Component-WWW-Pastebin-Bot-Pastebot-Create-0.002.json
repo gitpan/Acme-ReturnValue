@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _process_request {\n    my ( $self, $in_ref ) = @_;\n    my @args = ( $in_ref->{content} );\n    for ( qw(channel nick summary) ) {\n        exists $in_ref->{$_}\n            and push @args, $_ => $in_ref->{$_};\n    }\n    \n    my $paster = $self->{obj};\n\n    if ( exists $in_ref->{site} ) {\n        $paster->site( $in_ref->{site} );\n    }\n\n    my $response_ref = $paster->paste( @args );\n    if ( $response_ref ) {\n        $in_ref->{uri} = $paster->uri;\n    }\n    else {\n        $in_ref->{error} = $paster->error;\n    }\n}",
+      "file" : "/var/tmp/arv_9K9M1G/POE-Component-WWW-Pastebin-Bot-Pastebot-Create-0.002/lib/POE/Component/WWW/Pastebin/Bot/Pastebot/Create.pm",
+      "package" : "POE::Component::WWW::Pastebin::Bot::Pastebot::Create"
+   }
+]

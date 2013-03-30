@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_vo72Iu/Thorium-0.510/examples/lib/Pizza/BuildConf.pm",
+      "package" : "Pizza::BuildConf"
+   },
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_vo72Iu/Thorium-0.510/examples/lib/Pizza/Conf.pm",
+      "package" : "Pizza::Conf"
+   }
+]

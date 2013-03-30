@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dump_names {\n  my($it, %o) = @_;\n\n  my @out = ();\n  $o{_depth} ||= 0;\n  $o{spacer}   ||= sub {return \"z\"};\n  $o{trunk}    ||= sub {return \"|\"};\n  $o{branch}   ||= sub {return \"=\"};\n  $o{node}     ||= sub {return \"O \"};\n  $o{break}    ||= \"\\n\";\n  $o{callback}   = sub {\n      my($this, $o) = @_[0,1];\n\n\t\t\tunless($this->state){                      \n\t\t\t\t\t$this->pregnant(1) if $this->descendants; \n\t\t\t\t\t$this->clear_daughters;                \n\t\t\t}\n\n      my @spacer;\n\t\t\tmy @ancestors = reverse $this->ancestors;\n\n\t\t\tmy $index = 0;\n\t\t\tforeach my $ancestor (@ancestors){\n\n\t\t\t\t\tif($ancestor->ancestors == $this->ancestors -1){\n\t\t\t\t\t\t\tpush @spacer, $o->{branch}->($this);\n\t\t\t\t\t}\n\n\t\t\t\t\telse {\n\t\t\t\t\t\t\tpush @spacer, $ancestors[$index+1]->right_sister ? \n\t\t\t\t\t\t\t\t$o->{trunk}->() : \n\t\t\t\t\t\t\t\t$o->{spacer}->();\n\t\t\t\t\t}\n\t\t\t\t\t$index++;\n\t\t\t}\n\n      push(@out,join('',\n             @spacer,\n             $o->{node}->($this),\n\t\t\t\t\t\t $this->link->($this),\n\t\t\t\t\t\t $o->{break},\n      ));\n\n      return 1;\n    }\n  ;\n  $it->walk_down(\\%o);\n  return @out;\n}",
+      "file" : "/var/tmp/arv_mgOUN0/CGI-Widget-0.15/Widget/HList/Node.pm",
+      "package" : "CGI::Widget::HList::Node"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  $Task::Tapper::VERSION = '0.001';\n}",
+      "file" : "/var/tmp/arv_d0tk_M/Task-Tapper-0.001/lib/Task/Tapper.pm",
+      "package" : "Task::Tapper"
+   }
+]

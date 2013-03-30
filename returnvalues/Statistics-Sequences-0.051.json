@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _assess {\n    my ($v, $nstates, $stats, $delta, $orig) = @_;\n    my ($psisq, $df, $p_value) = ();\n    \n    if ($v == 1) { \n        $psisq = $stats->{1}->{'psisq'};\n        $df = $nstates - 1;\n    }\n    else {\n        if ($delta == 2) { \n            $psisq = $stats->{$v}->{'psisq'} - ( 2 * ($v - 1 <= 0 ? 0 : $stats->{$v - 1}->{'psisq'}) ) + ($v - 2 <= 0 ? 0 : $stats->{$v - 2}->{'psisq'});\n            $df = ( $nstates**($v - 2) ) * ( $nstates - 1)**2;\n        }\n        elsif ($delta == 1) {\n            $psisq = $stats->{$v}->{'psisq'} - ($v - 1 <= 0 ? 0 : $stats->{$v - 1}->{'psisq'});\n            $df = $nstates**$v - $nstates**($v - 1);\n        }\n        else { \n            $psisq = $stats->{$v}->{'psisq'};\n            $df = $nstates**$v - 1; \n        }\n    }\n\n    $p_value = Math::Cephes::igamc($df/2, $psisq/2);\n\n    return ($psisq, $df, $p_value);\n}",
+      "file" : "/var/tmp/arv_kTsk4U/Statistics-Sequences-0.051/lib/Statistics/Sequences/Vnomes.pm",
+      "package" : "Statistics::Sequences::Vnomes"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dump {\n    my $self = shift;\n    my $args = ref $_[0] ? $_[0] : {@_};\n    $args->{'testname'} = 'Runs';\n    if ($args->{'text'} and $args->{'text'} > 1) {\n        $args->{'title'} = \"Runs test results:\";\n        $self->SUPER::_dump_verbose($args);\n    }\n     else {\n        $self->SUPER::_dump_sparse($args);\n    }\n    return $self;\n}",
+      "file" : "/var/tmp/arv_kTsk4U/Statistics-Sequences-0.051/lib/Statistics/Sequences/Runs.pm",
+      "package" : "Statistics::Sequences::Runs"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dump {\n    my $self = shift;\n    my $args = ref $_[0] ? $_[0] : {@_};\n    $args->{'testname'} = 'Turns';\n    if ($args->{'text'} and $args->{'text'} > 1) {\n        $args->{'title'} = \"Turns test results:\";\n        $self->SUPER::_dump_verbose($args);\n    }\n     else {\n        $self->SUPER::_dump_sparse($args);\n    }\n    return $self;\n}",
+      "file" : "/var/tmp/arv_kTsk4U/Statistics-Sequences-0.051/lib/Statistics/Sequences/Turns.pm",
+      "package" : "Statistics::Sequences::Turns"
+   }
+]

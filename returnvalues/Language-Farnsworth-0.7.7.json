@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compare\n{\n  my ($one, $two, $rev) = @_;\n\n  error \"Non reference given to compare of boolean\" unless ref($two);\n\n  error \"Scalar value given to division of boolean\" if ($two->isa(\"Language::Farnsworth::Value::Pari\"));\n  return $two->compare($one, !$rev) unless ($two->ismediumtype());\n\n  my $rv = $rev ? -1 : 1;\n  my $tv = $two->gettruth();\n  my $ov = $one->gettruth();\n\n  error \"Unable to process different types in compare of booleans\\n\" unless $one->conforms($two); \n\n  my $new = $tv <=> $ov;\n  \n  return $new * $rv;\n}",
+      "file" : "/var/tmp/arv_Jo5KXv/Language-Farnsworth-0.7.7/lib/Language/Farnsworth/Value/Boolean.pm",
+      "package" : "Language::Farnsworth::Value::Boolean"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compare\n{\n  my ($one, $two, $rev) = @_;\n\n  error \"Non reference given to compare\" unless ref($two);\n\n  error \"Can't compare scalar with array\" if ($two->istype(\"Pari\")); \n  return $two->compare($one, !$rev) unless ($two->ismediumtype());\n  error \"Can't compare two things that aren't arrays!\" unless $two->isa(\"Language::Farnsworth::Value::Array\");\n\n  my $rv = $rev ? -1 : 1;\n  my $tv = $two->getarray();\n  my $ov = $one->getarray();\n\n  error \"Unable to process different array types in compare\\n\" unless $one->conforms($two); \n\n  my $new = __compare($tv, $ov);\n  \n  return $new * $rv;\n}",
+      "file" : "/var/tmp/arv_Jo5KXv/Language-Farnsworth-0.7.7/lib/Language/Farnsworth/Value/Array.pm",
+      "package" : "Language::Farnsworth::Value::Array"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compare\n{\n  my ($one, $two, $rev) = @_;\n\n  error \"Non reference given to compare of dates\" unless ref($two);\n\n  error \"Scalar value given to division of dates\" if ($two->isa(\"Language::Farnsworth::Value::Pari\"));\n  return $two->compare($one, !$rev) unless ($two->ismediumtype());\n\n  my $rv = $rev ? -1 : 1;\n  my $tv = $two->getdate();\n  my $ov = $one->getdate();\n\n  error \"Unable to process different types in compare of dates\\n\" unless $one->conforms($two); \n\n  my $new = $ov <=> $tv;\n  \n  return $new * $rv;\n}",
+      "file" : "/var/tmp/arv_Jo5KXv/Language-Farnsworth-0.7.7/lib/Language/Farnsworth/Value/Date.pm",
+      "package" : "Language::Farnsworth::Value::Date"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compare\n{\n  my ($one, $two, $rev) = @_;\n\n  error \"Non reference given to compare of string\" unless (ref($two));\n\n  error \"Scalar value given to division to string\" if ($two->isa(\"Language::Farnsworth::Value::Pari\"));\n  return $two->compare($one, !$rev) unless ($two->ismediumtype());\n\n  my $rv = $rev ? -1 : 1;\n  my $tv = $two->getstring();\n  my $ov = $one->getstring();\n\n  error \"Unable to process different units in compare\\n\" unless $one->conforms($two); \n\n  my $new = $ov cmp $tv;\n  \n  return $new * $rv;\n}",
+      "file" : "/var/tmp/arv_Jo5KXv/Language-Farnsworth-0.7.7/lib/Language/Farnsworth/Value/String.pm",
+      "package" : "Language::Farnsworth::Value::String"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub toperl\n{\n\treturn undef;\n}",
+      "file" : "/var/tmp/arv_Jo5KXv/Language-Farnsworth-0.7.7/lib/Language/Farnsworth/Value/Undef.pm",
+      "package" : "Language::Farnsworth::Value::Undef"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $regex = qr/[﷼﬩＄￠￡￥￦﹢¢؋៛₠₯﹩﹤﹥﹦＋＜＝＞｜～￢￩￪￫￬𝛁𝛛𝛻𝜕𝜵𝝏𝝯𝞉𝞩𝟃|~¬±×÷؆؇؈⁄⁒⁻⁼₊₋₌⅀⅁⅂⅃⅄⅋←↑→↓↔↚↛↠↣↦↮⇎⇏⇒⇔⇴⇵⇶⇷⇸⇹⇺⇻⇼⇽⇾⇿∀∁∂∃∄∅∆∇∈∉∊∋∌∍∎∏∐∑−∓∔∕∖∗∘∙√∛∜∝∞∟∠∡∢∣∤∥∦∧∨∩∪∫∬∭∮∯∰∱∲∳∴∵∶∷∸∹∺∻∼∽∾∿≀≁≂≃≄≅≆≇≈≉≊≋≌≍≎≏≐≑≒≓≔≕≖≗≘≙≚≛≜≝≞≟≠≡≢≣≤≥≦≧≨≩≪≫≬≭≮≯≰≱≲≳≴≵≶≷≸≹≺≻≼≽≾≿⊀⊁⊂⊃⊄⊅⊆⊇⊈⊉⊊⊋⊌⊍⊎⊏⊐⊑⊒⊓⊔⊕⊖⊗⊘⊙⊚⊛⊜⊝⊞⊟⊠⊡⊢⊣⊤⊥⊦⊧⊨⊩⊪⊫⊬⊭⊮⊯⊰⊱⊲⊳⊴⊵⊶⊷⊸⊹⊺⊻⊼⊽⊾⊿⋀⋁⋂⋃⋄⋅⋆⋇⋈⋉⋊⋋⋌⋍⋎⋏⋐⋑⋒⋓⋔⋕⋖⋗⋘⋙⋚⋛⋜⋝⋞⋟⋠⋡⋢⋣⋤⋥⋦⋧⋨⋩⋪⋫⋬⋭⋮⋯⋰⋱⋲⋳⋴⋵⋶⋷⋸⋹⋺⋻⋼⋽⋾⋿⌈⌉⌊⌋⌠⌡⍼⎛⎜⎝⎞⎟⎠⎡⎢⎣⎤⎥⎦⎧⎨⎩⎪⎫⎬⎭⎮⎯⎰⎱⎲⎳⏜⏝⏞⏟⏠⏡▷◁◸◹◺◻◼◽◾◿♯⟀⟁⟃⟄⟇⟈⟉⟊⟌⟐⟑⟒⟓⟔⟕⟖⟗⟘⟙⟚⟛⟜⟝⟞⟟⟠⟡⟢⟣⟤⟥⟰⟱⟲⟳⟴⟵⟶⟷⟸⟹⟺⟻⟼⟽⟾⟿⤀⤁⤂⤃⤄⤅⤆⤇⤈⤉⤊⤋⤌⤍⤎⤏⤐⤑⤒⤓⤔⤕⤖⤗⤘⤙⤚⤛⤜⤝⤞⤟⤠⤡⤢⤣⤤⤥⤦⤧⤨⤩⤪⤫⤬⤭⤮⤯⤰⤱⤲⤳⤴⤵⤶⤷⤸⤹⤺⤻⤼⤽⤾⤿⥀⥁⥂⥃⥄⥅⥆⥇⥈⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒⥓⥔⥕⥖⥗⥘⥙⥚⥛⥜⥝⥞⥟⥠⥡⥢⥣⥤⥥⥦⥧⥨⥩⥪⥫⥬⥭⥮⥯⥰⥱⥲⥳⥴⥵⥶⥷⥸⥹⥺⥻⥼⥽⥾⥿⦀⦁⦂⦙⦚⦛⦜⦝⦞⦟⦠⦡⦢⦣⦤⦥⦦⦧⦨⦩⦪⦫⦬⦭⦮⦯⦰⦱⦲⦳⦴⦵⦶⦷⦸⦹⦺⦻⦼⦽⦾⦿⧀⧁⧂⧃⧄⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧜⧝⧞⧟⧠⧡⧢⧣⧤⧥⧦⧧⧨⧩⧪⧫⧬⧭⧮⧯⧰⧱⧲⧳⧴⧵⧶⧷⧸⧹⧺⧻⧾⧿⨀⨁⨂⨃⨄⨅⨆⨇⨈⨉⨊⨋⨌⨍⨎⨏⨐⨑⨒⨓⨔⨕⨖⨗⨘⨙⨚⨛⨜⨝⨞⨟⨠⨡⨢⨣⨤⨥⨦⨧⨨⨩⨪⨫⨬⨭⨮⨯⨰⨱⨲⨳⨴⨵⨶⨷⨸⨹⨺⨻⨼⨽⨾⨿⩀⩁⩂⩃⩄⩅⩆⩇⩈⩉⩊⩋⩌⩍⩎⩏⩐⩑⩒⩓⩔⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠⩡⩢⩣⩤⩥⩦⩧⩨⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪇⪈⪉⪊⪋⪌⪍⪎⪏⪐⪑⪒⪓⪔⪕⪖⪗⪘⪙⪚⪛⪜⪝⪞⪟⪠⪡⪢⪣⪤⪥⪦⪧⪨⪩⪪⪫⪬⪭⪮⪯⪰⪱⪲⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾⪿⫀⫁⫂⫃⫄⫅⫆⫇⫈⫉⫊⫋⫌⫍⫎⫏⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛⫝̸⫝⫞⫟⫠⫡⫢⫣⫤⫥⫦⫧⫨⫩⫪⫫⫬⫭⫮⫯⫰⫱⫲⫳⫴⫵⫶⫷⫸⫹⫺⫻⫼⫽⫾⫿⬰⬱⬲⬳⬴⬵⬶⬷⬸⬹⬺⬻⬼⬽⬾⬿⭀⭁⭂⭃⭄⭇⭈⭉⭊⭋⭌¥£¤৲৳૱௹฿϶′″‴‵‶‷‰‱⁗₡₢₣₤₥₦₧₨₩₪₫€₭₮₰₱₲₳₵₴⁺⟂]/",
+      "file" : "/var/tmp/arv_Jo5KXv/Language-Farnsworth-0.7.7/lib/Language/Farnsworth/Parser/Extra.pm",
+      "package" : "Language::Farnsworth::Parser::Extra"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _handler_onlines {\n    my ( $self, $sid, @onlines ) = @_;\n\n    my $schema = $self->result_source->schema;\n    my $cache  = $schema->cache();\n\n    my $has_me = 0;    \n    my @results;\n    foreach my $online (@onlines) {\n        if ( not $has_me and $online->sessionid eq $sid ) {\n            $has_me = 1;\n        }\n        my $user;\n        if ( $online->user_id ) {\n            $user = $schema->resultset('User')\n                ->get( { user_id => $online->user_id } );\n        }\n        $online->{user} = $user;\n        push @results, $online;\n    }\n\n    unless ($has_me) {\n        push @results, 'SELF';    \n    }\n\n    return wantarray ? @results : \\@results;\n}",
+      "file" : "/var/tmp/arv_bud8lG/Foorum-1.001000/lib/Foorum/ResultSet/UserOnline.pm",
+      "package" : "Foorum::ResultSet::UserOnline"
+   }
+]

@@ -1,0 +1,56 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon.pm",
+      "package" : "Cinnamon"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/Runner.pm",
+      "package" : "Cinnamon::Runner"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/Logger.pm",
+      "package" : "Cinnamon::Logger"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/Local.pm",
+      "package" : "Cinnamon::Local"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/CLI.pm",
+      "package" : "Cinnamon::CLI"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/Remote.pm",
+      "package" : "Cinnamon::Remote"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/DSL.pm",
+      "package" : "Cinnamon::DSL"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/Config.pm",
+      "package" : "Cinnamon::Config"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "!!1",
+      "file" : "/var/tmp/arv_zGq1xz/Cinnamon-0.12/lib/Cinnamon/Config/Loader.pm",
+      "package" : "Cinnamon::Config::Loader"
+   }
+]

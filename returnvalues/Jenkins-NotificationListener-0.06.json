@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method start ($prepare_cb) {\n    return tcp_server $self->host, $self->port , sub {\n        my ($fh, $host, $port) = @_;\n        my $json = '';\n        my $buf = '';\n        while( my $bytes = sysread $fh, $buf, 1024 ) {\n            $json .= $buf;\n        }\n        eval {\n            if( $json ) {\n                $self->on_notify->( \n                    parse_jenkins_notification($json)\n                );\n            } else {\n                die 'Request body is empty.';\n            }\n        };\n        if ( $@ ) {\n            $self->on_error->( $@ );\n        }\n    }, $prepare_cb;\n}\n\n1",
+      "file" : "/var/tmp/arv_ksq5Ai/Jenkins-NotificationListener-0.06/lib/Jenkins/NotificationListener.pm",
+      "package" : "Jenkins::NotificationListener"
+   }
+]

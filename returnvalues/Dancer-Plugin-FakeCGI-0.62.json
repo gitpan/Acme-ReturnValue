@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "dance",
+      "file" : "/var/tmp/arv_Pp5XLH/Dancer-Plugin-FakeCGI-0.62/examples/lib/example_FakeCGI_dir.pm",
+      "package" : "example_FakeCGI"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "true",
+      "file" : "/var/tmp/arv_Pp5XLH/Dancer-Plugin-FakeCGI-0.62/examples/lib/example_FakeCGI.pm",
+      "package" : "example_FakeCGI"
+   }
+]

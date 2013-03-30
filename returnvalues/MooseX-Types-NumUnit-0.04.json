@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub init_meta {\n    my ($class, %options) = @_;\n    my $for_class = $options{for_class};\n\n    MooseX::ClassAttribute->import({ into => $for_class });\n\n    goto $init_meta;\n}",
+      "file" : "/var/tmp/arv_kygzpv/MooseX-Types-NumUnit-0.04/lib/MooseX/Types/NumUnit.pm",
+      "package" : "MooseX::Types::NumUnit"
+   }
+]

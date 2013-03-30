@@ -1,0 +1,98 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Jahcoozi: Pure Breed Mongrel}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Analyse.pm",
+      "package" : "Module::CPANTS::Analyse"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Jahcoozi: Pure Breed Mongrel}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee.pm",
+      "package" : "Module::CPANTS::Kwalitee"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Lili Allen - Allright, still}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/License.pm",
+      "package" : "Module::CPANTS::Kwalitee::License"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Lili Allen - Allright, still}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Distros.pm",
+      "package" : "Module::CPANTS::Kwalitee::Distros"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Lili Allen - Allright, still}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Repackageable.pm",
+      "package" : "Module::CPANTS::Kwalitee::Repackageable"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Distname.pm",
+      "package" : "Module::CPANTS::Kwalitee::Distname"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Barbies Favourite record of the moment:\n  Nine Inch Nails: Year Zero}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/MetaYML.pm",
+      "package" : "Module::CPANTS::Kwalitee::MetaYML"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Version.pm",
+      "package" : "Module::CPANTS::Kwalitee::Version"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/FindModules.pm",
+      "package" : "Module::CPANTS::Kwalitee::FindModules"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Prereq.pm",
+      "package" : "Module::CPANTS::Kwalitee::Prereq"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite compiler:\n  gcc}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/NeedsCompiler.pm",
+      "package" : "Module::CPANTS::Kwalitee::NeedsCompiler"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Listeing to: FM4 the early years}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/CpantsErrors.pm",
+      "package" : "Module::CPANTS::Kwalitee::CpantsErrors"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Uses.pm",
+      "package" : "Module::CPANTS::Kwalitee::Uses"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Files.pm",
+      "package" : "Module::CPANTS::Kwalitee::Files"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Listening to: YAPC::Europe 2007}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Manifest.pm",
+      "package" : "Module::CPANTS::Kwalitee::Manifest"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Favourite record of the moment:\n  Fat Freddys Drop: Based on a true story}",
+      "file" : "/var/tmp/arv_DWy3BS/Module-CPANTS-Analyse-0.87/lib/Module/CPANTS/Kwalitee/Pod.pm",
+      "package" : "Module::CPANTS::Kwalitee::Pod"
+   }
+]

@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->set_primary_key( qw/ TotAcctId / )",
+      "file" : "/var/tmp/arv_aIwPiy/FreeRADIUS-Database-0.06/lib/FreeRADIUS/Database/Storage/Result/DailyAgg.pm",
+      "package" : "FreeRADIUS::Database::Storage::Result::DailyAgg"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->set_primary_key( qw/ MTotAcctId / )",
+      "file" : "/var/tmp/arv_aIwPiy/FreeRADIUS-Database-0.06/lib/FreeRADIUS/Database/Storage/Result/MonthlyAgg.pm",
+      "package" : "FreeRADIUS::Database::Storage::Result::MonthlyAgg"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->set_primary_key( qw/ id / )",
+      "file" : "/var/tmp/arv_aIwPiy/FreeRADIUS-Database-0.06/lib/FreeRADIUS/Database/Storage/Result/Radcheck.pm",
+      "package" : "FreeRADIUS::Database::Storage::Result::Radcheck"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->set_primary_key( qw/ RadAcctId / )",
+      "file" : "/var/tmp/arv_aIwPiy/FreeRADIUS-Database-0.06/lib/FreeRADIUS/Database/Storage/Result/Radacct.pm",
+      "package" : "FreeRADIUS::Database::Storage::Result::Radacct"
+   }
+]

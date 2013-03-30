@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub getNext { $self->get_next('getNext') }",
+      "file" : "/var/tmp/arv_gHM3Qr/Algorithm-Accounting-0.08/lib/Algorithm/Accounting.pm",
+      "package" : "Algorithm::Accounting"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub process {\n    my ($occhash,$field_groups,$group_occ) = @_;\n    for(keys %{$occhash}) {\n        $self->report_occurrence_percentage($_,$occhash);\n    }\n    for(0..@{$field_groups}-1) {\n        $self->report_field_group_occurrence_percentage($_,$field_groups,$group_occ);\n    }\n}",
+      "file" : "/var/tmp/arv_gHM3Qr/Algorithm-Accounting-0.08/lib/Algorithm/Accounting/Report.pm",
+      "package" : "Algorithm::Accounting::Report"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub save {\n    my ($obj,$file) = @_;\n    for my $format (qw (png gif jpg tiff ppm)) {\n        if ($Imager::formats{$format}) {\n            $obj->write(file=>\"${file}.${format}\")\n                or die $obj->errstr;\n            print STDERR \"${file}.${format} saved\";\n            last;\n        }\n    }\n}",
+      "file" : "/var/tmp/arv_gHM3Qr/Algorithm-Accounting-0.08/lib/Algorithm/Accounting/Report/Imager.pm",
+      "package" : "Algorithm::Accounting::Report::Imager"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub report_field_group_occurrence_percentage {\n  my $i = shift; \n  my $field_groups = shift;\n  my $group_occurrence = shift;\n  my @field = @{$field_groups->[$i]};\n  my $occ  = $group_occurrence->[$i];\n  my $rows = sum(values %$occ);\n  local $, = ',';\n\n  my $form_format = '|' . join('|',map {'{<<<<<<<<<<<<}'} @field) . '|{>>>>>>>>>>>>}|';\n  my $sep = '+' . '=' x (15*(1+@field) - 1) . '+';\n  print form $sep , $form_format, @field, \"Percentage\",$sep ;\n  $form_format =~ s/>>}\\|$/.}%|/;\n  for(sort { (thaw($a))[0] cmp (thaw($b))[0] } keys %$occ) {\n    my @fv = thaw($_);\n    print form\n      $form_format ,\n      @fv, (100 * $occ->{$_} / $rows);\n  }\n  print form $sep;\n  print form\n    '|{' . '<' x (15*(1+@field) - 3) . '}|',\n    \"Total records: $rows\",\n    $sep, \"\\n\";\n}",
+      "file" : "/var/tmp/arv_gHM3Qr/Algorithm-Accounting-0.08/lib/Algorithm/Accounting/Report/Text.pm",
+      "package" : "Algorithm::Accounting::Report::Text"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub save {\n    my ($obj,$file,$format) = @_;\n    open(IMG, \">${file}.${format}\") or die $!;\n    binmode IMG;\n    print IMG $obj->$format();\n    close IMG;\n    print STDERR \"${file}.${format} saved\\n\";\n}",
+      "file" : "/var/tmp/arv_gHM3Qr/Algorithm-Accounting-0.08/lib/Algorithm/Accounting/Report/GDGraph.pm",
+      "package" : "Algorithm::Accounting::Report::GDGraph"
+   }
+]

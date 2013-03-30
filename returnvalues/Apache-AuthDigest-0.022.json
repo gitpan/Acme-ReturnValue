@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our @ISA = qw(Apache::AuthDigest::API)",
+      "file" : "/var/tmp/arv_XVUJI3/Apache-AuthDigest-0.022/Full/Full.pm",
+      "package" : "Apache::AuthDigest::API::Full"
+   }
+]

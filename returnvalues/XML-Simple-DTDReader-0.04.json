@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub End {\n  local $Carp::CarpLevel = 3;\n  my $self = shift;\n  my($parser,$tag) = @_;\n  shift @{$self->{Element}};\n  if ($self->{DTD}{$tag}{Element}->isseq) {\n    my @blocking = grep {not empty($_)} @{$self->{Expected}[0]};\n    if (@blocking) {\n      croak \"Unexpected end of element <$tag> found (column \".$parser->current_column.\", line \".$parser->current_line.\"), expecting <\", $blocking[0]->name, \">\";\n    }\n    shift @{$self->{Expected}};\n  }\n}",
+      "file" : "/var/tmp/arv__N4iwF/XML-Simple-DTDReader-0.04/DTDReader.pm",
+      "package" : "XML::Simple::DTDReader"
+   }
+]

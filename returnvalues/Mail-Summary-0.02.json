@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break",
+      "value" : "qw/This is the secret message/",
+      "file" : "/var/tmp/arv_JTYB7g/Mail-Summary-0.02/Summary.pm",
+      "package" : "Mail::Summary"
+   }
+]

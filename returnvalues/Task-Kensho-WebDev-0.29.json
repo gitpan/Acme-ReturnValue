@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.29'",
+      "file" : "/var/tmp/arv_p2pl9R/Task-Kensho-WebDev-0.29/lib/Task/Kensho/WebDev.pm",
+      "package" : "Task::Kensho::WebDev"
+   }
+]

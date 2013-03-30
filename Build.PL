@@ -1,33 +1,56 @@
+
 use strict;
 use warnings;
-use Module::Build;
 
-my $builder = Module::Build->new(
-    module_name       => 'Acme::ReturnValue',
-    license           => 'perl',
-    dist_author       => 'Thomas Klausner <domm@cpan.at>',
-    dist_version_from => 'lib/Acme/ReturnValue.pm',
-    requires          => {
-        'PPI'                   => '1.118',
-        'Archive::Any'          => '0.093',
-        'Parse::CPAN::Packages' => '2.31',
-        'Moose'                 => '0.77',
-        'MooseX::Getopt'        => '0.18',
-        'Path::Class'           => '0.16',
-        'YAML::Any'             => '0.67',
-    },
-    build_requires => { 'Test::Most' => '0.21', },
-    create_readme  => 1,
-    create_license => 1,
-    meta_merge     => {
-        resources => {
-            homepage => 'http://returnvalues.useperl.at',
-            bugtracker =>
-                'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Acme-ReturnValue',
-            repository => 'http://github.com/domm/Acme-ReturnValue',
-        }
-    },
+use Module::Build 0.3601;
 
+
+my %module_build_args = (
+  "build_requires" => {
+    "Module::Build" => "0.3601",
+    "Test::More" => 0,
+    "Test::Most" => 0
+  },
+  "configure_requires" => {
+    "Module::Build" => "0.3601"
+  },
+  "dist_abstract" => "report interesting return values",
+  "dist_author" => [
+    "Thomas Klausner <domm\@cpan.org>"
+  ],
+  "dist_name" => "Acme-ReturnValue",
+  "dist_version" => "1.000",
+  "license" => "perl",
+  "module_name" => "Acme::ReturnValue",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "Archive::Any" => 0,
+    "Data::Dumper" => 0,
+    "Encode" => 0,
+    "File::Copy" => 0,
+    "File::Find" => 0,
+    "File::Path" => 0,
+    "File::Temp" => 0,
+    "JSON" => 0,
+    "Moose" => 0,
+    "MooseX::Getopt" => 0,
+    "MooseX::Types::Path::Class" => 0,
+    "PPI" => 0,
+    "Parse::CPAN::Packages" => 0,
+    "Path::Class" => 0,
+    "URI::Escape" => 0,
+    "perl" => "5.010",
+    "strict" => 0,
+    "warnings" => 0
+  },
+  "script_files" => [
+    "bin/acme_returnvalue_makesite.pl",
+    "bin/acme_returnvalue.pl"
+  ]
 );
 
-$builder->create_build_script();
+
+my $build = Module::Build->new(%module_build_args);
+
+$build->create_build_script;

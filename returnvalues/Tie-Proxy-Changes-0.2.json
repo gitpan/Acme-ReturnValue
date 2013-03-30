@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub SCALAR {\n    my $self=shift;\n    $self->_restore();\n    scalar %{$_[0]}\n}",
+      "file" : "/var/tmp/arv_Ejh_ZT/Tie-Proxy-Changes-0.2/examples/TieDump.pm",
+      "package" : "TieDump"
+   }
+]

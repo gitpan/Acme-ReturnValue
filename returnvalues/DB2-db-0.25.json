@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub schema_name { 'DB2DB' }",
+      "file" : "/var/tmp/arv_WgnR4c/DB2-db-0.25/samples/My/Table.pm",
+      "package" : "My::Table"
+   }
+]

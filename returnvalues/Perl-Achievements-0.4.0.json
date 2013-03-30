@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method generate_report( $format ) {\n    my $class = 'Perl::Achievements::Report::'. ucfirst $format;\n\n    eval \"use $class; 1\" \n        or die \"could not use format '$format': $@\\n\";\n\n    my $report = $class->new(\n        who => $self->user->name,\n        history => $self->history,\n    );\n\n    return $report->generate;\n}\n\n1",
+      "file" : "/var/tmp/arv_v74W6d/Perl-Achievements-0.4.0/lib/Perl/Achievements.pm",
+      "package" : "Perl::Achievements"
+   }
+]

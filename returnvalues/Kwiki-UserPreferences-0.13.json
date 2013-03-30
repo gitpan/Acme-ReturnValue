@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_preference_objects {\n    my %class_map = reverse %{$self->hub->registry->lookup->classes};\n\n    my @objects;\n    my $objects_by_class = $self->users->current->preferences->objects_by_class;\n    for (map $class_map{$_}, @{$self->hub->config->plugin_classes}) {\n        push @objects, @{$objects_by_class->{$_}}\n          if defined $objects_by_class->{$_};      \n    }\n    $self->preference_objects(\\ @objects);\n}",
+      "file" : "/var/tmp/arv_qdMP8k/Kwiki-UserPreferences-0.13/lib/Kwiki/UserPreferences.pm",
+      "package" : "Kwiki::UserPreferences"
+   }
+]

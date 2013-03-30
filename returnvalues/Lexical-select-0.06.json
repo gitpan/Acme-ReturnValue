@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q[select $old_fh]",
+      "file" : "/var/tmp/arv_iBcD_E/Lexical-select-0.06/lib/Lexical/select.pm",
+      "package" : "Lexical::select"
+   }
+]

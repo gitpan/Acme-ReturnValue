@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run {\n    my $self = shift;\n    my $src = $_[0];\n    my $ret = $self->SUPER::run(@_);\n    if ($self->{post_process_mirror}) {\n\tmy $mstring = $src->root->node_prop('/', 'svm:mirror');\n\tfor (@{$self->{post_process_mirror}}) {\n\t    my ($from, $to) = @$_;\n\t    $mstring =~ s/^\\Q$from\\E$/$to/;\n\t}\n\tmy $cmd = $self->command('propset', { revision => undef,\n\t\t\t\t\t      message => 'svk: fix-up for mirror move' });\n\t$cmd->run('svm:mirror', $mstring, $src->new(path => '/'));\n    }\n    return $ret;\n}",
+      "file" : "/var/tmp/arv_bEogXW/SVK-v2.2.3/lib/SVK/Command/Move.pm",
+      "package" : "SVK::Command::Move"
+   }
+]

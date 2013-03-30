@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _read_stdout {\n    my ($self) = @_;\n\n    if ($self->{-finish}) {\n        $self->kill_command;\n    }\n    else {\n        my $h = $self->{-handle};\n        croak \"Tk::DoCommand ($self) handle is undefined\\n\" if !defined $h;\n        my $stat;\n        if ($stat = sysread $h, $_, 4096) {\n            $self->insert('end', $_);\n            $self->yview('end');\n        }\n        elsif ($stat == 0) {\n            $self->{-finish} = 1;\n        }\n        else {\n            die \"Tk::DoCommand ($self) sysread error: $!\";\n        }\n    }\n}",
+      "file" : "/var/tmp/arv_Ci_O6J/Tk-DoCommand-0.1/DoCommand.pm",
+      "package" : "Tk::DoCommand"
+   }
+]

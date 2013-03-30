@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub label\n{\n    my ($class, $glyph, $pnum, $x, $y, $path, $onoff, $font) = @_;\n\n    if ($glyph->{'numberOfContours'} > 0 && $onoff)\n    { return sprintf(\"%d.%d(%d,%d)\", $pnum, $path, $x, $y); }\n    return '';\n}",
+      "file" : "/var/tmp/arv_cGCDGn/Font-TTF-Scripts-1.03/lib/Font/Fret.pm",
+      "package" : "Font::Fret"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub has\n{\n    my ($cls, $val) = @_;\n    foreach (@{$cls})\n    { return 1 if ($_ == $val); }\n    return 0;\n}",
+      "file" : "/var/tmp/arv_cGCDGn/Font-TTF-Scripts-1.03/lib/Font/TTF/Scripts/GDL.pm",
+      "package" : "Font::TTF::Scripts::GDL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ttfdeflang\n{\n    my ($font, %opts) = @_;\n    my ($f, $t);\n\n    my ($ltag) = lc($opts{'d'});\n    if (defined $font->{'Sill'} and defined $font->{'Feat'} and $t = $font->{'Sill'}->read and $f = $font->{'Feat'}->read)\n    {\n        if (defined $t->{'langs'}{$ltag})\n        {\n            my %change;\n            foreach my $s (@{$t->{'langs'}{$ltag}})\n            { $change{$s->[0]} = $s->[1]; }\n\n            foreach my $g (@{$f->{'features'}})\n            { $g->{'default'} = $change{$g->{'feature'}} if (defined $change{$g->{'feature'}}); }\n        }\n        else\n        { warn \"No language '$ltag' found in Sill table\"; }\n    }\n\n    my ($lang) = uc($opts{'d'});\n    $lang .= \" \" x (4 - length($lang));\n\n    foreach my $tk (qw(GSUB GPOS))\n    {\n        my ($found) = 0;\n        next unless (defined $font->{$tk});\n        if ($t = $font->{$tk}->read)\n        {\n            foreach $s (keys %{$t->{'SCRIPTS'}})\n            {\n                if (defined ($l = $t->{'SCRIPTS'}{$s}{$lang}) || defined ($l = $t->{'SCRIPTS'}{$s}{lc($lang)}))\n                {\n                    my ($ttag);\n                    $found = 1;\n                    for ($ttag = 'DEFAULT'; $ttag; )\n                    {\n                        last if (defined $l->{' REFTAG'} && $l->{' REFTAG'} eq $ttag);\n                        ($ttag, $t->{'SCRIPTS'}{$s}{$ttag}{' REFTAG'}) = \n                        ((defined $t->{'SCRIPTS'}{$s}{$ttag}{' REFTAG'} ? $t->{'SCRIPTS'}{$s}{$ttag}{' REFTAG'} : ''), defined $t->{'SCRIPTS'}{$s}{$lang} ? $lang : uc($lang));\n                    }\n                    last;\n                }\n            }\n        }\n        warn (\"No language '$lang' found in $tk table\") unless ($found);\n    }\n\n    return $font;\n}",
+      "file" : "/var/tmp/arv_cGCDGn/Font-TTF-Scripts-1.03/lib/Font/TTF/Scripts/Deflang.pm",
+      "package" : "Font::TTF::Scripts::Deflang"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub error\n{\n    my $self = shift;\n    my $msg = join(' ', @_);\n    if (defined $self->{'-errorfh'})\n    { print {$self->{'-errorfh'}} $msg; }\n    else\n    { $self->{'WARNINGS'} .= $msg; }\n\n    $self->{'cWARNINGS'}++;\n}",
+      "file" : "/var/tmp/arv_cGCDGn/Font-TTF-Scripts-1.03/lib/Font/TTF/Scripts/AP.pm",
+      "package" : "Font::TTF::Scripts::AP"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub error\n{\n    my ($xml, $cur_glyph, $cur_pt, $str) = @_;\n\n    if (defined $cur_glyph->{'UID'})\n    { print \"U+$cur_glyph->{'UID'}: \"; }\n    elsif (defined $cur_glyph->{'PSName'})\n    { print \"$cur_glyph->{'PSName'}: \"; }\n    elsif (defined $cur_glyph->{'GID'})\n    { print \"$cur_glyph->{'GID'}: \"; }\n    else\n    { print \"Undefined: \"; }\n\n    print $str;\n\n    if (defined $cur_pt)\n    { print \" in point $cur_pt->{'name'}\"; }\n\n    print \" at line \" . $xml->current_line . \".\\n\";\n}",
+      "file" : "/var/tmp/arv_cGCDGn/Font-TTF-Scripts-1.03/lib/Font/TTF/Scripts/GDL_old.pm",
+      "package" : "Font::TTF::Scripts::GDL"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ttfname\n{\n    my ($font, %opts) = @_;\n    my ($name) = $font->{'name'}->read;\n    my (@cover);\n\n    if (defined $opts{'r'})\n    {\n        delete $name->{'strings'}[$opts{'r'}];\n        return $font;\n    }\n\n    foreach $k (qw(n f))\n    {\n        $opts{$k} = decode('utf-8', $opts{$k}) if (defined $opts{$k});\n    }\n\n    if (defined $opts{'s'})\n    {\n        my ($fh) = IO::File->new(\"< $opts{'s'}\") || die \"Can't open $opts{'s'}\";\n        local ($/);\n        $opts{'n'} = join('', <$fh>);\n        $fh->close();\n    }\n\n    if (defined $opts{'l'} || ($opts{'t'} && !scalar @{$name->{'strings'}[$opts{'t'}]}))\n    {\n    \t@cover = $name->pe_list();\n        $opts{'l'} ||= 'en-US';\n    }\n\n    if (defined $opts{'t'})\n    {\n        $name->set_name($opts{'t'}, $opts{'n'}, $opts{'l'}, @cover);\n    }\n    else\n    {\n        my ($subfamily) = $opts{'w'} || $name->find_name(2);\n        my ($family, $full, $post, $unique, @time);\n\n        if ($opts{'f'})\n        {\n            $full = $opts{'f'};\n            $family = $opts{'f'};\n            \n            unless (lc($subfamily) eq 'regular' || lc($subfamily) eq 'standard')\n            {\n                unless ($family =~ s/\\s+$subfamily$//i)\n                {\n                    $family =~ s/\\s+(.*?)$//oi;\n                    $subfamily = $1;\n                }\n            }\n        }\n        else\n        {\n            $family = $opts{'n'};\n            if (lc($subfamily) eq 'regular' || lc($subfamily) eq 'standard')\n            { $full = $family; }\n            else\n            { $full = \"$family $subfamily\"; }\n        }\n\n        @time = gmtime($font->{'head'}->getdate);\n        $unique = sprintf('%s:%04d-%02d-%02d', $name->find_name(8) . $full, $time[5]+1900, $time[4]+1, $time[3]);\n        $post = $family;\n        $post .= \"-$subfamily\" if ($subfamily);\n        $post =~ s/[\\s\\[\\](){}<>\\/%]//og;\n\n        unless ($opts{'p'})\n        {\n            $name->{'strings'}[6][1][0]{0} = $post;\n            $name->{'strings'}[6][3][1]{1033} = $post;\n            $name->set_name(6, $post, $opts{'l'}, @cover);\n        }\n\n        $name->set_name(1, $family, $opts{'l'}, @cover);\n        $name->set_name(2, $subfamily, $opts{'l'}, @cover);\n        $name->set_name(3, $unique, $opts{'l'}, @cover);\n        $name->set_name(4, $full, $opts{'l'}, @cover);\n        $name->set_name(16, $family, $opts{'l'}, @cover);\n        $name->set_name(17, $subfamily, $opts{'l'}, @cover);\n        $name->set_name(18, $full, $opts{'l'}, @cover);\n    }\n    return $font;\n}",
+      "file" : "/var/tmp/arv_cGCDGn/Font-TTF-Scripts-1.03/lib/Font/TTF/Scripts/Name.pm",
+      "package" : "Font::TTF::Scripts::Name"
+   }
+]

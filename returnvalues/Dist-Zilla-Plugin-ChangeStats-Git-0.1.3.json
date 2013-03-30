@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "role {\n    my $p = shift;\n\n    sub BUILD {}\n\n    after BUILD => sub { \n        my $self = shift;\n\n        my $zilla = $self->zilla;\n\n        $zilla->meta->make_mutable;\n\n        for my $role ( @{ $p->roles } ) {\n            $role =~ s/^\\+// \n                or $role =~ s/^/Dist::Zilla::Role::/;\n\n            next if $zilla->does($role);\n\n            load $role;\n            $role->meta->apply($zilla->meta)\n        }\n\n        $zilla->meta->make_immutable;\n\n        return $self;\n\n    }\n\n}",
+      "file" : "/var/tmp/arv_usiaKZ/Dist-Zilla-Plugin-ChangeStats-Git-0.1.3/lib/Dist/Zilla/Role/Author/YANICK/RequireZillaRole.pm",
+      "package" : "Dist::Zilla::Role::Author::YANICK::RequireZillaRole"
+   }
+]

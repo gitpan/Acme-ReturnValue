@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub parseMetaTags {\n    my ($html) = @_;\n\n    $html =~ s/$removere//;\n    $html =~ $htmlre or return ();\n    my $htmlcontents = $2;\n    $htmlcontents =~ $headre or return ();\n    my $head = $2;\n    defined $head or return ();\n    \n    my %headerhash;\n    foreach my $tag ($head =~ /$tagre/g) {\n        my ($httpequiv,$content) = ($2 || $3, $5 || $6);\n        for my $pat (keys %replacements) {\n            $httpequiv =~ s/&$pat;/$replacements{$pat}/g;\n            $content =~ s/&$pat;/$replacements{$pat}/g;\n        }\n        $headerhash{lc($httpequiv)}=$content;\n    }\n    \n    return \\%headerhash;\n}",
+      "file" : "/var/tmp/arv_xvNf6o/Net-Yadis-1.0/lib/Net/Yadis/HTMLParse.pm",
+      "package" : "Net::Yadis::HTMLParse"
+   }
+]

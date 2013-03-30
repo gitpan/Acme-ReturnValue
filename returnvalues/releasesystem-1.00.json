@@ -1,0 +1,32 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n    my $self = shift;\n\n    if (defined $self->{validated} and $self->{validated})\n    {\n        unless (defined $self->{committed} and $self->{committed})\n        {\n            warn \"IMS::ReleaseMgr::DESTROY -- freeing object that has not \" .\n                \"been committed to disk, \";\n        }\n        unless (defined $self->{closed} and $self->{closed})\n        {\n            warn \"IMS::ReleaseMgr::DESTROY -- freeing object that has not \" .\n                \"been properly closed/cleaned, \";\n        }\n    }\n\n    undef $self;\n}",
+      "file" : "/var/tmp/arv_ZXzbSb/releasesystem/IMS-ReleaseMgr/ReleaseMgr.pm",
+      "package" : "IMS::ReleaseMgr"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub send_and_expect\n{\n    my ($ofh, $ifh, $send, $expect, $debug) = @_;\n\n    $debug |= 0; \n\n    print STDERR \"> $send\" if ($debug and $send !~ /user|pass/);\n    print $ofh $send;\n\n    my $line;\n    while (defined($line = <$ifh>))\n    {\n        print STDERR \"< $line\" if $debug;\n        return $line if $line =~ /$expect/;\n    }\n\n    undef;\n}",
+      "file" : "/var/tmp/arv_ZXzbSb/releasesystem/IMS-ReleaseMgr/ReleaseMgr/Transfer.pm",
+      "package" : "IMS::ReleaseMgr::Transfer"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub error\n{\n    my $text = shift;\n\n    $IMS::ReleaseMgr::FileList::error_text = $text\n        if (defined $text and $text);\n\n    $IMS::ReleaseMgr::FileList::error_text;\n}",
+      "file" : "/var/tmp/arv_ZXzbSb/releasesystem/IMS-ReleaseMgr/ReleaseMgr/FileList.pm",
+      "package" : "IMS::ReleaseMgr::FileList"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub SIG_dec_trace\n{\n    my $sig = shift;\n\n    $SIG{$sig} = \\&SIG_dec_trace;\n\n    my $cmd = ($main::cmd || $0);\n\n    $cmd =~ s|.*/||o;\n    if (defined $main::trace and $main::trace)\n    {\n        $main::trace--;\n    }\n    else\n    {\n        $main::trace = 0;\n    }\n\n    write_log_line(($main::tfile || \"$0.trace\"),\n                   sprintf(\"$cmd [$$] [%s] Trace-level changed to $::trace\",\n                           scalar localtime time));\n\n    1;\n}",
+      "file" : "/var/tmp/arv_ZXzbSb/releasesystem/IMS-ReleaseMgr/ReleaseMgr/Utils.pm",
+      "package" : "IMS::ReleaseMgr::Utils"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ACL_dir\n{\n    my $dir = shift;\n\n    my $ret_val = $ACL_DIR;\n    $ACL_DIR = $dir if (defined $dir and ! ref($dir));\n\n    $ret_val;\n}",
+      "file" : "/var/tmp/arv_ZXzbSb/releasesystem/IMS-ReleaseMgr/ReleaseMgr/Access.pm",
+      "package" : "IMS::ReleaseMgr::Access"
+   }
+]

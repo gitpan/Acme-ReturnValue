@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub delegate {\n    my $object = shift;\n    \n    croak(\"delegate needs a blessed object as parameter\") unless blessed $object;\n\n    if ( $object->isa(\"AnyEvent::JSONRPC::Client\") ) {\n\n        return sub {\n            my $cv   = shift;\n            my $call = $cv->call;\n\n            my $result = $object->call ( $call->method => $call );\n\n            eval { $cv->result( $result->recv ); 1 } or $cv->error( $@ );\n        }\n    }\n\n\n    return sub {\n        my $cv     = shift;\n        my $method = $cv->call->method;\n\n        my @result;\n        eval { \n            @result = $self->$method( @_ ); 1 \n        } or do {\n            my $error = $@;\n\n            if ( blessed $error or ref $error eq \"HASH\") {\n                $cv->error( $error ) if blessed $error or ref $error eq \"HASH\";\n            } else {\n                $cv->error( { code => -32603, message => \"Internal error\", data => $error \n            }\n        };\n\n        $cv->result( @result );        \n    }\n}\n\nmy %protected = (\n    meta => 1,\n    dump => 1,\n    does => 1,\n    new  => 1,\n);\n\nsub do_moose {\n    my $object = shift;\n\n    croak(\"do_moose needs a moose object as parameter\")\n        unless blessed $object and $object->isa(\"Moose::Object\");\n\n    my $delegator = delegate($object);\n\n    return map  { $_ => $delegator } \n           grep { !$protected{$_} and !/^_/ and !/^[A-Z]*$/ }  $object->meta->get_all_method_names;\n}\n\n1;\n\n__END__\n\n\n",
+      "file" : "/var/tmp/arv_g6sWcs/AnyEvent-JSONRPC-0.15/lib/AnyEvent/JSONRPC/Utils.pm",
+      "package" : "Anyevent::JSONRPC::Utils"
+   }
+]

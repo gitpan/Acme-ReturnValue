@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _compare_basename {\n    my($a, $b) = @_;\n    if(UNIVERSAL::isa($b, __PACKAGE__)) {\n        return scalar($a->fileparse) cmp scalar($b->fileparse);\n    } else {\n        return $a->_compare_basename(__PACKAGE__->new($b, @{$a}[ $[ + 1 .. $#$a ]));\n    }\n}",
+      "file" : "/var/tmp/arv_vteCR5/File-Basename-Object-0.01/lib/File/Basename/Object.pm",
+      "package" : "File::Basename::Object"
+   }
+]

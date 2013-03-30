@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _safeonload {\n  <<END;\n}",
+      "file" : "/var/tmp/arv_hsKWpm/HTML-Widgets-SelectLayers-0.07/SelectLayers.pm",
+      "package" : "HTML::Widgets::SelectLayers"
+   }
+]

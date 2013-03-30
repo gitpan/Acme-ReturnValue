@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n}",
+      "file" : "/var/tmp/arv_ggv5kw/NISPlus-0.06-alpha/NISPlus/Group.pm",
+      "package" : "Net::NISPlus::Group"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY\n{\n}",
+      "file" : "/var/tmp/arv_ggv5kw/NISPlus-0.06-alpha/NISPlus/Entry.pm",
+      "package" : "Net::NISPlus::Entry"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = do { q|char version[] = \"dbtarpit 0.43, 4-19-10\";| =~ /(\\d+)\\.(\\d+)/; sprintf(\"%d.%02d\",$1,$2)}",
+      "file" : "/var/tmp/arv_fCR7Z5/IPTables-IPv4-DBTarpit-0.43/DBTarpit.pm",
+      "package" : "IPTables::IPv4::DBTarpit"
+   }
+]

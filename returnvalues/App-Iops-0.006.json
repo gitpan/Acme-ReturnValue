@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'We make an average of 257 cups a day on Tuesdays but volume is\ntrending downwards because with the onset of of warmer weather\ncustomers begin ordering more cold, non-coffee based drinks such as\niced tea. The espresso to drip ratio is approximately 1.67 to 1\nsuggesting that ...'",
+      "file" : "/var/tmp/arv_k6aKME/App-Iops-0.006/lib/App/Iops.pm",
+      "package" : "App::Iops"
+   }
+]

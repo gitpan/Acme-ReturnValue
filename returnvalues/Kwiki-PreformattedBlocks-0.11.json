@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub to_html {\n    join '',\n      qq{<pre class=\"formatter_pre\">\\n},\n      $self->block_text,\n      \"</pre>\\n\";\n}",
+      "file" : "/var/tmp/arv_WKdKwM/Kwiki-PreformattedBlocks-0.11/lib/Kwiki/PreformattedBlocks.pm",
+      "package" : "Kwiki::PreformattedBlocks"
+   }
+]

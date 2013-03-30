@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "qq[Recurse this AD]",
+      "file" : "/var/tmp/arv_1COt1r/Win32-ADRecurse-0.04/lib/Win32/ADRecurse.pm",
+      "package" : "Win32::ADRecurse"
+   }
+]

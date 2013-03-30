@@ -1,0 +1,38 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_zAUYMP/Finance-Bank-Wachovia-0.5/lib/Finance/Bank/Wachovia.pm",
+      "package" : "Finance::Bank::Wachovia"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_zAUYMP/Finance-Bank-Wachovia-0.5/lib/Finance/Bank/Wachovia/Account.pm",
+      "package" : "Finance::Bank::Wachovia::Account"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_zAUYMP/Finance-Bank-Wachovia-0.5/lib/Finance/Bank/Wachovia/Credit.pm",
+      "package" : "Finance::Bank::Wachovia::Credit"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_zAUYMP/Finance-Bank-Wachovia-0.5/lib/Finance/Bank/Wachovia/Transaction.pm",
+      "package" : "Finance::Bank::Wachovia::Transaction"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub ErrStr {\n\tmy $self = shift;\n\treturn ref $self ? $self->[0] : $ERROR;\t\n}",
+      "file" : "/var/tmp/arv_zAUYMP/Finance-Bank-Wachovia-0.5/lib/Finance/Bank/Wachovia/ErrorHandler.pm",
+      "package" : "Finance::Bank::Wachovia::ErrorHandler"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {}",
+      "file" : "/var/tmp/arv_zAUYMP/Finance-Bank-Wachovia-0.5/lib/Finance/Bank/Wachovia/DataObtainer/WWW.pm",
+      "package" : "Finance::Bank::Wachovia::DataObtainer::WWW"
+   }
+]

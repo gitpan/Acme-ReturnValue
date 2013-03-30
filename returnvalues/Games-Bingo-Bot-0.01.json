@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub help {\n\t\t\n\tmy $help = qq[\nThese are the bingobot commands:\n\nhelp   - this message\nplay   - join a game\nstats  - get the current statistics of the running game\npull   - pull the next number\nbingo  - you indicate to the bot that you have bingo\npulled - shows you what number have been pulled\nshow   - lists the numbers on your plate\n\nNot implemented yet:\n\nauto   - enables automode (automatic number pulling)\nnoauto - disables automode\n\t\nAll commands can be sent into the channel or send as private messages\nto the bot. The bot can repond as both of these ways aswell. The\nreponses are sent as follows:\n\n\t- help, show and all errors are always private messages\n\t\n\t- pull and bingo are always public\n\t\n\t- play, pulled, stats, auto, noauto depends on how you query\n\nAs long as the bot is online a game is running /EOM.\n];\n\n\treturn (PRIVATE, $help);\n}",
+      "file" : "/var/tmp/arv_CELW_H/Games-Bingo-Bot-0.01/lib/Games/Bingo/Bot.pm",
+      "package" : "Games::Bingo::Bot"
+   }
+]

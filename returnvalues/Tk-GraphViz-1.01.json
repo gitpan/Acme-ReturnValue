@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub max {\n  if ( defined($_[0]) ) {\n    if ( defined($_[1]) ) { return ($_[0] > $_[1])? $_[0] : $_[1]; }\n    else { return $_[0]; }\n  } else {\n    if ( defined($_[1]) ) { return $_[1]; }\n    else { return undef; }\n  }\n}",
+      "file" : "/var/tmp/arv_NQoer8/Tk-GraphViz-1.01/GraphViz.pm",
+      "package" : "Tk::GraphViz"
+   }
+]

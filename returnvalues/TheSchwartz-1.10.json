@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n    foreach my $arg (@_) {\n        if (ref($arg) and $arg->isa('TheSchwartz')) {\n            $arg->clean_scoreboard;\n        }\n    }\n}\n\n1",
+      "file" : "/var/tmp/arv_ZGcbj9/TheSchwartz-1.10/lib/TheSchwartz.pm",
+      "package" : "TheSchwartz"
+   }
+]

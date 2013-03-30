@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  $Moose::OldDocs::VERSION = '0.04';\n}",
+      "file" : "/var/tmp/arv_YpncRC/Moose-OldDocs-0.04/lib/Moose/OldDocs.pm",
+      "package" : "Moose::OldDocs"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\nuse Moose;\nuse Carp;\n\nhas _tracing_object => ( is => 'rw' );\n\nsub connect {\n    return Net::Stomp::Frame->new({\n        command => 'CONNECTED',\n        headers => {\n            session => 'ID:foo',\n        },\n        body => '',\n    });\n}\nsub subscribe { return 1 }\nsub unsubscribe { return 1 }\nsub ack { return 1 }\n\nsub receive_frame {\n    croak \"This a Net::Stomp::MooseHelpers::TraceOnly::Connection, we don't talk to the network\";\n}\n\nsub send_frame {\n    my ($self,$frame,@etc) = @_;\n\n    if (my $o=$self->_tracing_object) {\n        $o->_save_frame($frame,'send');\n    }\n\n    return;\n};\n\nsub send {\n    my ($self,$conf) = @_;\n\n    my $body = $conf->{body};\n    delete $conf->{body};\n    my $frame = Net::Stomp::Frame->new({\n        command => 'SEND', headers => $conf, body => $body,\n    });\n    $self->send_frame($frame);\n}\n\n__PACKAGE__->meta->make_immutable;\n}",
+      "file" : "/var/tmp/arv_OXgF8m/Net-Stomp-MooseHelpers-1.8/lib/Net/Stomp/MooseHelpers/TraceOnly.pm",
+      "package" : "Net::Stomp::MooseHelpers::TraceOnly"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "subtype Destination, as Str,\n    where { m{^/(?:queue|topic)/} }",
+      "file" : "/var/tmp/arv_OXgF8m/Net-Stomp-MooseHelpers-1.8/lib/Net/Stomp/MooseHelpers/Types.pm",
+      "package" : "Net::Stomp::MooseHelpers::Types"
+   }
+]

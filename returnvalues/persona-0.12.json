@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _inc_handler {\n    my ( $self, $file )= @_;\n\n    if ( !$all and !first { $file =~ m#$_# } @only_for ) {\n        TELL 'Not handling %s', $file if DEBUG > 1;\n        return undef;\n    }\n\n    my $first= first { $INC[$_] eq $self } 0 .. $#INC;\n    die \"Could not find INC handler in @INC\" if !defined $first;\n\n    my $path= first { -e } map { \"$INC[$_]/$file\" } $first + 1 .. $#INC;\n    if ( !$path ) {\n        TELL 'Could not find %s', $file if DEBUG > 1;\n        return undef;\n    }\n\n    my ( $source, $skipped )= __PACKAGE__->path2source($path);\n\n    return undef if !$source or !$skipped;\n\n    $path =~ s#^\\./##; \n    $INC{$file}=\n      \"$path (skipped $skipped lines for persona '$process_persona')\";\n\n    $$source= \"#line 1 $path\\n$$source\";\n\n    open( my $require, '<', $source )\n      or die \"Could not open in-memory source for reading: $!\";\n\n    return $require;\n}",
+      "file" : "/var/tmp/arv_jL8nSp/persona-0.12/lib/persona.pm",
+      "package" : "persona"
+   }
+]

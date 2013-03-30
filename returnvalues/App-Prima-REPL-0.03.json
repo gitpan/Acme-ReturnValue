@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = 0.03",
+      "file" : "/var/tmp/arv_jeQHj1/App-Prima-REPL-0.03/lib/App/Prima/REPL.pm",
+      "package" : "App::Prima::REPL"
+   }
+]

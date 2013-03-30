@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'a neural network has your dog.'",
+      "file" : "/var/tmp/arv_r_FacE/AI-Nerl-0.03/lib/AI/Nerl.pm",
+      "package" : "AI::Nerl"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'$nn->train($sovietRussian)'",
+      "file" : "/var/tmp/arv_r_FacE/AI-Nerl-0.03/lib/AI/Nerl/Network.pm",
+      "package" : "AI::Nerl::Network"
+   }
+]

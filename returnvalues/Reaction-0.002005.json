@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method from_string ($class: $string, $other) {\n  my %raw = %{from_json($string)};\n  my %val;\n  @val{keys %raw} = map {\n    $class->_from_string_unpack_value($_, $raw{$_})\n  } keys %raw;\n  return $class->new({ %val, %{$other||{}} });\n}\n\n1",
+      "file" : "/var/tmp/arv_jUMiWl/Reaction-0.002005/lib/Reaction/InterfaceModel/Search/Spec.pm",
+      "package" : "Reaction::InterfaceModel::Search::Spec"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method do_apply () {\n  my $data = $self->parameter_hashref;\n  my $spec = $self->target_model;\n  foreach my $name (keys %$data) {\n    if (length(my $value = $data->{$name})) {\n      $spec->$name($value);\n    } else {\n      $spec->${\\\"clear_${name}\"};\n    }\n  }\n  $spec;\n}\n\n1",
+      "file" : "/var/tmp/arv_jUMiWl/Reaction-0.002005/lib/Reaction/InterfaceModel/Search/UpdateSpec.pm",
+      "package" : "Reaction::InterfaceModel::Search::UpdateSpec"
+   }
+]

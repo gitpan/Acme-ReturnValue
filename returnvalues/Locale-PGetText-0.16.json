@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub gettext($)\n{\nmy $s=shift;\nmy $msg=$messages{$s};\nreturn $msg if ($msg);\nreturn $s;\n}",
+      "file" : "/var/tmp/arv_JIKY_V/Locale-PGetText-0.16/PGetText.pm",
+      "package" : "Locale::PGetText"
+   }
+]

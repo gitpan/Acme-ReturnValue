@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our %contents = ( \"footer.tmpl\" => <<'END_FOOTER', \"header.tmpl\" =><< 'END_HEADER', \"html.tmpl\" =><<'END_HTML', \"pod.tmpl\" =><< 'END_POD', \"dot.tmpl\" =><< 'END_DOT' )",
+      "file" : "/var/tmp/arv_MrR5NH/Module-Build-Database-0.40/lib/Module/Build/Database/PostgreSQL/Templates.pm",
+      "package" : "Module::Build::Database::PostgreSQL::Templates"
+   }
+]

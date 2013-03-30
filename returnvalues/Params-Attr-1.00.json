@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "if ( caller ) {\n  1; \n} else {\n  require Test::More;\n  Test::More->import(tests => 19);\n\n  require_ok('File::stat');\n  require_ok('IO::All');\n  IO::All->import('io');\n\n  sub scallywag : CheckP(S)\n    { ok(! ref $_[0], \"scallywag $_[0]\") }\n  sub objit     : CheckP(File::stat)\n    { ok($_[0]->isa('File::stat'), \"objit $_[0]\") }\n  sub objscal   : CheckP(qw( File::stat|S ))\n    { ok(! ref $_[0] || $_[0]->isa('File::stat'), 'objscal') }\n\n\n  scallywag('foo');\n\n  ok( !$@, '$@ unset');\n  eval { scallywag([]) };\n  ok($@ =~ /which is not one of the allowed types/, 'scalar check');\n\n\n  objit(File::stat::stat($0));\n\n  undef $@;\n  ok( !$@, '$@ unset');\n  eval { objit('foo') };\n  ok($@ =~ /which is not one of the allowed types/, 'object check');\n\n  my $io = io($0);\n  ok($io->isa('IO::All'), 'io is expected type');\n  undef $@;\n  ok( !$@, '$@ unset');\n  eval { objit($io) };\n  ok($@ =~ /which is not one of the allowed types/, 'object type check');\n\n\n  objscal('bar');\n  objscal(File::stat::stat($0));\n\n  $io = io($0);\n  ok($io->isa('IO::All'), 'io is expected type');\n  undef $@;\n  ok( !$@, '$@ unset');\n  eval { objscal($io) };\n  ok($@ =~ /which is not one of the allowed types/, 'object/scalar type check');\n\n\n  sub isint : CheckP(i)\n    { ok($_[0] =~ m!^\\d+$!, \"int $_[0]\") }\n\n  isint(7);\n  ok( !$@, '$@ unset');\n  eval { isint('foo') };\n  ok($@ =~ /which is not one of the allowed types/, 'int check');\n\n}",
+      "file" : "/var/tmp/arv_Tdd6A9/Params-Attr-1.00/lib/Params/Attr.pm",
+      "package" : "Params::Attr"
+   }
+]

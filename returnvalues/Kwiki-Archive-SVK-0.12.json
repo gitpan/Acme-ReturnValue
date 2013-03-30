@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub show_revisions {\n    my $page = $self->pages->current;\n    my $count = 0;\n\n    my $handle = $self->svk_handle($page);\n    my $fs = ($handle->{xd}->find_repos('//', 1))[2]->fs;\n    my $path = \"/pages/\".$page->id;\n\n    traverse_history (\n        root     => $fs->revision_root ($fs->youngest_rev),\n        path     => $path,\n        cross    => 0,\n        callback => sub { $count++; 1 }\n    );\n\n    $count-- if $count > 0;\n    return $count;\n}",
+      "file" : "/var/tmp/arv_vbrTrb/Kwiki-Archive-SVK-0.12/lib/Kwiki/Archive/SVK.pm",
+      "package" : "Kwiki::Archive::SVK"
+   }
+]

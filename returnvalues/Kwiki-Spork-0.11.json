@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::Spork",
+      "file" : "/var/tmp/arv_434bI0/Kwiki-Spork-0.11/lib/Kwiki/Spork.pm",
+      "package" : "Kwiki::Spork"
+   }
+]

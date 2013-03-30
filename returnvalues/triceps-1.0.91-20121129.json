@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run \n{\n\tmy $labels = shift;\n\n\tmy ($port, $pid) = Triceps::X::SimpleServer::startServer(0, $labels);\n\tmy $sock = IO::Socket::INET->new(\n\t\tProto => \"tcp\",\n\t\tPeerAddr => \"localhost\",\n\t\tPeerPort => $port,\n\t) or confess \"socket failed: $!\";\n\twhile(&readLine) {\n\t\t$sock->print($_);\n\t\t$sock->flush();\n\t}\n\t$sock->print(\"exit,OP_INSERT\\n\");\n\t$sock->flush();\n\t$sock->shutdown(1); \n\twhile(<$sock>) {\n\t\t&send($_);\n\t}\n\twaitpid($pid, 0);\n}",
+      "file" : "/var/tmp/arv_ZUU2Yl/triceps-1.0.91/perl/Triceps/lib/Triceps/X/DumbClient.pm",
+      "package" : "Triceps::X::DumbClient"
+   }
+]

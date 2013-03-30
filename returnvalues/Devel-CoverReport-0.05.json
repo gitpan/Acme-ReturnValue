@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub inspect { \n    my ( $file_path ) = @_;\n\n    assert_defined($file_path, \"File path given\");\n\n\n    if (not -f $file_path) {\n        return;\n    }\n\n    my %metadata = (\n        lines   => [],\n    );\n    \n    my @lines = read_file($file_path);\n    foreach my $line (@lines) {\n        push @{ $metadata{'lines'} }, $commits[ ( $n++ / 3 ) % $c_count ];\n    }\n\n    return \\%metadata;\n} # }}}\n\n1;\n\n__END__\n\n=back\n\n=head1 LICENCE\n\nCopyright 2009-2011, Bartłomiej Syguła (perl@bs502.pl)\n\nThis is free software. It is licensed, and can be distributed under the same terms as Perl itself.\n\nFor more, see my website: http://bs502.pl/\n\n",
+      "file" : "/var/tmp/arv_i3fnYS/Devel-CoverReport-0.05/lib/Devel/CoverReport/VCS/Fake.pm",
+      "package" : "Devel::CoverReport::VCS::Fake"
+   }
+]

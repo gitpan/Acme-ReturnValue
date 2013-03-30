@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub seq_l {\n  my $self = shift;\n  local $_ = shift;\n    s/\\s+/ /g;\n\n    if (/^([^|]+)\\|/) { return $1 }\n\n    s/^\\s+//;\n    s/\\s+$//;\n\n\n\n    my ($manpage, $section) = ('', $_);\n    if (/$RE{URI}/ || /^(?:https?|ftps?|svn):/) {\n        return $_;\n    } elsif (/^\"\\s*(.*?)\\s*\"$/) {\n        $section = '\"' . $1 . '\"';\n    } elsif (m/^[-:.\\w]+(?:\\(\\S+\\))?$/) {\n        ($manpage, $section) = ($_, '');\n    } elsif (m%/%) {\n        ($manpage, $section) = split (/\\s*\\/\\s*/, $_, 2);\n    }\n\n    if (length $manpage) {\n      return $manpage;\n    } else {\n      return $section;\n    }\n}",
+      "file" : "/var/tmp/arv_lLXcL9/Pod-Readme-0.11/lib/Pod/Readme.pm",
+      "package" : "Pod::Readme"
+   }
+]

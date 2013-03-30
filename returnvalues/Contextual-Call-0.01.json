@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub result\n{\n\tmy $this = shift;\n\tmy $wantarray = $this->{context};\n\tif( $wantarray )\n\t{\n\t\t@{$this->{result}};\n\t}elsif( defined($wantarray) )\n\t{\n\t\t$this->{result}->[0];\n\t}else\n\t{\n\t\treturn;\n\t}\n}",
+      "file" : "/var/tmp/arv_3ZHwj5/Contextual-Call-0.01/lib/Contextual/Call.pm",
+      "package" : "Contextual::Call"
+   }
+]

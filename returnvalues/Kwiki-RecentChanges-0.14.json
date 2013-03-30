@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Package",
+      "bad" : "package Kwiki::RecentChanges",
+      "file" : "/var/tmp/arv_yydU_A/Kwiki-RecentChanges-0.14/lib/Kwiki/RecentChanges.pm",
+      "package" : "Kwiki::RecentChanges"
+   }
+]

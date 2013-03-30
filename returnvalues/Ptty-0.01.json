@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub slave\n{\n my ($obj) = @_;\n my $slave = $obj->{'slave'};\n my $tty   = $obj->{'tty'};\n open($slave,\"+>$tty\") || croak \"Cannot open $slave as $tty:$!\";\n InitSlave($slave,$tty);\n my $code = system(\"stty sane >&\".fileno($slave).\" <&1\");\n print STDERR \"stty code=$code\\n\" if ($code); \n my $what = select($slave);\n $| = 1;\n select($what);\n return $slave;\n}",
+      "file" : "/var/tmp/arv_YUf1mb/Ptty-0.01/Ptty.pm",
+      "package" : "Ptty"
+   }
+]

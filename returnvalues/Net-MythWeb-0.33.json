@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _uri {\n    my ( $self, $path ) = @_;\n    return 'http://' . $self->hostname . ':' . $self->port . $path;\n}",
+      "file" : "/var/tmp/arv_EYJGRK/Net-MythWeb-0.33/lib/Net/MythWeb.pm",
+      "package" : "Net::MythWeb"
+   }
+]

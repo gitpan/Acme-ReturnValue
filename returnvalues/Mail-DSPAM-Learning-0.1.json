@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _getDomain {\n    my $ip = &_getIP;\n    my $res   = Net::DNS::Resolver->new;\n    \n    my $query;\n    my $hostname=\"localhost\";\n\n    eval {\n\t$query = $res->search($ip);\n    };\n    \n    if (!$@) {\n\tif ($query) {\n\t    foreach my $rr ($query->answer) {\n\t\tnext unless $rr->type eq \"PTR\";\n\t\tprint STDERR $rr->rdatastr, \"\\n\";\n\t\t$hostname = $rr->rdatastr;\n\t    }\n\t    \n\n\t    warn \"Hostname: $hostname\\n\";\n\t    \n\t    $hostname =~ /^([^\\.]+)\\.(.*)\\.$/;\n\t    \n\t    my $domain = $2;\n\t    return ($domain);\n\t} else {\n\t    warn \"query failed: \", $res->errorstring, \"\\n\";\n\t    return(\"localdomain\");\n\t}\n    } else {\n\twarn \"query failed: \", $res->errorstring, \"\\n\";\n\treturn(\"localdomain\");\n    }\n\n}",
+      "file" : "/var/tmp/arv_lIUA37/Mail-DSPAM-Learning-0.1/lib/Mail/DSPAM/Learning.pm",
+      "package" : "Mail::DSPAM::Learning"
+   }
+]

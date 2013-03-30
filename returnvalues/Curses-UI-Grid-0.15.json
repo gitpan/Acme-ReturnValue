@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DESTROY {\n    my $this = shift;\n    $this->cleanup;\n}",
+      "file" : "/var/tmp/arv_GX_agT/Curses-UI-Grid-0.15/lib/Curses/UI/Grid/Cell.pm",
+      "package" : "Curses::UI::Grid::Cell"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _handle_bye\n{\n    my ($self, $command) = @_;\n    delete $self->{email}->{$command->params->[0]};\n}",
+      "file" : "/var/tmp/arv_Qj0nav/Net-Msmgr-0.16/Msmgr/Conversation.pm",
+      "package" : "Net::Msmgr::Conversation"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _fields { return shift->SUPER::_fields, ( ssid => undef ); }",
+      "file" : "/var/tmp/arv_Qj0nav/Net-Msmgr-0.16/Msmgr/Switchboard.pm",
+      "package" : "Net::Msmgr::Switchboard"
+   }
+]

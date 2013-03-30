@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1337",
+      "file" : "/var/tmp/arv_ab6clt/Mail-POPRelay-2.1.1/Object.pm",
+      "package" : "Mail::Object"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1337",
+      "file" : "/var/tmp/arv_ab6clt/Mail-POPRelay-2.1.1/POPRelay.pm",
+      "package" : "Mail::POPRelay"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "1337",
+      "file" : "/var/tmp/arv_ab6clt/Mail-POPRelay-2.1.1/POPRelay/Daemon.pm",
+      "package" : "Mail::POPRelay::Daemon"
+   }
+]

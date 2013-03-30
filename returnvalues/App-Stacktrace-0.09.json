@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "q{Bartender, I'll have a Gordon Freeman on the rocks, thanks.}",
+      "file" : "/var/tmp/arv_Mhbbd1/App-Stacktrace-0.09/lib/App/Stacktrace.pm",
+      "package" : "App::Stacktrace"
+   }
+]

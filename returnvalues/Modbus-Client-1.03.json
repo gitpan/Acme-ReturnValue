@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Another module by Daniel V. Klein <dan@klein.com>'",
+      "file" : "/var/tmp/arv_X0y9mY/Modbus-Client/lib/Modbus/Client.pm",
+      "package" : "Modbus::Client"
+   }
+]

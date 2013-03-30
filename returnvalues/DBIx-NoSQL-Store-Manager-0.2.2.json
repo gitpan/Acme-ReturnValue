@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method new_model_object(@args) { $self->create(@args) }\n\nmethod create ( $model, @args ) {\n    $self->model_class($model)->new( store_db => $self, @args);   \n}\n\n1",
+      "file" : "/var/tmp/arv_SK_A1c/DBIx-NoSQL-Store-Manager-0.2.2/lib/DBIx/NoSQL/Store/Manager.pm",
+      "package" : "DBIx::NoSQL::Store::Manager"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "method store {\n    $self->store_db->set( \n        $self->store_model =>\n            $self->store_key => $self,\n    );\n}\n\n\nmethod delete {\n    $self->store_db->delete( $self->store_model => $self->store_key );\n}\n\nmethod _entity {\n   return $self->pack; \n}\n\nmethod indexes {\n    return map  { [ $_->name, ( isa => $_->store_isa ) x $_->has_store_isa ] }\n           grep { $_->does('DBIx::NoSQL::Store::Manager::StoreIndex') } \n                $self->meta->get_all_attributes;\n}\n\n1",
+      "file" : "/var/tmp/arv_SK_A1c/DBIx-NoSQL-Store-Manager-0.2.2/lib/DBIx/NoSQL/Store/Manager/Model.pm",
+      "package" : "DBIx::NoSQL::Store::Manager::Model"
+   }
+]

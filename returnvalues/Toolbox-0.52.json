@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Break (but very likely crap)",
+      "bad" : "return(1)",
+      "file" : "/var/tmp/arv_iTETGD/Toolbox-0.52/CryptOTP.pm",
+      "package" : "Toolbox::CryptOTP"
+   }
+]

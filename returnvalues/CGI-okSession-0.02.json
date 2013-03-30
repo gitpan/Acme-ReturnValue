@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "DESTROY {\n\tmy $self = shift;\n\tmy(%s) = (%$self);\n\tStorable::lock_store(\\%s,\"$s{___config}->{dir}/$s{___config}->{id}.sess\");\n}\n\n1",
+      "file" : "/var/tmp/arv_WzSWVV/CGI-okSession-0.02/okSession.pm",
+      "package" : "CGI::okSession"
+   }
+]

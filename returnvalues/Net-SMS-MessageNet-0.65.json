@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub send_sms {\n\tmy ($user_name, $password, $phone_number, $message) = @_;\n\t__PACKAGE__->new($user_name, $password)->send($phone_number, $message);\n}",
+      "file" : "/var/tmp/arv_K0kjY6/Net-SMS-MessageNet-0.65/lib/Net/SMS/MessageNet.pm",
+      "package" : "Net::SMS::MessageNet"
+   }
+]

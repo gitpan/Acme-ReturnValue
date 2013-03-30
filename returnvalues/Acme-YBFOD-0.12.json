@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "INIT {\n    local $/; my @magic = qw(-11 3 5 -3 11);\n    my @brains=Acme::Buffy::_unslay(($B=<DATA>)=~s/(r(a(i(n))))/join'.',map\"chr(ord(\\$$_)+$magic[$_])\",(1..4)/geieio,$B)=~/(.*?\\012)/g;\n    END {printf $brains[int rand(@brains)], __PACKAGE__}\n}",
+      "file" : "/var/tmp/arv_j3Gl3z/Acme-YBFOD-0.12/lib/YourBrainForOnceDude.pm",
+      "package" : "YourBrainForOnceDude"
+   }
+]

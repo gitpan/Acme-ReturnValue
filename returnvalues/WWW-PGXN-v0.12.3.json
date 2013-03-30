@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub releases {\n    +{ %{ shift->{releases} } }\n}",
+      "file" : "/var/tmp/arv_wTVI22/WWW-PGXN-v0.12.3/lib/WWW/PGXN/User.pm",
+      "package" : "WWW::PGXN::User"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub releases {\n    +{ %{ shift->{releases} } }\n}",
+      "file" : "/var/tmp/arv_wTVI22/WWW-PGXN-v0.12.3/lib/WWW/PGXN/Tag.pm",
+      "package" : "WWW::PGXN::Tag"
+   }
+]

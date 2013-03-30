@@ -1,0 +1,50 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/Standalone.pm",
+      "package" : "HTTP::Engine::Interface::Standalone"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/POE.pm",
+      "package" : "HTTP::Engine::Interface::POE"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/PSGI.pm",
+      "package" : "HTTP::Engine::Interface::PSGI"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/CGI.pm",
+      "package" : "HTTP::Engine::Interface::CGI"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/FCGI.pm",
+      "package" : "HTTP::Engine::Interface::FCGI"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/ServerSimple.pm",
+      "package" : "HTTP::Engine::Interface::ServerSimple"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/Test.pm",
+      "package" : "HTTP::Engine::Interface::Test"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__INTERFACE__",
+      "file" : "/var/tmp/arv_mM_MIC/HTTP-Engine-0.03005/lib/HTTP/Engine/Interface/ModPerl.pm",
+      "package" : "HTTP::Engine::Interface::ModPerl"
+   }
+]

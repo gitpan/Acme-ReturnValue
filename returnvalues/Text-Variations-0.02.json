@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _interpolate_string {\n    my $self   = shift;\n    my $string = shift;\n    my $args   = shift;\n\n    $string =~ s/ {{ (\\w+) }} / $args->{$1} /xge;\n    return $string;\n}",
+      "file" : "/var/tmp/arv_qOxhJc/Text-Variations-0.02/lib/Text/Variations.pm",
+      "package" : "Text::Variations"
+   }
+]

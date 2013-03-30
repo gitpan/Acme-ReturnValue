@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub save {\n    \n    my $self = shift;\n    \n    List::Vectorize::check_prototype(@_, '$');\n    \n    my $file = shift;\n    \n    if(is_empty($self->feature)) {\n        croak \"ERROR: Feature names are required. \";\n    } elsif(is_empty($self->phenotype)) {\n        croak \"ERROR: Phenotype names are required. \";\n    } elsif(! $self->is_valid) {\n        croak \"ERROR: not a valid \".__PACKAGE__.\" object\";\n    }\n    \n    write_table($self->matrix, \"file\" => $file, \"row.names\" => $self->feature, \"col.names\" => $self->phenotype);\n    \n    return 1;\n}",
+      "file" : "/var/tmp/arv_BWEh5A/Microarray-ExprSet-0.11/lib/Microarray/ExprSet.pm",
+      "package" : "Microarray::ExprSet"
+   }
+]

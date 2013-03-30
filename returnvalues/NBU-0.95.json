@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub loadRobotDetail {\n  my $self = shift;\n  my $server = shift;\n\n  if (!defined($server)) {\n    my @masters = NBU->masters;  $server = $masters[0];\n  }\n\n  my $pipe = NBU->cmd(\"vmglob -h \".$server->name.\" -listall -java |\");\n  while (<$pipe>) {\n    next unless (/VMGLOB... robot /);\n    chop;\n\n    my($key, $d, $number, $serial, $host, $voldbHostName, $robotNumber, $na1, $type, $na2, $flags,\n       $wwName, $wwNameType, $inquiry, $libraryName, $vendorName, $controlHostName) =\n      split;\n\n    next unless ($controlHostName eq \"-\");\n\n    if (my $robot = NBU::Robot->byID($robotNumber)) {\n      $robot->{SERIALNUMBER} = $serial;\n      $robot->{VOLDBHOST} = NBU::Host->new($voldbHostName);\n      $robot->{CONTROLHOST} = NBU::Host->new($host);\n\n      $robot->{DETAILED} = 1;\n    }\n  }\n  $self->{DETAILED} = 1;\n}",
+      "file" : "/var/tmp/arv_FK_zmP/NBU-0.95/lib/NBU/Robot.pm",
+      "package" : "NBU::Robot"
+   }
+]

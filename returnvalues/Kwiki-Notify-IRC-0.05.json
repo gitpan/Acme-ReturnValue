@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub update {\n    no warnings 'once';    \n    require POE::Component::IKC::ClientLite;\n    my $remote = POE::Component::IKC::ClientLite::create_ikc_client(\n        port    => $self->hub->config->notify_irc_daemon_port,\n        ip      => $self->hub->config->notify_irc_daemon_host,\n        name    => \"Kwiki$$\",\n        timeout => 5,\n        )\n        or die $POE::Component::IKC::ClientLite::error;\n    my $page = $self->pages->current;\n    $page->title;\n    $remote->post( 'notify_irc/update', $page );\n}",
+      "file" : "/var/tmp/arv_Xkcyx3/Kwiki-Notify-IRC-0.05/lib/Kwiki/Notify/IRC.pm",
+      "package" : "Kwiki::Notify::IRC"
+   }
+]

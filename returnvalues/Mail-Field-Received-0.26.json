@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub parse_tree {\n  my $self = shift;\n  croak \"Header not parsed yet\" unless $self->{parse_tree};\n  return $self->{parse_tree};\n}",
+      "file" : "/var/tmp/arv_noVc8x/Mail-Field-Received-0.26/Received.pm",
+      "package" : "Mail::Field::Received"
+   }
+]

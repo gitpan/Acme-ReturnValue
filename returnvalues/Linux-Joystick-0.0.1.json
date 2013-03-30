@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _decodeAxis {\n\tmy $self = shift;\n\tmy $stick = shift;\n\n\treturn undef unless $self->isAxis;\n\tmy $evenOdd = shift;\n\tmy $compFunc = shift;\n\n\tif(defined $stick) {\n\t\treturn undef unless ($self->axis) >> 1 == $stick;\n\t}\n\n\tif($self->axis % 2 == $evenOdd) {\n\t\treturn 1 if $compFunc->();\n\t\treturn 0;\n\t}\n\n\treturn undef;\n}",
+      "file" : "/var/tmp/arv_gjB1Hc/Linux-Joystick-0.0.1/Joystick.pm",
+      "package" : "Linux::Joystick"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "$VERSION = '1.004'",
+      "file" : "/var/tmp/arv_TiHw7x/Math-Transform-List-1.004/lib/Math/Transform/List.pm",
+      "package" : "Math::Transform::List"
+   }
+]

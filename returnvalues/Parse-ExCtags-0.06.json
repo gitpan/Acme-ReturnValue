@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub unescape_value() {\n        my @new = @_;\n        for(@new) { s{\\G(.*?)(\\\\.)}{$1 . ({'\\\\t' => chr(9), '\\\\r' => chr(13), '\\\\n' => chr(10), '\\\\\\\\'  => '\\\\',}->{$2}||$2)}ge; }\n        return @new;\n}",
+      "file" : "/var/tmp/arv_eWSw1z/Parse-ExCtags-0.06/lib/Parse/ExCtags.pm",
+      "package" : "Parse::ExCtags"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub coolURI_handler {\n    my ($r, $rpath, $path) = @_;\n\n    return undef if (-f $rpath or -l $rpath);\n    return undef if -d $rpath;\n\n    return $path if ($r->args and $r->args =~ /\\w+/);\n\n    my $pagename = $rpath;\n    $pagename =~ s|^$path||;\n\n    if ($pagename =~ /\\w+/) {\n        $pagename =~ s{/+}{}g;\n        my $query_string = \"action=display&page_name=$pagename\";\n        $r->subprocess_env(QUERY_STRING=>$query_string);\n        $ENV{QUERY_STRING} = $query_string;\n        $r->path_info('');\n        $r->args($query_string);\n        $rpath =~ s|$pagename$||;\n        return $path;\n    }\n    return undef;\n}",
+      "file" : "/var/tmp/arv_vIL8LR/Kwiki-ModPerl-0.09/lib/Kwiki/ModPerl.pm",
+      "package" : "Kwiki::ModPerl"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Scheduled",
+      "bad" : "INIT {\n    no warnings;\n\n    if ( my $skip= $ENV{SKIP_SYS_RUNALONE} ) {\n        print STDERR \"Skipping \" . __PACKAGE__ . \" check for '$0'\\n\"\n          if !$silent and $skip > 1;\n    }\n\n    elsif ( tell( *main::DATA ) == -1 ) {\n        print STDERR \"Add __END__ to end of script '$0'\"\n          . \" to be able use the features of Sys::RunALone\\n\";\n        exit 2;\n    }\n\n    elsif ( !flock main::DATA, LOCK_EX | LOCK_NB ) {\n\n        if ($retry) {\n            my ( $times, $sleep )= split ',', $retry;\n            $sleep ||= 1;\n            while ( $times-- ) {\n                sleep $sleep;\n\n                goto ALLOK if flock main::DATA, LOCK_EX | LOCK_NB;\n            }\n        }\n\n        print STDERR \"A copy of '$0' is already running\\n\" if !$silent;\n        exit 1;\n    }\n\n  ALLOK:\n}",
+      "file" : "/var/tmp/arv_fbXmz4/Sys-RunAlone-0.12/lib/Sys/RunAlone.pm",
+      "package" : "Sys::RunAlone"
+   }
+]

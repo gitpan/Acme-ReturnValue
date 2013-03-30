@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use UR::ObjectV04removed",
+      "file" : "/var/tmp/arv_NdPa7l/UR-0.41/lib/UR/ObjectV001removed.pm",
+      "package" : "UR::Object"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*get_normalized_rule_equivalent = \\&normalize",
+      "file" : "/var/tmp/arv_NdPa7l/UR-0.41/lib/UR/ObjectV04removed.pm",
+      "package" : "UR::BoolExpr"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub generate_index {\n    my ($self, @command_trees) = @_;\n    return '';\n}",
+      "file" : "/var/tmp/arv_NdPa7l/UR-0.41/lib/UR/Doc/Writer.pm",
+      "package" : "UR::Doc::Writer"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "class UR::Doc::Section {\n    is => 'UR::Object',\n    has => [\n        title => {\n            is => 'Text',\n            is_optional => 1,\n        },\n        content => {\n            is => 'Text',\n            doc => 'pod content for this section',\n        },\n        format => {\n            is => 'Text',\n            default_value => 'pod',\n            valid_values => ['html','pod','txt'],\n        },\n    ],\n}",
+      "file" : "/var/tmp/arv_NdPa7l/UR-0.41/lib/UR/Doc/Section.pm",
+      "package" : "UR::Doc::Section"
+   }
+]

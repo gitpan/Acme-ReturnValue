@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub popup {\n    my ( $self, @args ) = @_;\n    \n    $self->run_visible_funcs;\n    $self->gobject->popup( @args );\n}",
+      "file" : "/var/tmp/arv_Thnkw2/Gapp-0.494/lib/Gapp/Menu.pm",
+      "package" : "Gapp::Menu"
+   }
+]

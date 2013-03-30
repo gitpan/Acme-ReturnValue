@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "XSLoader::load( \"DB::SPEEDYB\", $VERSION )",
+      "file" : "/var/tmp/arv_UyfXOA/DB-SPEEDYB-0.1/SPEEDYB.pm",
+      "package" : "DB::SPEEDYB"
+   }
+]

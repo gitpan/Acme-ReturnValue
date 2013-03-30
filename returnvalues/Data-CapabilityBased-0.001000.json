@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0",
+      "file" : "/var/tmp/arv_eE_W7x/Data-CapabilityBased-0.001000/lib/Data/Query.pm",
+      "package" : "Data::Query"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0",
+      "file" : "/var/tmp/arv_eE_W7x/Data-CapabilityBased-0.001000/lib/Data/Collection.pm",
+      "package" : "Data::Collection"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "0",
+      "file" : "/var/tmp/arv_eE_W7x/Data-CapabilityBased-0.001000/lib/Data/Stream.pm",
+      "package" : "Data::Stream"
+   }
+]

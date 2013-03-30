@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub gcl{\nmy $gcl_in;\nprint $serial -> write(\"E\\r\");\nmy $chars=0;\nmy $buffer=\"\";\nmy ($count,$saw)=$serial->read(255); \n\nif ($count > 0) {\n $chars+=$count;\n $buffer.=$saw;\n $gcl_in = $buffer;\n }\n$gcl_in =~ s/^\\w//g;\nreturn $gcl_in;\n}",
+      "file" : "/var/tmp/arv_Y_cktd/Sunpower-Cryocooler-0.1.5/lib/Sunpower/Cryocooler.pm",
+      "package" : "Sunpower::Cryocooler"
+   }
+]

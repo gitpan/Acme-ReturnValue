@@ -1,0 +1,26 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.06'",
+      "file" : "/var/tmp/arv_NXpeYU/Bio-Metabolic-0.07/lib/Bio/Metabolic/Dynamics.pm",
+      "package" : "Bio::Metabolic::Dynamics"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Bio::Metabolic::Reaction::fullinfo {\n    my $reaction = shift;\n\n    my $retstr;\n    my $subsdir = {\n        -1 => [],\n        1  => []\n    };\n    foreach my $dir ( -1, 1 ) {\n        foreach my $substrate ( $reaction->dir($dir)->list ) {\n            for (\n                my $i = 1 ;\n                $i <= abs( $reaction->st_coefficient($substrate) ) ;\n                $i++\n              )\n            {\n                push( @{ $subsdir->{$dir} }, \"$substrate\" );\n            }\n        }\n    }\n\n    $retstr =\n        join( \"+\", @{ $subsdir->{-1} } ) . \"->\"\n      . join( \"+\", @{ $subsdir->{1} } ) . \"\\n\";\n\n    if ( defined( $reaction->rate ) ) {\n        $retstr .= \"rate: \" . $reaction->rate . \"\\n\";\n        foreach my $param ( keys( %{ $reaction->parameters } ) ) {\n            if (   ref( $reaction->parameter($param) )\n                && ref( $reaction->parameter($param) ) eq\n                'Math::Symbolic::Variable'\n                && defined $reaction->parameter($param)->value )\n            {\n                $retstr .= \"\\t\"\n                  . $reaction->parameter($param) . \"=\"\n                  . $reaction->parameter($param)->value . \"\\n\";\n            }\n        }\n    }\n\n    return $retstr;\n}",
+      "file" : "/var/tmp/arv_NXpeYU/Bio-Metabolic-0.07/lib/Bio/Metabolic/Dynamics/Reaction.pm",
+      "package" : "Bio::Metabolic::Dynamics::Reaction"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Bio::Metabolic::Substrate::release {\n    shift->var->value(undef);\n}",
+      "file" : "/var/tmp/arv_NXpeYU/Bio-Metabolic-0.07/lib/Bio/Metabolic/Dynamics/Substrate.pm",
+      "package" : "Bio::Metabolic::Dynamics::Substrate"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub Bio::Metabolic::Network::mfile {\n    my $network = shift;\n\n\n    my @substrates = ();\n    if (@_) {\n        if ( ref( $_[0] ) eq 'Bio::Metabolic::Substrate::Cluster' ) {\n            @substrates = shift->list;\n        }\n        elsif ( ref( $_[0] ) eq 'ARRAY' ) {\n            @substrates = @{ shift() };\n        }\n        else {\n            @substrates = @_;\n        }\n    }\n    else {\n        @substrates = $network->substrates->list;\n    }\n\n\n    my @odes = $network->ODEs(@substrates);\n\n\n\n    my %varchecklist = map ( ( $_, 1 ),\n        @{ Math::Symbolic::VectorCalculus::_combined_signature(@odes) } );\n\n    my %parameters = ();    \n    foreach my $reaction ( @{ $network->reactions } ) {\n        foreach my $param ( keys( %{ $reaction->parameters } ) ) {\n            $parameters{ $reaction->parameter($param)->{name} } =\n              $reaction->parameter($param)->value();\n        }\n    }\n\n    my $mfile = \"function f=func(t,y)\\n\";\n\n    my @varnames = map ( $_->name, @substrates );\n    for ( my $vnr = 0 ; $vnr < @varnames ; $vnr++ ) {\n        $mfile .= $varnames[$vnr] . \"=y(\" . eval( $vnr + 1 ) . \");\\n\";\n        delete( $varchecklist{ $varnames[$vnr] } )\n          if defined( $varchecklist{ $varnames[$vnr] } );\n    }\n\n    foreach my $param ( keys(%varchecklist) ) {\n        croak(\"undefined parameter $param in method mfile\")\n          unless defined $parameters{$param};\n        $mfile .= $param . \"=\" . $parameters{$param} . \"\\n\";\n\n        foreach my $ode (@odes) {\n            $ode->implement( $param => $parameters{$param} );\n        }\n\n        delete( $varchecklist{$param} ) if defined( $varchecklist{$param} );\n    }\n\n    for ( my $snr = 0 ; $snr < @odes ; $snr++ ) {\n        my ( $codeline, $leftovers ) =\n          Math::Symbolic::Compiler->compile_to_code( $odes[$snr], \\@varnames );\n        croak(\"cannot handle leftover trees in method mfile\") if @$leftovers;\n\n        for ( my $vnr = 0 ; $vnr < @varnames ; $vnr++ ) {\n            $codeline =~ s/\\$_\\[$vnr\\]/$varnames[$vnr]/g;\n        }\n\n        $mfile .= \"f(\" . eval( $snr + 1 ) . \",1)=\" . $codeline . \";\\n\";\n    }\n\n    return $mfile;\n}",
+      "file" : "/var/tmp/arv_NXpeYU/Bio-Metabolic-0.07/lib/Bio/Metabolic/Dynamics/Network.pm",
+      "package" : "Bio::Metabolic::Dynamics::Network"
+   }
+]

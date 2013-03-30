@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'<one>zero</one>'",
+      "file" : "/var/tmp/arv_E6Scdv/XML-Tiny-2.06/lib/XML/Tiny.pm",
+      "package" : "XML::Tiny"
+   }
+]

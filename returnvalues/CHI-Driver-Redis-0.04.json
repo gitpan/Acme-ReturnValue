@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "no Moose",
+      "file" : "/var/tmp/arv_PzKaGG/CHI-Driver-Redis-0.04/lib/CHI/Driver/Redis.pm",
+      "package" : "CHI::Driver::Redis"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub execute {\n    my ($self, $opt, $args) = @_;\n\n    my $plugin = $self->zilla->plugin_named('LocaleTextDomain')\n        or $self->zilla->log_fatal('LocaleTextDomain plugin not found in dist.ini!');\n\n    my $lang_dir = $plugin->lang_dir;\n    my $dest_dir = $opt->{dest_dir} || dir;\n    my $lang_ext = $plugin->lang_file_suffix;\n    my $bin_ext  = $plugin->bin_file_suffix;\n    my $txt_dom  = $plugin->textdomain;\n    my $log      = sub { $plugin->log(@_) };\n\n    my @cmd = (\n        $opt->{msgfmt} || $plugin->msgfmt,\n        '--check',\n        '--statistics',\n        '--verbose',\n        '--output-file',\n    );\n\n    my @pos = @{ $args } ? @{ $args } : $self->_po_files( $plugin );\n    $plugin->log_fatal(\"No language catalog files found\") unless @pos;\n\n    make_path $dest_dir->stringify;\n\n    for my $file (@pos) {\n        $file = file $file;\n        ( my $lang = $file->basename ) =~ s{[.][^.]*$}{};\n        my $dest = file $dest_dir, 'LocaleData', $lang, 'LC_MESSAGES',\n            \"$txt_dom.$bin_ext\";\n        make_path $dest->dir->stringify;\n        run3 [@cmd, $dest, $file], undef, $log, $log;\n        $plugin->log_fatal(\"Cannot compile $file\") if $?;\n    }\n}",
+      "file" : "/var/tmp/arv_7iEBcK/Dist-Zilla-LocaleTextDomain-0.85/lib/Dist/Zilla/App/Command/msg_compile.pm",
+      "package" : "Dist::Zilla::App::Command::msg_compile"
+   }
+]

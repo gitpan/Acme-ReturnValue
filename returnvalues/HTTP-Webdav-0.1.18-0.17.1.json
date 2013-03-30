@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use constant NE_XML_VALID => (0)",
+      "file" : "/var/tmp/arv_bJpn4A/HTTP-Webdav-0.1.18-0.17.1/Webdav/Constants.pm",
+      "package" : "HTTP::Webdav::Constants"
+   }
+]

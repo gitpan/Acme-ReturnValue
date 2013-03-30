@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'Why did the elf cross the road? To get to the '",
+      "file" : "/var/tmp/arv_8En64A/B-Lint-StrictOO-0.04/lib/B/Lint/StrictOO.pm",
+      "package" : "B::Lint::StrictOO"
+   }
+]

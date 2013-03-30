@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__FILE__",
+      "file" : "/var/tmp/arv_v04yMA/Acme-RunDoc-0.001/lib/Acme/RunDoc.pm",
+      "package" : "Acme::RunDoc"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__FILE__",
+      "file" : "/var/tmp/arv_v04yMA/Acme-RunDoc-0.001/lib/icrosoft/Word.pm",
+      "package" : "icrosoft::Word"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub DrawScoreBoard {\n  my $self = shift;\n  my $x    = 10;\n  my $y    = $Games::PangZero::ScreenHeight + 2 * $Games::PangZero::ScreenMargin + 5;\n  if ($self->{anim} < 1) {\n    SDLx::SFont::print_text(   $Games::PangZero::Background, $x, $y, \"Press F to fast forward\" );\n    SDLx::SFont::print_text(   $Games::PangZero::App, $x, $y, \"Press F to fast forward\" );\n  } return;\n  SDL::Video::fill_rect($Games::PangZero::App, SDL::Rect->new(0, $y, $Games::PangZero::PhysicalScreenWidth, $Games::PangZero::PhysicalScreenHeight - $y), SDL::Color->new(0, 0, 0) );\n  SDLx::SFont::print_text( $Games::PangZero::App, $x, $y, $self->{recordpointer} );\n\n}",
+      "file" : "/var/tmp/arv_an7Pil/Games-PangZero-v1.4.1/lib/Games/PangZero/DemoPlaybackGame.pm",
+      "package" : "Games::PangZero::DemoPlaybackGame"
+   }
+]

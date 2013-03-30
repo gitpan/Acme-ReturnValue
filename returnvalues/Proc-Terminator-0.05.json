@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub proc_terminate {\n    my ($pids, %options) = @_;\n    \n    my $batch = Proc::Terminator::Batch->with_pids($pids, %options);\n        \n    $batch->begin_time(time());\n    while ($batch->loop_once) {\n        $DEBUG and warn \"Sleeping for ${\\$batch->interval} seconds\";\n        sleep($batch->interval);\n    }\n    \n    my @badprocs = map { $_->pid } @{$batch->badprocs};\n        \n    if (wantarray) {\n        return @badprocs;\n    } else {\n        return !@badprocs;\n    }\n}",
+      "file" : "/var/tmp/arv_akIJtD/Proc-Terminator-0.05/lib/Proc/Terminator.pm",
+      "package" : "Proc::Terminator::Ctx"
+   }
+]

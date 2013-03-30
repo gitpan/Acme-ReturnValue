@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _check_tube_active {\n  my ($self, $client, $tube) = @_;\n\n  warn \"Checking $tube\\n\" if $self->opts->verbose;\n\n  my $warning  = $self->opts->warning  || 1;\n  my $critical = $self->opts->critical || $warning;\n  my $workers  = 0;\n\n  for (1 .. 10) {\n    my $stats = $client->stats_tube($tube) or last;\n    my $w = $stats->current_jobs_reserved + $stats->current_waiting;\n    $workers = $w if $w > $workers;\n    last if $workers >= $warning;\n    select(undef, undef, undef, 0.1);\n  }\n\n  $self->set_thresholds(warning => $warning . \":\", critical => $critical . \":\");\n  $self->add_message($self->check_threshold($workers), \"tube $tube has $workers workers\");\n  $self->add_perfdata(\n    label     => $tube,\n    value     => $workers,\n    threshold => $self->threshold\n  );\n}",
+      "file" : "/var/tmp/arv_OOTjuh/Nagios-Plugin-Beanstalk-0.04/lib/Nagios/Plugin/Beanstalk.pm",
+      "package" : "Nagios::Plugin::Beanstalk"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub is_valid {\n    my ($self, $url) = @_;\n    $self->reset_errors;\n    if ($url =~ m/^($urlre)$/s) {\n        return $1;\n    } else {\n        $self->error(\n                     [\"badurl\",\n                      \"URL is not correct (the protocol is required)\"]);\n        return undef;\n    }\n}",
+      "file" : "/var/tmp/arv_ZHXruX/Data-Transpose-0.0004/lib/Data/Transpose/Validator/URL.pm",
+      "package" : "Data::Transpose::Validator::URL"
+   }
+]

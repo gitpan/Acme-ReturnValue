@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub UNTIE {\n\n\n    my $self = shift;\n    return if $self->{'CLONE'} != $CLONE;\n    $self->_handle( 'UNTIE',$self->{'ordinal'} );\n}",
+      "file" : "/var/tmp/arv_zalJnj/Thread-Tie-0.13/lib/Thread/Tie.pm",
+      "package" : "Thread::Tie"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub CLONE { $CLONE++ }",
+      "file" : "/var/tmp/arv_zalJnj/Thread-Tie-0.13/lib/Thread/Tie/Thread.pm",
+      "package" : "Thread::Tie::Thread"
+   }
+]

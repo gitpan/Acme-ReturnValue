@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub display { \n\tmy $self = shift;\n\treturn join \"\", map sprintf(\"%08b\", ord $_), split //, $self->{pattern};\n}",
+      "file" : "/var/tmp/arv_ucf2Hr/Bit-Vector-Minimal-1.3/lib/Bit/Vector/Minimal.pm",
+      "package" : "Bit::Vector::Minimal"
+   }
+]

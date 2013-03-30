@@ -1,0 +1,50 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "const config_class => 'FreePAN::Config'",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN.pm",
+      "package" : "FreePAN"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub usage {\n    warn <<END . $self->command_usage(\"  freepan -%-14s# %s\\n\");\n}",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Command.pm",
+      "package" : "FreePAN::Command"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub plugin_directory {\n    abs_path($self->hub->config->base . '/' . super);\n}",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Plugin.pm",
+      "package" : "FreePAN::Plugin"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.01'",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Installer.pm",
+      "package" : "FreePAN::Installer"
+   },
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.01'",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Base.pm",
+      "package" : "FreePAN::Base"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compile_dir {\n    $self->hub->config->base . '/plugin/template/cache';\n}",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Template.pm",
+      "package" : "FreePAN::Template"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub add_path {\n    splice @{$self->path}, 0, 0, @_;\n}",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Config.pm",
+      "package" : "FreePAN::Config"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub missing_prerequisite {\n    my ($class_id, $prereq) = @_;\n    my $class_name = $self->lookup->{classes}{$class_id};\n    die \"Missing prerequisite plugin '$prereq' for $class_name\\n\";\n}",
+      "file" : "/var/tmp/arv_vF4vX2/FreePAN-0.10/lib/FreePAN/Registry.pm",
+      "package" : "FreePAN::Registry"
+   }
+]

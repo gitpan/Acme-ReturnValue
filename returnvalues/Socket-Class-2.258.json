@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub include_path {\n\treturn substr( __FILE__, 0, -16 ) . '/auto/Socket/Class';\n}",
+      "file" : "/var/tmp/arv_I23x6K/Socket-Class-2.258/Class.pm",
+      "package" : "Socket::Class"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub compile {\n\tmy $pkg_export = caller( $ExportLevel );\n\t&export( $pkg_export, @_ );\n}",
+      "file" : "/var/tmp/arv_I23x6K/Socket-Class-2.258/xs/sc_const/Const.pm",
+      "package" : "Socket::Class::Const"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub include_path {\n\treturn substr( __FILE__, 0, -20 ) . '/auto/Socket/Class/SSL';\n}",
+      "file" : "/var/tmp/arv_I23x6K/Socket-Class-2.258/xs/sc_ssl/SSL.pm",
+      "package" : "Socket::Class::SSL"
+   }
+]

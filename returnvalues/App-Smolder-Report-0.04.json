@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub run_as_api { return $_[0]{run_as_api} }",
+      "file" : "/var/tmp/arv_Rx5fW9/App-Smolder-Report-0.04/lib/App/Smolder/Report.pm",
+      "package" : "App::Smolder::Report"
+   }
+]

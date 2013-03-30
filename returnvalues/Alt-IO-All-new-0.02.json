@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = '0.02'",
+      "file" : "/var/tmp/arv_i2_Bk6/Alt-IO-All-new-0.02/lib/Alt/IO/All/new.pm",
+      "package" : "Alt::IO::All::new"
+   }
+]

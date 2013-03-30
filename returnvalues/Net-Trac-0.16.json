@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "'This is the end of the file'",
+      "file" : "/var/tmp/arv_aXbTi5/Net-Trac-0.16/lib/Net/Trac.pm",
+      "package" : "Net::Trac"
+   }
+]

@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _unique_id {\n\n    my $reftype = reftype $_[0];\n    if ( !$reftype ) {\n        return refaddr \\$_[0];\n    }\n\n    elsif ( $reftype eq 'REF' ) {\n        my $ref = ${$_[0]};\n        $ref = ${$ref} while reftype $ref eq 'REF';\n        return refaddr $ref;\n    }\n\n    return refaddr $_[0];\n}",
+      "file" : "/var/tmp/arv_9lnSiI/OOB-0.12/lib/OOB.pm",
+      "package" : "OOB"
+   }
+]

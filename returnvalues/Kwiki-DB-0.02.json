@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "const id => 'db'",
+      "file" : "/var/tmp/arv_v9UzlZ/Kwiki-DB-0.02/lib/Kwiki/DB.pm",
+      "package" : "Kwiki::DB"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub connect {\n     my ($dsn, $user, $pass, $attr, $old_driver) =  @_;\n     $attr->{RootClass} = 'DBI';\n     super($dsn, $user, $pass, $attr, $old_driver);\n}",
+      "file" : "/var/tmp/arv_v9UzlZ/Kwiki-DB-0.02/lib/Kwiki/DB/DBI.pm",
+      "package" : "Kwiki::DB::DBI"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub AUTOLOAD {\n    my ($p,$func) = $Kwiki::DB::ClassDBI::AUTOLOAD =~ m/(.*)::(.*?)$/;\n    for(keys %{$self->entities}) {\n        if ($_ eq $func) {\n            return $self->entities->{$_};\n        }\n    }\n    if(my $base = $self->base) {\n        $base->$func(@_);\n    }\n}",
+      "file" : "/var/tmp/arv_v9UzlZ/Kwiki-DB-0.02/lib/Kwiki/DB/ClassDBI.pm",
+      "package" : "Kwiki::DB::ClassDBI"
+   }
+]

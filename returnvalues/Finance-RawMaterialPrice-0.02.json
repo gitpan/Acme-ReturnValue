@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub get_silver_price {\n    my $unit = shift || 'euro';\n    unless ( $unit eq 'euro' or $unit eq 'dollar' ) {\n        croak \"Either use 'euro' or 'dollar'\";\n    }\n    return get_raw_material_price(\"$base_url/silberpreis/$unit\");\n}",
+      "file" : "/var/tmp/arv_NJSssE/Finance-RawMaterialPrice-0.02/lib/Finance/RawMaterialPrice.pm",
+      "package" : "Finance::RawMaterialPrice"
+   }
+]

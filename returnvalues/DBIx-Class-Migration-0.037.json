@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->run_if_script",
+      "file" : "/var/tmp/arv_Fwkw_J/DBIx-Class-Migration-0.037/lib/DBIx/Class/Migration/Script.pm",
+      "package" : "DBIx::Class::Migration::Script"
+   },
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__->run_if_script",
+      "file" : "/var/tmp/arv_Fwkw_J/DBIx-Class-Migration-0.037/examples/MusicBase/lib/MusicBase/Schema/MigrationScript.pm",
+      "package" : "MusicBase::Schema::MigrationScript"
+   }
+]

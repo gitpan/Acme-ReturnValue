@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"I'm just a placeholder module\"",
+      "file" : "/var/tmp/arv_RwmnL3/Mail-Abuse-1.026/lib/Mail/Abuse.pm",
+      "package" : "Mail::Abuse"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "\"All your base are belong to us\"",
+      "file" : "/var/tmp/arv_RwmnL3/Mail-Abuse-1.026/lib/Mail/Abuse/Processor/ArchiveDBI.pm",
+      "package" : "Mail::Abuse::Processor::ArchiveDBI"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_RwmnL3/Mail-Abuse-1.026/lib/Template/Plugin/Abuse.pm",
+      "package" : "Template::Plugin::Abuse"
+   }
+]

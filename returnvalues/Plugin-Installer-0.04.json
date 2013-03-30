@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "AUTOLOAD\n{\n    use Symbol;\n    use Scalar::Util;\n\n    my $obj  = $_[0];\n\n    my ( $class, $name ) = $AUTOLOAD =~ m{^ (.+) :: (\\w+) $ }x;\n\n\n    my %method_meta\n    = %{ $meta->{ $class } ||= $default_meta };\n\n    local $obj->{ install_meta } = \\%method_meta;\n\n\n    if( defined ( my $result = eval{ $obj->compile($name) } ) )\n    {\n        if( $method_meta{store_meta} )\n        {\n            $meta->{ $class } = \\%method_meta;\n        }\n\n\n        if( my $type = eval { reftype $result } || ref $result )\n        {\n            if( $method_meta{ install } )\n            {\n\n\n                my $package\n                = $method_meta{ alt_package } || $class;\n\n                my $ref = qualify_to_ref $name, $package;\n\n\n                undef &{$ref} if $type eq 'CODE';\n\n                *$ref = $result;\n            }\n\n            if( $type eq 'CODE' && $method_meta{ dispatch } )\n            {\n                goto &$result\n            }\n        }\n        elsif( $result )\n        {\n\n            warn \"Oddity: true non-referent result from '$name':\\n$result\\n\";\n        }\n    }\n    elsif( $@ )\n    {\n        croak \"Compile aborted for '$class' handling '$name'\";\n    }\n\n}\n\n\nDESTROY\n{\n\n    ()\n}\n\n\n1",
+      "file" : "/var/tmp/arv_dN1WMr/Plugin-Installer-0.04/lib/Plugin/Installer.pm",
+      "package" : "Plugin::Installer"
+   }
+]

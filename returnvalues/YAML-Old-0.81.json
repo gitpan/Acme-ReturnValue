@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub bless {\n    my $self = shift;\n    my ($ref, $blessing) = @_;\n    my $ynode;\n    $ref = \\$_[0] unless ref $ref;\n    my (undef, undef, $node_id) = YAML::Old::Base->node_info($ref);\n    if (not defined $blessing) {\n        $ynode = YAML::Old::Node->new($ref);\n    }\n    elsif (ref $blessing) {\n        $self->die() unless ynode($blessing);\n        $ynode = $blessing;\n    }\n    else {\n        no strict 'refs';\n        my $transfer = $blessing . \"::yaml_dump\";\n        $self->die() unless defined &{$transfer};\n        $ynode = &{$transfer}($ref);\n        $self->die() unless ynode($ynode);\n    }\n    $self->{blessed_map}->{$node_id} = $ynode;\n    my $object = ynode($ynode) or $self->die();\n    return $object;\n}\n\n1",
+      "file" : "/var/tmp/arv_fpXU2R/YAML-Old-0.81/lib/YAML/Old/Dumper/Base.pm",
+      "package" : "YAML::Old::Dumper::Base"
+   }
+]

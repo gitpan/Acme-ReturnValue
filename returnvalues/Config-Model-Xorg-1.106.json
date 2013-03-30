@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Compound",
+      "bad" : "{\n  $Config::Model::Xorg::VERSION = '1.106';\n}",
+      "file" : "/var/tmp/arv_YHTbD5/Config-Model-Xorg-1.106/lib/Config/Model/Xorg.pm",
+      "package" : "Config::Model::Xorg"
+   }
+]

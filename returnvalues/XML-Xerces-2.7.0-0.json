@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub fix_method {\n  my ($in_fh,$out_fh,$match_pattern,$subst_string,$keep,$subst_line_func) = @_;\n  $keep = 0 unless defined $keep;\n  if (defined $subst_line_func) {\n    die \"fix_method: Must supply a CODE ref for substitution method\"\n      unless ref($subst_line_func) eq 'CODE';\n  } else {\n    $subst_line_func = 0;\n  }\n  my $braces = 1;\n  print $out_fh $_;\n  while ($braces && ! eof($in_fh)) {\n    $_ = <$in_fh>;\n    $braces-- if /\\}/;\n    $braces++ if /\\{/;\n\n    $subst_line_func->($_)\n      if $subst_line_func;\n\n    if (/$match_pattern/) {\n      if ($keep) {\n\t$_ .= $subst_string;\n      } else {\n\ts/^.*\\n/$subst_string\\n/;\n      }\n    }\n    print $out_fh $_;\n  }\n  if ($braces) {\n    print STDERR \"fix_method exited with positive brace count\";\n  }\n}",
+      "file" : "/var/tmp/arv_XTa3YS/XML-Xerces-2.7.0-0/SWIG.pm",
+      "package" : "SWIG"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub resolve_entity {\n  my ($self,$pub,$sys) = @_;\n\n  XML::Xerces::error (__PACKAGE__ . \": Must call initialize before using the resolver\")\n      unless defined $self->maps or defined $self->remaps;\n\n  my $href;\n  if ($pub) {\n    $href = $self->maps->{$pub};\n  }\n  if ((not defined $href) and $sys) {\n    $href = $self->remaps->{$sys};\n  }\n  if (not defined $href) {\n    croak(\"could not resolve PUBLIC id:[$pub] or SYSTEM id: [$sys] using catalog: [\"\n\t  . $self->catalog . \"]\");\n  }\n\n  my $is = eval {XML::Xerces::LocalFileInputSource->new($href)};\n  error($@,\"Couldn't create input source for $href\")\n      if $@;\n\n  $is->DISOWN();\n  return $is;\n}",
+      "file" : "/var/tmp/arv_XTa3YS/XML-Xerces-2.7.0-0/Xerces-extra.pm",
+      "package" : "XML::Xerces"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub node2hash {\n  my $node = shift;\n  my $return = [{}];\n\n  my $nodename = $node->getNodeName();\n  if ($node->hasAttributes()) {\n    my %attrs = $node->getAttributes();\n    foreach my $attr (keys %attrs) {\n      $return->[0]->{$attr} = $attrs{$attr};\n    }\n  }\n\n  if ($node->hasChildNodes()) {\n    my @text = ();\n    foreach my $child ($node->getChildNodes()) {\n      my $childname = $child->getNodeName();\n      if ($child->isa('XML::Xerces::DOMElement')) {\n        if (exists $return->[0]->{$childname}) {\n          if (UNIVERSAL::isa($return->[0]->{$childname}, 'ARRAY')) {\n            push @{$return->[0]->{$childname}}, node2hash($child)->[0];\n          }\n          else {\n            $return->[0]->{$childname} = [$return->[0]->{$childname}, node2hash($child)->[0]];\n          }\n        }\n        else { $return->[0]->{$childname} = node2hash($child); }\n      }\n      elsif ($child->isa('XML::Xerces::DOMText')) {\n        my $val = $child->getNodeValue();\n        push @text, $val\n          if $val =~ m/\\S+/;\n      }\n    }\n\n    if (exists $return->[0]->{'content'}) {\n      if (UNIVERSAL::isa($return->[0]->{'content'}, 'ARRAY')) {\n        unshift @{$return->[0]->{'content'}}, @text;\n      }\n      else { warn \"content element should be array\"; }\n    }\n    else {\n      if (scalar @text == 1) { $return->[0]->{'content'} = $text[0]; }\n      if (scalar @text >  1) { $return->[0]->{'content'} = \\@text; }\n    }\n  }\n  return $return;\n}",
+      "file" : "/var/tmp/arv_XTa3YS/XML-Xerces-2.7.0-0/samples/XMLSimple.pm",
+      "package" : "XML::Xerces::XMLSimple"
+   }
+]

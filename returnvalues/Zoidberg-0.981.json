@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $VERSION = 0.10",
+      "file" : "/var/tmp/arv_oHft0o/Zoidberg-0.981/lib/Bundle/Zoidberg.pm",
+      "package" : "Bundle::Zoidberg"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub man1page_name { \n\tmy $self = shift;\n\tmy $name =  File::Basename::basename( shift );\n\t$name =~ s/\\.pod$//;\n\treturn $name;\n}",
+      "file" : "/var/tmp/arv_oHft0o/Zoidberg-0.981/b/ModuleBuildZoid.pm",
+      "package" : "ModuleBuildZoid"
+   }
+]

@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement::Include",
+      "bad" : "use Config::Std",
+      "file" : "/var/tmp/arv_Ik12fR/FreeHAL-71/AI/SemanticEngine.pm",
+      "package" : "AI::Util"
+   },
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub download_genus {\n    my ( $word, $count, $real_word ) = @_;\n    $real_word ||= $word;\n    $count ||= 0;\n\n    chomp $word;\n    chomp $real_word;\n\n    return if $count >= 5;\n\n    return if LANGUAGE() eq 'en';\n    return if $data->{modes}{batch};\n\n    return if !$AI::SemanticNetwork::initialized;\n\n    return if $config{'modes'}{'offline_mode'};\n\n\n    say '-> Downloading genus: ', $word;\n\n    my $url = 'http://wortschatz.uni-leipzig.de/abfrage/';\n\n    my $req = HTTP::Request->new( POST => $url );\n    $req->content_type('application/x-www-form-urlencoded');\n    $req->content( 'Wort=' . $word . '&Submit=Suche!&site=10' );\n\n    my $res = $ua->request($req);\n\n    if ( !$res->is_success ) {\n\n        say 'Error while Downloading:';\n        say $url;\n        say $res->status_line;\n    }\n\n    my $ctn = $res->content;\n\n    my @lines = split /\\n/, $ctn;\n\n    while ( defined( my $line = shift @lines ) ) {\n        print \".\";\n        chomp $line;\n\n        $line =~ s/[<].*?[>]//igm;\n        $line = ascii($line);\n\n        if ( $line =~ /Flexion:/i ) {\n            my $flex = lc shift @lines;\n            $flex = ascii($flex);\n            return 'm' if $flex =~ /^der/;\n            return 'm' if $flex =~ /^die/;\n            return 'm' if $flex =~ /^das/;\n        }\n\n        if ( $line =~ /eschlecht/i && $line =~ /nnlich/i ) {\n            say;\n            return 'm';\n        }\n\n        if ( $line =~ /eschlecht/i && $line =~ /weiblich/i ) {\n            say;\n            return 'f';\n        }\n\n        if ( $line =~ /eschlecht/i && $line =~ /chlich/i ) {\n            say;\n            return 's';\n        }\n    }\n    say;\n\n    return;\n}",
+      "file" : "/var/tmp/arv_Ik12fR/FreeHAL-71/AI/FreeHAL/Module/WebAccess.pm",
+      "package" : "AI::FreeHAL::Module::WebAccess"
+   }
+]

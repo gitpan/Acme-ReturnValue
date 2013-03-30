@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub _get_decl {\n    my ($self, $file) = @_;\n    open(FILE, \"<$file\") or croak \"Can't open file $file: $!\\n\";\n    my @list;\n    my $lines = [];\n    my $header;\n    my $open = 0;\n    my $decl;\n    while ( <FILE> ){\n\tmy $line = $_;\n\tnext if ( $line =~ /^#|^$/o );\n\tif ( !$open && $line =~ /^(.*) \\{$/o ){\n\t    $decl = {};\n\t    $header = $1;\n\t    $decl->{header} = $header;\n  \t    $open   = 1;\n\t    $lines  = [];\n\t    push @$lines, $line;\n\t    next;\n\t}\n\tif ( $open ){\n\t    if ( $line =~ /^\\}$/o ){\n\t\t$open = 0;\n\t\t$decl->{lines} = $lines;\n\t\tpush @list, $decl;\n\t\t$header = \"\";\n\t\tpush @$lines, $line;\n\t    }else{\n\t\tpush @$lines, $line;\n\t    }\n\t}\n    }\n    close(FILE);\n    return \\@list;\n}",
+      "file" : "/var/tmp/arv_LlHbav/Text-DHCPLeases-1.0/lib/Text/DHCPLeases.pm",
+      "package" : "Text::DHCPLeases"
+   }
+]

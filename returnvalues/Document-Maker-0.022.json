@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "*log = \\&logger",
+      "file" : "/var/tmp/arv_CHBAnh/Document-Maker-0.022/lib/Document/Maker/Role/Logging.pm",
+      "package" : "Document::Maker::Role::Logging"
+   }
+]

@@ -1,0 +1,20 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_RfYJTz/URL-Signature-0.01/lib/URL/Signature.pm",
+      "package" : "URL::Signature"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_RfYJTz/URL-Signature-0.01/lib/URL/Signature/Query.pm",
+      "package" : "URL::Signature::Query"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv_RfYJTz/URL-Signature-0.01/lib/URL/Signature/Path.pm",
+      "package" : "URL::Signature::Path"
+   }
+]

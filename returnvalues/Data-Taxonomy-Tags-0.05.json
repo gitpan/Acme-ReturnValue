@@ -1,0 +1,14 @@
+[
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv__jgIA4/Data-Taxonomy-Tags-0.05/lib/Data/Taxonomy/Tags.pm",
+      "package" : "Data::Taxonomy::Tags"
+   },
+   {
+      "PPI" : "PPI::Statement",
+      "value" : "42",
+      "file" : "/var/tmp/arv__jgIA4/Data-Taxonomy-Tags-0.05/lib/Data/Taxonomy/Tags/Tag.pm",
+      "package" : "Data::Taxonomy::Tags::Tag"
+   }
+]

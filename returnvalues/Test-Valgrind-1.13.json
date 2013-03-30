@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Sub",
+      "bad" : "sub dump {\n my ($self) = @_;\n\n my $data = $self->data;\n\n my $desc = '';\n\n for ([ '', 2, 4 ], [ 'aux', 4, 6 ], [ 'orig', 4, 6 ]) {\n  my ($prefix, $wind, $sind) = @$_;\n\n  my ($what, $stack) = @{$data}{\"${prefix}what\", \"${prefix}stack\"};\n  next unless defined $what and defined $stack;\n\n  $_ = ' ' x $_ for $wind, $sind;\n\n  $desc .= \"$wind$what\\n\";\n  for (@$stack) {\n   my ($ip, $obj, $fn, $dir, $file, $line) = map { (defined) ? $_ : '?' } @$_;\n   my $frame;\n   if ($fn eq '?' and $obj eq '?') {\n    $ip =~ s/^0x//gi;\n    my $l = length $ip;\n    $frame = '0x' . ($l < $pad ? ('0' x ($pad - $l)) : '') . uc($ip);\n   } else {\n    $frame = sprintf '%s (%s) [%s:%s]', $fn, $obj, $file, $line;\n   }\n   $desc .= \"$sind$frame\\n\";\n  }\n }\n\n return $desc;\n}",
+      "file" : "/var/tmp/arv_JJcYMd/Test-Valgrind-1.13/lib/Test/Valgrind/Tool/memcheck.pm",
+      "package" : "Test::Valgrind::Tool::memcheck"
+   }
+]

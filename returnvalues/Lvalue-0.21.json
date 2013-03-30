@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement (but very likely crap)",
+      "bad" : "__PACKAGE__ if 'first require'",
+      "file" : "/var/tmp/arv_Av282o/Lvalue-0.21/lib/Lvalue.pm",
+      "package" : "Lvalue"
+   }
+]

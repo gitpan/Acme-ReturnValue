@@ -1,0 +1,8 @@
+[
+   {
+      "PPI" : "PPI::Statement::Variable",
+      "bad" : "our $grammar_media_query_list \n    = qr{ $media_query (?: \\, \\s* $media_query )* }x",
+      "file" : "/var/tmp/arv_kJbe_p/CSS-Prepare-v0.9.2.4/lib/CSS/Prepare/CSSGrammar.pm",
+      "package" : "CSS::Prepare::CSSGrammar"
+   }
+]
