@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub handle_mirror {\n    my ($repo,$remote,$rename) = @_;\n    my $module = $self->resolve_remote($remote);\n    $self->mirror_freepan_repos($repo);\n    $self->mirror_remote_repos($module,$remote);\n    $self->svk->mkdir(\"//freepan/$repo/$module\",\n                      -p => -m => \"make $module directory\");\n    $self->svk->smerge(-BI => '--verbatim' => \"//mirror/$module\",\"//freepan/$repo/$module\");\n}",
-      "file" : "/var/tmp/arv_n1eFuc/FreePAN-SVKMirror-0.01/lib/FreePAN/SVKMirror.pm",
-      "package" : "FreePAN::SVKMirror"
-   }
-]

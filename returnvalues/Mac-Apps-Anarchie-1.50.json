@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _ArchAeProcess {\n\tmy($self) = shift;\n\tmy($rp) = AESend($be, $self->{WAIT}) || croak $^E;\n\tAEDisposeDesc $be;\n\treturn &_ArchAePrint($self,$rp);\n}",
-      "file" : "/var/tmp/arv_7Tx9kK/Mac-Apps-Anarchie-1.50/lib/Mac/Apps/Anarchie.pm",
-      "package" : "Mac::Apps::Anarchie"
-   }
-]

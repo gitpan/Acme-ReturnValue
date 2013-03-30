@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub hash_extract\n{\n\tmy $hash = shift;\n\tmy $i=0;\n\tforeach my $var (@_)\n\t{\n\t\tmy $name = var_name(1, \\$var);\n\t\t$name or die \"could not detect name of variable\";\n\t\t{\n\t\tlocal(%+);\n\t\t$name =~ s/^\\$//;\n\t\t}\n\t\texists($hash->{$name}) or die \"no such hash element: $name\";\n\t\t$var = $hash->{$name}\n\t}\n}",
-      "file" : "/var/tmp/arv_FnIbNj/Hash-Extract-0.02/lib/Hash/Extract.pm",
-      "package" : "Hash::Extract"
-   }
-]

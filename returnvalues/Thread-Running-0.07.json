@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub threads::exited {\n\n\n    shift unless ref $_[0];\n    return &exited;\n}",
-      "file" : "/var/tmp/arv_glSwlB/Thread-Running-0.07/lib/Thread/Running.pm",
-      "package" : "Thread::Running"
-   }
-]

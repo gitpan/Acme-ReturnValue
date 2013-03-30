@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {\n\tmy ($self) = @_;\n\t\n\t$self->{'locked'}->lock();\n}\n\n\n\n1",
-      "file" : "/var/tmp/arv_uxsoh4/Tie-Locked-1.0/lib/Tie/Locked.pm",
-      "package" : "Tie::Locked"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub canon {\n    my($as, @ext) = @_;\n    foreach(@ext) {\n       next if s!::!/!g;\n       s:^(lib|ext)/(auto/)?::;\n       s:/\\w+\\.\\w+$::;\n    }\n    grep(s:/:$as:, @ext) if ($as ne '/');\n    @ext;\n}",
-      "file" : "/var/tmp/arv_UlSuuJ/ExtUtils-Embed-1.14/lib/ExtUtils/Embed.pm",
-      "package" : "ExtUtils::Embed"
-   }
-]

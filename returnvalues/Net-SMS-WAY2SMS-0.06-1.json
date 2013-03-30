@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.06'",
-      "file" : "/var/tmp/arv_8yVXGq/Net-SMS-WAY2SMS-0.06/lib/Net/SMS/WAY2SMS.pm",
-      "package" : "Net::SMS::WAY2SMS"
-   }
-]

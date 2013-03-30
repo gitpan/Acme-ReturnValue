@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_unique_spool {\n    my ($i, $spoolfile);\n    $i = 0;\n    my $sys = shift;\n\n    if ( (! $ENV{TEMP}) && $sys eq 'linux') {\n\t$ENV{TEMP} = '/tmp';\n    }\n\n    while (-e \"$ENV{TEMP}/printer-$PID.$i\") {\n\t++$i;\n    }\n    if ($OSNAME eq 'MSWin32') {\n\t$spoolfile =  $ENV{TEMP} . '\\printer-' . $PID . $i;\n    } else {\n\t$spoolfile = $ENV{TEMP} . '/printer-' . $PID . $i;\n    }\n    return $spoolfile;\n}",
-      "file" : "/var/tmp/arv_q0m9AH/Printer-0.98/lib/Printer.pm",
-      "package" : "Printer"
-   }
-]

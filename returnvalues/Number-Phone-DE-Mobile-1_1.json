@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub checkmsisdn {\nmy $self\t= shift;\n$msisdn\t= shift;\nif (\"$msisdn\" eq \"\"){ die \"usage: Number::Phone::DE::Mobile->checkmsisdn(<rawmsisdn>)\\n\\n\"; }\n\n$msisdn =~ s/^\\+/00/ig;\n\n$msisdn =~ s/ |-|_|\\;|\\&|\\+|\\.//ig;\n\n$msisdn_ok = \"no\";\nif ($msisdn =~ /\\D+/) {\n\t$msisdn_ok = \"no\";\n} else {\n  @possible_lengths = (10,11,12,13,14,15);\n  $msisdn_len = length($msisdn);\n  foreach $pos_len (@possible_lengths) {\n\tif ($pos_len == $msisdn_len) {\n\t\t$msisdn_ok = \"yes\";\n\t}\n  }\n}\n\nif (\"$msisdn_ok\" eq \"yes\") {\n\tif ($msisdn =~ /\\d{15}$/) {\n\t\tif ($msisdn =~ /^00/) { $msisdn =~ s/^..//; }\n\t\treturn($msisdn);\n\t}\t\n\tif ($msisdn =~ /\\d{14}$/) {\n\t\tif ($msisdn =~ /^00/) { $msisdn =~ s/^..//; }\n\t\treturn($msisdn);\n\t}\t\n\tif ($msisdn =~ /\\d{13}$/) {\n\t\tif ($msisdn =~ /^!0\\d/) { $msisdn =~ $msisdn; }\n\t\tif ($msisdn =~ /^00/) { $msisdn =~ s/^../49/; }\n\t\treturn($msisdn);\n\t}\t\n\tif ($msisdn =~ /\\d{12}$/) {\n\t\tif ($msisdn =~ /^!0\\d/) { $msisdn =~ $msisdn; }\n\t\tif ($msisdn =~ /^00/) { $msisdn =~ s/^../49/; }\n\t\tif ($msisdn =~ /^01/) { $msisdn =~ s/^./49/; }\n\t\treturn($msisdn);\n\t}\n\tif ($msisdn =~ /\\d{11}$/) {\n\t\tif ($msisdn =~ /^1/) { $msisdn = \"49$msisdn\"; }\n\t\tif ($msisdn =~ /^01/) { $msisdn =~ s/^0/49/; }\n\t\treturn($msisdn);\n\t}\t\n\tif ($msisdn =~ /\\d{10}$/) { $msisdn =~ s/^/49/; return($msisdn);}\n} else {\n\treturn(\"invalid\");\n}\n}",
-      "file" : "/var/tmp/arv_n4ohoK/Number-Phone-DE-Mobile-1_1/lib/Number/Phone/DE/Mobile.pm",
-      "package" : "Number::Phone::DE::Mobile"
-   }
-]

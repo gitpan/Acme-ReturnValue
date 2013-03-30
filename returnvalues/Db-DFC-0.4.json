@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub castToIDfTypedObject {\n    my ($self,$obj) = @_;\n    my $castToIDfTypedObject = JPL::AutoLoader::getmeth('castToIDfTypedObject',\n                                              ['java.lang.Object'],\n                                              ['com.documentum.fc.client.IDfTypedObject']);\n    my $rv = \"\";\n    eval { $rv = $dm_JCast->$castToIDfTypedObject($$obj); } ;\n\tif (JNI::ExceptionOccurred()) {\n\t\tdfcException();\n\t\treturn;\n\t} else {\n\t\tbless(\\$rv,IDfTypedObject);\n\t\treturn \\$rv;\n\t}\n}",
-      "file" : "/var/tmp/arv_Ok0RY2/Db/DFC.pm",
-      "package" : "Db::DFC"
-   }
-]

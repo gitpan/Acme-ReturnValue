@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_api_key_from_file {\n    my ($file) = @_;\n\n    return do {\n        local $/ = undef;\n        open my $fh, \"<\", $file\n          or die \"could not open $file: $!\";\n        my $doc = <$fh>;\n\n        $doc =~ s/(\\r|\\n)//g;\n\n        return $doc;\n    };\n}",
-      "file" : "/var/tmp/arv_1XSB01/WebService-TVDB-1.130690/lib/WebService/TVDB/Util.pm",
-      "package" : "WebService::TVDB::Util"
-   }
-]

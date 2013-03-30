@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q|Acme::Why::Did::I::Not::Read::The::Fecking::Memo|",
-      "file" : "/var/tmp/arv__c67vz/CPAN-Perl-Releases-1.08/lib/CPAN/Perl/Releases.pm",
-      "package" : "CPAN::Perl::Releases"
-   }
-]

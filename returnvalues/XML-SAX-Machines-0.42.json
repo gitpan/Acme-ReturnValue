@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$LegalProcessorClassOptions = {\n    ConstructWithHashedOptions =>\n        q{Use Foo->new( { Handler => $h } ) instead of Foo->new( Handler => $h )},\n},\n\n$ProcessorClassOptions = {\n    \"XML::Filter::SAXT\" => {\n        ConstructWithHashedOptions => 1,\n    },\n\n    \"XML::Filter::Distributor\" => {\n        ConstructWithHashedOptions => 1,\n    },\n\n    \"XML::Filter::Tee\" => {\n        ConstructWithHashedOptions => 1,\n    },\n\n    \"XML::SAX::Machine\" => {\n        ConstructWithHashedOptions => 1,\n    },\n}",
-      "file" : "/var/tmp/arv_U3DRon/XML-SAX-Machines-0.42/lib/XML/SAX/Machines/ConfigDefaults.pm",
-      "package" : "XML::SAX::Machines::ConfigDefaults"
-   }
-]

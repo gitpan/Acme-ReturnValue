@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub PPPsavelog {\n\tmy($self,$file,$be,$rp,$at);\n\t$self = shift;\n\t$file = shift || croak \"filename left blank\\n\";\n\t$be = AEBuildAppleEvent('netw','RAsl',typeApplSignature,'MACS',0,0,'') || croak $^E;\n\tAEPutParam($be,'RAlf','TEXT',$file) if ($file);\n\t$rp = AESend($be, kAEWaitReply) || croak $^E;\n\t$at = AEGetParamDesc($rp,'errn');\n\tAEDisposeDesc $be;\n\tAEDisposeDesc $rp;\n\treturn AEPrint($at) if ($at);\n}",
-      "file" : "/var/tmp/arv_2_TRnQ/Mac-Comm-OT_PPP-1.20/lib/Mac/Comm/OT_PPP.pm",
-      "package" : "Mac::Comm::OT_PPP"
-   }
-]

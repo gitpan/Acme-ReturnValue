@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "__PACKAGE__->loader_options(debug => 1)",
-      "file" : "/var/tmp/arv_YJ2C_o/CGI-Application-Structured-Tools-0.015/lib/CGI/Application/Structured/Tools/templates/DB.pm",
-      "package" : "::DB"
-   }
-]

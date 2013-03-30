@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "register_plugin for_versions => [1,2]",
-      "file" : "/var/tmp/arv_8hG030/Dancer-Plugin-Cache-CHI-1.4.0/lib/Dancer/Plugin/Cache/CHI.pm",
-      "package" : "Dancer::Plugin::Cache::CHI"
-   }
-]

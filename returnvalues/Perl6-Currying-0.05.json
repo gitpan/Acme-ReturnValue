@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "FILTER_ONLY \n\texecutable => sub {\n\t\t\ts<sub \\s* ($name) \\s* \\( (.*?) \\) \\s* \\{>\n\t\t\t <sub $1 :Prototype($2) { my($2)=\\@_;>gx;\n\t\t\ts<sub \\s* \\( (.*?) \\) \\s* \\{>\n\t\t\t <sub ($1) { my($1)=\\@_;>gx;\n\t\t\ts{(&$name)\\.prebind\\(}\n\t\t\t {Perl6::Currying::prebind(\\\\$1,}g;\n\t\t\ts{&?(\\$$name)\\.prebind\\(}\n\t\t\t {Perl6::Currying::prebind($1,}g;\n\t\t\ts{&\\{($balbrack)\\}\\.prebind\\(}\n\t\t\t {Perl6::Currying::prebind($1,}g;\n\t\t\ts[\\bprebind\\s*(&$name)\\s*: ]\n\t\t\t [Perl6::Currying::prebind \\\\$1,]g;\n\t\t\ts[\\bprebind\\s*&?(\\$$name)\\s*:]\n\t\t\t [Perl6::Currying::prebind $1,]g;\n\t\t\ts[\\bprebind\\s*&\\{($balbrack)\\}\\s*:]\n\t\t\t [Perl6::Currying::prebind $1,]g;\n\t\t},",
-      "file" : "/var/tmp/arv_sU3TNr/Perl6-Currying-0.05/lib/Perl6/Currying.pm",
-      "package" : "Perl6::Currying"
-   }
-]

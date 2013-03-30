@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*traces_TraceModule = *Lingua::FreeLing3::Bindingsc::traces_TraceModule",
-      "file" : "/var/tmp/arv_UQ46mR/Lingua-FreeLing3-0.05/lib/Lingua/FreeLing3/Bindings.pm",
-      "package" : "Lingua::FreeLing3::Bindings"
-   }
-]

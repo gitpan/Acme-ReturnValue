@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub __node_value",
-      "file" : "/var/tmp/arv_NN2CI3/RDF-Helper-2.0/lib/RDF/Helper/RDFQuery.pm",
-      "package" : "RDF::Helper::RDFQuery"
-   }
-]

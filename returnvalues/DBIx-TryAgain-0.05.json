@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our @ISA = 'DBI'",
-      "file" : "/var/tmp/arv_tArFSE/DBIx-TryAgain-0.05/lib/DBIx/TryAgain.pm",
-      "package" : "DBIx::TryAgain"
-   }
-]

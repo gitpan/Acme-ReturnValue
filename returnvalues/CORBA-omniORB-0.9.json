@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub omnithreads::shared::tie::SPLICE\n{\n die \"Splice not implemented for shared arrays\";\n}",
-      "file" : "/var/tmp/arv_SNSIzs/CORBA-omniORB-0.9/omnithreads/shared/shared.pm",
-      "package" : "omnithreads::shared"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_frames {\n\tmy $self = shift;\n    my $num = 0;\n    my @array;\n    my @links = $self->find_all_links( tag_regex => qr/^(iframe|frame)$/ );\n    foreach my $link (@links) {\n        ++$num;\n        my $link = $link->url_abs;\n        my $clone = clone($self);\n        $clone ->get($link);\n        $array[$num-1] = $clone;\n    }\nreturn @array;\n}",
-      "file" : "/var/tmp/arv_TLcDzi/WWW-Mechanize-Frames-0.03/lib/WWW/Mechanize/Frames.pm",
-      "package" : "WWW::Mechanize::Frames"
-   }
-]

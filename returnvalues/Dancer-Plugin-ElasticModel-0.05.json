@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "true",
-      "file" : "/var/tmp/arv_VK3B4S/Dancer-Plugin-ElasticModel-0.05/lib/Dancer/Plugin/ElasticModel.pm",
-      "package" : "Dancer::Plugin::ElasticModel"
-   }
-]

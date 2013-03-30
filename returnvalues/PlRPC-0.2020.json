@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "@RPC::PlServer::ISA = qw(Net::Daemon::Test)",
-      "file" : "/var/tmp/arv_g5seWz/PlRPC/lib/RPC/PlServer/Test.pm",
-      "package" : "RPC::PlServer::Test"
-   }
-]

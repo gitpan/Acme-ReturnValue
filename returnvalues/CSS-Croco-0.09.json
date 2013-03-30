@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our @ISA = \"CSS::Croco::Term\"",
-      "file" : "/var/tmp/arv_d3RJbO/CSS-Croco-0.09/lib/CSS/Croco/Term/String.pm",
-      "package" : "CSS::Croco::Term::String"
-   }
-]

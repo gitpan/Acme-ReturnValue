@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "__PACKAGE__->run_if_script",
-      "file" : "/var/tmp/arv_Vjzkoa/Catalyst-TraitFor-Model-DBIC-Schema-QueryLog-AdoptPlack-0.07/maint/Maker.pm",
-      "package" : "Maker"
-   }
-]

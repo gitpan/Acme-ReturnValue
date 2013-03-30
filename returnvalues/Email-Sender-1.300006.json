@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"220 OK\"",
-      "file" : "/var/tmp/arv_3RQVOT/Email-Sender-1.300006/lib/Email/Sender/Simple.pm",
-      "package" : "Email::Sender::Simple"
-   }
-]

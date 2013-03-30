@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub exists_as_dir {\n    -d shift;\n}",
-      "file" : "/var/tmp/arv_ZQ0lL2/Kwiki-Test-0.03/lib/Kwiki/Test.pm",
-      "package" : "Kwiki::Test"
-   }
-]

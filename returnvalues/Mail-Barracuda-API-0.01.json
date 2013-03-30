@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _doApply {\n\tmy ($class, %args) = @_;\n\tmy $result = 0;\n\tmy @response;\n\t\n\tmy $cmd = \"config_reload.cgi?\";\n\tmy $precmd = $class->{server} . \":\" . $class->{port} . \"/cgi-bin/\";\n\tmy $postcmd = \"password=\" . $class->{api_key};\n\t$cmd = $precmd . $cmd . $postcmd;\n\t\t\n\tmy $ua = LWP::UserAgent->new;\n\t$ua->agent(\"Mail::Barracuda::API/$VERSION \");\n\t\n\tmy $req = HTTP::Request->new(GET => $cmd);\n\tmy $res = $ua->request($req);\n\t\t\n\tif ($res->is_success) {\n\t\t@response = $class->_parseResponse($res->content);\t\n\t} else {\n\t\t$result = 1;\n\t\tdie \"Error contacting Appliance: \" . $res->status_line, \"\\n\";\n\t}\n\t\t\n\treturn $result;\n}",
-      "file" : "/var/tmp/arv_XHeNd8/Mail-Barracuda-API-0.01/lib/Mail/Barracuda/API.pm",
-      "package" : "Mail::Barracuda::API"
-   }
-]

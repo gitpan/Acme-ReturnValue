@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _extract_fields\n{\n  my ($hdl, @types) = @_;\n\n  my $i = $MsiRecordGetFieldCount->Call($hdl) or die $!;\n  my @a = ();\n  for my $c (1..$i)\n  {\n    my $s;\n    if (@types)\n    {\n      my $t = shift @types;\n      $s = $t == $COLTYPE_INT ? _getI($hdl, $c) :\n         $t == $COLTYPE_STRING ? _getS($hdl, $c) :\n         undef;          \n    }\n    else              \n    {\n      $s = _getI($hdl, $c);\n      $s = _getS($hdl, $c) unless (defined($s));\n    }\n    push @a, $s;\n  }\n  return @a;\n}",
-      "file" : "/var/tmp/arv_y48_51/Win32-MSI-DB-1.06/DB.pm",
-      "package" : "Win32::MSI::DB"
-   }
-]

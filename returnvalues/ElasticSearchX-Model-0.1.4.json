@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$MAPPING{'DateTime'} = sub {\n    my ( $attr, $tc ) = @_;\n    return ( maptc( $attr, $tc->parent ), type => 'date' );\n}",
-      "file" : "/var/tmp/arv_KLgtK0/ElasticSearchX-Model-0.1.4/lib/ElasticSearchX/Model/Document/Mapping.pm",
-      "package" : "ElasticSearchX::Model::Document::Mapping"
-   }
-]

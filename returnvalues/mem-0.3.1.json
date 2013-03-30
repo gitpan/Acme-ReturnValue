@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{ package mem;  \n  our $VERSION='0.3.1';\n  sub import { \n    if (@_ == 1) {\n      my ($p, $f, $l)=caller;\n      $p =~ s!::!/!g;\n      $p.=\".pm\";\n      $::INC{$p} = $f;\n    }\n  } \n1\n}",
-      "file" : "/var/tmp/arv_EjBVtT/mem-0.3.1/lib/mem.pm",
-      "package" : "mem"
-   }
-]

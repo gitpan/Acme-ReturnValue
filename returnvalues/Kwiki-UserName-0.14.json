@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub check_user_name {\n    my $preference = shift;\n    my $value = $preference->new_value;\n    $self->utf8_decode($value);\n    return unless length $value;\n    return $preference->error('Must be all alphanumeric characters.')\n      unless $value =~ /^[$ALPHANUM]+$/;\n    return $preference->error('Must be less than 30 characters.')\n      unless length($value) < 30;\n    $self->users->current(undef);\n    return 1;\n}",
-      "file" : "/var/tmp/arv_TJWMMt/Kwiki-UserName-0.14/lib/Kwiki/UserName.pm",
-      "package" : "Kwiki::UserName"
-   }
-]

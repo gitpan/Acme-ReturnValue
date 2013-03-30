@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {\n    my $self = shift;\n    Spread::disconnect($self->{MAILBOX});\n    sslog \"Spread session $self->{PRIVATE_GROUP} disconnected\\n\";\n}\n\n1",
-      "file" : "/var/tmp/arv_duNB4W/Spread-Session-0.4/Session.pm",
-      "package" : "Spread::Session"
-   }
-]

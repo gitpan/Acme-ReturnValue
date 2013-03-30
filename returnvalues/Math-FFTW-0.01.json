@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "XSLoader::load('Math::FFTW', $VERSION)",
-      "file" : "/var/tmp/arv_txoklQ/Math-FFTW-0.01/lib/Math/FFTW.pm",
-      "package" : "Math::FFTW"
-   }
-]

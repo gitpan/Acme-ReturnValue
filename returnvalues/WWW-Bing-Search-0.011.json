@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END {\n    $proxy = undef;\n    $timeout = undef;\n    $query = undef;\n    $rawResult = undef;\n    @results = undef;\n    $totalCount = undef;\n    $resultsCount = undef;\n    $first = undef;\n    $minPages = undef;\n}",
-      "file" : "/var/tmp/arv_GedLaU/WWW-Bing-Search-0.011/lib/WWW/Bing/Search.pm",
-      "package" : "WWW::Bing::Search"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub IsFalse\n{\n   my $value = shift;\n   return 1 \n      if (! defined($value) || $value =~ /^\\s*(0|f(alse|)|n(o|)|off)\\s*$/i);\n   return 0;\n}",
-      "file" : "/var/tmp/arv_VER_um/Tk-JComboBox-1.14/lib/Tk/CWidget/Util/Boolean.pm",
-      "package" : "Tk::CWidget::Util::Boolean"
-   }
-]

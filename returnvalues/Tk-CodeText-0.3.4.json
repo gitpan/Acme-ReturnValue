@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub visualend {\n\tmy $cw = shift;\n\tmy $end = $cw->linenumber('end - 1 chars');\n\tmy ($first, $last) = $cw->Tk::Text::yview;\n\tmy $vend = int($last * $end) + 2;\n\tif ($vend > $end) {\n\t\t$vend = $end;\n\t}\n\treturn $vend;\n}",
-      "file" : "/var/tmp/arv_g8LEdX/Tk-CodeText-0.3.4/CodeText.pm",
-      "package" : "Tk::CodeText"
-   }
-]

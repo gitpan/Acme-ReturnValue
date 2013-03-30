@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'True Value'",
-      "file" : "/var/tmp/arv_cpFGkO/Persistence-Object-Postgres-1.24/Postgres.pm",
-      "package" : "Persistence::Object::Postgres"
-   }
-]

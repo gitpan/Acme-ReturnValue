@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = \"1.1.1\"",
-      "file" : "/var/tmp/arv_VLf5SI/Authen-PAAS-1.1.1/lib/Authen/PAAS.pm",
-      "package" : "Authen::PAAS"
-   }
-]

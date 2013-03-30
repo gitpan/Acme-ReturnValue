@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub return {\n  my ($self, $retval) = @_;\n\n  my $content = XMLRPC::Serializer->envelope(response => 'toMethod', $retval);\n  my $response = $self->[TR_RESPONSE];\n\n  $response->code(200);\n  $response->header(\"Content-Type\", \"text/xml\");\n  $response->header(\"Content-Length\", length($content));\n  $response->content($content);\n  $response->continue();\n}\n\n1",
-      "file" : "/var/tmp/arv_Jfgcf4/POE-Component-Server-XMLRPC-0.05/XMLRPC.pm",
-      "package" : "POE::Component::Server::XMLRPC"
-   }
-]

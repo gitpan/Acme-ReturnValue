@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub cd {\n\tmy $obj = shift;\n\tmy $item = shift;\n\tmy $data = $obj->{list}->info('data',$item);\n\tif ($data =~ /\\/$/) {\n\t\t$obj->{cwd} = $data;\n\t\t$obj->ls;\n\t}\n}",
-      "file" : "/var/tmp/arv_A6Lpjw/dbsh-0.01/lib/dbsh/Panel.pm",
-      "package" : "dbsh::Panel"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "<<''",
-      "file" : "/var/tmp/arv_6_NZqW/IO-Async-Loop-AnyEvent2-ElectricBoogaloo-0.002/lib/IO/Async/Loop/AnyEvent2/ElectricBoogaloo.pm",
-      "package" : "IO::Async::Loop::AnyEvent2::ElectricBoogaloo"
-   }
-]

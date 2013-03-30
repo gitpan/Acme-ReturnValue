@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'MATT DAEMON'",
-      "file" : "/var/tmp/arv_dbmy_A/Acme-Matt-Daemon-0.01/lib/Acme/Matt/Daemon.pm",
-      "package" : "Acme::Matt::Daemon"
-   }
-]

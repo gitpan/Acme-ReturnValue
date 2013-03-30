@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub aromatize_mol {\n    my ($mol) = @_;\n\n    require Chemistry::Ring::Find;\n\n    $_->aromatic(0) for ($mol->atoms, $mol->bonds);\n\n    my @rings = Chemistry::Ring::Find::find_rings($mol);\n    $mol->attr(\"ring/rings\", \\@rings);\n    $_->attr(\"ring/rings\", []) for ($mol->atoms, $mol->bonds);\n\n    for my $ring (@rings) {\n        if ($ring->is_aromatic) {\n            $_->aromatic(1) for ($ring->atoms, $ring->bonds);\n        }\n        for ($ring->atoms, $ring->bonds) {\n            my $ringlist = $_->attr(\"ring/rings\") || [];\n            push @$ringlist, $ring;\n            weaken($ringlist->[-1]);\n            $_->attr(\"ring/rings\", $ringlist);\n        }\n    }\n    @rings;\n}",
-      "file" : "/var/tmp/arv_2zLw3s/Chemistry-Ring-0.20/lib/Chemistry/Ring.pm",
-      "package" : "Chemistry::Ring"
-   }
-]

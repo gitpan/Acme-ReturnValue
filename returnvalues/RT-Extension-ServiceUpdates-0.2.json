@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.2'",
-      "file" : "/var/tmp/arv_XzCEds/RT-Extension-ServiceUpdates-0.2/lib/RT/Extension/ServiceUpdates.pm",
-      "package" : "RT::Extension::ServiceUpdates"
-   }
-]

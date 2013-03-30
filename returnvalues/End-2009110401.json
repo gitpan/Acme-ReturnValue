@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {$_ [0] -> ()}\n\n1",
-      "file" : "/var/tmp/arv_IrcT4P/End-2009110401/lib/End.pm",
-      "package" : "End"
-   }
-]

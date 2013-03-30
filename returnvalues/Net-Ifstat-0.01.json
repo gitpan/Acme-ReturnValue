@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*exec = \\&execute",
-      "file" : "/var/tmp/arv_l19wR1/Net-Ifstat-0.01/lib/Net/Ifstat.pm",
-      "package" : "Net::Ifstat"
-   }
-]

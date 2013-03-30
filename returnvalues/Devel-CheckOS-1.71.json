@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$^O",
-      "file" : "/var/tmp/arv_42TxGI/Devel-CheckOS-1.71/lib/Devel/AssertOS.pm",
-      "package" : "Devel::AssertOS"
-   }
-]

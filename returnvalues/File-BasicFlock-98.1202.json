@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END {\n\tmy $f;\n\tfor $f (keys %locks) {\n\t\t&unlock($f);\n\t}\n}",
-      "file" : "/var/tmp/arv_AhV5OI/File-BasicFlock-98.1202/lib/File/BasicFlock.pm",
-      "package" : "File::BasicFlock"
-   }
-]

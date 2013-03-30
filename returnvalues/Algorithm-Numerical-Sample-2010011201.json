@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub extract {\n    my $self = shift;\n\n    my @result = map {$_ -> [1]}\n                 sort {$a -> [0] <=> $b -> [0]} @{$self -> {reservoir}};\n\n    $self -> {seen}      = 0;\n    $self -> {reservoir} = [(undef) x $self -> {sample_size}];\n\n    wantarray ? @result : $result [0];\n}",
-      "file" : "/var/tmp/arv_JIGlyb/Algorithm-Numerical-Sample-2010011201/lib/Algorithm/Numerical/Sample.pm",
-      "package" : "Algorithm::Numerical::Sample"
-   }
-]

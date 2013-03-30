@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub setup {\n\tmy $c = shift;\n\tmy @config_files;\n\tif ( defined $c->config->{'config_file'} && ref $c->config->{'config_file'} eq 'ARRAY' ) {\n\t\t@config_files = @{$c->config->{'config_file'}};\n\t} else {\n\t\tmy $config_file = $c->config->{'config_file'} || 'config.yml';\n\t\tpush @config_files, $config_file;\n\t}\n\tforeach my $config_file ( @config_files ) {\n\t\t$config_file = file($c->config->{'home'}, $config_file) unless file($config_file)->is_absolute;\n\t\tnext unless -e $config_file;\n\t\tmy $options = LoadFile($config_file);\n\t\t$c->config($options);\n\t}\n\t$c->NEXT::setup;\n}",
-      "file" : "/var/tmp/arv_q5QQ2r/Catalyst-Plugin-Config-YAML-0.04/lib/Catalyst/Plugin/Config/YAML.pm",
-      "package" : "Catalyst::Plugin::Config::YAML"
-   }
-]

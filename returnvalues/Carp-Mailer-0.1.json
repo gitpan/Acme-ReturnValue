@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$SIG{__WARN__} = \\&_dispatch_message",
-      "file" : "/var/tmp/arv_1WIQ2T/Carp-Mailer-0.1/lib/Carp/Mailer.pm",
-      "package" : "Carp::Mailer"
-   }
-]

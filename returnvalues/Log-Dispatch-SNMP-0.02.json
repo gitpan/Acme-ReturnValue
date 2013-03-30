@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "42",
-      "file" : "/var/tmp/arv_xUjlk7/Log-Dispatch-SNMP-0.02/lib/Log/Dispatch/SNMP.pm",
-      "package" : "Log::Dispatch::SNMP"
-   }
-]

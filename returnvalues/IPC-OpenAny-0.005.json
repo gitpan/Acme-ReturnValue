@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "1 && q{this statement is true}",
-      "file" : "/var/tmp/arv_3lhiYc/IPC-OpenAny-0.005/lib/IPC/OpenAny.pm",
-      "package" : "IPC::OpenAny"
-   }
-]

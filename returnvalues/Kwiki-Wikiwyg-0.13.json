@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Wikiwyg",
-      "file" : "/var/tmp/arv_ZHHDUp/Kwiki-Wikiwyg-0.13/lib/Kwiki/Wikiwyg.pm",
-      "package" : "Kwiki::Wikiwyg"
-   }
-]

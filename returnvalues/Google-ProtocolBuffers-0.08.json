@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub decode_float_be {\n    die BROKEN_MESSAGE() if $_[1]+4 > length($_[0]); \n    my $v = unpack('f', reverse substr($_[0], $_[1], 4));\n    $_[1] += 4; \n    return $v;\n}",
-      "file" : "/var/tmp/arv_3nfPrc/Google-ProtocolBuffers-0.08/lib/Google/ProtocolBuffers/Codec.pm",
-      "package" : "Google::ProtocolBuffers::Codec"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.10'",
-      "file" : "/var/tmp/arv_385f2Z/Kwiki-Theme-CPB-0.10/lib/Kwiki/Theme/CPB.pm",
-      "package" : "Kwiki::Theme::CPB"
-   }
-]

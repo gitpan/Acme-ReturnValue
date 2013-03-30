@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "bootstrap Audio::Play::\n1",
-      "file" : "/var/tmp/arv_qiE6Ag/Audio-1.029/Play/config/generic.pm",
-      "package" : "Audio::Play"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub copy_uri {\n  my ($src_uri,$target_uri)=@_;\n  my $in = open_uri($src_uri)\n    or die \"Cannot open source $src_uri: $!\\n\";\n  my $out = open_backend($target_uri,'w')\n    or die \"Cannot open target $target_uri: $!\\n\";\n  my $L=1024*100;\n  my $buffer;\n  while(read($in,$buffer,$L)>0) {\n    print $out ($buffer);\n  }\n  close_backend($in);\n  close_backend($out);\n}",
-      "file" : "/var/tmp/arv_fxrfVv/Treex-PML-2.16/lib/Treex/PML/IO.pm",
-      "package" : "Treex::PML::IO"
-   }
-]

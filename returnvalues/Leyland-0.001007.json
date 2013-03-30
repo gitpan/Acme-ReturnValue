@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "default_export get Leyland::Parser::Route { caller->add_route('get',  @_) }\ndefault_export put Leyland::Parser::Route { caller->add_route('put',  @_) }\ndefault_export del Leyland::Parser::Route { caller->add_route('del',  @_) }\ndefault_export any Leyland::Parser::Route { caller->add_route('any',  @_) }\ndefault_export post Leyland::Parser::Route { caller->add_route('post', @_) }\ndefault_export prefix codeblock { caller->set_prefix(@_) }\n\n\n1",
-      "file" : "/var/tmp/arv_wDKEEu/Leyland-0.001007/lib/Leyland/Parser.pm",
-      "package" : "Leyland::Parser"
-   }
-]

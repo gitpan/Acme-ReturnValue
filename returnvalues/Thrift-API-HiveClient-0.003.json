@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "1 && q{this is a terrible kludge}",
-      "file" : "/var/tmp/arv_CeBogy/Thrift-API-HiveClient-0.003/lib/Thrift/API/HiveClient.pm",
-      "package" : "Thrift::API::HiveClient"
-   }
-]

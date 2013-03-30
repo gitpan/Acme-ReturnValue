@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub suck_list\n{\n\n\n\tmy $list = shift;\n\n\tmy @sucked;\n\n\twhile (@$list)\n\t{\n\t\tif ($#$list and ($list->[1] eq '=>'))\n\t\t{\n\t\t\tlast;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tpush(@sucked, shift(@$list));\n\t\t}\n\t}\n\n\treturn \\@sucked;\n}",
-      "file" : "/var/tmp/arv_cJkD_5/Exporter-Easy-0.16/lib/Exporter/Easiest.pm",
-      "package" : "Exporter::Easiest"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub type {\n\t(my $type = ref shift) =~ s/.*:://;\n\treturn lc $type;\n}",
-      "file" : "/var/tmp/arv_D0C8aa/Audio-File-0.11/lib/Audio/File/Type.pm",
-      "package" : "Audio::File::Type"
-   }
-]

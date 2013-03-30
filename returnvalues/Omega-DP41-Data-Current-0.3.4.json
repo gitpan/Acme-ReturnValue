@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub serial_data{\nmy $current;\nmy $device = \"/dev/ttyS0\"; \nmy $serial = Device::SerialPort-> new($device, 1);\ndie \"Can't open serial port $serial: $^E\\n\" unless ($serial);\n\t\n\t$serial->user_msg(0);\n\t$serial->databits(7);\n\t$serial->baudrate(9600);\n\t$serial->parity(\"odd\");\n\t$serial->stopbits(1);\n\t$serial->handshake(\"none\");\n\t$serial->datatype('raw');\n\t$serial->dtr_active('T');\n\t$serial->stty_icrnl(0);\n\t$serial->write_settings;\n\nprint $serial->write(\"*X01\\r\"); \nmy $STALL_DEFAULT=5; \nmy $timeout=$STALL_DEFAULT;\n$serial->read_char_time(0); \n$serial->read_const_time(1000); \nmy $chars=0;\nmy $buffer=\"\";\nmy ($count,$saw)=$serial->read(255); \n\nif ($count > 0) {\n $chars+=$count;\n $buffer.=$saw;\n $current = $buffer;\n }\n\n$current =~ s/^X......//g;\n$current =~ s/\\.{1}//g;\nreturn $current;\n$serial->close();\n}",
-      "file" : "/var/tmp/arv_obbqLJ/Omega-DP41-Data-Current-0.3.4/lib/Omega/DP41/Data/Current.pm",
-      "package" : "Omega::DP41::Data::Current"
-   }
-]

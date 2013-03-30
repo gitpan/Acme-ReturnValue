@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub write {\n    my ($self, $fh, $newentries, $prefix) = @_ ;\n\n    foreach (@$newentries)\n        {\n        my $line = $self -> {wrapxs} -> mapline_func ($_) ;\n\n        if ($line =~ /\\)\\((.*?)\\)/)\n            {\n            my @args = split (/,/, $1) ;\n            $line .= ' | ' if (@args) ;\n            my $i = 0 ;\n            foreach (@args)\n                {\n                $line .= ',' if ($i++ > 0) ;\n                /([^ ]+)$/ ;\n                my $arg = $1 ;\n                $line .= '<' if (/\\* \\*/) ;\n                $line .= $arg ;\n                }\n            }\n        \n        $fh -> print ($prefix, $line, \"\\n\") ;\n        }\n    }",
-      "file" : "/var/tmp/arv_oKMmYu/ExtUtils-XSBuilder-0.28/XSBuilder/CallbackMap.pm",
-      "package" : "ExtUtils::XSBuilder::CallbackMap"
-   }
-]

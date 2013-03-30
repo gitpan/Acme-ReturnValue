@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub new {\n    my $class = shift;\n    my $conf  = shift || {};\n    my $self  = bless [$conf], $class;\n    return $self;\n}",
-      "file" : "/var/tmp/arv_Qm9ukh/Web-MicroID-0.02/lib/Web/MicroID.pm",
-      "package" : "Web::MicroID"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub find_column \n{\n\tmy ($self, $name) = @_;\n\n\treturn $name if ref $name;\n\treturn unless $self->{_allcol}->{ $name };\n}",
-      "file" : "/var/tmp/arv_HLzOBl/Class-DBI-Sybase-0.5/Sybase.pm",
-      "package" : "Class::DBI::Sybase"
-   }
-]

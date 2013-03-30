@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub equal {\n\tmy ($x,$y) = @_;\n\t\n\treturn 1 if $x->representant == $y->representant;\n\t\n\treturn (\n\t\t\tSet::Scalar->new(@{$x->elements}) * \n\t\t\tSet::Scalar->new(@{$y->elements})\n\t\t\t)->size;\n}",
-      "file" : "/var/tmp/arv_Qhj_6q/CM-Permutation-0.94/lib/CM/EquivalenceClass.pm",
-      "package" : "CM::EquivalenceClass"
-   }
-]

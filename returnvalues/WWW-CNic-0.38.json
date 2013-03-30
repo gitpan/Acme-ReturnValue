@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use vars qw($VERSION)",
-      "file" : "/var/tmp/arv_OFUFLu/WWW-CNic-0.38/lib/WWW/CNic/Cookbook.pm",
-      "package" : "WWW::CNic::Cookbook"
-   }
-]

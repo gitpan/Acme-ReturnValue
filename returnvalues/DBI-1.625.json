@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = sprintf(\"1.%06d\", q$Revision: 14934 $ =~ /(\\d+)/o)",
-      "file" : "/var/tmp/arv_V7fND3/DBI-1.625/lib/DBI/FAQ.pm",
-      "package" : "DBI::FAQ"
-   }
-]

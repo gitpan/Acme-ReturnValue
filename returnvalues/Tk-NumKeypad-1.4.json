@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _padpress {\n    my ($this, $n) = @_;\n    my $e = $this->cget('-entry');\n    return if !$e;\n\n    my $defval = {'C' => 'CLEAR'};\n    my $keyval = $this->cget('-keyval');\n    my $v = defined $keyval->{$n}? $keyval->{$n} : $defval->{$n} || $n;\n\n    if ($e->isa(\"Tk::Entry\")) {\n\n        return ($e->index('insert') > 0) && $e->delete($e->index('insert')-1)\n            if $v eq 'BACKSPACE';\n        return $e->delete(0, 'end')\n            if $v eq 'CLEAR';\n        return $e->delete('insert')\n            if $v eq 'DELETE';\n        $e->delete('sel.first', 'sel.last')\n            if $e->selectionPresent;\n    }\n    else {\n\n        return ($e->index('insert') gt '1.0') && $e->delete('insert-1 chars')\n            if $v eq 'BACKSPACE';\n        return $e->delete('1.0', 'end')\n            if $v eq 'CLEAR';\n        return $e->delete('insert')\n            if $v eq 'DELETE';\n        $e->delete('sel.first', 'sel.last')\n            if $e->tagRanges('sel');\n    }\n\n    $e->insert('insert', $v);\n}",
-      "file" : "/var/tmp/arv_jpDa_s/Tk-NumKeypad-1.4/NumKeypad.pm",
-      "package" : "Tk::NumKeypad"
-   }
-]

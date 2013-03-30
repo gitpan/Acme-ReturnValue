@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub new_sequence\n{ return $_[0]; }",
-      "file" : "/var/tmp/arv_lbjHt7/Encode-Registry-0.13/lib/Encode/Win32.pm",
-      "package" : "Encode::Win32"
-   }
-]

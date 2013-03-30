@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub switchquotes {\n    my $self = shift;\n    my $command = shift;\n    local $_ = shift;\n    my $extra = shift;\n    s/\\\\\\*\\([LR]\\\"/\\\"/g;\n\n    my $c_is_quote = ($$self{LQUOTE} =~ /\\\"/) || ($$self{RQUOTE} =~ /\\\"/);\n    if (/\\\"/ || ($c_is_quote && /\\\\\\*\\(C[\\'\\`]/)) {\n        s/\\\"/\\\"\\\"/g;\n        my $troff = $_;\n        $troff =~ s/\\\"\\\"([^\\\"]*)\\\"\\\"/\\`\\`$1\\'\\'/g;\n        s/\\\\\\*\\(C\\`/$$self{LQUOTE}/g;\n        s/\\\\\\*\\(C\\'/$$self{RQUOTE}/g;\n        $troff =~ s/\\\\\\*\\(C[\\'\\`]//g;\n        s/\\\"/\\\"\\\"/g if $extra;\n        $troff =~ s/\\\"/\\\"\\\"/g if $extra;\n        $_ = qq(\"$_\") . ($extra ? \" $extra\" : '');\n        $troff = qq(\"$troff\") . ($extra ? \" $extra\" : '');\n        return \".if n $command $_\\n.el $command $troff\\n\";\n    } else {\n        $_ = qq(\"$_\") . ($extra ? \" $extra\" : '');\n        return \"$command $_\\n\";\n    }\n}",
-      "file" : "/var/tmp/arv_QLdW53/Pod2VMSHlp-1.02/Pod/Dsr.pm",
-      "package" : "Pod::Dsr"
-   }
-]

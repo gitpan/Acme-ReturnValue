@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub MakeFrenchComma{\n    my $value=shift;\n    $value =~ s/\\./,/g;\n    return $value;\n}",
-      "file" : "/var/tmp/arv_bki6t7/Lab-Instrument-2.01/lib/Lab/Instrument/TRMC2.pm",
-      "package" : "Lab::Instrument::TRMC2"
-   }
-]

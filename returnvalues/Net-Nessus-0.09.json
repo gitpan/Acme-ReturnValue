@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "@Net::Nessus::Message::BYE::ISA = qw(Net::Nessus::Message::SingleLine)",
-      "file" : "/var/tmp/arv_HT_dHC/Net-Nessus-0.09/lib/Net/Nessus/Message.pm",
-      "package" : "Net::Nessus::Message"
-   }
-]

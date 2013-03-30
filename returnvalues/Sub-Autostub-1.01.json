@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "AUTOLOAD\n{\n    my $caller = caller;\n\n    my $name = ( split /::/, $AUTOLOAD )[ -1 ];\n\n    if( ref $_[0] )\n    {\n        if( my $class = blessed $_[0] )\n        {\n            splice @_, 0, 1, \"method '$name'\";\n\n            &$print_message;\n\n            $returnz->{ $class }{ $name } ||= 1\n        }\n        else\n        {\n\n            croak \"Bogus method call: not blessed '$_[0]'\"\n        }\n    }\n    else\n    {\n\n        my $proto = shift;\n\n        splice @_, 0, 1, \"construct '$proto'\";\n\n        &$print_message;\n\n        my ( $class ) = $AUTOLOAD =~ m{ ^ (.+) :: }x;\n\n        my $ref = $returnz->{ $class }{ $name } ||= \\$proto;\n\n        bless $ref, $proto;\n    }\n}\n\n\n1",
-      "file" : "/var/tmp/arv_ozXtqg/Sub-Autostub-1.01/lib/Sub/Autostub.pm",
-      "package" : "Sub::Autostub"
-   }
-]

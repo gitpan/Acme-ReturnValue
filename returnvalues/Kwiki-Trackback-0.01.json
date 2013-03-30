@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Trackback",
-      "file" : "/var/tmp/arv_vJ4KqI/Kwiki-Trackback-0.01/lib/Kwiki/Trackback.pm",
-      "package" : "Kwiki::Trackback"
-   }
-]

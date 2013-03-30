@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub tokenstream {\n\tmy $self = shift;\n\n\t\treturn Plucene::Plugin::Analyzer::MetaphoneFilter->new({\n\t\t\tinput => Plucene::Analysis::Standard::StandardTokenizer->new(@_)\n\t\t});\n}",
-      "file" : "/var/tmp/arv_aUtIg7/Plucene-Plugin-Analyzer-MetaphoneAnalyzer-1.02/lib/Plucene/Plugin/Analyzer/MetaphoneAnalyzer.pm",
-      "package" : "Plucene::Plugin::Analyzer::MetaphoneAnalyzer"
-   }
-]

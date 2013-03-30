@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _die {\n    require Carp;\n    Carp::croak(@_);\n}",
-      "file" : "/var/tmp/arv__HA90_/Class-Delegator-0.09/lib/Class/Delegator.pm",
-      "package" : "Class::Delegator"
-   }
-]

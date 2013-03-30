@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub handle_start {\n    my $port = shift || $self->hub->config->simple_server_http_port;\n    my $server = HTTP::Server::Simple::Kwiki->new($port);\n    $server->run();\n}",
-      "file" : "/var/tmp/arv_SKAVO8/Kwiki-Simple-Server-HTTP-0.03/lib/Kwiki/Simple/Server/HTTP.pm",
-      "package" : "Kwiki::Simple::Server::HTTP"
-   }
-]

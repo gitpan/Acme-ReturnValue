@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub hashsum {\n    my %sum;\n    while (@_) {\n        my $key = shift;\n        $sum{$key} += shift;\n    }\n    %sum;\n}",
-      "file" : "/var/tmp/arv_I5_LlM/Math-HashSum-0.02/lib/Math/HashSum.pm",
-      "package" : "Math::HashSum"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub uncamelize($) {\n    local $_ = shift;\n    s/(?<=[a-z])([A-Z])/_\\L$1/g;\n    s/([A-Z])(?=[a-z]{2})/_\\L$1/g;\n    s/^_//; lc\n}",
-      "file" : "/var/tmp/arv_mwbrBa/Parse-Matroska-0.003/lib/Parse/Matroska/Utils.pm",
-      "package" : "Parse::Matroska::Utils"
-   }
-]

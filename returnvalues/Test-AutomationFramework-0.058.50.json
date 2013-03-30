@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub prHtml2 {\t\nmy $html =<<EOF;\n &appendtoFile_( $SvrDrive.'/'.$SvrProjName.'/'.$reportHtml, $html );\n &appendtoFile_( $SvrDrive.'/'.$SvrProjName.'/'.$reportHtml_http, $html );\n}",
-      "file" : "/var/tmp/arv_OE25ge/Test-AutomationFramework-0.058.50/lib/Test/AutomationFramework.pm",
-      "package" : "Test::AutomationFramework"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub CLONE { $cloned++ }",
-      "file" : "/var/tmp/arv_20Cbpd/Thread-Conveyor-Monitored-0.14/lib/Thread/Conveyor/Monitored.pm",
-      "package" : "Thread::Conveyor::Monitored"
-   }
-]

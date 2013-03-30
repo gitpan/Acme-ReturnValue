@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub verify { return 1 }",
-      "file" : "/var/tmp/arv_KBPqGa/Crypt-Keyczar-0.07/lib/Crypt/Keyczar/Key.pm",
-      "package" : "Crypt::Keyczar::Key"
-   }
-]

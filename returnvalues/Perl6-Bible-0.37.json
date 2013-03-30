@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub process {\n    my $self = shift;\n    print <<_;\n}",
-      "file" : "/var/tmp/arv_mgEfAW/Perl6-Bible-0.37/lib/Perl6/Bible.pm",
-      "package" : "Perl6::Bible"
-   }
-]

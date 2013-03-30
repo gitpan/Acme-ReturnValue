@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub finalize {\n    my ($self) = @_;\n    foreach my $key (keys %{$self->{classes}}) {\n        $self->{classes}{$key}->substantiate();\n    }\n}",
-      "file" : "/var/tmp/arv_Tq47bj/Lang-Tree-Builder-0.1/lib/Lang/Tree/Builder/Data.pm",
-      "package" : "Lang::Tree::Builder::Data"
-   }
-]

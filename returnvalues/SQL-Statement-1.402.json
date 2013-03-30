@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_config_as_hash\n{\n    my $class = $_[0];\n\n    my @data = split( m/\\n/, $class->get_config() );\n\n    my %config;\n    my $feature;\n    for (@data)\n    {\n        chomp;\n        s/^\\s+//;\n        s/\\s+$//;\n        next unless ($_);\n        if (/^\\[(.*)\\]$/i)\n        {\n            $feature = lc $1;\n            $feature =~ s/\\s+/_/g;\n            next;\n        }\n        my $newopt = uc $_;\n        $newopt =~ s/\\s+/ /g;\n        $config{$feature}{$newopt} = 1;\n    }\n\n    return \\%config;\n}",
-      "file" : "/var/tmp/arv_583UCT/SQL-Statement-1.402/lib/SQL/Dialects/Role.pm",
-      "package" : "SQL::Dialects::Role"
-   }
-]

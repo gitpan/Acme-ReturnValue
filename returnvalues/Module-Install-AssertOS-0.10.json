@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Assert this'",
-      "file" : "/var/tmp/arv_89svKl/Module-Install-AssertOS-0.10/lib/Module/Install/AssertOS.pm",
-      "package" : "Module::Install::AssertOS"
-   }
-]

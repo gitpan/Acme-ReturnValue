@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use Net::XMPP:\n\nsub new {\n\tmy $self={\n\t    account=>undef,\n\t    @_\n\t};\n\tbless $self, shift;\n\treturn $self;\n}\n\n1",
-      "file" : "/var/tmp/arv_lHhQeL/annelidous-annelidous-d9d696b6894d5dae41e56e057d31439fb86e5165/Annelidous/Transport/Vertebra.pm",
-      "package" : "Annelidous::Transport::Vertebra"
-   }
-]

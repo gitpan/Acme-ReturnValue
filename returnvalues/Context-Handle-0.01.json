@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub return {\n\tmy $self = shift;\n\tWant::double_return();\n\t$self->value;\n}\n\n\n__PACKAGE__",
-      "file" : "/var/tmp/arv_aIS9eM/Context-Handle-0.01/lib/Context/Handle.pm",
-      "package" : "Context::Handle"
-   }
-]

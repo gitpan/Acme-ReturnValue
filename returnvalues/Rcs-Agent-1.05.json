@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub usinghpux {\n  my $self = shift;\n  $self->{hpux} = shift;\n}",
-      "file" : "/var/tmp/arv_Yiuezy/Rcs-Agent-1.05/Agent.pm",
-      "package" : "Rcs::Agent"
-   }
-]

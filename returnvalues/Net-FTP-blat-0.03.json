@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub Net::FTP::blat \n{\n my($ftp,$remote) = @_[0,2];\n my $value = \\$_[1];\n \n my($sock,$len,$buf);\n\n unless(defined $remote)\n  {\n   croak 'Must specify remote filename with stream input';\n  };\n\n $ftp->_ALLO( length $$value);\n  \n croak(\"Bad remote filename '$remote'\\n\")\n\tif $remote =~ /[\\r\\n]/s;\n\n delete ${*$ftp}{'net_ftp_port'};\n delete ${*$ftp}{'net_ftp_pasv'};\n\n $sock = $ftp->_data_cmd('STOR', $remote) or \n \tcroak \"failure of STOR [$remote] data_cmd\";\n\n\n     $len = length $$value;\n     my $wlen;\n     unless(defined($wlen = $sock->write($$value,$len))\n         && $wlen == $len)\n      {\n       $sock->abort;\n       croak \"only wrote $wlen of $len  data to FTP data channel at [$remote] \";\n      }\n      \n $sock->close();\n\n $$value;\n \n}",
-      "file" : "/var/tmp/arv__2vucF/Net-FTP-blat-0.03/blat.pm",
-      "package" : "Net::FTP::blat"
-   }
-]

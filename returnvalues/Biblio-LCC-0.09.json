@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub add {\n    my ($cls, $lcc, $offset) = @_;\n    my ($alpha, $int, $frac, $rmdr) = $cls->parse($lcc);\n    die \"Can't add to a classification with a fractional part\" if $frac ne '';\n    die \"Can't add to a classification with a remainder\"       if $rmdr ne '';\n    $int += int($offset);\n    if ($offset =~ /\\./) {\n        $frac = $offset - $int;\n        return \"$alpha$int.$frac\"\n    }\n    else {\n        return \"$alpha$int\";\n    }\n}",
-      "file" : "/var/tmp/arv_hcL2Mg/Biblio-LCC-0.09/lib/Biblio/LCC.pm",
-      "package" : "Biblio::LCC"
-   }
-]

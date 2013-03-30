@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub text_to_html {\n    my $self = shift;\n    return textile(shift);\n}",
-      "file" : "/var/tmp/arv__CtMJU/Kwiki-Textile-0.01/lib/Kwiki/Textile.pm",
-      "package" : "Kwiki::Textile"
-   }
-]

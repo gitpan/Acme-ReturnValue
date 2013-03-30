@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub errstr  {\n  my($self) = @_;\n  return @{$self->{_ERRORS}} if ($self->{_ERRORS});\n  return ();\n}",
-      "file" : "/var/tmp/arv_nN7Uwy/MIME-Lite-HTML-1.24/HTML.pm",
-      "package" : "MIME::Lite::HTML"
-   }
-]

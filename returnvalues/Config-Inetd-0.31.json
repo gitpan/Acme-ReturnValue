@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY\n{\n    my $self = shift;\n    untie @{$self->{CONF}};\n}\n\n1",
-      "file" : "/var/tmp/arv_DEmCvZ/Config-Inetd-0.31/lib/Config/Inetd.pm",
-      "package" : "Config::Inetd"
-   }
-]

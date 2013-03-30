@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "0x55AA",
-      "file" : "/var/tmp/arv_F9kc3H/Test-Refcount-0.07/lib/Test/Refcount.pm",
-      "package" : "Test::Refcount"
-   }
-]

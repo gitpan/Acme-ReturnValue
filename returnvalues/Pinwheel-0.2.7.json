@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ordinal_text\n{\n    my $i = (0 + shift) % 100;\n    return 'th' if ($i >= 10 && $i < 20);\n    return qw(th st nd rd th th th th th th)[$i % 10];\n}",
-      "file" : "/var/tmp/arv_7kIoMs/Pinwheel-0.2.7/lib/Pinwheel/Helpers/Text.pm",
-      "package" : "Pinwheel::Helpers::Text"
-   }
-]

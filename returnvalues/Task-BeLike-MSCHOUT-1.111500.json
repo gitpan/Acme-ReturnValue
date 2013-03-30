@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use warnings",
-      "file" : "/var/tmp/arv_XVZRTK/Task-BeLike-MSCHOUT-1.111500/lib/Task/BeLike/MSCHOUT.pm",
-      "package" : "Task::BeLike::MSCHOUT"
-   }
-]

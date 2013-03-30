@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getdatatype {\n\tmy ($self) = @_;\n\tmy @possiblevalues = qw( text number graphic other );\n\tmy $attr = $self->{node}->getAttributeNode(\"data-type\");\n\t$self->{\"data-type\"} = $attr ? $attr->getValue : \"\";\n\tif ($self->{\"data-type\"} && grep !/$self->{\"data-type\"}/, \"@possiblevalues\") {\n\t\tcroak \"Illegal value \".$self->{\"data-type\"}.\" for attribute data-type\";\n\t}\n\treturn $self->{\"data-type\"};\n}",
-      "file" : "/var/tmp/arv_1MUJAt/Syndication-NITF-0.02/NITF.pm",
-      "package" : "Syndication::NITF"
-   }
-]

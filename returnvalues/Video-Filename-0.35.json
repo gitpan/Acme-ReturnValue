@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub testVideoFilename {\n\tmy @funcs = qw(isDVDshow isTVshow isEpisode isMovie);\n\tfor my $pat (@filePatterns) {\n\t\tfor my $test (@{$pat->{test_files}}) {\n\t\t\tmy $file = new($test->[0]);\n\t\t\tif ($file->{regex} ne $pat->{re}) {\n\t\t\t\tprint RED \"PATT RE: $pat->{re}\\nFILE RE: $file->{regex}\\n\";\n\t\t\t\tprint RED \"FAILED: $file->{file} (wrong rule)\\n\";\n\t\t\t\tprint Dumper($file); exit;\n\t\t\t}\n\t\t\tmy $keys = $pat->{test_keys};\n\t\t\tfor my $i (1..8) {\n\t\t\t\tmy $attr = $file->{$keys->[$i]};\n\t\t\t\tmy $value = $test->[$i];\n\t\t\t\tif ($attr ne $value) {\n\t\t\t\t\tprint RED \"'$attr' ne '$value'\\nFAILED: $file->{file}\\n\";\n\t\t\t\t\tprint Dumper($file); exit;\n\t\t\t\t}\n\t\t\t\t&verbose(1, \"'$attr' eq '$value'\\n\");\n\t\t\t}\n\t\t\tfor my $i (0..$#funcs) {\n\t\t\t\tunless (eval \"\\$file->$funcs[$i]()\" == $pat->{test_funcs}->[$i]) {\n\t\t\t\t\tprint RED \"\\$file->$funcs[$i]() != $pat->{test_funcs}->[$i]\\nFAILED: $file->{file}\\n\";\n\t\t\t\t\tprint Dumper($file); exit;\n\t\t\t\t}\n\t\t\t}\n\t\t\tprint GREEN \"PASSED: $file->{file}\\n\";\n\t\t}\n\t}\n}",
-      "file" : "/var/tmp/arv_xKPDHW/Video-Filename-0.35/lib/Video/Filename.pm",
-      "package" : "Video::Filename"
-   }
-]

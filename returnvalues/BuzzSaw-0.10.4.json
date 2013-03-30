@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "__PACKAGE__->table('current_processing')",
-      "file" : "/var/tmp/arv_a_GzSo/BuzzSaw-0.10.4/lib/BuzzSaw/DB/Schema/Result/CurrentProcessing.pm",
-      "package" : "BuzzSaw::DB::Schema::Result::CurrentProcessing"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub echo : Local : Direct : DirectArgs(1) {\n\t\tmy ($self, $c) = @_;\n\t\t$c->res->content_type('application/json');\n\t\t$c->res->body(encode_json($c->req->data));\n\t}",
-      "file" : "/var/tmp/arv_D6tokh/CatalystX-ExtJS-2.1.3/tutorial/lib/MyApp/Controller/Calculator.pm",
-      "package" : "MyApp::Controller::Calculator"
-   }
-]

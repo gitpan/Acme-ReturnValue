@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub paired_arguments { () }",
-      "file" : "/var/tmp/arv_D1HZHb/Class-Field-0.15/lib/Class/Field.pm",
-      "package" : "Class::Field"
-   }
-]

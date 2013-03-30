@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[Smokey IRC]",
-      "file" : "/var/tmp/arv__XaZKn/App-Metabase-Relayd-Plugin-IRC-0.04/lib/App/Metabase/Relayd/Plugin/IRC.pm",
-      "package" : "App::Metabase::Relayd::Plugin::IRC"
-   }
-]

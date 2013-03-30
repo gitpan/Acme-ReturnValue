@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub cattail ($$) {\n\tmy ($input, $handle) = @_;\n\tmy @lines = (0);\n\n    unless (ref \\$input eq 'GLOB' or ref \\$input eq 'REF') {\n\t\topen FILE, $input or return;\n\t}\n\n\twhile (<FILE>) {\n\t\t$lines[$.] = tell FILE;\n\t}\n\n\tpop @lines;\n\twhile (defined ($_ = pop @lines)) {\n\t\tseek FILE, $_, 0;\n\t\tprint $handle scalar(<FILE>);\n\t}\n\tclose FILE;\n\n\treturn (1);\n}",
-      "file" : "/var/tmp/arv_AfdymX/File-Cat-1.2/Cat.pm",
-      "package" : "File::Cat"
-   }
-]

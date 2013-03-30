@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _expand_twiddles {\n  my $path = shift;\n  my ($to_expand,$homedir);\n  return $path unless $path =~ m!^~([^/]*)!;\n\n  if ($to_expand = $1) {\n    $homedir = (getpwnam($to_expand))[7];\n  } else {\n    $homedir = (getpwuid($<))[7];\n  }\n  return $path unless $homedir;\n\n  $path =~ s!^~[^/]*!$homedir!;\n  return $path;\n}",
-      "file" : "/var/tmp/arv_Hqw4Yx/AcePerl-1.92/Ace/Local.pm",
-      "package" : "Ace::Local"
-   }
-]

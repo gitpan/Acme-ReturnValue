@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "1 || q{life without coffee isn't worth living}",
-      "file" : "/var/tmp/arv_Qe59G4/Date-Extract-Surprise-0.006/lib/Date/Extract/Surprise.pm",
-      "package" : "Date::Extract::Surprise"
-   }
-]

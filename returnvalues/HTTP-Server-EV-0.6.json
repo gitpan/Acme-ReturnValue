@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _done {\n\t$_[0]->{parent_req}{parent_listener}{on_file_received}->($_[0]->{parent_req}, $_[0]) if $_[0]->{parent_req}{parent_listener}{on_file_received};\n\t\n\t$_[0]->{parent_req}->start;\n\t\n\tseek $_[0]->{fh},0,0;\n}",
-      "file" : "/var/tmp/arv_9KM_E8/HTTP-Server-EV-0.6/EV/IO/Blocking.pm",
-      "package" : "HTTP::Server::EV::IO::Blocking"
-   }
-]

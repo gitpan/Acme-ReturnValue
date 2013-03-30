@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _init {\n    my ( $self, %opts ) = @_;\n    $self->{params} = \\%opts;\n\n    foreach my $req ( qw/URL Project User Area/ ) {\n        croak \"Required configuration parameter `$req` was not defined\" unless defined $opts{$req};\n    }\n\n    unless ( $opts{DescriptionPrefix} or $opts{DescriptionRegex} ) {\n        croak \"One of DescriptionPrefix or DescriptionRegex options are required\";\n    }\n\n    if ( $opts{DescriptionRegex} and ref($opts{DescriptionRegex}) ne 'Regexp' ) {\n        croak \"DescriptionRegex must be a compiled regex (use qr{})\";\n    }\n\n    $self->{form} = {\n        ScoutProject      => $opts{Project}\n      , ScoutUserName     => $opts{User}\n      , ScoutArea         => $opts{Area}\n      , ForceNewBug       => ( $opts{ForceNewBug} || 0 )\n      , FriendlyResponse  => 0\n    };\n}",
-      "file" : "/var/tmp/arv_EDkx0i/Log-Dispatch-FogBugz-0.1/lib/Log/Dispatch/FogBugz.pm",
-      "package" : "Log::Dispatch::FogBugz"
-   }
-]

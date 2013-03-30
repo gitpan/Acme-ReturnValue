@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub check_cached {\n    my $hook = pop;\n    my $display = $self;\n    $self = $display->hub->cached_display;\n    my $page = $self->pages->current;\n    return unless $page->exists;\n    return if (defined $self->config->can('cached_display_ignore') and\n\t       grep {$page->id} @{$self->config->cached_display_ignore});\n    my $html = io->catfile($self->plugin_directory,$page->id)->utf8;\n    my $content;\n\n    my $depup = 0;\n    if (defined $self->config->can('cached_display_dependencies')){\n\tfor (@{$self->config->cached_display_dependencies}){\n\t    my $deppage = $self->pages->new_page($_);\n\t    $depup = 1 if $deppage->modified_time > $html->mtime;\n\t}\n    }\n\n    if($depup or\n       !$html->exists or\n       ($page->modified_time > $html->mtime)) {\n        my $code = $hook->code;\n        $content = $code->($display);\n        $html->print($content);\n    }\n    $content ||= $html->all;\n    $hook->cancel;\n    return $content;\n}",
-      "file" : "/var/tmp/arv_5rW8d3/Kwiki-CachedDisplay-0.07/lib/Kwiki/CachedDisplay.pm",
-      "package" : "Kwiki::CachedDisplay"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "unless ( caller ) {\n\n    package main;\n    my $data = pack(\"C*\", 0..255);\n    my $res = \"\";\n    $res .= Data::Hexify::Hexify(\\$data,\n\t\t\t\t length => 48);\n    $res .= Data::Hexify::Hexify(\\$data,\n\t\t\t\t start => 14, length => 48);\n    $res .= Data::Hexify::Hexify(\\$data,\n\t\t\t\t start => 3, length => 4);\n    $res .= Data::Hexify::Hexify(\\$data,\n\t\t\t\t start => 3, length => 4, first => 7);\n    my $exp = <<'EOD';\n\n    die(\"Selftest error:\\n\".\n\t\"Got:\\n$res\".\n\t\"Expected:\\n$exp\") unless $res eq $exp;\n}",
-      "file" : "/var/tmp/arv_08nXgT/Data-Hexify-1.00/lib/Data/Hexify.pm",
-      "package" : "Data::Hexify"
-   }
-]

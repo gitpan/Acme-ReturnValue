@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.21'",
-      "file" : "/var/tmp/arv_9pDua6/Test-Nginx-0.21/lib/Test/Nginx.pm",
-      "package" : "Test::Nginx"
-   }
-]

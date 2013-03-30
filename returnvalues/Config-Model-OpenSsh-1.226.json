@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "no Any::Moose",
-      "file" : "/var/tmp/arv_6CP01u/Config-Model-OpenSsh-1.226/lib/Config/Model/Backend/OpenSsh/Ssh.pm",
-      "package" : "Config::Model::Backend::OpenSsh::Ssh"
-   }
-]

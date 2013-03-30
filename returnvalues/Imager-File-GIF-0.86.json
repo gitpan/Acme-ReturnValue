@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "Imager->register_writer\n  (\n   type=>'gif',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"gif_\", $im);\n\n     unless (i_writegif_wiol($io, \\%hsh, $im->{IMG})) {\n       $im->_set_error(Imager->_error_as_msg);\n       return;\n     }\n     return $im;\n   },\n   multiple =>\n   sub {\n     my ($class, $io, $opts, @ims) = @_;\n\n     Imager->_set_opts($opts, \"gif_\", @ims);\n\n     my @work = map $_->{IMG}, @ims;\n     unless (i_writegif_wiol($io, $opts, @work)) {\n       Imager->_set_error(Imager->_error_as_msg);\n       return;\n     }\n\n     return 1;\n   },\n  )",
-      "file" : "/var/tmp/arv_NFOOFZ/Imager-File-GIF-0.86/GIF.pm",
-      "package" : "Imager::File::GIF"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $AUTHORITY = 'cpan:STEVAN'",
-      "file" : "/var/tmp/arv_omNfVD/Moose-Test-0.01/lib/Moose/Test.pm",
-      "package" : "Moose::Test"
-   }
-]

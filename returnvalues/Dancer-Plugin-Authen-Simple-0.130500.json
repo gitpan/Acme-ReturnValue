@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "register_plugin for_versions => [ 1, 2 ]",
-      "file" : "/var/tmp/arv_LdzcwE/Dancer-Plugin-Authen-Simple-0.130500/lib/Dancer/Plugin/Authen/Simple.pm",
-      "package" : "Dancer::Plugin::Authen::Simple"
-   }
-]

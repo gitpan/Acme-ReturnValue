@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "def to_a {\n    my @arr;\n    $self->each(sub { push @arr, $_[0] });\n    return Rubyish::Array->new(\\@arr);\n}\n\n1",
-      "file" : "/var/tmp/arv_vUF6eI/Rubyish-0.32/lib/Rubyish/Enumerable.pm",
-      "package" : "Rubyish::Enumerable"
-   }
-]

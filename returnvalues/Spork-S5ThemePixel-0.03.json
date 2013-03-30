@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.03'",
-      "file" : "/var/tmp/arv_KyiwFo/Spork-S5ThemePixel-0.03/lib/Spork/S5ThemePixel.pm",
-      "package" : "Spork::S5ThemePixel"
-   }
-]

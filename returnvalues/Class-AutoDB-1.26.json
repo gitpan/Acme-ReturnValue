@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use overload\n  '\"\"' => sub {$_[0]},\n  fallback => 'TRUE'",
-      "file" : "/var/tmp/arv_1prgOf/Class-AutoDB-1.26/lib/Class/AutoDB/Object.pm",
-      "package" : "Class::AutoDB::Object"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub process_request {\n    my $this = shift;\n\n    my $master_alarm = alarm ($this->{conf}{server}{timeout}>0 ? $this->{conf}{server}{timeout} : 10);\n    local $SIG{ALRM} = sub { die \"\u0007\u0007\u0007\u0007\u0007\\n\" };\n    eval {\n        while( my $input = <STDIN> ) {\n           $input = \"\" unless $input; \n           $input =~ s/[\\r\\n]//sg;\n\n            unless( $input =~ m/^\\s*(\\d+)\\s*,\\s*(\\d+)\\s*$/ ) {\n                $this->log(3, \"Malformated request from $this->{server}{peeraddr}\");\n                $this->print_error(\"u\");\n                return;\n            }\n            my ($s, $c) = ($1, $2);\n\n            $this->do_lookup($this->{server}{sockaddr}, $s, $this->{server}{peeraddr}, $c);\n        }\n    };\n    alarm $master_alarm;\n\n    if( $@ eq \"\u0007\u0007\u0007\u0007\u0007\\n\" ) {\n\n    } elsif( $@ ) {\n        $this->log(3, \"ERROR during main while() { do_lookup() } eval: $@\");\n\n    }\n}",
-      "file" : "/var/tmp/arv_64_yK6/Net-IdentServer-0.56/IdentServer.pm",
-      "package" : "Net::IdentServer"
-   }
-]

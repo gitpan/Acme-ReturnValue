@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$SIG{__DIE__} = sub { \n    return unless !defined $ENV{PROMPT} \n      or (defined $ENV{CMDLINE} and $ENV{CMDLINE} eq 'WIN');\n\n    print shift, \"Hit any key to close this window...\"; \n     ReadMode 4; \n     ReadKey  0; \n     ReadMode 0;  \n     \n    exit;\n  }",
-      "file" : "/var/tmp/arv_Q3aAG0/Win32-Die-0.03/lib/Win32/Die.pm",
-      "package" : "Win32::Die"
-   }
-]

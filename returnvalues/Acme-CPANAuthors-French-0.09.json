@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q<\n    listen to 「陽の当たる月曜日」 by サエキけんぞう\n    » http://www.myspace.com/cloclomadeinjapan\n>",
-      "file" : "/var/tmp/arv_V4CpWU/Acme-CPANAuthors-French-0.09/lib/Acme/CPANAuthors/French.pm",
-      "package" : "Acme::CPANAuthors::French"
-   }
-]

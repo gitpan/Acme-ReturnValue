@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub read_file {\n\tmy ($self, $file) = @_;\n\t$self->_file($file);\n\tmy @lines = $self->_contents;\n\tmy @return;\n\tmy $csv = $self->_parser;\n\tforeach my $line (@lines) {\n\t\teval { $self->call_trigger(before_parse => $line) };\n\t\tnext if $@;\n\t\tnext unless $line;\n\t\tunless ($csv->parse($line)) {\n\t\t\t$self->call_trigger(on_failure => $csv);\n\t\t\tnext;\n\t\t}\n\t\tmy @fields = $csv->fields;\n\t\teval { $self->call_trigger(after_parse => \\@fields) };\n\t\tnext if $@;\n\t\tif (my @wanted = $self->want_fields) {\n\t\t\t@fields = @fields[ $self->want_fields ];\n\t\t}\n\t\tmy $addition = [ @fields ];\n\t\tif (my @map = $self->field_map) {\n\t\t\tmy $hash = { map { $_ => shift @fields } @map };\n\t\t\tdelete $hash->{null};\n\t\t\t$addition = $hash;\n\t\t} \n\t\teval { $self->call_trigger(after_processing => $addition) };\n\t\tnext if $@;\n\t\tpush @return, $addition;\n\t}\n\treturn @return;\n}",
-      "file" : "/var/tmp/arv_nxKDii/Text-CSV-Simple-1.00/lib/Text/CSV/Simple.pm",
-      "package" : "Text::CSV::Simple::__::Base"
-   }
-]

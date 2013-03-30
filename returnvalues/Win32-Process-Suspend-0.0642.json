@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break (but very likely crap)",
-      "bad" : "Win32::Process::Suspend::Import()",
-      "file" : "/var/tmp/arv_0IuhtR/Win32-Process-Suspend-0.0642/lib/Win32/Process/Suspend.pm",
-      "package" : "Win32::Process::Suspend"
-   }
-]

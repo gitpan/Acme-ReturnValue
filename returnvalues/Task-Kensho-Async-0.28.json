@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.28'",
-      "file" : "/var/tmp/arv__bwAJW/Task-Kensho-Async-0.28/lib/Task/Kensho/Async.pm",
-      "package" : "Task::Kensho::Async"
-   }
-]

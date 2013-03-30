@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub seealso_request {\n    my ($baseurl, $identifier) = @_;\n    my $response = eval { SeeAlso::Client->new($baseurl)->query($identifier); };\n    return $response;\n}",
-      "file" : "/var/tmp/arv_VwxIpJ/SeeAlso-Server-0.71/lib/SeeAlso/Client.pm",
-      "package" : "SeeAlso::Client"
-   }
-]

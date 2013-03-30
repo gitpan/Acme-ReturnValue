@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _croak {\n    my $m = shift;\n    require Carp;\n    Carp::croak($m);\n}",
-      "file" : "/var/tmp/arv_zyC57v/Text-Starfish-1.17/Starfish.pm",
-      "package" : "Text::Starfish"
-   }
-]

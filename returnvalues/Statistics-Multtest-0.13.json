@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _approximately_compare {\n    my $left = shift;\n    my $sign = shift;\n    my $right = shift;\n\n    if($sign eq \">\" or $sign eq \">=\") {\n        if($left > $right) {\n            return 1;\n        }\n        elsif(abs($left - $right) < EPS) {\n            return 1;\n        }\n        else {\n            return 0;\n        }\n    }\n    elsif($sign eq \"<\" or $sign eq \"<=\") {\n        if($left < $right) {\n            return 1;\n        }\n        elsif(abs($left - $right) < EPS) {\n            return 1;\n        }\n        else {\n            return 0;\n        }\n    }\n    elsif($sign eq \"==\") {\n        if(abs($left - $right) < EPS) {\n            return 1;\n        }\n        else {\n            return 0;\n        }\n    }\n}",
-      "file" : "/var/tmp/arv_bWxs1O/Statistics-Multtest-0.13/lib/Statistics/Multtest.pm",
-      "package" : "Statistics::Multtest"
-   }
-]

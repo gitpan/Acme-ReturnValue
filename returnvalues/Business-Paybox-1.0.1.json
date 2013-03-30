@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ask {\n  my $self = shift;\n  my $data = shift;\n\n  $self->{sock}->print(\"$data\\n\");\n\n  $self->{sock}->getline;\n}",
-      "file" : "/var/tmp/arv_qn1PxO/Paybox/Paybox.pm",
-      "package" : "Business::PayBox"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _debug {\n\tmy $self\t= shift;\n\tmy $model\t= $self->model;\n\tmy $s\t\t= RDF::Trine::Serializer->new('turtle', namespaces => $self->{map});\n\t$s->serialize_model_to_file(\\*STDERR, $model);\n}",
-      "file" : "/var/tmp/arv_L3DBXG/RDF-EARL-0.001/lib/RDF/EARL.pm",
-      "package" : "RDF::EARL"
-   }
-]

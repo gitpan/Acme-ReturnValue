@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub create {\n   my ($class) = @_;\n\n   if(ref($task_list) =~ m/^Rex::TaskList::/) {\n      Rex::Logger::debug(\"Returning existing distribution class of type: \" . ref($task_list));\n      return $task_list;\n   }\n\n   my $type = Rex::Config->get_distributor;\n   Rex::Logger::debug(\"Creating new distribution class of type: $type\");\n\n   my $class_name = \"Rex::TaskList::$type\";\n\n   eval \"use $class_name\";\n   if($@) {\n      die(\"TaskList module not found.\");\n   }\n\n   $task_list = $class_name->new;\n\n   Rex::Logger::debug(\"new distribution class of type \" . ref($task_list) . \" created.\");\n\n   return $task_list;\n}",
-      "file" : "/var/tmp/arv_dqj3Ud/Rex-0.40.4/lib/Rex/TaskList.pm",
-      "package" : "Rex::TaskList"
-   }
-]

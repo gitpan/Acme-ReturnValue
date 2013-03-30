@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _setid {\n    my ($uid, $gid) = @_;\n    my ($olduid, $oldgid) = ($>, $));\n    if (defined($gid) && $) != $gid) {\n        $) = $gid;\n        if ($) != $gid) {\n            $oldgid = undef;\n        }\n    }\n    if (defined($uid) && $> != $uid) {\n        $> = $uid;\n        if ($> != $uid) {\n            $olduid = undef;\n        }\n    }\n    return($olduid, $oldgid);\n}",
-      "file" : "/var/tmp/arv_x9LLft/mmm-0.43/lib/MMM/Utils.pm",
-      "package" : "MMM::Utils"
-   }
-]

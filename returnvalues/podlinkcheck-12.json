@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use Locale::TextDomain ('App-PodLinkCheck')",
-      "file" : "/var/tmp/arv_69BKCc/podlinkcheck-12/devel/Test.pm",
-      "package" : "App::PodLinkCheck"
-   }
-]

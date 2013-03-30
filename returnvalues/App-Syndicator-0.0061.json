@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "class App::Syndicator with (App::Syndicator::Config, \n    MooseX::Getopt::Dashes) {\n    use App::Syndicator::Types qw/File WritableFile UriArray/;\n    use App::Syndicator::UI;\n    use App::Syndicator::DB;\n\n    our $BASE = \"$ENV{HOME}/.syndicator\";\n\n    has +configfile => (\n        is => 'ro',\n        isa => File,\n        required => 1,\n        default => \"$BASE/config.json\"\n    );\n\n    has sources => (\n        is => 'rw',\n        isa => UriArray,\n        coerce => 1,\n        required => 1,\n        traits => ['NoGetopt']\n    );\n\n    has dbfile => (\n        is => 'ro',\n        isa => WritableFile,\n        required => 1,\n        default => \"$BASE/main.db\"\n    );\n\n    method run {\n        my $db = App::Syndicator::DB->new(\n            dsn => \"DBI:SQLite:dbname=\".$self->dbfile,\n            sources => $self->sources,\n        );\n\n        my $ui = App::Syndicator::UI->new(\n            db => $db,\n        );\n\n        $ui->mainloop;\n    }\n}\n\n1",
-      "file" : "/var/tmp/arv_Ix0u7M/App-Syndicator-0.0061/lib/App/Syndicator.pm",
-      "package" : "App::Syndicator"
-   }
-]

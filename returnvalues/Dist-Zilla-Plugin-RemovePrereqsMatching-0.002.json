@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "!!42",
-      "file" : "/var/tmp/arv_Nb_VSA/Dist-Zilla-Plugin-RemovePrereqsMatching-0.002/lib/Dist/Zilla/Plugin/RemovePrereqsMatching.pm",
-      "package" : "Dist::Zilla::Plugin::RemovePrereqsMatching"
-   }
-]

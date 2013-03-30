@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END {\n    open my($LOCK), \"<\", $pid_file;\n    chomp (my($pid) = <$LOCK>);\n    close $LOCK;\n    unlink $pid_file if ($pid == $$);\n}",
-      "file" : "/var/tmp/arv_J7QkC3/Sys-RunAlone-User-0.01/lib/Sys/RunAlone/User.pm",
-      "package" : "Sys::RunAlone::User"
-   }
-]

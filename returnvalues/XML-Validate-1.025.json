@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "dependencies_available()",
-      "file" : "/var/tmp/arv_A9jDy4/XML-Validate-1.025/lib/XML/Validate/MSXML.pm",
-      "package" : "XML::Validate::MSXML"
-   }
-]

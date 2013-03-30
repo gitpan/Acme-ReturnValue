@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub addCard {\n    my $f = shift;\n    my $name = shift;\n\n    my %arg = @_;\n\n    my $row = delete $arg{-row} || 0;\n\n    my $tf = $f->Frame(\n\t-borderwidth => 2,\n\t-relief => 'raised'\n    );\n\n    my $l = $f->Label(\n\t-text => $arg{'-label'},\n\t-borderwidth => 0,\n\t-padx => 4, -pady => 4,\n\t-anchor => $arg{'-anchor'} || 'w'\n    );\n\n    my $cf = $f->Subwidget('container')->Component( Frame => lc $name,\n\t-borderwidth => 0\n    );\n\n\n    $l->bind('<1>', [\n\tsub {\n\t    my($lbl,$f,$cf) = @_;\n\t    $f->selectCard($cf)\n\t},\n\t$f, $cf\n    ]);\n\n    $l->bind('<Any-Enter>', [ \n\tsub {\n\t    my $l = shift;\n\t    my $s = $l->parent->cget('-selectbackground');\n\t    $l->configure(-background => $s);\n\t}\n    ]);\n\n    $l->bind('<Any-Leave>', [ \n\tsub {\n\t    my $l = shift;\n\t    my $s = $l->parent->cget('-background');\n\t    $l->configure(-background => $s);\n\t}\n    ]);\n\n    my $info = $cf->privateData;\n\n    $info->{label} = $l;\n    $info->{tag} = $tf;\n    $info->{row} = $row;\n\n    push(@{$f->privateData->{'tags'}}, $cf);\n\n    $cf->place(\n\t-relwidth  => 1.0,\n\t-relheight => 1.0,\n    );\n\n    $tf->raise;\n    $tf->lower($f->Subwidget('container'));\n    $l->lower;\n    $l->raise($tf);\n    $cf->lower;\n\n    $f->layoutRequest(2);\n\n    $cf;    \n}",
-      "file" : "/var/tmp/arv_7nTFTQ/Tk-GBARR-2.08/alpha/Tk/IFrame.pm",
-      "package" : "Tk::IFrame"
-   }
-]

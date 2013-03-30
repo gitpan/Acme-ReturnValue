@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub PodInherit {\n  my ($self) = @_;\n  \n  $self->postamble(<<\"EOPOST\");\n}",
-      "file" : "/var/tmp/arv_yKZBd3/Module-Install-Pod-Inherit-0.01/lib/Module/Install/Pod/Inherit.pm",
-      "package" : "Module::Install::Pod::Inherit"
-   }
-]

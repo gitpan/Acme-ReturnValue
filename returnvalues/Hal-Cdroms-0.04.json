@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub member { my $e = shift; foreach (@_) { $e eq $_ and return 1 } 0 }",
-      "file" : "/var/tmp/arv_fCLwYB/Hal-Cdroms-0.04/lib/Hal/Cdroms.pm",
-      "package" : "Hal::Cdroms"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub substitute\n{\n    my ($string, $pattern, $replace) = @_;\n\n    if ($string =~ /(.*)/) {\n        $string = $1;\n    }\n    if ($pattern =~ /(.*)/) {\n        $pattern = $1;\n    }\n    if ($replace =~ /(.*)/) {\n        $replace = $1;\n    }\n\n    if ($pattern eq '') {\n        ExtProc::ora_exception(\"substitute: empty pattern\");\n        return 0;\n    }\n\n    $string =~ s/$pattern/$replace/g;\n\n    return $string;\n}",
-      "file" : "/var/tmp/arv_rvvHvM/extproc_perl-2.51/ExtProc/lib/ExtProc/Util.pm",
-      "package" : "ExtProc::Util"
-   }
-]

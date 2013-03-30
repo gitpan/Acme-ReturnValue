@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "true",
-      "file" : "/var/tmp/arv_P9Fsjx/CPAN-Digger-0.08/lib/CPAN/Digger/WWW.pm",
-      "package" : "CPAN::Digger::WWW"
-   }
-]

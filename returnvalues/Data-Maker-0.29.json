@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub generate_value {\n  my ($this, $maker) = @_;\n  return join('.', map { ceil(rand(255)) } (1..4));\n}",
-      "file" : "/var/tmp/arv_X7EQyw/Data-Maker-0.29/lib/Data/Maker/Field/IP.pm",
-      "package" : "Data::Maker::Field::IP"
-   }
-]

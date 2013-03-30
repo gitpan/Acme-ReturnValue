@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _find_referenced {\n  my($code) = @_;\n\n  my @vars;\n  my $cv = svref_2object($code);\n  my $op = $cv->START;\n  do {\n    if($op->name =~ /^(?:gv|gvsv|aelemfast|const)$/) {\n      my $type = $op->name eq 'gvsv' ? 'sv' :\n      $op->name eq 'aelemfast' ? 'av' :\n      ($op->next->name =~ /2(.*)/)[0];\n\n      if($type) {\n        my $idx = $op->isa(\"B::SVOP\") ? $op->targ : $op->padix;\n\n        my $sv;\n        if($op->isa(\"B::PADOP\") || !${$op->sv}) {\n          $sv = (($cv->PADLIST->ARRAY)[1]->ARRAY)[$idx];\n        } else {\n          $sv = $op->sv;\n        }\n        my $gv_name = $sv->can(\"NAME\") ? $sv->NAME : $sv->PV;\n        push @vars, [$gv_name, $type] if $gv_name;\n      }\n    }\n  } while $op = $op->next and $op->isa(\"B::OP\");\n\n  return @vars;\n}",
-      "file" : "/var/tmp/arv_dxH9Ae/App-redisp-0.13/lib/App/redisp.pm",
-      "package" : "App::redisp"
-   }
-]

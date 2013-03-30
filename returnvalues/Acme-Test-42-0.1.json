@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "42",
-      "file" : "/var/tmp/arv_bTTCtf/Acme-Test-42/lib/Acme/Test/42.pm",
-      "package" : "Acme::Test::42"
-   }
-]

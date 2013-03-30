@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _register_encodings\n{\n  __PACKAGE__->new(\"sjis\")->Define('unijp-sjis');\n  __PACKAGE__->new(\"euc\" )->Define('unijp-euc');\n  __PACKAGE__->new(\"jis\" )->Define('unijp-jis');\n  \n  __PACKAGE__->new(\"sjis-imode\" )->Define(\"unijp-sjis-imode\");\n  __PACKAGE__->new(\"sjis-imode1\")->Define(\"unijp-sjis-imode1\");\n  __PACKAGE__->new(\"sjis-imode2\")->Define(\"unijp-sjis-imode2\");\n  __PACKAGE__->new(\"sjis-jsky\" )->Define(\"unijp-sjis-jsky\");\n  __PACKAGE__->new(\"sjis-jsky1\")->Define(\"unijp-sjis-jsky1\");\n  __PACKAGE__->new(\"sjis-jsky2\")->Define(\"unijp-sjis-jsky2\");\n  \n  __PACKAGE__->new('utf8' )->Define(\"unijp-utf8\");\n  __PACKAGE__->new('ucs2' )->Define(\"unijp-ucs2\");\n  __PACKAGE__->new('utf16')->Define(\"unijp-utf16\");\n}",
-      "file" : "/var/tmp/arv_KCkM0G/Encode-Unicode-Japanese-0.02/lib/Encode/Unicode/Japanese.pm",
-      "package" : "Encode::Unicode::Japanese"
-   }
-]

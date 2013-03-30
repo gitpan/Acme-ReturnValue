@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub parse_ccomment {\t\t\n   my($self, $stmt) = @_;\n\t\n\tunless ($step eq '') {\n\t\t$self->eof(1);\n\t\tprint \"Done, at $self->{file} ($lineno)\\n\";\n\t\treturn;\n\t}\n\n\t$stmt = SAS::Header::unbox($stmt);\n\tmy @lines = split(/\\n/, $stmt);\n\tforeach (@lines) {\n\t\tif (/(author|title|created|version|doc)\\s*:\\s*/i) {\n\t\t\tmy $info = lc($1);\n\t\t\tmy $rest = $';\n\t\t\t$rest =~ s/\\s*$//;\n\t\t\t$rest =~ s/\\s+/ /g;\n\t\t\t$self->{$info} = $rest;\n\t\t};\n\t}\n}",
-      "file" : "/var/tmp/arv_GjbglL/SAS-Parser-0.93/lib/SAS/Index.pm",
-      "package" : "SAS::Index"
-   }
-]

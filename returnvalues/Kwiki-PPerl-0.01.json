@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub fix_perl {\n    my $content = shift;\n    my $perl_dir = $Config{perlpath};\n    $perl_dir =~ s{/[^/]*$}{};\n    my $pperl = File::Spec->catfile($perl_dir, 'pperl');\n    $content =~ s/\\{PPERL_PATH\\}/#!$pperl/;\n    return $content;\n}",
-      "file" : "/var/tmp/arv_8XeyPN/Kwiki-PPerl-0.01/lib/Kwiki/PPerl.pm",
-      "package" : "Kwiki::PPerl"
-   }
-]

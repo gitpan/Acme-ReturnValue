@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n  my $KEY = \"__AC_CACHE\";\n  sub _cache_ref {\n    my $self = shift;\n    if (!exists $self->{$KEY} ) {\n      $self->{$KEY} = {};\n    }\n    return $self->{$KEY};\n  }\n}",
-      "file" : "/var/tmp/arv_47mmls/Astro-Coords-0.18/lib/Astro/Coords.pm",
-      "package" : "Astro::Coords"
-   }
-]

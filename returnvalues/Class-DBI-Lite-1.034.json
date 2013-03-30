@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY\n{\n  map { eval { $_->() } } @destroys;\n}\n\n1",
-      "file" : "/var/tmp/arv_6MqS1F/Class-DBI-Lite-1.034/lib/Class/DBI/Lite/Fixture.pm",
-      "package" : "Class::DBI::Lite::Fixture"
-   }
-]

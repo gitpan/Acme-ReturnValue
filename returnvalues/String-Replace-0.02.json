@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub unreplace {\n\tcroak 'Missing argument to '.__PACKAGE__.'::unreplace' unless @_;\n\n\tif (blessed($_[0]) && $_[0]->isa(__PACKAGE__)) {\n\t\treturn &__replace_method;\n\t} else {\n\t\treturn &__unreplace_fun;\n\t}\n}",
-      "file" : "/var/tmp/arv_1wLbrg/String-Replace-0.02/lib/String/Replace/Safe.pm",
-      "package" : "String::Replace::Safe"
-   }
-]

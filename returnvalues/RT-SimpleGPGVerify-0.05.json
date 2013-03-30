@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.05'",
-      "file" : "/var/tmp/arv_dPU9R9/RT-SimpleGPGVerify-0.05/lib/RT/SimpleGPGVerify.pm",
-      "package" : "RT::SimpleGPGVerify"
-   }
-]

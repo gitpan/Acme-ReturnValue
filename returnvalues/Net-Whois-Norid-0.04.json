@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _parse {\n    my ($self,$whois)=@_;\n    foreach my $line (split(\"\\n\",$whois)) {\n        if (my ($key,$value) = $line =~ m/^(\\w+[^.]+)\\.{2,}\\:\\s*(.+)$/) {\n            $key =~ y/ -/_/;\n            $key = lc($key);\n            $self->{$key} = \n                ($self->{$key} ? $self->{$key}.\"\\n$value\" : $value);\n      }\n  }\n}",
-      "file" : "/var/tmp/arv_AbL8nx/Net-Whois-Norid-0.04/lib/Net/Whois/Norid.pm",
-      "package" : "Net::Whois::Norid"
-   }
-]

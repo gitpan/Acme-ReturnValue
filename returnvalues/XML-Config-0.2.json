@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub __charparse {\n\tmy ($xp,$str) = @_;\n\tmy $self = $xp->{parent};\n\treturn if $str =~ /^\\s*$/m;\n\t$self->{conf}{$xp->current_element} = $str;\n}",
-      "file" : "/var/tmp/arv_L0KLQi/XML-Config-0.2/Config.pm",
-      "package" : "XML::Config"
-   }
-]

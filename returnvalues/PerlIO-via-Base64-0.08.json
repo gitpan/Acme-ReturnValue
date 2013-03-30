@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub import {\n    my ( $class, %param )= @_;\n\n    $class->$_( $param{$_} ) foreach keys %param;\n}",
-      "file" : "/var/tmp/arv_ksnn5o/PerlIO-via-Base64-0.08/lib/PerlIO/via/Base64.pm",
-      "package" : "PerlIO::via::Base64"
-   }
-]

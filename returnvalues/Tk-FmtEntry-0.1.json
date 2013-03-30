@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _fe_mapins {\n    my ($old, $i, $new) = @_;\n\n    my $m   = 0;\n    my @map = ();\n    for my $o (0 .. length($old) - 1) {\n        $map[$o] = undef;\n        for my $n ($m .. length($new) - 1) {\n            if (substr($old, $o, 1) eq substr($new, $n, 1)) {\n                $map[$o] = $n;\n                $m = $n + 1;\n                last;\n            }\n        }\n    }\n\n    my $k = $i;\n    my $j;\n    while (($k <= $#map) && !defined($j = $map[$k++])) { }\n    $j = 0            if @map == 0;\n    $j = length($new) if !defined $j;\n\n    return $j;\n}",
-      "file" : "/var/tmp/arv_TFkBXe/Tk-FmtEntry-0.1/FmtEntry.pm",
-      "package" : "Tk::FmtEntry"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub\timport($$)\n{\n  my\t@tmp\t= @EXPORT_OK;\n  my\t$cllpkg\t= (caller(0))[0];\n  my\t$DBG\t= $cllpkg . \"::LOGLEVEL\";\n  my\t$dbg\t= $cllpkg . \"::logger\";\n\n  ${$DBG}\t= $_[1];\n\n  if\t( $_[1] > 0 )\n  {\n  }\n  else\n  {\n\tshift\t@tmp;\n\t*{$dbg} = sub { };\n  }\n  Log::Simple->export_to_level( 1, undef, @tmp );\n}",
-      "file" : "/var/tmp/arv_Wuugdj/Log-Simple-1.8/Simple.pm",
-      "package" : "Log::Simple"
-   }
-]

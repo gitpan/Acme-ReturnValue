@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ratings {\n    my $self = shift;\n    return values %{ $self->db };\n}",
-      "file" : "/var/tmp/arv_RYwbKm/Parse-CPAN-Ratings-0.33/lib/Parse/CPAN/Ratings.pm",
-      "package" : "Parse::CPAN::Ratings"
-   }
-]

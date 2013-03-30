@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our %ShieldsByID = (\n   chr(0) => 'SHIELD_WOOD',\n   chr(1) => 'SHIELD_WOOD_ENHANCED',\n   chr(2) => 'SHIELD_IRON',\n   chr(3) => 'SHIELD_STEEL',\n   chr(4) => 'SHIELD_TITANIUM',\n   chr(5) => 'SHIELD_HYDROGENIUM',\n   chr(11) => 'SHIELD_NONE',\n)",
-      "file" : "/var/tmp/arv_oaenZ3/Games-EternalLands-0.04/lib/Games/EternalLands/Constants.pm",
-      "package" : "Games::EternalLands::Constants"
-   }
-]

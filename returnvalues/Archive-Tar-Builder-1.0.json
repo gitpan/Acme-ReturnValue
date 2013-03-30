@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "XSLoader::load( 'Archive::Tar::Builder', $VERSION )",
-      "file" : "/var/tmp/arv_VUGky6/Archive-Tar-Builder-1.0/lib/Archive/Tar/Builder.pm",
-      "package" : "Archive::Tar::Builder"
-   }
-]

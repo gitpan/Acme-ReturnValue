@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub currencylist {\n\tmy $output;\n\tmy $cache = new Cache::FileCache( { 'namespace' => 'ecb', 'default_expires_in' => 86400 } );\n\n\tmy $load = $cache->get( 'ecb' );\n\tif(not defined $load){\n\t\t$cache->set( 'ecb', get(\"http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml\"));\n\t\t$load = $cache->get( 'ecb' );\n\t}\n\tmy $ref = XMLin($load);\n\n\t$output .= \"EUR: 1.00\\n\";\n\tforeach my $key (@{$ref->{'Cube'}->{'Cube'}->{'Cube'}}){\n\t\t$output .= $key->{currency}.\": \".$key->{rate}.\"\\n\";\n\t}\n\treturn($output);\n}",
-      "file" : "/var/tmp/arv_1GQwvc/Finance-Currency-Convert-ECB/ECB.pm",
-      "package" : "Finance::Currency::Convert::ECB"
-   }
-]

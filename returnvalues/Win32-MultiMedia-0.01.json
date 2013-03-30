@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "AUTOLOAD\n{\n   if ($AUTOLOAD =~ s/.*:://g)\n   {\n      no strict;\n      eval qq {\n       sub $AUTOLOAD {\n         my (\\$self, \\@args) = \\@_;\n         my \\$dev = \\$self->{_alias};\n         my \\$ret=0;\n         (\\$ret, \\$self->{_error}) = SendString(\"$AUTOLOAD \\$dev \".join(\" \",\\@args),1);\n         return \\$self->{_error} || \\$ret;\n       }\n      };\n      &$AUTOLOAD(@_);\n      \n   }\n\n}\n\n\n1",
-      "file" : "/var/tmp/arv_Lo4Wnf/Mci/Mci.pm",
-      "package" : "Win32::MultiMedia::Mci"
-   }
-]

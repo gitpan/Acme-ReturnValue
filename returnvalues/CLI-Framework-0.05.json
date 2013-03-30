@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub format_name_to_aliases_hash {\n    my ($self, $h, $indent) = @_;\n\n    $indent ||= 10;\n    my $format = '%'.$indent.\"s: %s\\n\";\n\n    my @output;\n    for my $command (keys %$h) {\n        push @output, sprintf\n            $format, $command, join( ', ', @{$h->{$command}} );\n    }\n    my @output_sorted = sort {\n        my $name_a = substr( $a, index($a, ':') );\n        my $name_b = substr( $b, index($b, ':') );\n        $name_a cmp $name_b;\n    } @output;\n    return join( '', @output );\n}",
-      "file" : "/var/tmp/arv_kwgeKD/CLI-Framework-0.05/lib/CLI/Framework/Command/Alias.pm",
-      "package" : "CLI::Framework::Command::Alias"
-   }
-]

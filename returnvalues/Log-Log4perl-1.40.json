@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub remove {\n    @NDC_STACK = ();\n}",
-      "file" : "/var/tmp/arv_13fb1P/Log-Log4perl-1.40/lib/Log/Log4perl/NDC.pm",
-      "package" : "Log::Log4perl::NDC"
-   }
-]

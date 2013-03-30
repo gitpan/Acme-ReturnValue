@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub register {\n    my $registry = shift;\n    $registry->add(preload => 'user_name');\n}",
-      "file" : "/var/tmp/arv_iddgXZ/Kwiki-UserName-Cookie-0.01/lib/Kwiki/UserName/Cookie.pm",
-      "package" : "Kwiki::UserName::Cookie"
-   }
-]

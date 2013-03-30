@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub WRITE {\n\n    local( $_ ) = ref( $_[0] );\n    die \"Class $_ was not activated\" unless m#::rot(?:0|26)$#;\n\n    return ( print { $_[2] } $_[1] ) ? length( $_[1] ) : -1;\n}",
-      "file" : "/var/tmp/arv_iXfleS/PerlIO-via-Rotate-0.08/lib/PerlIO/via/Rotate.pm",
-      "package" : "PerlIO::via::Rotate"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _cleanurldata($) {\n\tif ($_[0]) {\n\t\tmy @data = split //, shift;\n\t\tmy $val;\n\n\t\tforeach my $char (@data) {\n\t\t\t$val = ord($char);\n\t\t\tif ($val < 48 || ($val > 57 && $val < 65) || $val > 90) {\n\t\t\t\t$val = unpack('H*',chr($val));\n\t\t\t\t$char = ('%'.$val);\n\t\t\t}\n\t\t}\n\n\t\t$val = join '', @data;\n\t\treturn $val;\n\t}\n\telse {\n\t\treturn $_[0];\n\t}\n}",
-      "file" : "/var/tmp/arv_NfhvRk/WWW-Bleep-0.92/lib/WWW/Bleep.pm",
-      "package" : "WWW::Bleep"
-   }
-]

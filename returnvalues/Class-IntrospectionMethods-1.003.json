@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub object_tie_list \n  {\n    my ($user_options, @args) = @_;\n    warn_obsolete( \"object_tie_list is deprecated. Please use array instead\");\n\n    my @new ;\n    while (@args) \n      {\n\tmy $h = shift @args ;\n\n\tmy $slot = delete $h->{slot} \n\t  or croak \"object_tie_list: missing slot parameter\";\n\n\t$h->{class_storage} = delete $h->{class} ;\n\n\tpush @new, $slot, $h;\n      }\n\n    array($user_options, @new ) ;\n}",
-      "file" : "/var/tmp/arv_KNAwuv/Class-IntrospectionMethods-1.003/IntrospectionMethods.pm",
-      "package" : "Class::IntrospectionMethods"
-   }
-]

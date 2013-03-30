@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "!!42",
-      "file" : "/var/tmp/arv_VaF1A6/Pod-Weaver-Section-CollectWithIntro-0.001/lib/Pod/Weaver/Section/CollectWithIntro.pm",
-      "package" : "Pod::Weaver::Section::CollectWithIntro"
-   }
-]

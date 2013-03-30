@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::HanConvert",
-      "file" : "/var/tmp/arv_FB6GOu/Kwiki-HanConvert-0.01/lib/Kwiki/HanConvert.pm",
-      "package" : "Kwiki::HanConvert"
-   }
-]

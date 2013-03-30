@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _desc\n{\n  my ($self, $owner, $email) = @_;\n  \n  return (\"$owner <$email>\") if ($owner && $email);\n  return (\"$owner\") if (!$email);\n  return (\"$email\") if (!$owner);\n  return (\"*** No ID on key ***\");\n}",
-      "file" : "/var/tmp/arv_uSMXeL/PGP-0.3a/PGP/Pipe.pm",
-      "package" : "PGP::Pipe"
-   }
-]

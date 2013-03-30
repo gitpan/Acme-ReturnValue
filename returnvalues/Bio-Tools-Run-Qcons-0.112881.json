@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "no Mouse::Util::TypeConstraints",
-      "file" : "/var/tmp/arv_Za67Nf/Bio-Tools-Run-Qcons-0.112881/lib/Bio/Tools/Run/QCons/Types.pm",
-      "package" : "Bio::Tools::Run::QCons::Types"
-   }
-]

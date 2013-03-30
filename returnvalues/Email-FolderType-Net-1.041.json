@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*match = Email::FolderType::Net::_create_match(qw[pops pop3s])",
-      "file" : "/var/tmp/arv_3F5G5D/Email-FolderType-Net-1.041/lib/Email/FolderType/Net.pm",
-      "package" : "Email::FolderType::Net"
-   }
-]

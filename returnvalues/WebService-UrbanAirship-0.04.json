@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _craft_payload {\n\n  my $self = shift;\n\n  my %args = %{shift || {}};\n\n  my $badge = eval { int delete $args{badge} };\n  my $alert = delete $args{alert};\n  my $sound = delete $args{sound};\n\n  my $payload = {};\n\n  $payload->{badge} = $badge if defined $badge;\n  $payload->{sound} = $sound if $sound;\n  $payload->{alert} = $alert if $alert;\n\n  return unless scalar keys %$payload;\n\n  return $payload;\n}",
-      "file" : "/var/tmp/arv_LZVFuN/WebService-UrbanAirship-0.04/lib/WebService/UrbanAirship/APNS.pm",
-      "package" : "WebService::UrbanAirship::APNS"
-   }
-]

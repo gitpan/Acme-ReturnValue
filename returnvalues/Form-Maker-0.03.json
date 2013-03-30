@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub decorate {\n    my ($class, $form) = @_;\n    my $ff = $class->fields;\n    for my $name (keys %{$form->field_hash}) {\n        my $field = $form->{field_hash}->{$name};\n        if (my $newclass = $ff->{$name}) {\n            $form->_load_and_run($newclass);\n            $field->type($newclass->type);\n            $field->{type} = $field->type; \n            bless $field, $newclass;\n        }\n    }\n}",
-      "file" : "/var/tmp/arv_wyBJMA/Form-Maker-0.03/lib/Form/Decorator/PredefinedFields.pm",
-      "package" : "Form::Decorator::PredefinedFields"
-   }
-]

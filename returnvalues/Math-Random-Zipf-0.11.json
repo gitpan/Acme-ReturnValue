@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub cdf_ref {\n    return shift->{cdf};\n}",
-      "file" : "/var/tmp/arv_4d3ba1/Math-Random-Zipf-0.11/lib/Math/Random/Zipf.pm",
-      "package" : "Math::Random::Zipf"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub leach(\\[@%$])   { unshift @_, 2; goto &n_each }",
-      "file" : "/var/tmp/arv_Q1KnCY/Hash-MostUtils-1.04/lib/Hash/MostUtils/leach/v5_10.pm",
-      "package" : "Hash::MostUtils::leach::v5_10"
-   }
-]

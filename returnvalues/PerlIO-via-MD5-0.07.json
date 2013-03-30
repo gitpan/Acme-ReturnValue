@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub FILL {\n\n    my $line= readline( $_[1] );\n    if ( defined($line) ) {\n        $_[0]->[0]->add($line);\n\n\treturn '';\n    }\n\n    elsif ( $_[0]->[0] ) {\n        my ( $object, $method )= @{ $_[0] };\n        $_[0]->[0]= '';\n\n        return $object->$method;\n    }\n\n    return undef;\n}",
-      "file" : "/var/tmp/arv_0KuCRw/PerlIO-via-MD5-0.07/lib/PerlIO/via/MD5.pm",
-      "package" : "PerlIO::via::MD5"
-   }
-]

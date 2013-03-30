@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub check_home_page {\n    my $preference = shift;\n    my $value = $preference->new_value;\n    $self->utf8_decode($value);\n    return unless length $value;\n    return $preference->error('Value must not contain spaces')\n      if $value =~ /\\s/;\n    $self->users->current(undef);\n    return 1;\n}",
-      "file" : "/var/tmp/arv_Vc3RyL/Kwiki-HomePagePreference-0.10/lib/Kwiki/HomePagePreference.pm",
-      "package" : "Kwiki::HomePagePreference"
-   }
-]

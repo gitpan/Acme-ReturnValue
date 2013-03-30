@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*CSS::SAC::SelectorList::item = \\&Item",
-      "file" : "/var/tmp/arv_27j0lc/CSS-SAC-0.08/lib/CSS/SAC/SelectorList.pm",
-      "package" : "CSS::SAC::SelectorList"
-   }
-]

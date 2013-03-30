@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {\n    my $self = shift;\n    eci_cleanup_r($self->{eci_handle});\n}\n\nEND {\n    eci_cleanup();\n}\n\n\n1",
-      "file" : "/var/tmp/arv_SCyCOw/Audio-Ecasound-1.01/Ecasound.pm",
-      "package" : "Audio::Ecasound"
-   }
-]

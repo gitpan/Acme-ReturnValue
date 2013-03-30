@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'use strict constantly'",
-      "file" : "/var/tmp/arv_tPD2Wp/Acme-UseStrict-0.995/lib/Acme/UseStrict.pm",
-      "package" : "Acme::UseStrict"
-   }
-]

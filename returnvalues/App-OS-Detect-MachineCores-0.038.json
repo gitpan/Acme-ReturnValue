@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "no Moo",
-      "file" : "/var/tmp/arv_tztT3K/App-OS-Detect-MachineCores-0.038/lib/App/OS/Detect/MachineCores.pm",
-      "package" : "App::OS::Detect::MachineCores"
-   }
-]

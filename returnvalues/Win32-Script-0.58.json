@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub WScript {\nTry eval { local $ErrorDie =2;\n my $u =!defined($_[0]) ? shift : 1;\n my $n =shift;\n return($WScript{$n}) if $u && exists($WScript{$n});\n $WScript{$n} =undef  if $u;\n my $o =OLECreate(($n eq 'FSO' ? 'Scripting.FileSystemObject' : \"WScript.$n\"), @_);\n $u ? ($WScript{$n} =$o) : $o;\n},undef}",
-      "file" : "/var/tmp/arv_BMjpsy/Win32-Script-0.58/lib/Win32/Script.pm",
-      "package" : "Win32::Script"
-   }
-]

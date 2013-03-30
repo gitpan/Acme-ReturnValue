@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub scrape {\n    my $uri = shift;\n\n    my $scraper = scraper {\n        process \"/html/body/table[2]/tr/td[3]/table/tr/td\", info => scraper {\n            process \"//span[1]\", title => sub {\n                if ( $_->as_text =~ /(.+) : / ) {\n                    return $1;\n                }\n            };\n            process \"//p/table/tr[2]/td/a[1]\", author_name => 'TEXT', author_url => '@href';\n\n            process \"//p/table/tr[5]/td[1]\", type => 'TEXT';\n            process \"//p/table/tr[8]/td[1]\", description => 'TEXT';\n            process \"//p/table/tr[11]/td[1]\", install_details => 'TEXT';\n\n            process \"//p[3]/table/tr[2]/td[1]/a\", download => '@href', filename => 'TEXT';\n            process \"//p[3]/table/tr[2]/td[2]\", version => 'TEXT';\n            process \"//p[3]/table/tr[2]/td[3]\", date => 'TEXT';\n            process \"//p[3]/table/tr[2]/td[4]\", vimver => 'TEXT';\n        };\n        result 'info';\n    };\n\n    my $info = $scraper->scrape($uri);\n    $info->{author_url} = $info->{author_url}->as_string;\n    $info->{download} = $info->{download}->as_string;\n\n    return $info;\n}",
-      "file" : "/var/tmp/arv_gUNaFd/Vimana-2.26/lib/Vimana/VimOnline/ScriptPage.pm",
-      "package" : "Vimana::VimOnline::ScriptPage"
-   }
-]

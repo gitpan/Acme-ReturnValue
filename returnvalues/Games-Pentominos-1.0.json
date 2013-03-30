@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _place_pentomino { \n\n  my ($board_ini, $placed_ini) = ($board, $placed);\n\n  foreach my $letter (@_) {\n    foreach my $substitution (@{$substitutions{$letter}}) {\n      if ($substitution->()) { \n\n        $board =~ s/^([^x]+)// and $placed .= $1;\n\n        if (!$board) { \n          my $t_solution = time - $t_ini;\n          $t_tot       += $t_solution;\n          $n_solutions += 1;\n          $print_solution->($placed, $n_solutions, $t_solution, $t_tot)\n            or return; \n          $t_ini = time;\n        }\n        else {\n          _place_pentomino(grep {$_ ne $letter} @_)\n            or return; \n        }\n\n        ($board, $placed) = ($board_ini, $placed_ini);\n      }\n    }\n  }\n  return 1; \n}",
-      "file" : "/var/tmp/arv_0A6YWh/Games-Pentominos-1.0/lib/Games/Pentominos.pm",
-      "package" : "Games::Pentominos"
-   }
-]

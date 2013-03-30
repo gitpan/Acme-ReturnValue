@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub check {\n    my $class = shift;\n    my $op = shift;\n    my $mutate = 0;\n    if(exists($int{$op->name})) {\n\tmy $cv = $op->find_cv();\n\tif(exists($optimize::pads{$cv->ROOT->seq}) &&\n\t   $optimize::pads{$cv->ROOT->seq}->[$op->targ]->[1]->{int}) {\n\t    $mutate++;\n\t} elsif($op->can('first') && $op->first->name eq 'padsv' &&\n\t\texists($optimize::pads{$cv->ROOT->seq}) &&\n\t\t$optimize::pads{$cv->ROOT->seq}->[$op->first->targ]->[1]->{int}) {\n\t    $mutate++;\n\t} elsif($op->can('last') && $op->last->name eq 'padsv' &&\n\t\texists($optimize::pads{$cv->ROOT->seq}) &&\n\t\t$optimize::pads{$cv->ROOT->seq}->[$op->last->targ]->[1]->{int}) {\n\t    $mutate++;\n\t}\n    }\n    if($mutate && $int{$op->name}) {\n\t$op->mutate($int{$op->name});\n\t$op->private($op->private | HINT_INTEGER);\n    } elsif($mutate) {\n\t$op->private($op->private | HINT_INTEGER);\n    }\n\n}",
-      "file" : "/var/tmp/arv_wnl77k/optimize-0.05/lib/optimize/int.pm",
-      "package" : "optimize::int"
-   }
-]

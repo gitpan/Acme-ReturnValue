@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub LogsClose\n{\n\tforeach (@G_FHs)\n\t{\n\t\t&LogInfo($_, \"$_ closing\");\n\t\tif(close($_) == 0) {&LogFail($_, \"Can't close $_ : $!\");}\n\t}\n}",
-      "file" : "/var/tmp/arv_BynULM/Tivoli/Tivoli/Logging.pm",
-      "package" : "Tivoli::Logging"
-   }
-]

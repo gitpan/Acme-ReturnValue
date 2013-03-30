@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub setValue($)\n{   my ($w, $value) = @_;\n\n    $w->configure\n    ( -text       => $w->makeTime($value),\n    , -background => $w->makeColor($value, $w->cget('-maxValue'))\n    , -value      => $value\n    );\n}",
-      "file" : "/var/tmp/arv_J962Up/PPresenter-1.17/PPresenter/tkTimerLabel.pm",
-      "package" : "PPresenter::tkTimerLabel"
-   }
-]

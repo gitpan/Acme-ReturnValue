@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getRatingsForUser {\n\tmy ($self, $user, $name, $nocache) = @_;\n\n\tmy $data;\n\tif ($name) {\n\t\tmy $sid = $self->getSeriesId($name, $nocache?$nocache-1:0);\n\t\t&verbose(1, \"TVDB::API: Get rating for $user for $name ($sid)\\n\");\n\t\t$data = $self->_downloadApikeyXml($Url{getRatingsForUser}, $user, $sid);\n\t} else {\n\t\t&verbose(1, \"TVDB::API: Get rating for $user\\n\");\n\t\t$data = $self->_downloadApikeyXml($Url{getRatingsForUserAll}, $user);\n\t}\n\treturn undef unless $data;\n\n\treturn $data;\n}",
-      "file" : "/var/tmp/arv_Ra9hjp/TVDB-API-0.33/lib/TVDB/API.pm",
-      "package" : "TVDB::API"
-   }
-]

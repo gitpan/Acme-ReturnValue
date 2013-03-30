@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub sqsum {\n    my $sum = 0;\n    $sum += $_*$_ for(@_);\n    return $sum;\n}",
-      "file" : "/var/tmp/arv_boTyRE/Algorithm-HITS-Lite-0.04/lib/Algorithm/HITS/Lite.pm",
-      "package" : "Algorithm::HITS::Lite"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub got_bare {\n    $_ = pop;\n    /true/ ? true :\n    /false/ ? false :\n    /null/ ? undef :\n    /^(\n        -?\n        (?: 0 | [1-9] [0-9]* )\n        (?: \\. [0-9]* )?\n        (?: [eE] [\\-\\+]? [0-9]+ )?\n    )$/x ? ($_ + 0) :\n    \"$_\"\n}",
-      "file" : "/var/tmp/arv_usN8ll/DJSON-0.0.1/lib/DJSON.pm",
-      "package" : "DJSON"
-   }
-]

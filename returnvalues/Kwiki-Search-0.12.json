@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Search",
-      "file" : "/var/tmp/arv_6bR6It/Kwiki-Search-0.12/lib/Kwiki/Search.pm",
-      "package" : "Kwiki::Search"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Acme::Github::Test 0.03 {\n\n  our $VERSION = '0.03';\n\n  sub new {\n      my $class = shift;\n      my @options = @_;\n      my $self = { @options };\n      return bless $self, $class\n  }\n\n  sub freep {\n      my $self = shift;\n\n      say \"Freep!\";\n  }\n\n  sub frobulate {\n      my $self = shift;\n      my $quux = shift // 42;\n\n      say \"$quux has been frobulated!\";\n      return $quux;\n  }\n}\n\n1",
-      "file" : "/var/tmp/arv_JOVw4q/Acme-Github-Test-0.03/lib/Acme/Github/Test.pm",
-      "package" : "Acme::Github::Test"
-   }
-]

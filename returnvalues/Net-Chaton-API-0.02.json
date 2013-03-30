@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub Observe{\n\tmy ($self,$p, $c) = @_;\n\tmy $decoded_responce;\n\tif(defined($p) && defined($c)) {\n\t\tmy $req = GET(\"$self->{'comet-uri'}?p=$p&c=$c&s=0\");\n\t\tmy $res = $ua->request($req);\n\t\t$decoded_responce = $json->decode($res->content);\n\t\t$self->{'cid'} = $decoded_responce->{'cid'};\n\t\t$self->{'pos'} = $decoded_responce->{'pos'};\n\t\tif($decoded_responce->{'content'} eq \"\"){\n\t\t\t@_ = ($self,$self->{'pid'}, $self->{'cid'});\n\t\t\tgoto &Observe;\n\t\t}\n\t}\n\telse {\n\t\tmy $req = GET(\"$self->{'comet-uri'}?p=$self->{'pos'}&c=$self->{'cid'}&s=0\");\n\t\tmy $res = $ua->request($req);\n\t\t$decoded_responce = $json->decode($res->content);\n\t\t$self->{'cid'} = $decoded_responce->{'cid'};\n\t\t$self->{'pos'} = $decoded_responce->{'pos'};\n\n\t\tif($decoded_responce->{'content'} eq \"\") {\n\t\t\t@_ = ($self,$self->{'pid'}, $self->{'cid'});\n\t\t\tgoto &Observe;\n\t\t}\n\t}\t\n\tmy $name = @{$decoded_responce->{'content'}}[0]->[0];\n\tmy $txt = @{$decoded_responce->{'content'}}[0]->[2];\n\n\tmy $enc_name = guess_encoding($name);\n\tmy $enc_txt  = guess_encoding($txt);\n\n\tif(ref $enc_name) {\n\t\tfrom_to($name,$enc_name->name, 'utf8');\n\t}\n\tif(ref $enc_txt) {\n\t\tfrom_to($txt,$enc_txt->name, 'utf8');\n\t}\n\n\tmy $notify = Desktop::Notify->new();\n\t$notify->create(\n\t\tsummary => $name,\n\t\tbody => $txt,\n\t\ttimeout => 5000)->show();\n\t@_ = ($self,$self->{'pid'}, $self->{'cid'});\n\tgoto &Observe;\n}",
-      "file" : "/var/tmp/arv_Maoon5/Net-Chaton-API-0.02/lib/Net/Chaton/API.pm",
-      "package" : "Net::Chaton::API"
-   }
-]

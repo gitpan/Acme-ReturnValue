@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub match_to_pg_datetime {\n    my ($dfv, $format) = @_;\n    my $value = ref $dfv ? $dfv->get_current_constraint_value : $dfv;\n\n    eval { require DateTime::Format::Pg; };\n    die \"DateTime::Format::Pg is required to use this routine\"\n        if( $@ );\n    my $dt;\n\n    if( $format ) {\n        $dt = _get_datetime_from_strp($value, $format);\n    } else {\n        eval { $dt = DateTime::Format::Pg->parse_datetime($value) };\n    }\n    if( $dt ) {\n        return DateTime::Format::Pg->format_datetime($dt);\n    } else {\n        return undef;\n    }\n}",
-      "file" : "/var/tmp/arv_xoC6B9/Data-FormValidator-Constraints-DateTime-1.11/lib/Data/FormValidator/Constraints/DateTime.pm",
-      "package" : "Data::FormValidator::Constraints::DateTime"
-   }
-]

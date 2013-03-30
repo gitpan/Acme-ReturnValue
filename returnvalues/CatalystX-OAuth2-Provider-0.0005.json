@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub authorize\n    :Chained('logged_in_required')\n    :PathPart('authorize') \n    :Args(0)\n{\n    my ( $self, $ctx ) = @_;\n\n    if ( $ctx->req->method eq 'GET' ) {\n       $ctx->stash( authorize_endpoint => $ctx->uri_for_action($ctx->action) );\n       $ctx->stash( template => $self->{authorize_form}->{template}\n                                 || 'oauth/authorize.tt' );\n    }\n\n    if ( $ctx->req->method eq 'POST' ) {\n\n        my $uri  = $ctx->uri_for( $ctx->req->param(\"redirect_uri\"),\n                                      { code         => $ctx->sessionid,\n                                        redirect_uri => $ctx->req->param(\"redirect_uri\"),\n                                      } );\n        $uri     =~ m,/(?<http>http://)(?<url>[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*),; \n        $ctx->res->redirect( $+{http} . $+{url} );\n    }\n    $ctx->detach();\n}",
-      "file" : "/var/tmp/arv_8dI7iL/CatalystX-OAuth2-Provider-0.0005/lib/CatalystX/OAuth2/Provider/Controller/OAuth.pm",
-      "package" : "CatalystX::OAuth2::Provider::Controller::OAuth"
-   }
-]

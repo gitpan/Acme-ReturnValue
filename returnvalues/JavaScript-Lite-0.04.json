@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub eval {\n  my($self, $code, $file) = @_;\n  $file ||= \"(eval)\";\n  $self->eval_js($code, $file);\n}",
-      "file" : "/var/tmp/arv_8JCO_q/JavaScript-Lite-0.04/lib/JavaScript/Lite.pm",
-      "package" : "JavaScript::Lite"
-   }
-]

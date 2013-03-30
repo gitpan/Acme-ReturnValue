@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub trace{\n    my $mess = shift;\n    my ($package, $file, $line, $func) = caller 1;\n    my ($package1, $file1, $line1, $func1) = caller 0;\n}",
-      "file" : "/var/tmp/arv_UOoOEh/Test-Reporter-Transport-Net-SMTP-Authen-1.02/lib/Test/Reporter/Transport/Net/SMTP/Authen.pm",
-      "package" : "Test::Reporter::Transport::Net::SMTP::Authen"
-   }
-]

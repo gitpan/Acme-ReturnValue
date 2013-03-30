@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub WRITE {\n\n  LINE:\n    foreach ( split( m#(?<=$/)#, $_[1] ) ) {\n\tnext LINE if m/^#/;\n\n        return -1 if !print {$_[2]} $_;\n    }\n\n    return length( $_[1] );\n}",
-      "file" : "/var/tmp/arv_OuFPnG/PerlIO-via-UnComment-0.04/lib/PerlIO/via/UnComment.pm",
-      "package" : "PerlIO::via::UnComment"
-   }
-]

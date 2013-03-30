@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"Thou shalt not send SPAM with this module\"",
-      "file" : "/var/tmp/arv_WPBDEx/Mail-Builder-2.08/lib/Mail/Builder.pm",
-      "package" : "Mail::Builder"
-   }
-]

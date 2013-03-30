@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DUMP {}",
-      "file" : "/var/tmp/arv_FxahlS/Cache-AgainstFile-1.016/lib/Cache/AgainstFile/Base.pm",
-      "package" : "Cache::AgainstFile::Base"
-   }
-]

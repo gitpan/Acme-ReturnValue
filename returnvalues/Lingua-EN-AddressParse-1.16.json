@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break (but very likely crap)",
-      "bad" : "return(1)",
-      "file" : "/var/tmp/arv_bKJefB/Lingua-EN-AddressParse-1.16/lib/Lingua/EN/AddressParse.pm",
-      "package" : "Lingua::EN::AddressParse"
-   }
-]

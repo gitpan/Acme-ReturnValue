@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub log2vis_text {\n    my($text,$string_len,$before,$after) = @_;\n\n    $string_len = 80 unless $string_len;\n    $after = \"\\n\" unless defined($after);\n\n    my($logstr,$outtext,$visstr);\n    while($text =~ /(.*(\\n|$))/g) { \n\tnext unless $1;\n\t$logstr = $1;\n\tchomp($logstr);\n\t$visstr = log2vis_string($logstr);\n\t\n\twhile(length($visstr) > $string_len) { \n\t    substr($visstr,-$string_len) =~ /.*?\\s(.*)/; \n\t    $outtext .= ( defined($before) ? $before : ' ' x ($string_len - length($1) - 1) ). $1 . $after;  \n\t    substr($visstr,-length($1))='';\n\t} \n\t\n\t$outtext .= (defined($before) ? $before : ' ' x ($string_len - length($visstr) - 1) ) . $visstr . $after; \n    }\n    return $outtext;\n}",
-      "file" : "/var/tmp/arv_yh3JJY/Lingua-IW-Logical-0.5/Logical.pm",
-      "package" : "Lingua::IW::Logical"
-   }
-]

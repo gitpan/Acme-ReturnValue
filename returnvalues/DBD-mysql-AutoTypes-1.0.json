@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Grishace'",
-      "file" : "/var/tmp/arv_mQZDxa/DBD-mysql-AutoTypes-1.0/lib/DBD/mysql/AutoTypes.pm",
-      "package" : "DBD::mysql::AutoTypes"
-   }
-]

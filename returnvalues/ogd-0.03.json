@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _destroy { }",
-      "file" : "/var/tmp/arv_1BTVlt/ogd-0.03/lib/ogd.pm",
-      "package" : "ogd"
-   }
-]

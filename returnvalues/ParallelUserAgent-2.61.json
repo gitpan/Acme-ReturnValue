@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub use_alarm {\n    warn \"The Parallel::UserAgent->use_alarm method is not available anymore.\\n\" if $^W;\n}",
-      "file" : "/var/tmp/arv_NcG__b/ParallelUserAgent-2.61/lib/LWP/Parallel/UserAgent.pm",
-      "package" : "LWP::Parallel::UserAgent::Entry"
-   }
-]

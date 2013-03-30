@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub NVDefined {\n    my($hashref) = shift;\n    Hash::NoVivify::Defined($hashref, @_);\n}",
-      "file" : "/var/tmp/arv_zzJ89g/NVDefined-0.02/NVDefined.pm",
-      "package" : "NVDefined"
-   }
-]

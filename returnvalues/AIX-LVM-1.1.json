@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _splitter \n{\n    my $self           =  shift;\n    my ($string, $pat) = (shift, shift);\n    return split /$pat/, $string;\n}",
-      "file" : "/var/tmp/arv__Qr_Sv/AIX-LVM-1.1/lib/AIX/LVM.pm",
-      "package" : "AIX::LVM"
-   }
-]

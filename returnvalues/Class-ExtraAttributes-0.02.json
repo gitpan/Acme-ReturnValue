@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub import {\n    my $class= shift;\n\n    return if !@_;\n\n    my $namespace=  caller();\n    my $attributes= $attributes{$namespace} ||= {};\n\n    no strict 'refs';\n    foreach my $method ( grep { !exists $attributes->{$_} } @_ ) {\n\n        die \"Can already do '$method' on class $namespace\"\n          if $namespace->can($method);\n\n        $attributes->{$method}= undef;\n        *{ $namespace . '::' . $method }= sub {\n            return @_ == 2\n             ? OOB_set( $_[0], $method => $_[1], $namespace )\n             : OOB_get( $_[0], $method, $namespace );\n        };\n    }\n\n    return;\n}",
-      "file" : "/var/tmp/arv_ORzA9A/Class-ExtraAttributes-0.02/lib/Class/ExtraAttributes.pm",
-      "package" : "Class::ExtraAttributes"
-   }
-]

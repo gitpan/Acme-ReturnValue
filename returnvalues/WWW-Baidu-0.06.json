@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "sub _ {\n    my $s = shift;\n    utf8::is_utf8($s) ? encode('GBK', $s) : $s;\n}\n\n1",
-      "file" : "/var/tmp/arv_4XR7vE/WWW-Baidu-0.06/lib/WWW/Baidu.pm",
-      "package" : "WWW::Baidu"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub offsetGet($) {\n    my $offset = shift;\n    return isset( $this::data[$offset] ) ? $this::data[$offset] : null;\n}",
-      "file" : "/var/tmp/arv_b_npkt/Statistics--RserveClient/lib/Statistics/RserveClient/RNative.pm",
-      "package" : "Statistics::RserveClient::RNative"
-   }
-]

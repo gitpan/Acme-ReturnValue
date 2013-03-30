@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getNodeContentsAsText {\n  my $name       = shift; \n  my $ref        = shift; \n  my $nsref      = shift; \n  my %ns         = %{$nsref};\n  my @array      = @{$ref};\n  my %attributes = (%{ shift @array },%ns);\n  my $str        = \"<$name\";\n  if ( %attributes ) { foreach (sort keys %attributes) { $str.=\" $_=\\\"$attributes{$_}\\\"\"; } }\n  if (@array) {\n    $str.=\">\";\n    for(my $i=0;$i<@array;$i+=2) {\n      if ($array[$i]) { $str.=getNodeContentsAsText($array[$i],$array[$i+1],$nsref); }\n      else { $str.=$array[$i+1]; }\n    }\n    $str.=\"</$name>\";\n  }\n  else { $str .= \"/>\"}\n  return $str;\n}",
-      "file" : "/var/tmp/arv_nhQKW9/VOMS-Lite-0.20/lib/VOMS/Lite/SAMLHelper.pm",
-      "package" : "VOMS::Lite::SAMLHelper"
-   }
-]

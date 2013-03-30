@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::NewPage",
-      "file" : "/var/tmp/arv_3NH7TA/Kwiki-NewPage-0.12/lib/Kwiki/NewPage.pm",
-      "package" : "Kwiki::NewPage"
-   }
-]

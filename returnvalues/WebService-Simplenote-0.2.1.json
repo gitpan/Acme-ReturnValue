@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "no Moose::Util::TypeConstraints",
-      "file" : "/var/tmp/arv_oJn5HK/WebService-Simplenote-0.2.1/lib/WebService/Simplenote/Note/Meta/Types.pm",
-      "package" : "WebService::Simplenote::Note::Meta::Types"
-   }
-]

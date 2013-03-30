@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _getRegisteredPlugin {\n  my $id = shift || '';\n  return $plugins->{$id};\n}",
-      "file" : "/var/tmp/arv_3YpkTb/PXP-0.1.2/lib/PXP/PluginRegistry.pm",
-      "package" : "PXP::PluginRegistry"
-   }
-]

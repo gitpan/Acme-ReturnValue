@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "bdecode( 'i1e' )",
-      "file" : "/var/tmp/arv_GR980h/Bencode-1.4/lib/Bencode.pm",
-      "package" : "Bencode"
-   }
-]

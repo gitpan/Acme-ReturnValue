@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use constant {\n   Continuous=>0,\n   Discontinuous=>1,\n   Delayed=>2\n}",
-      "file" : "/var/tmp/arv_ImbIqm/Etk-Perl-0.09/lib/Etk/Constants.pm",
-      "package" : "Etk::Constants"
-   }
-]

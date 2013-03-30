@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub cleanup_module {\n    my $name = shift;\n    unlink \"$name.pm\" or die \"Unable to unlink $name.pm : $!\";\n}",
-      "file" : "/var/tmp/arv_6rDRjS/Devel-Profiler-0.04/lib/Devel/Profiler/Test.pm",
-      "package" : "Devel::Profiler::Test"
-   }
-]

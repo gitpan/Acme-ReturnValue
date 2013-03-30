@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'What is the time, Mr Wolf?'",
-      "file" : "/var/tmp/arv_H8cTHL/POE-Component-Client-NTP-0.06/lib/POE/Component/Client/NTP.pm",
-      "package" : "POE::Component::Client::NTP"
-   }
-]

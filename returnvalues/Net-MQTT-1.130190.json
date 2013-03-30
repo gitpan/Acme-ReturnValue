@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub connect_return_code_string {\n  [\n   'Connection Accepted',\n   'Connection Refused: unacceptable protocol version',\n   'Connection Refused: identifier rejected',\n   'Connection Refused: server unavailable',\n   'Connection Refused: bad user name or password',\n   'Connection Refused: not authorized',\n  ]->[$_[0]] || 'Reserved'\n}",
-      "file" : "/var/tmp/arv_vKJaag/Net-MQTT-1.130190/lib/Net/MQTT/Constants.pm",
-      "package" : "Net::MQTT::Constants"
-   }
-]

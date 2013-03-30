@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub count_kids {\n  my $root = shift;\n  return 0 unless ref($root) eq 'HASH';\n\n  my @kids = keys %$root;\n  my $count = @kids;\n  foreach my $kid (@kids) {\n      $count += $self->count_kids($root->{$kid});\n  }\n\n  return $count;\n}",
-      "file" : "/var/tmp/arv_L8m0h1/Kwiki-MindMap-0.09/lib/Kwiki/MindMap.pm",
-      "package" : "Kwiki::MindMap"
-   }
-]

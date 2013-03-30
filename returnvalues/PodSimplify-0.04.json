@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "%Escape2ASCII = ( \n\t\"lt\" => \"<\",\n\t\"gt\" => \">\",\n\t\"amp\" => \"&\",\n\t\"quot\" => '\"',\n)",
-      "file" : "/var/tmp/arv_6VdIea/PodSimplify-0.04/Pod/Simplify.pm",
-      "package" : "Pod::Simplify"
-   }
-]

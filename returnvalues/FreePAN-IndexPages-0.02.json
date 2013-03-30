@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub handle_create_module_index {\n    die(\"You don't have repos_base directory\\n\")\n        unless -d $self->hub->config->repos_base;\n    my %repos = sub {\n        map {\n            $_->filename , $_->name\n        } io($self->hub->config->repos_base)->all_dirs;\n    }->();\n    my $output;\n    my $xd = SVK::XD->new(depotmap => \\%repos);\n    my $svk = SVK->new(xd => $xd, output => \\$output);\n    my %author_of;\n    for my $author (keys %repos) {\n        $svk->ls(\"/$author/\");\n        $author_of{$_} = $author for map {s{/$}{};$_} grep !/^\\s*$/,split/\\n+/,$output;\n    }\n    $output = $self->hub->template->process('modules.html',\n                                            modules => \\%author_of,\n                                            hub => $self->hub);\n    $output > io->catfile($self->hub->config->document_root,\"modules.html\")->assert\n}",
-      "file" : "/var/tmp/arv_bUrCHj/FreePAN-IndexPages-0.02/lib/FreePAN/IndexPages.pm",
-      "package" : "FreePAN::IndexPages"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = '0.4'",
-      "file" : "/var/tmp/arv_duAQE6/perlconsole-0.4/lib/PerlConsole.pm",
-      "package" : "PerlConsole"
-   }
-]

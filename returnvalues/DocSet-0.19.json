@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = '0.19'",
-      "file" : "/var/tmp/arv_mBi1BL/DocSet-0.19/lib/DocSet.pm",
-      "package" : "DocSet"
-   }
-]

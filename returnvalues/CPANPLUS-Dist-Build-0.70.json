@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[Putting the Module::Build into CPANPLUS]",
-      "file" : "/var/tmp/arv_rZueMm/CPANPLUS-Dist-Build-0.70/lib/CPANPLUS/Dist/Build.pm",
-      "package" : "CPANPLUS::Dist::Build"
-   }
-]

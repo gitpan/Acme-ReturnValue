@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_oemcp\n{\n\t$get_oemcp && $get_oemcp->Call();\n}",
-      "file" : "/var/tmp/arv_jHsoiA/Win32-Codepage-Simple-0.01/lib/Win32/Codepage/Simple.pm",
-      "package" : "Win32::Codepage::Simple"
-   }
-]

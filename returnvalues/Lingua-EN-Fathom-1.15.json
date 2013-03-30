@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break (but very likely crap)",
-      "bad" : "return(1)",
-      "file" : "/var/tmp/arv_lv6KuS/Lingua-EN-Fathom-1.15/lib/Lingua/EN/Fathom.pm",
-      "package" : "Lingua::EN::Fathom"
-   }
-]

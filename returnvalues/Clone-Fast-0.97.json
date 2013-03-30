@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "2 != 42",
-      "file" : "/var/tmp/arv_C6K4eU/Clone-Fast/lib/Clone/Fast.pm",
-      "package" : "Clone::Fast"
-   }
-]

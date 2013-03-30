@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub return {\n    my $self = shift;\n    my $mech = shift;\n\n    my $url = $mech->uri;\n    return (0, \"Could not construct paste link.\") if !$url;\n    return (1, $url);\n}\n\n\n1",
-      "file" : "/var/tmp/arv_FR7901/App-Nopaste-Service-Madduck-0.01/lib/App/Nopaste/Service/Madduck.pm",
-      "package" : "App::Nopaste::Service::Madduck"
-   }
-]

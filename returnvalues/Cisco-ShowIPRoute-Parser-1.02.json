@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub REAPER {\n    my $stiff;\n    while (($stiff = waitpid(-1, WNOHANG())) > 0) {\n        $ccount--;\n    }\n    $SIG{CHLD} = \\&REAPER;                  \n}",
-      "file" : "/var/tmp/arv_bYqNC4/Cisco-ShowIPRoute-Parser-1.02/ExecCmds.pm",
-      "package" : "ExecCmds::Utility"
-   }
-]

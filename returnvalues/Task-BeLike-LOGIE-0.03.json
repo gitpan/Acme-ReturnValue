@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n  $Task::BeLike::LOGIE::VERSION = '0.03';\n}",
-      "file" : "/var/tmp/arv_GZ6XeV/Task-BeLike-LOGIE-0.03/lib/Task/BeLike/LOGIE.pm",
-      "package" : "Task::BeLike::LOGIE"
-   }
-]

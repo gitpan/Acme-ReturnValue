@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DESTROY {\n    my $self = shift;\n    delete $self->{_som};\n}",
-      "file" : "/var/tmp/arv_lnJDQ4/FSSM-SOAPClient-0.012/lib/FSSM/SOAPClient.pm",
-      "package" : "FSSM::SOAPClient"
-   }
-]

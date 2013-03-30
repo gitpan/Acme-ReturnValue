@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub remove_empire {\n    my ($self,$id,$name) = @_;\n\n    $self->log('debug','Removing empire %s from cache',$name);\n   \n    $self->storage_do('DELETE FROM empire WHERE id = ?',$id);\n    $self->storage_do('UPDATE body SET empire = NULL WHERE empire = ?',$id);\n}",
-      "file" : "/var/tmp/arv_DR7foS/Games-Lacuna-Task-2.05/lib/Games/Lacuna/Task/Action/EmpireCache.pm",
-      "package" : "Games::Lacuna::Task::Action::EmpireCache"
-   }
-]

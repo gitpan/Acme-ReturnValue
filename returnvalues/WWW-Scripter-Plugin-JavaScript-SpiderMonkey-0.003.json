@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "exit exit exit exit exit exit exit exit exit exit exit exit exit return 1",
-      "file" : "/var/tmp/arv_7H1mvE/WWW-Scripter-Plugin-JavaScript-SpiderMonkey-0.003/lib/WWW/Scripter/Plugin/JavaScript/SpiderMonkey.pm",
-      "package" : "WWW::Scripter::Plugin::JavaScript::SpiderMonkey"
-   }
-]

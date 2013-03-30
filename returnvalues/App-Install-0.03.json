@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "MyInstall->permissions(\"installed/foo.txt\" => 0755)",
-      "file" : "/var/tmp/arv_qQ6AMM/App-Install-0.03/examples/MyAppInstall.pm",
-      "package" : "MyInstall"
-   }
-]

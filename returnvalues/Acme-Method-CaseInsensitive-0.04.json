@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q<aBcDeFgHiJkLmNoPqRsTuVwXyZ>",
-      "file" : "/var/tmp/arv_F8ojdN/Acme-Method-CaseInsensitive-0.04/CaseInsensitive.pm",
-      "package" : "Acme::Method::CaseInsensitive"
-   }
-]

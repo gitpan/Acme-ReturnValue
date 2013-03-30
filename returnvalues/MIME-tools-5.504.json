@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub tweak_FROM_parsing {\n    my $self = shift;\n    usage \"deprecated.  Use mail_from() instead.\";\n    $self->mail_from(@_);\n}",
-      "file" : "/var/tmp/arv_PRd3xO/MIME-tools-5.504/lib/MIME/Head.pm",
-      "package" : "MIME::Head"
-   }
-]

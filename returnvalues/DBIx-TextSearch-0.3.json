@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub delete_document {\n    my ($self, $uri) = @_;\n    $self->RemoveDocumnt($uri);\n}",
-      "file" : "/var/tmp/arv_lunUCI/DBIx-TextSearch-0.3/lib/DBIx/TextSearch.pm",
-      "package" : "DBIx::TextSearch"
-   }
-]

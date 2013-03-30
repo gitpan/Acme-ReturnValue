@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "true",
-      "file" : "/var/tmp/arv_ETT8sV/App-Beeminder-Hook-0.003/lib/App/Beeminder/Hook.pm",
-      "package" : "App::Beeminder::Hook"
-   }
-]

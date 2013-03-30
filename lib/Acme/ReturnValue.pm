@@ -4,7 +4,7 @@ package Acme::ReturnValue;
 use 5.010;
 use strict;
 use warnings;
-our $VERSION = '1.000';
+our $VERSION = '1.001';
 
 # ABSTRACT: report interesting return values
 
@@ -244,7 +244,7 @@ Acme::ReturnValue - report interesting return values
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 SYNOPSIS
 

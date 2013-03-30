@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub type {\n    my $self = shift;\n    if (@_) {\n        $self->{'type'} = shift;\n    }\n    $self->{'type'};\n}",
-      "file" : "/var/tmp/arv_Xg081l/Device-Gsm-1.60/lib/Device/Gsm/Sms.pm",
-      "package" : "Device::Gsm::Sms"
-   }
-]

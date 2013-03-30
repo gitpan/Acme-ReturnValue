@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'POE it'",
-      "file" : "/var/tmp/arv_58CGhw/POE-Component-Client-NRPE-0.20/lib/POE/Component/Client/NRPE.pm",
-      "package" : "POE::Component::Client::NRPE"
-   }
-]

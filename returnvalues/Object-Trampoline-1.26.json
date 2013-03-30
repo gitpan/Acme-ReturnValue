@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "AUTOLOAD\n{\n    $_[0]   = $_[0]->()\n    or croak \"Failed constructor\";\n\n\n    my $class   = blessed $_[0]\n    or croak \"Failed constructor: '$_[0]' not blessed\";\n\n    my $method = ( split /::/, $AUTOLOAD )[ -1 ];\n\n    if( my $sub = $class->can( $method ) )\n    {\n        goto &$sub\n    }\n    else\n    {\n        my $obj = shift;\n\n        $obj->$method( @_ )\n    }\n}\n\n\nDESTROY {}\n\n\n1",
-      "file" : "/var/tmp/arv_d5gQb1/Object-Trampoline-1.26/lib/Object/Trampoline.pm",
-      "package" : "Object::Trampoline"
-   }
-]

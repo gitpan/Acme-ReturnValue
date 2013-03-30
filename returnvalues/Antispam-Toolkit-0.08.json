@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "subtype NonNegativeNum,\n    as Num,\n    where { $_ >= 0 },\n    message { \"The number you provided ($_) was not greater than or equal to zero\" }",
-      "file" : "/var/tmp/arv_QOxgEM/Antispam-Toolkit-0.08/lib/Antispam/Toolkit/Types/Internal.pm",
-      "package" : "Antispam::Toolkit::Types::Internal"
-   }
-]

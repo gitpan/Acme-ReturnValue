@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub stack {\n  my ($package, $filename, $line) = caller (1);\n  return \"$filename:$line\";\n}",
-      "file" : "/var/tmp/arv_iDpPdy/Text-EtText-2.2/lib/Text/EtText/Lists.pm",
-      "package" : "Text::EtText::Lists"
-   }
-]

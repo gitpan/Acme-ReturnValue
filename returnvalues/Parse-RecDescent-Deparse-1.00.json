@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub Parse::RecDescent::Repetition::deparse {\n    my $self = shift;\n    return $self->{subrule}.\"($self->{repspec})\";\n}",
-      "file" : "/var/tmp/arv_tkUSev/Parse-RecDescent-Deparse-1.00/Deparse.pm",
-      "package" : "Parse::RecDescent::Deparse"
-   }
-]

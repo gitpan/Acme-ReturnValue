@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub close {\n    my $self = shift;\n    if (defined $self->{SOCK}) { \n\tmy $gsocket = $self->{SOCK};\t    \n\tprint $gsocket \"QUIT\\r\\n\"; \n\t$gsocket->close(SSL_ctx_free => 1); \n\t$self->{SOCK} = undef;\n\treturn 1;\n    } else { croak \"Operation failed, socket is not open.\\n\"; }\n}",
-      "file" : "/var/tmp/arv_2_UKUX/GMail-Checker-104/Checker.pm",
-      "package" : "GMail::Checker"
-   }
-]

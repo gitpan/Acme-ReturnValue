@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package OpenERP::OOM::Tutorial::Schema",
-      "file" : "/var/tmp/arv_4P01Gv/OpenERP-OOM-0.12/lib/OpenERP/OOM/Tutorial/Schema.pm",
-      "package" : "OpenERP::OOM::Tutorial::Schema"
-   }
-]

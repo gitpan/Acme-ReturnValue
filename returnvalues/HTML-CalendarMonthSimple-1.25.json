@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _date_string_to_numeric {\n   my $self = shift;\n   my $date = shift || return ();\n\n   my($which,$weekday);\n   if ($date =~ m/^\\d\\.*\\d*$/) { \n      return int($date);\n   }\n   elsif (($which,$weekday) = ($date =~ m/^(\\d)([a-zA-Z]+)$/)) {\n      my($y,$m,$d) = Date::Calc::Nth_Weekday_of_Month_Year($self->year(),$self->month(),Date::Calc::Decode_Day_of_Week($weekday),$which);\n      return $d;\n   }\n   elsif (($weekday) = ($date =~ m/^(\\w+)s$/i)) {\n      $weekday = Date::Calc::Decode_Day_of_Week($weekday); \n      my @dates;\n      foreach my $which (1..5) {\n         my $thisdate = Date::Calc::Nth_Weekday_of_Month_Year($self->year(),$self->month(),$weekday,$which);\n         push(@dates,$thisdate) if $thisdate;\n      }\n      return @dates;\n   }\n}",
-      "file" : "/var/tmp/arv_GfMNvP/HTML-CalendarMonthSimple-1.25/CalendarMonthSimple.pm",
-      "package" : "HTML::CalendarMonthSimple"
-   }
-]

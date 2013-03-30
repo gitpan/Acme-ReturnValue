@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub AUTOLOAD {\n    my $self   = shift;\n    my $method = lc($AUTOLOAD);\n    $method =~ s/^.*\\:\\://;\n\n    if (exists($self->{$method})) {\n        return $self->{$method};\n    } elsif (exists($self->{version}->{$method})) {\n        return $self->{version}->{$method};\n    }\n\n    return undef;\n}",
-      "file" : "/var/tmp/arv_x5KsAH/HTML-ParseBrowser-1.05/lib/HTML/ParseBrowser.pm",
-      "package" : "HTML::ParseBrowser"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub assert_path {\n    my $file = shift;\n    return if -e $file;\n    return unless $file =~ /(.+)[\\\\\\/]/;\n    my $dir = $1 or return;\n    return if -d $dir;\n    mkdir $dir;\n}",
-      "file" : "/var/tmp/arv_o20M9E/Test-Less-0.11/lib/Test/Less.pm",
-      "package" : "Test::Less"
-   }
-]

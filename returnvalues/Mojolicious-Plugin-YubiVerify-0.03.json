@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "42",
-      "file" : "/var/tmp/arv_LU6FM8/Mojolicious-Plugin-YubiVerify-0.03/lib/Mojolicious/Plugin/YubiVerify.pm",
-      "package" : "Mojolicious::Plugin::YubiVerify"
-   }
-]

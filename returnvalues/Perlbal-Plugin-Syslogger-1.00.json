@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub WRITE {\n    my $lref = shift;\n    my ($buf, $len, $offset) = @_;\n    $offset ||= 0;\n    $$lref->send(substr $buf, $offset, $len);\n}",
-      "file" : "/var/tmp/arv_ke3Vbe/Perlbal-Plugin-Syslogger-1.00/lib/Perlbal/Plugin/Syslogger.pm",
-      "package" : "Perlbal::Plugin::Syslogger"
-   }
-]

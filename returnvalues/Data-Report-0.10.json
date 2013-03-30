@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _loaded {\n    my $class = shift;\n    no strict \"refs\";\n    %{$class . \"::\"} ? 1 : 0;\n}",
-      "file" : "/var/tmp/arv_oqd7MG/Data-Report-0.10/lib/Data/Report.pm",
-      "package" : "Data::Report"
-   }
-]

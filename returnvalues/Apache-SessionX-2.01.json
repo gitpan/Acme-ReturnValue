@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub next_session \n    {\n    my $self = shift;\n    my $id = $self -> next_session_id ;\n    my %session ;\n\n    return undef if (!$id) ;\n\n    tie %session, 'Apache::SessionX', $id, $self -> {args} ;\n    \n    return \\%session ;\n    }",
-      "file" : "/var/tmp/arv_2OA9UT/Apache-SessionX-2.01/SessionX/Manager.pm",
-      "package" : "Apache::SessionX::Manager"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "1 && __PACKAGE__",
-      "file" : "/var/tmp/arv_JmG1lK/String-Interpolate-Delayed-0.001/lib/String/Interpolate/Delayed.pm",
-      "package" : "String::Interpolate::Delayed"
-   }
-]

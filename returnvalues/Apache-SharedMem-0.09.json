@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY\n{\n    $_[0]->unlock \n      if(defined $_[0]->{_lock_status} && ($_[0]->{_lock_status} & LOCK_SH || $_[0]->{_lock_status} & LOCK_EX));\n}\n\n1",
-      "file" : "/var/tmp/arv_TePxEM/Apache-SharedMem-0.09/lib/Apache/SharedMem.pm",
-      "package" : "Apache::SharedMem"
-   }
-]

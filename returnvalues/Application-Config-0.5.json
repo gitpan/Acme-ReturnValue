@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub import {\n  my $class   = shift;\n  my $cfgfile = shift;\n  my $pkg     = shift;\n  \n  if (!$pkg) {\n    ($pkg, undef, undef) = caller();\n  }\n  \n  if (!$cfgfile) {\n    my $cfgpkg = substr($pkg, rindex($pkg, ':') + 1);\n    $cfgfile = lc($cfgpkg) . \".conf\" ;\n  }\n  \n  {\n    no strict;\n\n    *{$pkg.\"::config\"} = sub {\n      return $CONFIG{$pkg} if $CONFIG{$pkg};\n      my @paths = (\n        File::Spec->catfile( File::HomeDir->my_home, \".$cfgfile\" ),\n        \".$cfgfile\",\n        \"./etc/$cfgfile\",\n        \"/etc/$cfgfile\"\n      );\n      foreach my $path (@paths) {\n        if (-e $path) {\n          $FILE{$pkg} = $path;\n          return $CONFIG{$pkg} = Config::Tiny->read( $path );\n        }\n      }\n      return {};\n    };    \n\n    *{$pkg.'::configfile'} = sub {\n      return $FILE{$pkg};\n    };\n    \n    *{$pkg.\"::pkgconfig\"} = sub {\n      my ($package, $filename, $line) = caller;\n      return $pkg->config->{$package} || {};\n    };\n  }\n  \n}",
-      "file" : "/var/tmp/arv_2_TZDD/Application-Config-0.5/lib/Application/Config.pm",
-      "package" : "Application::Config"
-   }
-]

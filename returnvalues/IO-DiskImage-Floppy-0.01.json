@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ipl\n{\n\tmy $this = shift;\n\tmy $file = shift;\n\tif( defined($file) )\n\t{\n\t\topen(my $fh, '<', $file) or die \"could not open file [$file]: $!\";\n\t\tlocal($/);\n\t\tmy $data = <$fh>;\n\t\tclose $fh;\n\t\tmy $size = length($data);\n\t\t$this->{ipl_address}+$size >= 0xfe and die \"ipl image too large: $size\";\n\t\tseek($this->{handle}, $this->{ipl_address}, $SEEK_SET) or die \"seek failed: $!\";\n\t\tprint {$this->{handle}} $data;\n\t\t$this;\n\t}else\n\t{\n\t\tmy $size = 0xfe - $this->{ipl_address};\n\t\tseek($this->{handle}, $this->{ipl_address}, $SEEK_SET) or die \"seek failed: $!\";\n\t\tmy $read_len = read($this->{handle}, my $data, $size);\n\t\tdefined($read_len) or die \"read failed: $!\";\n\t\t$read_len!=$size and die \"read few data ($read_len/$size)\";\n\t\tbinmode(STDOUT);\n\t\tprint $data;\n\t}\n}",
-      "file" : "/var/tmp/arv_P6egDO/IO-DiskImage-Floppy-0.01/lib/IO/DiskImage/Floppy.pm",
-      "package" : "IO::DiskImage::Floppy"
-   }
-]

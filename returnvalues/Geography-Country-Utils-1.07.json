@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use constant DATA => << '.'",
-      "file" : "/var/tmp/arv_FQC0N2/Geography-Country-Utils-1.07/lib/Geography/Country/FIPS.pm",
-      "package" : "Geography::Country::FIPS"
-   }
-]

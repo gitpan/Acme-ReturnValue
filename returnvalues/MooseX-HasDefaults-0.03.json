@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"Screw you Perl, I want to return a true value just to spite you even though it's a load failure. Can we PLEASE get rid of the required module return value? Require modules to die instead, like I just did. SIGH!\"",
-      "file" : "/var/tmp/arv_pEGoqT/MooseX-HasDefaults-0.03/lib/MooseX/HasDefaults.pm",
-      "package" : "MooseX::HasDefaults"
-   }
-]

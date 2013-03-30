@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _iwarn {\n    my $self = shift;\n    my $message = $_[0];\n    if ( $self->{options}{suppress_errors} ) {\n        $self->{error} .= $message;\n    } else {\n        warn @_;\n    }\n}",
-      "file" : "/var/tmp/arv_wFiv0A/Unix-Lsof-0.0.9/lib/Unix/Lsof/Result.pm",
-      "package" : "Unix::Lsof::Result"
-   }
-]

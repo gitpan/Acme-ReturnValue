@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _die {\n    my ($text)= @_;\n    chomp($text);\n\n    print STDERR $text, $\\;\n    exit 1;\n}",
-      "file" : "/var/tmp/arv_KQVStq/Devel-MaintBlead-0.08/lib/Devel/MaintBlead.pm",
-      "package" : "Devel::MaintBlead"
-   }
-]

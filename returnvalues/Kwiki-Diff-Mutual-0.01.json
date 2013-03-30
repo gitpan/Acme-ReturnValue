@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Diff::Mutual",
-      "file" : "/var/tmp/arv_YIs9RD/Kwiki-Diff-Mutual-0.01/lib/Kwiki/Diff/Mutual.pm",
-      "package" : "Kwiki::Diff::Mutual"
-   }
-]

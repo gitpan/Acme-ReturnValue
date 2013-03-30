@@ -377,7 +377,7 @@ Acme::ReturnValue::MakeSite - generate returnvalues.useperl.at
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 SYNOPSIS
 

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub import {\n\n\n    my ($class,%param) = @_;\n    $class->$_( $param{$_} ) foreach keys %param;\n}",
-      "file" : "/var/tmp/arv_L1ya6s/PerlIO-via-Logger-1.01/lib/PerlIO/via/Logger.pm",
-      "package" : "PerlIO::via::Logger"
-   }
-]

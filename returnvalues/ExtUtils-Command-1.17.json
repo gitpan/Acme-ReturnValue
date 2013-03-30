@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub dos2unix {\n    require File::Find;\n    File::Find::find(sub {\n        return if -d;\n        return unless -w _;\n        return unless -r _;\n        return if -B _;\n\n        local $\\;\n\n\tmy $orig = $_;\n\tmy $temp = '.dos2unix_tmp';\n\topen ORIG, $_ or do { warn \"dos2unix can't open $_: $!\"; return };\n\topen TEMP, \">$temp\" or\n\t    do { warn \"dos2unix can't create .dos2unix_tmp: $!\"; return };\n        while (my $line = <ORIG>) {\n            $line =~ s/\\015\\012/\\012/g;\n            print TEMP $line;\n        }\n\tclose ORIG;\n\tclose TEMP;\n\trename $temp, $orig;\n\n    }, @ARGV);\n}",
-      "file" : "/var/tmp/arv_u1T_D6/ExtUtils-Command-1.17/lib/ExtUtils/Command.pm",
-      "package" : "ExtUtils::Command"
-   }
-]

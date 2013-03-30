@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _do {\n    my ( $self, $conf, $t, $q, $config ) = @_;\n\n    return\n        if $conf->{noop};\n\n    my $zcms_config = $config->conf;\n    my ( $cell, $key, $ccell, $ckeys ) = @$conf{ qw/cell key config_cell config_keys/ };\n\n    my @keys;\n    if ( defined $ckeys ) {\n        @keys = @$ckeys;\n    }\n    else {\n        @keys = keys %{ $zcms_config->{ $ccell } || {} };\n    }\n\n    for ( @keys ) {\n        if ( defined $key  ) {\n            $t->{ $cell }{ $key }{ $_ } = $zcms_config->{ $ccell }{ $_ };\n        }\n        else {\n            $t->{ $cell }{ $_ } = $zcms_config->{ $ccell }{ $_ };\n        }\n    }\n}",
-      "file" : "/var/tmp/arv_3r4NTf/App-ZofCMS-Plugin-ConfigToTemplate-0.0104/lib/App/ZofCMS/Plugin/ConfigToTemplate.pm",
-      "package" : "App::ZofCMS::Plugin::ConfigToTemplate"
-   }
-]

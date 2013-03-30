@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _make_log_string {\n  my ( $s, $mi, $h, $d, $m, $y ) = ( localtime(time) )[ 0 .. 6 ];\n  my $date_prefix = sprintf \"%04d/%02d/%02d %02d:%02d:%02d\", $y + 1900, $m + 1,\n    $d,\n    $h, $mi, $s;\n\n  return '[' . $date_prefix . ']' . join( '', @_, \"\\n\" );\n}",
-      "file" : "/var/tmp/arv_LPdjSg/Su-0.110/lib/Su/Log.pm",
-      "package" : "Su::Log"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "eval( $disable_debugging ? <<'STUBS' : <<'SUBS' ) or die $@",
-      "file" : "/var/tmp/arv_yyow03/IPC-Run-0.92/lib/IPC/Run/Debug.pm",
-      "package" : "IPC::Run::Debug"
-   }
-]

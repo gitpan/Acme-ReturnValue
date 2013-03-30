@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub slt1 {\n    print \"from slt1\\n\";\n    \n    my $file_name = QString(\"in_out.txt\");\n    print \"$file_name $$file_name{_ptr}\\n\";\n    my $fl = QFile($file_name);\n    $fl->open(2);\n    my $ds = QDataStream($fl);\n    print \"File = $fl, DataStream = $ds\\n\";\n    $ds << \"one\"\n",
-      "file" : "/var/tmp/arv_jjVUI2/QtCore-4.004/examples/App2/MyApp.pm",
-      "package" : "MyApp"
-   }
-]

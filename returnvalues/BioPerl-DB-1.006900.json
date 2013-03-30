@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub namespace{\n    my ($self, $value) = @_;\n    return $self->{'_namespace'} = $value if defined $value;\n    return $self->{'_namespace'};\n}",
-      "file" : "/var/tmp/arv_YPfKcH/BioPerl-DB-1.006900/lib/Bio/DB/BioSQL/MultiDB.pm",
-      "package" : "Bio::DB::BioSQL::MultiDB"
-   }
-]

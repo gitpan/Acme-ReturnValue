@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.33'",
-      "file" : "/var/tmp/arv_5HclDa/Task-Kensho-0.33/lib/Task/Kensho.pm",
-      "package" : "Task::Kensho"
-   }
-]

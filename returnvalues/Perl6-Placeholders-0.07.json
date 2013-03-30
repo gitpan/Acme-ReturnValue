@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "FILTER_ONLY \n        executable => sub {\n                        s<(sub|sort|map|grep)?\\s*(?=.*\\$\\^\\w)\\{($placeholder)\\}> {\n                                my ($context,$code) = ($1||\"\",$2);\n                                my %vars;\n                                @vars{$code =~ m/(\\$\\^\\w+)/g} = ();\n                                my $vars = join ',', sort keys %vars;\n                                my $decl = qq{my($vars)=\\@_;};\n                                $decl = \"\" if $code =~ /\\Q$decl/;\n                                $code = qq{ sub {$decl $code } }; \n                                $code =~ s/\\$\\^(\\w+)/\\$$1/g;\n                                \"$context \". $giftwrap{$context}($code);\n                        }ge;\n                },",
-      "file" : "/var/tmp/arv_BF8ufx/Perl6-Placeholders-0.07/lib/Perl6/Placeholders.pm",
-      "package" : "Perl6::Placeholders"
-   }
-]

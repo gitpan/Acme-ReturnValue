@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub import {\n    *{caller() . '::ROUTINE'} = *ROUTINE;\n}",
-      "file" : "/var/tmp/arv_4BSjXm/Sub-Current-0.02/lib/Sub/Current.pm",
-      "package" : "Sub::Current"
-   }
-]

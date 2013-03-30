@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DESTROY {\n\tmy $self = shift;\n\t$self->disconnect;\n}",
-      "file" : "/var/tmp/arv_21w457/Qmail-Mysql-0.02/Mysql.pm",
-      "package" : "Qmail::Mysql"
-   }
-]

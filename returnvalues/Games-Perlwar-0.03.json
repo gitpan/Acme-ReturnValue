@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'end of package Games::Perlwar::AgentEval'",
-      "file" : "/var/tmp/arv_DRG92f/Games-Perlwar-0.03/lib/Games/Perlwar/AgentEval.pm",
-      "package" : "Games::Perlwar::AgentEval"
-   }
-]

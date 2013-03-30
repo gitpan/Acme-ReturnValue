@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub msg_notify_player_state {\n\tmy ($mp3, $msg) = @_;\n\t\n\tmy $data = $mp3->get_user_data;\n\n\tmain::cleanup_and_exit($data->{input_tag})\n\t\tif $msg->{state} == &XA_PLAYER_STATE_EOF;\n}",
-      "file" : "/var/tmp/arv_Kop4cK/MPEG-MP3Play-0.16/samples/MyMP3Play.pm",
-      "package" : "MyMP3Play"
-   }
-]

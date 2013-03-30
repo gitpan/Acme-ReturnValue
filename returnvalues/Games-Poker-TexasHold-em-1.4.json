@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub next_stage {\n    my $self = shift;\n    return 0 unless $self->pot_square;\n    $self->{current_bet} = 0;\n    for (@{$self->{players}}) { $_->{in_this_round} = 0 }\n    $self->{stage}++;\n    my @cards = @_ unless $self->stage eq \"showdown\"; \n    push @{$self->{board}}, @cards;\n    return 1;\n}",
-      "file" : "/var/tmp/arv_hSKtxs/Games-Poker-TexasHold-em-1.4/em.pm",
-      "package" : "Games::Poker::TexasHold'em"
-   }
-]

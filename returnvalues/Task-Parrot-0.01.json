@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Task::Parrot",
-      "file" : "/var/tmp/arv_4LF34t/Task-Parrot-0.01/lib/Task/Parrot.pm",
-      "package" : "Task::Parrot"
-   }
-]

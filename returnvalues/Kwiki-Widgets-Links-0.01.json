@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_links {\n    my @l = @{$self->hub->config->widgets_links};\n    map { { title => $l[$_], url => $l[$_+1] } } map { $_ * 2 } 0..$#l/2;\n}",
-      "file" : "/var/tmp/arv_vLGPvw/Kwiki-Widgets-Links-0.01/lib/Kwiki/Widgets/Links.pm",
-      "package" : "Kwiki::Widgets::Links"
-   }
-]

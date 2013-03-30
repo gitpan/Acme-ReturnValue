@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub TRACE {}",
-      "file" : "/var/tmp/arv_4RCpUU/Text-Patch-1.8/Patch.pm",
-      "package" : "Text::Patch"
-   }
-]

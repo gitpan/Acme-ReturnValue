@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "coerce RequestMethod,\n    from Str,\n    via {\n        lc $_;\n    }",
-      "file" : "/var/tmp/arv_Ea4sy1/WWW-Getsy-0.999007/lib/WWW/Getsy/Types.pm",
-      "package" : "WWW::Getsy::Types"
-   }
-]

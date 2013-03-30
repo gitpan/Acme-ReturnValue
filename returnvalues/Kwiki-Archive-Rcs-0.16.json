@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "my sub csv_encode {\n    my $hash = shift;\n    join ',', map {\n        my $key = $_;\n        my $value = $self->uri_escape($hash->{$key});\n        \"$key:$value\";\n    } sort keys %$hash;\n}\n\nmy sub csv_decode {\n    my $string = shift;\n    return unless $string =~ /edit_time:/;\n    return {\n        map {\n            my ($key, $value) = split ':', $_, 2;\n            $value = $self->uri_unescape($value);\n            ($key, $value);\n        } split /(?<!\\\\),/, $string\n    };\n}\n\nmy sub older_decode {\n    my $string = shift;\n    return unless $string =~ /,/;\n    my ($edit_by, $edit_time, $edit_unixtime) = split ',', $string;\n    return {\n        edit_by => $self->uri_unescape($edit_by),\n        edit_time => $edit_time,\n        edit_unixtime => $edit_unixtime,\n    };\n}\n\nmy sub oldest_decode {\n    my $string = shift;\n    if ($string =~ /^[\\d\\.]{7,}$/) {\n        return {edit_address => $string};\n    }\n    else {\n        return {edit_by => $string};\n    }\n}",
-      "file" : "/var/tmp/arv_CeKI2p/Kwiki-Archive-Rcs-0.16/lib/Kwiki/Archive/Rcs.pm",
-      "package" : "Kwiki::Archive::Rcs"
-   }
-]

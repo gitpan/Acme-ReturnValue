@@ -19,7 +19,7 @@ acme_returnvalue.pl - run Acme::ReturnValue
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 AUTHOR
 

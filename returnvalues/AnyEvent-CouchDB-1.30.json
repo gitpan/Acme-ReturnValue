@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub put {\n  my ( $self, $path, $options ) = @_;\n  my ( $cv, $cb ) = cvcb( $options, undef, $self->json_encoder );\n  my $headers = $self->_build_headers($options);\n  my $uri     = $self->uri . \"$path\";\n  http_request(\n    PUT     => $uri,\n    headers => $headers,\n    body    => $query->($options),\n    $cb\n  );\n  $cv;\n}",
-      "file" : "/var/tmp/arv_h9XuMF/AnyEvent-CouchDB-1.30/lib/AnyEvent/CouchDB/Database.pm",
-      "package" : "AnyEvent::CouchDB::Database"
-   }
-]

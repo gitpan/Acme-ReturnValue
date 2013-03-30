@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*is_leon_brocard = \\&is_acme",
-      "file" : "/var/tmp/arv_R6F2Iw/Acme-1.111111/lib/Acme.pm",
-      "package" : "Acme"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "coerce VIN17\n\t, from Str , via {\n\t\tmy $vin = shift;\n\t\t$vin =~ tr/qQoOiI/000011/;\n  \t$vin =~ s/\\s+//g;\n\t\treturn uc($vin);\n\t}",
-      "file" : "/var/tmp/arv_gRzSyW/MooseX-Types-Vehicle-0.03/lib/MooseX/Types/Vehicle.pm",
-      "package" : "MooseX::Types::Vehicle"
-   }
-]

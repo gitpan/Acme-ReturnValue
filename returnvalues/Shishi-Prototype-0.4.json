@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "@Shishi::EXPORT_OK = qw( ACTION_FINISH ACTION_REDUCE ACTION_CODE\nACTION_SHIFT ACTION_CONTINUE ACTION_FAIL)",
-      "file" : "/var/tmp/arv_pB5m82/Shishi-Prototype-0.4/lib/Shishi.pm",
-      "package" : "Shishi"
-   }
-]

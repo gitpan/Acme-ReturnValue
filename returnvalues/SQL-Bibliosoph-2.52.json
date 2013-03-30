@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n\tuse Moose;\n\tuse Carp;\n\n    our $VERSION = \"2.00\";\n\n    sub fetchall_arrayref { return undef };\n    sub fetchrow_arrayref { return undef };\n    sub fetchrow_hashref { return undef };\n    sub rows { return undef };\n}",
-      "file" : "/var/tmp/arv_VC7t2h/SQL-Bibliosoph-2.52/lib/SQL/Bibliosoph/Dummy.pm",
-      "package" : "SQL::Bibliosoph::Dummy"
-   }
-]

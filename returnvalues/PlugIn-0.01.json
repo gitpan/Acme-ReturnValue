@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub EvalIt\n\t{\n\tmy (@files) = @_;\n\tmy ($data, $return);\n\n\tforeach my $file (@files)\n\t\t{\n\t\topen (IN, $file) or return;\n\t\tread (IN, $data, (-s $file));\n\t\tclose IN;\n\t\tif (eval ($data))\n\t\t\t{\n\t\t\t$return = $return | 0;\n\t\t\t}\n\t\telse\t{\n\t\t\t$return = $return | 1;\n\t\t\t}\n\t\t}\n\treturn $return;\n\t}",
-      "file" : "/var/tmp/arv_146s8G/PlugIn.pm",
-      "package" : "PlugIn"
-   }
-]

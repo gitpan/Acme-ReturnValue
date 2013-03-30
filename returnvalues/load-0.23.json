@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _can {\n    my ( $module, $sub )= @_;\n\n    return if $module eq 'main';\n\n    _scan( $module ) unless exists $load::AUTOLOAD{$module};\n\n    my ( $subline, $start, $length )=\n      unpack( 'w3', $load::AUTOLOAD{ $module, $sub } || '' );\n    return if !$start;\n\n    local( $!, $@ );\n    my $file= _filename( $module )\n      or die \"Could not find file for '$module.pm'\";\n    open( VERSION, \"<$file\" ) \n      or die \"Could not open file '$file' for '$module.pm': $!\";\n    binmode VERSION \n      or die \"Could not set binmode on '$file': $!\";\n    seek( VERSION, $start, 0 )\n      or die \"Could not seek to $start for $module\\::$sub\";\n\n    _trace( \"ondemand ${module}::$sub, line $subline (offset $start, $length bytes)\" ) if TRACE;\n    my $use=    $use{$module} || '';\n    my $source= <<\"SRC\";\n\n    my $read= read( VERSION, $source, $length, length($source) );\n    die \"Error reading source: only read $read bytes instead of $length\"\n      if $read != $length;\n    close VERSION;\n\n    &ifdef::reset if IFDEF; \n    my $original= $source;\n\n    $source =~ m#^(.*)$#s;\n    $source= IFDEF ? ifdef::process($1) : $1;\n    eval $source;\n    die \"load: $@\\n$original====================\\n$source\" if $@;\n\n    delete $load::AUTOLOAD{ $module, $sub };\n\n    return \\&{ $module . '::' . $sub };\n}",
-      "file" : "/var/tmp/arv_z3eXmT/load-0.23/lib/load.pm",
-      "package" : "load"
-   }
-]

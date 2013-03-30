@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our %FOOTERS = (\n                'xhtml1.0_strict' =>\nq{\n</body>\n</html>\n}\n    \n\n)",
-      "file" : "/var/tmp/arv_HEoCBp/Formatter-HTML-MPS-0.4/lib/Formatter/HTML/MPS/OutputFormats.pm",
-      "package" : "Formatter::HTML::MPS::OutputFormats"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub dwgtype {\n\tmy($type) = @_;\n\tmy %filetype = (\n\t\t\t\t\"dwg\" \t=> 0, \n\t\t\t\t\"dxf\" \t=> 1, \n\t\t\t\t\"bdxf\" \t=> 2, \n\t\t\t\t);\n\tmy %fileversion = (\n\t\t\t\t\"2000\"\t=> 7, \n\t\t\t\t\"14\"\t\t=> 6, \n\t\t\t\t\"13\"\t\t=> 5, \n\t\t\t\t\"11\"\t\t=> 4,\n\t\t\t\t\"10\"\t\t=> 3,\n\t\t\t\t\"9\" \t\t=> 2,\n\t\t\t\t\"26\"\t\t=> 1,\n\t\t\t\t\"25\"\t\t=> 0\n\t\t\t\t);\n\tif($type =~ m/^((?:dwg)|(?:b?dxf))(\\d+)$/) {\n\t\tmy $typespec = $1;\n\t\tmy $version = $2;\n\t\tunless(defined($filetype{$typespec})) {\n\t\t\tcarp(\"no type for $typespec\\n\");\n\t\t\t}\n\t\tunless(defined($fileversion{$version})) {\n\t\t\tcarp(\"no version for $version\\n\");\n\t\t\t}\n\t\treturn($filetype{$typespec}, $fileversion{$version});\n\t\t}\n\treturn();\n}",
-      "file" : "/var/tmp/arv_b5iP4Q/CAD-Drawing-IO-OpenDWG-0.22/lib/CAD/Drawing/IO/OpenDWG.pm",
-      "package" : "CAD::Drawing::IO::OpenDWG"
-   }
-]

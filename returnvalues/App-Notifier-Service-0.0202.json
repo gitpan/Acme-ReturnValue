@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "true",
-      "file" : "/var/tmp/arv_11nL7P/App-Notifier-Service-0.0202/lib/App/Notifier/Service.pm",
-      "package" : "App::Notifier::Service"
-   }
-]

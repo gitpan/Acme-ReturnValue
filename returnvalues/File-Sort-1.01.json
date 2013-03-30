@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub usage {\n    local $/ = \"\\n\";    \n    my $u;\n\n    seek DATA, 0, 0;\n    while (<DATA>) {\n        last if m/^=head1 SYNOPSIS$/;\n    }\n\n    while (<DATA>) {\n        last if m/^=/;\n        $u .= $_;\n    }\n\n    $u =~ s/\\n//;\n    \n    die \"Usage:$u\";\n\n}",
-      "file" : "/var/tmp/arv_6txmUf/File-Sort-1.01/Sort.pm",
-      "package" : "File::Sort"
-   }
-]

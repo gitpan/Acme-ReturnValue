@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n  $Task::Tapper::Installer::VERSION = '0.002';\n}",
-      "file" : "/var/tmp/arv_eJjCKt/Task-Tapper-Installer-0.002/lib/Task/Tapper/Installer.pm",
-      "package" : "Task::Tapper::Installer"
-   }
-]

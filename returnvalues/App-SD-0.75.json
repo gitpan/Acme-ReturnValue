@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "no Any::Moose",
-      "file" : "/var/tmp/arv_B1P3At/App-SD-0.75/lib/App/SD/CLI/Command/Log.pm",
-      "package" : "App::SD::CLI::Command::Log"
-   }
-]

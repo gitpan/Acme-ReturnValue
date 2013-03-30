@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub startup\n{\n\tmy $job = shift;\n\n\tmy $graph = $job->{queue}->graph();\n\n\tmy @last = ();\n\tfor my $subtask (@{$job->{jobs}}) {\n\t\t$graph->add($subtask, @last);\n\t\t@last = ( $subtask );\n\t}\n\n\tmy $finish = Proc::JobQueue::DependencyTask->new(\n\t\tdesc\t=> 'mark Sequence as done',\n\t\tfunc\t=> sub {\n\t\t\t$graph->remove_dependency($job)\n\t\t\t\tif $graph->is_dependency($job);\n\t\t\treturn 'done';\n\t\t},\n\t);\n\n\t$graph->add($finish, @last);\n\n\t$job->{queue}->job_part_finished($job, 0);\n}",
-      "file" : "/var/tmp/arv_GAzZ6H/Proc-JobQueue-0.903/lib/Proc/JobQueue/Sequence.pm",
-      "package" : "Proc::JobQueue::Sequence"
-   }
-]

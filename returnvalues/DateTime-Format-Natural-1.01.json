@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "AUTOLOAD\n{\n    my ($self, $exp) = @_;\n\n    my ($caller, $sub) = $AUTOLOAD =~ /^(.+)::(.+)$/;\n\n    if (substr($sub, 0, 2) eq '__') {\n        $sub =~ s/^__//;\n        no strict 'refs';\n        if (defined $exp && length $exp) {\n            return ${$caller.'::'.$sub}{$exp};\n        }\n        else {\n            return \\%{$caller.'::'.$sub};\n        }\n    }\n}\n\n1",
-      "file" : "/var/tmp/arv_Cc8z28/DateTime-Format-Natural-1.01/lib/DateTime/Format/Natural/Lang/Base.pm",
-      "package" : "DateTime::Format::Natural::Lang::Base"
-   }
-]

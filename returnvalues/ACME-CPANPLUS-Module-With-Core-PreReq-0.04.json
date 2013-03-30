@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[Nobody here but us chickens]",
-      "file" : "/var/tmp/arv_fGJGM0/ACME-CPANPLUS-Module-With-Core-PreReq-0.04/lib/ACME/CPANPLUS/Module/With/Core/PreReq.pm",
-      "package" : "ACME::CPANPLUS::Module::With::Core::PreReq"
-   }
-]

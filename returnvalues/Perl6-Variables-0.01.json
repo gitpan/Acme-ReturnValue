@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "FILTER {\n\t$DB::single=1;\n    my $text = \"\";\n    pos = 0;\n    while (pos($_)<length($_)) {\n\tm/\\G \\$ ($ident) \\.? \\[ (?=$alist) /sxgc and\n\t\t$text .= qq/\\@{\\$$1}[/ and next;\n\tm/\\G \\$ ($ident) \\.? \\[ (?!$alist) /sxgc and\n\t\t$text .= qq/\\$$1\\->[/ and next;\n\tm/\\G \\$ ($ident) \\.? \\{ (?=$hlist) /sxgc and\n\t\t$text .= qq/\\@{\\$$1}{/ and next;\n\tm/\\G \\$ ($ident) \\.? \\{ (?!$hlist) /sxgc and\n\t\t$text .= qq/\\$$1\\->{/ and next;\n\tm/\\G \\@ ($ident) \\[ (?=$alist) /sxgc and\n\t\t$text .= qq/\\@$1\\[/ and next;\n\tm/\\G \\@ ($ident) \\[ (?!$alist) /sxgc and\n\t\t$text .= qq/\\$$1\\[/ and next;\n\tm/\\G \\% ($ident) \\{ (?=$hlist) /sxgc and\n\t\t$text .= qq/\\@$1\\{/ and next;\n\tm/\\G \\% ($ident) \\{ (?!$hlist) /sxgc and\n\t\t$text .= qq/\\$$1\\{/ and next;\n\tm/\\G ([^\\$\\@%]+|.) /xgcs and\n\t\t$text .= $1;\n    }\n    $_ = $text . substr($_,pos);\n}",
-      "file" : "/var/tmp/arv_IxVinX/Perl6-Variables-0.01/lib/Perl6/Variables.pm",
-      "package" : "Perl6::Variables"
-   }
-]

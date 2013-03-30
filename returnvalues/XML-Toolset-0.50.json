@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "dependencies_available()",
-      "file" : "/var/tmp/arv_txYUwC/XML-Toolset-0.50/lib/XML/Toolset/MSXML.pm",
-      "package" : "XML::Toolset::MSXML"
-   }
-]

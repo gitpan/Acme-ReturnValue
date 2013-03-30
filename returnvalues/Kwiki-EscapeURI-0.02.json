@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::EscapeURI",
-      "file" : "/var/tmp/arv_zOWbB9/Kwiki-EscapeURI-0.02/lib/Kwiki/EscapeURI.pm",
-      "package" : "Kwiki::EscapeURI"
-   }
-]

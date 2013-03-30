@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use Inline C => <<'END_OF_C_CODE', NAME => 'Bio::FdrFet::FastFet'",
-      "file" : "/var/tmp/arv_KuWGok/Bio-FdrFet-0.04/lib/Bio/FdrFet.pm",
-      "package" : "Bio::FdrFet"
-   }
-]

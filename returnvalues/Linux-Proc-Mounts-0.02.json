@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub is_rw { shift->[3] =~ /(?:^|,)rw(?:,|$)/ }",
-      "file" : "/var/tmp/arv_awFbGq/Linux-Proc-Mounts-0.02/lib/Linux/Proc/Mounts.pm",
-      "package" : "Linux::Proc::Mounts"
-   }
-]

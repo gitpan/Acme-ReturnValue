@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ui_dataget\n{\n    my $imsg = shift @_;\n    my $timeout = $_[0];\n    my $recv_buffer = \"\";\n    my @ready = ();\n    my $im_socket = \\$imsg->{'im_socket'};\n\n    @ready = $imsg->{'sel'}->can_read($timeout);\n\n    foreach $rfh (@ready)\n    {\n\tif ($rfh == $$im_socket)\n\t{\n            return undef unless defined($recv_buffer = $imsg->read_sflap_packet());\n\t    ($tp_type, $tp_tmp) = split(/:/, $recv_buffer, 2);\n            \n            if ($tp_type eq 'PAUSE')\n            {\n                $imsg->{'pause'} = 1;\n            }\n\t    elsif ($tp_type eq 'SIGN_ON')\n\t    {\n\t\t$imsg->signon;\n\t    }\n            elsif ($tp_type eq 'CONFIG')\n            {\n                $imsg->set_srv_buddies($tp_tmp);\n            }\n            \n            &{$imsg->{'callback'}}($tp_type, split(/:/,$tp_tmp,$SERVER_MSG_ARGS{$tp_type}));\n\t}\n\telse\n\t{\n\t    return undef unless (&{$ { $imsg->{'callbacks'}}{$rfh}});\n\t}\n    }\n    return scalar(@ready);\n}",
-      "file" : "/var/tmp/arv_rQJnnK/Net-AOLIM/AOLIM.pm",
-      "package" : "Net::AOLIM"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END { }",
-      "file" : "/var/tmp/arv_baeMrE/Apache-ErrorControl-1.026/ErrorControl.pm",
-      "package" : "Apache::ErrorControl"
-   }
-]

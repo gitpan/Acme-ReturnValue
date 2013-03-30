@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub double_click {\n    my $p = $self->new_preference('double_click_to_edit');\n    $p->query('Kwiki Double Click To Edit?');\n    $p->type('boolean');\n    $p->default('1');\n    return $p;\n}",
-      "file" : "/var/tmp/arv_dN7Chs/Kwiki-DoubleClickToEdit-0.10/lib/Kwiki/DoubleClickToEdit.pm",
-      "package" : "Kwiki::DoubleClickToEdit"
-   }
-]

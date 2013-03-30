@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub debug\n{\n\t$_[0]->{'debug'} = $_[1];\n}",
-      "file" : "/var/tmp/arv_ulBaAX/Log-Dispatch-FileRotate-1.19/FileRotate.pm",
-      "package" : "Log::Dispatch::FileRotate"
-   }
-]

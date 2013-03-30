@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get {\n\tmy $self = shift;\n\t\n\tmy $what = shift;\n\tif ($what =~ /^\\d*$/) {\n\t\treturn @{$self->{items}}[$what];\n\t}\n\t\n\treturn $self->{$what};\n}",
-      "file" : "/var/tmp/arv_vnu2js/RSS-Parser-Lite-0.10/lib/XML/RSS/Parser/Lite.pm",
-      "package" : "XML::RSS::Parser::Lite::Item"
-   }
-]

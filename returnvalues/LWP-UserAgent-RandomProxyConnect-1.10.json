@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DESTROY{\n    my $self = @_;\n}",
-      "file" : "/var/tmp/arv_71kQgp/LWP-UserAgent-RandomProxyConnect-1.10/lib/LWP/UserAgent/RandomProxyConnect.pm",
-      "package" : "LWP::UserAgent::RandomProxyConnect"
-   }
-]

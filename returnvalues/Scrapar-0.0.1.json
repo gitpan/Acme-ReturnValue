@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub disk_usage {\n    my $path = shift;\n    my $df = `df -l -h /tmp/`;\n    if ($df =~ m[(\\d+)%]) {\n\treturn $1;\n    }\n}",
-      "file" : "/var/tmp/arv_UKq_0W/Scrapar-0.0.1/lib/Scrapar/Util.pm",
-      "package" : "Scrapar::Util"
-   }
-]

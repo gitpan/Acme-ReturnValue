@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub unlock {\n    rmdir($self->lock_directory) or\n      die \"unable to remove page count locking directory\";\n}",
-      "file" : "/var/tmp/arv_yF_vEo/Kwiki-PageStats-0.06/lib/Kwiki/PageStats.pm",
-      "package" : "Kwiki::PageStats"
-   }
-]

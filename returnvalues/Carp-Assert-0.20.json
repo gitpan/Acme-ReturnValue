@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break",
-      "value" : "q|You don't just EAT the largest turnip in the world!|",
-      "file" : "/var/tmp/arv_oCx12M/Carp-Assert-0.20/lib/Carp/Assert.pm",
-      "package" : "Carp::Assert"
-   }
-]

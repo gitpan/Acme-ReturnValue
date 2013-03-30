@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getPropertiesOf {\n    my ($self, $class, $deep) = @_;\n\n    my $c = $self->_getResource($class);\n    my $classes = $deep ? $self->getAncestors($c, 1) : [];\n    push @$classes, $c;\n\n    my %ret;\n    my $idx;\n    my $p = $self->factory->newResource(RDFS_DOMAIN);\n    foreach my $x (@$classes) {\n\tmy $enum = $self->getStmts(undef, $p, $x);\n\tmy $stmt = $enum->getFirst;\n\twhile ($stmt) {\n\t    my $uri = $stmt->getSubject->getURI;\n\t    die \"Duplicit property [$uri] for @{[$x->getURI]}\" \n\t      if exists $ret{$uri};\n\t    $ret{$uri} = [$idx++, $stmt->getSubject];\n\t    $stmt = $enum->getNext;\n\t}\n    }\n\n    return [map {$ret{$_}[1]} sort {$ret{$a}[0] <=> $ret{$b}[0]} keys %ret];\n}",
-      "file" : "/var/tmp/arv_LHtTxU/RDF-Core-0.51/lib/RDF/Core/Schema.pm",
-      "package" : "RDF::Core::Schema"
-   }
-]

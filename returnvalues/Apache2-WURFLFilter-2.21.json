@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub extValueTag {\n   my $self = shift;\n   my ($tag,$string);\n   if (@_) {\n\t\t    $tag = shift;\n\t\t    $string = shift;\n   }\t\n   my $a_tag=\"\\<$tag\";\n   my $b_tag=\"\\<\\/$tag\\>\";\n   my $finish=index($string,\"\\>\") + 1;\n   my $x=$finish;\n   my $y=index($string,$b_tag);\n   my $return_tag=substr($string,$x,$y - $x);  \n   return $return_tag;\n}",
-      "file" : "/var/tmp/arv_IF00mV/Apache2-WURFLFilter-2.21/lib/Apache2/AMFCommonLib.pm",
-      "package" : "Apache2::AMFCommonLib"
-   }
-]

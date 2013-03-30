@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "const icons_path  => 'icons/gnome/template'",
-      "file" : "/var/tmp/arv_BqrBUd/Kwiki-Icons-Gnome-0.15/lib/Kwiki/Icons/Gnome.pm",
-      "package" : "Kwiki::Icons::Gnome"
-   }
-]

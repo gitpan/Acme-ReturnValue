@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "true",
-      "file" : "/var/tmp/arv_H2YTjR/IO-Callback-HTTP-0.002/lib/IO/Callback/HTTP.pm",
-      "package" : "IO::Callback::HTTP"
-   }
-]

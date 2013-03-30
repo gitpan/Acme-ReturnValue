@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub import {\n\n\n    my $package = caller();\n\n\n    my $fix = sub {\n        my ($sub,$prototype,$attributes) = @_;\n        my $code = '';\n\n\n        if ($attributes =~ s#\\bsynchronized\\b##) {\n            if ($attributes =~ m#\\bmethod\\b#) {\n                $code = 'lock( $_[0] );';\n\n\n            } else {\n                my $key = $sub =~ m#::# ? $sub : $package.'::'.$sub;\n                threads::shared::share( $VERSION{$key} );\n                $code = 'lock( $'.__PACKAGE__.\"::VERSION{'$key'} );\";\n            }\n        }\n        \"sub $sub$prototype:$attributes\\{$code\";\n    };\n\n\n    Filter::Util::Call::filter_add( sub {\n        my $status;\n\n\n        if (($status = Filter::Util::Call::filter_read()) > 0) {\n            $package = $1 if m#\\bpackage\\s+([\\w:_]+)#;\n            s#\\bsub\\s+((?:\\w|_|::)+)([^:]*):([^{]+){#$fix->($1,$2,$3)#e;\n        }\n        $status;\n    } );\n}",
-      "file" : "/var/tmp/arv_wpQs0I/Thread-Synchronized-0.03/lib/Thread/Synchronized.pm",
-      "package" : "Thread::Synchronized"
-   }
-]

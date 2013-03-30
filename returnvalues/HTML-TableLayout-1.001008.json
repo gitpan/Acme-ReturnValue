@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "%EXPORT_TAGS=(FORM=>\n\t      [qw(\n\t\t\tform\n\t\t\tchoice\n\t\t\tbutton\n\t\t\tcheckbox\n\t\t\ttextarea\n\t\t\thidden\n\t\t\tfaux\n\t\t\tinput_text\n\t\t\tpassword\n\t\t\tsubmit\n\t\t\tradio\n\t       )])",
-      "file" : "/var/tmp/arv_TUyCoT/HTML-TableLayout-1.001008/lib/HTML/TableLayout.pm",
-      "package" : "HTML::TableLayout"
-   }
-]

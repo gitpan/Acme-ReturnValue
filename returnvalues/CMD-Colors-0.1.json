@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getCodeForColor {\n    my ($color, $type, $garb) = @_;\n\n    $type  = 'foreground' if (!$type);\n\n    $color = lc $color;\n    $type  = lc $type;\n\n\n    return ( $COLOR_CODES{$type}{$color} ? $COLOR_CODES{$type}{$color} : $COLOR_CODES{$type}{'default'} );\n}",
-      "file" : "/var/tmp/arv_frPtPq/CMD-Colors/lib/CMD/Colors.pm",
-      "package" : "CMD::Colors"
-   }
-]

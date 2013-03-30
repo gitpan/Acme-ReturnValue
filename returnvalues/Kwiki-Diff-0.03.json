@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Diff",
-      "file" : "/var/tmp/arv_aMO01W/Kwiki-Diff-0.03/lib/Kwiki/Diff.pm",
-      "package" : "Kwiki::Diff"
-   }
-]

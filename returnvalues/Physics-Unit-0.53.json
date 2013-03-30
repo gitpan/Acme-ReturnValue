@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub typeRow\n{\n    my $t = shift;\n    my $ts = typeStr($t);\n\n    return \"      <tr bgcolor='#B0D8FC'>\\n\" .\n           \"        <td colspan='4'>\\n\" .\n           \"          <a name='$ts'>\" .\n           ($ts eq 'prefix' ? 'prefix (dimensionless)' : $ts) .\n           \"</a>\\n\" .\n           \"        </td>\\n\" .\n           \"      </tr>\\n\";\n}",
-      "file" : "/var/tmp/arv_GZ4lAY/Physics-Unit-0.53/lib/Physics/Unit/Script/GenPages.pm",
-      "package" : "Physics::Unit::Script::GenPages"
-   }
-]

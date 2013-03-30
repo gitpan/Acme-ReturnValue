@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub modify {\n  my ( $self, $id, $args ) = @_;\n  if ( !$id ) {\n    carp \"modify needs an id\";\n    return undef;\n  }\n  $args->{id} = $id;\n  return $self->do_post ( '/modify.json', $args );\n}",
-      "file" : "/var/tmp/arv_x9gCyk/TweetHook-API-0.01/lib/TweetHook/API.pm",
-      "package" : "TweetHook::API"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub real_author {\n    croak \"removed\";\n\n    my $self = shift;\n    my $tree=$self->_html_tree();\n    my $nodes=$tree->findnodes(q{/html/body/div[1]/table/tr/td[2]/table/tr[3]/td[1]/p[2]/b/..});\n    my %list;\n    if (my $node=$nodes->shift) {\n      my $text=$node->as_text;\n      $text=~s/^Author:\\s+//s;\n      $text=~s/\\s+\\Q[contact developer]\\E\\s*$//s;\n      $text=~s/\\s+<[^<>]+>\\s*$//s;\n      return $text;\n    }\n}",
-      "file" : "/var/tmp/arv_1RGScu/WWW-Freshmeat-0.22/lib/WWW/Freshmeat/Project.pm",
-      "package" : "WWW::Freshmeat::Project"
-   }
-]

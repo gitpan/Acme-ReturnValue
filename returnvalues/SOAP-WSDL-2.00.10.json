@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub serialize_body {\n    my ($self, $method, $data, $opt) = @_;\n\n    $data->__set_name(\"$opt->{prefix}:\" . $data->__get_name() ) if $opt->{prefix};\n\n    return join ( q{},\n        \"<$opt->{ namespace }->{ $SOAP_NS }\\:Body>\",\n        defined $data\n            ? ref $data eq 'ARRAY'\n                ? join q{}, map { blessed $_ ? $_->serialize_qualified() : () } @{ $data }\n                : blessed $data\n                    ? $opt->{prefix}\n                        ? $data->serialize()\n                        : $data->serialize_qualified()\n                    : ()\n            : (),\n        \"</$opt->{ namespace }->{ $SOAP_NS }\\:Body>\",\n    );\n}",
-      "file" : "/var/tmp/arv_9Ej2Yr/SOAP-WSDL-2.00.10/lib/SOAP/WSDL/Serializer/XSD.pm",
-      "package" : "SOAP::WSDL::Serializer::XSD"
-   }
-]

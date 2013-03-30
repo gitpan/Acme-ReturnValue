@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break (but very likely crap)",
-      "bad" : "return(1)",
-      "file" : "/var/tmp/arv_JyBIr6/VMWare-LabmanSoap-1.0/lib/VMWare/LabmanSoap.pm",
-      "package" : "LabmanSoap"
-   }
-]

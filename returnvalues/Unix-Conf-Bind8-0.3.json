@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub __valid_string ($) { $_[0] =~ s/^\"(.+)\"$/$1/; return (1) }",
-      "file" : "/var/tmp/arv_y24PW_/Unix-Conf-Bind8-0.3/Bind8/Conf/Lib.pm",
-      "package" : "Unix::Conf::Bind8::Conf::Lib"
-   }
-]

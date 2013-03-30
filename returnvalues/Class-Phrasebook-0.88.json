@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub called_by {\n    my $depth = 2;\n    my $args; \n    my $pack; \n    my $file; \n    my $line; \n    my $subr; \n    my $has_args;\n    my $wantarray;\n    my $evaltext; \n    my $is_require; \n    my $hints; \n    my $bitmask;\n    my @subr;\n    my $str = \"\";\n    while ($depth < 7) {\n\t($pack, $file, $line, $subr, $has_args, $wantarray, \n\t $evaltext, $is_require, $hints, $bitmask) = caller($depth);\n        unless (defined($subr)) {\n            last;\n        }\n        $depth++;       \t\n        $line = \"$file:\".$line.\"-->\";\n\tpush(@subr, $line.$subr);\n    }\n    @subr = reverse(@subr);\n    foreach $subr (@subr) {\n        $str .= $subr;\n        $str .= \" > \";\n    }\n    $str =~ s/ > $/: /;\n    return $str;\n}",
-      "file" : "/var/tmp/arv_wHw52x/Class-Phrasebook-0.88/SQL/SQL.pm",
-      "package" : "Class::Phrasebook::SQL"
-   }
-]

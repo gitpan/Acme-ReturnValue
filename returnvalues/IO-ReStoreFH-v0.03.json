@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DESTROY {\n\n\tmy $self = shift;\n\n\ttry {\n\t\t$self->restore;\n\t}\n\tcatch { croak $_ };\n\n\treturn;\n}",
-      "file" : "/var/tmp/arv_1LUyme/IO-ReStoreFH-v0.03/lib/IO/ReStoreFH.pm",
-      "package" : "IO::ReStoreFH"
-   }
-]

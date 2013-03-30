@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub new {\n    my ($class, $grammar, $prefix) = @_;\n    $prefix ||= '';\n    my $tree = $PARSER->grammar($grammar) or croak \"Parse error\";\n    return $ENGINE->evaluate('visit', $tree, 'engine', {\n        prefix => $prefix,\n    });\n}",
-      "file" : "/var/tmp/arv_s9egcw/Language-AttributeGrammar-0.08/lib/Language/AttributeGrammar/Parser.pm",
-      "package" : "Language::AttributeGrammar::Parser"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub set_test_mode_active {\n    return unless (@_ == 2);\n    $testactive = $_[1];     \n    my @fields = ();\n    foreach my $item (keys %validate) {\n         push @fields, \"$item\";\n    }\n    return @fields;\n}",
-      "file" : "/var/tmp/arv_XtVSXC/Test-Device-SerialPort-0.05/lib/Test/Device/SerialPort.pm",
-      "package" : "Test::Device::SerialPort"
-   }
-]

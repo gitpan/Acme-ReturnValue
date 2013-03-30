@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'List::Gen::Lazy' if 'first require'",
-      "file" : "/var/tmp/arv_pqTBAE/List-Gen-0.974/lib/List/Gen/Lazy.pm",
-      "package" : "List::Gen::Lazy"
-   }
-]

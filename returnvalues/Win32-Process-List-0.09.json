@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY\n{\n\tmy $self = shift;\n}\n\n\n1",
-      "file" : "/var/tmp/arv_twEAmP/Win32-Process-List-0.09/List.pm",
-      "package" : "Win32::Process::List"
-   }
-]

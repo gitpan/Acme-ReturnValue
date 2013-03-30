@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "method returning {\n    my $count = @_ ? @_ : 1;\n    my (@returning) = pos_validated_list(\n        \\@_,\n        ( ( { isa => SelectElement } ) x $count ),\n        MX_PARAMS_VALIDATE_NO_CACHE => 1,\n    );\n\n    for my $elt ( map { $_->can('columns')\n                        ? sort { $a->name() cmp $b->name() } $_->columns()\n                        : $_ }\n                  map { blessed $_ ? $_ : Fey::Literal->new_from_scalar($_) }\n                  @returning )\n    {\n        $self->_add_returning_element($elt);\n    }\n\n    return $self;\n}\n\nmethod returning_clause ($dbh)\n{\n    return unless $self->returning_clause_elements;\n\n    my $sql = 'RETURNING ';\n    $sql .=\n        ( join ', ',\n          map { $_->sql_with_alias($dbh) }\n          $self->returning_clause_elements()\n        );\n\n    return $sql\n}\n\n1",
-      "file" : "/var/tmp/arv_ofiKal/Fey-SQL-Pg-0.005/lib/Fey/SQL/Pg/Role/Returning.pm",
-      "package" : "Fey::SQL::Pg::Role::Returning"
-   }
-]

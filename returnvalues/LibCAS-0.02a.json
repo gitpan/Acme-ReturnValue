@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub proxy_ticket {\n\tmy $self = shift;\n\tmy $ticket = shift;\n\t\n\tif (defined $ticket) {\n\t\t$self->{proxy_ticket} = $ticket;\n\t}\n\t\n\treturn $self->{proxy_ticket};\n}",
-      "file" : "/var/tmp/arv_G4GUzp/LibCAS-0.02a/lib/LibCAS/Client/Response/ProxySuccess.pm",
-      "package" : "LibCAS::Client::Response::ProxySuccess"
-   }
-]

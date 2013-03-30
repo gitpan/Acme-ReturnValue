@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub is_last_playlist {\n\n\treturn $cache->{ end };\n}",
-      "file" : "/var/tmp/arv_SBWR8H/Video-M3U8-0.0.3/lib/Video/M3U8.pm",
-      "package" : "Video::M3U8"
-   }
-]

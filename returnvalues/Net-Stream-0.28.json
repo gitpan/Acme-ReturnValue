@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub new {\n  my $class = shift;\n  my %args = @_;\n  die \"Usage: Net::Twitter::Stream->new ( user => 'user', pass => 'pass', callback => \\&got_tweet_cb )\" unless\n    $args{user} && $args{pass} && $args{callback};\n  my $self = bless {};\n  $self->{user} = $args{user};\n  $self->{pass} = $args{pass};\n  $self->{got_tweet} = $args{callback};\n  $self->{connection_closed} = $args{connection_closed_cb} if\n    $args{connection_closed_cb};\n  \n  my $content = \"follow=$args{follow}\" if $args{follow};\n  $content = \"track=$args{track}\" if $args{track};\n  $content = \"follow=$args{follow}&track=$args{track}\\r\\n\" if $args{track} && $args{follow};\n  \n  my $auth = encode_base64 ( \"$args{user}:$args{pass}\" );\n  chomp $auth;\n  \n  my $cl = length $content;\n  my $req = <<EOF;\n  \n  my $sock = IO::Socket::SSL->new ( PeerAddr => 'stream.twitter.com:https' );\n  $sock->print ( \"$req$content\" );\n  while ( my $l = $sock->getline ) {\n    last if $l =~ /^\\s*$/;\n  }\n  while ( my $l = $sock->getline ) {\n    next if $l =~ /^\\s*$/;           \n    $l =~ s/[^a-fA-F0-9]//g;         \n    my $jsonlen = hex ( $l );\n    last if $jsonlen == 0;\n    eval {\n\tmy $json;\n\tmy $len = $sock->read ( $json, $jsonlen );\n\tmy $o = from_json ( $json );\n\t$self->{got_tweet} ( $o, $json );\n    };\n  }\n  $self->{connection_closed} ( $sock ) if $self->{connection_closed};\n}",
-      "file" : "/var/tmp/arv_4plOY4/Net-Twitter-Stream-0.28/Stream.pm",
-      "package" : "Net::Twitter::Stream"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$TEXD = <<'EOT'",
-      "file" : "/var/tmp/arv_jGN3ie/Games-Baseball-Scorecard-0.03/Scorecard.pm",
-      "package" : "Games::Baseball::Scorecard"
-   }
-]

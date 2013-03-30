@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Yahoo",
-      "file" : "/var/tmp/arv_ursa14/Kwiki-Yahoo-0.04/lib/Kwiki/Yahoo.pm",
-      "package" : "Kwiki::Yahoo"
-   }
-]

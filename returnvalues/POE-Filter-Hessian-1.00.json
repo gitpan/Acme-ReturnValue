@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"one, but we're not the same\"",
-      "file" : "/var/tmp/arv_MM6TJ3/POE-Filter-Hessian-1.00/lib/POE/Filter/Hessian.pm",
-      "package" : "POE::Filter::Hessian"
-   }
-]

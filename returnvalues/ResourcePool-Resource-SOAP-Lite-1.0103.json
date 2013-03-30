@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub execute($$$@) {\n\tmy ($self, $soaph, $method, @args) = @_;\n\n\t$soaph->uri($self->{namespace});\n\tmy $som = $soaph->call($method => @args);\n\tmy $fc = $som->faultcode();\n\tif ($fc) {\n\t\tmy $ex;\n\t\tif ($fc =~ /^[^:]*:Client/i) {\n\t\t\t$ex = ResourcePool::Command::NoFailoverException->new($som->fault());\n\t\t} else {\n\t\t\t$ex = $som->fault();\n\t\t}\n\n\t\tdie $ex;\n\t}\n\treturn $som->result();\n}",
-      "file" : "/var/tmp/arv_w9AeGt/ResourcePool-Resource-SOAP-Lite-1.0103/lib/ResourcePool/Command/SOAP/Lite/Call.pm",
-      "package" : "ResourcePool::Command::SOAP::Lite::Call"
-   }
-]

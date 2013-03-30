@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub blank {\n    my ($self,$w) = @_;\n    $w = 0 unless $w;\n    my $rec = $self->{Layouts}[$w]->blank();\n    return $rec;\n}",
-      "file" : "/var/tmp/arv_yW48eC/Data-FixedFormat-0.04/lib/Data/FixedFormat.pm",
-      "package" : "Data::FixedFormat"
-   }
-]

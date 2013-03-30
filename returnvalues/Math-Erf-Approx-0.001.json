@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "caller(0) or __PACKAGE__->run_tests",
-      "file" : "/var/tmp/arv_KOCYJf/Math-Erf-Approx-0.001/lib/Math/Erf/Approx.pm",
-      "package" : "Math::Erf::Approx"
-   }
-]

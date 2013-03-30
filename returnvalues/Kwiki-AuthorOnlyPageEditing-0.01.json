@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::AuthorOnlyPageEditing",
-      "file" : "/var/tmp/arv_7BDWMA/Kwiki-AuthorOnlyPageEditing-0.01/lib/Kwiki/AuthorOnlyPageEditing.pm",
-      "package" : "Kwiki::AuthorOnlyPageEditing"
-   }
-]

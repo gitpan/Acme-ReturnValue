@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"We've Got a Fuzzbox and We're Gonna Use It\"",
-      "file" : "/var/tmp/arv_QEWEZT/POE-Component-SmokeBox-0.48/lib/POE/Component/SmokeBox.pm",
-      "package" : "POE::Component::SmokeBox"
-   }
-]

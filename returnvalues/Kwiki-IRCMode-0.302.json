@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::IRCMode",
-      "file" : "/var/tmp/arv_NNnIYf/Kwiki-IRCMode-0.302/lib/Kwiki/IRCMode.pm",
-      "package" : "Kwiki::IRCMode"
-   }
-]

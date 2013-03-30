@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub lex {\n    my $self = shift;\n    my $t = shift @{$self->{token}};\n    if( $t->[0] ){\n\tprintf (\"   - %-15s ==> %s\\n\", @{$t}[1,0]) if $self->{debug};\n\treturn @$t;\n    }\n    ('', undef);\n}",
-      "file" : "/var/tmp/arv_VXnQiu/Lingua-LinkParser-MatchPath-0.03/lib/Lingua/LinkParser/MatchPath/Lex.pm",
-      "package" : "Lingua::LinkParser::MatchPath::Lex"
-   }
-]

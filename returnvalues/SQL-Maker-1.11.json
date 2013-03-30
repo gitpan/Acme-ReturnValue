@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'base code from Data::ObjectDriver::SQL::Oracle'",
-      "file" : "/var/tmp/arv_hhihft/SQL-Maker-1.11/lib/SQL/Maker/Select/Oracle.pm",
-      "package" : "SQL::Maker::Select::Oracle"
-   }
-]

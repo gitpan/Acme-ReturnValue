@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub list_pages\n{\n    my $pages  = {};\n    my $all_pages = [];\n    $pages->{$_} = [] foreach( 'A'..'Z', 0..9 );\n    @$all_pages = sort $self->pages->all;\n    foreach my $page (@$all_pages) {\n        push(@{$pages->{ uc(substr($page->{id},0,1)) }}, $page);\n    }\n    $self->render_screen( pages => $pages );\n}",
-      "file" : "/var/tmp/arv__Kl9Iq/Kwiki-ListPages-0.11/lib/Kwiki/ListPages.pm",
-      "package" : "Kwiki::ListPages"
-   }
-]

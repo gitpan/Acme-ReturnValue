@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub users {\n\tmy $output = `uptime`;\n\tif (!$output) { die return (\"Cannot read uptime output: $!\") }\n\t$output =~ /[0-9]+\\s+user/;\n\tmy ($users, undef) = split /\\s+/, $&;\n\treturn ($users);\n}",
-      "file" : "/var/tmp/arv_VjcHuh/Sys-Uptime-0.01/Uptime.pm",
-      "package" : "Sys::Uptime"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::PerlTidyModule",
-      "file" : "/var/tmp/arv_bHQxyq/Kwiki-PerlTidyModule-0.12/lib/Kwiki/PerlTidyModule.pm",
-      "package" : "Kwiki::PerlTidyModule"
-   }
-]

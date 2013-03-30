@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "verb 'zoom','zooms','zoomed','zoomed','zooming'",
-      "file" : "/var/tmp/arv_0A79W5/Lingua-EN-VerbTense-3.003/lib/Lingua/EN/VerbTense.pm",
-      "package" : "Lingua::EN::VerbTense"
-   }
-]

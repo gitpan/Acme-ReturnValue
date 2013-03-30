@@ -19,7 +19,7 @@ my %module_build_args = (
     "Thomas Klausner <domm\@cpan.org>"
   ],
   "dist_name" => "Acme-ReturnValue",
-  "dist_version" => "1.000",
+  "dist_version" => "1.001",
   "license" => "perl",
   "module_name" => "Acme::ReturnValue",
   "recommends" => {},

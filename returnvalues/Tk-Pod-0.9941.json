@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "print Data::Dumper->Dumpxs([Tk::Pod::FindPods->new->pod_find(-categorized => 0, -usecache => 0)],[])",
-      "file" : "/var/tmp/arv_U0AqTF/Tk-Pod-0.9941/Pod/FindPods.pm",
-      "package" : "Tk::Pod::FindPods"
-   }
-]

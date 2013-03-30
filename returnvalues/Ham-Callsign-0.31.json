@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub format_to_string {\n    my ($format, $callsign) = @_;\n    my @args;\n\n    while ($format =~ s/\\%{(?:(-?[\\.\\d]+):|)([^\\%]+)}/\"%\" . ($1 || \"\") . \"s\"/e) {\n\tmy $arg;\n\tif (defined($callsign->{$2})) {\n\t    $arg = $callsign->{$2};\n\t} else {\n\t    $arg = \"\";\n\t}\n\tpush @args, \"$arg\";\n    }\n    return sprintf($format, @args);\n}",
-      "file" : "/var/tmp/arv_YeK4i4/Ham-Callsign-0.31/lib/Ham/Callsign/Display/Format.pm",
-      "package" : "Ham::Callsign::Display::Format"
-   }
-]

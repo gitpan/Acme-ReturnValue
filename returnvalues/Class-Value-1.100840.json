@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use constant PROPERTIES => (qw/ref value/)",
-      "file" : "/var/tmp/arv_LJXE9w/Class-Value-1.100840/lib/Class/Value/Exception.pm",
-      "package" : "Class::Value::Exception"
-   }
-]

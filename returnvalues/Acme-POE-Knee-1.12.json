@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q[POE::Knee!]",
-      "file" : "/var/tmp/arv_XXDOtT/Acme-POE-Knee-1.12/lib/Acme/POE/Knee.pm",
-      "package" : "Acme::POE::Knee"
-   }
-]

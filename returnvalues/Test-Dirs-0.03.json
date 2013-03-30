@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'A car is not merly a faster horse.'",
-      "file" : "/var/tmp/arv_BGTIOK/Test-Dirs-0.03/lib/Test/Dirs.pm",
-      "package" : "Test::Dirs"
-   }
-]

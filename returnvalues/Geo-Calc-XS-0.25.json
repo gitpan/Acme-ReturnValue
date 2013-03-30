@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "XSLoader::load 'Geo::Calc::XS', $VERSION",
-      "file" : "/var/tmp/arv_nFv9SB/Geo-Calc-XS-0.25/lib/Geo/Calc/XS.pm",
-      "package" : "Geo::Calc::XS"
-   }
-]

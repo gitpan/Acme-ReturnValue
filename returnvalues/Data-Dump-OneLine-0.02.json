@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub dump_oneline { dump_one_line(@_) }",
-      "file" : "/var/tmp/arv_hsaXbi/Data-Dump-OneLine-0.02/lib/Data/Dump/OneLine.pm",
-      "package" : "Data::Dump::OneLine"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub doFilter($$) {\n    '';\n}",
-      "file" : "/var/tmp/arv_Yw0nau/Mail-IspMailGate-1.1013/lib/Mail/IspMailGate/Filter/Dummy.pm",
-      "package" : "Mail::IspMailGate::Filter::Dummy"
-   }
-]

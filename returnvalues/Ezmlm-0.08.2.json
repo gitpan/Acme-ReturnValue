@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _get_fingerprint()\n{\n\tmy ($self, $key_id) = @_;\n\tmy $gpg = $self->_get_gpg_object();\n\t$key_id =~ /^([0-9A-Z]*)$/;\n\t$key_id = $1;\n\treturn undef unless ($key_id);\n\tmy $gpgoption = \"--fingerprint $key_id\";\n\n\tmy $gpgcommand = $gpg->gpgbin() . \" \" . $gpg->gpgopts() . \" --with-colons $gpgoption\";\n\t\n\tmy @fingerprints = grep /^fpr:/, `$gpgcommand`;\n\tif (@fingerprints > 1) {\n\t\twarn \"[Mail::Ezmlm::GpgKeyRing] more than one key matched ($key_id)!\";\n\t\treturn undef;\n\t}\n\treturn undef if (@fingerprints < 1);\n\tmy $fpr = $fingerprints[0];\n\t$fpr =~ /^fpr:*([0-9A-Z]*):*$/;\n\t$fpr = $1;\n\treturn undef unless $1;\n\treturn $1;\n}",
-      "file" : "/var/tmp/arv_9orkzi/Ezmlm-0.08.2/Ezmlm/GpgKeyRing.pm",
-      "package" : "Mail::Ezmlm::GpgKeyRing"
-   }
-]

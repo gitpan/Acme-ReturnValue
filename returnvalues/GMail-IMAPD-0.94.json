@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub logit { my($self,$msg,$debug_level)=@_;\n  $debug_level = 0 unless $debug_level;\n  return unless $debug_level <= $self->{Debug};\n  my $timestamp=scalar localtime(time);\n  $msg=\"$self->{Peer}: $msg\" if $self->{Peer};\n  $msg=\"$timestamp: $msg\\n\"; \n  print $msg if !$self->{Detach};\n  return unless $self->{LogFile};\n  my $lf=new IO::File \">>$self->{LogFile}\";\n  print $lf $msg;\n  close $lf;\n}",
-      "file" : "/var/tmp/arv_zEuRty/GMail-IMAPD-0.94/lib/GMail/IMAPD.pm",
-      "package" : "GMail::IMAPD"
-   }
-]

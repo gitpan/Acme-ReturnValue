@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub forward {\t\t\t\n    my $self = shift;\n    my $step = $_[0];\n    my $cape = $self->[2];\n    my $x = $step * cos($self->[2]*$K);\n    my $y = $step * sin($self->[2]*$K);\n    my $xo = $self->[0];\n    my $yo = $self->[1];\n    $self->[0] = $x + $xo;\t\t\n    $self->[1] = $y + $yo;\n    if ($self->[3] == 1) {\n\tmy @data = (int($xo), int($yo), int($self->[0]), int($self->[1]));\n\tif (defined $ground) {\n\t    $ground->draw('line', @data, \n\t\t\t  -fill => $self->[4],\n\t\t\t  -width => $self->[5],\n\t\t\t );\n\t} else {\n\t    @data, $self->[4], $self->[5];\n\t}\n    }\n}",
-      "file" : "/var/tmp/arv_i4YCZy/llg-1.07/Turtle.pm",
-      "package" : "Area"
-   }
-]

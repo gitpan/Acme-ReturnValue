@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub read {\n  my $self = shift @_;\n  my $out  = {};\n\n  my $data = $self->_line;\n\n  return undef unless scalar @$data > 0;\n\n  my $i = 0;\n  for my $val ( @$data ) {\n    $val =~ s/^\\s+|\\s+$//g;\n    $out->{$self->{HDR}->[$i++]} = $val;\n  }\n\n  $out->{__DATA__\n  $out->{__LINE__} = $self->{CURRENT_LINE};\n\n  return $out;\n}\n\nsub setMode {\n  my $self = shift @_;\n  return $self->setMode(@_);\n}\n\nsub setmode {\n  my $self = shift @_;\n  my $mode = shift @_;\n  return binmode $self->{FP}, $mode;\n}\n\n### Exportable methods\n\nsub d_join {\n  if ( ref($_[0]) ) {\n    my $self = shift @_;\n    return join($self->{DELIMITER},map {defined($_)?$_:''} @_);\n  } else {\n    return join(\"\\t\",map {defined($_)?$_:''} @_);\n  }\n}\n\nsub d_line {\n  if ( ref($_[0]) ) {\n    my $self = shift @_;\n    return join($self->{DELIMITER},map {defined($_)?$_:''} @_) . \"\\n\";\n  } else {\n    return join(\"\\t\",map {defined($_)?$_:''} @_) . \"\\n\";\n  }\n}\n\n1\n",
-      "file" : "/var/tmp/arv_J_k1W0/Text-Delimited-v2.06/lib/Text/Delimited.pm",
-      "package" : "Text::Delimited"
-   }
-]

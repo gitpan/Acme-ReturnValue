@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub subst\n{\n    my $str = shift;\n    my $pos = 0;\n    my @subs;\n    while (@_) {\n        push @subs, [ shift, shift ];\n    }\n    my $res;\n    \n    while ($pos < length $str) {\n        my (@bplus, @bminus, $best);\n        for my $rref (@subs) {\n            pos $str = $pos;\n            if ($str =~ /\\G$rref->[0]/) {\n                if ($+[0] > $bplus[0]) {\n                    @bplus = @+;\n                    @bminus = @-;\n                    $best = $rref;\n                }\n            }\n        }\n        if (@bminus) {\n            my $temp = $best->[1];\n            if (ref $temp eq 'CODE') {\n                $res .= $temp->(map { substr $str, $bminus[$_], $bplus[$_]-$bminus[$_] } 0..$#bminus);\n            }\n            elsif (not ref $temp) {\n                $temp = subst($temp, \n                              qr/\\\\\\\\/        => sub { '\\\\' },\n                              qr/\\\\\\$/        => sub { '$' },\n                              qr/\\$(\\d+)/     => sub { substr $str, $bminus[$_[1]], $bplus[$_[1]]-$bminus[$_[1]] },\n                              qr/\\$\\{(\\d+)\\}/ => sub { substr $str, $bminus[$_[1]], $bplus[$_[1]]-$bminus[$_[1]] },\n                        );\n                $res .= $temp;\n            }\n            else {\n                croak 'Replacements must be strings or coderefs, not ' . \n                    ref($temp) . ' refs';\n            }\n            $pos = $bplus[0];\n        }\n        else {\n            $res .= substr $str, $pos, 1;\n            $pos++;\n        }\n    }\n    return $res;\n}",
-      "file" : "/var/tmp/arv_mwbBYZ/Regexp-Subst-Parallel-0.11/Parallel.pm",
-      "package" : "Regexp::Subst::Parallel"
-   }
-]

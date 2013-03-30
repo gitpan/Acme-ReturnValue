@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub process {\n    my $closure = shift;\n    my $cache_name = Digest::MD5::md5_hex(join '!@#$', @_);\n    my $path = $self->plugin_directory;\n    my $io = io->catfile($path, $cache_name)->assert;\n    unless ($io->exists) {\n        $io->lock->mode('>>')->open;\n        if ($io->empty) {\n            $io->print(&$closure);\n        }\n        $io->close;\n    }\n    $io->scalar;\n}",
-      "file" : "/var/tmp/arv_JdrTZ3/Kwiki-Cache-0.11/lib/Kwiki/Cache.pm",
-      "package" : "Kwiki::Cache"
-   }
-]

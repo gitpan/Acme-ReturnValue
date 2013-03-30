@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break",
-      "value" : "q/\n dissolving ... removing ... there is water at the bottom of the ocean\n/",
-      "file" : "/var/tmp/arv_PmUuef/File-Find-Duplicates-1.00/lib/File/Find/Duplicates.pm",
-      "package" : "File::Find::Duplicates"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END {\n    print STDERR ShowStats() if $EndDebug;\n}",
-      "file" : "/var/tmp/arv_Y19yN5/Memoize-ExpireLRU-0.55/ExpireLRU.pm",
-      "package" : "Memoize::ExpireLRU"
-   }
-]

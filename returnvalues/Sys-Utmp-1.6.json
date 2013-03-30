@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "bootstrap Sys::Utmp $VERSION",
-      "file" : "/var/tmp/arv_iRT_VY/Sys-Utmp-1.6/lib/Sys/Utmp.pm",
-      "package" : "Sys::Utmp"
-   }
-]

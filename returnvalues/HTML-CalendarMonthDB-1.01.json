@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub header {\n   my $self = shift;\n   my $newvalue = shift;\n   if (defined($newvalue)) { $self->{'header'} = $newvalue; }\n   return $self->{'header'};\n}",
-      "file" : "/var/tmp/arv_OLT3JH/HTML-CalendarMonthDB-1.0/CalendarMonthDB.pm",
-      "package" : "HTML::CalendarMonthDB"
-   }
-]

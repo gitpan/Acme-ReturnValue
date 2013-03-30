@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {\n    my $self = shift;\n}\n\n1",
-      "file" : "/var/tmp/arv_i0rEb2/Debug-FaultAutoBT-0.02/FaultAutoBT.pm",
-      "package" : "Debug::FaultAutoBT"
-   }
-]

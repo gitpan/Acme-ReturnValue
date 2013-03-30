@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "0x55AA",
-      "file" : "/var/tmp/arv_oPuzyN/IO-Async-Loop-Glib-0.21/lib/IO/Async/Loop/Glib.pm",
-      "package" : "IO::Async::Loop::Glib"
-   }
-]

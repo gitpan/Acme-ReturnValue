@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION      = '1.001'",
-      "file" : "/var/tmp/arv_3675GA/Math-Modular-SquareRoot-1.001/lib/Math/Modular/SquareRoot.pm",
-      "package" : "Math::Modular::SquareRoot"
-   }
-]

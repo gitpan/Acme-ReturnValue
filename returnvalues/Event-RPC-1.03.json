@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub crypt {\n    my $class = shift;\n    my ($user, $pass) = @_;\n    return crypt($pass, $user);\n}",
-      "file" : "/var/tmp/arv_cJal4s/Event-RPC-1.03/lib/Event/RPC.pm",
-      "package" : "Event::RPC"
-   }
-]

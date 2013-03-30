@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use warnings",
-      "file" : "/var/tmp/arv_xWVnPs/Acme-Plack-Middleware-Acme-Werewolf-0.02/lib/Acme/Plack/Middleware/Acme/Werewolf.pm",
-      "package" : "Acme::Plack::Middleware::Acme::Werewolf"
-   }
-]

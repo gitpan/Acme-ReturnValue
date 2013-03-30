@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DUMP{}",
-      "file" : "/var/tmp/arv_RGnYJf/Any-Template-1.015/lib/Any/Template.pm",
-      "package" : "Any::Template"
-   }
-]

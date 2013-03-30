@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "0x55AA",
-      "file" : "/var/tmp/arv_v7p4lM/IO-Async-Loop-Event-0.02/lib/IO/Async/Loop/Event.pm",
-      "package" : "IO::Async::Loop::Event"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub geography {\n    my $c = shift;\n\n    unless ( $c->{geography} ) {\n        $c->{geography} = Catalyst::Plugin::Geography::Implementation->new($c);\n    }\n\n    return $c->{geography};\n}",
-      "file" : "/var/tmp/arv_xB_4zB/Catalyst-Plugin-Geography-0.03/lib/Catalyst/Plugin/Geography.pm",
-      "package" : "Catalyst::Plugin::Geography"
-   }
-]

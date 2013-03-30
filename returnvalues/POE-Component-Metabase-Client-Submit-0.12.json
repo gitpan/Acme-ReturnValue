@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Submit this'",
-      "file" : "/var/tmp/arv_igSKUr/POE-Component-Metabase-Client-Submit-0.12/lib/POE/Component/Metabase/Client/Submit.pm",
-      "package" : "POE::Component::Metabase::Client::Submit"
-   }
-]

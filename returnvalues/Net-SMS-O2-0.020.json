@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "@ISA = qw( Net::SMS::O2 )",
-      "file" : "/var/tmp/arv_K5jb1q/Net-SMS-O2-0.020/Genie.pm",
-      "package" : "Net::SMS::Genie"
-   }
-]

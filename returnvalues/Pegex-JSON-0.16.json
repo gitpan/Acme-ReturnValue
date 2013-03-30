@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub got_null { undef }",
-      "file" : "/var/tmp/arv_VM9l97/Pegex-JSON-0.16/lib/Pegex/JSON/Data.pm",
-      "package" : "Pegex::JSON::Data"
-   }
-]

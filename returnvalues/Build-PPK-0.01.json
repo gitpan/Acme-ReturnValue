@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub run {\n    my ( $class, @args ) = @_;\n    my $action = shift @args;\n\n    usage() unless $action && $ACTIONS{$action};\n\n    my $deptool = Build::PPK::Deptool->new(\n        'dist_index' => $DEFAULT_DIST_INDEX,\n        'prog_index' => $DEFAULT_PROG_INDEX\n    );\n\n    return $ACTIONS{$action}->{'handler'}->( $deptool, @args );\n}",
-      "file" : "/var/tmp/arv_2k0bJn/Build-PPK-0.01/lib/App/PPK/Deptool.pm",
-      "package" : "App::PPK::Deptool"
-   }
-]

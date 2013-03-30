@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub binomial {\n    my $self = shift;\n    return ($self->genus || \"\").\" \".($self->species || \"\");\n}",
-      "file" : "/var/tmp/arv_VDeRH1/go-perl-0.14/GO/Model/Species.pm",
-      "package" : "GO::Model::Species"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub apply\n{\n   my ($self, $name) = @_;\n\n   my $name_struct = $name->{'_cstruct'} ||\n      croak \"invalid Name object: no C structure\";\n   my $format_struct = $self->{'_cstruct'} ||\n      croak \"invalid NameFormat object: no C structure\";\n   format_name ($name_struct, $format_struct);\n}",
-      "file" : "/var/tmp/arv_QKf6A6/LaTeX-BibTeX-0.34/BibTeX/NameFormat.pm",
-      "package" : "LaTeX::BibTeX::NameFormat"
-   }
-]

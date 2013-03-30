@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub appxml\t{ $prefix . '109.11' }",
-      "file" : "/var/tmp/arv_szhdnV/Net-Z3950-SimpleServer-1.16/OID.pm",
-      "package" : "Net::Z3950::OID"
-   }
-]

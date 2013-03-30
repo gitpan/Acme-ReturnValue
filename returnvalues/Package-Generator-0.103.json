@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"You might be a king or a little street sweeper, but sooner or later you dance\nwith Package:Reaper.\"",
-      "file" : "/var/tmp/arv__5NhRa/Package-Generator-0.103/lib/Package/Reaper.pm",
-      "package" : "Package::Reaper"
-   }
-]

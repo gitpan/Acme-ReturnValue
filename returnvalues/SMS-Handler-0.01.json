@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub Split_msg\n{\n    my $maxlen\t= shift;\n    my $text\t= shift;\n\n    my @msg = ();\n\n    my $join = '...';\n    my $sjoin = length($join);\n    my $size = $maxlen - $sjoin;\n\n    push @msg, $_ while $_ = substr($$text, 0, $size - 4, '');\n    \n    my $change;\n    do \n    {\n\t$change = 0;\n\tfor my $c (0 .. $#msg)\n\t{\n\t    if (length($msg[$c]) \n\t\t+ length($c) \n\t\t+ length(scalar @msg) + 2 > $size)\n\t    {\n\t\t$msg[$c + 1] = '' unless $msg[$c + 1];\n\t\tsubstr($msg[$c + 1], 0, 0, \n\t\t       substr($msg[$c],\n\t\t\t      $size\n\t\t\t      - length($msg[$c]) \n\t\t\t      - length($c) \n\t\t\t      - length(scalar @msg)\n\t\t\t      - 2\n\t\t\t      - $sjoin, length($msg[$c]), ''));\n\t\t$change = 1;\n\t    }\n\t}\n    } while $change;\n    my $c = 0;\n\n    return [ map \n\t     { ++$c . '/' . scalar @msg . \"\\n$_\" . \n\t\t   ($c < scalar @msg ? $join : '');\n\t   } @msg ];\n}",
-      "file" : "/var/tmp/arv_hxlOCW/SMS-Handler-0.01/lib/SMS/Handler/Utils.pm",
-      "package" : "SMS::Handler::Utils"
-   }
-]

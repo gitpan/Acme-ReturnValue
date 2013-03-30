@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "require Gwybodaeth::Triples",
-      "file" : "/var/tmp/arv_YSK0Jx/Gwybodaeth-0.02/lib/Gwybodaeth.pm",
-      "package" : "Gwybodaeth"
-   }
-]

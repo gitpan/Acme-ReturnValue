@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub rtttl_to_midi {\n my $parser = shift; \n my $patch = shift; \n unless(defined($patch)) {\n  $patch = 1; \n }\n my $ms = MIDI::Simple->new_score();\n if (length($parser->get_part_name())) {\n  $ms->track_name($parser->get_part_name());\n }\n $ms->patch_change(0,$patch-1); \n $ms->set_tempo(60000000  / $parser->get_bpm()); \n $ms->noop('fff','c0'); \n foreach my $nref ($parser->get_notes()) {\n  my $ticks = ($ms->Tempo() * 4)/$nref->[0];\n  if ($nref->[3] == 1) {\n   $ticks *= 1.5;\n  }\n  elsif ($nref->[3] == 2) {\n   $ticks *= 1.75;\n  }\n  if ($nref->[1] eq 'P') {\n   $ms->r(\"d$ticks\");\n  }\n  else {\n   my $note = uc($nref->[1]);\n   $note =~ s/#/s/go;\n   $ms->n(\"d$ticks\",$note . $nref->[2]);\n  }\n }\n my $midi;\n local(*OUT);\n tie *OUT, 'IO::String', \\$midi;\n $ms->write_score(\\*OUT);\n close(OUT);\n return $midi;\n}",
-      "file" : "/var/tmp/arv_E0eYuS/SMS-Ringtone-RTTTL-MIDI-0.04/lib/SMS/Ringtone/RTTTL/MIDI.pm",
-      "package" : "SMS::Ringtone::RTTTL::MIDI"
-   }
-]

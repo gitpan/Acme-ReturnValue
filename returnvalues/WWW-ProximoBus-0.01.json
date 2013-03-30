@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"The next inbound train is going out of service. Do not board.\"",
-      "file" : "/var/tmp/arv_Pm4CrP/WWW-ProximoBus-0.01/lib/WWW/ProximoBus.pm",
-      "package" : "WWW::ProximoBus"
-   }
-]

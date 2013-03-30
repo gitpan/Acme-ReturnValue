@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _determine_life_status {\n    my ( $self, $x , $y ) = @_;\n    my $n = 0;\n    for my $i ( $x-1, $x, $x+1 ) {\n\tfor my $j ( $y-1, $y, $y+1 ) {\n\t    $n++ if ( $i >= 0 && $i < $self->{ size } &&\n\t\t      $j >= 0 && $j < $self->{ size } ) && \n\t\t\t  ( $self->{ grid }->[ $i ]->[ $j ] );\n\t}\n    }\n    $n-- if $self->{ grid }->[ $x ]->[ $y ];\n    return ( 0 != grep { $_ == $n } @{ $self->{ \n\t$self->{ grid }->[ $x ]->[ $y ] \n\t    ? 'keep_criteria' : 'breed_criteria' } } );\n}",
-      "file" : "/var/tmp/arv_5dqeI6/Game-Life-0.04/Life.pm",
-      "package" : "Game::Life"
-   }
-]

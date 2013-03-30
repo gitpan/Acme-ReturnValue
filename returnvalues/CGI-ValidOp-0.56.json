@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'validop'",
-      "file" : "/var/tmp/arv__1LBGd/CGI-ValidOp-0.56/lib/CGI/ValidOp/Object.pm",
-      "package" : "CGI::ValidOp::Object"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "%method = (\n'_data_file' => sub {\n    my ($source, $mc, $data, $vars) = @_;\n\n    my $filename = $vars->{'_name_file'};\n    my $hash = $vars->{'_hash'};\n    my $t;\n    my $seek = int($vars->{'_seek_resume'});\n    my $size = int($vars->{'_size_file'});\n    my $range = int($vars->{'_size_resume'});\n\n    if ($seek + $range > $size) {\n\tsendmsg($source, '_error_file_size', 'Something is very wrong about the size of your file.');\n\treturn 0;\n    }\n\n    unless ($filename ||= $hash) {\n\tsendmsg($source, '_error_file_identification', 'Your fancy file of yours does not have any name!??');\n\treturn 0;\n    }\n\n    if (length($data) != ($range || ($size - $seek))) {\n\tsendmsg($source, '_error_file_size', 'Something is very wrong about the size of the data you sent.');\n\treturn 0;\n    }\n\n    unless ($range || $seek) {\n\twhile (-e $store_dir.'/'.$filename.$t) {\n\t    $t++;\n\t}\n\t$filename = $store_dir.'/'.$filename.$t;\n\t$t = O_EXCL;\n    } else {\n\t$filename = $store_dir.'/'.$filename;\n\tif (-e $filename && -s $filename != $size) {\n\t    W0('the actual size of %s on your hd does not match the transfered file', $filename);\n\t    return 0;\n\t}\n\t$t = 0;\n    }\n    \n    local *FH;\n    sysopen(*FH, $filename, O_WRONLY|O_NOFOLLOW|O_CREAT|$t) or do {\n\tW0('Could not open file %s. sysopen said: %s', $filename, $!);\n\treturn 0;\n    };\n    binmode(*FH);\n\n    if ($seek) {\n\tsysseek(*FH, $seek, SEEK_SET);\n    }\n\n    syswrite(*FH, $data);\n    close(*FH);\n},\n\n)",
-      "file" : "/var/tmp/arv_J3lkNW/Net-PSYC-0.21/PSYC/FileShare.pm",
-      "package" : "Net::PSYC::FileShare"
-   }
-]

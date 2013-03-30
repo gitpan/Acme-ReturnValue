@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "const class_title => 'Column Layout Theme'",
-      "file" : "/var/tmp/arv_BcXFsU/Kwiki-Theme-ColumnLayout-0.08/lib/Kwiki/Theme/ColumnLayout.pm",
-      "package" : "Kwiki::Theme::ColumnLayout"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub t9_find_words($$)\n{\n  my $num = shift;\n  my $words = shift;\n  \n  return () unless $num =~ /^[2-9]+$/;\n  \n  my $len = length( $num );\n  my $re;\n  for( 0 .. $len - 1 )\n    {\n    $re .= \"[\" . $T9NL[substr( $num, $_, 1 )] . \"]\";\n    }\n  $re = \"^$re\\$\";\n  return grep { /$re/i } grep { length( $_ ) == $len } @$words;\n}",
-      "file" : "/var/tmp/arv_CZ66ac/Text-T9-1.0/T9.pm",
-      "package" : "Text::T9"
-   }
-]

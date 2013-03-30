@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub UsagePage\n{\n    item('usage_page', @_);\n}",
-      "file" : "/var/tmp/arv_yNpqt3/USB-Descriptor-4/lib/USB/HID/Descriptor/Report.pm",
-      "package" : "USB::HID::Descriptor::Report"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use Inline Python => <<'END_OF_PYTHON_CODE'",
-      "file" : "/var/tmp/arv_4qAWeM/Wiki-Gateway-0.001991/lib/Wiki/Gateway.pm",
-      "package" : "Wiki::Gateway"
-   }
-]

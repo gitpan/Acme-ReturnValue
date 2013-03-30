@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "BEGIN {\n  $Alt::Crypt::RSA::BigInt::AUTHORITY = 'cpan:DANAJ';\n  $Alt::Crypt::RSA::BigInt::VERSION = '0.05';\n}",
-      "file" : "/var/tmp/arv_6aUAoW/Alt-Crypt-RSA-BigInt-0.05/lib/Alt/Crypt/RSA/BigInt.pm",
-      "package" : "Alt::Crypt::RSA::BigInt"
-   }
-]

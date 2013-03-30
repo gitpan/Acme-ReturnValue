@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$Pangloss::VERSION = $VERSION",
-      "file" : "/var/tmp/arv_sMVy10/Pangloss-0.06/lib/Pangloss/Version.pm",
-      "package" : "Pangloss::Version"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub hook_install {\n    no strict 'refs';\n    no warnings;\n    my $command_class = ref($self->hub->command);\n    my $command_install = \\ &{$command_class . \"::install\"};\n    *{$command_class . \"::install\"} = sub {\n        my $self = shift;\n        $self->$command_install(@_);\n        my $class_id = shift;\n        return unless $class_id eq 'theme';\n        my $theme = $self->hub->theme;\n        return unless $theme->isa(__PACKAGE__);\n        for my $class ($theme->all_themes) {\n            $theme->reset_theme_class($class);\n            $self->install('theme');\n        }\n    }\n}",
-      "file" : "/var/tmp/arv_EP7T1k/Kwiki-Theme-Selectable-0.10/lib/Kwiki/Theme/Selectable.pm",
-      "package" : "Kwiki::Theme::Selectable"
-   }
-]

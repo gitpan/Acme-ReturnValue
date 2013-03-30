@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[1 is the loneliest number]",
-      "file" : "/var/tmp/arv_GEaQt0/Dist-Zilla-Plugin-GithubMeta-0.28/lib/Dist/Zilla/Plugin/GithubMeta.pm",
-      "package" : "Dist::Zilla::Plugin::GithubMeta"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "true",
-      "file" : "/var/tmp/arv_z6pJ_O/Dancer-Plugin-Cerberus-0.03/lib/Dancer/Plugin/Cerberus.pm",
-      "package" : "Dancer::Plugin::Cerberus"
-   }
-]

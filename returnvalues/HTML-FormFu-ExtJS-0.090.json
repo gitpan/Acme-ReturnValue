@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ext_class_of {\n    my $element = shift;\n    my $classname;\n\n    croak \"cannot determine ext class for element '\" . (ref $element) . \"'\"\n        unless ($element->can( 'type' ));\n\n    if ($element->type =~ /^(.*)::Element::(.*?)$/) {\n        $classname = $1 . '::ExtJS::Element::' . $2;\n    }\n    else {\n        $classname = \"HTML::FormFu::ExtJS::Element::\" . $element->type;\n    }\n    require_class( $classname );\n\n    return $classname;\n}",
-      "file" : "/var/tmp/arv_jxActg/HTML-FormFu-ExtJS-0.090/lib/HTML/FormFu/ExtJS/Util.pm",
-      "package" : "HTML::FormFu::ExtJS::Util"
-   }
-]

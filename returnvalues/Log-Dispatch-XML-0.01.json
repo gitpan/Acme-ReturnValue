@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub xml {\n\n\n    my ($self,$open,$method) = @_;\n    $open ||= 'messages';\n    my $close = $open =~ m#^([\\w:\\-]+)# ? $1 : '';\n    $method = $method ? 'fetch' : 'flush';\n\n\n    my $messages = $self->$method;\n    my $xml = \"<$open>\";\n    foreach (@{$messages}) {\n        $xml .= \"<$_->{'level'}><![CDATA[$_->{'message'}]]></$_->{'level'}>\";\n    }\n    $xml.\"</$close>\";\n}",
-      "file" : "/var/tmp/arv_5rNnti/Log-Dispatch-XML-0.01/lib/Log/Dispatch/XML.pm",
-      "package" : "Log::Dispatch::XML"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub count_chars {\n\tmy ( $input, $mode ) = validate_pos( @_, STRING,\n\t{\n\t\t%{+NUMBER_RANGE( 0, 4 )},\n\t\toptional => 1,\n\t\tdefault => 0\n\t\t},\n\t);\n\n\tif($mode < 3){\n\t\tuse bytes;\n\t\tmy %freq;\n\t\tmy @freq;\n\t\t@freq{0..255} = (0) x 256 if $mode != 1;\n\t\t$freq{ord $_}++ for split //, $input;\n\t\tif($mode == 2){\n\t\t\t$freq{$_} and delete $freq{$_} for keys %freq;\n\t\t}\n\t\treturn %freq;\n\t}else{\n\t\tmy %freq = count_chars( $input, $mode-2 );\n\t\treturn join '', map chr, sort keys %freq;\n\t}\n}",
-      "file" : "/var/tmp/arv_XSK46R/Love-Match-Calc/Calc.pm",
-      "package" : "Love::Match::Calc"
-   }
-]

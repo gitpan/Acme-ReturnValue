@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION     = '0.01'",
-      "file" : "/var/tmp/arv_XPJUH0/Tutorial-DBIx-Class-Perl-ORM-Conexao-Com-Banco-de-Dados-PT-0.01/lib/Tutorial/DBIx/Class/Perl/ORM/Conexao/Com/Banco/de/Dados/PT/BR.pm",
-      "package" : "Tutorial::DBIx::Class::Perl::ORM::PT::BR"
-   }
-]

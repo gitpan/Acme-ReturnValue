@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _idx_sanity_check {\n    my %mappings = @_;\n    if(scalar (grep $_ > $IDX_MAX, keys %mappings) > 0) {\n        die(\"Abnormally large index found. \".\n            \"Bump up \\$IDX_MAX if this is not a mistake\");\n    }\n}",
-      "file" : "/var/tmp/arv_NSQx0P/Array-Assign-0.01/lib/Array/Assign.pm",
-      "package" : "Array::Assign"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub delete_url {\n\tmy $self = shift;\n\teval {\n\t\t$self->SUPER::delete_url(@_);\n\t};\n\tif ($@) {\n\t\tdie $@ unless ($@->code == 503);\n\t\tmy $db = $self->{_db};\n\t\t$db->create({created => $currentDate, request_json => $request_json});\n\t}\n}",
-      "file" : "/var/tmp/arv_U9ds_J/WWW-Shopify-0.13/lib/WWW/Shopify/URLHandler/Queued.pm",
-      "package" : "WWW::Shopify::URLHandler::Queued"
-   }
-]

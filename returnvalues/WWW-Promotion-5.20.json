@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getrandomkeyword {\n    my @keywords=split(/,/,$Promotion{'keywords'});\n    \n    return $keywords[int(rand(@keywords))];\n}",
-      "file" : "/var/tmp/arv_y3zMkS/lib/WWW/Promotion.pm",
-      "package" : "WWW::Promotion"
-   }
-]

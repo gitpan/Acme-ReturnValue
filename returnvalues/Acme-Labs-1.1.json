@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "print {0} $1, pinking $plan \t\t\t\t\t\t\t\t\t\t\t\t\t\n\tand print STDOUT \"Fun-fun-silly-willy!\\n\" \n\t\tand do {eval brainier $plan or print STDERR $@; exit}",
-      "file" : "/var/tmp/arv_r5ndn9/Acme-Labs-1.1/lib/Acme/Labs.pm",
-      "package" : "Acme::Labs"
-   }
-]

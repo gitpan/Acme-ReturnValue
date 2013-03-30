@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub brraaap($$)\n{\n\tmy($self, $encoded) = @_;\n\t\n\t$self->{'piss_seq'}++;\n\t$self->{'piss_seq'} = 0 if ($self->{'piss_seq'} == 26);\n\t\n\tmy $seqid = chr($self->{'piss_seq'} + 97);\n\t\n\tif (length($encoded) > $self->{'max_tx_len'}) {\n\t\t$self->_error(\"piss_toolong\", \"piss_send_msg: Too long message: \" . length($encoded) . \" is larger than maximum of \" . $self->{'max_tx_len'});\n\t\treturn;\n\t}\n\t\n\tmy $cmd = \"T\" . $seqid . \"1\" . unpack('H*', $encoded) . \"X\";\n\t$self->_debug(\"piss_send_msg $cmd, length \" . length($encoded));\n\tif (!$self->_piss_cmd($cmd)) {\n\t\t$self->_debug(\"piss_send_msg: piss_cmd failed: \" . $self->error_msg());\n\t\treturn;\n\t}\n\t\n\t$self->_debug(\"piss_send_msg done\");\n\t\n\treturn 1;\n}",
-      "file" : "/var/tmp/arv_5G5ct3/POCSAG-Encode-1.00/PISS.pm",
-      "package" : "POCSAG::PISS"
-   }
-]

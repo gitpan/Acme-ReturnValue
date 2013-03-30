@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub redis_send {\n  my ( $self, $cmd ) = @_;\n  $cmd->{args} = [] unless ref $cmd->{args} eq 'ARRAY';\n  unless ( $cmd->{type} eq 'subscribe' ) {\n    push @{$self->{cmdqueue}}, $cmd;\n  }\n  my $send = \"*\" . ( scalar ( @{$cmd->{args}} ) + 1 ) . \"\\r\\n\" .\n    \"\\$\" . length ( $cmd->{type} ) . \"\\r\\n\" .\n      $cmd->{type} . \"\\r\\n\";\n  foreach ( @{$cmd->{args}} ) {\n    $send .= \"\\$\" . length ($_) . \"\\r\\n$_\\r\\n\";\n  }\n  $self->{rs}->write ( $send );\n}",
-      "file" : "/var/tmp/arv_qLqXOF/Danga-Socket-Redis-0.06/lib/Danga/Socket/Redis.pm",
-      "package" : "Danga::Socket::Redis"
-   }
-]

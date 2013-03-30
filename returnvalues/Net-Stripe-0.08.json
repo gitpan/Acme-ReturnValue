@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "method fields_for {\n    my $for = shift;\n    return unless $self->can($for);\n    my $thingy = $self->$for;\n    return unless $thingy;\n    return $thingy->form_fields if ref($thingy) =~ m/^Net::Stripe::/;\n    return ($for => $thingy);\n}\n\n1",
-      "file" : "/var/tmp/arv_FKHMyA/Net-Stripe-0.08/lib/Net/Stripe/Resource.pm",
-      "package" : "Net::Stripe::Resource"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub password_prompt {\n    my $pwd;\n    print \"Enter your password: \";\n    system stty => '-echo';\n    chomp($pwd = <STDIN>);\n    system stty => 'echo';\n    $pwd;\n}",
-      "file" : "/var/tmp/arv_kOtHJA/DCE-Perl-0.21/lib/DCE/test.pm",
-      "package" : "DCE::test"
-   }
-]

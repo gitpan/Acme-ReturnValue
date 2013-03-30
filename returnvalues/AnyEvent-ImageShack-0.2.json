@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub image_host {\n\tmy $file = shift;\n\tmy $cb   = pop;\n\tmy $url = '';\n\t\n\tif ($file =~ /^http:\\/\\//) {\n\t\t$url  = $file;\n\t\t$file = undef;\n\t}\n\tmy $opt = ref $_[0] ? $_[0] : { @_ };\n\t\n\t$AnyEvent::HTTP::USERAGENT      = $opt->{'user_agent'} || 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.205 Safari/534.16';\n\t$AnyEvent::HTTP::MAX_PER_HOST ||= $opt->{'max_per_host'};\n\t$AnyEvent::HTTP::ACTIVE       ||= $opt->{'active'      };\n\t\n\tmy $p = POST\n\t\t'http://www.imageshack.us/upload_api.php',\n\t\tContent_Type => 'multipart/form-data',\n\t\tContent      => [\n\t\t\tfileupload    => $file ? [ $file ] : [ '' ],\n\t\t\turl           => $url,\n\t\t\ttags          => $opt->{'tags'} || '',\n\t\t\trembar        => $opt->{'remove_size'} || 1,\n\t\t\toptimage      => 1,\n\t\t\tkey           => $opt->{'key'},\n\t\t\toptsize       => $opt->{'size'} || 'resample',\n\t\t]\n\t;\n\t\n\thttp_post \n\t\t$p->uri,\n\t\t$p->content,\n\t\trecurse => 0,\n\t\theaders => {\n\t\t\tmap {\n\t\t\t\t$_ => $p->header($_)\n\t\t\t} $p->header_field_names\n\t\t},\n\t\tsub {\n\t\t\t$cb->($_[0] =~ /image_link>([^<>]+)</si);\n\t\t}\n\t;\n}",
-      "file" : "/var/tmp/arv_gMdIkp/AnyEvent-ImageShack-0.2/lib/AnyEvent/ImageShack.pm",
-      "package" : "AnyEvent::ImageShack"
-   }
-]

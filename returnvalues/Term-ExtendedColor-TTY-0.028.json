@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_colorscheme {\n  my $colorscheme = shift;\n  if(exists($colorschemes->{$colorscheme})) {\n    return $colorschemes->{$colorscheme};\n  }\n  else {\n    croak(\"'$colorscheme' is not a valid colorscheme\\n\");\n  }\n}",
-      "file" : "/var/tmp/arv_haR95A/Term-ExtendedColor-TTY-0.028/lib/Term/ExtendedColor/TTY/Colorschemes.pm",
-      "package" : "Term::ExtendedColor::TTY::Colorschemes"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break (but very likely crap)",
-      "bad" : "return(1)",
-      "file" : "/var/tmp/arv_NgABbo/Locale-SubCountry-1.61/lib/Locale/SubCountry.pm",
-      "package" : "Locale::SubCountry::World"
-   }
-]

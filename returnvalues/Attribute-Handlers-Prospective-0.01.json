@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub Ly: ATTR {}",
-      "file" : "/var/tmp/arv_Iyw8OH/Attribute-Handlers-Prospective-0.01/demo/TestBed.pm",
-      "package" : "TestBed"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub chars_only {\n\tmy $str1 = shift;\n\tmy $str2 = shift;\n\t$str1 =~ s/\\W//g;\n\t$str2 =~ s/\\W//g;\n\treturn char_by_char($str1,$str2);\n}",
-      "file" : "/var/tmp/arv_ozs2hp/String-Compare-0.4/lib/String/Compare.pm",
-      "package" : "String::Compare"
-   }
-]

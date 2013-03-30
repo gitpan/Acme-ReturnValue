@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub rand_fasta\n{\n\tmy $id = \">\" . join(\"\", rand_chars( set => 'loweralpha', size=>3 ) ) .\n\t\t\t\"-\" . sprintf(\"%06d\", int(rand())) ;\n\tmy $seq = rand_wrapped_nuc(@_);\n\treturn $id . \"\\n\" . $seq ;\n}",
-      "file" : "/var/tmp/arv_n7wmXg/Data-Random-Nucleotides-0.1/lib/Data/Random/Nucleotides.pm",
-      "package" : "Data::Random::Nucleotides"
-   }
-]

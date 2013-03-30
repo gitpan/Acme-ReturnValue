@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"Yn dodi 'r proxy i mewn i CPAN ddrychau\"",
-      "file" : "/var/tmp/arv_EpiJLo/POE-Component-CPAN-Mirror-Multiplexer-0.04/lib/POE/Component/CPAN/Mirror/Multiplexer.pm",
-      "package" : "POE::Component::CPAN::Mirror::Multiplexer"
-   }
-]

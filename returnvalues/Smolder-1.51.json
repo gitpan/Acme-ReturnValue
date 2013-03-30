@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub generate_html {\n    my $self = shift;\n\n    my $dir = catdir($self->report->data_dir, 'html');\n    unless (-d $dir) {\n        mkpath($dir) or croak \"Could not create directory '$dir'! $!\";\n    }\n    my $file = catfile($dir, 'report.html');\n\n    my $meta        = $self->{meta}             || {};\n    my $extra_props = $meta->{extra_properties} || {};\n\n    my $odd_even = Template::Plugin::Cycle->new(qw(odd even));\n    $TMPL->process(\n        'TAP/full_report.tmpl',\n        {\n            report           => $self->report,\n            results          => $self->results,\n            odd_even         => $odd_even,\n            url_base         => Smolder::Util::url_base(),\n            extra_properties => $extra_props,\n        },\n        $file,\n    ) or croak $TMPL->error;\n\n    my $count = 0;\n    foreach my $test (@{$self->results}) {\n        my $save_file = catfile($dir, $count . '.html');\n        $TMPL->process(\n            'TAP/individual_test.tmpl',\n            {\n                report    => $self->report,\n                test_file => $test->{label},\n                tests     => $test->{tests},\n                odd_even  => $odd_even,\n                url_base  => Smolder::Util::url_base(),\n                is_muted  => $test->{is_muted},\n            },\n            $save_file,\n        ) or croak \"Problem processing template file '$file': \", $TMPL->error;\n        $count++;\n    }\n}",
-      "file" : "/var/tmp/arv_HbaoBf/Smolder-1.51/lib/Smolder/TAPHTMLMatrix.pm",
-      "package" : "Smolder::TAPHTMLMatrix"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub url_for {\n    my $self = shift;\n    my $url  = $self->url;\n    $url->path(\"@_\");\n    return $url;\n}",
-      "file" : "/var/tmp/arv_4r7Fcq/Test-STF-MockServer-0.01/lib/Test/STF/MockServer.pm",
-      "package" : "Test::STF::MockServer"
-   }
-]

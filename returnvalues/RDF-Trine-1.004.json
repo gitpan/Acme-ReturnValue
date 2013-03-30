@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub string {\n\tmy $self\t= shift;\n\treturn $$self;\n}",
-      "file" : "/var/tmp/arv_GMxfNw/RDF-Trine-1.004/lib/RDF/Trine/Serializer.pm",
-      "package" : "RDF::Trine::Serializer"
-   }
-]

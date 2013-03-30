@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _debug {\n    \n    my ($pkg, $file, $line, $sub) = caller(1);\n    \n    $sub =~ s/^$pkg\\:://;\n    \n    while (@_) {\n        my $x = shift;\n        $x =~ s/\\bPKG\\b/$pkg/g;\n        $x =~ s/\\bLINE\\b/$line/g;\n        $x =~ s/\\bg\\b/$sub/g;\n        print STDERR $x;\n    }\n}",
-      "file" : "/var/tmp/arv_ZQCfKc/Tree-XPathEngine-0.05/lib/Tree/XPathEngine.pm",
-      "package" : "Tree::XPathEngine"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub rejected {\n}",
-      "file" : "/var/tmp/arv_Fk2dXh/Pg-Loader-0.18/examples/log.pm",
-      "package" : "Log"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our %GENERATE = ( map {; ($output = basename $_) =~ s/\\.m/.pm/;\n                       $_ => catfile 'lib', 'Class', 'MethodMaker', $output }\n                  grep /\\.m$/, glob(catfile 'components', '*') )",
-      "file" : "/var/tmp/arv_sFBBKf/Class-MethodMaker-2.18/Generate.pm",
-      "package" : "Generate"
-   }
-]

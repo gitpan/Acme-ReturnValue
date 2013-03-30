@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub report_run_error {\n  my($self, $error_text) = @_;\n  $error_text ||= \"Unknown error!?\";\n\n  DEBUG and print \"Reporting error $@\\n\";\n\n  my $m = MainWindow->new;\n  $m->title(\"Error!\");\n  $m->label(\"An error occurred in the program:\\n\");\n  \n  my $t = $m->Scrolled( 'Text',\n    -scrollbars => 'oe',\n    -height => 10,\n    -width  => 60,\n  );\n  $t->pack;\n  $t->insert('@0,0', $error_text);\n  $t->configure(qw<  -state disabled   -takefocus 1  >);\n  \n  my $button = $m->Button(\n    '-text'    => 'Abort the Program',\n    '-command' => [$m, 'destroy'],\n  );\n  $m->bind('<Escape>' => [$m, 'destroy'] );\n\n  $button->pack;\n  $button->focus;\n\n  $m->geometry('+20+20');\n\n  DEBUG and print \"\\n\";\n  Tk::MainLoop();\n  DEBUG and print \"\\n\";\n\n  return;\n}",
-      "file" : "/var/tmp/arv_zQavMC/Getopt-Janus-1.03/lib/Getopt/Janus/Tk.pm",
-      "package" : "Getopt::Janus::Tk"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "!!42",
-      "file" : "/var/tmp/arv_S4w6A8/Pod-Weaver-Section-Collect-FromOther-0.002/lib/Pod/Weaver/Section/Collect/FromOther.pm",
-      "package" : "Pod::Weaver::Section::Collect::FromOther"
-   }
-]

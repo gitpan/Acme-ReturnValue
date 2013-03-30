@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _discard_line\n{\n  my $self    = shift;\n  my $line    = shift;\n  my $discard = 0;\n\n  SWITCH:\n    {\n\tif ($$line =~ /\"\"\"/) \n\t{\n\t  $$line =~ s/\"\"\".*\"\"\"//;\n\t  if ($self->{in_comment}) {\n\t    if ($$line =~ /\"\"\"(\\s*\\w[\\w\\s]*)/) {\n\t      $self->{in_comment} = 0;\n\t      $$line = $1;\n\t    } else {\n\t      $self->{in_comment} = 0;\n\t      $discard = 1;\n\t    }\n\t  } else {\n\t    if ($$line =~ /^(\\s*[\\w\\s]*)\"\"\"/) {\n\t      $self->{in_comment} = 1;\n\t      $$line = $1;\n\t    } else {\n\t      $discard = 1;\n\t    }\n\t  }\n\t  last SWITCH;\n\t} else {\n\t  $discard = 1 if ($self->{in_comment});\n\t}\n\n\tif ($$line =~ /#/) {\n\t  if ($$line =~ /^(\\s*\\w[\\w\\s]*)#/) {\n\t    $$line = $1;\n\t  } else {\n\t    $discard = 1;\n\t  }\n\t  last SWITCH;\n\t}\n    } \n\n  $discard = 1 if ($$line =~ m/^\\s*$/); \n  return $discard;\n}",
-      "file" : "/var/tmp/arv_s96NdL/Autodia-2.14/lib/Autodia/Handler/python.pm",
-      "package" : "Autodia::Handler::python"
-   }
-]

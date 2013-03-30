@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = 0.1",
-      "file" : "/var/tmp/arv_SZ7l1r/GO-TermFinder-0.86/lib/GO/Reference.pm",
-      "package" : "GO::Reference"
-   }
-]

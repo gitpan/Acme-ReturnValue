@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub fetch\n{\n  my $self = shift;\n  my $number = shift;\n  $number =~ s/[^0-9]//g;\n\n  my $req = HTTP::Request->new(GET => 'http://whocallsme.com/Phone-Number.aspx/'.$number);\n  my $res = $self->{ua}->request($req);\n\n  my $return = {\n    number => $number,\n  };\n\n  my $content = $res->content;\n  $return->{success} = ($res->is_success ? 1 : 0);\n  $return->{listed} = (($content =~ m#\\s+phone\\s+number\\s+comments:</h4>#i) ? 1 : 0); \n  @{$return->{callername}} = $content =~ m#<div>Caller:\\s*(.*?)\\s*</div>#ig;\n  @{$return->{callerid}} = $content =~ m#<div>Caller\\s+ID:\\s*(.*?)\\s*</div>#ig;\n\n  my $callernames = {};\n  my $maxcallercount = 0;\n  my $maxcallername = 'unknown';\n  foreach my $callername (@{$return->{callername}})\n  {\n    $callername =~ s/[\\?\\'\\s]+/ /g;\n    $callername =~ s/^\\s+//;\n    $callername =~ s/\\s+$//;\n    next unless $callername;\n\n    $callernames->{uc($callername)}++;\n    if ($callernames->{uc($callername)} > $maxcallercount)\n    {\n      $maxcallercount = $callernames->{uc($callername)};\n      $maxcallername = uc($callername);\n    }\n  }\n\n  $return->{name} = $maxcallername;\n\n  return $return;\n}",
-      "file" : "/var/tmp/arv_pV8hfe/WWW-WhoCallsMe-0.02/lib/WWW/WhoCallsMe.pm",
-      "package" : "WWW::WhoCallsMe"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "BEGIN {\n    eval { require Class::XSAccessor::Compat };\n    push @ISA, $@ ? 'Class::Accessor::Fast' : 'Class::XSAccessor::Compat' ;\n}",
-      "file" : "/var/tmp/arv_KwiFwl/Shipwright-2.4.33/lib/Shipwright/Base.pm",
-      "package" : "Shipwright::Base"
-   }
-]

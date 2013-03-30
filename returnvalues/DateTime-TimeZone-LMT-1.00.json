@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub offset_at_longitude {\n\n\tmy $longitude = shift;\n\t\n\tmy $offset_seconds = ( $longitude / 180 ) * (12 * 60 * 60);\n\n\treturn DateTime::TimeZone::offset_as_string( $offset_seconds );\n}",
-      "file" : "/var/tmp/arv_OnXJtM/DateTime-TimeZone-LMT-1.00/lib/DateTime/TimeZone/LMT.pm",
-      "package" : "DateTime::TimeZone::LMT"
-   }
-]

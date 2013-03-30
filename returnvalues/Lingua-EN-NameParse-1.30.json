@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break (but very likely crap)",
-      "bad" : "return(1)",
-      "file" : "/var/tmp/arv_U0GDm8/Lingua-EN-NameParse-1.30/lib/Lingua/EN/NameParse.pm",
-      "package" : "Lingua::EN::NameParse"
-   }
-]

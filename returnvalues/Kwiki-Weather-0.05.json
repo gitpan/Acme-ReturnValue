@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Weather",
-      "file" : "/var/tmp/arv_nScLnw/Kwiki-Weather-0.05/lib/Kwiki/Weather.pm",
-      "package" : "Kwiki::Weather"
-   }
-]

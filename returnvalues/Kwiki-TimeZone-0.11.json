@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub format {\n    my $time = shift;\n    my $time_zone = $self->preferences->time_zone->value || 'GMT';\n    my $offset = $time_offsets->{$time_zone} || 0;\n    scalar(gmtime($time + $offset * 3600)) . \" $time_zone\";\n}",
-      "file" : "/var/tmp/arv_l_3H7e/Kwiki-TimeZone-0.11/lib/Kwiki/TimeZone.pm",
-      "package" : "Kwiki::TimeZone"
-   }
-]

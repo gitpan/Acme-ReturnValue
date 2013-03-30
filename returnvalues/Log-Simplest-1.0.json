@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END {\n  &Log (\" ***  Closing file $LogFileName *** \");\n  &Log (\" *** \" . $MyName . \" *** Completed *** \");\n  close $Log_file;\n}",
-      "file" : "/var/tmp/arv_2lNNR7/Log-Simplest-1.0/lib/Log/Simplest.pm",
-      "package" : "Log::Simplest"
-   }
-]

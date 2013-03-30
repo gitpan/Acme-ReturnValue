@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$Net::UPS::Tutorial::VERSION = '1.00'",
-      "file" : "/var/tmp/arv_uvFId2/Net-UPS-0.04/UPS/Tutorial.pm",
-      "package" : "Net::UPS::Tutorial"
-   }
-]

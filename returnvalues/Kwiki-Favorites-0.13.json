@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub favorites_remove {\n    my $page_name = $self->pages->name_to_id($self->cgi->page_name);\n    my $favorites = $self->hub->cookie->jar->{favorites} || {};\n    delete $favorites->{$page_name};\n    $self->hub->cookie->jar->{favorites} = $favorites;\n    return \"$page_name added\";\n}",
-      "file" : "/var/tmp/arv_41mt7U/Kwiki-Favorites-0.13/lib/Kwiki/Favorites.pm",
-      "package" : "Kwiki::Favorites"
-   }
-]

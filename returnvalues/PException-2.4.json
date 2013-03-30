@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub\t__onflyhandler {\n  if\t( hadWaittingExceptions() ) {\n\tmy ( @tmp );\n\n\tif\t( scalar( @{$PException::_XCPHDL_->{STACKFLY}} ) ) {\n\t  @tmp\t= @{$PException::_XCPHDL_->{STACKFLY}->[\n\t\t\t$#{$PException::_XCPHDL_->{STACKFLY}}]};\n\t} else {\n\t  my ( $i, @tmp ) = ( 0 );\n\n\t  while( @tmp = caller( $i++ ) )\n\t  { print STDERR \"$i\\t> \" . join( \" + \", grep { defined $_ } @tmp, \"\\n\" ) }\n\n\t  for ( @{$PException::_XCPHDL_->{EXCEPTIONS}} )\n\t\t{ print STDERR \"\\t>$_ - \", $$_ , \"\\n\" }\n\t  die( \"ya1kouille! PException thrown with no try block\" )\n\t}\n\n\n\tpush( @tmp, @{$PException::_XCPHDL_->{FLYS}} )\n\t\tif ( ( $PException::_XCPHDL_->{FRESH} ) &&\n\t\t\tscalar( @{$PException::_XCPHDL_->{FLYS}} ) );\n\n\t$PException::_XCPHDL_->{ONFLY}\t= 1;\n\n\tif\t( checkException( @tmp ) ) {\n\t  $PException::_XCPHDL_->{ONFLY}\t= 0;\n\t  $PException::_XCPHDL_->{CANDIE}= 1;\n\t  throw();\n\t}\n\tundef $@;\n\t$PException::_XCPHDL_->{ONFLY}\t= 0;\n  } else { print STDERR $@ }\n}",
-      "file" : "/var/tmp/arv_nYK7D5/PException-2.4/PException.pm",
-      "package" : "PException"
-   }
-]

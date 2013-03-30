@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _compare_files {\n    my $migrated      = shift;\n    my $fresh         = shift;\n    my $start_version = shift;\n    my $final_version = shift;\n\n    local $Test::Builder::Level = $Test::Builder::Level + 2;\n\n    eq_or_diff(\n        scalar read_file( $migrated->stringify() ),\n        scalar read_file( $fresh->stringify() ),\n        \"comparing migration from $start_version to $final_version\"\n    );\n}",
-      "file" : "/var/tmp/arv_ZHw2R4/Pg-DatabaseManager-0.05/lib/Pg/DatabaseManager/TestMigrations.pm",
-      "package" : "Pg::DatabaseManager::TestMigrations"
-   }
-]

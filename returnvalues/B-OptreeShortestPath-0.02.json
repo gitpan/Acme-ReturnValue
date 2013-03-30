@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[ \"Hey, what does this switch labeled 'Pulsating Ejector' do?\"\n    \"I don't know... I've always been too afraid to find out\" ]",
-      "file" : "/var/tmp/arv_QeEa1Z/B-OptreeShortestPath-0.02/lib/B/OptreeShortestPath.pm",
-      "package" : "B::OptreeShortestPath"
-   }
-]

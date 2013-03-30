@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub destroy_pidfile\n{\n\tmy $pidfile = shift;\n\tunlink($pidfile);\n}",
-      "file" : "/var/tmp/arv_5LZAxk/Daemon-Simple/lib/Daemon/Simple.pm",
-      "package" : "Daemon::Simple"
-   }
-]

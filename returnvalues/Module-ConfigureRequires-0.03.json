@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "(undef) = (undef)",
-      "file" : "/var/tmp/arv_y3kchF/Module-ConfigureRequires-0.03/lib/Module/ConfigureRequires.pm",
-      "package" : "Module::ConfigureRequires"
-   }
-]

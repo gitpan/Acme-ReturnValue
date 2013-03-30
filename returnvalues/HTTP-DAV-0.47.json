@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub as_string {\n   my ($self) = @_;\n   my ($ms, $returnstr) = \"\";\n\n   foreach my $num ( 0 .. $self->response_count() ) {\n      my %h = %{$self->{_dav_multistatus}[$num]};\n      $ms .= \"Error number $num ($h{handle}):\\n\";\n      $ms .= \"   Href:       $h{url}\\n\"                 if defined $h{url};\n      $ms .= \"   Mesg(code): $h{message} ($h{code})\\n\"  if defined $h{code};\n      $ms .= \"   Desc:       $h{'description'}\\n\"       if defined $h{'description'};\n      $ms .= \"\\n\";\n   }\n\n   my $rd = $self->get_responsedescription() || \"\";\n\n   $returnstr .= \"Multistatus lines:\\n$ms\\n\" if $ms;\n   $returnstr .= \"Overall responsedescription: \\\"$rd\\\"\\n\" if $rd;\n   $returnstr .= $self->SUPER::as_string;\n   $returnstr;\n}",
-      "file" : "/var/tmp/arv_UXP2a2/HTTP-DAV-0.47/lib/HTTP/DAV/Response.pm",
-      "package" : "HTTP::DAV::Response"
-   }
-]

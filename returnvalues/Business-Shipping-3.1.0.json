@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub log_level {\n    my ($class, $log_level) = @_;\n    return unless $log_level;\n\n    $log_level = lc $log_level;\n    my @levels = qw(fatal error warn info debug trace);\n    if (grep { $_ eq $log_level } @levels) {\n        $Current_Level = uc $log_level;\n    }\n    Business::Shipping::Logging::init();\n\n    return $log_level;\n}",
-      "file" : "/var/tmp/arv_B4JUwd/Business-Shipping-3.1.0/lib/Business/Shipping/Logging.pm",
-      "package" : "Business::Shipping::Logging"
-   }
-]

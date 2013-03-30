@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = '0.04'",
-      "file" : "/var/tmp/arv_4ePTWP/anarch-0.04/lib/App/Anarch.pm",
-      "package" : "App::Anarch"
-   }
-]

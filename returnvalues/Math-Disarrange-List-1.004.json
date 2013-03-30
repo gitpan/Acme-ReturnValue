@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = '1.004'",
-      "file" : "/var/tmp/arv_6ZsXle/Math-Disarrange-List-1.004/lib/Math/Disarrange/List.pm",
-      "package" : "Math::Disarrange::List"
-   }
-]

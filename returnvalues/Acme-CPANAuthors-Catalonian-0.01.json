@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use Acme::CPANAuthors::Register ( ALEXM     => 'Alex Muntada',\n                                  BREQUESEN => 'Bernat Requesens',\n                                  DIEGOK    => 'Diego Kuperman',\n                                  ENELL     => 'Enrique Nell',\n                                  FXN       => 'Xavier Noria',\n                                  JLMARTIN  => 'Jose Luis Martínez',\n                                  MRUIZ     => 'Miquel Ruiz',\n                                )",
-      "file" : "/var/tmp/arv_TXcSXq/Acme-CPANAuthors-Catalonian-0.01/lib/Acme/CPANAuthors/Catalonian.pm",
-      "package" : "Acme::CPANAuthors::Catalonian"
-   }
-]

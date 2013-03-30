@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '1.00'",
-      "file" : "/var/tmp/arv_oyw1SX/Debug-1.00/Debug/Message.pm",
-      "package" : "Debug::Message"
-   }
-]

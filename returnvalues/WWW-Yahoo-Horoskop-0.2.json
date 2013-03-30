@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub horoskop {\n\tmy $zwei = shift || 'widder';\n\tmy $erst = shift || 'tag';\n\tmy $text;\n\n\tif($erst eq \"woche\"){\n\t\tmy $url = get(\"http://de.lifestyle.yahoo.com/sterne/wochenhoroskop-$zwei.html\");\n\t\t($text) = ($url =~ /(<p><b>Gesundheit\\/Fitness<\\/b>.+?)\"Lust\"-Partner:/s);\n\t\t$text =~ s/<(.+?)>//g;\n\t\t$text =~ s/[\\n\\r]//g;\n\t\t$text =~ s/&nbsp;Beruf\\/Geld\\s*/\\n\\nBeruf\\/Geld\\n/g;\n\t\t$text =~ s/Gesundheit\\/Fitness\\s*/Gesundheit\\/Fitness\\n/g;\n\t\t$text =~ s/&nbsp;Liebe\\/Partnerschaft\\s*/\\n\\nLiebe\\/Partnerschaft\\n/g;\n\t}else{\n\t\tmy $url = get(\"http://de.lifestyle.yahoo.com/sterne/horoskop-$zwei.html\");\n\t\t($text) = ($url =~ /height=12 width=12 alt=stern>([^><]*)<!-- daily horoscope daily \\d+ -->/s);\n\t\t$text =~ s/[\\n\\r]//g;\n\t}\n\t$text =~ s/�/ae/g;\n\t$text =~ s/�/ue/g;\n\t$text =~ s/�/oe/g;\n\t$text =~ s/�/Ae/g;\n\t$text =~ s/�/Ue/g;\n\t$text =~ s/�/Oe/g;\n\t$text =~ s/�/ss/g;\n\treturn($text);\n}",
-      "file" : "/var/tmp/arv_2uQz2F/WWW-Yahoo-Horoskop/Horoskop.pm",
-      "package" : "WWW::Yahoo::Horoskop"
-   }
-]

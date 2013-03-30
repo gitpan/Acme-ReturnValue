@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getfarminfo {\n   my ($fc) = @_;\n   my $usehost = $fc->masterhost(); \n   my $cmd = \"rsh $usehost $Citrix::binpath/ctxqserver -app\";\n   local $SIG{'ALRM'} = sub {die(\"RSH Timeout\\n\");}; \n   alarm(8);\n   my $fh;\n   eval {\n      my $ok = open($fh, \"$cmd |\");\n      if (!$ok) {\n        $fc->{'msg'} = \"$!/$?\";print(\"Failed to open the pipe\");\n        die(\"$!/$?\");\n      }\n   };\n   alarm(0);\n   if ($@) {\n      $fc->{'msg'} = $@;\n      close($fh);\n      return(undef);\n   }\n   my $arr = [];\n   my $atts = ['APPID', 'PROTO', 'SERVER', 'LOAD',];\n   \n   my $err = parse($fh, $arr, $atts, 3);\n   if ($err) {print(\"Failed ....\");return(undef);}\n   \n   $fc->{'apphost'} = $arr;\n   my %apphost;\n   my %hosts = map({\n      $_->{'SERVER'} =~ tr/A-Z/a-z/;\n      $apphost{$_->{'APPID'}}->{$_->{'SERVER'}} = 1;\n      ($_->{'SERVER'}, 1);\n   } @$arr);\n   $fc->{'hosts'} = [sort(keys(%hosts))];\n   $fc->{'apps'} = [sort(keys(%apphost))];\n   \n   $fc->{'apphost'} = \\%apphost; \n   return($arr);\n}",
-      "file" : "/var/tmp/arv_ndbbDM/Citrix-0.25/Citrix/Farm.pm",
-      "package" : "Citrix::Farm"
-   }
-]

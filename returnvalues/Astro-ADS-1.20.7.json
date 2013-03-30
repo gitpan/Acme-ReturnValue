@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = '1.20.7'\n\n1",
-      "file" : "/var/tmp/arv_apO2Pw/Astro-ADS-1.20.7/ADS.pm",
-      "package" : "Astro::ADS"
-   }
-]

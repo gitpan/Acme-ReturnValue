@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _get_file_verdicts_color_mappings\n{\n    my $self = shift;\n\n    if (exists($ENV{PERL_HARNESS_VERDICT_COLORS}))\n    {\n        my $mapping_string = $ENV{PERL_HARNESS_VERDICT_COLORS};\n\n        my @assignments = split(/\\s*;\\s*/, $mapping_string);\n        return \n        [\n            individual_test_file_verdict_colors => \n            {map { /\\A([^=]*)=(.*)\\z/ms ? ($1 => $2) : () } @assignments}\n        ];\n    }\n    else\n    {\n        return [];\n    }\n}",
-      "file" : "/var/tmp/arv_m6aLOo/Test-Run-Plugin-ColorFileVerdicts-0.0122/lib/Test/Run/CmdLine/Plugin/ColorFileVerdicts.pm",
-      "package" : "Test::Run::CmdLine::Plugin::ColorFileVerdicts"
-   }
-]

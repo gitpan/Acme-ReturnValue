@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub greek2num ($;$) {\n\tmy($n,$ret,$thousands,$digit) = $_[0];\n\n\t$n =~ s/^\\s+//;\n\n\twhile (length $n) {\n\t\t$thousands = $n =~ s/^([͵,]+)// && length $1;\n\t\tif($n =~ s/^στ//i) {\n\t\t\t$digit = 6;\n\t\t}\n\t\telsif(exists $greek_digit_2_num{substr $n,0,1}) {\n\t\t\t$digit = $greek_digit_2_num{substr $n,0,1,''};\n\t\t}\n\t\telse {\n\t\t\t$n =~ s/^['’ʹ´΄]?\\s*//; \n\t\t\tlength $n or last;      \n\t\t\twarnings::warnif(       \n\t\t\t    numeric =>\n\t\t\t    qq/Argument \"$_[0]\" isn't numeric in greek2num/\n\t\t\t);\n\t\t\tlast;\n\t\t}\n\t\t$ret += $digit * 1000**$thousands;\n\t}\n\t$ret;\n}",
-      "file" : "/var/tmp/arv_dk7dws/Convert-Number-Greek-0.02a/lib/Convert/Number/Greek.pm",
-      "package" : "Convert::Number::Greek"
-   }
-]

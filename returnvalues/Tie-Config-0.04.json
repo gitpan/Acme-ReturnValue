@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "3.14",
-      "file" : "/var/tmp/arv_CZd5Du/Tie-Config-0.04/Config.pm",
-      "package" : "Tie::Config"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub scalar {\n    return \\( $_[0]->flat );\n}\n\n1",
-      "file" : "/var/tmp/arv_vEj2ky/Pugs-Compiler-Rule-0.37/lib/Pugs/Runtime/Match.pm",
-      "package" : "Pugs::Runtime::Match"
-   }
-]

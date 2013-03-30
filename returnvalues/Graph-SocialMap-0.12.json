@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub pairs {\n    my @list = @_;\n    my @pairs;\n    for my $i (0..$#list) {\n\tfor my $j ($i+1..$#list) {\n\t    my ($a,$b) = @list[$i,$j];\n\t    push @pairs, [$a,$b];\n\t}\n    }\n    return @pairs;\n}",
-      "file" : "/var/tmp/arv_0rFKYq/Graph-SocialMap-0.12/lib/Graph/SocialMap.pm",
-      "package" : "Graph::SocialMap"
-   }
-]

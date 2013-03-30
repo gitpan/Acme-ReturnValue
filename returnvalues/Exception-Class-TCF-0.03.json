@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub assert (&@) {\n    my $block = shift;\n    if ( not $block->() ) {\n        my $exc = Exception::Class::TCF::AssertFailure->new( @_ );\n        &Exception::Class::TCF::throw($exc);\n    }\n}",
-      "file" : "/var/tmp/arv_HTOCop/Exception-Class-TCF-0.03/lib/Exception/Class/TCF/AssertFailure.pm",
-      "package" : "Exception::Class::TCF::AssertFailure"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub set_uid {\n\tmy $self = shift;\n\tmy $uid = shift;\n\tprint STDERR \"Set Intercepted uid $uid, adding 10 for kicks\\n\";\n\t$uid = $uid + 10;\n\treturn $uid;\n}",
-      "file" : "/var/tmp/arv__ZY4Bt/ObjectRowMap-0.11/ObjectRowMapTest.pm",
-      "package" : "ObjectRowMapTest"
-   }
-]

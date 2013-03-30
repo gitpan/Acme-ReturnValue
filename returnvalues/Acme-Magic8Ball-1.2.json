@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ask {\n    my $question = shift || return \"You must ask a question!\";\n\n    my $pos = tell DATA;\n    my @answers = map { chomp; $_ } <DATA>;\n    seek DATA, $pos,0;\n    return $answers[rand @answers ];\n}",
-      "file" : "/var/tmp/arv_ylOjPy/Acme-Magic8Ball-1.2/lib/Acme/Magic8Ball.pm",
-      "package" : "Acme::Magic8Ball"
-   }
-]

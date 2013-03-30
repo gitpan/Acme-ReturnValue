@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub dump\n{\n    my $self = shift;\n    for (keys %$self) {\n\tnext if $_ eq 'loc';\n\tprint \"$_ = $self->{$_}\\n\";\n    }\n    for (keys %{$self->{'loc'}}) {\n\tmy @rules = $self->rules($_);\n\tprint \"$_: \", join(\"; \", @rules), \"\\n\";\n    }\n}",
-      "file" : "/var/tmp/arv_hkYzpQ/WWW-RobotRules-Extended/lib/WWW/RobotRules/Extended.pm",
-      "package" : "WWW::RobotRules::Extended"
-   }
-]

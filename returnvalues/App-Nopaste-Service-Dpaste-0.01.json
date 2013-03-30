@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub return {\n    my( $self, $mech ) = @_;\n\n    my $link = $mech->uri;\n\n    return (1, $link);\n}\n\n1 && q[Electric Wizard - Return Trip]",
-      "file" : "/var/tmp/arv_yfUBSX/App-Nopaste-Service-Dpaste-0.01/lib/App/Nopaste/Service/Dpaste.pm",
-      "package" : "App::Nopaste::Service::Dpaste"
-   }
-]

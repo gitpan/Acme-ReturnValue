@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub GetRelativeUrls {\n\tmy($url) = @_;\n\n$url     =~ m|^(http://)([^/\\?\\r\\n]*)|i;\nmy $host    = $2;\n\n\nmy $baseurl = \"http://$host\";\n\n\nmy $relurl;\n\nif($url     =~ m|^(http://)(.*)[/]+|i) {$relurl  = \"http://$2\";}\nelse {$relurl = $baseurl;}\n\n\nmy $relurl2;\n\nif($relurl    =~ m|^(http://)(.*)[/]+|i) {$relurl2  = \"http://$2\";}\nelse {$relurl2 = $baseurl;}\n\nreturn ($baseurl,$relurl,$relurl2);\n}",
-      "file" : "/var/tmp/arv_hZ7d7c/lib/TAPORlib.pm",
-      "package" : "TAPORlib"
-   }
-]

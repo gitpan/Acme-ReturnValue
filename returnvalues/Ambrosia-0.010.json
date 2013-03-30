@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n    package Ambrosia::Addons::Accessor::Result;\n    use strict;\n    use warnings;\n\n    our $VERSION = 0.010;\n\n    use Ambrosia::Meta;\n    use Ambrosia::Utils::Enumeration property => __state => PERMIT => 1, BAD_PASSWORD => 2, DENIED => 3, REDIRECT => 4;\n    class sealed\n    {\n        private => [qw/__state/],\n    };\n\n    1;\n}",
-      "file" : "/var/tmp/arv_SmHO7t/Ambrosia-0.010/lib/Ambrosia/Addons/Accessor.pm",
-      "package" : "Ambrosia::Addons::Accessor"
-   }
-]

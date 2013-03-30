@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub catch (&;@) {\n    my $cb = shift;\n    Try::Tiny::catch {\n        warn \"Caught exception: $_\";\n        $cb->(@_);\n    };\n}",
-      "file" : "/var/tmp/arv_9syzP4/Try-Tiny-WarnCaught-0.01/lib/Try/Tiny/WarnCaught.pm",
-      "package" : "Try::Tiny::WarnCaught"
-   }
-]

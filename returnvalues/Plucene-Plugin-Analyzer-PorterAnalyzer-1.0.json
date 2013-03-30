@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub tokenstream {\n    my $self = shift;\n    return Plucene::Analysis::PorterStemFilter->new({\n            input    => Plucene::Analysis::LowerCaseTokenizer->new(@_),\n        });\n}",
-      "file" : "/var/tmp/arv_DJ1WDB/Plucene-Plugin-Analyzer-PorterAnalyzer-1.0/PorterAnalyzer.pm",
-      "package" : "Plucene::Plugin::Analyzer::PorterAnalyzer"
-   }
-]

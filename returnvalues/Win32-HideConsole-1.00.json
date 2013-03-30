@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub hide_console\n{\n\tmy $GetConsoleTitle = new Win32::API('kernel32', 'GetConsoleTitle', 'PN', 'N');\n\tmy $SetConsoleTitle = new Win32::API('kernel32', 'SetConsoleTitle', 'P', 'N');\n\tmy $FindWindow = new Win32::API('user32', 'FindWindow', 'PP', 'N');\n\tmy $ShowWindow = new Win32::API('user32', 'ShowWindow', 'NN', 'N');\n\tmy $old_title = \" \" x 1024;\n\t$GetConsoleTitle->Call($old_title, 1024);\n\tmy $title = \"PERL-$$-\".Win32::GetTickCount();\n\t$SetConsoleTitle->Call($title);\n\tWin32::Sleep(100);\n\t$hw = $FindWindow->Call(0, $title);\n\t$SetConsoleTitle->Call($old_title);\n\t$ShowWindow->Call($hw, SW_HIDE);\n}",
-      "file" : "/var/tmp/arv_tjt3g1/Win32-HideConsole-1.00/lib/Win32/HideConsole.pm",
-      "package" : "Win32::HideConsole"
-   }
-]

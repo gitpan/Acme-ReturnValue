@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Data::Sync::Advanced",
-      "file" : "/var/tmp/arv_1FL6Rn/Data-Sync-0.08/lib/Data/Sync/Advanced.pm",
-      "package" : "Data::Sync::Advanced"
-   }
-]

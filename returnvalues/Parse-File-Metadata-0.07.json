@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_exception {\n    my $self = shift;\n    return $self->{exception};\n}",
-      "file" : "/var/tmp/arv_jRfCmS/Parse-File-Metadata-0.07/lib/Parse/File/Metadata.pm",
-      "package" : "Parse::File::Metadata"
-   }
-]

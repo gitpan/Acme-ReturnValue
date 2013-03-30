@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$Mirrored = qr/[\\Q$Mirrored\\E]/o",
-      "file" : "/var/tmp/arv_ftKly_/Text-Bidi-0.03/lib/Text/Bidi/mirrored.pm",
-      "package" : "Text::Bidi"
-   }
-]

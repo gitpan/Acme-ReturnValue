@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "die \"No DBM package was successfully found or installed\"",
-      "file" : "/var/tmp/arv_8QMYiL/Memoize-1.03/Memoize/AnyDBM_File.pm",
-      "package" : "Memoize::AnyDBM_File"
-   }
-]

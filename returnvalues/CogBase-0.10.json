@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub connect {\n    my ($class, $path) = @_;\n    my $connection_class = $class->connection_class;\n    eval \"require $connection_class; 1\"\n        or die $@;\n    $connection_class->connection($path);\n}",
-      "file" : "/var/tmp/arv_S2Mfev/CogBase-0.10/lib/CogBase.pm",
-      "package" : "CogBase"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub init\n{\n\tmy $s = Apache->server ();\n\tmy $l = $s->log ();\n\n\t$REGEXEN =\n\t{\n\t\tqr#yahoo\\.#\t\t=>\t'p',\n\t\tqr#altavista\\.#\t\t=>\t'q',\n\t\tqr#msn\\.#\t\t=>\t'q',\n\t\tqr#voila\\.#\t\t=>\t'kw',\n\t\tqr#lycos\\.#\t\t=>\t'query',\n\t\tqr#search\\.terra\\.#\t=>\t'query',\n\t\tqr#google\\.(?!yahoo)#\t=>\t'q',\n\t\tqr#alltheweb\\.com#\t=>\t'q',\n\t\tqr#netscape\\.#\t\t=>\t'search',\n\t\tqr#northernlight\\.#\t=>\t'qr',\n\t\tqr#dmoz\\.org#\t\t=>\t'search',\n\t\tqr#search\\.aol\\.com#\t=>\t'query',\n\t\tqr#www\\.search\\.com#\t=>\t'q',\n\t\tqr#askjeeves\\.#\t\t=>\t'ask',\n\t\tqr#hotbot\\.#\t\t=>\t'mt',\n\t\tqr#metacrawler\\.#\t=>\t'general'\n\t};\n\n\t$TIMEOUT = (defined $ENV{'DBI_timeout'} ? $ENV{'DBI_timeout'} : 120);\n\tconnect_dbi ($l);\n\n\tApache->server->register_cleanup (\\&cleanup);\n\n\t$SERVER = {};\n\n\tmy $sth = $DBH->prepare (\"SELECT domain, field FROM config\");\n\t$sth->execute ();\n\twhile (my ($d, $f) = $sth->fetchrow_array ())\n\t{\n\t\t$SERVER->{$d} = $f;\n\t}\n\t$sth->finish ();\n\n\t$l->debug (\"Apache::SearchEngineLog: init done\");\n\n\treturn 1;\n}",
-      "file" : "/var/tmp/arv_ZGvHjQ/Apache-SearchEngineLog-0.51/SearchEngineLog.pm",
-      "package" : "Apache::SearchEngineLog"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "unless(caller()) {\n    require Data::Dumper;\n    if(@ARGV) {\n        for my $file( @ARGV ) {\n            if( -e $file ) {\n                my $LX = new HTML::LinkExtractor( );\n                $LX->parse( $file );\n                print Data::Dumper::Dumper($LX->links);\n                undef $LX;\n            } else {\n                warn \"The file `$file' doesn't exist\\n\";\n            }\n        }\n        \n    } else {\n    \n        my $INPUT = q{\nCOUNT THEM BOYS AND GIRLS, LINKS OUTGHT TO HAVE 9 ELEMENTS.\n\n1 <!DOCTYPE HTML SYSTEM \"http://www.w3.org/DTD/HTML4-strict.dtd\">\n2 <meta HTTP-EQUIV=\"Refresh\" CONTENT=\"5; URL=http://www.foo.com/foo.html\">\n3 <base href=\"http://perl.org\">\n4 <a href=\"http://www.perlmonks.org\">Perlmonks.org</a>\n<p>\n\n5 <a href=\"#BUTTER\"  href=\"#SCOTCH\">\n    hello there\n6 <img src=\"#AND\" src=\"#PEANUTS\">\n7    <a href=\"#butter\"> now </a>\n</a>\n\n8 <q CITE=\"http://www.shakespeare.com/\">To be or not to be.</q>\n9 <blockquote CITE=\"http://www.stonehenge.com/merlyn/\">\n    Just Another Perl Hacker,\n</blockquote>\n    };\n\n        my $LX = new HTML::LinkExtractor();\n        $LX->parse(\\$INPUT);\n\n        print scalar(@{$LX->links()}).\" we GOT\\n\";\n        print Data::Dumper::Dumper( $LX->links() );\n    }\n    \n}",
-      "file" : "/var/tmp/arv_Dj5qfS/HTML-LinkExtractor-0.13/LinkExtractor.pm",
-      "package" : "HTML::LinkExtractor"
-   }
-]

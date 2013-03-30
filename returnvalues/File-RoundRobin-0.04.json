@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {\n    my $self = shift;\n    \n    $self->close();\n}\n\n\n1",
-      "file" : "/var/tmp/arv_D5jMbP/File-RoundRobin-0.04/lib/File/RoundRobin.pm",
-      "package" : "File::RoundRobin"
-   }
-]

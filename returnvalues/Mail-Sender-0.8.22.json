@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub GetHandle {\n\tmy $self = shift();\n\tunless (@Mail::Sender::IO::ISA) {\n\t\teval \"use Symbol;\";\n\t\teval $pseudo_handle_code;\n\t}\n\tmy $handle = gensym();\n\ttie *$handle, 'Mail::Sender::IO', $self;\n\treturn $handle;\n}",
-      "file" : "/var/tmp/arv_G01uTR/Mail-Sender-0.8.22/Sender.pm",
-      "package" : "Mail::Sender"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "on _stop => run {\n    call get(SESSION) => bot 'shutdown';\n}",
-      "file" : "/var/tmp/arv_zu_03l/Bot-Net-0.1.0/lib/Bot/Net/Bot.pm",
-      "package" : "Bot::Net::Bot"
-   }
-]

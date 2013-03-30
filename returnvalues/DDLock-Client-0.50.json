@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "DESTROY {\n    my $self = shift;\n    $self->run_hook('DESTROY');\n    $self->release if $$ == $self->{pid};\n}\n\n1",
-      "file" : "/var/tmp/arv_G0eWcT/DDLock-Client-0.50/lib/DDLock/Client/File.pm",
-      "package" : "DDLock::Client::File"
-   }
-]

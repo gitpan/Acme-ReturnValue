@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$CHARS=<<EOF",
-      "file" : "/var/tmp/arv_3baSkV/Lingua-ZH-ChineseNaming-0.02/ChineseNaming.pm",
-      "package" : "Lingua::ZH::ChineseNaming"
-   }
-]

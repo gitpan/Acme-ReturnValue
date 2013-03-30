@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "42",
-      "file" : "/var/tmp/arv_akyxA5/Dist-Zilla-Role-MetaCPANInterfacer-0.96/lib/Dist/Zilla/Role/MetaCPANInterfacer.pm",
-      "package" : "Dist::Zilla::Role::MetaCPANInterfacer"
-   }
-]

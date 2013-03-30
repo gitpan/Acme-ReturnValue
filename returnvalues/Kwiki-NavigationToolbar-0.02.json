@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub html {\n    my $nav = $self->pages->new_page($self->config->navigation_toolbar_page);\n    my @navs = split/\\n+/,$nav->content;\n    my $content = join('|', map { \"<a href=\\\"?$_->{name}\\\">$_->{display}</a>\" }\n\t\t\t   map {\n\t\t\t       my ($name,$display) = split/,/;\n\t\t\t       $display ||= $name;\n\t\t\t       {name => $name, display => $display,}\n\t\t\t   }\n\t\t       @navs);\n    $self->template->process(\n\t$self->navigation_toolbar_template,\n\tnavigation_toolbar_content => $content\n       );\n}",
-      "file" : "/var/tmp/arv_RBLSah/Kwiki-NavigationToolbar-0.02/lib/Kwiki/NavigationToolbar.pm",
-      "package" : "Kwiki::NavigationToolbar"
-   }
-]

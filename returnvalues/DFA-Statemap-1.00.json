@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub emptyStateStack {\n    my $self = shift;\n    $self->{_state_stack} = [];\n}",
-      "file" : "/var/tmp/arv_vYbYei/DFA-Statemap-1.00/lib/DFA/Statemap.pm",
-      "package" : "DFA::Statemap"
-   }
-]

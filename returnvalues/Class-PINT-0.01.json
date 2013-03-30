@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _dec2bin {\n    my ($value,$size) = @_;\n    $size ||= 32;\n    my $decstring = 0;\n    if ($size > 32) {\n\t$decstring = unpack(\"B$size\", pack(\"N\", $value));\n    } else {\n\tmy $bignum = $value = new Math::BigInt (\"0b\".substr(\"0\" x LENGTH . $value, - LENGTH ));\n\t$decstring = $bignum->as_dec();\n    }\n    return $decstring;\n}",
-      "file" : "/var/tmp/arv_qUGh9P/Class-PINT-0.01/lib/Class/PINT/DataTypes/Bitmask.pm",
-      "package" : "Class::PINT::DataTypes::Bitmask"
-   }
-]

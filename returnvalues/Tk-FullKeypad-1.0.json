@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _shift {\n    my $this = shift;\n    $this->{_shift} = !$this->{_shift};\n    my $kpshift = $this->Subwidget(\"KPShift\");\n    $kpshift->configure(-text => $this->{_shift} ? \"SHIFT\" : \"Shift\");\n}",
-      "file" : "/var/tmp/arv_jgh04b/Tk-FullKeypad-1.0/FullKeypad.pm",
-      "package" : "Tk::FullKeypad"
-   }
-]

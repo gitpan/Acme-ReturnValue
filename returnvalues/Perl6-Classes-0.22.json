@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "FILTER {\n    $_ = filter;\n}",
-      "file" : "/var/tmp/arv_wvmk43/Perl6-Classes-0.22/Classes.pm",
-      "package" : "Perl6::Classes"
-   }
-]

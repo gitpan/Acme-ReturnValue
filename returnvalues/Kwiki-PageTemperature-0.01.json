@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub blue {\n    int($self->page_age/$self->color_divisor);\n}",
-      "file" : "/var/tmp/arv_TLm5x1/Kwiki-PageTemperature-0.01/lib/Kwiki/PageTemperature.pm",
-      "package" : "Kwiki::PageTemperature"
-   }
-]

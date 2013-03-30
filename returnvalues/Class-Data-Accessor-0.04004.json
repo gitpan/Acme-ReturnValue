@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub mk_classaccessors {\n    my ($declaredclass, @attributes) = @_;\n\n    foreach my $attribute (@attributes) {\n        $declaredclass->mk_classaccessor($attribute);\n    }\n}",
-      "file" : "/var/tmp/arv_CvHUhP/Class-Data-Accessor-0.04004/lib/Class/Data/Accessor.pm",
-      "package" : "Class::Data::Accessor"
-   }
-]

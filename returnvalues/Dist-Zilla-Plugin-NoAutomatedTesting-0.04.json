@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'NO SMOKING'",
-      "file" : "/var/tmp/arv_NkJkcv/Dist-Zilla-Plugin-NoAutomatedTesting-0.04/lib/Dist/Zilla/Plugin/NoAutomatedTesting.pm",
-      "package" : "Dist::Zilla::Plugin::NoAutomatedTesting"
-   }
-]

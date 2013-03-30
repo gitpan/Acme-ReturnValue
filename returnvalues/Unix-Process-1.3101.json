@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub AUTOLOAD {\n    die \"unprocessable garbage: $AUTOLOAD\" unless $AUTOLOAD =~ m/::(\\w+)$/;\n    my $sub = $1;\n\n    my $f = sub {\n        my $this = shift;\n        my $pid  = shift; $pid = $$ unless $pid and int($pid);\n        my $result = eval { capturex($PS_PROGRAM, '-o', $sub, '-p', $pid) };\n\n        croak $@ if $@;\n\n        return $1 if $result =~ m/[\\r\\n]\\s*(.+?)\\s*[\\r\\n]/ms;\n        return;\n    };\n\n    {\n        no strict 'refs';\n        *{$AUTOLOAD} = $f;\n    }\n    goto &$f;\n}",
-      "file" : "/var/tmp/arv_RZefnp/Unix-Process-1.3101/Process.pm",
-      "package" : "Unix::Process"
-   }
-]

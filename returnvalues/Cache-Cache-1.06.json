@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub set_auto_purge_on_get\n{\n}",
-      "file" : "/var/tmp/arv_zA48we/Cache-Cache-1.06/lib/Cache/NullCache.pm",
-      "package" : "Cache::NullCache"
-   }
-]

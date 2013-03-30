@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub pong\n{\n  my $self = shift;\n  my $data = shift;\n  my $from = $data->{from};\n  my $id = $data->{id};\n  $self->write(qq(<iq from='$self->{jid}' to='$from' id='$id' type='result'/>));\n  $self->{pingtimer} = time();\n}",
-      "file" : "/var/tmp/arv_MuuGqA/Net-SloppyXMPP-0.06/lib/Net/SloppyXMPP.pm",
-      "package" : "Net::SloppyXMPP"
-   }
-]

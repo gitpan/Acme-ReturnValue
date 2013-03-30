@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _depth_first {\n    my ($self, %argv) = @_;\n    my ($n, $code, $count) = @argv{'node', 'code', 'count'};\n    \n    if ( $n->address ){\n\tif ( defined $code && ref($code) eq \"CODE\" ){\n\t    $code->($n);\n\t}\n\t$$count++;\n    }\n    $self->_depth_first(node=>$n->left,  code=>$code, count=>$count) if ( defined $n->left  );\n    $self->_depth_first(node=>$n->right, code=>$code, count=>$count) if ( defined $n->right );\n}",
-      "file" : "/var/tmp/arv_3T5UgB/Net-IPTrie-0.7/lib/Net/IPTrie.pm",
-      "package" : "Net::IPTrie"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub trans_url {\n    my $text = shift;\n\n    $text =~s/(http|ftp|https)(:\\/\\/\\S+)([\\s\\)\\]\\}\\.,;:]*)/\\\\url{$1$2}$3/g;\n\n    return $text;\n}",
-      "file" : "/var/tmp/arv_JXyyWu/R-Comment2DocDraft-0.2/lib/R/Comment2DocDraft.pm",
-      "package" : "R::Comment2DocDraft"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub setup {\n\tmy $c = shift;\n\tmy $config_file = $c->config->{'config_file'} || 'config.json';\n\t$config_file = file($c->config->{'home'}, $config_file) unless file($config_file)->is_absolute;\n\topen CONFIG, \"<$config_file\"\n\t    or die \"failed to open $config_file for reading; $!\";\n\tlocal($/)=undef;\n\tmy $config = <CONFIG>;\n\tclose CONFIG;\n\tmy $options = jsonToObj($config);\n\tforeach my $key (keys %$options) {\n\t\tif (isa($key, 'Catalyst::Base')) {\n\t\t\t$key->config(delete $options->{$key});\n\t\t}\n\t}\n\t$c->config($options);\n\t$c->NEXT::setup;\n}",
-      "file" : "/var/tmp/arv_rnFKHC/Catalyst-Plugin-Config-JSON-0.03/lib/Catalyst/Plugin/Config/JSON.pm",
-      "package" : "Catalyst::Plugin::Config::JSON"
-   }
-]

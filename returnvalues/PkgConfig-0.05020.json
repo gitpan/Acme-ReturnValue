@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "exit(0)",
-      "file" : "/var/tmp/arv_byrWeL/PkgConfig-0.05020/lib/PkgConfig.pm",
-      "package" : "PkgConfig::Vars"
-   }
-]

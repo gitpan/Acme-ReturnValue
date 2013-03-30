@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub decode {  \n  my $self = shift;\n  my $unwrapped;\n  my $status = $self->{gss_ctx}->unwrap($_[0], $unwrapped, undef, undef);\n  $self->set_error(\"GSSAPI Error (decode): \" . $status), return\n    unless ($status);\n  return $unwrapped;\n}",
-      "file" : "/var/tmp/arv_i_MSzL/Authen-SASL-2.16/lib/Authen/SASL/Perl/GSSAPI.pm",
-      "package" : "Authen::SASL::Perl::GSSAPI"
-   }
-]

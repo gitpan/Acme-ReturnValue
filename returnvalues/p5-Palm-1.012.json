@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub mkpdbname {\n\tmy $name = shift;\n\t$name =~ s![%/\\x00-\\x19\\x7f-\\xff]!sprintf(\"%%%02X\",ord($&))!ge;\n\treturn $name;\n}",
-      "file" : "/var/tmp/arv_ttVA8q/p5-Palm-1.012/lib/Palm.pm",
-      "package" : "Palm"
-   }
-]

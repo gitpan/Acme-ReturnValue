@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q[defectus semper]",
-      "file" : "/var/tmp/arv_aj1zKO/Acme-CPAN-Testers-FAIL-0.02/lib/Acme/CPAN/Testers/FAIL.pm",
-      "package" : "Acme::CPAN::Testers::FAIL"
-   }
-]

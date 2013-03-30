@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _random_assign {\n    my $key = shift;\n    my $value = shift;\n    \n    if(rand() < 0.5) {\n        return ($key->[0] => $value->[0],\n                $key->[1] => $value->[1]);\n    }\n    else {\n        return ($key->[1] => $value->[0],\n                $key->[0] => $value->[1]);\n    }\n}",
-      "file" : "/var/tmp/arv_L_LRSL/Crypt-DNASequence-0.2/lib/Crypt/DNASequence.pm",
-      "package" : "Crypt::DNASequence"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub trailer {\n  my $self = shift;\n  <<EOT\n;\n}",
-      "file" : "/var/tmp/arv_JCh5AW/InfoBrief-0.14/InfoBrief.pm",
-      "package" : "InfoBrief"
-   }
-]

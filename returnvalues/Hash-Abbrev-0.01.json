@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "__PACKAGE__ if 'first require'",
-      "file" : "/var/tmp/arv_G2Zywl/Hash-Abbrev-0.01/lib/Hash/Abbrev.pm",
-      "package" : "Hash::Abbrev"
-   }
-]

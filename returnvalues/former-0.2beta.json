@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _cleanup\n{\n  my ($str) = @_;\n  \t\t\t\t     \n  $str =~ /^\"(.+)\"$/o && return ($1);\n  \n  $str =~ s/\\s/ /og;  \t\t\n  $str =~ tr/ / /s;\t\t\n  \n  return ($str);\n}",
-      "file" : "/var/tmp/arv_tLxfB9/ConfigFile.pm",
-      "package" : "ConfigFile"
-   }
-]

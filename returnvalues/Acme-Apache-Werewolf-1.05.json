@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'His hair was perfect'",
-      "file" : "/var/tmp/arv_F9rEzC/Acme-Apache-Werewolf-1.05/lib/Acme/Apache/Werewolf.pm",
-      "package" : "Acme::Apache::Werewolf"
-   }
-]

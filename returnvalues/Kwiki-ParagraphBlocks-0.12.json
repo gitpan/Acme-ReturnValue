@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub to_html {\n    my $block = Kwiki::Formatter::Paragraph->new(\n        hub => $self->hub, \n        text => $self->block_text,\n    );\n    $block->parse_phrases;\n    my $html = $block->to_html;\n    $html =~ s/.*?<p.*?>\\n?(.*)<\\/p>.*/$1/s;\n    $html =~ s/\\n/<br \\/>\\n/g;\n    $html =~ s/^( +)/'&nbsp;' x length($1)/gem;\n    return \"<p>\\n$html</p>\";\n}",
-      "file" : "/var/tmp/arv_QE6xsR/Kwiki-ParagraphBlocks-0.12/lib/Kwiki/ParagraphBlocks.pm",
-      "package" : "Kwiki::ParagraphBlocks"
-   }
-]

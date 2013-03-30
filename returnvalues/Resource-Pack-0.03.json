@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "no Resource::Pack",
-      "file" : "/var/tmp/arv_rN5iXh/Resource-Pack-0.03/lib/Resource/Pack/FromFile.pm",
-      "package" : "Resource::Pack::FromFile"
-   }
-]

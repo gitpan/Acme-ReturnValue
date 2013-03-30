@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub to_gpx {\n    my $self = shift;\n\n    my $gpx = Geo::Gpx->new;\n    my @points;\n    foreach my $latlng ( @{$self->{latlng}} ) {\n        push @points, { lat => $latlng->[0], lon => $latlng->[1] };\n    }\n    my $tracks = [ { name => $self->{url},\n        segments => [ { points => \\@points, } ], } ];\n    $gpx->tracks($tracks);\n\n    return $gpx->xml( '1.0' );\n}",
-      "file" : "/var/tmp/arv_OPxcDT/Strava-GPX-0.01/lib/Strava/GPX.pm",
-      "package" : "Strava::GPX"
-   }
-]

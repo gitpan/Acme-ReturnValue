@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "_LoadPCSCLibrary()",
-      "file" : "/var/tmp/arv_vjTpiU/pcsc-perl-1.4.10/PCSC.pm",
-      "package" : "Chipcard::PCSC"
-   }
-]

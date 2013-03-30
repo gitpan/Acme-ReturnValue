@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our @V = (\n  V(\n    'html',\n\n    layout => sub {\n      my ($self, $v, @content) = @_;\n      html(\n        head(\n          title(\"unicode codepoints\"),\n          style($self->_css),\n        ),\n        body(\n          x(@content),\n        ),\n      )->as_HTML;\n    },\n\n    _css => sub {qq|\n      body {\n        font-size: 10pt;\n        background: $C->{bg};\n        color: $C->{fg};\n      }\n      a {\n        color: $C->{a};\n        text-decoration: none;\n      }\n      a:hover {\n        color: $C->{ah};\n      }\n      td {\n        padding: 8px;\n        width: 88px;\n        font-family: monospace;\n      }\n      tr td:last-child {\n        font-family: sans-serif;\n      }\n    |},\n\n    home => sub {\n      my ($self, $v) = @_;\n      div(\n        x($self->_pager($v)),\n        table(\n          map { \n            my $o = ord($_);\n            &tr(\n              td(sprintf('0x%04X', $o)),\n              td(sprintf('&#x%04X;', $o)),\n              td($_),\n            ) \n          } @{$v->{chars}}\n        ),\n        x($self->_pager($v)),\n      )->as_HTML;\n    },\n\n    _pager => sub {\n      my ($self, $v) = @_;\n      div(\n        a({ href => R('Home', $v->{prev}) }, \"<prev\"),\n        x(\" | \"),\n        a({ href => R('Home', $v->{next}) }, \"next>\"),\n      )->as_HTML;\n    },\n\n  ),\n)",
-      "file" : "/var/tmp/arv_SUBjFF/Squatting-0.81/eg/UniCodePoints.pm",
-      "package" : "UniCodePoints"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub tokenstream {\n\tmy $self = shift;\n\n\tmy @stopwords = keys %{ Lingua::StopWords::getStopWords($LANG) };\n\treturn Plucene::Analysis::StopFilter->new({\n\t\tinput => Plucene::Plugin::Analyzer::SnowballFilter->new({\n\t\t\tinput => Plucene::Analysis::Standard::StandardTokenizer->new(@_)\n\t\t}),\n\t\tstoplist => \\@stopwords,\n\t});\n}",
-      "file" : "/var/tmp/arv__YHV1s/Plucene-Plugin-Analyzer-SnowballAnalyzer-1.1/lib/Plucene/Plugin/Analyzer/SnowballAnalyzer.pm",
-      "package" : "Plucene::Plugin::Analyzer::SnowballAnalyzer"
-   }
-]

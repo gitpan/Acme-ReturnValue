@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "die \"DB_File::SV18x is a dummy package without functionality.\nPlease try DB_File::SV185 or DB_File::SV186, whatever has been\nbuilt on your system\"",
-      "file" : "/var/tmp/arv_Vt3aup/DB_File-SV18x-kit-0.06/SV18x.pm",
-      "package" : "DB_File::SV18x"
-   }
-]

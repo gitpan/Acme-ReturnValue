@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"this is not an interesting return value\"",
-      "file" : "/var/tmp/arv_xPEFZz/Unicode-Digits-20090607/lib/Unicode/Digits.pm",
-      "package" : "Unicode::Digits"
-   }
-]

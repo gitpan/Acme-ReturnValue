@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"48102931829 minutes remaining\"",
-      "file" : "/var/tmp/arv_pniZhz/Acme-ProgressBar-1.126/lib/Acme/ProgressBar.pm",
-      "package" : "Acme::ProgressBar"
-   }
-]

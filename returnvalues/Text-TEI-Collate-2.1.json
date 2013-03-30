@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "my $end_msg = 'get a printing press already'",
-      "file" : "/var/tmp/arv_D0TF_0/Text-TEI-Collate-2.1/lib/Text/TEI/Collate/Manuscript.pm",
-      "package" : "Text::TEI::Collate::Manuscript"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _load_magick_module {\n    my $module_name = shift;\n    return eval \"require $module_name\";\n}",
-      "file" : "/var/tmp/arv_nGoG46/CGI-Uploader-2.18/lib/CGI/Uploader/Transform/ImageMagick.pm",
-      "package" : "CGI::Uploader::Transform::ImageMagick"
-   }
-]

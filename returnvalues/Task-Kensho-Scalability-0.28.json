@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.28'",
-      "file" : "/var/tmp/arv_31gn92/Task-Kensho-Scalability-0.28/lib/Task/Kensho/Scalability.pm",
-      "package" : "Task::Kensho::Scalability"
-   }
-]

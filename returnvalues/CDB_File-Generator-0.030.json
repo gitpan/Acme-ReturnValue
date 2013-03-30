@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub gen_cdb_input ($$) {\n    my $key=shift;\n    my $value=shift;\n\n    return \"+\" . length($key) . \",\" . length($value) . \":\" \n\t. $key . \"->\" . $value . \"\\n\";\n}",
-      "file" : "/var/tmp/arv_C7XKIy/CDB_File-Generator-0.030/lib/CDB_File/Generator.pm",
-      "package" : "CDB_File::Generator"
-   }
-]

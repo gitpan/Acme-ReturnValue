@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub allowedOperators{\n\n    my ($self) = @_;\n\n    return (sort keys %kAllowedOperators);\n\n}",
-      "file" : "/var/tmp/arv_3A63n1/Microarray-GeneXplorer-0.11/lib/Microarray/DataMatrix.pm",
-      "package" : "Microarray::DataMatrix"
-   }
-]

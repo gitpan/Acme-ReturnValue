@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Edit::SubEtha",
-      "file" : "/var/tmp/arv_NXQek_/Kwiki-Edit-SubEtha-0.02/lib/Kwiki/Edit/SubEtha.pm",
-      "package" : "Kwiki::Edit::SubEtha"
-   }
-]

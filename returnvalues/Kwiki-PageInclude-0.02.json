@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub to_html {\n    my @args = split(/[\\s,]+/,$self->arguments);\n    my $ret;\n    for(@args) {\n        my $page = $self->hub->pages->new_from_name($_);\n        $ret .= $self->hub->formatter->text_to_html($page->content);\n    }\n    return $ret;\n}",
-      "file" : "/var/tmp/arv_6fwGFo/Kwiki-PageInclude-0.02/lib/Kwiki/PageInclude.pm",
-      "package" : "Kwiki::PageInclude"
-   }
-]

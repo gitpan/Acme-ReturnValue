@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "!!42",
-      "file" : "/var/tmp/arv_3FRNUA/TAP-SimpleOutput-0.001/lib/TAP/SimpleOutput.pm",
-      "package" : "TAP::SimpleOutput"
-   }
-]

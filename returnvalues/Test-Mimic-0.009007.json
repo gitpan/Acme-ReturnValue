@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\nmy $behavior = destringify( '$VAR1 = {\n          \\'order\\' => [\n                       [\n                         [\n                           2,\n                           {}\n                         ],\n                         [\n                           300,\n                           [\n                             200,\n                             \\'grandma\\'\n                           ]\n                         ]\n                       ]\n                     ]\n        };\n' );\n\n    sub grandma {\n        return execute( q<RecordMe>, q<grandma>, $behavior, \\@_ );\n    }\n}",
-      "file" : "/var/tmp/arv_XHvLyi/Test-Mimic-0.009007/.test_mimic_data/lib/RecordMe.pm",
-      "package" : "RecordMe"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n  $Task::PerlFormance::VERSION = '0.005';\n}",
-      "file" : "/var/tmp/arv_hjwVOs/Task-PerlFormance-0.005/lib/Task/PerlFormance.pm",
-      "package" : "Task::PerlFormance"
-   }
-]

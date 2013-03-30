@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Scheduled",
-      "bad" : "END {}",
-      "file" : "/var/tmp/arv_DFGTNQ/CGI-Mungo-1.6/lib/CGI/Mungo/Session.pm",
-      "package" : "CGI::Mungo::Session"
-   }
-]

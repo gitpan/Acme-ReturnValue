@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'I filter therefore I am'",
-      "file" : "/var/tmp/arv_3PVETx/POE-Filter-HTTP-Parser-1.06/lib/POE/Filter/HTTP/Parser.pm",
-      "package" : "POE::Filter::HTTP::Parser"
-   }
-]

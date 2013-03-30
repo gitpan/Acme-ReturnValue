@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub getcc{\nmy $arg = shift;\nmy $sock = IO::Socket::INET->new(PeerAddr => '192.168.0.5',\n                                 PeerPort => '5000',\n                                 Proto    => 'tcp',\n\t\t\t\t\t\t\t\t Type => SOCK_STREAM)\n\t\t\t\t\t\t\tor\n\t\t\tdie \"Could not open socket to CryoCon, $!\\n\";\n\nprint $sock \"$arg\";\n\nmy $line = <$sock>;\nprint \"$line\\n\";\nclose($sock);\n}",
-      "file" : "/var/tmp/arv_s6syfL/CryoTel-CryoCon-0.0.6/lib/CryoTel/CryoCon.pm",
-      "package" : "CryoTel::CryoCon"
-   }
-]

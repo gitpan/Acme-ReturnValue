@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'end of module Git::CPAN::Patch'",
-      "file" : "/var/tmp/arv_p5SeXz/Git-CPAN-Patch-1.1.0/lib/Git/CPAN/Patch.pm",
-      "package" : "Git::CPAN::Patch"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub database_item {\n\tmy $self = shift;\n\tmy ($request, $response) = @_;\n\n\tmy ($intid) = ($request->uri->path =~ /^\\/databases\\/\\d+\\/items\\/(\\d+)/);\n\tmy $dbh = $self->connect;\n\tmy $sth = $dbh->prepare(\n\t\t'SELECT filename FROM videometadata WHERE intid = ?');\n\t$sth->execute($intid);\n\n\tmy ($filename) = $sth->fetchrow_array;\n\topen $response->{handle}, '<', $filename;\n\n\t$response->streaming(1);\n}",
-      "file" : "/var/tmp/arv_palSDn/Net-DAAP-Server-MythTV-0.01/lib/Net/DAAP/Server/MythTV.pm",
-      "package" : "Net::DAAP::Server::MythTV"
-   }
-]

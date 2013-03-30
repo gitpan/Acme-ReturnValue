@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = 0.42",
-      "file" : "/var/tmp/arv_QoPqtt/Gateway-0.42/VERSION.pm",
-      "package" : "News::Gateway"
-   }
-]

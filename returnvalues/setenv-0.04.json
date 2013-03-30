@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub unimport {\n    shift;\n\n    if (@_) {\n        delete @ENV{@_};\n    }\n\n    else {\n        %ENV= ();\n    }\n\n    return;\n}",
-      "file" : "/var/tmp/arv_sthdZV/setenv-0.04/lib/setenv.pm",
-      "package" : "setenv"
-   }
-]

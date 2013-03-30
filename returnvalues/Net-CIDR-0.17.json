@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub cidrvalidate {\n    my $v=shift;\n\n    $v =~ s/\\s//g;\n\n    $v=lc($v);\n\n    my $suffix;\n\n    ($v, $suffix)=($1, $2) if $v =~ m@(.*)/(.*)@;\n\n    if (defined $suffix)\n    {\n\treturn undef unless $suffix =~ /^\\d+$/ &&\n\t    ($suffix eq \"0\" || $suffix =~ /^[123456789]/);\n    }\n\n    if ($v =~ /^([0-9\\.]+)$/ || $v =~ /^::ffff:([0-9\\.]+)$/ ||\n\t$v =~ /^:([0-9\\.]+)$/)\n    {\n\tmy $n=$1;\n\n\treturn undef if $n =~ /^\\./ || $n =~ /\\.$/ || $n =~ /\\.\\./;\n\n\tmy @o= split(/\\./, $n);\n\n\twhile ($#o < 3)\n\t{\n\t    push @o, \"0\";\n\t}\n\n\t$n=join(\".\", @o);\n\n\treturn undef if $#o != 3;\n\n\tforeach (@o)\n\t{\n\t    return undef if /^0./;\n\t    return undef if $_ < 0 || $_ > 255;\n\t}\n\n\tif ($v =~ /^::ffff/)\n\t{\n\t    $suffix=128 unless defined $suffix;\n\n\t    return undef if $suffix < 128-32;\n\n\t    $suffix -= 128-32;\n\t}\n\telse\n\t{\n\t    $suffix=32 unless defined $suffix;\n\t}\n\n\tforeach (addr2cidr($n))\n\t{\n\t    return $_ if $_ eq \"$n/$suffix\";\n\t}\n\treturn undef;\n    }\n\n    return undef unless $v =~ /^[0-9a-f:]+$/;\n\n    return undef if $v =~ /:::/ || $v =~ /^:[^:]/ || $v =~ /[^:]:$/\n\t|| $v =~ /::.*::/;\n\n    my @o=grep (/./, split(/:/, $v));\n\n    return undef if ($#o >= 8 || ($#o<7 && $v !~ /::/));\n\n    foreach (@o)\n    {\n\treturn undef if length ($_) > 4;\n    }\n\n    $suffix=128 unless defined $suffix;\n\n    foreach (addr2cidr($v))\n    {\n\treturn $_ if $_ eq \"$v/$suffix\";\n    }\n    return undef;\n}",
-      "file" : "/var/tmp/arv_kbesKm/Net-CIDR-0.17/CIDR.pm",
-      "package" : "Net::CIDR"
-   }
-]

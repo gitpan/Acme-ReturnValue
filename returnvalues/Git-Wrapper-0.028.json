@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub status {\n  my $self = shift;\n\n  return $self->RUN('status' , @_ )\n    unless $self->supports_status_porcelain;\n\n  my $opt  = ref $_[0] eq 'HASH' ? shift : {};\n  $opt->{$_} = 1 for qw<porcelain>;\n\n  my @out = $self->RUN(status => $opt, @_);\n\n  my $statuses = Git::Wrapper::Statuses->new;\n\n  return $statuses if !@out;\n\n  for (@out) {\n    my ($x, $y, $from, $to) = $_ =~ /\\A(.)(.) (.*?)(?: -> (.*))?\\z/;\n\n    if ($STATUS_CONFLICTS{\"$x$y\"}) {\n      $statuses->add('conflict', \"$x$y\", $from, $to);\n    }\n    elsif ($x eq '?' && $y eq '?') {\n      $statuses->add('unknown', '?', $from, $to);\n    }\n    else {\n      $statuses->add('changed', $y, $from, $to)\n        if $y ne ' ';\n      $statuses->add('indexed', $x, $from, $to)\n        if $x ne ' ';\n    }\n  }\n  return $statuses;\n}",
-      "file" : "/var/tmp/arv_XP6g3L/Git-Wrapper-0.028/lib/Git/Wrapper.pm",
-      "package" : "Git::Wrapper"
-   }
-]

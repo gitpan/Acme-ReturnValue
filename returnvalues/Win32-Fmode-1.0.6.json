@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "print \"All tests passed\"",
-      "file" : "/var/tmp/arv_LvXfYx/Win32-Fmode-1.0.6/lib/Win32/Fmode.pm",
-      "package" : "Win32::Fmode"
-   }
-]

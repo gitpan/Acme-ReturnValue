@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _eof { return \"Unexpected EOF line $.\", }",
-      "file" : "/var/tmp/arv_wpGJlm/SVN-Dump-0.05/lib/SVN/Dump/Reader.pm",
-      "package" : "SVN::Dump::Reader"
-   }
-]

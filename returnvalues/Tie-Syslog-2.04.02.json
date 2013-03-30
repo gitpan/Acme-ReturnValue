@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'End of Tie::Syslog'",
-      "file" : "/var/tmp/arv_mwGbjQ/Tie-Syslog-2.04.02/lib/Tie/Syslog.pm",
-      "package" : "Tie::Syslog"
-   }
-]

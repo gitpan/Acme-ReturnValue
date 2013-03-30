@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '2.54'",
-      "file" : "/var/tmp/arv_6GqyVZ/SVG-2.54/lib/SVG/Manual.pm",
-      "package" : "SVG::Manual"
-   }
-]

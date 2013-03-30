@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "print qw{\n    use !!\n}",
-      "file" : "/var/tmp/arv_misaZs/Dist-Zilla-4.300031/corpus/dist/AutoPrereqs/lib/DZPA/Main.pm",
-      "package" : "DZPA::Main"
-   }
-]

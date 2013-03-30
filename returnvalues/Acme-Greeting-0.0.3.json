@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"Greeting\"",
-      "file" : "/var/tmp/arv_bDW94o/Acme-Greeting-0.0.3/lib/Acme/Greeting.pm",
-      "package" : "Acme::Greeting"
-   }
-]

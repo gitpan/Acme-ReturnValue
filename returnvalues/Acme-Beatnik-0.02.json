@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "FILTER\n{ $_ =~ s/[^\\w\\s]//g;\n  my @words = split(/\\s+/,$_);\n  for my $word (@words)\n  { my $number = 0;\n    for(split(//,$word))\n    { $number += $scrabble{uc $_}; }\n    push(@numbers,$number);\n  }\n  for($ip = 0; $ip <= $#numbers ; $ip++)\n  { if (exists( $reftable{$numbers[$ip]} ) )\n    { &{ $reftable{$numbers[$ip]} }; }\n  }\n}\n\n1",
-      "file" : "/var/tmp/arv_g7ZtF0/Acme-Beatnik-0.02/Beatnik.pm",
-      "package" : "Acme::Beatnik"
-   }
-]

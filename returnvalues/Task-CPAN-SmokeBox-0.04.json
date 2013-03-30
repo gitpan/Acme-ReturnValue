@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[smoky smoke box foo]",
-      "file" : "/var/tmp/arv_ltetCq/Task-CPAN-SmokeBox-0.04/lib/Task/CPAN/SmokeBox.pm",
-      "package" : "Task::CPAN::SmokeBox"
-   }
-]

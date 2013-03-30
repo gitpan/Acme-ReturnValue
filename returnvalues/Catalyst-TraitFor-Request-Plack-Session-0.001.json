@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "!!42",
-      "file" : "/var/tmp/arv_ZgkaSa/Catalyst-TraitFor-Request-Plack-Session-0.001/lib/Catalyst/TraitFor/Request/Plack/Session.pm",
-      "package" : "Catalyst::TraitFor::Request::Plack::Session"
-   }
-]

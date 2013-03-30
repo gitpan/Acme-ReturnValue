@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub parse($$)\n{\n    my $self = shift;\n    my $file = shift;\n\n    $self->{cfg}           = {};\n    $self->{level}         = 0;\n    $self->{cfg_stack}     = [];\n    $self->{grammar_stack} = [];\n    $self->{file_stack}    = [];\n    $self->{line_stack}    = [];\n\n    local $self->{grammar} = _deepcopy($self->{grammar});\n\n    $self->_parse_file($file) or return undef;\n\n    $self->_goto_level(0, undef) or return undef;\n\n    $self->_fill_defaults;\n\n    $self->_check_mandatory($self->{grammar}, $self->{cfg}, undef)\n      or return undef;\n\n    return $self->{cfg};\n\n}",
-      "file" : "/var/tmp/arv_ctxDAC/Config-Grammar-1.10/lib/Config/Grammar/Dynamic.pm",
-      "package" : "Config::Grammar::Dynamic"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub close {\n  my $self = shift;\n  my $conn = $self->{connection};\n  $conn->close if $conn && $conn->connected;\n}",
-      "file" : "/var/tmp/arv_2ohnvY/IO-Socket-RedisPubSub-0.02/lib/IO/Socket/RedisPubSub.pm",
-      "package" : "IO::Socket::RedisPubSub"
-   }
-]

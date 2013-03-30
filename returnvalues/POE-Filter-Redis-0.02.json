@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq[Redis Filter]",
-      "file" : "/var/tmp/arv_esTCsF/POE-Filter-Redis-0.02/lib/POE/Filter/Redis.pm",
-      "package" : "POE::Filter::Redis"
-   }
-]

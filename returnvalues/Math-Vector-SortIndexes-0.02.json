@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub sort_indexes_ascending {\n    (sort { $_[$a] <=> $_[$b] } 0..$#_);\n}",
-      "file" : "/var/tmp/arv_0Tfpx3/Math-Vector-SortIndexes-0.02/lib/Math/Vector/SortIndexes.pm",
-      "package" : "Math::Vector::SortIndexes"
-   }
-]

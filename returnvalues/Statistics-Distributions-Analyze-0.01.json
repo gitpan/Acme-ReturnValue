@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub float_precision(){\n\tmy $number = shift;\n\n\tmy $str = '%.' . SIGNIFICANT . 'f';\n\n\tmy $num = sprintf($str, $number);\n\n\treturn $num;\n}",
-      "file" : "/var/tmp/arv_IjFZnP/Statistics-Distributions-Analyze-0.01/lib/Statistics/Distributions/Analyze.pm",
-      "package" : "Statistics::Distributions::Analyze"
-   }
-]

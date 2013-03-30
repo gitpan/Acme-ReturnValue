@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub clean_tex_files\n{\n  my $base_name = shift;\n  unlink \"$base_name.tex\";\n  unlink \"$base_name.log\";\n  unlink \"$base_name.aux\";\n}",
-      "file" : "/var/tmp/arv_psbsq1/Acme-PDF-rescale-0.2/lib/Acme/PDF/rescale.pm",
-      "package" : "Acme::PDF::rescale"
-   }
-]

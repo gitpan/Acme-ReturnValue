@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "!!42",
-      "file" : "/var/tmp/arv_1uMFuc/Catalyst-TraitFor-Context-PSGI-FindEnv-0.001/lib/Catalyst/TraitFor/Context/PSGI/FindEnv.pm",
-      "package" : "Catalyst::TraitFor::Context::PSGI::FindEnv"
-   }
-]

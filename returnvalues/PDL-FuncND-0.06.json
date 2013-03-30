@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*PDL::mahalanobis = \\&mahalanobis",
-      "file" : "/var/tmp/arv_gCdCrM/PDL-FuncND-0.06/lib/PDL/FuncND.pm",
-      "package" : "PDL::FuncND"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package DZ2 v5.5.7 {\n\n\n    sub main {\n        return 1;\n    }\n\n    1;\n  }",
-      "file" : "/var/tmp/arv_5MTujS/Dist-Zilla-Plugin-MetaProvides-Package-1.14000001/corpus/dist/perl-5-14/lib/DZ2.pm",
-      "package" : "DZ2"
-   }
-]

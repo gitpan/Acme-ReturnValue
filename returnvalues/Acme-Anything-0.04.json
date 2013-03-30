@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Warning! The consumption of alcohol may cause you to think you have mystical kung-fu powers.'",
-      "file" : "/var/tmp/arv_TYRZi1/Acme-Anything-0.04/lib/Acme/Anything.pm",
-      "package" : "Acme::Anything"
-   }
-]

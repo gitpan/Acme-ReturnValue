@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub AUTOLOAD { my $self=shift; $AUTOLOAD =~ s/.*:://; $self->{$AUTOLOAD} }",
-      "file" : "/var/tmp/arv_0j5B6N/Finance-Bank-Commerzbank-0.29/lib/Finance/Bank/Commerzbank.pm",
-      "package" : "Finance::Bank::Commerzbank"
-   }
-]

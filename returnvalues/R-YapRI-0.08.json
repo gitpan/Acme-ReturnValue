@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$VERSION = eval $VERSION",
-      "file" : "/var/tmp/arv_Mj1c9E/R-YapRI-0.08/lib/R/YapRI.pm",
-      "package" : "R::YapRI"
-   }
-]

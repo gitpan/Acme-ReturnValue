@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub dump_hashref_pp {\n\tmy $self = shift;\n\tmy ($rval, $keys, $tag) = @_;\n\t\n\tforeach my $key (@$keys) {\n\t\t\n\t\tmy $val = \\$rval->{$key};\n\t\tmy $node;\n\n\t\tmy ($key_prefix, $key_name, $val_type, $key_can_be_tag) =\n\t\t\t$self->key_info ($rval, $key, $$val);\n\t\t\n\t\tif ($key_can_be_tag) {\n\t\t\tif (defined $key_prefix and $key_prefix eq '@' and $self->{at_key_as_attribute}) {\n\t\t\t\t\n\t\t\t\tunless (defined $val_type) {\n\t\t\t\t\t$tag->setAttribute ($key_name, $$val);\n\t\t\t\t\tnext;\n\t\t\t\t}\n\t\t\t\t\n\t\t\t} elsif (defined $key_prefix and $key_prefix eq '#' and $key_name eq 'text') {\n\t\t\t\tunless (defined $val_type) {\n\t\t\t\t\t$tag->appendText ($$val);\n\t\t\t\t\tnext;\n\t\t\t\t}\n\t\t\t} elsif (\n\t\t\t\t$self->{key_as_hash_element}\n\t\t\t\tand $key ne $self->{array_element} \n\t\t\t\tand $key ne $self->{hash_element}\n\t\t\t\tand $key ne $self->{ref_element}\n\t\t\t\tand $key ne $self->{empty_array}\n\t\t\t\tand $key ne $self->{empty_hash}\n\t\t\t\tand $key ne $self->{undef}\n\t\t\t) {\n\t\t\t\t$node = $tag->addNewChild ('', $key_name);\n\t\t\t\tif (defined $key_prefix and $key_prefix eq '<') {\n\t\t\t\t\t$node->setAttribute (_opt => 'up');\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\t$node = $tag->addNewChild ('', $self->{hash_element});\n\t\t\t$node->setAttribute ($self->{hash_element_attribute_name}, $key);\n\t\t}\n\t\t\n\t\t$self->simple_dump ($$val, $node);\n\t}\n\t\n}",
-      "file" : "/var/tmp/arv_B0Yp7j/Data-Dump-XML-1.19/lib/Data/Dump/XML.pm",
-      "package" : "Data::Dump::XML"
-   }
-]

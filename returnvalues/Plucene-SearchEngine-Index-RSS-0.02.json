@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub gather_data_from_file {\n    my ($self, $filename) = @_;\n    my $xml = XML::RSS->new;\n    eval{  $xml->parsefile($filename) }; return if $@;\n    my @articles;\n    my $x;\n    for my $art_xml (@{$xml->{'items'}}) {\n        my $art = (ref $self)->new; \n        $art->add_data(\"modified\", \"Date\", \n            Time::Piece->new(str2time(\n                $art_xml->{dc}{date} || $xml->{dc}{date} ||\n                $xml->channel(\"pubDate\")\n            ))\n        );\n        if ($art_xml->{dc}{creator}) {\n            $art->add_data(\"creator\", \"Text\", $art_xml->{dc}{creator});\n        }\n        $art->add_data(\"feed\", \"Text\", $xml->channel(\"title\"));\n        $art->add_data(\"id\", \"Keyword\", $art_xml->{link}.\" in \".$self->{id}{data}[0]);\n        $art->add_data(\"text\", \"UnStored\", $art_xml->{description}\n            || $art_xml->{\"http://purl.org/rss/1.0/modules/content/\"}{encoded}\n        );\n        $art->add_data(\"title\", \"Text\", $art_xml->{title});\n        push @articles, $art;\n    }\n    return @articles;\n}",
-      "file" : "/var/tmp/arv_GoTCzt/Plucene-SearchEngine-Index-RSS-0.02/lib/Plucene/SearchEngine/Index/RSS.pm",
-      "package" : "Plucene::SearchEngine::Index::RSS"
-   }
-]

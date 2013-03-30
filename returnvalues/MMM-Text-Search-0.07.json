@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _open_socket_timeout {\n\tmy $timeout = shift;\n\tmy $s; \n\tmy $error;\n\tDEBUG( \"_open_socket_timeout() \", join(',', @_));\n\tundef $!; undef $@;\n\t$@ = eval {\n\t\t$SIG{ALRM} = sub { die \"connection TIMED OUT\" };\n\t\talarm $timeout;\n\t\t$s = IO::Socket::INET->new( @_ );\n\t\talarm 0;\n\t\t$@ =~ s/IO::Socket::INET:\\s+//;\n\t\treturn $@;\n\t};\n\t\n\tundef $ERROR;\n\tif ($@ =~ /connection TIMED OUT/ ) {\n\t\t\t$ERROR = 'connection TIMED OUT' ;\n\t\t\tundef $s;\n\t}\n\t$ERROR ||= $@||$!  unless $s;\n\tDEBUG(\"\\$s=$s -- \\$!='$!' -- \\$\\@='$@'  -- \\$ERROR=$ERROR\");\n\treturn $s;\n}",
-      "file" : "/var/tmp/arv_WiKp7Q/MMM-Text-Search-0.07/Search/Inet.pm",
-      "package" : "MMM::Text::Search::Inet"
-   }
-]

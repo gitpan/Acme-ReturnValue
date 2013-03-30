@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub register {\n    my ($plugin, $app) = @_;\n\n    $app->hook(\n        before_dispatch => sub {\n            kill 11, $$ if shift->req->url->path eq '/brains';\n        }\n    );\n}",
-      "file" : "/var/tmp/arv_f6LDb8/Mojolicious-Plugin-ZombieApocalypse-0.01/lib/Mojolicious/Plugin/ZombieApocalypse.pm",
-      "package" : "Mojolicious::Plugin::ZombieApocalypse"
-   }
-]

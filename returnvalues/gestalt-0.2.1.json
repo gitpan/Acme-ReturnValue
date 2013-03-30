@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $tableData = [% DATA %]\n\nsub open\n{\n    my $ref   = shift;\n    my $class = ref($ref) || $ref;\n\n    my $dbh = shift || confess (\"Usage: $class->open(\\$dbh)\");\n    return $class->SUPER::open($dbh, $tableData);\n}\n\n1",
-      "file" : "/var/tmp/arv_CIqjzH/gestalt-0.2.1/templates/Table.pm",
-      "package" : "DB::Table::"
-   }
-]

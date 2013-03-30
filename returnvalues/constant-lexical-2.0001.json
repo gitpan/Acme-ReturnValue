@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "eval($] < 5.011002 ? $old : $new) or die $@",
-      "file" : "/var/tmp/arv_NsU_uO/constant-lexical-2.0001/lib/constant/lexical.pm",
-      "package" : "constant::lexical"
-   }
-]

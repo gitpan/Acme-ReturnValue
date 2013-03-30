@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Var::Pairs::Pair {\n    use Hash::Util qw< fieldhash >;\n    use Scalar::Util qw< looks_like_number >;\n    use Data::Alias;\n    use Carp;\n\n    fieldhash my %key_for;\n    fieldhash my %value_for;\n\n    sub value :lvalue { $value_for{shift()} }\n    sub index         {   $key_for{shift()} }\n    sub key           {   $key_for{shift()} }\n\n    sub new {\n        my ($class, $key, $container_ref, $container_type) = @_;\n\n        my $new_obj = bless \\do{ my $scalar }, $class;\n\n        $key_for{$new_obj} = $key;\n        alias $value_for{$new_obj} = $container_type eq 'array' ? $container_ref->[$key]\n                                   : $container_type eq 'none'  ? $_[2]\n                                   :                              $container_ref->{$key};\n\n        return $new_obj;\n    }\n\n    use overload (\n        q{\"\"}   => sub {\n            my $self = shift;\n            my $value = $value_for{$self};\n            $value = ref $value                ? ref $value\n                   : looks_like_number($value) ? $value\n                   :                             qq{\"$value\"};\n            return \"$key_for{$self} => $value\";\n        },\n\n        q{0+}   => sub { croak \"Can't convert Pair(\".shift.\") to a number\" },\n\n        q{bool} => sub { 1 },\n\n        fallback => 1,\n    );\n}\n\nsub _uniq_ID {\n    my $container_ref = shift;\n\n    require Scope::Upper;\n    return join '|', (caller 1)[1..3,8], Scope::Upper::UP(Scope::Upper::UP());\n}\n\n\n1",
-      "file" : "/var/tmp/arv_6t8Im9/Var-Pairs-0.001002/lib/Var/Pairs.pm",
-      "package" : "Var::Pairs"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub despatch {\n    my $self = shift;\n\n    if ( exists $self->{__STRING1__} ) {\n        my $verb  = $self->{__STRING1__};\n        my $class = Parse::RecDescent::Topiary::delegation_class( 'Command',\n            \\@namespace, $verb );\n        my $meth = $class . '::' . $verb;\n        return $self->$meth(@_);\n    }\n}",
-      "file" : "/var/tmp/arv_d8khFj/Bot-BasicBot-Pluggable-Module-RD-0.02/lib/Bot/BasicBot/Pluggable/Module/RD.pm",
-      "package" : "Bot::BasicBot::Pluggable::Module::RD"
-   }
-]

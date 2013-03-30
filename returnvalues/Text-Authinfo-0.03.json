@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub writeauthinfo {\n    my $self = shift;\n\n    my $ops = shift || undef;\n    if (defined($ops) && (ref($ops) ne 'HASH')) {\n        carp \"args are passed to writeauthinfo via a hash ref\";\n    }\n\n    if (-w $self->{FILE}) {\n        if (defined($ops->{nobackup})) {\n            unlink $self->{FILE} || croak \"rm old $self->{FILE}:$!\"\n        } else { \n            my $bak = $self->{FILE} . '.bak';\n            move($self->{FILE},$bak) || croak \"mv $self->{FILE} $bak:$!\";\n        }\n    }\n\n    my $c = $self->as_string();\n    if ($c) {\n        open(my $fh,'>',$self->{FILE}) || croak \"open $self->{FILE}:$!\";\n        print $fh $c;\n        close($fh) || croak \"close $self->{FILE}:$!\";\n        chmod 0600, $self->{FILE} || croak \"chmod fail on $self->{FILE}:$!\";\n    }\n\n    return 1;\n}",
-      "file" : "/var/tmp/arv_Xl4Ckp/Text-Authinfo-0.03/lib/Text/Authinfo.pm",
-      "package" : "Text::Authinfo"
-   }
-]

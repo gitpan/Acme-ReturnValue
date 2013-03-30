@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub append_params {\n\tmy $self = shift;\n\t$self->args( $self->args, @_ );\n}",
-      "file" : "/var/tmp/arv_oXAwUH/Aspect-1.03/lib/Aspect/Legacy.pm",
-      "package" : "Aspect::Legacy"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use constant { DBX_CURSOR_RANDOM => 0, DBX_CURSOR_FORWARD => 1 }",
-      "file" : "/var/tmp/arv_iiVFss/DBX-0.1/DBX/Constants.pm",
-      "package" : "DBX::Constants"
-   }
-]

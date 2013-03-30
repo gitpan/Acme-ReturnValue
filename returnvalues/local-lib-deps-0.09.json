@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub show_fails {\n    my ( $tmp ) = @_;\n    open( my $LOG, \"<\", \"$tmp/build.out\" );\n    print STDERR join( \"\", my @list = <$LOG> );\n    close( $LOG );\n}",
-      "file" : "/var/tmp/arv_vgZEeY/local-lib-deps-0.09/lib/Test/local/lib/deps.pm",
-      "package" : "Test::local::lib::deps"
-   }
-]

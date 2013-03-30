@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub call_hook {\n\tmy $self      = shift;\n\tmy $app_class = ref $self || $self;\n\tmy $hook      = lc shift;\n\tmy @args      = @_;\n\n\tdie \"Unknown hook ($hook)\" unless exists $INSTALLED_CALLBACKS{$hook};\n\n\tmy %executed_callback;\n\n\tforeach my $callback (@{ $self->{__INSTALLED_CALLBACKS}{$hook} }) {\n\t\tnext if $executed_callback{$callback};\n\t\teval { $self->$callback(@args); };\n\t\t$executed_callback{$callback} = 1;\n\t\tdie \"Error executing object callback in $hook stage: $@\" if $@;\n\t}\n\n\n\t$self->{__CALLBACK_CLASSES} ||=  [ Class::ISA::self_and_super_path($app_class) ];\n\n\tforeach my $class (@{ $self->{__CALLBACK_CLASSES} }) {\n\n\t\tnext unless exists $INSTALLED_CALLBACKS{$hook}{$class};\n\n\t\tforeach my $callback (@{ $INSTALLED_CALLBACKS{$hook}{$class} }) {\n\t\t\tnext if $executed_callback{$callback};\n\t\t\teval { $self->$callback(@args); };\n\t\t\t$executed_callback{$callback} = 1;\n\t\t\tdie \"Error executing class callback in $hook stage: $@\" if $@;\n\t\t}\n\t}\n\n}",
-      "file" : "/var/tmp/arv_lS4Hrw/CGI-Application-4.50/lib/CGI/Application.pm",
-      "package" : "CGI::Application"
-   }
-]

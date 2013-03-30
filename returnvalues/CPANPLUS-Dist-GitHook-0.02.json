@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q[And now here is Hooky and the boys]",
-      "file" : "/var/tmp/arv_28knCO/CPANPLUS-Dist-GitHook-0.02/lib/CPANPLUS/Dist/GitHook.pm",
-      "package" : "CPANPLUS::Dist::GitHook"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _remove_test_bucket_async {\n    my ($bucket, $cb, $error_cb) = @_;\n\n    my ($remove_all_and_wait, $t);\n    $remove_all_and_wait = sub {\n        $bucket->remove_all({\n            error_cb => $error_cb,\n            cb       => sub {\n                $t = AE::timer 1, 0, sub {\n                    $bucket->list_keys({\n                        error_cb => $error_cb,\n                        cb       => sub {\n                            my ($keys) = @_;\n\n                            if ($keys && @{ $keys }) {\n                                $remove_all_and_wait->();\n                                return;\n                            }\n\n                            $cb->();\n                        },\n                    });\n                },\n            },\n        });\n    };\n\n    $remove_all_and_wait->();\n}",
-      "file" : "/var/tmp/arv_iuSUU6/Data-Riak-1.9/lib/Test/Data/Riak.pm",
-      "package" : "Test::Data::Riak"
-   }
-]

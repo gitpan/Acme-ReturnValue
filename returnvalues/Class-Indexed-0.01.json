@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_words {\n    my $text = shift;\n    warn \"get_swords : $text \\n\";\n    my @words = split(/[^a-z0-9\\xc0-\\xff\\+\\_\\-]+/, lc $text);\n    warn \"words : \", @words, \"\\n\";\n    @words = grep { s/[^a-z0-9\\xc0-\\xff\\+\\_\\-]+//; $_ } grep { length > 1 } grep { /[a-z0-9]/ } @words;\n    warn \"words : \", @words, \"\\n\";\n    return @words;\n}",
-      "file" : "/var/tmp/arv_LykS77/Class-Indexed-0.01/lib/Class/Indexed/Words.pm",
-      "package" : "Class::Indexed::Words"
-   }
-]

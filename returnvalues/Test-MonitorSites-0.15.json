@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _test_site {\n  my($self,$agent,$url,$expected_content) = @_;\n  $agent->get(\"$url\");\n  is ($agent->success,1,\"Successfully linked to $url.\");\n  like($agent->content,qr/$expected_content/,\" . . . and found expected content at $url\");\n  return $agent->success();\n}",
-      "file" : "/var/tmp/arv_ar7U_m/Test-MonitorSites-0.15/lib/Test/MonitorSites.pm",
-      "package" : "Test::MonitorSites"
-   }
-]

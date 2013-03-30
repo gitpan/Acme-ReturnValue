@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub singleton_method { \n    my ($object, $method, $subref) = @_; \n \n    my $parent_class = ref $object; \n    my $new_class = \"_Singletons::\".(0+$object); \n    *{$new_class.\"::\".$method} = $subref; \n    if ($new_class ne $parent_class) {\n        @{$new_class.\"::ISA\"} = ($parent_class); \n        bless $object, $new_class; \n    }\n}",
-      "file" : "/var/tmp/arv_mc1f5o/Class-SingletonMethod-1.0/SingletonMethod.pm",
-      "package" : "Class::SingletonMethod"
-   }
-]

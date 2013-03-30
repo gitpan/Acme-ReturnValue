@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "sub v10url {\n    my $this = shift();\n    my(@skip) = @_;\n\n    my $url = $this->base();\n    my $gotOne = 0;\n    foreach my $d ($this->co()->descriptors()) {\n\tmy $name = $d->name();\n\tforeach my $key ($d->superdata_keys()) {\n\t    my $valref = $d->superdata($key);\n\t    foreach my $val (@$valref) {\n\t\tmy $fullkey = \"${name}_$key\";\n\t\tnext if grep { $_ eq $fullkey } @skip;\n\t\t$url .= $gotOne++ ? \"&\" : \"?\";\n\t\t$url .= \"$fullkey=\" . uri_escape_utf8($val);\n\t    }\n\t}\n\tforeach my $key ($d->metadata_keys()) {\n\t    my $valref = $d->metadata($key);\n\t    foreach my $val (@$valref) {\n\t\tmy $fullkey = \"${name}.$key\";\n\t\tnext if grep { $_ eq $fullkey } @skip;\n\t\t$url .= $gotOne++ ? \"&\" : \"?\";\n\t\t$url .= \"$fullkey=\" . uri_escape_utf8($val);\n\t    }\n\t}\n    }\n\n    return $url;\n}\n\n\n1",
-      "file" : "/var/tmp/arv_4443HU/Keystone-Resolver-1.23/lib/Keystone/Resolver/OpenURL.pm",
-      "package" : "Keystone::Resolver::OpenURL"
-   }
-]

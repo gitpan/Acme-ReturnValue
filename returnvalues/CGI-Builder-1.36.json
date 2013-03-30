@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Bundle::CGI::Builder::Complete",
-      "file" : "/var/tmp/arv_I0sNrx/CGI-Builder-1.36/lib/Bundle/CGI/Builder/Complete.pm",
-      "package" : "Bundle::CGI::Builder::Complete"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub add_moose_keywords_highlighting {\n\tmy $type     = shift or return;\n\tmy $document = shift or return;\n\tmy $editor   = shift or return;\n\n\tmy $keywords = Padre::Wx::Scintilla->keywords($document);\n\tif ( Params::Util::_ARRAY($keywords) ) {\n\t\tforeach my $i ( 0 .. $#$keywords ) {\n\t\t\tmy $keyword_list = $keywords->[$i];\n\t\t\tif ( $i == 0 ) {\n\t\t\t\t$keyword_list\n\t\t\t\t\t.= ' has with extends before around after'\n\t\t\t\t\t. ' override super augment inner type subtype'\n\t\t\t\t\t. ' enum class_type as where coerce via from'\n\t\t\t\t\t. ' requires excludes';\n\t\t\t\tif ( $type eq 'MooseX::Declare' ) {\n\t\t\t\t\t$keyword_list .= ' class role method dirty clean mutable';\n\t\t\t\t}\n\t\t\t}\n\t\t\t$editor->Wx::Scintilla::TextCtrl::SetKeyWords( $i, $keyword_list );\n\t\t}\n\t}\n\n\treturn;\n}",
-      "file" : "/var/tmp/arv_QLO6pe/Padre-Plugin-Moose-0.21/lib/Padre/Plugin/Moose/Util.pm",
-      "package" : "Padre::Plugin::Moose::Util"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use SemanticWeb::OAI::ORE::TriX",
-      "file" : "/var/tmp/arv_31YXbF/SemanticWeb-OAI-ORE-0.95/lib/SemanticWeb/OAI/ORE.pm",
-      "package" : "SemanticWeb::OAI::ORE"
-   }
-]

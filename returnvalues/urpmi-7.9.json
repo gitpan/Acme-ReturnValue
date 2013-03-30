@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DESTROY { \n    my ($lock) = @_;\n    unlock($lock) if $lock->{fh};\n}",
-      "file" : "/var/tmp/arv_8cFieR/urpmi-7.9/urpm/lock.pm",
-      "package" : "urpm::lock"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub as_escaped_json {\n    my $self = shift;\n    my $js_profile = $self->to_jquery_validation_profile;\n    return uri_escape_utf8(JSON->new->encode($js_profile)),\n}",
-      "file" : "/var/tmp/arv_uaGDiq/HTML-FormHandlerX-Form-JQueryValidator-0.05/lib/HTML/FormHandlerX/Form/JQueryValidator.pm",
-      "package" : "HTML::FormHandlerX::Form::JQueryValidator"
-   }
-]

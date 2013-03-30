@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '0.28'",
-      "file" : "/var/tmp/arv_fmXXDR/Task-Kensho-WebCrawling-0.28/lib/Task/Kensho/WebCrawling.pm",
-      "package" : "Task::Kensho::WebCrawling"
-   }
-]

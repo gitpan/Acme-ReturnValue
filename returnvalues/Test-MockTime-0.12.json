@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*restore_time = \\&restore",
-      "file" : "/var/tmp/arv_TUDsbF/Test-MockTime-0.12/lib/Test/MockTime.pm",
-      "package" : "Test::MockTime"
-   }
-]

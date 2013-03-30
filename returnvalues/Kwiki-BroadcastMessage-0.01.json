@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::BroadcastMessage",
-      "file" : "/var/tmp/arv_AiU6l7/Kwiki-BroadcastMessage-0.01/lib/Kwiki/BroadcastMessage.pm",
-      "package" : "Kwiki::BroadcastMessage"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "\"This ist virtually the end of the package\"",
-      "file" : "/var/tmp/arv_bPN7dy/DBIx-Class-VirtualColumns-1.03/lib/DBIx/Class/VirtualColumns.pm",
-      "package" : "DBIx::Class::VirtualColumns"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub dump {\n    my $self = shift;\n    my ($format) = @_;\n\n    $format = 'svg' unless $format;\n    \n    if ( $format =~ /png/i ) {\n        return undef;\n        my $rsvg = new Image::LibRSVG;\n        $rsvg->loadImageFromString( $self->{'document'}->toString() );\n        return $rsvg->getImageBitmap();\n    } else {\n        return $self->{'document'}->toString($self->{'pretty'});\n    }\n}",
-      "file" : "/var/tmp/arv_g_Ggex/Games-Go-SGF2misc-SVG-1.00/lib/Games/Go/SGF2misc/SVG.pm",
-      "package" : "Games::Go::SGF2misc::SVG"
-   }
-]

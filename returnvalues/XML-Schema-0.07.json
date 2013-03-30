@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub init {\n    my ($self, $config) = @_;\n    $self->SUPER::init($config)\n\t|| return;\n    $self->{ _VARIETY } = 'list';\n    return $self;\n}",
-      "file" : "/var/tmp/arv_GZJauS/XML-Schema-0.07/lib/XML/Schema/Type/List.pm",
-      "package" : "XML::Schema::Type::List"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "qq'Wherever I hang my hat is home'",
-      "file" : "/var/tmp/arv_6ElkPb/CPANPLUS-0.9134/lib/CPANPLUS/Config/HomeEnv.pm",
-      "package" : "CPANPLUS::Config::HomeEnv"
-   }
-]

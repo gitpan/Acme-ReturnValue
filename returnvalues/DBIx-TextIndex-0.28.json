@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _fetch_term_docs {\n    my $self = shift;\n    my ($fno, $term) = @_;\n    my $sql = $self->{DB}->fetch_term_freq_and_docs(\n                $self->{INVERTED_TABLES}->[$fno]);\n\n    ($self->{DOCFREQ_T}->[$fno]->{$term}, $self->{TERM_DOCS}->[$fno]->{$term})\n\t= $self->{INDEX_DBH}->selectrow_array($sql, undef, $term);\n}",
-      "file" : "/var/tmp/arv_vHpBDy/DBIx-TextIndex-0.28/lib/DBIx/TextIndex/TermDocsCache.pm",
-      "package" : "DBIx::TextIndex::TermDocsCache"
-   }
-]

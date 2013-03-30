@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub OutputTocNewLine\n{\n\n}",
-      "file" : "/var/tmp/arv_DxSMiG/Pod-Peapod-0.42/Peapod/Text.pm",
-      "package" : "Pod::Peapod::Text"
-   }
-]

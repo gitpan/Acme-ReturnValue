@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "Imager->register_writer\n  (\n   type=>'tiff',\n   single => \n   sub { \n     my ($im, $io, %hsh) = @_;\n\n     $im->_set_opts(\\%hsh, \"i_\", $im);\n     $im->_set_opts(\\%hsh, \"tiff_\", $im);\n     $im->_set_opts(\\%hsh, \"exif_\", $im);\n\n     if (defined $hsh{class} && $hsh{class} eq \"fax\") {\n       my $fax_fine = $hsh{fax_fine};\n       defined $fax_fine or $fax_fine = 1;\n       if (!i_writetiff_wiol_faxable($im->{IMG}, $io, $fax_fine)) {\n\t $im->{ERRSTR} = Imager->_error_as_msg();\n\t return undef;\n       }\n     }\n     else {\n       unless (i_writetiff_wiol($im->{IMG}, $io)) {\n\t $im->_set_error(Imager->_error_as_msg);\n\t return;\n       }\n     }\n     return $im;\n   },\n   multiple =>\n   sub {\n     my ($class, $io, $opts, @ims) = @_;\n\n     Imager->_set_opts($opts, \"tiff_\", @ims);\n     Imager->_set_opts($opts, \"exif_\", @ims);\n\n     my @work = map $_->{IMG}, @ims;\n     my $tiff_class = $opts->{class};\n     defined $tiff_class or $tiff_class = \"\";\n\n     my $result;\n     if ($tiff_class eq \"fax\") {\n       my $fax_fine = $opts->{fax_fine};\n       defined $fax_fine or $fax_fine = 1;\n       $result = i_writetiff_multi_wiol_faxable($io, $fax_fine, @work);\n     }\n     else {\n       $result = i_writetiff_multi_wiol($io, @work);\n     }\n     unless ($result) {\n       $class->_set_error($class->_error_as_msg);\n       return;\n     }\n\n     return 1;\n   },\n  )",
-      "file" : "/var/tmp/arv_MmOqst/Imager-File-TIFF-0.85/TIFF.pm",
-      "package" : "Imager::File::TIFF"
-   }
-]

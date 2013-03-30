@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "multi method get_uri ( Uri $uri ) { $uri }\nmulti method get_uri ( File $file ) { URI::file->new($file) }\nmulti method get_uri ( Str $str ) {\n    if ( -f $str ) {\n        URI::file->new($str);\n    } else {\n        URI::data->new($str);\n    }\n}\n\nmulti method stylesheet ( Stylesheet $s ) { $s }\nmulti method stylesheet ( Document $doc ) { $self->parse_stylesheet($doc) }\nmulti method stylesheet ( Any $thing ) {\n    $self->stylesheet( $self->parse($thing) );\n}\n\nmulti method parse ( Document $doc ) { $doc }\nmulti method parse ( FileHandle $fh ) { $self->parse_fh($fh) }\nmulti method parse ( File $file ) { $self->parse_file($file) }\nmulti method parse ( Str $thing, @args ) {\n    if ( -f $thing ) {\n        $self->parse_file($thing, @args);\n    } else {\n        $self->parse_string($thing, @args);\n    }\n}\n\nmulti method parse ( Uri $uri, @args ) {\n    $self->parse_file( $uri, @args );\n}\n\nmulti method output ( FileHandle $fh, @args ) { $self->output_fh($fh, @args) }\nmulti method output ( Str $file, @args ) { $self->output_file($file, @args) }\nmulti method output ( File $file, @args ) { $self->output_File($file, @args) }\nmulti method output ( Undef $x, @args ) { $self->output_string(@args) }\n\nsub output_string {\n    my ( $self, $s, $r ) = @_;\n    $s->output_string($r);\n}\n\nsub output_fh {\n    my ( $self, $o, $s, $r ) = @_;\n    $s->output_fh($r, $o);\n}\n\nsub output_file {\n    my ( $self, $o, $s, $r ) = @_;\n    $s->output_file($r, $o);\n}\n\n__PACKAGE__",
-      "file" : "/var/tmp/arv_uzZgvu/XML-LibXSLT-Easy-0.03/lib/XML/LibXSLT/Easy.pm",
-      "package" : "XML::LibXSLT::Easy"
-   }
-]

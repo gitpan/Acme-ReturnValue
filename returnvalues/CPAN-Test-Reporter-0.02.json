@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break",
-      "value" : "\"FALSE\"",
-      "file" : "/var/tmp/arv_OJqALG/CPAN-Test-Reporter-0.02/lib/CPAN/Test/Reporter.pm",
-      "package" : "CPAN::Test::Reporter"
-   }
-]

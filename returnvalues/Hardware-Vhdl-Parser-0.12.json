@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub new\n{\n my ($pkg) = @_;\n\n my $r_hash = $pkg->SUPER::new;\n\n $r_hash -> Replace ( q( \n\ncomponent_instantiation_statement :\n\tinstantiation_label \n\t':'\n\tentity_configuration_component\n\tgeneric_map_section(?)\n\tport_map_section(?)\n\t';'\n\n\t\t{ print \"INSTANCENAME $item{instantiation_label} \\n\"; }\n\nentity_name : identifier \n\t\t{ print \"ENTITY_NAME $item{identifier} \\n\"; }\n\n ));\n\n\n\n\n\n bless $r_hash, $pkg;\n return $r_hash;\n}",
-      "file" : "/var/tmp/arv_pWKRw4/Hardware-Vhdl-Parser-0.12/Hierarchy.pm",
-      "package" : "Hardware::Vhdl::Hierarchy"
-   }
-]

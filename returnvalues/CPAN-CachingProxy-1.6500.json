@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub my_copy_hdr {\n    my ($this, $res, $hit) = @_;\n    my $cgi = $this->{cgi};\n\n    my $status = $res->status_line;\n    warn \"[DEBUG] cache status: $hit; status: $status\\n\" if $this->{debug};\n\n    my %more_headers = (qw(accept_ranges bytes));\n\n    for(qw(content_length), $this->{ignore_last_modified} ? ():(qw(last_modified))) {\n        my $v = $res->header($_);\n\n        if( $v ) {\n            my $k = lc $_;\n               $k =~ s/-/_/g;\n\n            $more_headers{$k} = $v;\n        }\n    }\n\n    my $start = 0;\n\n    if( my $r = $cgi->http(\"Range\") ) {\n        if( ($start) = $r =~ m/^bytes=(\\d+)-$/ ) {\n            my $len = $more_headers{content_length};\n            my $new = $len - $start;\n            my $end = $len - 1; \n\n            $more_headers{content_range}  = \"bytes $start-$end/$len\";\n            $more_headers{content_length} = $new;\n        }\n    }\n\n    print $cgi->header(-status=>$status, -charset=>\"\", -type=>$res->header( 'content-type' ), %more_headers);\n\n    return $start;\n}",
-      "file" : "/var/tmp/arv_QXNU2y/CPAN-CachingProxy-1.6500/CachingProxy.pm",
-      "package" : "CPAN::CachingProxy"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n  $Task::Tapper::Hello::World::VERSION = '0.002';\n}",
-      "file" : "/var/tmp/arv_0Ec9O8/Task-Tapper-Hello-World-0.002/lib/Task/Tapper/Hello/World.pm",
-      "package" : "Task::Tapper::Hello::World"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q{\n <rnowak> fine, be rude like that\n <Perihelion> SORRY I WAS DISCUSSING THE ABILITY TO PUT\n  AN IRCD ON A ROOMBA\n}",
-      "file" : "/var/tmp/arv_nZEsEx/IRC-Toolkit-0.084000/lib/IRC/Message/Object.pm",
-      "package" : "IRC::Message::Object"
-   }
-]

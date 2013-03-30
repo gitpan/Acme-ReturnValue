@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ok {\n  my $self = shift;\n  $self->[0]->{MATCH};\n}",
-      "file" : "/var/tmp/arv_5VF2pN/Net-Whois-1.9/Whois.pm",
-      "package" : "Net::Whois"
-   }
-]

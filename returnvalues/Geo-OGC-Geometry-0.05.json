@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub ElementType {\n    return 'LineString';\n}",
-      "file" : "/var/tmp/arv_60JZqP/Geo-OGC-Geometry-0.05/lib/Geo/OGC/Geometry.pm",
-      "package" : "Geo::OGC::Geometry"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _parse_soa {\n\tmy $self = shift;\n\tmy $soa_rd = get_rdata($self, (name=>\"$self->{origin}\", rr=>'SOA'));\n\tmy($mname,$rname,$serial,$refresh,$retry,$expire,$minimum)=\n\t\t$soa_rd=~/^(\\S+) (\\S+) (\\d+) (\\d+) (\\d+) (\\d+) (\\d+)\\s*$/;\n\t\n\t$self->{soa}{mname}=$mname;\n\t$self->{soa}{rname}=$rname;\n\t$self->{soa}{serial}=$serial;\n\t$self->{soa}{refresh}=$refresh;\n\t$self->{soa}{retry}=$retry;\n\t$self->{soa}{expire}=$expire;\n\t$self->{soa}{minimum}=$minimum;\n}",
-      "file" : "/var/tmp/arv_qPgHth/Parse-DNS-Zone-0.42/lib/Parse/DNS/Zone.pm",
-      "package" : "Parse::DNS::Zone"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub analyse {\n\tmy $self = shift;\n\teval { $self->{Machine}->(@{ $self->{Input} }); };\n\treturn 1;\n}",
-      "file" : "/var/tmp/arv_YqfP8J/Acme-HaltingProblem-1.00/HaltingProblem.pm",
-      "package" : "Acme::HaltingProblem"
-   }
-]

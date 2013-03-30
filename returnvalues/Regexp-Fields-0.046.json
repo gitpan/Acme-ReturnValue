@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "tie %{&}, __PACKAGE__",
-      "file" : "/var/tmp/arv_lmViBp/Regexp-Fields-0.046/tie/tie.pm",
-      "package" : "Regexp::Fields::tie"
-   }
-]

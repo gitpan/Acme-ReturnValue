@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'200-sorry'",
-      "file" : "/var/tmp/arv_mPu_tL/E-Mail-Acme-1505/lib/Email/Abstract/EMailAcme.pm",
-      "package" : "Email::Abstract::EMailAcme"
-   }
-]

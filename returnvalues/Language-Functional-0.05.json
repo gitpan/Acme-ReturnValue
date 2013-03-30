@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub STORESIZE {\n  my($self, $size) = @_;\n  $self->{SIZE} = $size;\n}",
-      "file" : "/var/tmp/arv_bY6zef/Language-Functional-0.05/Functional.pm",
-      "package" : "Language::Functional"
-   }
-]

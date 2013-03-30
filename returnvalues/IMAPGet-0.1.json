@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub del {\nmy $self = shift;\nmy @smsgs = @_;\nmy $strsmsgs; \nmy $sock = $self->{Socket};\nmy $line;\nmy $tmp;\nunless (defined $sock) {\n\tprint \"IMAPGet: not connected\\n\";\n\treturn undef;\n}\n\n$strsmsgs = shift @smsgs;\nwhile ($tmp = shift @smsgs) {\n\t$strsmsgs = $strsmsgs . \",\" . $tmp;\n}\n\n\nprint $sock \"$self->{Opid} STORE $strsmsgs +FLAGS.SILENT \\\\Deleted\\n\";\nprint \"> $self->{Opid} STORE $strsmsgs \\n +FLAGS.SILENT \\\\Deleted\\n\" if $self->{Dump};\n\n$self->{Opres} = \"TIMEOUT\";\n\nwhile ($line = _getsock($sock)) {\n\tprint \"< $line\" if $self->{Dump};\n\n\tif ($line =~ /$self->{Opid}\\s(\\w+)\\s/) {\n\t\t$self->{Opres} = $1;\n\t\tlast;\n\t}\n}\n$self->{Opid}++;\n\nunless ($self->{Opres} eq \"OK\") {\n\tprint \"IMAPGet: delete marking failed for folder $self->{Folder}\\n\";\n\treturn undef;\n}\n\nprint $sock \"$self->{Opid} EXPUNGE\\n\";\nprint \"> $self->{Opid} EXPUNGE\\n\" if $self->{Dump};\n\n$self->{Opres} = \"TIMEOUT\";\n\nwhile ($line = _getsock($sock)) {\n\tprint \"< $line\" if $self->{Dump};\n\n\tif ($line =~ /$self->{Opid}\\s(\\w+)\\s/) {\n\t\t$self->{Opres} = $1;\n\t\tlast;\n\t}\n}\n$self->{Opid}++;\n\nunless ($self->{Opres} eq \"OK\") {\n\tprint \"IMAPGet: expunge failed for folder $self->{Folder}\\n\";\n\treturn undef;\n}\n\n\nreturn 1;\n}",
-      "file" : "/var/tmp/arv_wyqU_Z/IMAPGet.pm",
-      "package" : "IMAPGet"
-   }
-]

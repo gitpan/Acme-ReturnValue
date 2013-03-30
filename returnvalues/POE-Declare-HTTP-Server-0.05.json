@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "compile",
-      "file" : "/var/tmp/arv_ItAdlO/POE-Declare-HTTP-Server-0.05/lib/POE/Declare/HTTP/Server.pm",
-      "package" : "POE::Declare::HTTP::Server"
-   }
-]

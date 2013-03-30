@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _ace_low { \n\tmy $self = shift;\n\treturn ($self->ace and $self->twofive) ? 1 : 0\n}",
-      "file" : "/var/tmp/arv_kEPH8w/Games-Poker-Omaha-Hutchison-1.04/lib/Games/Poker/Omaha/Hutchison.pm",
-      "package" : "Games::Poker::Omaha::Hutchison"
-   }
-]

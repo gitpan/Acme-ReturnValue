@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$KEY = <<EOT",
-      "file" : "/var/tmp/arv_Pqk5yH/jmx4perl-1.06/lib/JMX/Jmx4Perl/Agent/Jolokia/Verifier/PGPKey.pm",
-      "package" : "JMX::Jmx4Perl::Agent::Jolokia::Verifier::PGPKey"
-   }
-]

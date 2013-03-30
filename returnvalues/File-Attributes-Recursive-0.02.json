@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub list_attributes_recursively {\n    my $file = shift;\n    my $top  = shift;\n\n    $top = '/' if !defined $top;\n    \n    $file = file($file)->absolute;\n    $top  = dir($top)->absolute;\n    \n    if(!$top->subsumes($file)){\n\tcroak \"get_attributes_recursively: filename ($file) must \".\n\t  \"contain top ($top)\";\n    }\n    \n    my %results;\n    while($top->subsumes($file)){\n\teval {\n\t    my @subresults = list_attributes($file);\n\t    @results{@subresults} = @subresults;\n\t};\n\t$file = $file->parent;\n    }\n    \n    return keys %results;\n}",
-      "file" : "/var/tmp/arv_XrUM0Q/File-Attributes-Recursive-0.02/lib/File/Attributes/Recursive.pm",
-      "package" : "File::Attributes::Recursive"
-   }
-]

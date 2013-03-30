@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _set_serializer {\n    my ($class)= @_;\n\n    my @errors;\n    eval \"require $class; 1\" or push @errors, $@;\n    my $freeze= $class->can( 'freeze' )\n      or push @errors, \"$class does not provide a 'freeze' method\";\n    my $thaw=   $class->can( 'thaw' )\n      or push @errors, \"$class does not provide a 'thaw' method\";\n\n    die join \"\\n\", \"Found the following errors:\", @errors\n      if @errors;\n\n    $SERIALIZER= $class;\n    $FREEZE=     $freeze;\n    $THAW=       $thaw;\n\n    return;\n}",
-      "file" : "/var/tmp/arv_OYB2d7/Thread-Queue-Any-1.13/lib/Thread/Queue/Any.pm",
-      "package" : "Thread::Queue::Any"
-   }
-]

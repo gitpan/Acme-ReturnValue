@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _try_liblist {\n  my ($self) = @_;\n\n  use ExtUtils::Liblist ();\n  local $SIG{__WARN__} = sub { }; \n\n  my (undef, undef, $ldflags, $ldpath) = ExtUtils::Liblist->ext('-ljio');\n  return unless (defined($ldflags) && length($ldflags));\n\n  $self->{installed} = 1;\n  $self->{method} = 'ExtUtils::Liblist';\n\n  $self->{cflags} = [];\n\n  my $read;\n  my $pid = open3(undef, $read, undef, 'getconf', 'LFS_CFLAGS');\n\n  waitpid($pid, 0);\n\n  if (($? >> 8) == 0) {\n    push(@{ $self->{cflags} }, split(' ', <$read>));\n  }\n  else {\n    warn 'Problem using getconf: ', <$read>, \"\\n\";\n    push(@{ $self->{cflags} },\n      '-D_LARGEFILE_SOURCE',\n      '-D_FILE_OFFSET_BITS=64',\n    );\n  }\n\n  use Cwd ();\n  use File::Spec ();\n  push(@{ $self->{cflags} },\n    '-I' . Cwd::realpath(File::Spec->catfile(\n      $ldpath,\n      File::Spec->updir(),\n      'include'\n    ))\n  );\n\n  push(@{ $self->{ldflags} },\n    '-L' . $ldpath,\n    $ldflags,\n  );\n\n  return 1;\n}",
-      "file" : "/var/tmp/arv_lhIAYt/Alien-Libjio-1.004/lib/Alien/Libjio.pm",
-      "package" : "Alien::Libjio"
-   }
-]

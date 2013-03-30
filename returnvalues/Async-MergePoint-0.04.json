@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "0x55AA",
-      "file" : "/var/tmp/arv_IolsMP/Async-MergePoint-0.04/lib/Async/MergePoint.pm",
-      "package" : "Async::MergePoint"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "sub { __PACKAGE__->run( @_) }",
-      "file" : "/var/tmp/arv_6EzU6a/Pod-Browser-1.0.1/lib/Pod/Browser.pm",
-      "package" : "Pod::Browser"
-   }
-]

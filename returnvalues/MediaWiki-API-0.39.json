@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _error {\n  my ($self, $code, $desc) = @_;\n  $self->{error}->{code} = $code;\n  $self->{error}->{details} = $desc;\n  $self->{error}->{stacktrace} = Carp::longmess($desc);\n\n  $self->{config}->{on_error}->() if (defined $self->{config}->{on_error});\n\n  return undef;\n}",
-      "file" : "/var/tmp/arv_R2iUns/MediaWiki-API-0.39/lib/MediaWiki/API.pm",
-      "package" : "MediaWiki::API"
-   }
-]

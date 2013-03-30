@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub transliterate {\n\tmy $self  = ($#_ > 0) ? shift : 0;\n\tmy $arref = $self ? \\@{$self->{TRN_ARY}} : \\@transform;\n\tmy @xx = unpack \"C*\", $_[0];\n\tmy $yy = \"\";\n\tforeach ( @xx ) {\n\t\t$yy .= pack \"C\", @$arref[$_];\n\t}\n\treturn $yy;\n}",
-      "file" : "/var/tmp/arv_nUvHob/Convert-Translit-1.03/lib/Convert/Translit.pm",
-      "package" : "Convert::Translit"
-   }
-]

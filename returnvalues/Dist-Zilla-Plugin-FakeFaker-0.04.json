@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q[When Harry Met Sally]",
-      "file" : "/var/tmp/arv_viaCoM/Dist-Zilla-Plugin-FakeFaker-0.04/lib/Dist/Zilla/Plugin/FakeFaker.pm",
-      "package" : "Dist::Zilla::Plugin::FakeFaker"
-   }
-]

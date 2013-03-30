@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::PerlTidyBlocks",
-      "file" : "/var/tmp/arv_vozRkc/Kwiki-PerlTidyBlocks-0.12/lib/Kwiki/PerlTidyBlocks.pm",
-      "package" : "Kwiki::PerlTidyBlocks"
-   }
-]

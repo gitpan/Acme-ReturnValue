@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub WRITE {\n\n    foreach ( split( m#(?<=$/)#, $_[1] ) ) {\n\n\tif ( m#^=[a-zA-Z]# ) {\n            if ($_[0]->{inpod} = !m#^=cut#) {\n                return -1 if !print { $_[2] } $_;\n            }\n        }\n\n        elsif ( $_[0]->{inpod} ) {\n            return -1 if !print { $_[2] } $_;\n        }\n    }\n\n    return length( $_[1] );\n}",
-      "file" : "/var/tmp/arv__4Yl7_/PerlIO-via-Pod-0.05/lib/PerlIO/via/Pod.pm",
-      "package" : "PerlIO::via::Pod"
-   }
-]

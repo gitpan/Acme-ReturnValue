@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub draw_component {\n  my $self = shift;\n  my $gd = shift;\n  my $fg = $self->fgcolor;\n\n  my ($x1,$y1,$x2,$y2) = $self->calculate_boundaries(@_);\n\n  my $feature = $self->feature;\n  my @alleles = eval{$feature->get_tag_values('Alleles')};\n  @alleles    = split /\\//,$self->option('alleles') unless @alleles == 2;\n\n  if (@alleles) {\n    if (my $strand = $self->option('ref_strand') <0){\n      foreach (@alleles) {\n\ttr/ACTG/TGAC/ if $self->option('complement');\n      }\n      $fg = $self->bgcolor if $self->bgcolor;\n    }\n\n    for (my $i=0;$i<@alleles;$i++) {\n      my $position = -2+ $i * 10;       \n\n      my $maf = defined ($self->option('maf'))? $self->option('maf') : \"NO\";\n\n      my $bar_length = $maf*44 +6 unless $maf eq \"NO\";\n      my $y_delta = ($y2- $y1)/(2 * ($#alleles +1));  \n\n      if (my $minor_allele = $self->option('minor_allele')){\n\tif ($alleles[$i] eq $minor_allele) {\n\t  $gd->string(GD::Font->Small,$x1-1, \n\t\t      $position + $y1, $alleles[$i], $fg);\n\t}\n\telse {\n\t  $bar_length = 44-($maf*44) +6 unless $maf eq \"NO\";\n\t  $gd->string(GD::Font->MediumBold,$x1-1, \n\t\t      $position + $y1, $alleles[$i], $fg);\n\n\t}\n\tif ($self->label){\n\t  $gd->line($x1+6,           $y1 + (2*$i +1)*$y_delta, \n\t\t    $x1+$bar_length, $y1 + (2*$i +1)*$y_delta, $fg) \n\t    unless $maf eq \"NO\";\n\t}\n\n      }\n      else {\n\t$gd->string(GD::Font->Small,$x1-1, $position + $y1, $alleles[$i], $fg);\n      }\n    } \n  }\n}",
-      "file" : "/var/tmp/arv_20EGbm/Bio-Graphics-2.33/lib/Bio/Graphics/Glyph/allele_tower.pm",
-      "package" : "Bio::Graphics::Glyph::allele_tower"
-   }
-]

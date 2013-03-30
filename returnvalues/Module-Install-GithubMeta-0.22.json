@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Github'",
-      "file" : "/var/tmp/arv_Q2415x/Module-Install-GithubMeta-0.22/lib/Module/Install/GithubMeta.pm",
-      "package" : "Module::Install::GithubMeta"
-   }
-]

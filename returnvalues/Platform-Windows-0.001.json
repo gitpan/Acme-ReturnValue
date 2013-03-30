@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(MSWin32|cygwin)$/i)",
-      "file" : "/var/tmp/arv_YMdE7z/Platform-Windows-0.001/lib/Platform/Windows.pm",
-      "package" : "Platform::Windows"
-   }
-]

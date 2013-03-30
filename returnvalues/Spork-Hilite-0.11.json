@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Spork::Hilite",
-      "file" : "/var/tmp/arv_VqDF8J/Spork-Hilite-0.11/lib/Spork/Hilite.pm",
-      "package" : "Spork::Hilite"
-   }
-]

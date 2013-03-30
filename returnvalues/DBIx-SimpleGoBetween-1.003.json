@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub sql_do {\n  my ($s,$sql,$ph,$arg)=@_;\n  my $sth=$s->prep($sql,$arg);\n  $sth->execute(@$ph);\n}",
-      "file" : "/var/tmp/arv_pQOKI2/DBIx-SimpleGoBetween-1.003/lib/DBIx/SimpleGoBetween.pm",
-      "package" : "DBIx::SimpleGoBetween"
-   }
-]

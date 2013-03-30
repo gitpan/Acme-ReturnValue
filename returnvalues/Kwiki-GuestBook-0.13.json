@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub user_db {\n    my $db = io($self->plugin_directory . '/user_name.db');\n    $db->utf8->dbm('DB_File::Lock');\n}",
-      "file" : "/var/tmp/arv_sn_LSY/Kwiki-GuestBook-0.13/lib/Kwiki/GuestBook.pm",
-      "package" : "Kwiki::GuestBook"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*gff3_unescape = \\&URI::Escape::uri_unescape",
-      "file" : "/var/tmp/arv_16LvwE/Bio-GFF3-1.5/lib/Bio/GFF3/LowLevel.pm",
-      "package" : "Bio::GFF3::LowLevel"
-   }
-]

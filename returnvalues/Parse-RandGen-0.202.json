@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub pickRepetitions {\n    my $self = shift or confess \"%Error:  Cannot call pickRepetitions without a valid object!\";\n    my %args = @_;\n\n    my ($corruptCnt, $corruptData) = (0, 0);\n    if (!$args{match} && !$self->zeroOrMore()) {\n\tif (int(rand(2))) {\n\t    $corruptData = 1;\n\t} else {\n\t    $corruptCnt = 1;\n\t}\n    }\n\n    my ($minCnt, $maxCnt);\n    if ($corruptCnt) {\n        if ((int(rand(2)) || !$self->max()) && $self->min()) {\n            ($minCnt, $maxCnt) = (0, $self->min()-1);\n        } else {\n            ($minCnt, $maxCnt) = ($self->max()+1, $self->max()+4);\n        }\n    } else {\n        $minCnt = $self->min() || ($self->containsVals(%args) ? 1 : 0);  \n        $maxCnt = $self->max() || ($minCnt + (1<<int(rand(5))))\n",
-      "file" : "/var/tmp/arv_gvoMAJ/Parse-RandGen-0.202/RandGen/Condition.pm",
-      "package" : "Parse::RandGen::Condition"
-   }
-]

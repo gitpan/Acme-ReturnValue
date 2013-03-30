@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub sum_bank_codes {\n    my $self = shift;\n    return $self->{sum_bank_codes};\n}",
-      "file" : "/var/tmp/arv_CNolct/Finance-Bank-DE-DTA-Create/lib/Finance/Bank/DE/DTA/Create.pm",
-      "package" : "Finance::Bank::DE::DTA::Create"
-   }
-]

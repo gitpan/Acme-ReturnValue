@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q[CPAN Mirror on the wall, who's the fairest of them all?]",
-      "file" : "/var/tmp/arv_aJbr4S/CPAN-Mirror-Server-HTTP-0.04/lib/CPAN/Mirror/Server/HTTP.pm",
-      "package" : "CPAN::Mirror::Server::HTTP"
-   }
-]

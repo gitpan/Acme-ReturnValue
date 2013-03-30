@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub private_non_direct_backend_env_mapping\n{\n    my $self = shift;\n\n    return\n    [\n        {\n            type => \"direct\",\n            env => \"HARNESS_TRIM_FNS\",\n            arg => \"trim_displayed_filenames_query\",\n        },\n    ];\n}",
-      "file" : "/var/tmp/arv_2aZYVl/Test-Run-Plugin-TrimDisplayedFilenames-0.0123/lib/Test/Run/CmdLine/Plugin/TrimDisplayedFilenames.pm",
-      "package" : "Test::Run::CmdLine::Plugin::TrimDisplayedFilenames"
-   }
-]

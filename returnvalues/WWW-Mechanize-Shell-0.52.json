@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "{\n  package WWW::Mechanize::FormFiller::Value::Ask;\n  use WWW::Mechanize::FormFiller;\n  use base 'WWW::Mechanize::FormFiller::Value::Callback';\n\n  use vars qw( $VERSION );\n  $VERSION = '0.21';\n\n  sub new {\n    my ($class,$name,$shell) = @_;\n    my $self = $class->SUPER::new($name, __PACKAGE__ . '::ask_value');\n    $self->{shell} = $shell;\n    Carp::carp \"WWW::Mechanize::FormFiller::Value::Ask->new called without a value for the shell\" unless $self->{shell};\n\n    $self;\n  };\n\n  sub ask_value {\n    my ($self,$input) = @_;\n    my @values;\n    if ($input->possible_values) {\n      @values = $input->possible_values;\n      print join( \"|\", @values ), \"\\n\";\n    };\n    my $value;\n    $value = $input->value;\n    if ($input->type !~ /^(submit|hidden)$/) {\n      $value = $self->{shell}->prompt(\"(\" . $input->type . \")\" . $input->name . \"> [\" . ($input->value || \"\") . \"] \",\n                              ($input->value||''), @values );\n      undef $value if ($value eq \"\" and $input->type eq \"checkbox\");\n      push @{$self->{shell}->{answers}}, [ $input->name, $value ];\n    };\n    $value;\n  };\n}",
-      "file" : "/var/tmp/arv_GVJ1I4/WWW-Mechanize-Shell-0.52/lib/WWW/Mechanize/Shell.pm",
-      "package" : "WWW::Mechanize::Shell"
-   }
-]

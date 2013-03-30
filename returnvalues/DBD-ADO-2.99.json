@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "[\n  {\n    'Provider'    => 'Microsoft.Jet.OLEDB.4.0'\n  , 'Data Source' => '/data/test.mdb'\n  }\n, {\n    'Provider'    => 'VFPOLEDB'\n  , 'Data Source' => 'C:/data/test.dbc'\n  }\n, {\n    'Provider'    => 'MSDAORA'\n  , 'Data Source' => ''\n  , 'User ID'     => 'scott'\n  , 'Password'    => 'tiger'\n  }\n, {\n    'File Name'   => '/data/test.udl'\n  }\n]",
-      "file" : "/var/tmp/arv_J1DAXI/DBD-ADO-2.99/ex/Local/DBD/ADO/DSN.pm",
-      "package" : "Local::DBD::ADO::DSN"
-   }
-]

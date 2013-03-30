@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Test::Magic' if 'first require'",
-      "file" : "/var/tmp/arv_jDrZGX/Test-Magic-0.21/lib/Test/Magic.pm",
-      "package" : "Test::Magic"
-   }
-]

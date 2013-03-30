@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "role Fancy::Middleware\n{\n    use POEx::Types::PSGIServer(':all');\n    use MooseX::Types::Moose(':all');\n\n\n    has app => (is => 'ro', isa => CodeRef, required => 1);\n\n\n    has response => (is => 'ro', isa => PSGIResponse, writer => 'set_response');\n\n    \n    has env => (is => 'ro', isa => HashRef, writer => 'set_env');\n\n\n    method wrap(ClassName $class: CodeRef $app, @args)\n    {\n        my $self = $class->new(app => $app, @args);\n        return $self->to_app;\n    }\n\n\n    method call(HashRef $env)\n    {\n        $self->set_env($env);\n        $self->preinvoke();\n        $self->invoke();\n        $self->postinvoke();\n        return $self->response;\n    }\n\n\n    method preinvoke()\n    {\n        return;\n    }\n\n\n    method invoke()\n    {\n        $self->set_response(($self->app)->($self->env));\n    }\n\n\n    method postinvoke()\n    {\n        return;\n    }\n\n\n    method to_app()\n    {   \n        return sub { $self->call(@_) };\n    }\n}\n\n1",
-      "file" : "/var/tmp/arv_Tw90m_/Fancy-Middleware-1.101680/lib/Fancy/Middleware.pm",
-      "package" : "Fancy::Middleware"
-   }
-]

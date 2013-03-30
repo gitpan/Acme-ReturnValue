@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _find_real_path {\n\tmy ($self, $path) = @_;\n\t\n\tif(-f ($self->{basedir}.$path) ){\n\t\treturn $self->{basedir}.$path;\n\t}elsif( $self->{indexes} ){\n\t\tfor ( @{ $self->{indexes} }){\n\t\t\treturn $self->{basedir}.$path.'/'.$_ if( -f $self->{basedir}.$path.'/'.$_);\n\t\t}\n\t}\n}",
-      "file" : "/var/tmp/arv_mxr75I/HTTP-Server-EV-ServeStatic-0.1/ServeStatic.pm",
-      "package" : "HTTP::Server::EV::ServeStatic"
-   }
-]

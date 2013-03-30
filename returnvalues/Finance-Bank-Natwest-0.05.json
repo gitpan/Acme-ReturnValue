@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use constant URL_ROOT => 'https://www.rbsdigital.com'",
-      "file" : "/var/tmp/arv_BjNa19/Finance-Bank-Natwest-0.05/lib/Finance/Bank/RBoS.pm",
-      "package" : "Finance::Bank::RBoS"
-   }
-]

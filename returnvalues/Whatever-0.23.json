@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "__PACKAGE__ if 'first require'",
-      "file" : "/var/tmp/arv_di74nN/Whatever-0.23/lib/Whatever.pm",
-      "package" : "Whatever"
-   }
-]

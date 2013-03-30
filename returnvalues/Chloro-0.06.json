@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "__PACKAGE__->provide_types_from(\n    qw(\n        MooseX::Types::Common::String\n        MooseX::Types::Moose\n        Chloro::Types::Internal\n        )\n)",
-      "file" : "/var/tmp/arv_RJb6ER/Chloro-0.06/lib/Chloro/Types.pm",
-      "package" : "Chloro::Types"
-   }
-]

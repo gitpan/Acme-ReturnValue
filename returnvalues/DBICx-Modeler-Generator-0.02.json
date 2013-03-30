@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "<? block code => '' ?>\n1",
-      "file" : "/var/tmp/arv_GwSxEo/DBICx-Modeler-Generator-0.02/examples/src/lib/MyApp/Model/Base.pm",
-      "package" : "package"
-   }
-]

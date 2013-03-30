@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub edges {\n    my @nodes = @_;\n    my @edges = grep {\n        all(@$_) eq any(@nodes)\n    } $self->graph->edges;\n    return @edges;\n}",
-      "file" : "/var/tmp/arv_Qfw7gn/Algorithm-SocialNetwork-0.07/lib/Algorithm/SocialNetwork.pm",
-      "package" : "Algorithm::SocialNetwork"
-   }
-]

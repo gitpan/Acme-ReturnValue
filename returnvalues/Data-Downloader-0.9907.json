@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "<<\"=head1 SCHEMA\"",
-      "file" : "/var/tmp/arv_7UgGtu/Data-Downloader-0.9907/lib/Data/Downloader.pm",
-      "package" : "Data::Downloader"
-   }
-]

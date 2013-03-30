@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub uninstall( % ) {\n    my %h = @_;\n    my %seen_pl;\n    foreach (qw(read write)) {\n\tmy $pl = delete $h{$_};\n\tif (defined $pl and not $seen_pl{$pl}++) {\n\t    warn \"ignoring packlist $pl\\n\";\n\t}\n    }\n    foreach my $from (keys %h) {\n\tnext if not -e $from;\n\tmy $to = $h{$from};\n\tprint \"uninstalling contents of $from from $to\\n\";\n\tfind(sub { \n\t\t for ($File::Find::name) {\n\t\t     \n\t\t     s!^\\Q$from\\E/*!!\n\t\t       or ($[ < 5.006)\n\t\t\t or die \"filename '$_' doesn't start with $from/\";\n\n\t\t     return if not length; \n\t\t     return if m!(?:/|^)\\.exists!;\n\t\t     my $inside_to = \"$to/$_\";\n\t\t     if (-e $inside_to) {\n\t\t\t if (-f $inside_to) {\n\t\t\t     print \"unlinking $inside_to\\n\";\n\t\t\t     unlink $inside_to or warn \"cannot unlink $inside_to: $!\";\n\t\t\t }\n\t\t\t elsif (-d $inside_to) {\n\t\t\t     print \"not removing directory $inside_to\\n\";\n\t\t\t }\n\t\t\t else {\n\t\t\t     print \"not removing special file $inside_to\\n\";\n\t\t\t }\n\t\t     }\n\t\t     else {\n\t\t\t print \"$inside_to is not installed\\n\";\n\t\t     }\n\t\t }\n\t     }, $from);\n    }\n}",
-      "file" : "/var/tmp/arv_QmNbda/xmltv-0.5.33/Uninstall.pm",
-      "package" : "Uninstall"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub detect_archive_format {\n    my ($FHwp) = @_;\n\n    my $magics = Archive::Cpio::Common::magics();\n\n    my $max_length = max(map { length $_ } values %$magics);\n    my $s = $FHwp->read_ahead($max_length);\n\n    foreach my $magic (keys %$magics) {\n\tmy $archive_format = $magics->{$magic};\n\tbegins_with($s, $magic) or next;\n\t\n\n\tmy $class = \"Archive::Cpio::$archive_format\";\n\teval \"require $class\";\n\treturn $class->new($magic, $s);\n    }\n    die \"invalid archive\\n\";\n}",
-      "file" : "/var/tmp/arv__bQ4IM/Archive-Cpio-0.09/lib/Archive/Cpio.pm",
-      "package" : "Archive::Cpio"
-   }
-]

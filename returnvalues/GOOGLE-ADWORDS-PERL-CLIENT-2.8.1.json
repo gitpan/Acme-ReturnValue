@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Include",
-      "bad" : "use overload (\n  '%{}' => 'as_hash_ref',\n  fallback => 1,\n)",
-      "file" : "/var/tmp/arv_1oLTtk/GOOGLE-ADWORDS-PERL-CLIENT-2.8.1/lib/Google/Ads/SOAP/Typelib/ComplexType.pm",
-      "package" : "Google::Ads::SOAP::Typelib::ComplexType"
-   }
-]

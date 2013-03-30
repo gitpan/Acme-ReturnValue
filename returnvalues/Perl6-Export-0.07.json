@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "FILTER {\n\treturn unless /\\S/;\n\tmy $real_import_name = '_import_'.md5_hex($_);\n\tmy $false_import_sub = false_import_sub($real_import_name);\n\tmy $real_import_sub = \"\";\n\ts/ \\b sub \\s+ import \\s* ([({]) /sub $real_import_name$1/x \n\t\t or $real_import_sub = \"sub $real_import_name {}\";\n\ts{( \\b sub \\s+ ($ident) $proto) \\s+ is \\s+ export ($defargs) }\n\t { add_to('EXPORT',$2,$3,$1) }gex;\n\ts{( \\b our \\s+ ([\\$\\@\\%]$ident) $proto) \\s+ is \\s+ exported ($defargs) }\n\t { add_to('EXPORT',$2,$3,$1) }gex;\n\ts{( \\b sub \\s+ ($ident) $proto ) \\s+ is \\s+ export ($args) }\n\t { add_to('EXPORT_OK',$2,$3,$1) }gex;\n\ts{( \\b our \\s+ ([\\$\\@\\%]$ident) ) \\s+ is \\s+ export ($args) }\n\t { add_to('EXPORT_OK',$2,$3,$1) }gex;\n\t$_ = $real_import_sub . $false_import_sub . $MANDATORY . $_;\n}",
-      "file" : "/var/tmp/arv_Plb1pS/Perl6-Export-0.07/Export.pm",
-      "package" : "Perl6::Export"
-   }
-]

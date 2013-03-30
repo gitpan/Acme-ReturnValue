@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub return {\n    my $self = shift;\n    my $mech = shift;\n    my $response = $mech->response;\n    if($response->is_redirect) {\n      return (1,$response->header(\"Location\"));\n    } else {\n      return (0, \"Cannot find URL\");\n    }\n}\n\n1",
-      "file" : "/var/tmp/arv_Pshj7I/App-Nopaste-Service-Pastedance-0.04/lib/App/Nopaste/Service/Pastedance.pm",
-      "package" : "App::Nopaste::Service::Pastedance"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub quit {\n\tmy $self = shift;\n\n\t$self->send ( line => \"quit\" );\n\n\t1;\n}",
-      "file" : "/var/tmp/arv_mEXX0K/dvdrip-0.98.11/lib/Video/DVDRip/TranscodeRC.pm",
-      "package" : "Video::DVDRip::TranscodeRC"
-   }
-]

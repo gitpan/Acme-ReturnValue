@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub pathconf_names() { keys %$pathconf }",
-      "file" : "/var/tmp/arv_J4MBtt/POSIX-1003-0.92/lib/POSIX/1003/Pathconf.pm",
-      "package" : "POSIX::1003::Pathconf"
-   }
-]

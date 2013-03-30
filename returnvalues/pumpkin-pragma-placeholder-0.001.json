@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package pumpkin",
-      "file" : "/var/tmp/arv_TQtrOZ/pumpkin-pragma-placeholder-0.001/lib/pumpkin.pm",
-      "package" : "pumpkin"
-   }
-]

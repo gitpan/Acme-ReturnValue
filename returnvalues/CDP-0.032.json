@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub OpenCDP {\n\tmy ($cdp_url, $u_name, $pw, ) = @_;\n\n\tmy $control_server_url = \"http://$u_name:$pw\\@$cdp_url:8084/xmlrpc\";\n\n\tmy $client = Frontier::Client->new(\n                'url' => $control_server_url,\n                'debug' => $debug,\n                'encoding' => $encoding,\n\t);\n}",
-      "file" : "/var/tmp/arv_nbLn2v/CDP-0.032/lib/CDP/Connect.pm",
-      "package" : "CDP::Connect"
-   }
-]

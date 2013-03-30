@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DieOut {\n        my $DieTemp = shift(@_);\n        die;\n}",
-      "file" : "/var/tmp/arv_X9SLyi/IETF-ACE-0.02/ACE.pm",
-      "package" : "IETF::ACE"
-   }
-]

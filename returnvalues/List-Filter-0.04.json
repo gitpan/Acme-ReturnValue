@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub match_all_any_order {\n  my $self            = shift;\n  my $filter          = shift;\n  my $items           = shift;\n  my $search_patterns = $filter->{ terms };\n  my $modifiers = $filter->{modifiers};\n\n  my $criteria_count = scalar( @{ $search_patterns } );\n\n  my @result = ();\n  foreach my $item (@{ $items }) {\n    my $pass_count = 0;\n    my @patterns = @{ $search_patterns };  \n    foreach my $pat (@patterns) {\n      if ( $pat =~ s{^ - (.*?) $}{$1}x ) { \n\n        my $mpat;\n        if ($modifiers) {\n          $mpat = \"(?$modifiers)$pat\";\n        } else {\n          $mpat = $pat;\n        }\n\n        $pass_count++ if (not( $item =~ m{$mpat}x ));\n      } else {\n\n        my $mpat;\n        if ($modifiers) {\n          $mpat = \"(?$modifiers)$pat\";\n        } else {\n          $mpat = $pat;\n        }\n\n        $pass_count++ if ( $item =~ m{$mpat}x );\n      }\n    }\n    if ( $pass_count >= $criteria_count ) {\n          push @result, $item;\n    }\n  }\n  return \\@result;\n}",
-      "file" : "/var/tmp/arv_LugqZL/List-Filter-0.04/lib/List/Filter/Filters/Standard.pm",
-      "package" : "List::Filter::Filters::Standard"
-   }
-]

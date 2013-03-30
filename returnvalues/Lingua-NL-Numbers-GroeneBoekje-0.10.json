@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Compound",
-      "bad" : "unless ( caller ) {\n    package main;\n    foreach ( @ARGV ) {\n\tprintf(\"%8d: %s\\n\",\n\t       $_, Lingua::NL::Numbers::GroeneBoekje->new->parse($_));\n    }\n}",
-      "file" : "/var/tmp/arv_VBT9zW/Lingua-NL-Numbers-GroeneBoekje-0.10/lib/Lingua/NL/Numbers/GroeneBoekje.pm",
-      "package" : "Lingua::NL::Numbers::GroeneBoekje"
-   }
-]

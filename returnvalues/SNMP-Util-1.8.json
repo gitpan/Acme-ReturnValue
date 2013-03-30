@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "$ENV{'MIBDIRS'} = '/usr/local/lib/share/snmp/mibs'",
-      "file" : "/var/tmp/arv_xziG2d/SNMP-Util-1.8/Util_env.pm",
-      "package" : "SNMP::Util_env"
-   }
-]

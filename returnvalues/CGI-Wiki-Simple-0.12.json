@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub commit_content {\n  my %args = @_;\n  my $wiki = $args{wiki};\n\n  croak \"No wiki passed in the 'wiki' parameter\"\n    unless $wiki;\n\n  my @nodes = @{$args{nodes}};\n  foreach my $node (@nodes) {\n    my $title = $node->{title};\n\n    my %old_node = $wiki->retrieve_node($title);\n    if (not $old_node{content} or $args{force}) {\n      my $content = $node->{content};\n      $content =~ s/\\r\\n/\\n/g;\n      my $cksum = $old_node{checksum};\n      my $written = $wiki->write_node($title, $content, $cksum);\n      if ($written) {\n        print \"(Re)initialized node '$title'\\n\"\n          unless $args{silent};\n      } else {\n        warn \"Node '$title' not written\\n\";\n      };\n    } else {\n      warn \"Node '$title' already contains data. Not overwritten.\";\n    };\n  };\n}",
-      "file" : "/var/tmp/arv_d0Z8Kt/CGI-Wiki-Simple-0.12/lib/CGI/Wiki/Simple/Setup.pm",
-      "package" : "CGI::Wiki::Simple::Setup"
-   }
-]

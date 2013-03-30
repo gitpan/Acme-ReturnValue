@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _index_info {\n  my ($proto, $dbh, $table, $type) = @_;\n\n  die \"\\$type must be 'UNIQUE' or 'NONUNIQUE'\" \n    unless $type =~ /^(NON)?UNIQUE$/;\n\n  my $sql = \"SELECT ui.index_name, uic.column_name\n               FROM user_indexes ui, user_ind_columns uic\n              WHERE ui.index_name = uic.index_name\n                AND ui.uniqueness = ?\n                AND table_name = ?\";\n  my $sth = $dbh->prepare($sql);\n  $sth->execute($table, $type);\n\n  my $results = {};\n  while(my ($idx, $col) = $sth->fetchrow_array()) {\n    if(!exists($results->{$idx})) {\n      $results->{$idx} = [];\n    }\n    push @{$results->{$idx}}, $col;\n  }\n  return $results;\n}",
-      "file" : "/var/tmp/arv_hIC7Pb/DBIx-DBSchema-0.40/DBSchema/DBD/Oracle.pm",
-      "package" : "DBIx::DBSchema::DBD::Oracle"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _compose_command {\n    my $self = shift;\n\n    my $files = $self->input_file;\n    $files = [ $files ] unless ref $files eq 'ARRAY';\n\n    my $cmd = [\n        $self->ffmpeg,\n        '-y',\n        @{ $self->global_options },\n        map ( { @{ $self->infile_options }, ( '-i', $_ ) } @$files ),\n        @{ $self->options },\n        @{ $self->outfile_options },\n    ];\n\n    push @$cmd, $self->output_file\n        if $self->output_file;\n\n    return $cmd;\n}",
-      "file" : "/var/tmp/arv__k1nyB/FFmpeg-Command-0.18/lib/FFmpeg/Command.pm",
-      "package" : "FFmpeg::Command"
-   }
-]

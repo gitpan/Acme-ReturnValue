@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub match_domain\n{\n\tmy ($qp, $domain, $hashref, $what) = @_;\n\twhile ($domain) {\n\t\t$qp->log(LOGDEBUG, \"Trying to match $domain for $what\");\n\t\tif ($hashref->{$domain}) {\n\t\t\treturn 1;\n\t\t} \n\t\t$domain =~ s/^[^\\.]+// or last;\n\t\t$domain =~ s/^\\.//;\n\t}\n\treturn 0;\n}",
-      "file" : "/var/tmp/arv_lDc4Oy/Qpsmtpd-Plugin-Quarantine-1.02/lib/Qpsmtpd/Plugin/Quarantine.pm",
-      "package" : "Qpsmtpd::Plugin::Quarantine"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub wordclass {\n  my ($word, $satz_anfang) = @_;\n  \n  if ($satz_anfang) {\n    return $ANY;\n  } elsif ($word =~ /^[A-Z���]/) {\n    $CAPITAL;\n  } else {\n    $LOWER;\n  }\n}",
-      "file" : "/var/tmp/arv_x4QMqN/Text-German-0.06/lib/Text/German/Util.pm",
-      "package" : "Text::German::Util"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _load_svk {\n    my $self = shift;\n    $ENV{HOME} ||= catdir(@ENV{qw( HOMEDRIVE HOMEPATH )});\n    my $svkpath = $ENV{SVKROOT} || catfile($ENV{HOME}, \".svk\");\n    my $xd = SVK::XD->new ( giantlock => \"$svkpath/lock\",\n                            statefile => \"$svkpath/config\",\n                            svkpath => $svkpath,\n                           );\n    $xd->load;\n    if($self->output) {\n        return SVK->new(xd => $xd,output => $self->output);\n    }\n    return SVK->new(xd => $xd);\n}",
-      "file" : "/var/tmp/arv_hVJTsu/SVK-Simple-0.03/lib/SVK/Simple.pm",
-      "package" : "SVK::Simple"
-   }
-]

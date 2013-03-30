@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'I am an anarchist\nAn antichrist\nAn asterix\nI am an anorak\nAn acolyte\nAn accidental\nI am eleven feet\nOk, eight...\nSix foot three...\nI fought the British and I won\nI have a rocket ship\nA jetfighter\nA paper airplane'",
-      "file" : "/var/tmp/arv_TXv3e0/Devel-ContinuousProfiler-0.12/lib/Devel/ContinuousProfiler.pm",
-      "package" : "Devel::ContinuousProfiler"
-   }
-]

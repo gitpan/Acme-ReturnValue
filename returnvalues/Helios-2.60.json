@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Variable",
-      "bad" : "our $VERSION = '2.60'",
-      "file" : "/var/tmp/arv_fJkzWZ/Helios-2.60/lib/Helios.pm",
-      "package" : "Helios"
-   }
-]

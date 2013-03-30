@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "q[Find this URL http://cpanidx.org/]",
-      "file" : "/var/tmp/arv_ghTioa/POE-Component-IRC-Plugin-URI-Find-1.10/lib/POE/Component/IRC/Plugin/URI/Find.pm",
-      "package" : "POE::Component::IRC::Plugin::URI::Find"
-   }
-]

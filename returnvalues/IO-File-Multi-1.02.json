@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub format_formfeed { my($I)=shift; $I->fh_st(@_); }",
-      "file" : "/var/tmp/arv_1Qf7Im/IO-File-Multi-1.02/Multi.pm",
-      "package" : "IO::File::Multi"
-   }
-]

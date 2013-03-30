@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub show_adsense {\n    my $p = $self->new_preference('show_adsense');\n    $p->query('Show Google AdSense Ads?');\n    $p->default(1);\n    return $p;\n}",
-      "file" : "/var/tmp/arv_L_sR7H/Kwiki-AdSense-0.11/lib/Kwiki/AdSense.pm",
-      "package" : "Kwiki::AdSense"
-   }
-]

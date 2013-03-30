@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Formatter::Pod",
-      "file" : "/var/tmp/arv_q_ufLE/Kwiki-Formatter-Pod-0.11/lib/Kwiki/Formatter/Pod.pm",
-      "package" : "Kwiki::Formatter::Pod"
-   }
-]

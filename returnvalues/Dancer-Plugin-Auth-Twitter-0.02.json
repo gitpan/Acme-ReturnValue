@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "register_plugin",
-      "file" : "/var/tmp/arv_MhwlqP/Dancer-Plugin-Auth-Twitter-0.02/lib/Dancer/Plugin/Auth/Twitter.pm",
-      "package" : "Dancer::Plugin::Auth::Twitter"
-   }
-]

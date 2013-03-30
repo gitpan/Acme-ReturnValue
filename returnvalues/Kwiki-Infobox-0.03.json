@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub to_html {'';}",
-      "file" : "/var/tmp/arv_Q6xgSx/Kwiki-Infobox-0.03/lib/Kwiki/Infobox.pm",
-      "package" : "Kwiki::Infobox"
-   }
-]

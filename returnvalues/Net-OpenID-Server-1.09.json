@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "*rand_chars = \\&_rand_chars",
-      "file" : "/var/tmp/arv_vouP_w/Net-OpenID-Server-1.09/lib/Net/OpenID/Server.pm",
-      "package" : "Net::OpenID::Server"
-   }
-]

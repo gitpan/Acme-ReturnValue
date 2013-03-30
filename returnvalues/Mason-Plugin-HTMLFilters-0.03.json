@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "method HTMLPara () {\n    sub {\n        my $text = $_[0];\n        return \"<p>\\n\" . join( \"\\n</p>\\n\\n<p>\\n\", split( /(?:\\r?\\n){2,}/, $text ) ) . \"</p>\\n\";\n    };\n}\n\nmethod HTMLParaBreak () {\n    sub {\n        my $text = $_[0];\n        $text =~ s|(\\r?\\n){2,}|$1<br />$1<br />$1|g;\n        return $text;\n    };\n}\n\nmethod FillInForm ($form_data, %options) {\n    require HTML::FillInForm;\n    sub {\n        my $html = $_[0];\n        return $html if !defined($form_data);\n        return HTML::FillInForm->fill( \\$html, $form_data, %options );\n    };\n}\n\n1",
-      "file" : "/var/tmp/arv_Oy9Pfk/Mason-Plugin-HTMLFilters-0.03/lib/Mason/Plugin/HTMLFilters/Filters.pm",
-      "package" : "Mason::Plugin::HTMLFilters::Filters"
-   }
-]

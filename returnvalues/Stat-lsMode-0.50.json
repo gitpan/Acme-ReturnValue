@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _novice_warning {\n  my $mode = shift;\n  if ($badmode{$mode}) {\n    carp \"mode $mode is very surprising.  Perhaps you meant 0$mode\";\n  }\n}",
-      "file" : "/var/tmp/arv_88SLQC/Stat-lsMode-0.50/lsMode.pm",
-      "package" : "Stat::lsMode"
-   }
-]

@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Break",
-      "value" : "\"POE Rules\"",
-      "file" : "/var/tmp/arv_2QFXVC/POE-Component-Client-TCPMulti-0.0524/lib/POE/Component/Client/TCPMulti.pm",
-      "package" : "POE::Component::Client::TCPMulti"
-   }
-]

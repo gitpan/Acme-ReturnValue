@@ -20,7 +20,7 @@ acme_returnvalue_makesite.pl - run Acme::ReturnValue::MakeSite
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 AUTHOR
 

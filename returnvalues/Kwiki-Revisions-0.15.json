@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Revisions",
-      "file" : "/var/tmp/arv_Wwt9lr/Kwiki-Revisions-0.15/lib/Kwiki/Revisions.pm",
-      "package" : "Kwiki::Revisions"
-   }
-]

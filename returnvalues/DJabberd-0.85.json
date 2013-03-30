@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub DESTROY {\n    my $self = shift;\n    $instance_count--;\n    bless $self, 'XML::SAX::Base';\n}",
-      "file" : "/var/tmp/arv_YYAEhg/DJabberd-0.85/lib/DJabberd/XMLParser.pm",
-      "package" : "DJabberd::XMLParser"
-   }
-]

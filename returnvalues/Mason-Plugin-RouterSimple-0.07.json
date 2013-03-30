@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement (but very likely crap)",
-      "bad" : "method allow_path_info ($class:) {\n    return $class->router_object ? 1 : 0;\n}\n\nmethod router_add ($class: $pattern, $dest) {\n    $dest ||= {};\n    unless ( $class->router_object ) {\n        $class->router_object( $class->router_create_object() );\n    }\n    $class->router_object->connect( $pattern, $dest );\n}\n\nmethod router_create_object ($class:) {\n    return Router::Simple->new();\n}\n\nmethod router_object ($class: $object) {\n    $router_objects{$class} = $object if ( defined($object) );\n    return $router_objects{$class};\n}\n\n1",
-      "file" : "/var/tmp/arv_wYBsHv/Mason-Plugin-RouterSimple-0.07/lib/Mason/Plugin/RouterSimple/Component.pm",
-      "package" : "Mason::Plugin::RouterSimple::Component"
-   }
-]

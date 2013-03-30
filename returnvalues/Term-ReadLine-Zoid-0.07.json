@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub vi_R {\n\tmy $self = shift;\n\treturn $self->vi_r(@_) if $_[0] eq 'r';\n\t$self->switch_mode();\n\t$$self{replace} = 1;\n}",
-      "file" : "/var/tmp/arv_J2ik9y/Term-ReadLine-Zoid-0.07/lib/Term/ReadLine/Zoid/ViCommand.pm",
-      "package" : "Term::ReadLine::Zoid::ViCommand"
-   }
-]

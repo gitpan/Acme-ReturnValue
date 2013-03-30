@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement",
-      "value" : "'Recursive lookup, recursive lookup, recursive lookup ....'",
-      "file" : "/var/tmp/arv_9V7BLu/POE-Component-Client-DNS-Recursive-1.06/lib/POE/Component/Client/DNS/Recursive.pm",
-      "package" : "POE::Component::Client::DNS::Recursive"
-   }
-]

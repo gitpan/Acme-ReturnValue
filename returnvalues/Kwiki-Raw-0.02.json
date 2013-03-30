@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Package",
-      "bad" : "package Kwiki::Raw",
-      "file" : "/var/tmp/arv_BqZRpM/Kwiki-Raw-0.02/lib/Kwiki/Raw.pm",
-      "package" : "Kwiki::Raw"
-   }
-]

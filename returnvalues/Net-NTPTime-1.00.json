@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub get_unix_time\n{\n\tmy $hostname = shift(@_) || '0.north-america.pool.ntp.org';\n\treturn(&get_ntp_time($hostname) - 2208988800);\n}",
-      "file" : "/var/tmp/arv_IL6yUR/Net-NTPTime-1.00/lib/Net/NTPTime.pm",
-      "package" : "Net::NTPTime"
-   }
-]

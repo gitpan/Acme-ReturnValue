@@ -1,8 +1,0 @@
-[
-   {
-      "PPI" : "PPI::Statement::Sub",
-      "bad" : "sub _def {\n    my $val = shift;\n    my $or = shift;\n    return (defined($val)?$val : $or);\n}",
-      "file" : "/var/tmp/arv_0569hI/PDL-Graphics-Gnuplot-1.5/lib/PDL/Graphics/Gnuplot.pm",
-      "package" : "PDL::Graphics::Gnuplot"
-   }
-]
